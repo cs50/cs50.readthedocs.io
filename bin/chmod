@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# http://stackoverflow.com/a/4774063
+pushd `dirname $0` > /dev/null
+SCRIPTPATH=`pwd`
+popd > /dev/null
+
+# chmod directories
+find $SCRIPTPATH/.. -type d -exec chmod 700 {} \;
+chmod 711 $SCRIPTPATH/..
+find $SCRIPTPATH/../html -type d -exec chmod 711 {} \;
+
+# chmod files
+find $SCRIPTPATH/.. -type f -exec chmod 600 {} \;
+find $SCRIPTPATH/../bin -type f -exec chmod 700 {} \;
+find $SCRIPTPATH/../html -type f \( -name .htaccess -o -name "*.css" -o -name "*.gif" -o -name "*.html" -o -name "*.jpg" -o -name "*.js" -o -name "*.pdf" -o -name "*.png" \) -exec chmod 644 {} \;

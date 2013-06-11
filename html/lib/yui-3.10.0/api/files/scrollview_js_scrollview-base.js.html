@@ -1,0 +1,3009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>scrollview/js/scrollview-base.js - YUI 3</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="../assets/css/logo.png" title="YUI 3"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 3.10.0</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/Anim.html">Anim</a></li>
+            
+                <li><a href="../classes/App.html">App</a></li>
+            
+                <li><a href="../classes/App.Base.html">App.Base</a></li>
+            
+                <li><a href="../classes/App.Content.html">App.Content</a></li>
+            
+                <li><a href="../classes/App.Transitions.html">App.Transitions</a></li>
+            
+                <li><a href="../classes/App.TransitionsNative.html">App.TransitionsNative</a></li>
+            
+                <li><a href="../classes/AreaSeries.html">AreaSeries</a></li>
+            
+                <li><a href="../classes/AreaSplineSeries.html">AreaSplineSeries</a></li>
+            
+                <li><a href="../classes/Array.html">Array</a></li>
+            
+                <li><a href="../classes/ArrayList.html">ArrayList</a></li>
+            
+                <li><a href="../classes/ArraySort.html">ArraySort</a></li>
+            
+                <li><a href="../classes/AsyncQueue.html">AsyncQueue</a></li>
+            
+                <li><a href="../classes/Attribute.html">Attribute</a></li>
+            
+                <li><a href="../classes/AttributeCore.html">AttributeCore</a></li>
+            
+                <li><a href="../classes/AttributeEvents.html">AttributeEvents</a></li>
+            
+                <li><a href="../classes/AttributeExtras.html">AttributeExtras</a></li>
+            
+                <li><a href="../classes/AttributeLite.html">AttributeLite</a></li>
+            
+                <li><a href="../classes/AttributeObservable.html">AttributeObservable</a></li>
+            
+                <li><a href="../classes/AutoComplete.html">AutoComplete</a></li>
+            
+                <li><a href="../classes/AutoCompleteBase.html">AutoCompleteBase</a></li>
+            
+                <li><a href="../classes/AutoCompleteFilters.html">AutoCompleteFilters</a></li>
+            
+                <li><a href="../classes/AutoCompleteHighlighters.html">AutoCompleteHighlighters</a></li>
+            
+                <li><a href="../classes/AutoCompleteList.html">AutoCompleteList</a></li>
+            
+                <li><a href="../classes/Axis.html">Axis</a></li>
+            
+                <li><a href="../classes/AxisBase.html">AxisBase</a></li>
+            
+                <li><a href="../classes/BarSeries.html">BarSeries</a></li>
+            
+                <li><a href="../classes/Base.html">Base</a></li>
+            
+                <li><a href="../classes/BaseCore.html">BaseCore</a></li>
+            
+                <li><a href="../classes/BaseObservable.html">BaseObservable</a></li>
+            
+                <li><a href="../classes/BottomAxisLayout.html">BottomAxisLayout</a></li>
+            
+                <li><a href="../classes/Button.html">Button</a></li>
+            
+                <li><a href="../classes/ButtonCore.html">ButtonCore</a></li>
+            
+                <li><a href="../classes/ButtonGroup.html">ButtonGroup</a></li>
+            
+                <li><a href="../classes/Cache.html">Cache</a></li>
+            
+                <li><a href="../classes/CacheOffline.html">CacheOffline</a></li>
+            
+                <li><a href="../classes/Calendar.html">Calendar</a></li>
+            
+                <li><a href="../classes/CalendarBase.html">CalendarBase</a></li>
+            
+                <li><a href="../classes/CandlestickSeries.html">CandlestickSeries</a></li>
+            
+                <li><a href="../classes/CanvasCircle.html">CanvasCircle</a></li>
+            
+                <li><a href="../classes/CanvasDrawing.html">CanvasDrawing</a></li>
+            
+                <li><a href="../classes/CanvasEllipse.html">CanvasEllipse</a></li>
+            
+                <li><a href="../classes/CanvasGraphic.html">CanvasGraphic</a></li>
+            
+                <li><a href="../classes/CanvasPath.html">CanvasPath</a></li>
+            
+                <li><a href="../classes/CanvasPieSlice.html">CanvasPieSlice</a></li>
+            
+                <li><a href="../classes/CanvasRect.html">CanvasRect</a></li>
+            
+                <li><a href="../classes/CanvasShape.html">CanvasShape</a></li>
+            
+                <li><a href="../classes/CartesianChart.html">CartesianChart</a></li>
+            
+                <li><a href="../classes/CartesianSeries.html">CartesianSeries</a></li>
+            
+                <li><a href="../classes/CategoryAxis.html">CategoryAxis</a></li>
+            
+                <li><a href="../classes/CategoryAxisBase.html">CategoryAxisBase</a></li>
+            
+                <li><a href="../classes/CategoryImpl.html">CategoryImpl</a></li>
+            
+                <li><a href="../classes/Chart.html">Chart</a></li>
+            
+                <li><a href="../classes/ChartBase.html">ChartBase</a></li>
+            
+                <li><a href="../classes/ChartLegend.html">ChartLegend</a></li>
+            
+                <li><a href="../classes/Circle.html">Circle</a></li>
+            
+                <li><a href="../classes/CircleGroup.html">CircleGroup</a></li>
+            
+                <li><a href="../classes/ClassNameManager.html">ClassNameManager</a></li>
+            
+                <li><a href="../classes/ClickableRail.html">ClickableRail</a></li>
+            
+                <li><a href="../classes/Color.html">Color</a></li>
+            
+                <li><a href="../classes/Color.Harmony.html">Color.Harmony</a></li>
+            
+                <li><a href="../classes/Color.HSL.html">Color.HSL</a></li>
+            
+                <li><a href="../classes/Color.HSV.html">Color.HSV</a></li>
+            
+                <li><a href="../classes/ColumnSeries.html">ColumnSeries</a></li>
+            
+                <li><a href="../classes/ComboSeries.html">ComboSeries</a></li>
+            
+                <li><a href="../classes/ComboSplineSeries.html">ComboSplineSeries</a></li>
+            
+                <li><a href="../classes/config.html">config</a></li>
+            
+                <li><a href="../classes/Console.html">Console</a></li>
+            
+                <li><a href="../classes/Controller.html">Controller</a></li>
+            
+                <li><a href="../classes/Cookie.html">Cookie</a></li>
+            
+                <li><a href="../classes/CurveUtil.html">CurveUtil</a></li>
+            
+                <li><a href="../classes/CustomEvent.html">CustomEvent</a></li>
+            
+                <li><a href="../classes/DataSchema.Array.html">DataSchema.Array</a></li>
+            
+                <li><a href="../classes/DataSchema.Base.html">DataSchema.Base</a></li>
+            
+                <li><a href="../classes/DataSchema.JSON.html">DataSchema.JSON</a></li>
+            
+                <li><a href="../classes/DataSchema.Text.html">DataSchema.Text</a></li>
+            
+                <li><a href="../classes/DataSchema.XML.html">DataSchema.XML</a></li>
+            
+                <li><a href="../classes/DataSource.Function.html">DataSource.Function</a></li>
+            
+                <li><a href="../classes/DataSource.Get.html">DataSource.Get</a></li>
+            
+                <li><a href="../classes/DataSource.IO.html">DataSource.IO</a></li>
+            
+                <li><a href="../classes/DataSource.Local.html">DataSource.Local</a></li>
+            
+                <li><a href="../classes/DataSourceArraySchema.html">DataSourceArraySchema</a></li>
+            
+                <li><a href="../classes/DataSourceCache.html">DataSourceCache</a></li>
+            
+                <li><a href="../classes/DataSourceCacheExtension.html">DataSourceCacheExtension</a></li>
+            
+                <li><a href="../classes/DataSourceJSONSchema.html">DataSourceJSONSchema</a></li>
+            
+                <li><a href="../classes/DataSourceTextSchema.html">DataSourceTextSchema</a></li>
+            
+                <li><a href="../classes/DataSourceXMLSchema.html">DataSourceXMLSchema</a></li>
+            
+                <li><a href="../classes/DataTable.html">DataTable</a></li>
+            
+                <li><a href="../classes/DataTable.Base.html">DataTable.Base</a></li>
+            
+                <li><a href="../classes/DataTable.BodyView.html">DataTable.BodyView</a></li>
+            
+                <li><a href="../classes/DataTable.BodyView.Formatters.html">DataTable.BodyView.Formatters</a></li>
+            
+                <li><a href="../classes/DataTable.ColumnWidths.html">DataTable.ColumnWidths</a></li>
+            
+                <li><a href="../classes/DataTable.Core.html">DataTable.Core</a></li>
+            
+                <li><a href="../classes/DataTable.HeaderView.html">DataTable.HeaderView</a></li>
+            
+                <li><a href="../classes/DataTable.Message.html">DataTable.Message</a></li>
+            
+                <li><a href="../classes/DataTable.Mutable.html">DataTable.Mutable</a></li>
+            
+                <li><a href="../classes/DataTable.Scrollable.html">DataTable.Scrollable</a></li>
+            
+                <li><a href="../classes/DataTable.Sortable.html">DataTable.Sortable</a></li>
+            
+                <li><a href="../classes/DataTable.TableView.html">DataTable.TableView</a></li>
+            
+                <li><a href="../classes/Date.html">Date</a></li>
+            
+                <li><a href="../classes/DD.DDM.html">DD.DDM</a></li>
+            
+                <li><a href="../classes/DD.Delegate.html">DD.Delegate</a></li>
+            
+                <li><a href="../classes/DD.Drag.html">DD.Drag</a></li>
+            
+                <li><a href="../classes/DD.Drop.html">DD.Drop</a></li>
+            
+                <li><a href="../classes/DD.Scroll.html">DD.Scroll</a></li>
+            
+                <li><a href="../classes/Dial.html">Dial</a></li>
+            
+                <li><a href="../classes/Do.html">Do</a></li>
+            
+                <li><a href="../classes/Do.AlterArgs.html">Do.AlterArgs</a></li>
+            
+                <li><a href="../classes/Do.AlterReturn.html">Do.AlterReturn</a></li>
+            
+                <li><a href="../classes/Do.Error.html">Do.Error</a></li>
+            
+                <li><a href="../classes/Do.Halt.html">Do.Halt</a></li>
+            
+                <li><a href="../classes/Do.Method.html">Do.Method</a></li>
+            
+                <li><a href="../classes/Do.Prevent.html">Do.Prevent</a></li>
+            
+                <li><a href="../classes/DOM.html">DOM</a></li>
+            
+                <li><a href="../classes/DOMEventFacade.html">DOMEventFacade</a></li>
+            
+                <li><a href="../classes/Drawing.html">Drawing</a></li>
+            
+                <li><a href="../classes/Easing.html">Easing</a></li>
+            
+                <li><a href="../classes/EditorBase.html">EditorBase</a></li>
+            
+                <li><a href="../classes/EditorSelection.html">EditorSelection</a></li>
+            
+                <li><a href="../classes/Ellipse.html">Ellipse</a></li>
+            
+                <li><a href="../classes/EllipseGroup.html">EllipseGroup</a></li>
+            
+                <li><a href="../classes/Escape.html">Escape</a></li>
+            
+                <li><a href="../classes/Event.html">Event</a></li>
+            
+                <li><a href="../classes/EventFacade.html">EventFacade</a></li>
+            
+                <li><a href="../classes/EventHandle.html">EventHandle</a></li>
+            
+                <li><a href="../classes/EventTarget.html">EventTarget</a></li>
+            
+                <li><a href="../classes/ExecCommand.html">ExecCommand</a></li>
+            
+                <li><a href="../classes/Features.html">Features</a></li>
+            
+                <li><a href="../classes/File.html">File</a></li>
+            
+                <li><a href="../classes/FileFlash.html">FileFlash</a></li>
+            
+                <li><a href="../classes/FileHTML5.html">FileHTML5</a></li>
+            
+                <li><a href="../classes/Fills.html">Fills</a></li>
+            
+                <li><a href="../classes/Frame.html">Frame</a></li>
+            
+                <li><a href="../classes/Get.html">Get</a></li>
+            
+                <li><a href="../classes/Get.Transaction.html">Get.Transaction</a></li>
+            
+                <li><a href="../classes/GetNodeJS.html">GetNodeJS</a></li>
+            
+                <li><a href="../classes/Graph.html">Graph</a></li>
+            
+                <li><a href="../classes/Graphic.html">Graphic</a></li>
+            
+                <li><a href="../classes/GraphicBase.html">GraphicBase</a></li>
+            
+                <li><a href="../classes/Gridlines.html">Gridlines</a></li>
+            
+                <li><a href="../classes/GroupDiamond.html">GroupDiamond</a></li>
+            
+                <li><a href="../classes/GroupRect.html">GroupRect</a></li>
+            
+                <li><a href="../classes/Handlebars.html">Handlebars</a></li>
+            
+                <li><a href="../classes/Highlight.html">Highlight</a></li>
+            
+                <li><a href="../classes/Histogram.html">Histogram</a></li>
+            
+                <li><a href="../classes/HistoryBase.html">HistoryBase</a></li>
+            
+                <li><a href="../classes/HistoryHash.html">HistoryHash</a></li>
+            
+                <li><a href="../classes/HistoryHTML5.html">HistoryHTML5</a></li>
+            
+                <li><a href="../classes/HorizontalLegendLayout.html">HorizontalLegendLayout</a></li>
+            
+                <li><a href="../classes/ImgLoadGroup.html">ImgLoadGroup</a></li>
+            
+                <li><a href="../classes/ImgLoadImgObj.html">ImgLoadImgObj</a></li>
+            
+                <li><a href="../classes/Intl.html">Intl</a></li>
+            
+                <li><a href="../classes/IO.html">IO</a></li>
+            
+                <li><a href="../classes/JSON.html">JSON</a></li>
+            
+                <li><a href="../classes/JSONPRequest.html">JSONPRequest</a></li>
+            
+                <li><a href="../classes/Lang.html">Lang</a></li>
+            
+                <li><a href="../classes/LazyModelList.html">LazyModelList</a></li>
+            
+                <li><a href="../classes/LeftAxisLayout.html">LeftAxisLayout</a></li>
+            
+                <li><a href="../classes/Lines.html">Lines</a></li>
+            
+                <li><a href="../classes/LineSeries.html">LineSeries</a></li>
+            
+                <li><a href="../classes/Loader.html">Loader</a></li>
+            
+                <li><a href="../classes/MarkerSeries.html">MarkerSeries</a></li>
+            
+                <li><a href="../classes/Matrix.html">Matrix</a></li>
+            
+                <li><a href="../classes/MatrixUtil.html">MatrixUtil</a></li>
+            
+                <li><a href="../classes/Model.html">Model</a></li>
+            
+                <li><a href="../classes/ModelList.html">ModelList</a></li>
+            
+                <li><a href="../classes/ModelSync.REST.html">ModelSync.REST</a></li>
+            
+                <li><a href="../classes/Node.html">Node</a></li>
+            
+                <li><a href="../classes/NodeList.html">NodeList</a></li>
+            
+                <li><a href="../classes/Number.html">Number</a></li>
+            
+                <li><a href="../classes/NumericAxis.html">NumericAxis</a></li>
+            
+                <li><a href="../classes/NumericAxisBase.html">NumericAxisBase</a></li>
+            
+                <li><a href="../classes/NumericImpl.html">NumericImpl</a></li>
+            
+                <li><a href="../classes/Object.html">Object</a></li>
+            
+                <li><a href="../classes/OHLCSeries.html">OHLCSeries</a></li>
+            
+                <li><a href="../classes/Overlay.html">Overlay</a></li>
+            
+                <li><a href="../classes/Panel.html">Panel</a></li>
+            
+                <li><a href="../classes/Parallel.html">Parallel</a></li>
+            
+                <li><a href="../classes/Path.html">Path</a></li>
+            
+                <li><a href="../classes/PieChart.html">PieChart</a></li>
+            
+                <li><a href="../classes/PieSeries.html">PieSeries</a></li>
+            
+                <li><a href="../classes/Pjax.html">Pjax</a></li>
+            
+                <li><a href="../classes/PjaxBase.html">PjaxBase</a></li>
+            
+                <li><a href="../classes/PjaxContent.html">PjaxContent</a></li>
+            
+                <li><a href="../classes/Plots.html">Plots</a></li>
+            
+                <li><a href="../classes/Plugin.Align.html">Plugin.Align</a></li>
+            
+                <li><a href="../classes/Plugin.AutoComplete.html">Plugin.AutoComplete</a></li>
+            
+                <li><a href="../classes/Plugin.Base.html">Plugin.Base</a></li>
+            
+                <li><a href="../classes/Plugin.Button.html">Plugin.Button</a></li>
+            
+                <li><a href="../classes/Plugin.Cache.html">Plugin.Cache</a></li>
+            
+                <li><a href="../classes/Plugin.CalendarNavigator.html">Plugin.CalendarNavigator</a></li>
+            
+                <li><a href="../classes/Plugin.ConsoleFilters.html">Plugin.ConsoleFilters</a></li>
+            
+                <li><a href="../classes/Plugin.CreateLinkBase.html">Plugin.CreateLinkBase</a></li>
+            
+                <li><a href="../classes/Plugin.DataTableDataSource.html">Plugin.DataTableDataSource</a></li>
+            
+                <li><a href="../classes/Plugin.DDConstrained.html">Plugin.DDConstrained</a></li>
+            
+                <li><a href="../classes/Plugin.DDNodeScroll.html">Plugin.DDNodeScroll</a></li>
+            
+                <li><a href="../classes/Plugin.DDProxy.html">Plugin.DDProxy</a></li>
+            
+                <li><a href="../classes/Plugin.DDWindowScroll.html">Plugin.DDWindowScroll</a></li>
+            
+                <li><a href="../classes/Plugin.Drag.html">Plugin.Drag</a></li>
+            
+                <li><a href="../classes/Plugin.Drop.html">Plugin.Drop</a></li>
+            
+                <li><a href="../classes/Plugin.EditorBidi.html">Plugin.EditorBidi</a></li>
+            
+                <li><a href="../classes/Plugin.EditorBR.html">Plugin.EditorBR</a></li>
+            
+                <li><a href="../classes/Plugin.EditorLists.html">Plugin.EditorLists</a></li>
+            
+                <li><a href="../classes/Plugin.EditorPara.html">Plugin.EditorPara</a></li>
+            
+                <li><a href="../classes/Plugin.EditorParaBase.html">Plugin.EditorParaBase</a></li>
+            
+                <li><a href="../classes/Plugin.EditorParaIE.html">Plugin.EditorParaIE</a></li>
+            
+                <li><a href="../classes/Plugin.EditorTab.html">Plugin.EditorTab</a></li>
+            
+                <li><a href="../classes/Plugin.ExecCommand.html">Plugin.ExecCommand</a></li>
+            
+                <li><a href="../classes/Plugin.Flick.html">Plugin.Flick</a></li>
+            
+                <li><a href="../classes/Plugin.Host.html">Plugin.Host</a></li>
+            
+                <li><a href="../classes/plugin.NodeFocusManager.html">plugin.NodeFocusManager</a></li>
+            
+                <li><a href="../classes/Plugin.NodeFX.html">Plugin.NodeFX</a></li>
+            
+                <li><a href="../classes/plugin.NodeMenuNav.html">plugin.NodeMenuNav</a></li>
+            
+                <li><a href="../classes/Plugin.Pjax.html">Plugin.Pjax</a></li>
+            
+                <li><a href="../classes/Plugin.Resize.html">Plugin.Resize</a></li>
+            
+                <li><a href="../classes/Plugin.ResizeConstrained.html">Plugin.ResizeConstrained</a></li>
+            
+                <li><a href="../classes/Plugin.ResizeProxy.html">Plugin.ResizeProxy</a></li>
+            
+                <li><a href="../classes/Plugin.ScrollInfo.html">Plugin.ScrollInfo</a></li>
+            
+                <li><a href="../classes/Plugin.ScrollViewList.html">Plugin.ScrollViewList</a></li>
+            
+                <li><a href="../classes/Plugin.ScrollViewPaginator.html">Plugin.ScrollViewPaginator</a></li>
+            
+                <li><a href="../classes/Plugin.ScrollViewScrollbars.html">Plugin.ScrollViewScrollbars</a></li>
+            
+                <li><a href="../classes/Plugin.Shim.html">Plugin.Shim</a></li>
+            
+                <li><a href="../classes/Plugin.SortScroll.html">Plugin.SortScroll</a></li>
+            
+                <li><a href="../classes/Plugin.Tree.Lazy.html">Plugin.Tree.Lazy</a></li>
+            
+                <li><a href="../classes/Plugin.WidgetAnim.html">Plugin.WidgetAnim</a></li>
+            
+                <li><a href="../classes/Pollable.html">Pollable</a></li>
+            
+                <li><a href="../classes/Profiler.html">Profiler</a></li>
+            
+                <li><a href="../classes/Promise.html">Promise</a></li>
+            
+                <li><a href="../classes/Promise.Resolver.html">Promise.Resolver</a></li>
+            
+                <li><a href="../classes/QueryString.html">QueryString</a></li>
+            
+                <li><a href="../classes/Queue.html">Queue</a></li>
+            
+                <li><a href="../classes/RangeSeries.html">RangeSeries</a></li>
+            
+                <li><a href="../classes/Record.html">Record</a></li>
+            
+                <li><a href="../classes/Recordset.html">Recordset</a></li>
+            
+                <li><a href="../classes/RecordsetFilter.html">RecordsetFilter</a></li>
+            
+                <li><a href="../classes/RecordsetIndexer.html">RecordsetIndexer</a></li>
+            
+                <li><a href="../classes/RecordsetSort.html">RecordsetSort</a></li>
+            
+                <li><a href="../classes/Rect.html">Rect</a></li>
+            
+                <li><a href="../classes/Renderer.html">Renderer</a></li>
+            
+                <li><a href="../classes/Resize.html">Resize</a></li>
+            
+                <li><a href="../classes/RightAxisLayout.html">RightAxisLayout</a></li>
+            
+                <li><a href="../classes/Router.html">Router</a></li>
+            
+                <li><a href="../classes/ScrollView.html">ScrollView</a></li>
+            
+                <li><a href="../classes/Selector.html">Selector</a></li>
+            
+                <li><a href="../classes/SeriesBase.html">SeriesBase</a></li>
+            
+                <li><a href="../classes/Shape.html">Shape</a></li>
+            
+                <li><a href="../classes/ShapeGroup.html">ShapeGroup</a></li>
+            
+                <li><a href="../classes/Slider.html">Slider</a></li>
+            
+                <li><a href="../classes/SliderBase.html">SliderBase</a></li>
+            
+                <li><a href="../classes/SliderValueRange.html">SliderValueRange</a></li>
+            
+                <li><a href="../classes/soon.html">soon</a></li>
+            
+                <li><a href="../classes/Sortable.html">Sortable</a></li>
+            
+                <li><a href="../classes/SplineSeries.html">SplineSeries</a></li>
+            
+                <li><a href="../classes/StackedAreaSeries.html">StackedAreaSeries</a></li>
+            
+                <li><a href="../classes/StackedAreaSplineSeries.html">StackedAreaSplineSeries</a></li>
+            
+                <li><a href="../classes/StackedAxis.html">StackedAxis</a></li>
+            
+                <li><a href="../classes/StackedAxisBase.html">StackedAxisBase</a></li>
+            
+                <li><a href="../classes/StackedBarSeries.html">StackedBarSeries</a></li>
+            
+                <li><a href="../classes/StackedColumnSeries.html">StackedColumnSeries</a></li>
+            
+                <li><a href="../classes/StackedComboSeries.html">StackedComboSeries</a></li>
+            
+                <li><a href="../classes/StackedComboSplineSeries.html">StackedComboSplineSeries</a></li>
+            
+                <li><a href="../classes/StackedImpl.html">StackedImpl</a></li>
+            
+                <li><a href="../classes/StackedLineSeries.html">StackedLineSeries</a></li>
+            
+                <li><a href="../classes/StackedMarkerSeries.html">StackedMarkerSeries</a></li>
+            
+                <li><a href="../classes/StackedSplineSeries.html">StackedSplineSeries</a></li>
+            
+                <li><a href="../classes/StackingUtil.html">StackingUtil</a></li>
+            
+                <li><a href="../classes/State.html">State</a></li>
+            
+                <li><a href="../classes/StyleSheet.html">StyleSheet</a></li>
+            
+                <li><a href="../classes/Subscriber.html">Subscriber</a></li>
+            
+                <li><a href="../classes/SVGCircle.html">SVGCircle</a></li>
+            
+                <li><a href="../classes/SVGDrawing.html">SVGDrawing</a></li>
+            
+                <li><a href="../classes/SVGEllipse.html">SVGEllipse</a></li>
+            
+                <li><a href="../classes/SVGGraphic.html">SVGGraphic</a></li>
+            
+                <li><a href="../classes/SVGPath.html">SVGPath</a></li>
+            
+                <li><a href="../classes/SVGPieSlice.html">SVGPieSlice</a></li>
+            
+                <li><a href="../classes/SVGRect.html">SVGRect</a></li>
+            
+                <li><a href="../classes/SVGShape.html">SVGShape</a></li>
+            
+                <li><a href="../classes/SWF.html">SWF</a></li>
+            
+                <li><a href="../classes/SWFDetect.html">SWFDetect</a></li>
+            
+                <li><a href="../classes/SyntheticEvent.html">SyntheticEvent</a></li>
+            
+                <li><a href="../classes/SyntheticEvent.Notifier.html">SyntheticEvent.Notifier</a></li>
+            
+                <li><a href="../classes/SynthRegistry.html">SynthRegistry</a></li>
+            
+                <li><a href="../classes/Tab.html">Tab</a></li>
+            
+                <li><a href="../classes/TabView.html">TabView</a></li>
+            
+                <li><a href="../classes/Template.html">Template</a></li>
+            
+                <li><a href="../classes/Template.Micro.html">Template.Micro</a></li>
+            
+                <li><a href="../classes/Test.ArrayAssert.html">Test.ArrayAssert</a></li>
+            
+                <li><a href="../classes/Test.Assert.html">Test.Assert</a></li>
+            
+                <li><a href="../classes/Test.AssertionError.html">Test.AssertionError</a></li>
+            
+                <li><a href="../classes/Test.ComparisonFailure.html">Test.ComparisonFailure</a></li>
+            
+                <li><a href="../classes/Test.Console.html">Test.Console</a></li>
+            
+                <li><a href="../classes/Test.CoverageFormat.html">Test.CoverageFormat</a></li>
+            
+                <li><a href="../classes/Test.DateAssert.html">Test.DateAssert</a></li>
+            
+                <li><a href="../classes/Test.EventTarget.html">Test.EventTarget</a></li>
+            
+                <li><a href="../classes/Test.Mock.html">Test.Mock</a></li>
+            
+                <li><a href="../classes/Test.Mock.Value.html">Test.Mock.Value</a></li>
+            
+                <li><a href="../classes/Test.ObjectAssert.html">Test.ObjectAssert</a></li>
+            
+                <li><a href="../classes/Test.Reporter.html">Test.Reporter</a></li>
+            
+                <li><a href="../classes/Test.Results.html">Test.Results</a></li>
+            
+                <li><a href="../classes/Test.Runner.html">Test.Runner</a></li>
+            
+                <li><a href="../classes/Test.ShouldError.html">Test.ShouldError</a></li>
+            
+                <li><a href="../classes/Test.ShouldFail.html">Test.ShouldFail</a></li>
+            
+                <li><a href="../classes/Test.TestCase.html">Test.TestCase</a></li>
+            
+                <li><a href="../classes/Test.TestFormat.html">Test.TestFormat</a></li>
+            
+                <li><a href="../classes/Test.TestNode.html">Test.TestNode</a></li>
+            
+                <li><a href="../classes/Test.TestRunner.html">Test.TestRunner</a></li>
+            
+                <li><a href="../classes/Test.TestSuite.html">Test.TestSuite</a></li>
+            
+                <li><a href="../classes/Test.UnexpectedError.html">Test.UnexpectedError</a></li>
+            
+                <li><a href="../classes/Test.UnexpectedValue.html">Test.UnexpectedValue</a></li>
+            
+                <li><a href="../classes/Test.Wait.html">Test.Wait</a></li>
+            
+                <li><a href="../classes/Text.AccentFold.html">Text.AccentFold</a></li>
+            
+                <li><a href="../classes/Text.WordBreak.html">Text.WordBreak</a></li>
+            
+                <li><a href="../classes/TimeAxis.html">TimeAxis</a></li>
+            
+                <li><a href="../classes/TimeAxisBase.html">TimeAxisBase</a></li>
+            
+                <li><a href="../classes/TimeImpl.html">TimeImpl</a></li>
+            
+                <li><a href="../classes/ToggleButton.html">ToggleButton</a></li>
+            
+                <li><a href="../classes/TopAxisLayout.html">TopAxisLayout</a></li>
+            
+                <li><a href="../classes/Transition.html">Transition</a></li>
+            
+                <li><a href="../classes/Tree.html">Tree</a></li>
+            
+                <li><a href="../classes/Tree.Labelable.html">Tree.Labelable</a></li>
+            
+                <li><a href="../classes/Tree.Node.html">Tree.Node</a></li>
+            
+                <li><a href="../classes/Tree.Node.Labelable.html">Tree.Node.Labelable</a></li>
+            
+                <li><a href="../classes/Tree.Node.Openable.html">Tree.Node.Openable</a></li>
+            
+                <li><a href="../classes/Tree.Node.Selectable.html">Tree.Node.Selectable</a></li>
+            
+                <li><a href="../classes/Tree.Node.Sortable.html">Tree.Node.Sortable</a></li>
+            
+                <li><a href="../classes/Tree.Openable.html">Tree.Openable</a></li>
+            
+                <li><a href="../classes/Tree.Selectable.html">Tree.Selectable</a></li>
+            
+                <li><a href="../classes/Tree.Sortable.html">Tree.Sortable</a></li>
+            
+                <li><a href="../classes/UA.html">UA</a></li>
+            
+                <li><a href="../classes/Uploader.html">Uploader</a></li>
+            
+                <li><a href="../classes/Uploader.Queue.html">Uploader.Queue</a></li>
+            
+                <li><a href="../classes/UploaderFlash.html">UploaderFlash</a></li>
+            
+                <li><a href="../classes/UploaderHTML5.html">UploaderHTML5</a></li>
+            
+                <li><a href="../classes/ValueChange.html">ValueChange</a></li>
+            
+                <li><a href="../classes/VerticalLegendLayout.html">VerticalLegendLayout</a></li>
+            
+                <li><a href="../classes/View.html">View</a></li>
+            
+                <li><a href="../classes/View.NodeMap.html">View.NodeMap</a></li>
+            
+                <li><a href="../classes/VMLCircle.html">VMLCircle</a></li>
+            
+                <li><a href="../classes/VMLDrawing.html">VMLDrawing</a></li>
+            
+                <li><a href="../classes/VMLEllipse.html">VMLEllipse</a></li>
+            
+                <li><a href="../classes/VMLGraphic.html">VMLGraphic</a></li>
+            
+                <li><a href="../classes/VMLPath.html">VMLPath</a></li>
+            
+                <li><a href="../classes/VMLPieSlice.html">VMLPieSlice</a></li>
+            
+                <li><a href="../classes/VMLRect.html">VMLRect</a></li>
+            
+                <li><a href="../classes/VMLShape.html">VMLShape</a></li>
+            
+                <li><a href="../classes/Widget.html">Widget</a></li>
+            
+                <li><a href="../classes/WidgetAutohide.html">WidgetAutohide</a></li>
+            
+                <li><a href="../classes/WidgetButtons.html">WidgetButtons</a></li>
+            
+                <li><a href="../classes/WidgetChild.html">WidgetChild</a></li>
+            
+                <li><a href="../classes/WidgetModality.html">WidgetModality</a></li>
+            
+                <li><a href="../classes/WidgetParent.html">WidgetParent</a></li>
+            
+                <li><a href="../classes/WidgetPosition.html">WidgetPosition</a></li>
+            
+                <li><a href="../classes/WidgetPositionAlign.html">WidgetPositionAlign</a></li>
+            
+                <li><a href="../classes/WidgetPositionConstrain.html">WidgetPositionConstrain</a></li>
+            
+                <li><a href="../classes/WidgetStack.html">WidgetStack</a></li>
+            
+                <li><a href="../classes/WidgetStdMod.html">WidgetStdMod</a></li>
+            
+                <li><a href="../classes/XML.html">XML</a></li>
+            
+                <li><a href="../classes/YQL.html">YQL</a></li>
+            
+                <li><a href="../classes/YQLRequest.html">YQLRequest</a></li>
+            
+                <li><a href="../classes/YUI.html">YUI</a></li>
+            
+                <li><a href="../classes/YUI~substitute.html">YUI~substitute</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/align-plugin.html">align-plugin</a></li>
+            
+                <li><a href="../modules/anim.html">anim</a></li>
+            
+                <li><a href="../modules/anim-base.html">anim-base</a></li>
+            
+                <li><a href="../modules/anim-color.html">anim-color</a></li>
+            
+                <li><a href="../modules/anim-curve.html">anim-curve</a></li>
+            
+                <li><a href="../modules/anim-easing.html">anim-easing</a></li>
+            
+                <li><a href="../modules/anim-node-plugin.html">anim-node-plugin</a></li>
+            
+                <li><a href="../modules/anim-scroll.html">anim-scroll</a></li>
+            
+                <li><a href="../modules/anim-shape.html">anim-shape</a></li>
+            
+                <li><a href="../modules/anim-shape-transform.html">anim-shape-transform</a></li>
+            
+                <li><a href="../modules/anim-xy.html">anim-xy</a></li>
+            
+                <li><a href="../modules/app.html">app</a></li>
+            
+                <li><a href="../modules/app-base.html">app-base</a></li>
+            
+                <li><a href="../modules/app-content.html">app-content</a></li>
+            
+                <li><a href="../modules/app-transitions.html">app-transitions</a></li>
+            
+                <li><a href="../modules/app-transitions-native.html">app-transitions-native</a></li>
+            
+                <li><a href="../modules/array-extras.html">array-extras</a></li>
+            
+                <li><a href="../modules/array-invoke.html">array-invoke</a></li>
+            
+                <li><a href="../modules/arraylist.html">arraylist</a></li>
+            
+                <li><a href="../modules/arraylist-add.html">arraylist-add</a></li>
+            
+                <li><a href="../modules/arraylist-filter.html">arraylist-filter</a></li>
+            
+                <li><a href="../modules/arraysort.html">arraysort</a></li>
+            
+                <li><a href="../modules/async-queue.html">async-queue</a></li>
+            
+                <li><a href="../modules/attribute.html">attribute</a></li>
+            
+                <li><a href="../modules/attribute-base.html">attribute-base</a></li>
+            
+                <li><a href="../modules/attribute-complex.html">attribute-complex</a></li>
+            
+                <li><a href="../modules/attribute-core.html">attribute-core</a></li>
+            
+                <li><a href="../modules/attribute-extras.html">attribute-extras</a></li>
+            
+                <li><a href="../modules/attribute-observable.html">attribute-observable</a></li>
+            
+                <li><a href="../modules/autocomplete.html">autocomplete</a></li>
+            
+                <li><a href="../modules/autocomplete-base.html">autocomplete-base</a></li>
+            
+                <li><a href="../modules/autocomplete-filters.html">autocomplete-filters</a></li>
+            
+                <li><a href="../modules/autocomplete-filters-accentfold.html">autocomplete-filters-accentfold</a></li>
+            
+                <li><a href="../modules/autocomplete-highlighters.html">autocomplete-highlighters</a></li>
+            
+                <li><a href="../modules/autocomplete-highlighters-accentfold.html">autocomplete-highlighters-accentfold</a></li>
+            
+                <li><a href="../modules/autocomplete-list.html">autocomplete-list</a></li>
+            
+                <li><a href="../modules/autocomplete-list-keys.html">autocomplete-list-keys</a></li>
+            
+                <li><a href="../modules/autocomplete-plugin.html">autocomplete-plugin</a></li>
+            
+                <li><a href="../modules/autocomplete-sources.html">autocomplete-sources</a></li>
+            
+                <li><a href="../modules/axis.html">axis</a></li>
+            
+                <li><a href="../modules/axis-base.html">axis-base</a></li>
+            
+                <li><a href="../modules/axis-category.html">axis-category</a></li>
+            
+                <li><a href="../modules/axis-category-base.html">axis-category-base</a></li>
+            
+                <li><a href="../modules/axis-numeric.html">axis-numeric</a></li>
+            
+                <li><a href="../modules/axis-numeric-base.html">axis-numeric-base</a></li>
+            
+                <li><a href="../modules/axis-stacked.html">axis-stacked</a></li>
+            
+                <li><a href="../modules/axis-stacked-base.html">axis-stacked-base</a></li>
+            
+                <li><a href="../modules/axis-time.html">axis-time</a></li>
+            
+                <li><a href="../modules/axis-time-base.html">axis-time-base</a></li>
+            
+                <li><a href="../modules/base.html">base</a></li>
+            
+                <li><a href="../modules/base-base.html">base-base</a></li>
+            
+                <li><a href="../modules/base-build.html">base-build</a></li>
+            
+                <li><a href="../modules/base-core.html">base-core</a></li>
+            
+                <li><a href="../modules/base-observable.html">base-observable</a></li>
+            
+                <li><a href="../modules/base-pluginhost.html">base-pluginhost</a></li>
+            
+                <li><a href="../modules/button.html">button</a></li>
+            
+                <li><a href="../modules/button-core.html">button-core</a></li>
+            
+                <li><a href="../modules/button-group.html">button-group</a></li>
+            
+                <li><a href="../modules/button-plugin.html">button-plugin</a></li>
+            
+                <li><a href="../modules/cache.html">cache</a></li>
+            
+                <li><a href="../modules/cache-base.html">cache-base</a></li>
+            
+                <li><a href="../modules/cache-offline.html">cache-offline</a></li>
+            
+                <li><a href="../modules/cache-plugin.html">cache-plugin</a></li>
+            
+                <li><a href="../modules/calendar.html">calendar</a></li>
+            
+                <li><a href="../modules/calendar-base.html">calendar-base</a></li>
+            
+                <li><a href="../modules/calendarnavigator.html">calendarnavigator</a></li>
+            
+                <li><a href="../modules/charts.html">charts</a></li>
+            
+                <li><a href="../modules/charts-base.html">charts-base</a></li>
+            
+                <li><a href="../modules/charts-legend.html">charts-legend</a></li>
+            
+                <li><a href="../modules/classnamemanager.html">classnamemanager</a></li>
+            
+                <li><a href="../modules/clickable-rail.html">clickable-rail</a></li>
+            
+                <li><a href="../modules/collection.html">collection</a></li>
+            
+                <li><a href="../modules/color.html">color</a></li>
+            
+                <li><a href="../modules/color-base.html">color-base</a></li>
+            
+                <li><a href="../modules/color-harmony.html">color-harmony</a></li>
+            
+                <li><a href="../modules/color-hsl.html">color-hsl</a></li>
+            
+                <li><a href="../modules/color-hsv.html">color-hsv</a></li>
+            
+                <li><a href="../modules/console.html">console</a></li>
+            
+                <li><a href="../modules/console-filters.html">console-filters</a></li>
+            
+                <li><a href="../modules/cookie.html">cookie</a></li>
+            
+                <li><a href="../modules/createlink-base.html">createlink-base</a></li>
+            
+                <li><a href="../modules/dataschema.html">dataschema</a></li>
+            
+                <li><a href="../modules/dataschema-array.html">dataschema-array</a></li>
+            
+                <li><a href="../modules/dataschema-base.html">dataschema-base</a></li>
+            
+                <li><a href="../modules/dataschema-json.html">dataschema-json</a></li>
+            
+                <li><a href="../modules/dataschema-text.html">dataschema-text</a></li>
+            
+                <li><a href="../modules/dataschema-xml.html">dataschema-xml</a></li>
+            
+                <li><a href="../modules/datasource.html">datasource</a></li>
+            
+                <li><a href="../modules/datasource-arrayschema.html">datasource-arrayschema</a></li>
+            
+                <li><a href="../modules/datasource-cache.html">datasource-cache</a></li>
+            
+                <li><a href="../modules/datasource-function.html">datasource-function</a></li>
+            
+                <li><a href="../modules/datasource-get.html">datasource-get</a></li>
+            
+                <li><a href="../modules/datasource-io.html">datasource-io</a></li>
+            
+                <li><a href="../modules/datasource-jsonschema.html">datasource-jsonschema</a></li>
+            
+                <li><a href="../modules/datasource-local.html">datasource-local</a></li>
+            
+                <li><a href="../modules/datasource-polling.html">datasource-polling</a></li>
+            
+                <li><a href="../modules/datasource-textschema.html">datasource-textschema</a></li>
+            
+                <li><a href="../modules/datasource-xmlschema.html">datasource-xmlschema</a></li>
+            
+                <li><a href="../modules/datatable.html">datatable</a></li>
+            
+                <li><a href="../modules/datatable-base.html">datatable-base</a></li>
+            
+                <li><a href="../modules/datatable-body.html">datatable-body</a></li>
+            
+                <li><a href="../modules/datatable-column-widths.html">datatable-column-widths</a></li>
+            
+                <li><a href="../modules/datatable-core.html">datatable-core</a></li>
+            
+                <li><a href="../modules/datatable-datasource.html">datatable-datasource</a></li>
+            
+                <li><a href="../modules/datatable-formatters.html">datatable-formatters</a></li>
+            
+                <li><a href="../modules/datatable-head.html">datatable-head</a></li>
+            
+                <li><a href="../modules/datatable-message.html">datatable-message</a></li>
+            
+                <li><a href="../modules/datatable-mutable.html">datatable-mutable</a></li>
+            
+                <li><a href="../modules/datatable-scroll.html">datatable-scroll</a></li>
+            
+                <li><a href="../modules/datatable-sort.html">datatable-sort</a></li>
+            
+                <li><a href="../modules/datatable-table.html">datatable-table</a></li>
+            
+                <li><a href="../modules/datatype.html">datatype</a></li>
+            
+                <li><a href="../modules/datatype-date.html">datatype-date</a></li>
+            
+                <li><a href="../modules/datatype-date-format.html">datatype-date-format</a></li>
+            
+                <li><a href="../modules/datatype-date-math.html">datatype-date-math</a></li>
+            
+                <li><a href="../modules/datatype-date-parse.html">datatype-date-parse</a></li>
+            
+                <li><a href="../modules/datatype-number.html">datatype-number</a></li>
+            
+                <li><a href="../modules/datatype-number-format.html">datatype-number-format</a></li>
+            
+                <li><a href="../modules/datatype-number-parse.html">datatype-number-parse</a></li>
+            
+                <li><a href="../modules/datatype-xml.html">datatype-xml</a></li>
+            
+                <li><a href="../modules/datatype-xml-format.html">datatype-xml-format</a></li>
+            
+                <li><a href="../modules/datatype-xml-parse.html">datatype-xml-parse</a></li>
+            
+                <li><a href="../modules/dd.html">dd</a></li>
+            
+                <li><a href="../modules/dd-constrain.html">dd-constrain</a></li>
+            
+                <li><a href="../modules/dd-ddm.html">dd-ddm</a></li>
+            
+                <li><a href="../modules/dd-ddm-base.html">dd-ddm-base</a></li>
+            
+                <li><a href="../modules/dd-ddm-drop.html">dd-ddm-drop</a></li>
+            
+                <li><a href="../modules/dd-delegate.html">dd-delegate</a></li>
+            
+                <li><a href="../modules/dd-drag.html">dd-drag</a></li>
+            
+                <li><a href="../modules/dd-drop.html">dd-drop</a></li>
+            
+                <li><a href="../modules/dd-drop-plugin.html">dd-drop-plugin</a></li>
+            
+                <li><a href="../modules/dd-gestures.html">dd-gestures</a></li>
+            
+                <li><a href="../modules/dd-plugin.html">dd-plugin</a></li>
+            
+                <li><a href="../modules/dd-proxy.html">dd-proxy</a></li>
+            
+                <li><a href="../modules/dd-scroll.html">dd-scroll</a></li>
+            
+                <li><a href="../modules/dial.html">dial</a></li>
+            
+                <li><a href="../modules/dom.html">dom</a></li>
+            
+                <li><a href="../modules/dom-base.html">dom-base</a></li>
+            
+                <li><a href="../modules/dom-screen.html">dom-screen</a></li>
+            
+                <li><a href="../modules/dom-style.html">dom-style</a></li>
+            
+                <li><a href="../modules/dump.html">dump</a></li>
+            
+                <li><a href="../modules/editor.html">editor</a></li>
+            
+                <li><a href="../modules/editor-base.html">editor-base</a></li>
+            
+                <li><a href="../modules/editor-bidi.html">editor-bidi</a></li>
+            
+                <li><a href="../modules/editor-br.html">editor-br</a></li>
+            
+                <li><a href="../modules/editor-lists.html">editor-lists</a></li>
+            
+                <li><a href="../modules/editor-para.html">editor-para</a></li>
+            
+                <li><a href="../modules/editor-para-base.html">editor-para-base</a></li>
+            
+                <li><a href="../modules/editor-para-ie.html">editor-para-ie</a></li>
+            
+                <li><a href="../modules/editor-tab.html">editor-tab</a></li>
+            
+                <li><a href="../modules/escape.html">escape</a></li>
+            
+                <li><a href="../modules/event.html">event</a></li>
+            
+                <li><a href="../modules/event-base.html">event-base</a></li>
+            
+                <li><a href="../modules/event-contextmenu.html">event-contextmenu</a></li>
+            
+                <li><a href="../modules/event-custom.html">event-custom</a></li>
+            
+                <li><a href="../modules/event-custom-base.html">event-custom-base</a></li>
+            
+                <li><a href="../modules/event-custom-complex.html">event-custom-complex</a></li>
+            
+                <li><a href="../modules/event-delegate.html">event-delegate</a></li>
+            
+                <li><a href="../modules/event-flick.html">event-flick</a></li>
+            
+                <li><a href="../modules/event-focus.html">event-focus</a></li>
+            
+                <li><a href="../modules/event-gestures.html">event-gestures</a></li>
+            
+                <li><a href="../modules/event-hover.html">event-hover</a></li>
+            
+                <li><a href="../modules/event-key.html">event-key</a></li>
+            
+                <li><a href="../modules/event-mouseenter.html">event-mouseenter</a></li>
+            
+                <li><a href="../modules/event-mousewheel.html">event-mousewheel</a></li>
+            
+                <li><a href="../modules/event-move.html">event-move</a></li>
+            
+                <li><a href="../modules/event-outside.html">event-outside</a></li>
+            
+                <li><a href="../modules/event-resize.html">event-resize</a></li>
+            
+                <li><a href="../modules/event-simulate.html">event-simulate</a></li>
+            
+                <li><a href="../modules/event-synthetic.html">event-synthetic</a></li>
+            
+                <li><a href="../modules/event-tap.html">event-tap</a></li>
+            
+                <li><a href="../modules/event-touch.html">event-touch</a></li>
+            
+                <li><a href="../modules/event-valuechange.html">event-valuechange</a></li>
+            
+                <li><a href="../modules/exec-command.html">exec-command</a></li>
+            
+                <li><a href="../modules/features.html">features</a></li>
+            
+                <li><a href="../modules/file.html">file</a></li>
+            
+                <li><a href="../modules/file-flash.html">file-flash</a></li>
+            
+                <li><a href="../modules/file-html5.html">file-html5</a></li>
+            
+                <li><a href="../modules/frame.html">frame</a></li>
+            
+                <li><a href="../modules/gesture-simulate.html">gesture-simulate</a></li>
+            
+                <li><a href="../modules/get.html">get</a></li>
+            
+                <li><a href="../modules/get-nodejs.html">get-nodejs</a></li>
+            
+                <li><a href="../modules/graphics.html">graphics</a></li>
+            
+                <li><a href="../modules/graphics-group.html">graphics-group</a></li>
+            
+                <li><a href="../modules/handlebars.html">handlebars</a></li>
+            
+                <li><a href="../modules/handlebars-base.html">handlebars-base</a></li>
+            
+                <li><a href="../modules/handlebars-compiler.html">handlebars-compiler</a></li>
+            
+                <li><a href="../modules/highlight.html">highlight</a></li>
+            
+                <li><a href="../modules/highlight-accentfold.html">highlight-accentfold</a></li>
+            
+                <li><a href="../modules/highlight-base.html">highlight-base</a></li>
+            
+                <li><a href="../modules/history.html">history</a></li>
+            
+                <li><a href="../modules/history-base.html">history-base</a></li>
+            
+                <li><a href="../modules/history-hash.html">history-hash</a></li>
+            
+                <li><a href="../modules/history-hash-ie.html">history-hash-ie</a></li>
+            
+                <li><a href="../modules/history-html5.html">history-html5</a></li>
+            
+                <li><a href="../modules/imageloader.html">imageloader</a></li>
+            
+                <li><a href="../modules/intl.html">intl</a></li>
+            
+                <li><a href="../modules/io.html">io</a></li>
+            
+                <li><a href="../modules/io-base.html">io-base</a></li>
+            
+                <li><a href="../modules/io-form.html">io-form</a></li>
+            
+                <li><a href="../modules/io-nodejs.html">io-nodejs</a></li>
+            
+                <li><a href="../modules/io-queue.html">io-queue</a></li>
+            
+                <li><a href="../modules/io-upload-iframe.html">io-upload-iframe</a></li>
+            
+                <li><a href="../modules/io-xdr.html">io-xdr</a></li>
+            
+                <li><a href="../modules/json.html">json</a></li>
+            
+                <li><a href="../modules/json-parse.html">json-parse</a></li>
+            
+                <li><a href="../modules/json-stringify.html">json-stringify</a></li>
+            
+                <li><a href="../modules/jsonp.html">jsonp</a></li>
+            
+                <li><a href="../modules/jsonp-url.html">jsonp-url</a></li>
+            
+                <li><a href="../modules/lazy-model-list.html">lazy-model-list</a></li>
+            
+                <li><a href="../modules/loader.html">loader</a></li>
+            
+                <li><a href="../modules/loader-base.html">loader-base</a></li>
+            
+                <li><a href="../modules/loader-yui3.html">loader-yui3</a></li>
+            
+                <li><a href="../modules/matrix.html">matrix</a></li>
+            
+                <li><a href="../modules/model.html">model</a></li>
+            
+                <li><a href="../modules/model-list.html">model-list</a></li>
+            
+                <li><a href="../modules/model-sync-rest.html">model-sync-rest</a></li>
+            
+                <li><a href="../modules/node.html">node</a></li>
+            
+                <li><a href="../modules/node-base.html">node-base</a></li>
+            
+                <li><a href="../modules/node-core.html">node-core</a></li>
+            
+                <li><a href="../modules/node-data.html">node-data</a></li>
+            
+                <li><a href="../modules/node-event-delegate.html">node-event-delegate</a></li>
+            
+                <li><a href="../modules/node-event-html5.html">node-event-html5</a></li>
+            
+                <li><a href="../modules/node-event-simulate.html">node-event-simulate</a></li>
+            
+                <li><a href="../modules/node-flick.html">node-flick</a></li>
+            
+                <li><a href="../modules/node-focusmanager.html">node-focusmanager</a></li>
+            
+                <li><a href="../modules/node-load.html">node-load</a></li>
+            
+                <li><a href="../modules/node-menunav.html">node-menunav</a></li>
+            
+                <li><a href="../modules/node-pluginhost.html">node-pluginhost</a></li>
+            
+                <li><a href="../modules/node-screen.html">node-screen</a></li>
+            
+                <li><a href="../modules/node-scroll-info.html">node-scroll-info</a></li>
+            
+                <li><a href="../modules/node-style.html">node-style</a></li>
+            
+                <li><a href="../modules/oop.html">oop</a></li>
+            
+                <li><a href="../modules/overlay.html">overlay</a></li>
+            
+                <li><a href="../modules/panel.html">panel</a></li>
+            
+                <li><a href="../modules/parallel.html">parallel</a></li>
+            
+                <li><a href="../modules/pjax.html">pjax</a></li>
+            
+                <li><a href="../modules/pjax-base.html">pjax-base</a></li>
+            
+                <li><a href="../modules/pjax-content.html">pjax-content</a></li>
+            
+                <li><a href="../modules/pjax-plugin.html">pjax-plugin</a></li>
+            
+                <li><a href="../modules/plugin.html">plugin</a></li>
+            
+                <li><a href="../modules/pluginhost.html">pluginhost</a></li>
+            
+                <li><a href="../modules/pluginhost-base.html">pluginhost-base</a></li>
+            
+                <li><a href="../modules/pluginhost-config.html">pluginhost-config</a></li>
+            
+                <li><a href="../modules/profiler.html">profiler</a></li>
+            
+                <li><a href="../modules/promise.html">promise</a></li>
+            
+                <li><a href="../modules/querystring.html">querystring</a></li>
+            
+                <li><a href="../modules/querystring-parse.html">querystring-parse</a></li>
+            
+                <li><a href="../modules/querystring-parse-simple.html">querystring-parse-simple</a></li>
+            
+                <li><a href="../modules/querystring-stringify.html">querystring-stringify</a></li>
+            
+                <li><a href="../modules/querystring-stringify-simple.html">querystring-stringify-simple</a></li>
+            
+                <li><a href="../modules/queue-promote.html">queue-promote</a></li>
+            
+                <li><a href="../modules/range-slider.html">range-slider</a></li>
+            
+                <li><a href="../modules/recordset.html">recordset</a></li>
+            
+                <li><a href="../modules/recordset-base.html">recordset-base</a></li>
+            
+                <li><a href="../modules/recordset-filter.html">recordset-filter</a></li>
+            
+                <li><a href="../modules/recordset-indexer.html">recordset-indexer</a></li>
+            
+                <li><a href="../modules/recordset-sort.html">recordset-sort</a></li>
+            
+                <li><a href="../modules/resize.html">resize</a></li>
+            
+                <li><a href="../modules/resize-contrain.html">resize-contrain</a></li>
+            
+                <li><a href="../modules/resize-plugin.html">resize-plugin</a></li>
+            
+                <li><a href="../modules/resize-proxy.html">resize-proxy</a></li>
+            
+                <li><a href="../modules/rollup.html">rollup</a></li>
+            
+                <li><a href="../modules/router.html">router</a></li>
+            
+                <li><a href="../modules/scrollview.html">scrollview</a></li>
+            
+                <li><a href="../modules/scrollview-base.html">scrollview-base</a></li>
+            
+                <li><a href="../modules/scrollview-base-ie.html">scrollview-base-ie</a></li>
+            
+                <li><a href="../modules/scrollview-list.html">scrollview-list</a></li>
+            
+                <li><a href="../modules/scrollview-paginator.html">scrollview-paginator</a></li>
+            
+                <li><a href="../modules/scrollview-scrollbars.html">scrollview-scrollbars</a></li>
+            
+                <li><a href="../modules/selection.html">selection</a></li>
+            
+                <li><a href="../modules/selector-css2.html">selector-css2</a></li>
+            
+                <li><a href="../modules/selector-css3.html">selector-css3</a></li>
+            
+                <li><a href="../modules/selector-native.html">selector-native</a></li>
+            
+                <li><a href="../modules/series-area.html">series-area</a></li>
+            
+                <li><a href="../modules/series-area-stacked.html">series-area-stacked</a></li>
+            
+                <li><a href="../modules/series-areaspline.html">series-areaspline</a></li>
+            
+                <li><a href="../modules/series-areaspline-stacked.html">series-areaspline-stacked</a></li>
+            
+                <li><a href="../modules/series-bar.html">series-bar</a></li>
+            
+                <li><a href="../modules/series-bar-stacked.html">series-bar-stacked</a></li>
+            
+                <li><a href="../modules/series-base.html">series-base</a></li>
+            
+                <li><a href="../modules/series-candlestick.html">series-candlestick</a></li>
+            
+                <li><a href="../modules/series-cartesian.html">series-cartesian</a></li>
+            
+                <li><a href="../modules/series-column.html">series-column</a></li>
+            
+                <li><a href="../modules/series-column-stacked.html">series-column-stacked</a></li>
+            
+                <li><a href="../modules/series-combo.html">series-combo</a></li>
+            
+                <li><a href="../modules/series-combo-stacked.html">series-combo-stacked</a></li>
+            
+                <li><a href="../modules/series-combospline.html">series-combospline</a></li>
+            
+                <li><a href="../modules/series-combospline-stacked.html">series-combospline-stacked</a></li>
+            
+                <li><a href="../modules/series-curve-util.html">series-curve-util</a></li>
+            
+                <li><a href="../modules/series-fill-util.html">series-fill-util</a></li>
+            
+                <li><a href="../modules/series-histogram.html">series-histogram</a></li>
+            
+                <li><a href="../modules/series-line.html">series-line</a></li>
+            
+                <li><a href="../modules/series-line-stacked.html">series-line-stacked</a></li>
+            
+                <li><a href="../modules/series-line-util.html">series-line-util</a></li>
+            
+                <li><a href="../modules/series-marker.html">series-marker</a></li>
+            
+                <li><a href="../modules/series-marker-stacked.html">series-marker-stacked</a></li>
+            
+                <li><a href="../modules/series-ohlc.html">series-ohlc</a></li>
+            
+                <li><a href="../modules/series-pie.html">series-pie</a></li>
+            
+                <li><a href="../modules/series-plot-util.html">series-plot-util</a></li>
+            
+                <li><a href="../modules/series-range.html">series-range</a></li>
+            
+                <li><a href="../modules/series-spline.html">series-spline</a></li>
+            
+                <li><a href="../modules/series-spline-stacked.html">series-spline-stacked</a></li>
+            
+                <li><a href="../modules/series-stacked.html">series-stacked</a></li>
+            
+                <li><a href="../modules/shim-plugin.html">shim-plugin</a></li>
+            
+                <li><a href="../modules/slider.html">slider</a></li>
+            
+                <li><a href="../modules/slider-base.html">slider-base</a></li>
+            
+                <li><a href="../modules/slider-value-range.html">slider-value-range</a></li>
+            
+                <li><a href="../modules/sortable.html">sortable</a></li>
+            
+                <li><a href="../modules/sortable-scroll.html">sortable-scroll</a></li>
+            
+                <li><a href="../modules/stylesheet.html">stylesheet</a></li>
+            
+                <li><a href="../modules/substitute.html">substitute</a></li>
+            
+                <li><a href="../modules/swf.html">swf</a></li>
+            
+                <li><a href="../modules/swfdetect.html">swfdetect</a></li>
+            
+                <li><a href="../modules/tabview.html">tabview</a></li>
+            
+                <li><a href="../modules/template.html">template</a></li>
+            
+                <li><a href="../modules/template-base.html">template-base</a></li>
+            
+                <li><a href="../modules/template-micro.html">template-micro</a></li>
+            
+                <li><a href="../modules/test.html">test</a></li>
+            
+                <li><a href="../modules/test-console.html">test-console</a></li>
+            
+                <li><a href="../modules/text.html">text</a></li>
+            
+                <li><a href="../modules/text-accentfold.html">text-accentfold</a></li>
+            
+                <li><a href="../modules/text-wordbreak.html">text-wordbreak</a></li>
+            
+                <li><a href="../modules/timers.html">timers</a></li>
+            
+                <li><a href="../modules/transition.html">transition</a></li>
+            
+                <li><a href="../modules/transition-timer.html">transition-timer</a></li>
+            
+                <li><a href="../modules/tree.html">tree</a></li>
+            
+                <li><a href="../modules/tree-labelable.html">tree-labelable</a></li>
+            
+                <li><a href="../modules/tree-lazy.html">tree-lazy</a></li>
+            
+                <li><a href="../modules/tree-node.html">tree-node</a></li>
+            
+                <li><a href="../modules/tree-openable.html">tree-openable</a></li>
+            
+                <li><a href="../modules/tree-selectable.html">tree-selectable</a></li>
+            
+                <li><a href="../modules/tree-sortable.html">tree-sortable</a></li>
+            
+                <li><a href="../modules/uploader.html">uploader</a></li>
+            
+                <li><a href="../modules/uploader-flash.html">uploader-flash</a></li>
+            
+                <li><a href="../modules/uploader-html5.html">uploader-html5</a></li>
+            
+                <li><a href="../modules/uploader-queue.html">uploader-queue</a></li>
+            
+                <li><a href="../modules/view.html">view</a></li>
+            
+                <li><a href="../modules/view-node-map.html">view-node-map</a></li>
+            
+                <li><a href="../modules/widget.html">widget</a></li>
+            
+                <li><a href="../modules/widget-anim.html">widget-anim</a></li>
+            
+                <li><a href="../modules/widget-autohide.html">widget-autohide</a></li>
+            
+                <li><a href="../modules/widget-base.html">widget-base</a></li>
+            
+                <li><a href="../modules/widget-base-ie.html">widget-base-ie</a></li>
+            
+                <li><a href="../modules/widget-buttons.html">widget-buttons</a></li>
+            
+                <li><a href="../modules/widget-child.html">widget-child</a></li>
+            
+                <li><a href="../modules/widget-htmlparser.html">widget-htmlparser</a></li>
+            
+                <li><a href="../modules/widget-locale.html">widget-locale</a></li>
+            
+                <li><a href="../modules/widget-modality.html">widget-modality</a></li>
+            
+                <li><a href="../modules/widget-parent.html">widget-parent</a></li>
+            
+                <li><a href="../modules/widget-position.html">widget-position</a></li>
+            
+                <li><a href="../modules/widget-position-align.html">widget-position-align</a></li>
+            
+                <li><a href="../modules/widget-position-constrain.html">widget-position-constrain</a></li>
+            
+                <li><a href="../modules/widget-skin.html">widget-skin</a></li>
+            
+                <li><a href="../modules/widget-stack.html">widget-stack</a></li>
+            
+                <li><a href="../modules/widget-stdmod.html">widget-stdmod</a></li>
+            
+                <li><a href="../modules/widget-uievents.html">widget-uievents</a></li>
+            
+                <li><a href="../modules/yql.html">yql</a></li>
+            
+                <li><a href="../modules/yql-jsonp.html">yql-jsonp</a></li>
+            
+                <li><a href="../modules/yql-nodejs.html">yql-nodejs</a></li>
+            
+                <li><a href="../modules/yql-winjs.html">yql-winjs</a></li>
+            
+                <li><a href="../modules/yui.html">yui</a></li>
+            
+                <li><a href="../modules/yui-base.html">yui-base</a></li>
+            
+                <li><a href="../modules/yui-later.html">yui-later</a></li>
+            
+                <li><a href="../modules/yui-log.html">yui-log</a></li>
+            
+                <li><a href="../modules/yui-throttle.html">yui-throttle</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: scrollview/js/scrollview-base.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/**
+ * The scrollview-base module provides a basic ScrollView Widget, without scrollbar indicators
+ *
+ * @module scrollview
+ * @submodule scrollview-base
+ */
+
+ // Local vars
+var getClassName = Y.ClassNameManager.getClassName,
+    DOCUMENT = Y.config.doc,
+    IE = Y.UA.ie,
+    NATIVE_TRANSITIONS = Y.Transition.useNative,
+    vendorPrefix = Y.Transition._VENDOR_PREFIX, // Todo: This is a private property, and alternative approaches should be investigated
+    SCROLLVIEW = &#x27;scrollview&#x27;,
+    CLASS_NAMES = {
+        vertical: getClassName(SCROLLVIEW, &#x27;vert&#x27;),
+        horizontal: getClassName(SCROLLVIEW, &#x27;horiz&#x27;)
+    },
+    EV_SCROLL_END = &#x27;scrollEnd&#x27;,
+    FLICK = &#x27;flick&#x27;,
+    DRAG = &#x27;drag&#x27;,
+    MOUSEWHEEL = &#x27;mousewheel&#x27;,
+    UI = &#x27;ui&#x27;,
+    TOP = &#x27;top&#x27;,
+    LEFT = &#x27;left&#x27;,
+    PX = &#x27;px&#x27;,
+    AXIS = &#x27;axis&#x27;,
+    SCROLL_Y = &#x27;scrollY&#x27;,
+    SCROLL_X = &#x27;scrollX&#x27;,
+    BOUNCE = &#x27;bounce&#x27;,
+    DISABLED = &#x27;disabled&#x27;,
+    DECELERATION = &#x27;deceleration&#x27;,
+    DIM_X = &#x27;x&#x27;,
+    DIM_Y = &#x27;y&#x27;,
+    BOUNDING_BOX = &#x27;boundingBox&#x27;,
+    CONTENT_BOX = &#x27;contentBox&#x27;,
+    GESTURE_MOVE = &#x27;gesturemove&#x27;,
+    START = &#x27;start&#x27;,
+    END = &#x27;end&#x27;,
+    EMPTY = &#x27;&#x27;,
+    ZERO = &#x27;0s&#x27;,
+    SNAP_DURATION = &#x27;snapDuration&#x27;,
+    SNAP_EASING = &#x27;snapEasing&#x27;,
+    EASING = &#x27;easing&#x27;,
+    FRAME_DURATION = &#x27;frameDuration&#x27;,
+    BOUNCE_RANGE = &#x27;bounceRange&#x27;,
+    _constrain = function (val, min, max) {
+        return Math.min(Math.max(val, min), max);
+    };
+
+/**
+ * ScrollView provides a scrollable widget, supporting flick gestures,
+ * across both touch and mouse based devices.
+ *
+ * @class ScrollView
+ * @param config {Object} Object literal with initial attribute values
+ * @extends Widget
+ * @constructor
+ */
+function ScrollView() {
+    ScrollView.superclass.constructor.apply(this, arguments);
+}
+
+Y.ScrollView = Y.extend(ScrollView, Y.Widget, {
+
+    // *** Y.ScrollView prototype
+
+    /**
+     * Flag driving whether or not we should try and force H/W acceleration when transforming. Currently enabled by default for Webkit.
+     * Used by the _transform method.
+     *
+     * @property _forceHWTransforms
+     * @type boolean
+     * @protected
+     */
+    _forceHWTransforms: Y.UA.webkit ? true : false,
+
+    /**
+     * &lt;p&gt;Used to control whether or not ScrollView&#x27;s internal
+     * gesturemovestart, gesturemove and gesturemoveend
+     * event listeners should preventDefault. The value is an
+     * object, with &quot;start&quot;, &quot;move&quot; and &quot;end&quot; properties used to
+     * specify which events should preventDefault and which shouldn&#x27;t:&lt;/p&gt;
+     *
+     * &lt;pre&gt;
+     * {
+     *    start: false,
+     *    move: true,
+     *    end: false
+     * }
+     * &lt;/pre&gt;
+     *
+     * &lt;p&gt;The default values are set up in order to prevent panning,
+     * on touch devices, while allowing click listeners on elements inside
+     * the ScrollView to be notified as expected.&lt;/p&gt;
+     *
+     * @property _prevent
+     * @type Object
+     * @protected
+     */
+    _prevent: {
+        start: false,
+        move: true,
+        end: false
+    },
+
+    /**
+     * Contains the distance (postive or negative) in pixels by which
+     *  the scrollview was last scrolled. This is useful when setting up
+     *  click listeners on the scrollview content, which on mouse based
+     *  devices are always fired, even after a drag/flick.
+     *
+     * &lt;p&gt;Touch based devices don&#x27;t currently fire a click event,
+     *  if the finger has been moved (beyond a threshold) so this
+     *  check isn&#x27;t required, if working in a purely touch based environment&lt;/p&gt;
+     *
+     * @property lastScrolledAmt
+     * @type Number
+     * @public
+     * @default 0
+     */
+    lastScrolledAmt: 0,
+
+    /**
+     * Internal state, defines the minimum amount that the scrollview can be scrolled along the X axis
+     *
+     * @property _minScrollX
+     * @type number
+     * @protected
+     */
+    _minScrollX: null,
+
+    /**
+     * Internal state, defines the maximum amount that the scrollview can be scrolled along the X axis
+     *
+     * @property _maxScrollX
+     * @type number
+     * @protected
+     */
+    _maxScrollX: null,
+
+    /**
+     * Internal state, defines the minimum amount that the scrollview can be scrolled along the Y axis
+     *
+     * @property _minScrollY
+     * @type number
+     * @protected
+     */
+    _minScrollY: null,
+
+    /**
+     * Internal state, defines the maximum amount that the scrollview can be scrolled along the Y axis
+     *
+     * @property _maxScrollY
+     * @type number
+     * @protected
+     */
+    _maxScrollY: null,
+    
+    /**
+     * Designated initializer
+     *
+     * @method initializer
+     * @param {config} Configuration object for the plugin
+     */
+    initializer: function () {
+        var sv = this;
+
+        // Cache these values, since they aren&#x27;t going to change.
+        sv._bb = sv.get(BOUNDING_BOX);
+        sv._cb = sv.get(CONTENT_BOX);
+
+        // Cache some attributes
+        sv._cAxis = sv.get(AXIS);
+        sv._cBounce = sv.get(BOUNCE);
+        sv._cBounceRange = sv.get(BOUNCE_RANGE);
+        sv._cDeceleration = sv.get(DECELERATION);
+        sv._cFrameDuration = sv.get(FRAME_DURATION);
+    },
+
+    /**
+     * bindUI implementation
+     *
+     * Hooks up events for the widget
+     * @method bindUI
+     */
+    bindUI: function () {
+        var sv = this;
+
+        // Bind interaction listers
+        sv._bindFlick(sv.get(FLICK));
+        sv._bindDrag(sv.get(DRAG));
+        sv._bindMousewheel(true);
+        
+        // Bind change events
+        sv._bindAttrs();
+
+        // IE SELECT HACK. See if we can do this non-natively and in the gesture for a future release.
+        if (IE) {
+            sv._fixIESelect(sv._bb, sv._cb);
+        }
+
+        // Set any deprecated static properties
+        if (ScrollView.SNAP_DURATION) {
+            sv.set(SNAP_DURATION, ScrollView.SNAP_DURATION);
+        }
+
+        if (ScrollView.SNAP_EASING) {
+            sv.set(SNAP_EASING, ScrollView.SNAP_EASING);
+        }
+
+        if (ScrollView.EASING) {
+            sv.set(EASING, ScrollView.EASING);
+        }
+
+        if (ScrollView.FRAME_STEP) {
+            sv.set(FRAME_DURATION, ScrollView.FRAME_STEP);
+        }
+
+        if (ScrollView.BOUNCE_RANGE) {
+            sv.set(BOUNCE_RANGE, ScrollView.BOUNCE_RANGE);
+        }
+
+        // Recalculate dimension properties
+        // TODO: This should be throttled.
+        // Y.one(WINDOW).after(&#x27;resize&#x27;, sv._afterDimChange, sv);
+    },
+
+    /**
+     * Bind event listeners
+     *
+     * @method _bindAttrs
+     * @private
+     */
+    _bindAttrs: function () {
+        var sv = this,
+            scrollChangeHandler = sv._afterScrollChange,
+            dimChangeHandler = sv._afterDimChange;
+
+        // Bind any change event listeners
+        sv.after({
+            &#x27;scrollEnd&#x27;: sv._afterScrollEnd,
+            &#x27;disabledChange&#x27;: sv._afterDisabledChange,
+            &#x27;flickChange&#x27;: sv._afterFlickChange,
+            &#x27;dragChange&#x27;: sv._afterDragChange,
+            &#x27;axisChange&#x27;: sv._afterAxisChange,
+            &#x27;scrollYChange&#x27;: scrollChangeHandler,
+            &#x27;scrollXChange&#x27;: scrollChangeHandler,
+            &#x27;heightChange&#x27;: dimChangeHandler,
+            &#x27;widthChange&#x27;: dimChangeHandler
+        });
+    },
+
+    /**
+     * Bind (or unbind) gesture move listeners required for drag support
+     *
+     * @method _bindDrag
+     * @param drag {boolean} If true, the method binds listener to enable
+     *  drag (gesturemovestart). If false, the method unbinds gesturemove
+     *  listeners for drag support.
+     * @private
+     */
+    _bindDrag: function (drag) {
+        var sv = this,
+            bb = sv._bb;
+
+        // Unbind any previous &#x27;drag&#x27; listeners
+        bb.detach(DRAG + &#x27;|*&#x27;);
+
+        if (drag) {
+            bb.on(DRAG + &#x27;|&#x27; + GESTURE_MOVE + START, Y.bind(sv._onGestureMoveStart, sv));
+        }
+    },
+
+    /**
+     * Bind (or unbind) flick listeners.
+     *
+     * @method _bindFlick
+     * @param flick {Object|boolean} If truthy, the method binds listeners for
+     *  flick support. If false, the method unbinds flick listeners.
+     * @private
+     */
+    _bindFlick: function (flick) {
+        var sv = this,
+            bb = sv._bb;
+
+        // Unbind any previous &#x27;flick&#x27; listeners
+        bb.detach(FLICK + &#x27;|*&#x27;);
+
+        if (flick) {
+            bb.on(FLICK + &#x27;|&#x27; + FLICK, Y.bind(sv._flick, sv), flick);
+
+            // Rebind Drag, becuase _onGestureMoveEnd always has to fire -after- _flick
+            sv._bindDrag(sv.get(DRAG));
+        }
+    },
+
+    /**
+     * Bind (or unbind) mousewheel listeners.
+     *
+     * @method _bindMousewheel
+     * @param mousewheel {Object|boolean} If truthy, the method binds listeners for
+     *  mousewheel support. If false, the method unbinds mousewheel listeners.
+     * @private
+     */
+    _bindMousewheel: function (mousewheel) {
+        var sv = this,
+            bb = sv._bb;
+
+        // Unbind any previous &#x27;mousewheel&#x27; listeners
+        // TODO: This doesn&#x27;t actually appear to work properly. Fix. #2532743
+        bb.detach(MOUSEWHEEL + &#x27;|*&#x27;);
+
+        // Only enable for vertical scrollviews
+        if (mousewheel) {
+            // Bound to document, because that&#x27;s where mousewheel events fire off of.
+            Y.one(DOCUMENT).on(MOUSEWHEEL, Y.bind(sv._mousewheel, sv));
+        }
+    },
+
+    /**
+     * syncUI implementation.
+     *
+     * Update the scroll position, based on the current value of scrollX/scrollY.
+     *
+     * @method syncUI
+     */
+    syncUI: function () {
+        var sv = this,
+            scrollDims = sv._getScrollDims(),
+            width = scrollDims.offsetWidth,
+            height = scrollDims.offsetHeight,
+            scrollWidth = scrollDims.scrollWidth,
+            scrollHeight = scrollDims.scrollHeight;
+
+        // If the axis is undefined, auto-calculate it
+        if (sv._cAxis === undefined) {
+            // This should only ever be run once (for now).
+            // In the future SV might post-load axis changes
+            sv._cAxis = {
+                x: (scrollWidth &gt; width),
+                y: (scrollHeight &gt; height)
+            };
+
+            sv._set(AXIS, sv._cAxis);
+        }
+        
+        // get text direction on or inherited by scrollview node
+        sv.rtl = (sv._cb.getComputedStyle(&#x27;direction&#x27;) === &#x27;rtl&#x27;);
+
+        // Cache the disabled value
+        sv._cDisabled = sv.get(DISABLED);
+
+        // Run this to set initial values
+        sv._uiDimensionsChange();
+
+        // If we&#x27;re out-of-bounds, snap back.
+        if (sv._isOutOfBounds()) {
+            sv._snapBack();
+        }
+    },
+
+    /**
+     * Utility method to obtain widget dimensions
+     *
+     * @method _getScrollDims
+     * @return {Object} The offsetWidth, offsetHeight, scrollWidth and
+     *  scrollHeight as an array: [offsetWidth, offsetHeight, scrollWidth,
+     *  scrollHeight]
+     * @private
+     */
+    _getScrollDims: function () {
+        var sv = this,
+            cb = sv._cb,
+            bb = sv._bb,
+            TRANS = ScrollView._TRANSITION,
+            // Ideally using CSSMatrix - don&#x27;t think we have it normalized yet though.
+            // origX = (new WebKitCSSMatrix(cb.getComputedStyle(&quot;transform&quot;))).e,
+            // origY = (new WebKitCSSMatrix(cb.getComputedStyle(&quot;transform&quot;))).f,
+            origX = sv.get(SCROLL_X),
+            origY = sv.get(SCROLL_Y),
+            origHWTransform,
+            dims;
+
+        // TODO: Is this OK? Just in case it&#x27;s called &#x27;during&#x27; a transition.
+        if (NATIVE_TRANSITIONS) {
+            cb.setStyle(TRANS.DURATION, ZERO);
+            cb.setStyle(TRANS.PROPERTY, EMPTY);
+        }
+
+        origHWTransform = sv._forceHWTransforms;
+        sv._forceHWTransforms = false; // the z translation was causing issues with picking up accurate scrollWidths in Chrome/Mac.
+
+        sv._moveTo(cb, 0, 0);
+        dims = {
+            &#x27;offsetWidth&#x27;: bb.get(&#x27;offsetWidth&#x27;),
+            &#x27;offsetHeight&#x27;: bb.get(&#x27;offsetHeight&#x27;),
+            &#x27;scrollWidth&#x27;: bb.get(&#x27;scrollWidth&#x27;),
+            &#x27;scrollHeight&#x27;: bb.get(&#x27;scrollHeight&#x27;)
+        };
+        sv._moveTo(cb, -(origX), -(origY));
+
+        sv._forceHWTransforms = origHWTransform;
+
+        return dims;
+    },
+
+    /**
+     * This method gets invoked whenever the height or width attributes change,
+     * allowing us to determine which scrolling axes need to be enabled.
+     *
+     * @method _uiDimensionsChange
+     * @protected
+     */
+    _uiDimensionsChange: function () {
+        var sv = this,
+            bb = sv._bb,
+            scrollDims = sv._getScrollDims(),
+            width = scrollDims.offsetWidth,
+            height = scrollDims.offsetHeight,
+            scrollWidth = scrollDims.scrollWidth,
+            scrollHeight = scrollDims.scrollHeight,
+            rtl = sv.rtl,
+            svAxis = sv._cAxis,
+            minScrollX = (rtl ? Math.min(0, -(scrollWidth - width)) : 0),
+            maxScrollX = (rtl ? 0 : Math.max(0, scrollWidth - width)),
+            minScrollY = 0,
+            maxScrollY = Math.max(0, scrollHeight - height);
+            
+        if (svAxis &amp;&amp; svAxis.x) {
+            bb.addClass(CLASS_NAMES.horizontal);
+        }
+
+        if (svAxis &amp;&amp; svAxis.y) {
+            bb.addClass(CLASS_NAMES.vertical);
+        }
+
+        sv._setBounds({
+            minScrollX: minScrollX,
+            maxScrollX: maxScrollX,
+            minScrollY: minScrollY,
+            maxScrollY: maxScrollY
+        });
+    },
+
+    /**
+     * Set the bounding dimensions of the ScrollView
+     *
+     * @method _setBounds
+     * @protected
+     * @param bounds {Object} [duration] ms of the scroll animation. (default is 0)
+     *   @param {Number} [bounds.minScrollX] The minimum scroll X value
+     *   @param {Number} [bounds.maxScrollX] The maximum scroll X value
+     *   @param {Number} [bounds.minScrollY] The minimum scroll Y value
+     *   @param {Number} [bounds.maxScrollY] The maximum scroll Y value
+     */
+    _setBounds: function (bounds) {
+        var sv = this;
+        
+        // TODO: Do a check to log if the bounds are invalid
+
+        sv._minScrollX = bounds.minScrollX;
+        sv._maxScrollX = bounds.maxScrollX;
+        sv._minScrollY = bounds.minScrollY;
+        sv._maxScrollY = bounds.maxScrollY;
+    },
+
+    /**
+     * Get the bounding dimensions of the ScrollView
+     *
+     * @method _getBounds
+     * @protected
+     */
+    _getBounds: function () {
+        var sv = this;
+        
+        return {
+            minScrollX: sv._minScrollX,
+            maxScrollX: sv._maxScrollX,
+            minScrollY: sv._minScrollY,
+            maxScrollY: sv._maxScrollY
+        };
+
+    },
+
+    /**
+     * Scroll the element to a given xy coordinate
+     *
+     * @method scrollTo
+     * @param x {Number} The x-position to scroll to. (null for no movement)
+     * @param y {Number} The y-position to scroll to. (null for no movement)
+     * @param {Number} [duration] ms of the scroll animation. (default is 0)
+     * @param {String} [easing] An easing equation if duration is set. (default is &#x60;easing&#x60; attribute)
+     * @param {String} [node] The node to transform.  Setting this can be useful in
+     *  dual-axis paginated instances. (default is the instance&#x27;s contentBox)
+     */
+    scrollTo: function (x, y, duration, easing, node) {
+        // Check to see if widget is disabled
+        if (this._cDisabled) {
+            return;
+        }
+
+        var sv = this,
+            cb = sv._cb,
+            TRANS = ScrollView._TRANSITION,
+            callback = Y.bind(sv._onTransEnd, sv), // @Todo : cache this
+            newX = 0,
+            newY = 0,
+            transition = {},
+            transform;
+
+        // default the optional arguments
+        duration = duration || 0;
+        easing = easing || sv.get(EASING); // @TODO: Cache this
+        node = node || cb;
+
+        if (x !== null) {
+            sv.set(SCROLL_X, x, {src:UI});
+            newX = -(x);
+        }
+
+        if (y !== null) {
+            sv.set(SCROLL_Y, y, {src:UI});
+            newY = -(y);
+        }
+
+        transform = sv._transform(newX, newY);
+
+        if (NATIVE_TRANSITIONS) {
+            // ANDROID WORKAROUND - try and stop existing transition, before kicking off new one.
+            node.setStyle(TRANS.DURATION, ZERO).setStyle(TRANS.PROPERTY, EMPTY);
+        }
+
+        // Move
+        if (duration === 0) {
+            if (NATIVE_TRANSITIONS) {
+                node.setStyle(&#x27;transform&#x27;, transform);
+            }
+            else {
+                // TODO: If both set, batch them in the same update
+                // Update: Nope, setStyles() just loops through each property and applies it.
+                if (x !== null) {
+                    node.setStyle(LEFT, newX + PX);
+                }
+                if (y !== null) {
+                    node.setStyle(TOP, newY + PX);
+                }
+            }
+        }
+
+        // Animate
+        else {
+            transition.easing = easing;
+            transition.duration = duration / 1000;
+
+            if (NATIVE_TRANSITIONS) {
+                transition.transform = transform;
+            }
+            else {
+                transition.left = newX + PX;
+                transition.top = newY + PX;
+            }
+
+            node.transition(transition, callback);
+        }
+    },
+
+    /**
+     * Utility method, to create the translate transform string with the
+     * x, y translation amounts provided.
+     *
+     * @method _transform
+     * @param {Number} x Number of pixels to translate along the x axis
+     * @param {Number} y Number of pixels to translate along the y axis
+     * @private
+     */
+    _transform: function (x, y) {
+        // TODO: Would we be better off using a Matrix for this?
+        var prop = &#x27;translate(&#x27; + x + &#x27;px, &#x27; + y + &#x27;px)&#x27;;
+
+        if (this._forceHWTransforms) {
+            prop += &#x27; translateZ(0)&#x27;;
+        }
+
+        return prop;
+    },
+
+    /**
+    * Utility method, to move the given element to the given xy position
+    *
+    * @method _moveTo
+    * @param node {Node} The node to move
+    * @param x {Number} The x-position to move to
+    * @param y {Number} The y-position to move to
+    * @private
+    */
+    _moveTo : function(node, x, y) {
+        if (NATIVE_TRANSITIONS) {
+            node.setStyle(&#x27;transform&#x27;, this._transform(x, y));
+        } else {
+            node.setStyle(LEFT, x + PX);
+            node.setStyle(TOP, y + PX);
+        }
+    },
+
+
+    /**
+     * Content box transition callback
+     *
+     * @method _onTransEnd
+     * @param {Event.Facade} e The event facade
+     * @private
+     */
+    _onTransEnd: function () {
+        var sv = this;
+        
+        // If for some reason we&#x27;re OOB, snapback
+        if (sv._isOutOfBounds()) {
+            sv._snapBack();
+        }
+        else {
+            /**
+             * Notification event fired at the end of a scroll transition
+             *
+             * @event scrollEnd
+             * @param e {EventFacade} The default event facade.
+             */
+            sv.fire(EV_SCROLL_END);
+        }
+    },
+
+    /**
+     * gesturemovestart event handler
+     *
+     * @method _onGestureMoveStart
+     * @param e {Event.Facade} The gesturemovestart event facade
+     * @private
+     */
+    _onGestureMoveStart: function (e) {
+
+        if (this._cDisabled) {
+            return false;
+        }
+
+        var sv = this,
+            bb = sv._bb,
+            currentX = sv.get(SCROLL_X),
+            currentY = sv.get(SCROLL_Y),
+            clientX = e.clientX,
+            clientY = e.clientY;
+
+        if (sv._prevent.start) {
+            e.preventDefault();
+        }
+
+        // if a flick animation is in progress, cancel it
+        if (sv._flickAnim) {
+            sv._cancelFlick();
+            sv._onTransEnd();
+        }
+
+        // Reset lastScrolledAmt
+        sv.lastScrolledAmt = 0;
+
+        // Stores data for this gesture cycle.  Cleaned up later
+        sv._gesture = {
+
+            // Will hold the axis value
+            axis: null,
+
+            // The current attribute values
+            startX: currentX,
+            startY: currentY,
+
+            // The X/Y coordinates where the event began
+            startClientX: clientX,
+            startClientY: clientY,
+
+            // The X/Y coordinates where the event will end
+            endClientX: null,
+            endClientY: null,
+
+            // The current delta of the event
+            deltaX: null,
+            deltaY: null,
+
+            // Will be populated for flicks
+            flick: null,
+
+            // Create some listeners for the rest of the gesture cycle
+            onGestureMove: bb.on(DRAG + &#x27;|&#x27; + GESTURE_MOVE, Y.bind(sv._onGestureMove, sv)),
+            
+            // @TODO: Don&#x27;t bind gestureMoveEnd if it&#x27;s a Flick?
+            onGestureMoveEnd: bb.on(DRAG + &#x27;|&#x27; + GESTURE_MOVE + END, Y.bind(sv._onGestureMoveEnd, sv))
+        };
+    },
+
+    /**
+     * gesturemove event handler
+     *
+     * @method _onGestureMove
+     * @param e {Event.Facade} The gesturemove event facade
+     * @private
+     */
+    _onGestureMove: function (e) {
+        var sv = this,
+            gesture = sv._gesture,
+            svAxis = sv._cAxis,
+            svAxisX = svAxis.x,
+            svAxisY = svAxis.y,
+            startX = gesture.startX,
+            startY = gesture.startY,
+            startClientX = gesture.startClientX,
+            startClientY = gesture.startClientY,
+            clientX = e.clientX,
+            clientY = e.clientY;
+
+        if (sv._prevent.move) {
+            e.preventDefault();
+        }
+
+        gesture.deltaX = startClientX - clientX;
+        gesture.deltaY = startClientY - clientY;
+
+        // Determine if this is a vertical or horizontal movement
+        // @TODO: This is crude, but it works.  Investigate more intelligent ways to detect intent
+        if (gesture.axis === null) {
+            gesture.axis = (Math.abs(gesture.deltaX) &gt; Math.abs(gesture.deltaY)) ? DIM_X : DIM_Y;
+        }
+
+        // Move X or Y.  @TODO: Move both if dualaxis.
+        if (gesture.axis === DIM_X &amp;&amp; svAxisX) {
+            sv.set(SCROLL_X, startX + gesture.deltaX);
+        }
+        else if (gesture.axis === DIM_Y &amp;&amp; svAxisY) {
+            sv.set(SCROLL_Y, startY + gesture.deltaY);
+        }
+    },
+
+    /**
+     * gesturemoveend event handler
+     *
+     * @method _onGestureMoveEnd
+     * @param e {Event.Facade} The gesturemoveend event facade
+     * @private
+     */
+    _onGestureMoveEnd: function (e) {
+        var sv = this,
+            gesture = sv._gesture,
+            flick = gesture.flick,
+            clientX = e.clientX,
+            clientY = e.clientY,
+            isOOB;
+
+        if (sv._prevent.end) {
+            e.preventDefault();
+        }
+
+        // Store the end X/Y coordinates
+        gesture.endClientX = clientX;
+        gesture.endClientY = clientY;
+
+        // Cleanup the event handlers
+        gesture.onGestureMove.detach();
+        gesture.onGestureMoveEnd.detach();
+
+        // If this wasn&#x27;t a flick, wrap up the gesture cycle
+        if (!flick) {
+            // @TODO: Be more intelligent about this. Look at the Flick attribute to see
+            // if it is safe to assume _flick did or didn&#x27;t fire.
+            // Then, the order _flick and _onGestureMoveEnd fire doesn&#x27;t matter?
+
+            // If there was movement (_onGestureMove fired)
+            if (gesture.deltaX !== null &amp;&amp; gesture.deltaY !== null) {
+                
+                isOOB = sv._isOutOfBounds();
+                
+                // If we&#x27;re out-out-bounds, then snapback
+                if (isOOB) {
+                    sv._snapBack();
+                }
+
+                // Inbounds
+                else {
+                    // Fire scrollEnd unless this is a paginated instance and the gesture axis is the same as paginator&#x27;s
+                    // Not totally confident this is ideal to access a plugin&#x27;s properties from a host, @TODO revisit
+                    if (!sv.pages || (sv.pages &amp;&amp; !sv.pages.get(AXIS)[gesture.axis])) {
+                        sv._onTransEnd();
+                    }
+                }
+            }
+        }
+    },
+
+    /**
+     * Execute a flick at the end of a scroll action
+     *
+     * @method _flick
+     * @param e {Event.Facade} The Flick event facade
+     * @private
+     */
+    _flick: function (e) {
+        if (this._cDisabled) {
+            return false;
+        }
+
+        var sv = this,
+            svAxis = sv._cAxis,
+            flick = e.flick,
+            flickAxis = flick.axis,
+            flickVelocity = flick.velocity,
+            axisAttr = flickAxis === DIM_X ? SCROLL_X : SCROLL_Y,
+            startPosition = sv.get(axisAttr);
+
+        // Sometimes flick is enabled, but drag is disabled
+        if (sv._gesture) {
+            sv._gesture.flick = flick;
+        }
+
+        // Prevent unneccesary firing of _flickFrame if we can&#x27;t scroll on the flick axis
+        if (svAxis[flickAxis]) {
+            sv._flickFrame(flickVelocity, flickAxis, startPosition);
+        }
+    },
+
+    /**
+     * Execute a single frame in the flick animation
+     *
+     * @method _flickFrame
+     * @param velocity {Number} The velocity of this animated frame
+     * @param flickAxis {String} The axis on which to animate
+     * @param startPosition {Number} The starting X/Y point to flick from
+     * @protected
+     */
+    _flickFrame: function (velocity, flickAxis, startPosition) {
+
+        var sv = this,
+            axisAttr = flickAxis === DIM_X ? SCROLL_X : SCROLL_Y,
+            bounds = sv._getBounds(),
+
+            // Localize cached values
+            bounce = sv._cBounce,
+            bounceRange = sv._cBounceRange,
+            deceleration = sv._cDeceleration,
+            frameDuration = sv._cFrameDuration,
+
+            // Calculate
+            newVelocity = velocity * deceleration,
+            newPosition = startPosition - (frameDuration * newVelocity),
+
+            // Some convinience conditions
+            min = flickAxis === DIM_X ? bounds.minScrollX : bounds.minScrollY,
+            max = flickAxis === DIM_X ? bounds.maxScrollX : bounds.maxScrollY,
+            belowMin       = (newPosition &lt; min),
+            belowMax       = (newPosition &lt; max),
+            aboveMin       = (newPosition &gt; min),
+            aboveMax       = (newPosition &gt; max),
+            belowMinRange  = (newPosition &lt; (min - bounceRange)),
+            withinMinRange = (belowMin &amp;&amp; (newPosition &gt; (min - bounceRange))),
+            withinMaxRange = (aboveMax &amp;&amp; (newPosition &lt; (max + bounceRange))),
+            aboveMaxRange  = (newPosition &gt; (max + bounceRange)),
+            tooSlow;
+
+        // If we&#x27;re within the range but outside min/max, dampen the velocity
+        if (withinMinRange || withinMaxRange) {
+            newVelocity *= bounce;
+        }
+
+        // Is the velocity too slow to bother?
+        tooSlow = (Math.abs(newVelocity).toFixed(4) &lt; 0.015);
+
+        // If the velocity is too slow or we&#x27;re outside the range
+        if (tooSlow || belowMinRange || aboveMaxRange) {
+            // Cancel and delete sv._flickAnim
+            if (sv._flickAnim) {
+                sv._cancelFlick();
+            }
+
+            // If we&#x27;re inside the scroll area, just end
+            if (aboveMin &amp;&amp; belowMax) {
+                sv._onTransEnd();
+            }
+
+            // We&#x27;re outside the scroll area, so we need to snap back
+            else {
+                sv._snapBack();
+            }
+        }
+
+        // Otherwise, animate to the next frame
+        else {
+            // @TODO: maybe use requestAnimationFrame instead
+            sv._flickAnim = Y.later(frameDuration, sv, &#x27;_flickFrame&#x27;, [newVelocity, flickAxis, newPosition]);
+            sv.set(axisAttr, newPosition);
+        }
+    },
+
+    _cancelFlick: function () {
+        var sv = this;
+
+        if (sv._flickAnim) {
+            // Cancel the flick (if it exists)
+            sv._flickAnim.cancel();
+
+            // Also delete it, otherwise _onGestureMoveStart will think we&#x27;re still flicking
+            delete sv._flickAnim;
+        }
+
+    },
+
+    /**
+     * Handle mousewheel events on the widget
+     *
+     * @method _mousewheel
+     * @param e {Event.Facade} The mousewheel event facade
+     * @private
+     */
+    _mousewheel: function (e) {
+        var sv = this,
+            scrollY = sv.get(SCROLL_Y),
+            bounds = sv._getBounds(),
+            bb = sv._bb,
+            scrollOffset = 10, // 10px
+            isForward = (e.wheelDelta &gt; 0),
+            scrollToY = scrollY - ((isForward ? 1 : -1) * scrollOffset);
+
+        scrollToY = _constrain(scrollToY, bounds.minScrollY, bounds.maxScrollY);
+
+        // Because Mousewheel events fire off &#x27;document&#x27;, every ScrollView widget will react
+        // to any mousewheel anywhere on the page. This check will ensure that the mouse is currently
+        // over this specific ScrollView.  Also, only allow mousewheel scrolling on Y-axis,
+        // becuase otherwise the &#x27;prevent&#x27; will block page scrolling.
+        if (bb.contains(e.target) &amp;&amp; sv._cAxis[DIM_Y]) {
+
+            // Reset lastScrolledAmt
+            sv.lastScrolledAmt = 0;
+
+            // Jump to the new offset
+            sv.set(SCROLL_Y, scrollToY);
+
+            // if we have scrollbars plugin, update &amp; set the flash timer on the scrollbar
+            // @TODO: This probably shouldn&#x27;t be in this module
+            if (sv.scrollbars) {
+                // @TODO: The scrollbars should handle this themselves
+                sv.scrollbars._update();
+                sv.scrollbars.flash();
+                // or just this
+                // sv.scrollbars._hostDimensionsChange();
+            }
+
+            // Fire the &#x27;scrollEnd&#x27; event
+            sv._onTransEnd();
+
+            // prevent browser default behavior on mouse scroll
+            e.preventDefault();
+        }
+    },
+
+    /**
+     * Checks to see the current scrollX/scrollY position beyond the min/max boundary
+     *
+     * @method _isOutOfBounds
+     * @param x {Number} [optional] The X position to check
+     * @param y {Number} [optional] The Y position to check
+     * @return {boolen} Whether the current X/Y position is out of bounds (true) or not (false)
+     * @private
+     */
+    _isOutOfBounds: function (x, y) {
+        var sv = this,
+            svAxis = sv._cAxis,
+            svAxisX = svAxis.x,
+            svAxisY = svAxis.y,
+            currentX = x || sv.get(SCROLL_X),
+            currentY = y || sv.get(SCROLL_Y),
+            bounds = sv._getBounds(),
+            minX = bounds.minScrollX,
+            minY = bounds.minScrollY,
+            maxX = bounds.maxScrollX,
+            maxY = bounds.maxScrollY;
+
+        return (svAxisX &amp;&amp; (currentX &lt; minX || currentX &gt; maxX)) || (svAxisY &amp;&amp; (currentY &lt; minY || currentY &gt; maxY));
+    },
+
+    /**
+     * Bounces back
+     * @TODO: Should be more generalized and support both X and Y detection
+     *
+     * @method _snapBack
+     * @private
+     */
+    _snapBack: function () {
+        var sv = this,
+            currentX = sv.get(SCROLL_X),
+            currentY = sv.get(SCROLL_Y),
+            bounds = sv._getBounds(),
+            minX = bounds.minScrollX,
+            minY = bounds.minScrollY,
+            maxX = bounds.maxScrollX,
+            maxY = bounds.maxScrollY,
+            newY = _constrain(currentY, minY, maxY),
+            newX = _constrain(currentX, minX, maxX),
+            duration = sv.get(SNAP_DURATION),
+            easing = sv.get(SNAP_EASING);
+
+        if (newX !== currentX) {
+            sv.set(SCROLL_X, newX, {duration:duration, easing:easing});
+        }
+        else if (newY !== currentY) {
+            sv.set(SCROLL_Y, newY, {duration:duration, easing:easing});
+        }
+        else {
+            sv._onTransEnd();
+        }
+    },
+
+    /**
+     * After listener for changes to the scrollX or scrollY attribute
+     *
+     * @method _afterScrollChange
+     * @param e {Event.Facade} The event facade
+     * @protected
+     */
+    _afterScrollChange: function (e) {
+        if (e.src === ScrollView.UI_SRC) {
+            return false;
+        }
+
+        var sv = this,
+            duration = e.duration,
+            easing = e.easing,
+            val = e.newVal,
+            scrollToArgs = [];
+
+        // Set the scrolled value
+        sv.lastScrolledAmt = sv.lastScrolledAmt + (e.newVal - e.prevVal);
+
+        // Generate the array of args to pass to scrollTo()
+        if (e.attrName === SCROLL_X) {
+            scrollToArgs.push(val);
+            scrollToArgs.push(sv.get(SCROLL_Y));
+        }
+        else {
+            scrollToArgs.push(sv.get(SCROLL_X));
+            scrollToArgs.push(val);
+        }
+
+        scrollToArgs.push(duration);
+        scrollToArgs.push(easing);
+
+        sv.scrollTo.apply(sv, scrollToArgs);
+    },
+
+    /**
+     * After listener for changes to the flick attribute
+     *
+     * @method _afterFlickChange
+     * @param e {Event.Facade} The event facade
+     * @protected
+     */
+    _afterFlickChange: function (e) {
+        this._bindFlick(e.newVal);
+    },
+
+    /**
+     * After listener for changes to the disabled attribute
+     *
+     * @method _afterDisabledChange
+     * @param e {Event.Facade} The event facade
+     * @protected
+     */
+    _afterDisabledChange: function (e) {
+        // Cache for performance - we check during move
+        this._cDisabled = e.newVal;
+    },
+
+    /**
+     * After listener for the axis attribute
+     *
+     * @method _afterAxisChange
+     * @param e {Event.Facade} The event facade
+     * @protected
+     */
+    _afterAxisChange: function (e) {
+        this._cAxis = e.newVal;
+    },
+
+    /**
+     * After listener for changes to the drag attribute
+     *
+     * @method _afterDragChange
+     * @param e {Event.Facade} The event facade
+     * @protected
+     */
+    _afterDragChange: function (e) {
+        this._bindDrag(e.newVal);
+    },
+
+    /**
+     * After listener for the height or width attribute
+     *
+     * @method _afterDimChange
+     * @param e {Event.Facade} The event facade
+     * @protected
+     */
+    _afterDimChange: function () {
+        this._uiDimensionsChange();
+    },
+
+    /**
+     * After listener for scrollEnd, for cleanup
+     *
+     * @method _afterScrollEnd
+     * @param e {Event.Facade} The event facade
+     * @protected
+     */
+    _afterScrollEnd: function () {
+        var sv = this;
+
+        if (sv._flickAnim) {
+            sv._cancelFlick();
+        }
+
+        // Ideally this should be removed, but doing so causing some JS errors with fast swiping
+        // because _gesture is being deleted after the previous one has been overwritten
+        // delete sv._gesture; // TODO: Move to sv.prevGesture?
+    },
+
+    /**
+     * Setter for &#x27;axis&#x27; attribute
+     *
+     * @method _axisSetter
+     * @param val {Mixed} A string (&#x27;x&#x27;, &#x27;y&#x27;, &#x27;xy&#x27;) to specify which axis/axes to allow scrolling on
+     * @param name {String} The attribute name
+     * @return {Object} An object to specify scrollability on the x &amp; y axes
+     *
+     * @protected
+     */
+    _axisSetter: function (val) {
+
+        // Turn a string into an axis object
+        if (Y.Lang.isString(val)) {
+            return {
+                x: val.match(/x/i) ? true : false,
+                y: val.match(/y/i) ? true : false
+            };
+        }
+    },
+    
+    /**
+    * The scrollX, scrollY setter implementation
+    *
+    * @method _setScroll
+    * @private
+    * @param {Number} val
+    * @param {String} dim
+    *
+    * @return {Number} The value
+    */
+    _setScroll : function(val) {
+
+        // Just ensure the widget is not disabled
+        if (this._cDisabled) {
+            val = Y.Attribute.INVALID_VALUE;
+        }
+
+        return val;
+    },
+
+    /**
+    * Setter for the scrollX attribute
+    *
+    * @method _setScrollX
+    * @param val {Number} The new scrollX value
+    * @return {Number} The normalized value
+    * @protected
+    */
+    _setScrollX: function(val) {
+        return this._setScroll(val, DIM_X);
+    },
+
+    /**
+    * Setter for the scrollY ATTR
+    *
+    * @method _setScrollY
+    * @param val {Number} The new scrollY value
+    * @return {Number} The normalized value
+    * @protected
+    */
+    _setScrollY: function(val) {
+        return this._setScroll(val, DIM_Y);
+    }
+
+    // End prototype properties
+
+}, {
+
+    // Static properties
+
+    /**
+     * The identity of the widget.
+     *
+     * @property NAME
+     * @type String
+     * @default &#x27;scrollview&#x27;
+     * @readOnly
+     * @protected
+     * @static
+     */
+    NAME: &#x27;scrollview&#x27;,
+
+    /**
+     * Static property used to define the default attribute configuration of
+     * the Widget.
+     *
+     * @property ATTRS
+     * @type {Object}
+     * @protected
+     * @static
+     */
+    ATTRS: {
+
+        /**
+         * Specifies ability to scroll on x, y, or x and y axis/axes.
+         *
+         * @attribute axis
+         * @type String
+         */
+        axis: {
+            setter: &#x27;_axisSetter&#x27;,
+            writeOnce: &#x27;initOnly&#x27;
+        },
+
+        /**
+         * The current scroll position in the x-axis
+         *
+         * @attribute scrollX
+         * @type Number
+         * @default 0
+         */
+        scrollX: {
+            value: 0,
+            setter: &#x27;_setScrollX&#x27;
+        },
+
+        /**
+         * The current scroll position in the y-axis
+         *
+         * @attribute scrollY
+         * @type Number
+         * @default 0
+         */
+        scrollY: {
+            value: 0,
+            setter: &#x27;_setScrollY&#x27;
+        },
+
+        /**
+         * Drag coefficent for inertial scrolling. The closer to 1 this
+         * value is, the less friction during scrolling.
+         *
+         * @attribute deceleration
+         * @default 0.93
+         */
+        deceleration: {
+            value: 0.93
+        },
+
+        /**
+         * Drag coefficient for intertial scrolling at the upper
+         * and lower boundaries of the scrollview. Set to 0 to
+         * disable &quot;rubber-banding&quot;.
+         *
+         * @attribute bounce
+         * @type Number
+         * @default 0.1
+         */
+        bounce: {
+            value: 0.1
+        },
+
+        /**
+         * The minimum distance and/or velocity which define a flick. Can be set to false,
+         * to disable flick support (note: drag support is enabled/disabled separately)
+         *
+         * @attribute flick
+         * @type Object
+         * @default Object with properties minDistance = 10, minVelocity = 0.3.
+         */
+        flick: {
+            value: {
+                minDistance: 10,
+                minVelocity: 0.3
+            }
+        },
+
+        /**
+         * Enable/Disable dragging the ScrollView content (note: flick support is enabled/disabled separately)
+         * @attribute drag
+         * @type boolean
+         * @default true
+         */
+        drag: {
+            value: true
+        },
+
+        /**
+         * The default duration to use when animating the bounce snap back.
+         *
+         * @attribute snapDuration
+         * @type Number
+         * @default 400
+         */
+        snapDuration: {
+            value: 400
+        },
+
+        /**
+         * The default easing to use when animating the bounce snap back.
+         *
+         * @attribute snapEasing
+         * @type String
+         * @default &#x27;ease-out&#x27;
+         */
+        snapEasing: {
+            value: &#x27;ease-out&#x27;
+        },
+
+        /**
+         * The default easing used when animating the flick
+         *
+         * @attribute easing
+         * @type String
+         * @default &#x27;cubic-bezier(0, 0.1, 0, 1.0)&#x27;
+         */
+        easing: {
+            value: &#x27;cubic-bezier(0, 0.1, 0, 1.0)&#x27;
+        },
+
+        /**
+         * The interval (ms) used when animating the flick for JS-timer animations
+         *
+         * @attribute frameDuration
+         * @type Number
+         * @default 15
+         */
+        frameDuration: {
+            value: 15
+        },
+
+        /**
+         * The default bounce distance in pixels
+         *
+         * @attribute bounceRange
+         * @type Number
+         * @default 150
+         */
+        bounceRange: {
+            value: 150
+        }
+    },
+
+    /**
+     * List of class names used in the scrollview&#x27;s DOM
+     *
+     * @property CLASS_NAMES
+     * @type Object
+     * @static
+     */
+    CLASS_NAMES: CLASS_NAMES,
+
+    /**
+     * Flag used to source property changes initiated from the DOM
+     *
+     * @property UI_SRC
+     * @type String
+     * @static
+     * @default &#x27;ui&#x27;
+     */
+    UI_SRC: UI,
+
+    /**
+     * Object map of style property names used to set transition properties.
+     * Defaults to the vendor prefix established by the Transition module.
+     * The configured property names are &#x60;_TRANSITION.DURATION&#x60; (e.g. &quot;WebkitTransitionDuration&quot;) and
+     * &#x60;_TRANSITION.PROPERTY (e.g. &quot;WebkitTransitionProperty&quot;).
+     *
+     * @property _TRANSITION
+     * @private
+     */
+    _TRANSITION: {
+        DURATION: (vendorPrefix ? vendorPrefix + &#x27;TransitionDuration&#x27; : &#x27;transitionDuration&#x27;),
+        PROPERTY: (vendorPrefix ? vendorPrefix + &#x27;TransitionProperty&#x27; : &#x27;transitionProperty&#x27;)
+    },
+
+    /**
+     * The default bounce distance in pixels
+     *
+     * @property BOUNCE_RANGE
+     * @type Number
+     * @static
+     * @default false
+     * @deprecated (in 3.7.0)
+     */
+    BOUNCE_RANGE: false,
+
+    /**
+     * The interval (ms) used when animating the flick
+     *
+     * @property FRAME_STEP
+     * @type Number
+     * @static
+     * @default false
+     * @deprecated (in 3.7.0)
+     */
+    FRAME_STEP: false,
+
+    /**
+     * The default easing used when animating the flick
+     *
+     * @property EASING
+     * @type String
+     * @static
+     * @default false
+     * @deprecated (in 3.7.0)
+     */
+    EASING: false,
+
+    /**
+     * The default easing to use when animating the bounce snap back.
+     *
+     * @property SNAP_EASING
+     * @type String
+     * @static
+     * @default false
+     * @deprecated (in 3.7.0)
+     */
+    SNAP_EASING: false,
+
+    /**
+     * The default duration to use when animating the bounce snap back.
+     *
+     * @property SNAP_DURATION
+     * @type Number
+     * @static
+     * @default false
+     * @deprecated (in 3.7.0)
+     */
+    SNAP_DURATION: false
+
+    // End static properties
+
+});
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

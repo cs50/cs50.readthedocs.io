@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Example: Subclassing Y.Promise</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+    <link rel="stylesheet" href="../../build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="../../build/yui/yui-min.js"></script>
+    
+</head>
+<body>
+<!--
+<a href="https://github.com/yui/yui3"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+-->
+<div id="doc">
+    <div id="hd">
+        <h1><img src="http://yuilibrary.com/img/yui-logo.png"></h1>
+    </div>
+    
+        <a href="#toc" class="jump">Jump to Table of Contents</a>
+    
+
+            <h1>Example: Subclassing Y.Promise</h1>
+    <div class="yui3-g">
+        <div class="yui3-u-3-4">
+            <div id="main">
+                <div class="content"><style scoped>
+    .error {
+        background: #ffc5c4;
+    }
+</style>
+
+
+<div class="intro">
+    <p>
+        This example expands on the <a href="basic-example.html">Wrapping async transactions with promises</a> example to illustrate how to create your own Promise subclass for performing operations on arrays.
+    </p>
+</div>
+
+<div class="example yui3-skin-sam">
+    <div id="demo"></div>
+    <script>
+YUI().use('promise', 'jsonp', 'node', 'array-extras', function (Y) {
+
+function ArrayPromise() {
+    ArrayPromise.superclass.constructor.apply(this, arguments);
+}
+Y.extend(ArrayPromise, Y.Promise);
+
+// Although Y.Array.each does not return an array, for the purpose of this
+// example we make it chainable by returning the same array
+ArrayPromise.prototype.each = function (fn, thisObj) {
+    return this.then(function (array) {
+        Y.Array.each(array, fn, thisObj);
+        return array;
+    });
+};
+
+// Y.Array.map returns a new array, so we return the result of this.then()
+ArrayPromise.prototype.map = function (fn, thisObj) {
+    return this.then(function (array) {
+        // By returning the result of Y.Array.map we are returning a new promise
+        // representing the new array
+        return Y.Array.map(array, fn, thisObj);
+    });
+};
+
+// Y.Array.filter follows the same pattern as Y.Array.map
+ArrayPromise.prototype.filter = function (fn, thisObj) {
+    return this.then(function (array) {
+        return Y.Array.filter(array, fn, thisObj);
+    });
+};
+
+// Takes any promise and returns an ArrayPromise
+function toArrayPromise(promise) {
+    return new ArrayPromise(function (fulfill, reject) {
+        promise.then(fulfill, reject);
+    });
+}
+
+
+// A cache for GitHub user data
+var GitHub = (function () {
+
+    var cache = {},
+        githubURL = 'https://api.github.com/users/{user}?callback={callback}';
+
+    function getUserURL(name) {
+        return Y.Lang.sub(githubURL, {
+            user: name
+        });
+    }
+
+    // Fetches a URL, stores a promise in the cache and returns it
+    function fetch(url) {
+        var promise = new Y.Promise(function (fulfill, reject) {
+            Y.jsonp(url, function (res) {
+                var meta = res.meta,
+                    data = res.data;
+
+                // Check for a successful response, otherwise reject the
+                // promise with the message returned by the GitHub API.
+                if (meta.status >= 200 && meta.status < 300) {
+                    fulfill(data);
+                } else {
+                    reject(new Error(data.message));
+                }
+            });
+
+            // Add a timeout in case the URL is completely wrong
+            // or GitHub is too busy
+            setTimeout(function () {
+                // Once a promise has been fulfilled or rejected it will never
+                // change its state again, so we can safely call reject() after
+                // some time. If it was already fulfilled or rejected, nothing will
+                // happen
+                reject(new Error('Timeout'));
+            }, 10000);
+        });
+
+        // store the promise in the cache object
+        cache[url] = promise;
+
+        return promise;
+    }
+
+    return {
+        getUser: function (name) {
+            var url = getUserURL(name);
+
+            if (cache[url]) {
+                // If we have already stored the promise in the cache we just return it
+                return cache[url];
+            } else {
+                // fetch() will make a JSONP request, cache the promise and return it
+                return fetch(url);
+            }
+        }
+    };
+}());
+
+
+var demoNode = Y.one('#demo');
+
+function log(text) {
+    demoNode.append(Y.Node.create('<div></div>').set('text', text));
+}
+function showError(message) {
+    demoNode.append(
+        Y.Node.create('<div class="error"></div>').set('text', message)
+    );
+}
+
+log('Fetching GitHub data for users: "yui", "yahoo" and "davglass"...')
+
+// requests is a regular promise
+var requests = Y.batch(GitHub.getUser('yui'), GitHub.getUser('yahoo'), GitHub.getUser('davglass'));
+// users is now an ArrayPromise
+var users = toArrayPromise(requests);
+
+// Transform the data into a list of names
+users.map(function (data) {
+    log('Getting name for user "' + data.login + '"...')
+    return data.name;
+}).filter(function (name) {
+    log('Checking if the name "' + name + '" starts with "Y"...')
+    return name.charAt(0) === 'Y';
+}).then(function (names) {
+    log('Done!');
+    return names;
+}).each(function (name, i) {
+    log(i + '. ' + name);
+}).then(null, function (error) {
+    // if there was an error in any step or request, it is automatically
+    // passed around the promise chain so we can react to it at the end
+    showError(error.message);
+});
+
+});
+</script>
+
+</div>
+
+<h2 id="subclassing-ypromise">Subclassing Y.Promise</h2>
+
+<p>
+    You can subclass a YUI promise with <a href="../yui/yui-extend.html">Y.extend</a> the same way you would any other class. Keep in mind that Promise constructors take a function as a parameter so you need to call the superclass constructor in order for it to work.
+</p>
+
+<pre class="code prettyprint">function ArrayPromise() {
+    ArrayPromise.superclass.constructor.apply(this, arguments);
+}
+Y.extend(ArrayPromise, Y.Promise);</pre>
+
+
+<h2 id="method-chaining">Method Chaining</h2>
+
+<p>
+    Chaining promise methods is done by returning the result of calling the promise's <code>then()</code> method. <code>then()</code> <strong>always returns a promise of its same kind</strong>, so this will allow us to chain array operations as if they were real arrays.
+</p>
+<p>
+    For the purpose of this example we will only add the <code>each</code>, <code>filter</code> and <code>map</code> methods from the <code>array-extras</code> module.
+</p>
+
+<pre class="code prettyprint">&#x2F;&#x2F; Although Y.Array.each does not return an array, for the purpose of this
+&#x2F;&#x2F; example we make it chainable by returning the same array
+ArrayPromise.prototype.each = function (fn, thisObj) {
+    return this.then(function (array) {
+        Y.Array.each(array, fn, thisObj);
+        return array;
+    });
+};
+
+&#x2F;&#x2F; Y.Array.map returns a new array, so we return the result of this.then()
+ArrayPromise.prototype.map = function (fn, thisObj) {
+    return this.then(function (array) {
+        &#x2F;&#x2F; By returning the result of Y.Array.map we are returning a new promise
+        &#x2F;&#x2F; representing the new array
+        return Y.Array.map(array, fn, thisObj);
+    });
+};
+
+&#x2F;&#x2F; Y.Array.filter follows the same pattern as Y.Array.map
+ArrayPromise.prototype.filter = function (fn, thisObj) {
+    return this.then(function (array) {
+        return Y.Array.filter(array, fn, thisObj);
+    });
+};</pre>
+
+
+<p>
+    Finally we need a simple way to take a promise that we know contains an array and create an ArrayPromise with its value.
+</p>
+
+<pre class="code prettyprint">&#x2F;&#x2F; Takes any promise and returns an ArrayPromise
+function toArrayPromise(promise) {
+    return new ArrayPromise(function (fulfill, reject) {
+        promise.then(fulfill, reject);
+    });
+}</pre>
+
+
+<h3 id="putting-our-class-to-action">Putting our Class to Action</h3>
+
+<p>
+    There are many cases in which you would want to work on asynchronous array values. Performing more than one async operation at a time and dealing with the result is one common use case. <code>Y.batch</code> waits for many operations and returns a promise representing an array with the result of all the operations, so you could wrap it in an ArrayPromise to modify all those results.
+</p>
+
+<p>
+    We will use the JSONP Cache from <a href="jsonp-cache.html">the previous example</a> and make several simultaneous requests.
+</p>
+
+<pre class="code prettyprint">log(&#x27;Fetching GitHub data for users: &quot;yui&quot;, &quot;yahoo&quot; and &quot;davglass&quot;...&#x27;)
+
+&#x2F;&#x2F; requests is a regular promise
+var requests = Y.batch(GitHub.getUser(&#x27;yui&#x27;), GitHub.getUser(&#x27;yahoo&#x27;), GitHub.getUser(&#x27;davglass&#x27;));
+&#x2F;&#x2F; users is now an ArrayPromise
+var users = toArrayPromise(requests);
+
+&#x2F;&#x2F; Transform the data into a list of names
+users.map(function (data) {
+    log(&#x27;Getting name for user &quot;&#x27; + data.login + &#x27;&quot;...&#x27;)
+    return data.name;
+}).filter(function (name) {
+    log(&#x27;Checking if the name &quot;&#x27; + name + &#x27;&quot; starts with &quot;Y&quot;...&#x27;)
+    return name.charAt(0) === &#x27;Y&#x27;;
+}).then(function (names) {
+    log(&#x27;Done!&#x27;);
+    return names;
+}).each(function (name, i) {
+    log(i + &#x27;. &#x27; + name);
+}).then(null, function (error) {
+    &#x2F;&#x2F; if there was an error in any step or request, it is automatically
+    &#x2F;&#x2F; passed around the promise chain so we can react to it at the end
+    showError(error.message);
+});</pre>
+
+
+<h2 id="full-example-code">Full Example Code</h2>
+
+<pre class="code prettyprint">&lt;script&gt;
+YUI().use(&#x27;promise&#x27;, &#x27;jsonp&#x27;, &#x27;node&#x27;, &#x27;array-extras&#x27;, function (Y) {
+
+function ArrayPromise() {
+    ArrayPromise.superclass.constructor.apply(this, arguments);
+}
+Y.extend(ArrayPromise, Y.Promise);
+
+&#x2F;&#x2F; Although Y.Array.each does not return an array, for the purpose of this
+&#x2F;&#x2F; example we make it chainable by returning the same array
+ArrayPromise.prototype.each = function (fn, thisObj) {
+    return this.then(function (array) {
+        Y.Array.each(array, fn, thisObj);
+        return array;
+    });
+};
+
+&#x2F;&#x2F; Y.Array.map returns a new array, so we return the result of this.then()
+ArrayPromise.prototype.map = function (fn, thisObj) {
+    return this.then(function (array) {
+        &#x2F;&#x2F; By returning the result of Y.Array.map we are returning a new promise
+        &#x2F;&#x2F; representing the new array
+        return Y.Array.map(array, fn, thisObj);
+    });
+};
+
+&#x2F;&#x2F; Y.Array.filter follows the same pattern as Y.Array.map
+ArrayPromise.prototype.filter = function (fn, thisObj) {
+    return this.then(function (array) {
+        return Y.Array.filter(array, fn, thisObj);
+    });
+};
+
+&#x2F;&#x2F; Takes any promise and returns an ArrayPromise
+function toArrayPromise(promise) {
+    return new ArrayPromise(function (fulfill, reject) {
+        promise.then(fulfill, reject);
+    });
+}
+
+
+&#x2F;&#x2F; A cache for GitHub user data
+var GitHub = (function () {
+
+    var cache = {},
+        githubURL = &#x27;https:&#x2F;&#x2F;api.github.com&#x2F;users&#x2F;{user}?callback={callback}&#x27;;
+
+    function getUserURL(name) {
+        return Y.Lang.sub(githubURL, {
+            user: name
+        });
+    }
+
+    &#x2F;&#x2F; Fetches a URL, stores a promise in the cache and returns it
+    function fetch(url) {
+        var promise = new Y.Promise(function (fulfill, reject) {
+            Y.jsonp(url, function (res) {
+                var meta = res.meta,
+                    data = res.data;
+
+                &#x2F;&#x2F; Check for a successful response, otherwise reject the
+                &#x2F;&#x2F; promise with the message returned by the GitHub API.
+                if (meta.status &gt;= 200 &amp;&amp; meta.status &lt; 300) {
+                    fulfill(data);
+                } else {
+                    reject(new Error(data.message));
+                }
+            });
+
+            &#x2F;&#x2F; Add a timeout in case the URL is completely wrong
+            &#x2F;&#x2F; or GitHub is too busy
+            setTimeout(function () {
+                &#x2F;&#x2F; Once a promise has been fulfilled or rejected it will never
+                &#x2F;&#x2F; change its state again, so we can safely call reject() after
+                &#x2F;&#x2F; some time. If it was already fulfilled or rejected, nothing will
+                &#x2F;&#x2F; happen
+                reject(new Error(&#x27;Timeout&#x27;));
+            }, 10000);
+        });
+
+        &#x2F;&#x2F; store the promise in the cache object
+        cache[url] = promise;
+
+        return promise;
+    }
+
+    return {
+        getUser: function (name) {
+            var url = getUserURL(name);
+
+            if (cache[url]) {
+                &#x2F;&#x2F; If we have already stored the promise in the cache we just return it
+                return cache[url];
+            } else {
+                &#x2F;&#x2F; fetch() will make a JSONP request, cache the promise and return it
+                return fetch(url);
+            }
+        }
+    };
+}());
+
+
+var demoNode = Y.one(&#x27;#demo&#x27;);
+
+function log(text) {
+    demoNode.append(Y.Node.create(&#x27;&lt;div&gt;&lt;&#x2F;div&gt;&#x27;).set(&#x27;text&#x27;, text));
+}
+function showError(message) {
+    demoNode.append(
+        Y.Node.create(&#x27;&lt;div class=&quot;error&quot;&gt;&lt;&#x2F;div&gt;&#x27;).set(&#x27;text&#x27;, message)
+    );
+}
+
+log(&#x27;Fetching GitHub data for users: &quot;yui&quot;, &quot;yahoo&quot; and &quot;davglass&quot;...&#x27;)
+
+&#x2F;&#x2F; requests is a regular promise
+var requests = Y.batch(GitHub.getUser(&#x27;yui&#x27;), GitHub.getUser(&#x27;yahoo&#x27;), GitHub.getUser(&#x27;davglass&#x27;));
+&#x2F;&#x2F; users is now an ArrayPromise
+var users = toArrayPromise(requests);
+
+&#x2F;&#x2F; Transform the data into a list of names
+users.map(function (data) {
+    log(&#x27;Getting name for user &quot;&#x27; + data.login + &#x27;&quot;...&#x27;)
+    return data.name;
+}).filter(function (name) {
+    log(&#x27;Checking if the name &quot;&#x27; + name + &#x27;&quot; starts with &quot;Y&quot;...&#x27;)
+    return name.charAt(0) === &#x27;Y&#x27;;
+}).then(function (names) {
+    log(&#x27;Done!&#x27;);
+    return names;
+}).each(function (name, i) {
+    log(i + &#x27;. &#x27; + name);
+}).then(null, function (error) {
+    &#x2F;&#x2F; if there was an error in any step or request, it is automatically
+    &#x2F;&#x2F; passed around the promise chain so we can react to it at the end
+    showError(error.message);
+});
+
+});
+&lt;&#x2F;script&gt;</pre>
+
+</div>
+            </div>
+        </div>
+
+        <div class="yui3-u-1-4">
+            <div class="sidebar">
+                
+                    <div id="toc" class="sidebox">
+                        <div class="hd">
+                            <h2 class="no-toc">Table of Contents</h2>
+                        </div>
+
+                        <div class="bd">
+                            <ul class="toc">
+<li>
+<a href="#subclassing-ypromise">Subclassing Y.Promise</a>
+</li>
+<li>
+<a href="#method-chaining">Method Chaining</a>
+<ul class="toc">
+<li>
+<a href="#putting-our-class-to-action">Putting our Class to Action</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#full-example-code">Full Example Code</a>
+</li>
+</ul>
+                        </div>
+                    </div>
+                
+
+                
+                    <div class="sidebox">
+                        <div class="hd">
+                            <h2 class="no-toc">Examples</h2>
+                        </div>
+
+                        <div class="bd">
+                            <ul class="examples">
+                                
+                                    
+                                        <li data-description="Wrapping async transactions with promises">
+                                            <a href="basic-example.html">Wrapping async transactions with promises</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="Extend Y.Promise to create classes that encapsulate standard transaction logic in descriptive method names">
+                                            <a href="subclass-example.html">Subclassing Y.Promise</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="Extend the Promise class to create your own Node plugin that chains transitions">
+                                            <a href="plugin-example.html">Creating a Node Plugin that chains transitions</a>
+                                        </li>
+                                    
+                                
+                            </ul>
+                        </div>
+                    </div>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+
+<script>
+YUI.Env.Tests = {
+    examples: [],
+    project: '../assets',
+    assets: '../assets/promise',
+    name: 'subclass-example',
+    title: 'Subclassing Y.Promise',
+    newWindow: '',
+    auto:  false 
+};
+YUI.Env.Tests.examples.push('basic-example');
+YUI.Env.Tests.examples.push('subclass-example');
+YUI.Env.Tests.examples.push('plugin-example');
+
+</script>
+<script src="../assets/yui/test-runner.js"></script>
+
+
+
+</body>
+</html>

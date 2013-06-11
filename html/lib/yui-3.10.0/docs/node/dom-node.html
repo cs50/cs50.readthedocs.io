@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Example: DOM Methods</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+    <link rel="stylesheet" href="../../build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="../../build/yui/yui-min.js"></script>
+    
+</head>
+<body>
+<!--
+<a href="https://github.com/yui/yui3"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+-->
+<div id="doc">
+    <div id="hd">
+        <h1><img src="http://yuilibrary.com/img/yui-logo.png"></h1>
+    </div>
+    
+
+            <h1>Example: DOM Methods</h1>
+    <div class="yui3-g">
+        <div class="yui3-u-3-4">
+            <div id="main">
+                <div class="content"><link href="../assets/node/node.css" rel="stylesheet" type="text/css">
+
+<div class="intro">
+    <p>Click any of the blue boxes to copy to the other stack.</p>
+    <p>Click a box in the other stack to remove it completely.</p>
+</div>
+
+<div class="example">
+<style>
+.example ul {
+    vertical-align: top;
+}
+</style>
+<ul id="demo">
+    <li>Dog</li>
+    <li>Cat</li>
+    <li>Fish</li>
+    <li>Bird</li>
+</ul>
+
+<ul id="demo2">
+    <li>Wheelbarrow</li>
+    <li>Ice Cream Cone</li>
+</ul>
+
+<script type="text/javascript">
+YUI().use('node', function(Y) {
+    var list2 = Y.one('#demo2');
+
+    var onList1Click = function(e) {
+        var item = e.currentTarget;
+
+        if (list2.getStyle('display') === 'none') {
+            list2.show();
+        }
+
+        list2.append(item.cloneNode(true));
+
+    };
+
+    var onList2Click = function(e) {
+        var item = e.currentTarget;
+
+        item.remove(); // sugar for item.get('parentNode').removeChild(item);
+
+        if (list2.all('li').size() < 1) { // hide the list if its empty
+            list2.hide();
+        }
+        
+    };
+
+    Y.one('#demo').delegate('click', onList1Click, 'li');
+    Y.one('#demo2').delegate('click', onList2Click, 'li');
+});
+</script>
+
+</div>
+
+<h2>Setting up the HTML</h2>
+<p>First we need some HTML to work with.</p>
+<pre class="code prettyprint">&lt;ul id=&quot;demo&quot;&gt;
+    &lt;li&gt;Dog&lt;&#x2F;li&gt;
+    &lt;li&gt;Cat&lt;&#x2F;li&gt;
+    &lt;li&gt;Fish&lt;&#x2F;li&gt;
+    &lt;li&gt;Bird&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+
+&lt;ul id=&quot;demo2&quot;&gt;
+    &lt;li&gt;Wheelbarrow&lt;&#x2F;li&gt;
+    &lt;li&gt;Ice Cream Cone&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;</pre>
+
+<h2>Using DOM Methods</h2>
+<p>Most common DOM methods are available via Node instances. These can be used to add, remove, and retrieve other nodes.</p>
+<pre class="code prettyprint">clone = item.cloneNode(true);
+list2.append(clone);
+item.remove(); &#x2F;&#x2F; sugar for item.get(&#x27;parentNode&#x27;).removeChild(item);</pre>
+
+
+<h2>Complete Example Source</h2>
+<pre class="code prettyprint">&lt;style&gt;
+.example ul {
+    vertical-align: top;
+}
+&lt;&#x2F;style&gt;
+&lt;ul id=&quot;demo&quot;&gt;
+    &lt;li&gt;Dog&lt;&#x2F;li&gt;
+    &lt;li&gt;Cat&lt;&#x2F;li&gt;
+    &lt;li&gt;Fish&lt;&#x2F;li&gt;
+    &lt;li&gt;Bird&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+
+&lt;ul id=&quot;demo2&quot;&gt;
+    &lt;li&gt;Wheelbarrow&lt;&#x2F;li&gt;
+    &lt;li&gt;Ice Cream Cone&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+
+&lt;script type=&quot;text&#x2F;javascript&quot;&gt;
+YUI().use(&#x27;node&#x27;, function(Y) {
+    var list2 = Y.one(&#x27;#demo2&#x27;);
+
+    var onList1Click = function(e) {
+        var item = e.currentTarget;
+
+        if (list2.getStyle(&#x27;display&#x27;) === &#x27;none&#x27;) {
+            list2.show();
+        }
+
+        list2.append(item.cloneNode(true));
+
+    };
+
+    var onList2Click = function(e) {
+        var item = e.currentTarget;
+
+        item.remove(); &#x2F;&#x2F; sugar for item.get(&#x27;parentNode&#x27;).removeChild(item);
+
+        if (list2.all(&#x27;li&#x27;).size() &lt; 1) { &#x2F;&#x2F; hide the list if its empty
+            list2.hide();
+        }
+        
+    };
+
+    Y.one(&#x27;#demo&#x27;).delegate(&#x27;click&#x27;, onList1Click, &#x27;li&#x27;);
+    Y.one(&#x27;#demo2&#x27;).delegate(&#x27;click&#x27;, onList2Click, &#x27;li&#x27;);
+});
+&lt;&#x2F;script&gt;</pre>
+
+</div>
+            </div>
+        </div>
+
+        <div class="yui3-u-1-4">
+            <div class="sidebar">
+                
+
+                
+                    <div class="sidebox">
+                        <div class="hd">
+                            <h2 class="no-toc">Examples</h2>
+                        </div>
+
+                        <div class="bd">
+                            <ul class="examples">
+                                
+                                    
+                                        <li data-description="Using selectors and property accessors with Node.">
+                                            <a href="properties.html">Set and Get Properties</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="Using DOM methods with Node.">
+                                            <a href="dom-node.html">DOM Methods</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="Building a simple store and shopping cart.">
+                                            <a href="store.html">DOM Methods - Store</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="Listening for DOM events with Node instances.">
+                                            <a href="events.html">Handling DOM Events</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="NodeList provides Node functionality for manipulating multiple nodes at once.">
+                                            <a href="nodelist.html">Using NodeList - Simple</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="How to use multiple NodeList features to build a simple game.">
+                                            <a href="ducks.html">Using NodeList - Ducks Game</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="Using a single event listener to handle events on multiple nodes.">
+                                            <a href="node-evt-delegation.html">Delegating Node Events</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="This example demonstrates how to position an element in page coordinates.">
+                                            <a href="node-xy.html">Node Positioning</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="This example demonstrates how to set styles and get style information.">
+                                            <a href="node-style.html">Node Styling</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="This example demonstrates how to insert content into a Node.">
+                                            <a href="node-insert.html">Adding Node Content - Burger Builder</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="This example demonstrates how to show and hide a Node.">
+                                            <a href="node-view.html">Showing and Hiding</a>
+                                        </li>
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                            </ul>
+                        </div>
+                    </div>
+                
+
+                
+                    <div class="sidebox">
+                        <div class="hd">
+                            <h2 class="no-toc">Examples That Use This Component</h2>
+                        </div>
+
+                        <div class="bd">
+                            <ul class="examples">
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <li data-description="Example Photo Browser application.">
+                                            <a href="../dd/photo-browser.html">Photo Browser</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="Portal style example using Drag &amp; Drop Event Bubbling and Animation.">
+                                            <a href="../dd/portal-drag.html">Portal Style Example</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="Use the Event Utility to attach simple DOM event handlers.">
+                                            <a href="../event/basic-example.html">Simple DOM Events</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="Use IO to request XML data from a remote web service.">
+                                            <a href="../io/weather.html">Request XML data from Yahoo! Weather</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="Use IO to make a cross-domain request to Yahoo! Pipes, returning data from disparate sources.">
+                                            <a href="../io/xdr.html">Request JSON using Yahoo! Pipes</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="Creating an accessible toolbar using the Focus Manager Node Plugin and Node&#x27;s support for the WAI-ARIA Roles and States.">
+                                            <a href="../node-focusmanager/node-focusmanager-toolbar.html">Accessible Toolbar</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="Creating an accessible menu button using the Focus Manager Node Plugin, Event&#x27;s delegation support and mouseenter event, along with the Overlay widget and Node&#x27;s support for the WAI-ARIA Roles and States.">
+                                            <a href="../node-focusmanager/node-focusmanager-button.html">Accessible Menu Button</a>
+                                        </li>
+                                    
+                                
+                            </ul>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+
+<script>
+YUI.Env.Tests = {
+    examples: [],
+    project: '../assets',
+    assets: '../assets/node',
+    name: 'dom-node',
+    title: 'DOM Methods',
+    newWindow: '',
+    auto:  false 
+};
+YUI.Env.Tests.examples.push('properties');
+YUI.Env.Tests.examples.push('dom-node');
+YUI.Env.Tests.examples.push('store');
+YUI.Env.Tests.examples.push('events');
+YUI.Env.Tests.examples.push('nodelist');
+YUI.Env.Tests.examples.push('ducks');
+YUI.Env.Tests.examples.push('node-evt-delegation');
+YUI.Env.Tests.examples.push('node-xy');
+YUI.Env.Tests.examples.push('node-style');
+YUI.Env.Tests.examples.push('node-insert');
+YUI.Env.Tests.examples.push('node-view');
+YUI.Env.Tests.examples.push('photo-browser');
+YUI.Env.Tests.examples.push('portal-drag');
+YUI.Env.Tests.examples.push('basic-example');
+YUI.Env.Tests.examples.push('weather');
+YUI.Env.Tests.examples.push('xdr');
+YUI.Env.Tests.examples.push('node-focusmanager-toolbar');
+YUI.Env.Tests.examples.push('node-focusmanager-button');
+
+</script>
+<script src="../assets/yui/test-runner.js"></script>
+
+
+
+</body>
+</html>

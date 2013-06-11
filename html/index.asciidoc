@@ -1,0 +1,11 @@
+---
+tags: []
+title: CS50 Manual
+---
+
+* APIs
+** link:api/courses/[HarvardCourses API]
+** link:api/Events/[HarvardEvents API]
+* CS50 Appliance
+** link:appliance/3/[CS50 Appliance 3]
+** link:appliance/17/[CS50 Appliance 17]

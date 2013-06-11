@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Pjax</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+    <link rel="stylesheet" href="../../build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="../../build/yui/yui-min.js"></script>
+    
+</head>
+<body>
+<!--
+<a href="https://github.com/yui/yui3"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+-->
+<div id="doc">
+    <div id="hd">
+        <h1><img src="http://yuilibrary.com/img/yui-logo.png"></h1>
+    </div>
+    
+        <a href="#toc" class="jump">Jump to Table of Contents</a>
+    
+
+            <h1>Pjax</h1>
+    <div class="yui3-g">
+        <div class="yui3-u-3-4">
+            <div id="main">
+                <div class="content"><div class="intro">
+<p>
+<a href="http://pjax.heroku.com/">Pjax</a> is a technique that allows you to progressively enhance normal links on a page so that clicks result in the linked content being loaded via Ajax and the URL being updated using HTML5 <code>pushState</code>, avoiding a full page load. In browsers that don't support <code>pushState</code> or that have JavaScript disabled, link clicks will result in a normal full page load. The Pjax Utility makes it easy to add this functionality to existing pages.
+</p>
+</div>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>
+To include the source files for Pjax and its dependencies, first load
+the YUI seed file if you haven't already loaded it.
+</p>
+
+<pre class="code prettyprint">&lt;script src=&quot;http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.10.0&#x2F;build&#x2F;yui&#x2F;yui-min.js&quot;&gt;&lt;&#x2F;script&gt;</pre>
+
+
+<p>
+Next, create a new YUI instance for your application and populate it with the
+modules you need by specifying them as arguments to the <code>YUI().use()</code> method.
+YUI will automatically load any dependencies required by the modules you
+specify.
+</p>
+
+<pre class="code prettyprint">&lt;script&gt;
+&#x2F;&#x2F; Create a new YUI instance and populate it with the required modules.
+YUI().use(&#x27;pjax&#x27;, function (Y) {
+    &#x2F;&#x2F; Pjax is available and ready for use. Add implementation
+    &#x2F;&#x2F; code here.
+});
+&lt;&#x2F;script&gt;</pre>
+
+
+<p>
+For more information on creating YUI instances and on the
+<a href="http://yuilibrary.com/yui/docs/api/classes/YUI.html#method_use"><code>use()</code> method</a>, see the
+documentation for the <a href="../yui/index.html">YUI Global Object</a>.
+</p>
+
+
+<h2 id="using-pjax">Using Pjax</h2>
+
+<h3 id="quick-start">Quick Start</h3>
+
+<p>
+It's easy to add pjax functionality to any page with just a few lines of code. You don't even need any special server-side logic. Here's a simple example:
+</p>
+
+<pre class="code prettyprint">&lt;h1&gt;Links&lt;&#x2F;h1&gt;
+
+&lt;ol&gt;
+    &lt;li&gt;&lt;a href=&quot;page1.html&quot; class=&quot;yui3-pjax&quot;&gt;Page One&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href=&quot;page2.html&quot; class=&quot;yui3-pjax&quot;&gt;Page Two&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;a href=&quot;page3.html&quot; class=&quot;yui3-pjax&quot;&gt;Page Three&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+
+&lt;div id=&quot;content&quot;&gt;&lt;&#x2F;div&gt;
+
+&lt;script src=&quot;http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.10.0&#x2F;build&#x2F;yui&#x2F;yui-min.js&quot;&gt;&lt;&#x2F;script&gt;
+&lt;script&gt;
+YUI().use(&#x27;pjax&#x27;, function (Y) {
+    new Y.Pjax({container: &#x27;#content&#x27;});
+});
+&lt;&#x2F;script&gt;</pre>
+
+
+<p>
+This creates a new Pjax instance that, by default, listens for clicks on any
+link on the page that has a <code>yui3-pjax</code> class. When a <code>yui3-pjax</code> link is clicked, its URL will be loaded via Ajax and the loaded content will be inserted into the <code>#content</code> div, replacing its existing contents. If the loaded page includes an HTML <code>&lt;title&gt;</code> element, the current page's title will also be replaced with the new title.
+</p>
+
+<p>
+One important thing to note is that since Pjax uses <a href="https://developer.mozilla.org/en/XMLHttpRequest"><code>XMLHttpRequest</code></a> under the hood, it can only load URLs from the <a href="https://developer.mozilla.org/en/Same_origin_policy_for_JavaScript">same origin</a> as the current page. This means the link URL must share the same protocol, port, and host as the current page. Pjax will ignore URLs it can't load, resulting in a full page load for those URLs.
+</p>
+
+<h3 id="instantiating-pjax">Instantiating Pjax</h3>
+
+<p>
+There are two ways to instantiate the Pjax Utility: you can load the <code>pjax-plugin</code> module and use the <code>Y.Plugin.Pjax</code> Node plugin, or you can load the <code>pjax</code> module and create a standalone instance of the <code>Y.Pjax</code> class.
+</p>
+
+<p>
+Both instantiation methods provide the same core functionality; they only differ in how they're instantiated. Feel free to use whichever one you prefer.
+</p>
+
+<h4 id="as-a-plugin">As a Plugin</h4>
+
+<p>
+To instantiate Pjax as a plugin, load the <code>pjax-plugin</code> module and then plug the <code>Y.Plugin.Pjax</code> class into a Node instance. The node will be used as the container element, and content loaded via Pjax will replace the contents of the node.
+</p>
+
+<pre class="code prettyprint">YUI().use(&#x27;pjax-plugin&#x27;, function (Y) {
+    Y.one(&#x27;#content&#x27;).plug(Y.Plugin.Pjax);
+});</pre>
+
+
+<p>
+You may optionally pass configuration attributes as the second argument to <code>plug()</code>:
+</p>
+
+<pre class="code prettyprint">Y.one(&#x27;#content&#x27;).plug(Y.Plugin.Pjax, {
+    linkSelector: &#x27;a.pjax&#x27;,
+    timeout     : 10000
+});</pre>
+
+
+<h4 id="as-a-class">As a Class</h4>
+
+<p>
+To instantiate Pjax as a class, load the <code>pjax</code> module and then create a new instance of <code>Y.Pjax</code>, specifying the node you want to use as a content container. You may optionally provide additional configuration attributes as well.
+</p>
+
+<pre class="code prettyprint">YUI().use(&#x27;pjax&#x27;, function (Y) {
+    new Y.Pjax({container: &#x27;#content&#x27;});
+});</pre>
+
+
+<h3 id="configuring-pjax">Configuring Pjax</h3>
+
+<p>
+All configuration attributes are optional, although you'll usually want to at least specify a <code>container</code> node if you aren't using the Pjax plugin.
+</p>
+
+<h4 id="config-attributes">Config Attributes</h4>
+
+<table>
+    <thead>
+        <tr>
+            <th>Attribute</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td><code>addPjaxParam</code></td>
+            <td>Boolean</td>
+            <td><code>true</code></td>
+            <td>
+                <p>
+                If <code>true</code>, a "pjax=1" query parameter will be appended to all URLs requested via Pjax.
+                </p>
+
+                <p>
+                Browsers ignore HTTP request headers when caching content, so if the same URL is used to request a partial Pjax page and a full page, the browser will cache them under the same key and may later load the cached partial page when the user actually requests a full page (or vice versa).
+                </p>
+
+                <p>
+                To prevent this, we can add a bogus query parameter to the URL so that Pjax URLs will always be cached separately from non-Pjax URLs.
+                </p>
+            </td>
+        </tr>
+
+        <tr>
+            <td><code>container</code></td>
+            <td>Node</th>
+            <td><code>null</code></td>
+            <td>
+                <p>
+                Node into which content should be inserted when a page is loaded via Pjax. This node's existing contents will be removed to make way for the new content.
+                </p>
+
+                <p>
+                If not set, loaded content will not be automatically inserted into the page.
+                </p>
+            </td>
+        </tr>
+
+        <tr>
+            <td><code>contentSelector</code></td>
+            <td>String</td>
+            <td><code>null</code></td>
+            <td>
+                <p>
+                CSS selector used to extract a specific portion of the content of a page loaded via Pjax.
+                </p>
+
+                <p>
+                For example, if you wanted to load the page <code>example.html</code> but only use the content within an element with the id "pjax-content", you'd set
+                <code>contentSelector</code> to "#pjax-content".
+                </p>
+
+                <p>
+                If not set, the entire page will be used.
+                </p>
+            </td>
+        </tr>
+
+        <tr>
+            <td><code>linkSelector</code></td>
+            <td>String</td>
+            <td style="white-space:nowrap;"><code>&quot;a.yui3-pjax&quot;</code></td>
+            <td>
+                <p>
+                CSS selector string used to filter link click events so that only the links which match it will have the enhanced navigation behavior of Pjax applied.
+                </p>
+
+                <p>
+                When a link is clicked and that link matches this selector, Pjax will attempt to load it via Ajax. If HTML5 history is not supported, or if the link was middle-clicked, right-clicked, or clicked while a modifier key was pressed, the link click will be handled by the browser just like any old link.
+                </p>
+            </td>
+        </tr>
+
+        <tr>
+            <td><code>navigateOnHash</code></td>
+            <td>Boolean</td>
+            <td><code>false</code></td>
+            <td>
+                <p>
+                Whether navigating to a hash-fragment identifier on the current page should be enhanced and cause the <code>navigate</code> event to fire.
+                </p>
+
+                <p>
+                By default Pjax allows the browser to perform its default action when a user is navigating within a page by clicking in-page links (e.g. <code>&lt;a href=&quot;#top&quot;&gt;Top of page&lt;&#x2F;a&gt;</code>) and does not attempt to interfere or enhance in-page navigation.
+                </p>
+            </td>
+        </tr>
+
+        <tr>
+            <td><code>scrollToTop</code></td>
+            <td>Boolean</td>
+            <td><code>true</code></td>
+            <td>
+                <p>
+                Whether the page should be scrolled to the top after navigating to a URL.
+                </p>
+
+                <p>
+                When the user clicks the browser's back button, the previous scroll position will be maintained.
+                </p>
+            </td>
+        </tr>
+
+        <tr>
+            <td><code>timeout</code></td>
+            <td>Number</td>
+            <td>30000</td>
+            <td>
+                <p>
+                Time in milliseconds after which an Ajax request should time out. When a timeout occurs, the <code>error</code> event will be fired.
+                </p>
+            </td>
+        </tr>
+
+        <tr>
+            <td><code>titleSelector</code></td>
+            <td>String</td>
+            <td><code>&quot;title&quot;</code></td>
+            <td>
+                <p>
+                CSS selector used to extract a page title from the content of a page loaded via Pjax.
+                </p>
+
+                <p>
+                By default this is set to extract the title from the <code>&lt;title&gt;</code> element, but you could customize it to extract the title from an <code>&lt;h1&gt;</code>, or from any other element, if that's more appropriate for the content you're loading.
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h4 id="custom-selectors">Custom Selectors</h4>
+
+<p>
+Pjax's <code>contentSelector</code> and <code>titleSelector</code> config attributes allow you to customize how content and page titles are extracted from loaded pages, while the <code>linkSelector</code> attribute lets you customize which links on the page are loaded via Pjax.
+</p>
+
+<h5 id="contentselector"><code>contentSelector</code></h5>
+
+<p>
+By default, <code>contentSelector</code> is <code>null</code>, meaning that the entire contents of any loaded page will be inserted into the container node. This could be bad if the page includes a header and footer that shouldn't be displayed again. Specify a custom <code>contentSelector</code> to display only a portion of the loaded page.
+</p>
+
+<p>
+Let's say we have an HTML page that looks like this:
+</p>
+
+<pre class="code prettyprint">&lt;!DOCTYPE html&gt;
+&lt;title&gt;The Surprising Adventures of Sir Digby Chicken Caesar - Episode 1&lt;&#x2F;title&gt;
+&lt;body&gt;
+    &lt;div class=&quot;header&quot;&gt;
+        &lt;img src=&quot;header.jpg&quot; alt=&quot;Sir Digby and his companion Ginger&quot;&gt;
+        &lt;h1&gt;The Surprising Adventures of Sir Digby Chicken Caesar&lt;&#x2F;h1&gt;
+    &lt;&#x2F;div&gt;
+
+    &lt;div class=&quot;episode-content&quot;&gt;
+        &lt;h2&gt;Episode One&lt;&#x2F;h2&gt;
+
+        &lt;p&gt;
+        On a lonely planet spinning its way toward damnation amid the fear and
+        despair of a broken human race, who is left to fight for all that is
+        good and pure and gets you smashed for under a fiver? Yes, it&#x27;s the
+        surprising adventures of me, Sir Digby Chicken Caesar!
+        &lt;&#x2F;p&gt;
+    &lt;&#x2F;div&gt;
+
+    &lt;div class=&quot;footer&quot;&gt;
+        &lt;p&gt;
+        Copyright (c) 2012 Digby Enterprises.
+        &lt;&#x2F;p&gt;
+    &lt;&#x2F;div&gt;
+&lt;&#x2F;body&gt;</pre>
+
+
+<p>
+Since the header and footer are persistent across the site, we only want to display the content portion when this page is loaded via Pjax. All we need to do is set the <code>contentSelector</code> attribute to the appropriate CSS selector:
+</p>
+
+<pre class="code prettyprint">&#x2F;&#x2F; Extract the contents of the &#x27;.episode-content&#x27; div from loaded pages and
+&#x2F;&#x2F; discard the rest.
+new Y.Pjax({
+    container      : &#x27;#content&#x27;,
+    contentSelector: &#x27;.episode-content&#x27;
+});</pre>
+
+
+<h5 id="linkselector"><code>linkSelector</code></h5>
+
+<p>
+The <code>linkSelector</code> attribute allows you to customize which links Pjax will handle. By default, <code>linkSelector</code> is set to "a.yui3-pjax", which means that any <code>&lt;a&gt;</code> element with the class name "yui3-pjax" will be handled by Pjax. You could customize this to change the class name, or to limit Pjax to links inside a certain container, or anything else you can do with a CSS selector.
+</p>
+
+<h5 id="titleselector"><code>titleSelector</code></h5>
+
+<p>
+The <code>titleSelector</code> attribute allows you to customize how Pjax extracts a page title from loaded pages. By default, it's set to the selector string "title", which means it will extract the contents of the first <code>&lt;title&gt;</code> element on the loaded page. If desired, you could customize this selector to extract the title from an <code>&lt;h1&gt;</code> element, or any other element, or set it to <code>null</code> to prevent a title from being extracted.
+</p>
+
+<h3 id="pjax-events">Pjax Events</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Event</th>
+            <th>Description</th>
+            <th>Payload</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td><code>error</code></td>
+            <td>
+                <p>
+                Fired when an error occurs while attempting to load a URL.
+                </p>
+            </td>
+            <td>
+                <dl>
+                    <dt><code>content</code> <em>(Object)</em></dt>
+                    <dd>
+                        <p>
+                        Content extracted from the response, if any. This is an object with the following properties:
+                        </p>
+
+                        <dl>
+                            <dt><code>node</code> <em>(Node)</em></dt>
+                            <dd>
+                                A <code>Y.Node</code> instance for a document fragment containing the extracted HTML content.
+                            </dd>
+
+                            <dt><code>title</code> <em>(String)</em></dt>
+                            <dd>
+                                The title of the HTML page, if any, extracted using the <code>titleSelector</code> attribute. If <code>titleSelector</code> is not set or if a title could not be found, this property will be <code>undefined</code>.
+                            </dd>
+                        </dl>
+                    </dd>
+
+                    <dt><code>responseText</code> <em>(String)</em></dt>
+                    <dd>
+                        Raw Ajax response text.
+                    </dd>
+
+                    <dt><code>status</code> <em>(Number)</em></dt>
+                    <dd>
+                        HTTP status code for the Ajax response.
+                    </dd>
+
+                    <dt><code>url</code> <em>(String)</em></dt>
+                    <dd>
+                        The absolute URL that failed to load.
+                    </dd>
+                </dl>
+            </td>
+        </tr>
+
+        <tr>
+            <td><code>load</code></td>
+            <td>
+                <p>
+                Fired when a URL is successfully loaded.
+                </p>
+            </td>
+            <td>
+                <dl>
+                    <dt><code>content</code> <em>(Object)</em></dt>
+                    <dd>
+                        <p>
+                        Content extracted from the response, if any. This is an object with the following properties:
+                        </p>
+
+                        <dl>
+                            <dt><code>node</code> <em>(Node)</em></dt>
+                            <dd>
+                                A <code>Y.Node</code> instance for a document fragment containing the extracted HTML content.
+                            </dd>
+
+                            <dt><code>title</code> <em>(String)</em></dt>
+                            <dd>
+                                The title of the HTML page, if any, extracted using the <code>titleSelector</code> attribute. If <code>titleSelector</code> is not set or if a title could not be found, this property will be <code>undefined</code>.
+                            </dd>
+                        </dl>
+                    </dd>
+
+                    <dt><code>responseText</code> <em>(String)</em></dt>
+                    <dd>
+                        Raw Ajax response text.
+                    </dd>
+
+                    <dt><code>status</code> <em>(Number)</em></dt>
+                    <dd>
+                        HTTP status code for the Ajax response.
+                    </dd>
+
+                    <dt><code>url</code> <em>(String)</em></dt>
+                    <dd>
+                        The absolute URL that was loaded.
+                    </dd>
+                </dl>
+            </td>
+        </tr>
+
+        <tr>
+            <td><code>navigate</code></td>
+            <td>
+                <p>
+                Fired when navigating to a URL via Pjax. This is a useful event to listen to if you want to add a visual loading indicator while content is loading.
+                </p>
+            </td>
+            <td>
+                <dl>
+                    <dt><code>force</code> <em>(Boolean)</em></dt>
+                    <dd>
+                        <code>true</code> if enhanced navigation should occur even in browsers that don't support HTML5 history.
+                    </dd>
+
+                    <dt><code>originEvent</code> <em>(Event)</em></dt>
+                    <dd>
+                        The event that triggered navigation. Usually this will be a DOM click event.
+                    </dd>
+
+                    <dt><code>replace</code> <em>(Boolean)</em></dt>
+                    <dd>
+                        <code>true</code> if the current history entry will be replaced instead of a new entry being created.
+                    </dd>
+
+                    <dt><code>url</code> <em>(String)</em></dt>
+                    <dd>
+                        The URL being navigated to.
+                    </dd>
+                </dl>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="customizing-pjax">Customizing Pjax</h2>
+
+<p>
+There are many situations where more advanced uses of the Pjax Utility need to customize its default behavior. Adding analytics, changing how content is added to the page, performing some operation before or after the standard behavior, etc. are all cases where Pjax needs to be customized. Fortunately, the hooks are in place to aid customization.
+</p>
+
+<h3 id="enhancing-navigation-with-pjax-events">Enhancing Navigation with Pjax Events</h3>
+
+<p>
+One way to enhance the experience for people moving between "pages" of your site or app, is to add a loading indicator while the contents of the page are being loaded from the server via the Pjax utility. This may be especially important for pages which have dynamic content and might take a little while to generate on the server.
+</p>
+
+<p>
+The follow provides a basic example of how to add a loading indicator using the <a href="#pjax-events">Pjax's events</a>:
+</p>
+
+<pre class="code prettyprint lang-javascript">var pjax = new Y.Pjax({container: &#x27;#content&#x27;});
+
+&#x2F;&#x2F; Listen for the &#x60;navigate&#x60; event and add the &quot;loading&quot; CSS class. The styles
+&#x2F;&#x2F; for the this CSS class can add a loading spinner or dim the container node.
+pjax.on(&#x27;navigate&#x27;, function (e) {
+    this.get(&#x27;container&#x27;).addClass(&#x27;loading&#x27;);
+});
+
+&#x2F;&#x2F; Listen for either the &#x60;load&#x60; or &#x60;error&#x60; events and remove the &quot;loading&quot; CSS
+&#x2F;&#x2F; class from the container node.
+pjax.on([&#x27;error&#x27;, &#x27;load&#x27;], function (e) {
+    this.get(&#x27;container&#x27;).removeClass(&#x27;loading&#x27;);
+});</pre>
+
+
+<p>
+If you're looking to page transitions to your application, you might want to look at the <a href="../app/index.html#yapptransitions">App component</a> which builds on the Pjax utility and supports transitions.
+</p>
+
+<h3 id="using-specific-routes">Using Specific Routes</h3>
+
+<p>
+By default, any link within a pjax's <code>container</code>—when clicked—will be handled via pjax and the content at the link's URL will be loaded and dynamically inserted into the page without a full page load. Sometimes you might need to be more restrictive, you may want only certain portions of your site to be pjax-ified.
+</p>
+
+<p>
+The Pjax utility is build on the <a href="../router/index.html">Router component</a>, this mean that a pjax instance is a router. By specifying a value for the <a href="http://yuilibrary.com/yui/docs/api/classes/Pjax.html#attr_routes"><code>routes</code> attribute</a>, you can customize which URL paths you want the Pjax utility to handle. The Pjax utility also provides <a href="http://yuilibrary.com/yui/docs/api/classes/Pjax.html#property_defaultRoute"><code>Y.Pjax.defaultRoute</code></a>, a stack of route middleware which forms the default Pjax route handler.
+</p>
+
+<p>
+The following specifies the routes which the Pjax utility should handle, and uses Pjax's default route handler to load the content from the server and dynamically insert it into the page:
+</p>
+
+<pre class="code prettyprint lang-javascript">new Y.Pjax({
+    container: &#x27;#content&#x27;,
+
+    &#x2F;&#x2F; This tells the Pjax utility to only handle the About Us and Contact Us
+    &#x2F;&#x2F; sections of our site by using the default route handler.
+    routes: [
+        {path: &#x27;&#x2F;about&#x27;,   callbacks: Y.Pjax.defaultRoute},
+        {path: &#x27;&#x2F;contact&#x27;, callbacks: Y.Pjax.defaultRoute}
+    ]
+});</pre>
+
+
+<p>
+See the <a href="../router/index.html#routing">Routing</a> section of Router's user guide for more information.
+</p>
+
+<h3 id="adding-analytics-support">Adding Analytics Support</h3>
+
+<p>
+One issue people will quickly run into when using the Pjax utility is needing to report page views to their web analytics system. Even though Pjax removes unnecessary full page loads, we still want to track page views for the content it loads.
+</p>
+
+<p>
+There are several hooks available for tracking page views for content which is loaded via pjax. You could listen to the <code>load</code> and <code>error</code> events, or specify the <code>routes</code> by providing an additional route-specific middleware, but there's a simpler way… Most likely you want your web analytics to track page views for all pages loaded through all pjax instances on the page. The most straight-forward way is to <code>push()</code> additional middleware on to Pjax's <a href="http://yuilibrary.com/yui/docs/api/classes/Pjax.html#property_defaultRoute"><code>defaultRoute</code></a>.
+</p>
+
+<p>
+The following shows how you can hook into <a href="http://www.google.com/analytics/">Google Analytics</a>, and track page views for all pages that are handled via the Pjax utility:
+</p>
+
+<pre class="code prettyprint lang-javascript">&#x2F;&#x2F; This assumes you already have Google Analytics on the page.
+
+&#x2F;&#x2F; Define the a middleware function which will track page views with GA.
+function trackPageview(req, res, next) {
+    if (Y.config.win._gaq) {
+        _gaq.push([&#x27;_trackPageview&#x27;, res.url]);
+    }
+
+    next();
+}
+
+&#x2F;&#x2F; Push our &#x60;trackPageview()&#x60; middleware onto Pjax&#x27;s &#x60;defaultRoute&#x60;.
+Y.Pjax.defaultRoute.push(trackPageview);
+
+&#x2F;&#x2F; Now any pjax instance we create on this page will automatically have
+&#x2F;&#x2F; page views tracked via Google Analytics.
+new Y.Pjax({container: &#x27;#content&#x27;});</pre>
+
+
+<p>
+See the <a href="../router/index.html#chaining-routes-and-middleware">Chaining Routes and Middleware</a> section of Router's user guide for more information.
+</p>
+
+<h2 id="optimizing-server-responses-for-pjax">Optimizing Server Responses for Pjax</h2>
+
+<p>
+While the Pjax Utility is capable of extracting and displaying small portions of loaded pages, it's much more efficient to avoid sending unnecessary content in the first place. With a little extra work on the server side, you can have the server recognize Pjax requests and send back only the relevant portion of the requested page.
+</p>
+
+<h3 id="x-pjax-http-header"><code>X-PJAX</code> HTTP Header</h3>
+
+<p>
+When the Pjax Utility makes an Ajax request to the server, it adds a special <code>X-PJAX</code> HTTP header to the request. You can check for the presence of this header on the server when handling the request to determine whether you should respond with a full page or a partial page.
+</p>
+
+<p>
+A complete HTTP request generated by the Pjax Utility looks something like this:
+</p>
+
+<pre class="code">
+GET /example.html?pjax=1 HTTP/1.1
+Host: example.com
+X-Requested-With: XMLHttpRequest
+X-PJAX: true
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.75 Safari/535.7
+Accept: */*
+Referer: http://example.com/index.html
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: en-US,en;q=0.8
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.3
+</pre>
+
+<h3 id="pjax-query-parameter"><code>pjax</code> Query Parameter</h3>
+
+<p>
+When the <code>addPjaxParam</code> config attribute is <code>true</code> (the default), the Pjax Utility will add a <code>pjax=1</code> query parameter to the end of all URLs it requests. This serves two purposes:
+</p>
+
+<ol>
+    <li>
+        It provides an alternative to the <code>X-PJAX</code> HTTP header for determining whether a request was generated by the Pjax Utility.
+    </li>
+
+    <li>
+        It ensures that the browser caches Pjax responses separately from full page responses.
+    </li>
+</ol>
+
+<h2 id="known-issues">Known Issues</h2>
+
+<ul>
+    <li>
+        <p>
+        Pjax's partial page loads only work in browsers that support HTML5 history (most modern browsers do). In older browsers such as IE6 through IE9, pjax-enabled links will result in full page loads. This is by design, since it allows you to take advantage of the functionality supported by modern browsers while providing a graceful fallback for older browsers.
+        </p>
+    </li>
+</ul>
+</div>
+            </div>
+        </div>
+
+        <div class="yui3-u-1-4">
+            <div class="sidebar">
+                
+                    <div id="toc" class="sidebox">
+                        <div class="hd">
+                            <h2 class="no-toc">Table of Contents</h2>
+                        </div>
+
+                        <div class="bd">
+                            <ul class="toc">
+<li>
+<a href="#getting-started">Getting Started</a>
+</li>
+<li>
+<a href="#using-pjax">Using Pjax</a>
+<ul class="toc">
+<li>
+<a href="#quick-start">Quick Start</a>
+</li>
+<li>
+<a href="#instantiating-pjax">Instantiating Pjax</a>
+<ul class="toc">
+<li>
+<a href="#as-a-plugin">As a Plugin</a>
+</li>
+<li>
+<a href="#as-a-class">As a Class</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#configuring-pjax">Configuring Pjax</a>
+<ul class="toc">
+<li>
+<a href="#config-attributes">Config Attributes</a>
+</li>
+<li>
+<a href="#custom-selectors">Custom Selectors</a>
+<ul class="toc">
+<li>
+<a href="#contentselector"><code>contentSelector</code></a>
+</li>
+<li>
+<a href="#linkselector"><code>linkSelector</code></a>
+</li>
+<li>
+<a href="#titleselector"><code>titleSelector</code></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#pjax-events">Pjax Events</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#customizing-pjax">Customizing Pjax</a>
+<ul class="toc">
+<li>
+<a href="#enhancing-navigation-with-pjax-events">Enhancing Navigation with Pjax Events</a>
+</li>
+<li>
+<a href="#using-specific-routes">Using Specific Routes</a>
+</li>
+<li>
+<a href="#adding-analytics-support">Adding Analytics Support</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#optimizing-server-responses-for-pjax">Optimizing Server Responses for Pjax</a>
+<ul class="toc">
+<li>
+<a href="#x-pjax-http-header"><code>X-PJAX</code> HTTP Header</a>
+</li>
+<li>
+<a href="#pjax-query-parameter"><code>pjax</code> Query Parameter</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#known-issues">Known Issues</a>
+</li>
+</ul>
+                        </div>
+                    </div>
+                
+
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+
+<script>
+YUI.Env.Tests = {
+    examples: [],
+    project: '../assets',
+    assets: '../assets/pjax',
+    name: 'pjax',
+    title: 'Pjax',
+    newWindow: '',
+    auto:  false 
+};
+
+</script>
+<script src="../assets/yui/test-runner.js"></script>
+
+
+
+</body>
+</html>

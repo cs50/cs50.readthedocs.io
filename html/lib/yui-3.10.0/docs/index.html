@@ -1,0 +1,2417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>YUI 3</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+    <link rel="stylesheet" href="../build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/vendor/prettify/prettify-min.css">
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
+    <script src="../build/yui/yui-min.js"></script>
+    
+</head>
+<body>
+<!--
+<a href="https://github.com/yui/yui3"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+-->
+<div id="doc">
+    <div id="hd">
+        <h1><img src="http://yuilibrary.com/img/yui-logo.png"></h1>
+    </div>
+    
+        <a href="#toc" class="jump">Jump to Table of Contents</a>
+    
+
+            <h1>YUI 3</h1>
+    <div class="yui3-g">
+        <div class="yui3-u-3-4">
+            <div id="main">
+                <div class="content"><h2 id="welcome-to-yui-3100">Welcome to YUI 3.10.0!</h2>
+
+<p>
+YUI is a set of utilities, infrastructure components, and widgets written in JavaScript and CSS for building richly interactive web applications. It is available under a <a href="http://yuilibrary.com/license/">BSD license</a> and is free for all uses.
+</p>
+
+<p>
+This is the static documentation for YUI 3.10.0. For the most up-to-date, searchable docs, please visit the <a href="http://yuilibrary.com/">YUI website</a>.
+</p>
+
+<h2 id="links">Links</h2>
+
+<ul>
+    <li><a href="http://yuilibrary.com/yui/quick-start/">Quick Start</a> (for developers new to YUI)</li>
+    <li><a href="http://yuilibrary.com/yui/docs/">Latest Online Documentation</a></li>
+    <li><a href="http://yuilibrary.com/download/yui3/">Latest Production Release</a></li>
+    <li><a href="http://yuilibrary.com/forum/">Forums</a></li>
+    <li><a href="http://yuilibrary.com/license/">License</a></li>
+    <li><a href="http://yuilibrary.com/contribute/">How to Contribute</a></li>
+</ul>
+
+<h2 id="directory-contents">Directory Contents</h2>
+
+<p>
+This package contains the following directories:
+</p>
+
+<ul>
+  <li><p><code>api</code>: Generated API docs for the entire library in HTML format.</p></li>
+
+  <li><p><code>build</code>: Built YUI source files. This is what you should load on your web pages. The built files are generated at development time from the contents of the <code>src</code> directory. The build step generates debug files (unminified and with full comments and logging), raw files (unminified, but without debug logging), and minified files (suitable for production deployment and use).</p></li>
+
+  <li><p><code>docs</code>: User guides and examples for YUI components.</p></li>
+
+  <li><p><code>src</code> Raw unbuilt source code (JavaScript, CSS, image assets, ActionScript files, etc.) for the library.</p></li>
+</ul>
+
+<p>To build YUI components install <a href="http://yui.github.com/shifter/">Shifter</a> (<code>npm -g install shifter</code>)
+and then simply run <code>shifter</code> in that components directory.</p>
+
+<p>Shifter also allows you to rebuild the entire YUI src tree:</p>
+<pre class="code prettyprint">cd yui3&#x2F;src &amp;&amp; shifter --walk</pre>
+
+</p>
+
+<div class="yui3-g">
+    <div class="yui3-u-1-2">
+        <h2 id="component-user-guides">Component User Guides</h2>
+
+        <ul>
+          
+            
+                <li><a href="anim/index.html">Anim</a></li>
+            
+          
+            
+                <li><a href="app/index.html">App Framework</a></li>
+            
+          
+            
+                <li><a href="async-queue/index.html">AsyncQueue</a></li>
+            
+          
+            
+                <li><a href="attribute/index.html">Attribute</a></li>
+            
+          
+            
+                <li><a href="autocomplete/index.html">AutoComplete</a></li>
+            
+          
+            
+                <li><a href="base/index.html">Base</a></li>
+            
+          
+            
+                <li><a href="button/index.html">Button</a></li>
+            
+          
+            
+                <li><a href="cache/index.html">Cache</a></li>
+            
+          
+            
+                <li><a href="calendar/index.html">Calendar</a></li>
+            
+          
+            
+                <li><a href="charts/index.html">Charts</a></li>
+            
+          
+            
+                <li><a href="color/index.html">Color</a></li>
+            
+          
+            
+                <li><a href="console/index.html">Console</a></li>
+            
+          
+            
+                <li><a href="console-filters/index.html">ConsoleFilters Plugin</a></li>
+            
+          
+            
+                <li><a href="cookie/index.html">Cookie Utility</a></li>
+            
+          
+            
+                <li><a href="cssbase/index.html">CSS Base</a></li>
+            
+          
+            
+                <li><a href="cssfonts/index.html">CSS Fonts</a></li>
+            
+          
+            
+                <li><a href="cssgrids/index.html">CSS Grids</a></li>
+            
+          
+            
+                <li><a href="cssreset/index.html">CSS Reset</a></li>
+            
+          
+            
+                <li><a href="dataschema/index.html">DataSchema</a></li>
+            
+          
+            
+                <li><a href="datasource/index.html">DataSource</a></li>
+            
+          
+            
+                <li><a href="datatable/index.html">DataTable</a></li>
+            
+          
+            
+                <li><a href="datatype/index.html">DataType</a></li>
+            
+          
+            
+                <li><a href="dial/index.html">Dial</a></li>
+            
+          
+            
+                <li><a href="dd/index.html">Drag and Drop</a></li>
+            
+          
+            
+                <li><a href="event/index.html">Event</a></li>
+            
+          
+            
+                <li><a href="event-custom/index.html">EventTarget</a></li>
+            
+          
+            
+                <li><a href="node-focusmanager/index.html">FocusManager Node Plugin</a></li>
+            
+          
+            
+                <li><a href="get/index.html">Get</a></li>
+            
+          
+            
+                <li><a href="graphics/index.html">Graphics</a></li>
+            
+          
+            
+                <li><a href="handlebars/index.html">Handlebars</a></li>
+            
+          
+            
+                <li><a href="history/index.html">History</a></li>
+            
+          
+            
+                <li><a href="imageloader/index.html">ImageLoader</a></li>
+            
+          
+            
+                <li><a href="intl/index.html">Internationalization</a></li>
+            
+          
+            
+                <li><a href="io/index.html">IO Utility</a></li>
+            
+          
+            
+                <li><a href="json/index.html">JSON</a></li>
+            
+          
+            
+                <li><a href="jsonp/index.html">JSONP</a></li>
+            
+          
+            
+                <li><a href="node-menunav/index.html">MenuNav Node Plugin</a></li>
+            
+          
+            
+                <li><a href="model/index.html">Model</a></li>
+            
+          
+            
+                <li><a href="model-list/index.html">Model List</a></li>
+            
+          
+            
+                <li><a href="node/index.html">Node</a></li>
+            
+          
+            
+                <li><a href="cssnormalize/index.html">Normalize.css</a></li>
+            
+          
+            
+                <li><a href="overlay/index.html">Overlay</a></li>
+            
+          
+            
+                <li><a href="panel/index.html">Panel</a></li>
+            
+          
+            
+                <li><a href="pjax/index.html">Pjax</a></li>
+            
+          
+            
+                <li><a href="plugin/index.html">Plugin</a></li>
+            
+          
+            
+                <li><a href="profiler/index.html">Profiler</a></li>
+            
+          
+            
+                <li><a href="promise/index.html">Promise</a></li>
+            
+          
+            
+                <li><a href="recordset/index.html">Recordset</a></li>
+            
+          
+            
+                <li><a href="resize/index.html">Resize</a></li>
+            
+          
+            
+                <li><a href="editor/index.html">Rich Text Editor</a></li>
+            
+          
+            
+                <li><a href="router/index.html">Router</a></li>
+            
+          
+            
+                <li><a href="scrollview/index.html">ScrollView</a></li>
+            
+          
+            
+                <li><a href="slider/index.html">Slider</a></li>
+            
+          
+            
+                <li><a href="sortable/index.html">Sortable</a></li>
+            
+          
+            
+                <li><a href="stylesheet/index.html">StyleSheet</a></li>
+            
+          
+            
+                <li><a href="swf/index.html">SWF Utility</a></li>
+            
+          
+            
+                <li><a href="tabview/index.html">TabView</a></li>
+            
+          
+            
+                <li><a href="template/index.html">Template</a></li>
+            
+          
+            
+                <li><a href="test/index.html">Test</a></li>
+            
+          
+            
+                <li><a href="test-console/index.html">Test Console</a></li>
+            
+          
+            
+                <li><a href="transition/index.html">Transition</a></li>
+            
+          
+            
+                <li><a href="tree/index.html">Tree</a></li>
+            
+          
+            
+                <li><a href="uploader/index.html">Uploader</a></li>
+            
+          
+            
+                <li><a href="view/index.html">View</a></li>
+            
+          
+            
+                <li><a href="widget/index.html">Widget</a></li>
+            
+          
+            
+                <li><a href="yql/index.html">YQL Query</a></li>
+            
+          
+            
+                <li><a href="yui/index.html">YUI Global Object</a></li>
+            
+          
+        </ul>
+    </div>
+    <div class="yui3-u-1-2">
+        <h2 id="examples">Examples list</h2>
+        <ul>
+            
+                
+                <li><a href="anim/index.html">Anim</a>
+                    <ul>
+                        
+                            <li><a href="anim/basic.html" title="Creating and using a simple animation.">Basic Animation</a>
+                            
+                            </li>
+                        
+                            <li><a href="anim/easing.html" title="The Animation Utility allows you to implement &#x27;easing effects&#x27; &mdash; for example, when an animation gradually slows down as it nears completion, that&#x27;s an easing effect known as &#x27;ease-in&#x27;.  This example shows you how to use easing effects with your animations.">Easing Effects</a>
+                            
+                            </li>
+                        
+                            <li><a href="anim/colors.html" title="Color animations can be effective indicators of state during the lifespan of a dynamic page.  This example shows you how to animate color attributes of an element.">Animating Colors</a>
+                            
+                            </li>
+                        
+                            <li><a href="anim/alt-iterations.html" title="The direction attribute can be used to reverse the animation on alternate iterations.">Alternating Iterations</a>
+                            
+                            </li>
+                        
+                            <li><a href="anim/anim-xy.html" title="This example shows you how to animate the xy coordinates of an element.">Animating XY Position</a>
+                            
+                            </li>
+                        
+                            <li><a href="anim/curve.html" title="This example demonstrates animating an element along a curved path using bezier control points.">Animating Along a Curved Path</a>
+                            
+                            </li>
+                        
+                            <li><a href="anim/reverse.html" title="The reverse attribute allows you to change the run direction of an animation.">Reversing an Animation</a>
+                            
+                            </li>
+                        
+                            <li><a href="anim/end-event.html" title="This example demonstrates how to use the end event.">Using the End Event</a>
+                            
+                            </li>
+                        
+                            <li><a href="dd/anim-drop.html" title="How to make an animated node a Drop target.">Animated Drop Targets</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="yui/yui-multi.html" title="Working with multiple YUI instances.">Multiple Instances</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="overlay/overlay-anim-plugin.html" title="Shows how to create a simple plugin to animate the Overlay&#x27;s movement and visibility.">Animation Plugin</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="app/index.html">App Framework</a>
+                    <ul>
+                        
+                            <li><a href="app/app-todo.html" title="A basic todo list built with the Model, Model List, and View components.">Todo List</a>
+                            
+                            </li>
+                        
+                            <li><a href="app/app-contributors.html" title="An application to browse through the contributors of a GitHub project.">GitHub Contributors</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="async-queue/index.html">AsyncQueue</a>
+                    <ul>
+                        
+                            <li><a href="async-queue/queue-app.html" title="This example employs AsyncQueue to incrementally construct an application interface; this illustrates the approach you&#x27;d take to allow chunked rendering of the UI in a process-intensive application.">Building a UI with AsyncQueue</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="attribute/index.html">Attribute</a>
+                    <ul>
+                        
+                            <li><a href="attribute/attribute-basic.html" title="Use the Attribute API to define, set and get attribute values.">Basic Attribute Configuration</a>
+                            
+                            </li>
+                        
+                            <li><a href="attribute/attribute-rw.html" title="Configure attributes to be readOnly or writeOnce.">Read-Only and Write-Once Attributes</a>
+                            
+                            </li>
+                        
+                            <li><a href="attribute/attribute-event.html" title="How to listen for changes in attribute values.">Attribute Change Events</a>
+                            
+                            </li>
+                        
+                            <li><a href="attribute/attribute-basic-speeddate.html" title="Create a basic SpeedDater class, with Attribute support.">Attribute Based Speed Dating</a>
+                            
+                            </li>
+                        
+                            <li><a href="attribute/attribute-event-speeddate.html" title="Refactors the basic Speed Dating example, to use attribute change events to update rendered elements, and have two instances react to another.">Attribute Event Based Speed Dating</a>
+                            
+                            </li>
+                        
+                            <li><a href="attribute/attribute-getset.html" title="Add custom methods to get and set attribute values and provide validation support.">Attribute Getters, Setters and Validators</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="autocomplete/index.html">AutoComplete</a>
+                    <ul>
+                        
+                            <li><a href="autocomplete/ac-local.html" title="How to provide autocomplete suggestions from a local array.">Basic Local Data</a>
+                            
+                            </li>
+                        
+                            <li><a href="autocomplete/ac-jsonp.html" title="How to provide autocomplete suggestions using a remote JSONP source.">Remote Data via JSONP</a>
+                            
+                            </li>
+                        
+                            <li><a href="autocomplete/ac-yql.html" title="How to provide autocomplete suggestions using a YQL query source.">Remote Data via YQL</a>
+                            
+                            </li>
+                        
+                            <li><a href="autocomplete/ac-datasource.html" title="How to provide autocomplete suggestions using a DataSource instance.">Remote Data via DataSource</a>
+                            
+                            </li>
+                        
+                            <li><a href="autocomplete/ac-tagging.html" title="How to implement delimited tag completion.">Tag Completion Using Query Delimiters</a>
+                            
+                            </li>
+                        
+                            <li><a href="autocomplete/ac-flickr.html" title="How to find and select Flickr photos using a YQL source and a custom autocomplete result formatter.">Find Photos on Flickr (Custom Formatting, YQL Source)</a>
+                            
+                            </li>
+                        
+                            <li><a href="autocomplete/ac-filter.html" title="How to use autocomplete-base to filter a set of existing items on a page.">Filter a Set of Existing Items on a Page</a>
+                            
+                            </li>
+                        
+                            <li><a href="autocomplete/ac-geocode.html" title="How to find an address using a YQL source calling Google&#x27;s Geocoding Service">Address Completion on Google&#x27;s Geocoding Service</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="base/index.html">Base</a>
+                    <ul>
+                        
+                            <li><a href="widget/widget-build.html" title="Shows how to use Base.create and mix/match extensions to create custom Widget classes.">Creating Custom Widget Classes With Extensions</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="widget/widget-tooltip.html" title="Shows how to extend the Widget class, and add WidgetPosition and WidgetStack to create a Tooltip widget class.">Creating a Simple Tooltip Widget With Extensions</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="widget/widget-parentchild-listbox.html" title="Shows how to extend the Widget class, and add WidgetParent and WidgetChild to create a simple ListBox widget.">Creating a Hierarchical ListBox Widget</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="button/index.html">Button</a>
+                    <ul>
+                        
+                            <li><a href="button/cssbutton.html" title="This example shows how you can easily style button and non-button DOM elements to appear as buttons">Styling elements with cssbutton</a>
+                            
+                            </li>
+                        
+                            <li><a href="button/button-plugin.html" title="This example shows a simple, light solution to enhance &lt;button&gt; nodes">Enhancing &lt;button&gt; nodes with button-plugin</a>
+                            
+                            </li>
+                        
+                            <li><a href="button/button-basic.html" title="This example demonstrates how to create button widgets">Basic button widgets</a>
+                            
+                            </li>
+                        
+                            <li><a href="button/button-group.html" title="This example demonstrates how to create a widget containing a group of buttons">Managing groups of buttons with button-group</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="cache/index.html">Cache</a>
+                    <ul>
+                        
+                            <li><a href="cache/cache-basic.html" title="Basic caching functionality with the Cache Utility.">Basic Caching</a>
+                            
+                            </li>
+                        
+                            <li><a href="cache/cache-offline.html" title="Offline caching implements HTML 5 localStorage when available, to allow data to persist across browser sessions.">Offline Caching</a>
+                            
+                            </li>
+                        
+                            <li><a href="datasource/datasource-caching.html" title="Use the DataSourceCache plugin to enable caching and reduce server calls to remote sources.">DataSource with Caching</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="datasource/datasource-offlinecache.html" title="The DataSourceCache plugin supports offline caching so that cached data persists across browser sessions.">DataSource with Offline Cache</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="calendar/index.html">Calendar</a>
+                    <ul>
+                        
+                            <li><a href="calendar/calendar-simple.html" title="How to create a single-pane calendar with selectable dates">Simple Calendar with Selection</a>
+                            
+                            </li>
+                        
+                            <li><a href="calendar/calendar-multipane.html" title="How to create a multi-pane calendar with custom-rendered cells and multiple date selection.">Two-Pane Calendar with Custom Rendering and Multiple Selection</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="charts/index.html">Charts</a>
+                    <ul>
+                        
+                            <li><a href="charts/charts-simple.html" title="Shows how to use Charts to create a basic chart.">Basic Charts Implementation</a>
+                            
+                            </li>
+                        
+                            <li><a href="charts/charts-multiseries.html" title="Shows how to create a chart with multiple series.">Chart with Multiple Series</a>
+                            
+                            </li>
+                        
+                            <li><a href="charts/charts-column.html" title="Shows how to create a column chart with multiple series.">Specify Chart Type</a>
+                            
+                            </li>
+                        
+                            <li><a href="charts/charts-stackedcolumn.html" title="Shows how to create a column chart with a stacked numeric axis.">Create Stacked Chart</a>
+                            
+                            </li>
+                        
+                            <li><a href="charts/charts-timeaxis.html" title="Shows how to create a chart with a time axis.">Create a Chart with a Time Axis</a>
+                            
+                            </li>
+                        
+                            <li><a href="charts/charts-gridlines.html" title="Shows how to add gridlines to a chart.">Add Gridlines to a Chart</a>
+                            
+                            </li>
+                        
+                            <li><a href="charts/charts-stackedarea.html" title="Shows how to create a chart with planar based events.">Create a Stacked Area Chart with Planar Based Events</a>
+                            
+                            </li>
+                        
+                            <li><a href="charts/charts-globalstyles.html" title="Shows how to use a chart&#x27;s styles attribute to customize a chart.">Customize a Chart</a>
+                            
+                            </li>
+                        
+                            <li><a href="charts/charts-customizedtooltip.html" title="Shows how to customize the default tooltip of a chart.">Customize a Chart&#x27;s Tooltip</a>
+                            
+                            </li>
+                        
+                            <li><a href="charts/charts-objectstyles.html" title="Shows how to explicitly define the axes and series for a chart.">Define a Chart&#x27;s Axes and Series</a>
+                            
+                            </li>
+                        
+                            <li><a href="charts/charts-pie.html" title="Shows how to use charts to create a pie chart.">Pie Chart</a>
+                            
+                            </li>
+                        
+                            <li><a href="charts/charts-dualaxes.html" title="Shows how to create a chart with multiple value axes.">Dual Axes Chart</a>
+                            
+                            </li>
+                        
+                            <li><a href="charts/charts-axisupdate.html" title="Shows how to access a chart instance&#x27;s value axis after the chart has rendered.">Update Chart Axis</a>
+                            
+                            </li>
+                        
+                            <li><a href="charts/charts-seriesupdate.html" title="Shows how to access a chart instance&#x27;s seriesCollection after the chart has rendered.">Update Chart Series</a>
+                            
+                            </li>
+                        
+                            <li><a href="charts/charts-legend.html" title="Shows how to add a legend to a chart.">Create Chart with a Legend</a>
+                            
+                            </li>
+                        
+                            <li><a href="charts/charts-groupmarkers.html" title="Shows how to render multiple data points in a singe marker.">Group Marker Chart</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="color/index.html">Color</a>
+                    <ul>
+                        
+                            <li><a href="color/rgb-slider.html" title="Use three sliders to control RGB values and update Hex and HSL strings.">RGB Slider</a>
+                            
+                            </li>
+                        
+                            <li><a href="color/hsl-picker.html" title="Use the HSL color picker to select a new color. Then chose the color type you like best.">HSL Color Picker</a>
+                            
+                            </li>
+                        
+                            <li><a href="color/hsl-harmony.html" title="Use the HSL color picker to create harmony colors.">HSL Harmony</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="console/index.html">Console</a>
+                    <ul>
+                        
+                            <li><a href="console/console-basic.html" title="The basics of setting up a Console">Creating a Console for Debugging</a>
+                            
+                            </li>
+                        
+                            <li><a href="console/console-yui-config.html" title="Using your YUI instance configuration to filter which messages are reported in the Console">YUI Configuration to Filter Log Messages</a>
+                            
+                            </li>
+                        
+                            <li><a href="console/console-global.html" title="Using the Console&#x27;s logSource attribute to consolidate log messages from multiple YUI instances into one Console">Creating a Universal Console</a>
+                            
+                            </li>
+                        
+                            <li><a href="console-filters/console-filters-intro.html" title="Adding the ConsoleFilters plugin to a Console instance for more granular run time log message filtering">Using the ConsoleFilters Plugin</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="console-filters/index.html">ConsoleFilters Plugin</a>
+                    <ul>
+                        
+                            <li><a href="console-filters/console-filters-intro.html" title="Adding the ConsoleFilters plugin to a Console instance for more granular run time log message filtering">Using the ConsoleFilters Plugin</a>
+                            
+                            </li>
+                        
+                            <li><a href="console/console-basic.html" title="The basics of setting up a Console">Creating a Console for Debugging</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="cookie/index.html">Cookie Utility</a>
+                    <ul>
+                        
+                            <li><a href="cookie/cookie-simple-example.html" title="Demonstrates basic usage of the Cookie utility for reading and writing cookies.">Simple Cookie Example</a>
+                            
+                            </li>
+                        
+                            <li><a href="cookie/cookie-advanced-example.html" title="Demonstrates using the Cookie utility to get, set and remove cookies.">Advanced Cookie Example</a>
+                            
+                            </li>
+                        
+                            <li><a href="cookie/cookie-subcookie-example.html" title="Demonstrates using the Cookie utility to get and set subcookies.">Subcookie Example</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="cssbase/index.html">CSS Base</a>
+                    <ul>
+                        
+                            <li><a href="cssbase/cssbase-basic.html" title="When CSS Base is included in a page it provides consistent and basic cross-browser styling for HTML elements.">Global (Page-Level) Example</a>
+                            
+                            </li>
+                        
+                            <li><a href="cssbase/cssbase-context.html" title="CSS Base applied to a portion of a page based on the location of a class value.">Contextual Example</a>
+                            
+                            </li>
+                        
+                            <li><a href="cssreset/cssreset-basic.html" title="When CSS Reset is included in a page, it removes the browser-provided styling for HTML elements.">Global (Page-Level) Example</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="cssreset/cssreset-context.html" title="CSS Reset applied to a portion of a page based on the location of a class value.">Contextual Example</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="cssfonts/index.html">CSS Fonts</a>
+                    <ul>
+                        
+                            <li><a href="cssfonts/cssfonts-basic.html" title="When CSS Fonts is included in a page, it applies a baseline font treatment to all HTML elements. This baseline is Arial at the equivalent of 13px size and 16px line-height.">Global (Page-Level) Example</a>
+                            
+                            </li>
+                        
+                            <li><a href="cssfonts/cssfonts-context.html" title="Use the alternate contextual version of YUI Fonts to have precise control over which regions of the page are targeted.">Contextual Example</a>
+                            
+                            </li>
+                        
+                            <li><a href="cssfonts/cssfonts-size.html" title="Define all non-baseline sizes in percentages when using YUI Fonts.">Setting Font Size</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="cssgrids/index.html">CSS Grids</a>
+                    <ul>
+                        
+                            <li><a href="cssgrids/cssgrids-units.html" title="Each unit has a className that provides its percentage width.">Using Grid Units</a>
+                            
+                            </li>
+                        
+                            <li><a href="cssgrids/cssgrids-fixed.html" title="This is a template for creating fixed-width layouts.">Fixed Page Template</a>
+                            
+                            </li>
+                        
+                            <li><a href="cssgrids/cssgrids-fluid.html" title="This is a template for creating fluid layouts.">Fluid Page Template</a>
+                            
+                            </li>
+                        
+                            <li><a href="cssgrids/cssgrids-align.html" title="Basic CSS properties are leveraged to horizontally and vertically align units.">Aligning Grid Units</a>
+                            
+                            </li>
+                        
+                            <li><a href="cssgrids/cssgrids-magazine.html" title="A responsive layout that looks like a newspaper">Responsive Newspaper Layout</a>
+                            
+                            </li>
+                        
+                            <li><a href="node-menunav/menunav-leftnav.html" title="Creating left navigation using the MenuNav Node Plugin.">Basic Left Nav</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="node-menunav/node-menunav-2.html" title="Creating top navigation using the MenuNav Node Plugin">Basic Top Nav</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="node-menunav/node-menunav-3.html" title="Creating menu button navigation using the MenuNav Node Plugin">Menu Button Top Nav</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="node-menunav/node-menunav-4.html" title="Creating split button navigation using the MenuNav Node Plugin">Split Button Top Nav</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="node-menunav/node-menunav-5.html" title="Adding shadows to submenus of a left nav using the MenuNav Node Plugin">Left Nav with Submenus with Shadows</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="node-menunav/node-menunav-6.html" title="Adding rounded corners to submenus of a left nav using the MenuNav Node Plugin">Left Nav With Submenus With Rounded Corners</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="node-menunav/node-menunav-7.html" title="Skining a menu built using the MenuNav Node Plugin to look like the menus on Flickr">Skinning Menus Created Using the MenuNav Node Plugin</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="cssreset/index.html">CSS Reset</a>
+                    <ul>
+                        
+                            <li><a href="cssreset/cssreset-basic.html" title="When CSS Reset is included in a page, it removes the browser-provided styling for HTML elements.">Global (Page-Level) Example</a>
+                            
+                            </li>
+                        
+                            <li><a href="cssreset/cssreset-context.html" title="CSS Reset applied to a portion of a page based on the location of a class value.">Contextual Example</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="dataschema/index.html">DataSchema</a>
+                    <ul>
+                        
+                            <li><a href="dataschema/dataschema-array.html" title="Schema parsing a JavaScript array.">DataSchema.Array</a>
+                            
+                            </li>
+                        
+                            <li><a href="dataschema/dataschema-json.html" title="Schema parsing JSON data.">DataSchema.JSON</a>
+                            
+                            </li>
+                        
+                            <li><a href="dataschema/dataschema-xml.html" title="Schema parsing XML data.">DataSchema.XML for XML Data</a>
+                            
+                            </li>
+                        
+                            <li><a href="dataschema/dataschema-table.html" title="Schema parsing data held in TABLE elements.">DataSchema.XML for HTML Tables</a>
+                            
+                            </li>
+                        
+                            <li><a href="dataschema/dataschema-text.html" title="Schema parsing delimited plain-text data.">DataSchema.Text</a>
+                            
+                            </li>
+                        
+                            <li><a href="dataschema/dataschema-parsing.html" title="Parsing data into specified types as the schema is being applied.">Enforcing DataTypes</a>
+                            
+                            </li>
+                        
+                            <li><a href="datasource/datasource-local.html" title="The Local DataSource manages retrieval of in-page data, from JavaScript arrays and objects to DOM elements.">DataSource.Local</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="datasource/datasource-get.html" title="The Get DataSource, which manages retrieval of data from remote sources via the Get Utility, can be useful for accessing data from cross-domain servers without the need for a proxy.">DataSource.Get</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="datasource/datasource-io.html" title="The IO DataSource manages retrieval of data from remote sources, via the IO Utility.">DataSource.IO</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="datasource/datasource-function.html" title="The Function DataSource, which manages retrieval of data from a JavaScript function, provides a highly customizeable mechanism for implementer-defined data retrieval algorithms">DataSource.Function</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="datasource/datasource-caching.html" title="Use the DataSourceCache plugin to enable caching and reduce server calls to remote sources.">DataSource with Caching</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="datasource/datasource-offlinecache.html" title="The DataSourceCache plugin supports offline caching so that cached data persists across browser sessions.">DataSource with Offline Cache</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="datasource/index.html">DataSource</a>
+                    <ul>
+                        
+                            <li><a href="datasource/datasource-local.html" title="The Local DataSource manages retrieval of in-page data, from JavaScript arrays and objects to DOM elements.">DataSource.Local</a>
+                            
+                            </li>
+                        
+                            <li><a href="datasource/datasource-get.html" title="The Get DataSource, which manages retrieval of data from remote sources via the Get Utility, can be useful for accessing data from cross-domain servers without the need for a proxy.">DataSource.Get</a>
+                            
+                            </li>
+                        
+                            <li><a href="datasource/datasource-io.html" title="The IO DataSource manages retrieval of data from remote sources, via the IO Utility.">DataSource.IO</a>
+                            
+                            </li>
+                        
+                            <li><a href="datasource/datasource-function.html" title="The Function DataSource, which manages retrieval of data from a JavaScript function, provides a highly customizeable mechanism for implementer-defined data retrieval algorithms">DataSource.Function</a>
+                            
+                            </li>
+                        
+                            <li><a href="datasource/datasource-caching.html" title="Use the DataSourceCache plugin to enable caching and reduce server calls to remote sources.">DataSource with Caching</a>
+                            
+                            </li>
+                        
+                            <li><a href="datasource/datasource-offlinecache.html" title="The DataSourceCache plugin supports offline caching so that cached data persists across browser sessions.">DataSource with Offline Cache</a>
+                            
+                            </li>
+                        
+                            <li><a href="datasource/datasource-polling.html" title="Use the Pollable extension to enable polling in your DataSource.">DataSource with Polling</a>
+                            
+                            </li>
+                        
+                            <li><a href="autocomplete/ac-datasource.html" title="How to provide autocomplete suggestions using a DataSource instance.">Remote Data via DataSource</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="datatable/index.html">DataTable</a>
+                    <ul>
+                        
+                            <li><a href="datatable/datatable-basic.html" title="This example illustrates simple DataTable use cases.">Basic DataTable</a>
+                            
+                            </li>
+                        
+                            <li><a href="datatable/datatable-dsget.html" title="DataTable loaded with JSON data from a remote webservice via DataSource.Get">DataTable + DataSource.Get + JSON Data</a>
+                            
+                            </li>
+                        
+                            <li><a href="datatable/datatable-dsio.html" title="DataTable loaded with XML data from a remote webservice via DataSource.IO.">DataTable + DataSource.IO + XML Data</a>
+                            
+                            </li>
+                        
+                            <li><a href="datatable/datatable-formatting.html" title="Custom format data for display.">Formatting Row Data for Display</a>
+                            
+                            </li>
+                        
+                            <li><a href="datatable/datatable-nestedcols.html" title="DataTable with nested column headers.">Nested Column Headers</a>
+                            
+                            </li>
+                        
+                            <li><a href="datatable/datatable-sort.html" title="DataTable with column sorting.">Column Sorting</a>
+                            
+                            </li>
+                        
+                            <li><a href="datatable/datatable-scroll.html" title="DataTable with vertical and/or horizontal scrolling rows.">Scrolling DataTable</a>
+                            
+                            </li>
+                        
+                            <li><a href="datatable/datatable-recordtype.html" title="Using DataTable&#x27;s recordType attribute to create calculated, sortable columns.">Sortable generated columns</a>
+                            
+                            </li>
+                        
+                            <li><a href="datatable/datatable-masterdetail.html" title="Populating one DataTable from details in the data of another.">Master and detail tables</a>
+                            
+                            </li>
+                        
+                            <li><a href="datatable/datatable-chkboxselect.html" title="Checkbox column that retains checked state when sorting.">Checkbox select column</a>
+                            
+                            </li>
+                        
+                            <li><a href="panel/panel-form.html" title="Shows how to instantiate multiple Panel instances, and use nested modality to interact with a Datatable.">Creating a Modal Form</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="datatype/index.html">DataType</a>
+                    <ul>
+                        
+                            <li><a href="datatype/datatype-dateformat-lang.html" title="Formatting dates into strings using pre-packaged language resource bundles.">Formatting Dates Using Language Resource Bundles</a>
+                            
+                            </li>
+                        
+                            <li><a href="datatype/datatype-dateparse.html" title="Parsing data into dates.">Y.Date.parse()</a>
+                            
+                            </li>
+                        
+                            <li><a href="datatype/datatype-numberformat.html" title="Formatting numbers into strings.">Y.Number.format()</a>
+                            
+                            </li>
+                        
+                            <li><a href="datatype/datatype-numberparse.html" title="Parsing data into numbers.">Y.Number.parse()</a>
+                            
+                            </li>
+                        
+                            <li><a href="datatype/datatype-xmlformat.html" title="Formatting XML documents into strings.">Y.XML.format()</a>
+                            
+                            </li>
+                        
+                            <li><a href="datatype/datatype-xmlparse.html" title="Parsing strings into XML documents.">Y.XML.parse()</a>
+                            
+                            </li>
+                        
+                            <li><a href="datatable/datatable-recordtype.html" title="Using DataTable&#x27;s recordType attribute to create calculated, sortable columns.">Sortable generated columns</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="dial/index.html">Dial</a>
+                    <ul>
+                        
+                            <li><a href="dial/dial-basic.html" title="Create a Dial from existing markup on the page - a simple use case.">Basic Dial</a>
+                            
+                            </li>
+                        
+                            <li><a href="dial/dial-text-input.html" title="Link a Dial with a text input field.">Dial Linked With Text Input</a>
+                            
+                            </li>
+                        
+                            <li><a href="dial/dial-image-background.html" title="Use image backgrounds to control the visual display of a Dial.">Dial With Image Background</a>
+                            
+                            </li>
+                        
+                            <li><a href="dial/dial-image-surrounding.html" title="Use images to surround a Dial instance and provide additional styling.">Dial With a Surrounding Image</a>
+                            
+                            </li>
+                        
+                            <li><a href="dial/dial-interactive.html" title="This example employs Dial to drive an interactive UI.">Dial With Interactive UI</a>
+                            
+                            </li>
+                        
+                            <li><a href="dial/duck.html" title="This example shows how to use Dial to animate an image sprite.">Image Sprite Animation with Dial</a>
+                            
+                            </li>
+                        
+                            <li><a href="color/hsl-picker.html" title="Use the HSL color picker to select a new color. Then chose the color type you like best.">HSL Color Picker</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="dd/index.html">Drag and Drop</a>
+                    <ul>
+                        
+                            <li><a href="dd/simple-drag.html" title="A simple drag interaction that doesn&#x27;t require a drop interaction.">Simple Drag</a>
+                            
+                            </li>
+                        
+                            <li><a href="dd/drag-plugin.html" title="How to apply the Drag Plugin to a node.">Drag - Node plugin</a>
+                            
+                            </li>
+                        
+                            <li><a href="dd/proxy-drag.html" title="A simple proxy drag interaction that doesn&#x27;t require a drop interaction.">Drag - Proxy</a>
+                            
+                            </li>
+                        
+                            <li><a href="dd/constrained-drag.html" title="How to constrain a draggable Node to another Node&#x27;s region.">Drag - Constrained to a Region</a>
+                            
+                            </li>
+                        
+                            <li><a href="dd/groups-drag.html" title="Using interaction groups, this example demonstrates how to tie into the Drag &amp; Drop Utility&#x27;s interesting moments to provide visual affordances for the current drag operation.">Drag - Interaction Groups</a>
+                            
+                            </li>
+                        
+                            <li><a href="dd/shim-drag.html" title="The use of the drag shim when dragging nodes over other troublesome nodes.">Using the Drag Shim</a>
+                            
+                            </li>
+                        
+                            <li><a href="dd/drop-code.html" title="How to use the Drop Target events to code your application.">Using Drop Based Coding</a>
+                            
+                            </li>
+                        
+                            <li><a href="dd/winscroll.html" title="How you can use the DD Scroll plugin to scroll the browser window as you drag.">Window Scrolling</a>
+                            
+                            </li>
+                        
+                            <li><a href="dd/delegate.html" title="How to use DD.Delegate to create a scalable solution which supports multiple draggable items.">Drag Delegation</a>
+                            
+                            </li>
+                        
+                            <li><a href="dd/delegate-drop.html" title="Using DD.Delegate to support dragging multiple items and dropping them onto a Drop Target.">Drag Delegation with a Drop Target</a>
+                            
+                            </li>
+                        
+                            <li><a href="dd/delegate-plugins.html" title="How to use Drag plugins with a DD Delegate based solution.">Using Drag Plugins with Delegate</a>
+                            
+                            </li>
+                        
+                            <li><a href="dd/list-drag.html" title="This example shows how to make a sortable list using Custom Event Bubbling.">List Reorder w/Bubbling</a>
+                            
+                            </li>
+                        
+                            <li><a href="dd/scroll-list.html" title="This example shows how to make a sortable list using Custom Event Bubbling and Node Scrolling.">List Reorder w/Scrolling</a>
+                            
+                            </li>
+                        
+                            <li><a href="dd/anim-drop.html" title="How to make an animated node a Drop target.">Animated Drop Targets</a>
+                            
+                            </li>
+                        
+                            <li><a href="dd/photo-browser.html" title="Example Photo Browser application.">Photo Browser</a>
+                            
+                            </li>
+                        
+                            <li><a href="dd/portal-drag.html" title="Portal style example using Drag &amp; Drop Event Bubbling and Animation.">Portal Style Example</a>
+                            
+                            </li>
+                        
+                            <li><a href="stylesheet/stylesheet-theme.html" title="Use StyleSheet to adjust the CSS rules applying a page theme from user input">Adjusting a Page Theme on the Fly</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="yui/yui-multi.html" title="Working with multiple YUI instances.">Multiple Instances</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="event/index.html">Event</a>
+                    <ul>
+                        
+                            <li><a href="event/basic-example.html" title="Use the Event Utility to attach simple DOM event handlers.">Simple DOM Events</a>
+                            
+                            </li>
+                        
+                            <li><a href="event/synth-example.html" title="Using the synthetic event API to create a DOM event that fires in response to arrow keys being pressed.">Creating an Arrow Event for DOM Subscription</a>
+                            
+                            </li>
+                        
+                            <li><a href="event/swipe-example.html" title="Supporting cross-device swipe gestures, using the event-move gesture events">Supporting A Swipe Left Gesture</a>
+                            
+                            </li>
+                        
+                            <li><a href="widget/widget-extend.html" title="Shows how to extend the base widget class, to create your own Widgets.">Extending the Base Widget Class</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="dd/photo-browser.html" title="Example Photo Browser application.">Photo Browser</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="dd/portal-drag.html" title="Portal style example using Drag &amp; Drop Event Bubbling and Animation.">Portal Style Example</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="io/get.html" title="Use IO to request data over HTTP.">HTTP GET to request data</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="node-focusmanager/node-focusmanager-button.html" title="Creating an accessible menu button using the Focus Manager Node Plugin, Event&#x27;s delegation support and mouseenter event, along with the Overlay widget and Node&#x27;s support for the WAI-ARIA Roles and States.">Accessible Menu Button</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="event-custom/index.html">EventTarget</a>
+                    <ul>
+                        
+                            <li><a href="event-custom/flow-example.html" title="Publish an event with a default behavior, as well as behaviors for reacting to preventing the default or stopping bubbling.">Custom Event Bubbling and Behaviors</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="node-focusmanager/index.html">FocusManager Node Plugin</a>
+                    <ul>
+                        
+                            <li><a href="node-focusmanager/node-focusmanager-toolbar.html" title="Creating an accessible toolbar using the Focus Manager Node Plugin and Node&#x27;s support for the WAI-ARIA Roles and States.">Accessible Toolbar</a>
+                            
+                            </li>
+                        
+                            <li><a href="node-focusmanager/node-focusmanager-button.html" title="Creating an accessible menu button using the Focus Manager Node Plugin, Event&#x27;s delegation support and mouseenter event, along with the Overlay widget and Node&#x27;s support for the WAI-ARIA Roles and States.">Accessible Menu Button</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="get/index.html">Get</a>
+                    <ul>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="graphics/index.html">Graphics</a>
+                    <ul>
+                        
+                            <li><a href="graphics/graphics-simple.html" title="Shows how to create a Graphic instance and add shapes.">Basic Graphics Implementation</a>
+                            
+                            </li>
+                        
+                            <li><a href="graphics/graphics-path.html" title="Shows how to draw lines and polygons.">Basic Path</a>
+                            
+                            </li>
+                        
+                            <li><a href="graphics/graphics-gradients.html" title="Shows how to create linear and radial gradient fills.">Create Gradient Fills</a>
+                            
+                            </li>
+                        
+                            <li><a href="graphics/graphics-drag.html" title="Shows how to add drag to a shape.">Basic drag with graphic object</a>
+                            
+                            </li>
+                        
+                            <li><a href="graphics/graphics-transforms.html" title="Shows how to apply transforms to shape.">Using Transforms</a>
+                            
+                            </li>
+                        
+                            <li><a href="graphics/graphics-customshape.html" title="Shows how to use a custom shape with the Graphics module.">Custom Shape</a>
+                            
+                            </li>
+                        
+                            <li><a href="graphics/graphics-muddyglass.html" title="Shows to use the graphics api to draw a realistic glass.">Transparent Glass with Shadow</a>
+                            
+                            </li>
+                        
+                            <li><a href="graphics/graphics-violin.html" title="Shows to use the graphics api to draw a violin.">Complex Drawing: Violin</a>
+                            
+                            </li>
+                        
+                            <li><a href="anim/curve.html" title="This example demonstrates animating an element along a curved path using bezier control points.">Animating Along a Curved Path</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="handlebars/index.html">Handlebars</a>
+                    <ul>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="history/index.html">History</a>
+                    <ul>
+                        
+                            <li><a href="history/history-tabview.html" title="Demonstrates how to add browser history support to a TabView widget using the History Utility.">History + TabView</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="imageloader/index.html">ImageLoader</a>
+                    <ul>
+                        
+                            <li><a href="imageloader/basic-features.html" title="Demonstrates the basic features and operation of the ImageLoader Utility, deferring the loading of images until specific events happen or specific time limits expire.">Basic Features of the ImageLoader Utility</a>
+                            
+                            </li>
+                        
+                            <li><a href="imageloader/below-fold.html" title="Loading images above the fold immediately while deferring the loading of images below the fold.">Loading Images Below the Fold</a>
+                            
+                            </li>
+                        
+                            <li><a href="imageloader/imageloader-class-names.html" title="Using CSS class names to target specific images for deferred loading.">Using ImageLoader with CSS Class Names</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="intl/index.html">Internationalization</a>
+                    <ul>
+                        
+                            <li><a href="intl/intl-basic.html" title="How to create components which use language resource bundles.">Language Resource Bundles</a>
+                            
+                            </li>
+                        
+                            <li><a href="datatype/datatype-dateformat-lang.html" title="Formatting dates into strings using pre-packaged language resource bundles.">Formatting Dates Using Language Resource Bundles</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="io/index.html">IO Utility</a>
+                    <ul>
+                        
+                            <li><a href="io/get.html" title="Use IO to request data over HTTP.">HTTP GET to request data</a>
+                            
+                            </li>
+                        
+                            <li><a href="io/weather.html" title="Use IO to request XML data from a remote web service.">Request XML data from Yahoo! Weather</a>
+                            
+                            </li>
+                        
+                            <li><a href="io/xdr.html" title="Use IO to make a cross-domain request to Yahoo! Pipes, returning data from disparate sources.">Request JSON using Yahoo! Pipes</a>
+                            
+                            </li>
+                        
+                            <li><a href="overlay/overlay-io-plugin.html" title="Shows how to create a simple plugin to retrieve content for the Overlay using the io utility.">IO Plugin</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="json/index.html">JSON</a>
+                    <ul>
+                        
+                            <li><a href="json/json-connect.html" title="Use JSON to parse data received via XMLHttpRequest via Y.io calls — a simple JSON use case.">JSON with Y.io</a>
+                            
+                            </li>
+                        
+                            <li><a href="json/json-freeze-thaw.html" title="Use the replacer and reviver parameters to reconstitute object instances that have been serialized to JSON.">Rebuilding Class Instances from JSON Data</a>
+                            
+                            </li>
+                        
+                            <li><a href="json/json-convert-values.html" title="Use a currency conversion calculation to add a new price member to a JSON response, demonstrating how JSON data, once retrieved, can be transformed during parsing.">Adding New Object Members During Parsing</a>
+                            
+                            </li>
+                        
+                            <li><a href="dd/portal-drag.html" title="Portal style example using Drag &amp; Drop Event Bubbling and Animation.">Portal Style Example</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="app/app-todo.html" title="A basic todo list built with the Model, Model List, and View components.">Todo List</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="jsonp/index.html">JSONP</a>
+                    <ul>
+                        
+                            <li><a href="jsonp/jsonp-github.html" title="Get basic GitHub user info using a Y.jsonp(url, callback).">Getting Cross Domain JSON Data Using Y.jsonp()</a>
+                            
+                            </li>
+                        
+                            <li><a href="jsonp/jsonp-gallery.html" title="Create a reusable JSONPRequest object to poll the YUILibrary.com Gallery web service, fetching info on a random Gallery module.">Reusing a JSONPRequest Instance to Poll a Remote Server</a>
+                            
+                            </li>
+                        
+                            <li><a href="promise/basic-example.html" title="Wrapping async transactions with promises">Wrapping async transactions with promises</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="promise/subclass-example.html" title="Extend Y.Promise to create classes that encapsulate standard transaction logic in descriptive method names">Subclassing Y.Promise</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="node-menunav/index.html">MenuNav Node Plugin</a>
+                    <ul>
+                        
+                            <li><a href="node-menunav/menunav-leftnav.html" title="Creating left navigation using the MenuNav Node Plugin.">Basic Left Nav</a>
+                            
+                            </li>
+                        
+                            <li><a href="node-menunav/node-menunav-2.html" title="Creating top navigation using the MenuNav Node Plugin">Basic Top Nav</a>
+                            
+                            </li>
+                        
+                            <li><a href="node-menunav/node-menunav-3.html" title="Creating menu button navigation using the MenuNav Node Plugin">Menu Button Top Nav</a>
+                            
+                            </li>
+                        
+                            <li><a href="node-menunav/node-menunav-4.html" title="Creating split button navigation using the MenuNav Node Plugin">Split Button Top Nav</a>
+                            
+                            </li>
+                        
+                            <li><a href="node-menunav/node-menunav-5.html" title="Adding shadows to submenus of a left nav using the MenuNav Node Plugin">Left Nav with Submenus with Shadows</a>
+                            
+                            </li>
+                        
+                            <li><a href="node-menunav/node-menunav-6.html" title="Adding rounded corners to submenus of a left nav using the MenuNav Node Plugin">Left Nav With Submenus With Rounded Corners</a>
+                            
+                            </li>
+                        
+                            <li><a href="node-menunav/node-menunav-7.html" title="Skining a menu built using the MenuNav Node Plugin to look like the menus on Flickr">Skinning Menus Created Using the MenuNav Node Plugin</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="model/index.html">Model</a>
+                    <ul>
+                        
+                            <li><a href="app/app-todo.html" title="A basic todo list built with the Model, Model List, and View components.">Todo List</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="app/app-contributors.html" title="An application to browse through the contributors of a GitHub project.">GitHub Contributors</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="model-list/index.html">Model List</a>
+                    <ul>
+                        
+                            <li><a href="app/app-todo.html" title="A basic todo list built with the Model, Model List, and View components.">Todo List</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="app/app-contributors.html" title="An application to browse through the contributors of a GitHub project.">GitHub Contributors</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="node/index.html">Node</a>
+                    <ul>
+                        
+                            <li><a href="node/properties.html" title="Using selectors and property accessors with Node.">Set and Get Properties</a>
+                            
+                            </li>
+                        
+                            <li><a href="node/dom-node.html" title="Using DOM methods with Node.">DOM Methods</a>
+                            
+                            </li>
+                        
+                            <li><a href="node/store.html" title="Building a simple store and shopping cart.">DOM Methods - Store</a>
+                            
+                            </li>
+                        
+                            <li><a href="node/events.html" title="Listening for DOM events with Node instances.">Handling DOM Events</a>
+                            
+                            </li>
+                        
+                            <li><a href="node/nodelist.html" title="NodeList provides Node functionality for manipulating multiple nodes at once.">Using NodeList - Simple</a>
+                            
+                            </li>
+                        
+                            <li><a href="node/ducks.html" title="How to use multiple NodeList features to build a simple game.">Using NodeList - Ducks Game</a>
+                            
+                            </li>
+                        
+                            <li><a href="node/node-evt-delegation.html" title="Using a single event listener to handle events on multiple nodes.">Delegating Node Events</a>
+                            
+                            </li>
+                        
+                            <li><a href="node/node-xy.html" title="This example demonstrates how to position an element in page coordinates.">Node Positioning</a>
+                            
+                            </li>
+                        
+                            <li><a href="node/node-style.html" title="This example demonstrates how to set styles and get style information.">Node Styling</a>
+                            
+                            </li>
+                        
+                            <li><a href="node/node-insert.html" title="This example demonstrates how to insert content into a Node.">Adding Node Content - Burger Builder</a>
+                            
+                            </li>
+                        
+                            <li><a href="node/node-view.html" title="This example demonstrates how to show and hide a Node.">Showing and Hiding</a>
+                            
+                            </li>
+                        
+                            <li><a href="dd/photo-browser.html" title="Example Photo Browser application.">Photo Browser</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="dd/portal-drag.html" title="Portal style example using Drag &amp; Drop Event Bubbling and Animation.">Portal Style Example</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="event/basic-example.html" title="Use the Event Utility to attach simple DOM event handlers.">Simple DOM Events</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="io/weather.html" title="Use IO to request XML data from a remote web service.">Request XML data from Yahoo! Weather</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="io/xdr.html" title="Use IO to make a cross-domain request to Yahoo! Pipes, returning data from disparate sources.">Request JSON using Yahoo! Pipes</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="node-focusmanager/node-focusmanager-toolbar.html" title="Creating an accessible toolbar using the Focus Manager Node Plugin and Node&#x27;s support for the WAI-ARIA Roles and States.">Accessible Toolbar</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="node-focusmanager/node-focusmanager-button.html" title="Creating an accessible menu button using the Focus Manager Node Plugin, Event&#x27;s delegation support and mouseenter event, along with the Overlay widget and Node&#x27;s support for the WAI-ARIA Roles and States.">Accessible Menu Button</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="cssnormalize/index.html">Normalize.css</a>
+                    <ul>
+                        
+                            <li><a href="cssnormalize/normalize-basic.html" title="When CSS Base is included in a page it provides consistent and basic cross-browser styling for HTML elements.">Applying normalize.css to a basic page</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="overlay/index.html">Overlay</a>
+                    <ul>
+                        
+                            <li><a href="overlay/overlay-xy.html" title="Shows how to instantiate a basic Overlay instance, and use the Overlay&#x27;s basic XY positioning support.">Basic XY Positioning</a>
+                            
+                            </li>
+                        
+                            <li><a href="overlay/overlay-tooltip.html" title="Shows how to create a simple tooltip incorporating the overlay shim feature.">Simple Tooltip</a>
+                            
+                            </li>
+                        
+                            <li><a href="overlay/overlay-align.html" title="Shows how to use the Overlay&#x27;s XY alignment support, to align the Overlay relative to another element, or to the viewport.">Alignment Support</a>
+                            
+                            </li>
+                        
+                            <li><a href="overlay/overlay-stack.html" title="Shows how to use the Overlay&#x27;s zindex and shim support when positioning Overlays above other elements on the page.">Stack Support</a>
+                            
+                            </li>
+                        
+                            <li><a href="overlay/overlay-stdmod.html" title="Shows how to modify content in the Overlay&#x27;s header, body and footer sections.">Standard Module Support</a>
+                            
+                            </li>
+                        
+                            <li><a href="overlay/overlay-constrain.html" title="Shows how to use Overlay&#x27;s constrainment support, to limit the XY value which can be set for an Overlay.">Constrain Support</a>
+                            
+                            </li>
+                        
+                            <li><a href="overlay/overlay-io-plugin.html" title="Shows how to create a simple plugin to retrieve content for the Overlay using the io utility.">IO Plugin</a>
+                            
+                            </li>
+                        
+                            <li><a href="overlay/overlay-anim-plugin.html" title="Shows how to create a simple plugin to animate the Overlay&#x27;s movement and visibility.">Animation Plugin</a>
+                            
+                            </li>
+                        
+                            <li><a href="stylesheet/stylesheet-theme.html" title="Use StyleSheet to adjust the CSS rules applying a page theme from user input">Adjusting a Page Theme on the Fly</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="node-focusmanager/node-focusmanager-button.html" title="Creating an accessible menu button using the Focus Manager Node Plugin, Event&#x27;s delegation support and mouseenter event, along with the Overlay widget and Node&#x27;s support for the WAI-ARIA Roles and States.">Accessible Menu Button</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="panel/index.html">Panel</a>
+                    <ul>
+                        
+                            <li><a href="panel/panel-form.html" title="Shows how to instantiate multiple Panel instances, and use nested modality to interact with a Datatable.">Creating a Modal Form</a>
+                            
+                            </li>
+                        
+                            <li><a href="panel/panel-animate.html" title="Shows how to create a panel that animates as it is shown and hidden">Creating an Animated Panel</a>
+                            
+                            </li>
+                        
+                            <li><a href="panel/dialog.html" title="Shows how to create a dialog instance that can be reused for multiple messages and confirmations.">Creating a Reusable Dialog</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="pjax/index.html">Pjax</a>
+                    <ul>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="plugin/index.html">Plugin</a>
+                    <ul>
+                        
+                            <li><a href="widget/widget-plugin.html" title="Shows how to create an IO plugin for Widget.">Creating a Widget Plugin</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="overlay/overlay-io-plugin.html" title="Shows how to create a simple plugin to retrieve content for the Overlay using the io utility.">IO Plugin</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="overlay/overlay-anim-plugin.html" title="Shows how to create a simple plugin to animate the Overlay&#x27;s movement and visibility.">Animation Plugin</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="profiler/index.html">Profiler</a>
+                    <ul>
+                        
+                            <li><a href="profiler/profiler-simple-example.html" title="Demonstrates basic usage of the Profiler for profiling functions.">Simple Profiling Example</a>
+                            
+                            </li>
+                        
+                            <li><a href="profiler/profiler-object-example.html" title="Demonstrates usage of the Profiler for profiling objects.">Object Profiling Example</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="promise/index.html">Promise</a>
+                    <ul>
+                        
+                            <li><a href="promise/basic-example.html" title="Wrapping async transactions with promises">Wrapping async transactions with promises</a>
+                            
+                            </li>
+                        
+                            <li><a href="promise/subclass-example.html" title="Extend Y.Promise to create classes that encapsulate standard transaction logic in descriptive method names">Subclassing Y.Promise</a>
+                            
+                            </li>
+                        
+                            <li><a href="promise/plugin-example.html" title="Extend the Promise class to create your own Node plugin that chains transitions">Creating a Node Plugin that chains transitions</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="recordset/index.html">Recordset</a>
+                    <ul>
+                        
+                            <li><a href="recordset/recordset-basic.html" title="Shows how to instantiate and interact with a standard Recordset by adding, removing and updating records/objects. Explains the events that are fired, and shows how to access the built-in hash table that stores records by their YUIDs.">Basic Recordset</a>
+                            
+                            </li>
+                        
+                            <li><a href="recordset/recordset-sort.html" title="Shows how to sort a Recordset using the default sorter, or a custom sort function. Additionally, demonstrates how convenience attributes help in determining when Recordset is in a sorted state, and what the last sort parameters were.">Recordset Sort Plugin</a>
+                            
+                            </li>
+                        
+                            <li><a href="recordset/recordset-filter.html" title="Shows how to use filtering methods to Recordset. Key-value filtering, and filtering by providing a custom function are covered.">Recordset Filter Plugin</a>
+                            
+                            </li>
+                        
+                            <li><a href="recordset/recordset-indexer.html" title="Shows how to create and access hash tables on Recordset. Tables are kept in sync through events fired by Recordset.">Recordset Indexer Plugin</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="resize/index.html">Resize</a>
+                    <ul>
+                        
+                            <li><a href="resize/simple-resize.html" title="Resize a node.">Simple Resize</a>
+                            
+                            </li>
+                        
+                            <li><a href="resize/constrain-resize.html" title="A simple resize implementation that utilizes the ResizeConstrained plugin to set min/max dimensions and to lock in the resized element&#x27;s aspect ratio.">Constrain a Resize</a>
+                            
+                            </li>
+                        
+                            <li><a href="resize/image-resize.html" title="This example shows an 8-way image resize, providing the CSS needed for a common image-resize visual treatment.">8-way Image Resize</a>
+                            
+                            </li>
+                        
+                            <li><a href="resize/simple-resize-plugin.html" title="Plugs a widget with resize functionality.">Widget with simple Resize Plugin</a>
+                            
+                            </li>
+                        
+                            <li><a href="resize/constrain-resize-plugin.html" title="Plugs a widget with resize functionality, and implements ResizeConstrained">Widget with Resize Plugin under constraints</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="editor/index.html">Rich Text Editor</a>
+                    <ul>
+                        
+                            <li><a href="editor/editor-instance.html" title="Use the Editor&#x27;s instance to query the iframe">Using the Editor&#x27;s instance</a>
+                            
+                            </li>
+                        
+                            <li><a href="editor/editor-events.html" title="Using the Editor&#x27;s built in events.">Editor Events</a>
+                            
+                            </li>
+                        
+                            <li><a href="editor/editor-nodechange.html" title="Using the Editor&#x27;s nodeChange Event.">NodeChange Event</a>
+                            
+                            </li>
+                        
+                            <li><a href="editor/editor-exec.html" title="Creating and using your own ExecCommands">ExecCommands</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="router/index.html">Router</a>
+                    <ul>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="scrollview/index.html">ScrollView</a>
+                    <ul>
+                        
+                            <li><a href="scrollview/scrollview-base.html" title="This example creates a basic ScrollView which doesn&#x27;t include a scrollbar indicator.">Basic ScrollView Without a Scroll Indicator</a>
+                            
+                            </li>
+                        
+                            <li><a href="scrollview/scrollview-scroll.html" title="This example shows the classic Scrollview implementation, including scroll indicators (bars) and including code to suppress link navigation while scrolling.">ScrollView with Scroll Indicator and Link Suppression Behavior</a>
+                            
+                            </li>
+                        
+                            <li><a href="scrollview/scrollview-horiz.html" title="This example creates a horizontal ScrollView.">Horizontal ScrollView</a>
+                            
+                            </li>
+                        
+                            <li><a href="scrollview/scrollview-paging.html" title="This example creates a horizontal ScrollView with pagination support.">ScrollView With Pagination</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="slider/index.html">Slider</a>
+                    <ul>
+                        
+                            <li><a href="slider/slider-basic.html" title="The basics of setting up a horizontal and vertical Slider">Basic Sliders</a>
+                            
+                            </li>
+                        
+                            <li><a href="slider/slider-from-markup.html" title="Creating a vertical Slider from existing markup">Creating a Slider from Existing Markup</a>
+                            
+                            </li>
+                        
+                            <li><a href="slider/slider-skin.html" title="Specifying an alternate skin for a Slider instance">Alternate Skins</a>
+                            
+                            </li>
+                        
+                            <li><a href="stylesheet/stylesheet-theme.html" title="Use StyleSheet to adjust the CSS rules applying a page theme from user input">Adjusting a Page Theme on the Fly</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="dd/photo-browser.html" title="Example Photo Browser application.">Photo Browser</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="color/rgb-slider.html" title="Use three sliders to control RGB values and update Hex and HSL strings.">RGB Slider</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="color/hsl-picker.html" title="Use the HSL color picker to select a new color. Then chose the color type you like best.">HSL Color Picker</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="color/hsl-harmony.html" title="Use the HSL color picker to create harmony colors.">HSL Harmony</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="overlay/overlay-constrain.html" title="Shows how to use Overlay&#x27;s constrainment support, to limit the XY value which can be set for an Overlay.">Constrain Support</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="sortable/index.html">Sortable</a>
+                    <ul>
+                        
+                            <li><a href="sortable/simple-sortable.html" title="Create a simple sortable list.">Simple Sortable List</a>
+                            
+                            </li>
+                        
+                            <li><a href="sortable/sortable-float.html" title="Sortable list example with floated nodes.">Floated List</a>
+                            
+                            </li>
+                        
+                            <li><a href="sortable/sortable-multi.html" title="Multiple Sortable Lists that are separate from one another.">Multiple Lists</a>
+                            
+                            </li>
+                        
+                            <li><a href="sortable/sortable-multi-full.html" title="Multiple Sortable Lists that are fully joined together.">Multiple Lists - Full Join</a>
+                            
+                            </li>
+                        
+                            <li><a href="sortable/sortable-multi-out.html" title="Multiple Sortable Lists that are outer joined together.">Multiple Lists - Outer Join</a>
+                            
+                            </li>
+                        
+                            <li><a href="sortable/sortable-multi-in.html" title="Multiple Sortable Lists that are inner joined together.">Multiple Lists - Inner Join</a>
+                            
+                            </li>
+                        
+                            <li><a href="sortable/sortable-fish.html" title="A fish sorting example. Multiple sortable lists with floated nodes that are outer joined together.">Fish Sort - Multi Outer Join</a>
+                            
+                            </li>
+                        
+                            <li><a href="sortable/sortable-events.html" title="Create a sortable list with drag-and-drop notifications.">Sortable Events</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="stylesheet/index.html">StyleSheet</a>
+                    <ul>
+                        
+                            <li><a href="stylesheet/stylesheet-theme.html" title="Use StyleSheet to adjust the CSS rules applying a page theme from user input">Adjusting a Page Theme on the Fly</a>
+                            
+                            </li>
+                        
+                            <li><a href="dd/photo-browser.html" title="Example Photo Browser application.">Photo Browser</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="swf/index.html">SWF Utility</a>
+                    <ul>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="tabview/index.html">TabView</a>
+                    <ul>
+                        
+                            <li><a href="tabview/tabview-basic.html" title="This example shows how to create a TabView wigdet from existing HTML.">TabView from Existing Markup</a>
+                            
+                            </li>
+                        
+                            <li><a href="tabview/tabview-fromjs.html" title="This example shows how to create a TabView wigdet from JavaScript.">Dynamic TabView from JavaScript</a>
+                            
+                            </li>
+                        
+                            <li><a href="tabview/tabview-add-remove.html" title="This example shows how to add and remove Tabs.">Adding and Removing Tabs</a>
+                            
+                            </li>
+                        
+                            <li><a href="tabview/tabview-yql.html" title="This example shows how to load tab content remotely using a YQL plugin.">Loading Tab Content</a>
+                            
+                            </li>
+                        
+                            <li><a href="history/history-tabview.html" title="Demonstrates how to add browser history support to a TabView widget using the History Utility.">History + TabView</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="template/index.html">Template</a>
+                    <ul>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="test/index.html">Test</a>
+                    <ul>
+                        
+                            <li><a href="test/test-simple-example.html" title="Demonstrates basic usage of YUI Test for setting up and running tests.">Simple Testing Example</a>
+                            
+                            </li>
+                        
+                            <li><a href="test/test-advanced-test-options.html" title="Demonstrates how to use advanced testing features such as defining tests that should fail, tests that should be ignored, and tests that should throw an error.">Advanced Test Options</a>
+                            
+                            </li>
+                        
+                            <li><a href="test/test-array-tests.html" title="Demonstrates how to use the ArrayAssert object to test array data.">Array Processing</a>
+                            
+                            </li>
+                        
+                            <li><a href="test/test-async-test.html" title="Demonstrates basic asynchronous tests.">Asynchronous Testing</a>
+                            
+                            </li>
+                        
+                            <li><a href="test/test-async-event-tests.html" title="Demonstrates using events with asynchronous tests.">Asynchronous Event Testing</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="test-console/index.html">Test Console</a>
+                    <ul>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="transition/index.html">Transition</a>
+                    <ul>
+                        
+                            <li><a href="transition/transition-basic.html" title="Demonstrates the basic usage of Transitions.">Basic Node Transitions</a>
+                            
+                            </li>
+                        
+                            <li><a href="transition/transition-usage.html" title="Demonstrates more advanced usage of Transitions.">Using Transitions</a>
+                            
+                            </li>
+                        
+                            <li><a href="transition/transition-view.html" title="Demonstrates how to animate Node&#x27;s show and hide methods.">Showing and Hiding with Transitions</a>
+                            
+                            </li>
+                        
+                            <li><a href="panel/panel-animate.html" title="Shows how to create a panel that animates as it is shown and hidden">Creating an Animated Panel</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="node/nodelist.html" title="NodeList provides Node functionality for manipulating multiple nodes at once.">Using NodeList - Simple</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="node/ducks.html" title="How to use multiple NodeList features to build a simple game.">Using NodeList - Ducks Game</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="node/node-insert.html" title="This example demonstrates how to insert content into a Node.">Adding Node Content - Burger Builder</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="async-queue/queue-app.html" title="This example employs AsyncQueue to incrementally construct an application interface; this illustrates the approach you&#x27;d take to allow chunked rendering of the UI in a process-intensive application.">Building a UI with AsyncQueue</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="promise/plugin-example.html" title="Extend the Promise class to create your own Node plugin that chains transitions">Creating a Node Plugin that chains transitions</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="jsonp/jsonp-gallery.html" title="Create a reusable JSONPRequest object to poll the YUILibrary.com Gallery web service, fetching info on a random Gallery module.">Reusing a JSONPRequest Instance to Poll a Remote Server</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="tree/index.html">Tree</a>
+                    <ul>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="uploader/index.html">Uploader</a>
+                    <ul>
+                        
+                            <li><a href="uploader/uploader-multiple.html" title="A simple multiple file uploader with progress tracking">Simple Multiple Files Uploader with Progress Tracking</a>
+                            
+                            </li>
+                        
+                            <li><a href="uploader/uploader-dd.html" title="A multiple file uploader with HTML5 Drag-and-Drop Support">Multiple Files Uploader with HTML5 Drag-and-Drop Support</a>
+                            
+                            </li>
+                        
+                            <li><a href="uploader/uploader-data.html" title="A multiple file uploader that submits additional POST vars with each file and receives data from the server">Multiple Files Uploader with POST Variables and Server Data Retrieval</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="view/index.html">View</a>
+                    <ul>
+                        
+                            <li><a href="app/app-todo.html" title="A basic todo list built with the Model, Model List, and View components.">Todo List</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="app/app-contributors.html" title="An application to browse through the contributors of a GitHub project.">GitHub Contributors</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="widget/index.html">Widget</a>
+                    <ul>
+                        
+                            <li><a href="widget/widget-extend.html" title="Shows how to extend the base widget class, to create your own Widgets.">Extending the Base Widget Class</a>
+                            
+                            </li>
+                        
+                            <li><a href="widget/widget-build.html" title="Shows how to use Base.create and mix/match extensions to create custom Widget classes.">Creating Custom Widget Classes With Extensions</a>
+                            
+                            </li>
+                        
+                            <li><a href="widget/widget-plugin.html" title="Shows how to create an IO plugin for Widget.">Creating a Widget Plugin</a>
+                            
+                            </li>
+                        
+                            <li><a href="widget/widget-tooltip.html" title="Shows how to extend the Widget class, and add WidgetPosition and WidgetStack to create a Tooltip widget class.">Creating a Simple Tooltip Widget With Extensions</a>
+                            
+                            </li>
+                        
+                            <li><a href="widget/widget-parentchild-listbox.html" title="Shows how to extend the Widget class, and add WidgetParent and WidgetChild to create a simple ListBox widget.">Creating a Hierarchical ListBox Widget</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="yql/index.html">YQL Query</a>
+                    <ul>
+                        
+                            <li><a href="yql/simple-yql.html" title="Create a simple YQL Query to retrieve data from the Yahoo! Weather YQL table.">Simple YQL Query</a>
+                            
+                            </li>
+                        
+                            <li><a href="yql/yql-requery.html" title="Use the Flickr Recent Photos YQL table to pull in a small set of recent Flickr images every 8 seconds.">Reusing a YQL query</a>
+                            
+                            </li>
+                        
+                            <li><a href="dd/photo-browser.html" title="Example Photo Browser application.">Photo Browser</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                            <li><a href="dd/portal-drag.html" title="Portal style example using Drag &amp; Drop Event Bubbling and Animation.">Portal Style Example</a>
+                            
+                                <small>*</small>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+                
+                <li><a href="yui/index.html">YUI Global Object</a>
+                    <ul>
+                        
+                            <li><a href="yui/yui-core.html" title="Setting up a YUI Instance">YUI Core</a>
+                            
+                            </li>
+                        
+                            <li><a href="yui/yui-multi.html" title="Working with multiple YUI instances.">Multiple Instances</a>
+                            
+                            </li>
+                        
+                            <li><a href="yui/yui-loader-ext.html" title="On-demand loading of YUI and non-YUI assets">YUI Loader - Dynamically Adding YUI and External Modules</a>
+                            
+                            </li>
+                        
+                            <li><a href="yui/yui-extend.html" title="Create Class Hierarchies with &#x60;extend&#x60;">Create Class Hierarchies with &#x60;extend&#x60;</a>
+                            
+                            </li>
+                        
+                            <li><a href="yui/yui-augment.html" title="Creating a composition-based class structure using &#x60;augment&#x60;">Compose Classes of Objects with &#x60;augment&#x60;</a>
+                            
+                            </li>
+                        
+                            <li><a href="yui/yui-mix.html" title="Add behaviors to objects or static classes with &#x60;mix&#x60;">Add Behaviors to Objects with &#x60;mix&#x60;</a>
+                            
+                            </li>
+                        
+                            <li><a href="yui/yui-merge.html" title="Combine data sets and create shallow copies of objects with &#x60;merge&#x60;">Combine Data Sets with &#x60;merge&#x60;</a>
+                            
+                            </li>
+                        
+                            <li><a href="yui/yui-isa.html" title="Check data types with the &#x60;Lang Utilities&#x60;">Check Data Types with &#x60;Lang&#x60;</a>
+                            
+                            </li>
+                        
+                            <li><a href="yui/yui-ua.html" title="Get information about the current user agent with &#x60;UA&#x60;">Browser Detection with &#x60;UA&#x60;</a>
+                            
+                            </li>
+                        
+                            <li><a href="yui/yui-yui2.html" title="Working with YUI 2 in 3">Working with YUI 2 in 3</a>
+                            
+                            </li>
+                        
+                            <li><a href="yui/yui-gallery.html" title="Natively use YUI Gallery Modules">Natively use YUI Gallery Modules</a>
+                            
+                            </li>
+                        
+                            <li><a href="yui/loader-resolve.html" title="Programatically use Loader">Programatically use Loader</a>
+                            
+                            </li>
+                        
+                            <li><a href="yui/parallel.html" title="Executing functions in parallel">Using Y.Parallel</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+            
+        </ul>
+        <small>* Example inherited from another component.</small>
+   </div>
+</div>
+</div>
+            </div>
+        </div>
+
+        <div class="yui3-u-1-4">
+            <div class="sidebar">
+                
+                    <div id="toc" class="sidebox">
+                        <div class="hd">
+                            <h2 class="no-toc">Table of Contents</h2>
+                        </div>
+
+                        <div class="bd">
+                            <ul class="toc">
+<li>
+<a href="#welcome-to-yui-3100">Welcome to YUI 3.10.0!</a>
+</li>
+<li>
+<a href="#links">Links</a>
+</li>
+<li>
+<a href="#directory-contents">Directory Contents</a>
+</li>
+<li>
+<a href="#component-user-guides">Component User Guides</a>
+</li>
+<li>
+<a href="#examples">Examples list</a>
+</li>
+</ul>
+                        </div>
+                    </div>
+                
+
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+
+<script>
+YUI.Env.Tests = {
+    examples: [],
+    project: 'assets',
+    assets: '',
+    name: '',
+    title: '',
+    newWindow: '',
+    auto:  false 
+};
+
+</script>
+<script src="assets/yui/test-runner.js"></script>
+
+
+
+</body>
+</html>

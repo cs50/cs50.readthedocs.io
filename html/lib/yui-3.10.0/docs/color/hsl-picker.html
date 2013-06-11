@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Example: HSL Color Picker</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+    <link rel="stylesheet" href="../../build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="../../build/yui/yui-min.js"></script>
+    
+</head>
+<body>
+<!--
+<a href="https://github.com/yui/yui3"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+-->
+<div id="doc">
+    <div id="hd">
+        <h1><img src="http://yuilibrary.com/img/yui-logo.png"></h1>
+    </div>
+    
+        <a href="#toc" class="jump">Jump to Table of Contents</a>
+    
+
+            <h1>Example: HSL Color Picker</h1>
+    <div class="yui3-g">
+        <div class="yui3-u-3-4">
+            <div id="main">
+                <div class="content"><div class="intro">
+<p>Use the HSL color picker to select a new color. Then chose the color type you like best.</p>
+</div>
+
+<div id="demo" class="example">
+    <style>
+    /** HSL Color Picker **/
+.picker {
+    padding: 15px;
+    background: #efefef;
+    border: 1px solid #ddd;
+}
+
+#hue-dial, .sliders, .color {
+    display: inline-block;
+    zoom: 1; *display: inline;
+    vertical-align: middle;
+}
+
+#hue-dial .yui3-dial-ring {
+    background: url(../assets/color/colorwheel.png) -25px -25px no-repeat;
+}
+
+.sliders {
+    margin: 0 30px;
+}
+
+.sliders strong {
+    font-weight: 600;
+    display: block;
+}
+.sliders strong span {
+    font-weight: 300;
+}
+.sliders div + div {
+    margin-top: 1em;
+}
+
+.color {
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+    /** Output Styles **/
+.picker-output {
+    padding: 20px 10px 10px;
+    background: #efefef;
+    border: 1px solid #ddd;
+    border-top: none;
+    -webkit-box-shadow: inset 0px 6px 10px -5px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0px 6px 10px -5px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0px 6px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.picker-output strong {
+    font-weight: bold;
+    display: block;
+}
+
+    </style>
+
+    <!-- HSL Color Picker -->
+<div class="picker">
+    <div id="hue-dial"></div>
+    <div class="sliders">
+        <div id="sat-slider"><strong>Saturation: <span></span></strong></div>
+        <div id="lum-slider"><strong>Luminance: <span></span></strong></div>
+    </div>
+    <div class="color"></div>
+</div>
+
+    <!-- Picker Output -->
+<div class="yui3-g picker-output">
+    <div class="yui3-u-1-3">
+        <strong>Hexadecimal:</strong>
+        <input type="text" id="hex-output">
+    </div>
+    <div class="yui3-u-1-3">
+        <strong>RGB:</strong>
+        <input type="text" id="rgb-output">
+    </div>
+    <div class="yui3-u-1-3">
+        <strong>HSL:</strong>
+        <input type="text" id="hsl-output">
+    </div>
+</div>
+
+    <script>
+    YUI().use('dial', 'slider', 'event-valuechange', 'color', function(Y){
+        Y.one('.picker').addClass('yui3-skin-sam');
+
+var hue = new Y.Dial({
+        min: 0,
+        max: 360,
+        stepsPerRevolution: 360,
+        continuous: true,
+        centerButtonDiameter: 0.4,
+        render: '#hue-dial'
+    }),
+    sat = new Y.Slider({
+        min: 0,
+        max: 100,
+        value: 100,
+        render: '#sat-slider'
+    }),
+    lum = new Y.Slider({
+        min: 0,
+        max: 100,
+        value: 50,
+        render: '#lum-slider'
+    }),
+    satValue = Y.one('#sat-slider span'),
+    lumValue = Y.one('#lum-slider span'),
+    color = Y.one('.color');
+
+
+hue.after('valueChange', function(e) {
+    updatePickerUI();
+});
+
+sat.after('thumbMove', function(e) {
+    updatePickerUI();
+});
+
+lum.after('thumbMove', function(e) {
+    lumValue.set('text', lum.get('value') + '%');
+    updatePickerUI();
+});
+
+function setPickerUI(hsl) {
+    if (typeof hsl.h !== 'undefined') {
+        hue.set('value', +hsl.h);
+    }
+
+    if (typeof hsl.s !== 'undefined') {
+        sat.set('value', +hsl.s);
+    }
+
+    if (typeof hsl.l !== 'undefined') {
+        lum.set('value', +hsl.l);
+    }
+}
+
+function updatePickerUI() {
+    var h = hue.get('value'),
+        s = sat.get('value'),
+        l = lum.get('value'),
+        hslString = Y.Color.fromArray([h, s, l], Y.Color.TYPES.HSL);
+
+    satValue.set('text', s + '%');
+    lumValue.set('text', l + '%');
+
+    color.setStyle('backgroundColor', hslString);
+
+    updateOutput(hslString);
+}
+
+        var hexOutput = Y.one('#hex-output'),
+    rgbOutput = Y.one('#rgb-output'),
+    hslOutput = Y.one('#hsl-output'),
+    focused = null;
+
+
+hexOutput.on('focus', setFocused);
+hexOutput.on('blur', unsetFocused);
+hexOutput.on('valueChange', updatePickerFromValue);
+
+rgbOutput.on('focus', setFocused);
+rgbOutput.on('blur', unsetFocused);
+rgbOutput.on('valueChange', updatePickerFromValue);
+
+hslOutput.on('focus', setFocused);
+hslOutput.on('blur', unsetFocused);
+hslOutput.on('valueChange', updatePickerFromValue);
+
+function updateOutput(hslString) {
+    if (hexOutput !== focused) {
+        hexOutput.set('value', Y.Color.toHex(hslString));
+    }
+    if (rgbOutput !== focused) {
+        rgbOutput.set('value', Y.Color.toRGB(hslString));
+    }
+    if (hslOutput !== focused) {
+        hslOutput.set('value', hslString);
+    }
+}
+
+function updatePickerFromValue(e) {
+    var val = e.newVal,
+        hsl = [];
+
+    if (Y.Color.toArray(val)) {
+        hsl = Y.Color.toArray(Y.Color.toHSL(val));
+        setPickerUI({
+            h: hsl[0],
+            s: hsl[1],
+            l: hsl[2]
+        });
+    }
+}
+
+function setFocused(e) {
+    focused = e.currentTarget;
+}
+
+function unsetFocused(e) {
+    if (focused === e.currentTarget) {
+        focused = null;
+    }
+}
+
+
+
+updatePickerUI();
+    });
+    </script>
+</div>
+
+<h3 id="setting-up-the-hsl-picker-ui">Setting Up the HSL Picker UI</h3>
+<p>This example takes advantage of the <code>dial</code> and <code>slider</code> widgets. We will use the dial widget to represent and select the hue from the 360 degree color wheel.</p>
+<p>Next we will use two sliders to select the saturation and luminance.</p>
+
+<pre class="code prettyprint">&lt;!-- HSL Color Picker --&gt;
+&lt;div class=&quot;picker&quot;&gt;
+    &lt;div id=&quot;hue-dial&quot;&gt;&lt;&#x2F;div&gt;
+    &lt;div class=&quot;sliders&quot;&gt;
+        &lt;div id=&quot;sat-slider&quot;&gt;&lt;strong&gt;Saturation: &lt;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;div&gt;
+        &lt;div id=&quot;lum-slider&quot;&gt;&lt;strong&gt;Luminance: &lt;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+    &lt;div class=&quot;color&quot;&gt;&lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;
+
+&lt;!-- Picker Output --&gt;
+&lt;div class=&quot;yui3-g picker-output&quot;&gt;
+    &lt;div class=&quot;yui3-u-1-3&quot;&gt;
+        &lt;strong&gt;Hexadecimal:&lt;&#x2F;strong&gt;
+        &lt;input type=&quot;text&quot; id=&quot;hex-output&quot;&gt;
+    &lt;&#x2F;div&gt;
+    &lt;div class=&quot;yui3-u-1-3&quot;&gt;
+        &lt;strong&gt;RGB:&lt;&#x2F;strong&gt;
+        &lt;input type=&quot;text&quot; id=&quot;rgb-output&quot;&gt;
+    &lt;&#x2F;div&gt;
+    &lt;div class=&quot;yui3-u-1-3&quot;&gt;
+        &lt;strong&gt;HSL:&lt;&#x2F;strong&gt;
+        &lt;input type=&quot;text&quot; id=&quot;hsl-output&quot;&gt;
+    &lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;</pre>
+
+
+<p>This layout could use some CSS TLC, so let's get to that next.</p>
+
+<pre class="code prettyprint">&#x2F;** HSL Color Picker **&#x2F;
+.picker {
+    padding: 15px;
+    background: #efefef;
+    border: 1px solid #ddd;
+}
+
+#hue-dial, .sliders, .color {
+    display: inline-block;
+    zoom: 1; *display: inline;
+    vertical-align: middle;
+}
+
+#hue-dial .yui3-dial-ring {
+    background: url(..&#x2F;assets&#x2F;color&#x2F;colorwheel.png) -25px -25px no-repeat;
+}
+
+.sliders {
+    margin: 0 30px;
+}
+
+.sliders strong {
+    font-weight: 600;
+    display: block;
+}
+.sliders strong span {
+    font-weight: 300;
+}
+.sliders div + div {
+    margin-top: 1em;
+}
+
+.color {
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+&#x2F;** Output Styles **&#x2F;
+.picker-output {
+    padding: 20px 10px 10px;
+    background: #efefef;
+    border: 1px solid #ddd;
+    border-top: none;
+    -webkit-box-shadow: inset 0px 6px 10px -5px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0px 6px 10px -5px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0px 6px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.picker-output strong {
+    font-weight: bold;
+    display: block;
+}</pre>
+
+
+<h3 id="setting-up-the-yui-instance">Setting Up the YUI Instance</h3>
+<p>Now we need to create our YUI instance and tell it to load the <code>color</code>, <code>slider</code>, <code>dial</code> and <code>event-valuechange</code> modules.</p>
+
+<pre class="code prettyprint">YUI().use(&#x27;dial&#x27;, &#x27;slider&#x27;, &#x27;event-valuechange&#x27;, &#x27;color&#x27;, function (Y) {
+    &#x2F;&#x2F; Code Here.
+});</pre>
+
+
+<h4 id="building-the-color-picker">Building The Color Picker</h4>
+<h5 id="initializing-ui-variables">Initializing UI Variables</h5>
+<p>First things first, we need to make sure our picker UI has the sam skin class applied.</p>
+<p>Next, we create a dial for the hue from 0 to 360. Then create a slider from 0 to 100 for saturation and luminance.</p>
+<p>We also want to maintain a reference to the nodes where the saturation and luminance value can be read and the color swatch that will be updated from the UI.</p>
+<pre class="code prettyprint">Y.one(&#x27;.picker&#x27;).addClass(&#x27;yui3-skin-sam&#x27;);
+
+var hue = new Y.Dial({
+        min: 0,
+        max: 360,
+        stepsPerRevolution: 360,
+        continuous: true,
+        centerButtonDiameter: 0.4,
+        render: &#x27;#hue-dial&#x27;
+    }),
+    sat = new Y.Slider({
+        min: 0,
+        max: 100,
+        value: 100,
+        render: &#x27;#sat-slider&#x27;
+    }),
+    lum = new Y.Slider({
+        min: 0,
+        max: 100,
+        value: 50,
+        render: &#x27;#lum-slider&#x27;
+    }),
+    satValue = Y.one(&#x27;#sat-slider span&#x27;),
+    lumValue = Y.one(&#x27;#lum-slider span&#x27;),
+    color = Y.one(&#x27;.color&#x27;);</pre>
+
+<h5 id="binding-events">Binding Events</h5>
+<p>After the UI components are initialized, we need to bind their respective change methods to update the UI. For dial, this is <code>valueChange</code>. For a slider, we use <code>thumbMove</code>.</p>
+<pre class="code prettyprint">hue.after(&#x27;valueChange&#x27;, function(e) {
+    updatePickerUI();
+});
+
+sat.after(&#x27;thumbMove&#x27;, function(e) {
+    updatePickerUI();
+});
+
+lum.after(&#x27;thumbMove&#x27;, function(e) {
+    lumValue.set(&#x27;text&#x27;, lum.get(&#x27;value&#x27;) + &#x27;%&#x27;);
+    updatePickerUI();
+});</pre>
+
+<h5 id="useful-functions">Useful Functions</h5>
+<p>Finally, we create two methods: <code>setPickerUI</code> and <code>updatePickerUI</code>. </p>
+<p><code>setPickerUI</code> will allow us to send an Object with <code>h</code>, <code>s</code> and <code>l</code> values to update the UI positions. </p>
+<p><code>updatePickerUI</code> will process the values for hue, saturation and luminance and update the color swatch. <code>updatePickerUI</code> will also call <code>updateOutput</code> that we will define next.</p>
+<pre class="code prettyprint">function setPickerUI(hsl) {
+    if (typeof hsl.h !== &#x27;undefined&#x27;) {
+        hue.set(&#x27;value&#x27;, +hsl.h);
+    }
+
+    if (typeof hsl.s !== &#x27;undefined&#x27;) {
+        sat.set(&#x27;value&#x27;, +hsl.s);
+    }
+
+    if (typeof hsl.l !== &#x27;undefined&#x27;) {
+        lum.set(&#x27;value&#x27;, +hsl.l);
+    }
+}
+
+function updatePickerUI() {
+    var h = hue.get(&#x27;value&#x27;),
+        s = sat.get(&#x27;value&#x27;),
+        l = lum.get(&#x27;value&#x27;),
+        hslString = Y.Color.fromArray([h, s, l], Y.Color.TYPES.HSL);
+
+    satValue.set(&#x27;text&#x27;, s + &#x27;%&#x27;);
+    lumValue.set(&#x27;text&#x27;, l + &#x27;%&#x27;);
+
+    color.setStyle(&#x27;backgroundColor&#x27;, hslString);
+
+    updateOutput(hslString);
+}</pre>
+
+
+
+<h4 id="building-the-pickers-output">Building The Picker's Output</h4>
+<h5 id="initializing-output-variables">Initializing Output Variables</h5>
+<pre class="code prettyprint">var hexOutput = Y.one(&#x27;#hex-output&#x27;),
+    rgbOutput = Y.one(&#x27;#rgb-output&#x27;),
+    hslOutput = Y.one(&#x27;#hsl-output&#x27;),
+    focused = null;</pre>
+
+
+<h5 id="binding-output-ui">Binding Output UI</h5>
+<pre class="code prettyprint">hexOutput.on(&#x27;focus&#x27;, setFocused);
+hexOutput.on(&#x27;blur&#x27;, unsetFocused);
+hexOutput.on(&#x27;valueChange&#x27;, updatePickerFromValue);
+
+rgbOutput.on(&#x27;focus&#x27;, setFocused);
+rgbOutput.on(&#x27;blur&#x27;, unsetFocused);
+rgbOutput.on(&#x27;valueChange&#x27;, updatePickerFromValue);
+
+hslOutput.on(&#x27;focus&#x27;, setFocused);
+hslOutput.on(&#x27;blur&#x27;, unsetFocused);
+hslOutput.on(&#x27;valueChange&#x27;, updatePickerFromValue);</pre>
+
+
+<h5 id="ouput-functions">Ouput Functions</h5>
+<pre class="code prettyprint">function updateOutput(hslString) {
+    if (hexOutput !== focused) {
+        hexOutput.set(&#x27;value&#x27;, Y.Color.toHex(hslString));
+    }
+    if (rgbOutput !== focused) {
+        rgbOutput.set(&#x27;value&#x27;, Y.Color.toRGB(hslString));
+    }
+    if (hslOutput !== focused) {
+        hslOutput.set(&#x27;value&#x27;, hslString);
+    }
+}
+
+function updatePickerFromValue(e) {
+    var val = e.newVal,
+        hsl = [];
+
+    if (Y.Color.toArray(val)) {
+        hsl = Y.Color.toArray(Y.Color.toHSL(val));
+        setPickerUI({
+            h: hsl[0],
+            s: hsl[1],
+            l: hsl[2]
+        });
+    }
+}
+
+function setFocused(e) {
+    focused = e.currentTarget;
+}
+
+function unsetFocused(e) {
+    if (focused === e.currentTarget) {
+        focused = null;
+    }
+}</pre>
+
+
+
+<h4 id="get-it-started">Get It Started</h4>
+<p>Our last step is to make sure we set the initial view of the UI when everything has loaded. We can do this by simply calling <code>updatePickerUI</code>.</p>
+<pre class="code prettyprint">updatePickerUI();</pre>
+
+</div>
+            </div>
+        </div>
+
+        <div class="yui3-u-1-4">
+            <div class="sidebar">
+                
+                    <div id="toc" class="sidebox">
+                        <div class="hd">
+                            <h2 class="no-toc">Table of Contents</h2>
+                        </div>
+
+                        <div class="bd">
+                            <ul class="toc">
+<li>
+<a href="#setting-up-the-hsl-picker-ui">Setting Up the HSL Picker UI</a>
+</li>
+<li>
+<a href="#setting-up-the-yui-instance">Setting Up the YUI Instance</a>
+<ul class="toc">
+<li>
+<a href="#building-the-color-picker">Building The Color Picker</a>
+<ul class="toc">
+<li>
+<a href="#initializing-ui-variables">Initializing UI Variables</a>
+</li>
+<li>
+<a href="#binding-events">Binding Events</a>
+</li>
+<li>
+<a href="#useful-functions">Useful Functions</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#building-the-pickers-output">Building The Picker's Output</a>
+<ul class="toc">
+<li>
+<a href="#initializing-output-variables">Initializing Output Variables</a>
+</li>
+<li>
+<a href="#binding-output-ui">Binding Output UI</a>
+</li>
+<li>
+<a href="#ouput-functions">Ouput Functions</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#get-it-started">Get It Started</a>
+</li>
+</ul>
+</li>
+</ul>
+                        </div>
+                    </div>
+                
+
+                
+                    <div class="sidebox">
+                        <div class="hd">
+                            <h2 class="no-toc">Examples</h2>
+                        </div>
+
+                        <div class="bd">
+                            <ul class="examples">
+                                
+                                    
+                                        <li data-description="Use three sliders to control RGB values and update Hex and HSL strings.">
+                                            <a href="rgb-slider.html">RGB Slider</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="Use the HSL color picker to select a new color. Then chose the color type you like best.">
+                                            <a href="hsl-picker.html">HSL Color Picker</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="Use the HSL color picker to create harmony colors.">
+                                            <a href="hsl-harmony.html">HSL Harmony</a>
+                                        </li>
+                                    
+                                
+                            </ul>
+                        </div>
+                    </div>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+
+<script>
+YUI.Env.Tests = {
+    examples: [],
+    project: '../assets',
+    assets: '../assets/color',
+    name: 'hsl-picker',
+    title: 'HSL Color Picker',
+    newWindow: '',
+    auto:  false 
+};
+YUI.Env.Tests.examples.push('rgb-slider');
+YUI.Env.Tests.examples.push('hsl-picker');
+YUI.Env.Tests.examples.push('hsl-harmony');
+
+</script>
+<script src="../assets/yui/test-runner.js"></script>
+
+
+
+</body>
+</html>

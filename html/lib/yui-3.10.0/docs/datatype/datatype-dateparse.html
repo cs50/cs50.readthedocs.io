@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Example: Y.Date.parse()</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+    <link rel="stylesheet" href="../../build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="../../build/yui/yui-min.js"></script>
+    
+</head>
+<body>
+<!--
+<a href="https://github.com/yui/yui3"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+-->
+<div id="doc">
+    <div id="hd">
+        <h1><img src="http://yuilibrary.com/img/yui-logo.png"></h1>
+    </div>
+    
+
+            <h1>Example: Y.Date.parse()</h1>
+    <div class="yui3-g">
+        <div class="yui3-u-3-4">
+            <div id="main">
+                <div class="content"><style scoped>
+/* custom styles for this example */
+#demo .output {margin-bottom:1em; padding:10px; border:1px solid #D9D9D9;}
+</style>
+
+<div class="intro">
+    <p>The Date module of the DataType Utility allows you to take a <code>String</code> or a <code>Number</code> (in milliseconds) value and convert it to <code>Date</code>. The <code>parse()</code> method will accept any <code>String</code> or <code>Number</code> value supported by <a href="https://developer.mozilla.org/en/Core_JavaScript_1.5_Reference/Global_Objects/Date">JavaScript's <code>Date()</code> constructor</a>.</p>
+</div>
+
+<div class="example yui3-skin-sam">
+    <form id="demo">
+    <fieldset>
+        <label for="demo_input">String to parse:</label>
+        <input type="text" id="demo_input" value="Jan 7, 2003">
+        <input type="button" id="demo_btn" value="Parse date">
+        <div id="demo_output" class="output">&nbsp;</div>
+    </fieldset>
+</form>
+
+
+
+<script>
+YUI().use("node", "datatype-date", function (Y) {
+    Y.on("click", function(e){
+        
+        var input = Y.one("#demo_input").get("value"),
+            output = Y.Date.parse(input);
+                
+        if(output === null) {
+            output = "null"
+        }
+        
+        Y.one("#demo_output").setHTML(output.toString());
+    }, "#demo_btn");
+});
+</script>
+
+</div>
+
+<p>To convert a data value to a date, simply call the <code>parse()</code> function of the Y.Date class:</p>
+
+<pre class="code prettyprint">YUI().use(&quot;datatype-date&quot;, function(Y) {
+    var date = Y.Date.parse(&quot;Jan 7, 2003&quot;);
+    &#x2F;&#x2F; date is a JavaScript Date object
+});</pre>
+
+
+<p>Under the hood, the data value is converted to a date via the <code>Date()</code> constructor:</p>
+
+<pre class="code prettyprint">YUI().use(&quot;datatype-date&quot;, function(Y) {
+    &#x2F;&#x2F; These all return dates
+    var date = Y.Date.parse(&quot;December 17, 1995 03:24:00&quot;);
+    date = Y.Date.parse(948548583);
+});</pre>
+
+</div>
+            </div>
+        </div>
+
+        <div class="yui3-u-1-4">
+            <div class="sidebar">
+                
+
+                
+                    <div class="sidebox">
+                        <div class="hd">
+                            <h2 class="no-toc">Examples</h2>
+                        </div>
+
+                        <div class="bd">
+                            <ul class="examples">
+                                
+                                    
+                                        <li data-description="Formatting dates into strings using pre-packaged language resource bundles.">
+                                            <a href="datatype-dateformat-lang.html">Formatting Dates Using Language Resource Bundles</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="Parsing data into dates.">
+                                            <a href="datatype-dateparse.html">Y.Date.parse()</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="Formatting numbers into strings.">
+                                            <a href="datatype-numberformat.html">Y.Number.format()</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="Parsing data into numbers.">
+                                            <a href="datatype-numberparse.html">Y.Number.parse()</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="Formatting XML documents into strings.">
+                                            <a href="datatype-xmlformat.html">Y.XML.format()</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="Parsing strings into XML documents.">
+                                            <a href="datatype-xmlparse.html">Y.XML.parse()</a>
+                                        </li>
+                                    
+                                
+                                    
+                                
+                            </ul>
+                        </div>
+                    </div>
+                
+
+                
+                    <div class="sidebox">
+                        <div class="hd">
+                            <h2 class="no-toc">Examples That Use This Component</h2>
+                        </div>
+
+                        <div class="bd">
+                            <ul class="examples">
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <li data-description="Using DataTable&#x27;s recordType attribute to create calculated, sortable columns.">
+                                            <a href="../datatable/datatable-recordtype.html">Sortable generated columns</a>
+                                        </li>
+                                    
+                                
+                            </ul>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+
+<script>
+YUI.Env.Tests = {
+    examples: [],
+    project: '../assets',
+    assets: '../assets/datatype',
+    name: 'datatype-dateparse',
+    title: 'Y.Date.parse()',
+    newWindow: '',
+    auto:  false 
+};
+YUI.Env.Tests.examples.push('datatype-dateformat-lang');
+YUI.Env.Tests.examples.push('datatype-dateparse');
+YUI.Env.Tests.examples.push('datatype-numberformat');
+YUI.Env.Tests.examples.push('datatype-numberparse');
+YUI.Env.Tests.examples.push('datatype-xmlformat');
+YUI.Env.Tests.examples.push('datatype-xmlparse');
+YUI.Env.Tests.examples.push('datatable-recordtype');
+
+</script>
+<script src="../assets/yui/test-runner.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Example: RGB Slider</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+    <link rel="stylesheet" href="../../build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="../../build/yui/yui-min.js"></script>
+    
+</head>
+<body>
+<!--
+<a href="https://github.com/yui/yui3"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+-->
+<div id="doc">
+    <div id="hd">
+        <h1><img src="http://yuilibrary.com/img/yui-logo.png"></h1>
+    </div>
+    
+        <a href="#toc" class="jump">Jump to Table of Contents</a>
+    
+
+            <h1>Example: RGB Slider</h1>
+    <div class="yui3-g">
+        <div class="yui3-u-3-4">
+            <div id="main">
+                <div class="content"><div class="intro">
+<p>Use three sliders to control RGB values and update Hex and HSL strings.</p>
+</div>
+
+<div id="demo" class="example">
+    <style>
+    .sliders {
+    display: inline-block;
+    zoom: 1; *display: inline;
+    width: 210px;
+    vertical-align: middle;
+    overflow: hidden;
+}
+.color {
+    display: inline-block;
+    zoom:1; *display: inline;
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+    margin: 0 20px;
+    vertical-align: middle;
+}
+.output {
+    display: inline-block;
+    zoom: 1; *display: inline;
+    vertical-align: middle;
+    overflow: hidden;
+}
+.sliders dt,
+.output dt {
+    float: left;
+    clear: left;
+    width: 50px;
+    height: 40px;
+    line-height: 40px;
+}
+.sliders dd,
+.output dd {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    margin: 0;
+}
+
+    </style>
+
+    <div class="sliders yui3-skin-sam">
+    <dl>
+        <dt>R: <span id="r-val" class="val"></span></dt><dd id="r-slider"></dd>
+        <dt>G: <span id="g-val" class="val"></span></dt><dd id="g-slider"></dd>
+        <dt>B: <span id="b-val" class="val"></span></dt><dd id="b-slider"></dd>
+    </dl>
+</div>
+<div class="color"></div>
+<div class="output">
+    <dl>
+        <dt>Hex:</dt><dd id="hex"></dd>
+        <dt>RGB:</dt><dd id="rgb"></dd>
+        <dt>HSL:</dt><dd id="hsl"></dd>
+    </dl>
+</div>
+
+    <script>
+    YUI().use('slider', 'color', function(Y){
+            // sliders
+    var rSlider = new Y.Slider({ min: 0, max: 255, value: Math.round(Math.random()*255) }),
+        gSlider = new Y.Slider({ min: 0, max: 255, value: Math.round(Math.random()*255) }),
+        bSlider = new Y.Slider({ min: 0, max: 255, value: Math.round(Math.random()*255) }),
+
+        // slider values
+        rVal = Y.one('#r-val'),
+        gVal = Y.one('#g-val'),
+        bVal = Y.one('#b-val'),
+
+        // color strings
+        hex = Y.one('#hex'),
+        rgb = Y.one('#rgb'),
+        hsl = Y.one('#hsl'),
+
+        // color chip
+        color = Y.one('.color');
+
+    // render sliders
+    rSlider.render('#r-slider');
+    gSlider.render('#g-slider');
+    bSlider.render('#b-slider');
+
+
+            // register update events
+    rSlider.after('thumbMove', function(e) {
+        rVal.set('text', rSlider.get('value'));
+        updateColors();
+    });
+    gSlider.after('thumbMove', function(e) {
+        gVal.set('text', gSlider.get('value'));
+        updateColors();
+    });
+    bSlider.after('thumbMove', function(e) {
+        bVal.set('text', bSlider.get('value'));
+        updateColors();
+    });
+
+    // update the colors strings
+    function updateColors() {
+        var r = rSlider.get('value'),
+            g = gSlider.get('value'),
+            b = bSlider.get('value'),
+            rgbStr = Y.Color.fromArray([r,g,b], Y.Color.TYPES.RGB);
+
+        color.setStyle('backgroundColor', rgbStr);
+
+        rgb.set('text', rgbStr);
+
+        hex.set('text', Y.Color.toHex(rgbStr));
+        hsl.set('text', Y.Color.toHSL(rgbStr));
+    }
+
+
+        
+    rVal.set('text', rSlider.get('value'));
+    gVal.set('text', gSlider.get('value'));
+    bVal.set('text', bSlider.get('value'));
+    updateColors();
+
+    });
+    </script>
+</div>
+
+<h3 id="setting-up-the-sliders">Setting Up the Sliders</h3>
+<p>First we need to construct the HTML for the UI. This will consist of three sliders and three output boxes.</p>
+
+<pre class="code prettyprint">&lt;div class=&quot;sliders yui3-skin-sam&quot;&gt;
+    &lt;dl&gt;
+        &lt;dt&gt;R: &lt;span id=&quot;r-val&quot; class=&quot;val&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;dt&gt;&lt;dd id=&quot;r-slider&quot;&gt;&lt;&#x2F;dd&gt;
+        &lt;dt&gt;G: &lt;span id=&quot;g-val&quot; class=&quot;val&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;dt&gt;&lt;dd id=&quot;g-slider&quot;&gt;&lt;&#x2F;dd&gt;
+        &lt;dt&gt;B: &lt;span id=&quot;b-val&quot; class=&quot;val&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;dt&gt;&lt;dd id=&quot;b-slider&quot;&gt;&lt;&#x2F;dd&gt;
+    &lt;&#x2F;dl&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;color&quot;&gt;&lt;&#x2F;div&gt;
+&lt;div class=&quot;output&quot;&gt;
+    &lt;dl&gt;
+        &lt;dt&gt;Hex:&lt;&#x2F;dt&gt;&lt;dd id=&quot;hex&quot;&gt;&lt;&#x2F;dd&gt;
+        &lt;dt&gt;RGB:&lt;&#x2F;dt&gt;&lt;dd id=&quot;rgb&quot;&gt;&lt;&#x2F;dd&gt;
+        &lt;dt&gt;HSL:&lt;&#x2F;dt&gt;&lt;dd id=&quot;hsl&quot;&gt;&lt;&#x2F;dd&gt;
+    &lt;&#x2F;dl&gt;
+&lt;&#x2F;div&gt;</pre>
+
+
+<p>Now we give the list some CSS to make it a little easier to use.</p>
+
+<pre class="code prettyprint">.sliders {
+    display: inline-block;
+    zoom: 1; *display: inline;
+    width: 210px;
+    vertical-align: middle;
+    overflow: hidden;
+}
+.color {
+    display: inline-block;
+    zoom:1; *display: inline;
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+    margin: 0 20px;
+    vertical-align: middle;
+}
+.output {
+    display: inline-block;
+    zoom: 1; *display: inline;
+    vertical-align: middle;
+    overflow: hidden;
+}
+.sliders dt,
+.output dt {
+    float: left;
+    clear: left;
+    width: 50px;
+    height: 40px;
+    line-height: 40px;
+}
+.sliders dd,
+.output dd {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    margin: 0;
+}</pre>
+
+
+<h3 id="setting-up-the-yui-instance">Setting Up the YUI Instance</h3>
+<p>Now we need to create our YUI instance and tell it to load the <code>color</code> and <code>slider</code> modules.</p>
+
+<pre class="code prettyprint">YUI().use(&#x27;slider&#x27;, &#x27;color&#x27;, function (Y) {
+    &#x2F;&#x2F; Code Here.
+});</pre>
+
+
+<h3 id="building-the-ui">Building the UI</h3>
+<p>The first bit of YUI we need to implement is creating our slider instances. We set the initial value of the sliders to a random position between <code>0</code> and <code>255</code>.</p>
+<p>We follow that up by assigning nodes to variables. This helps prevent multiple look ups of the same node as we move the sliders.</p>
+<p>Next we render our slider instances into their containers.</p>
+<pre class="code prettyprint">&#x2F;&#x2F; sliders
+var rSlider = new Y.Slider({ min: 0, max: 255, value: Math.round(Math.random()*255) }),
+    gSlider = new Y.Slider({ min: 0, max: 255, value: Math.round(Math.random()*255) }),
+    bSlider = new Y.Slider({ min: 0, max: 255, value: Math.round(Math.random()*255) }),
+
+    &#x2F;&#x2F; slider values
+    rVal = Y.one(&#x27;#r-val&#x27;),
+    gVal = Y.one(&#x27;#g-val&#x27;),
+    bVal = Y.one(&#x27;#b-val&#x27;),
+
+    &#x2F;&#x2F; color strings
+    hex = Y.one(&#x27;#hex&#x27;),
+    rgb = Y.one(&#x27;#rgb&#x27;),
+    hsl = Y.one(&#x27;#hsl&#x27;),
+
+    &#x2F;&#x2F; color chip
+    color = Y.one(&#x27;.color&#x27;);
+
+&#x2F;&#x2F; render sliders
+rSlider.render(&#x27;#r-slider&#x27;);
+gSlider.render(&#x27;#g-slider&#x27;);
+bSlider.render(&#x27;#b-slider&#x27;);</pre>
+
+
+<h3 id="binding-events">Binding Events</h3>
+<p>After we have our UI built and ready, we need to bind events to the <code>slider</code> instances for R, G, and B values.</p>
+<p>In each event callback we update the text value in the UI, then call <code>updateColors()</code> to update the color strings.</p>
+<p>In <code>updateColors()</code> we get to see the use of <code>Y.Color</code>. We create <code>rgbStr</code> from an array of color values. We can then create the hex and hsl value strings with <code>toHex()</code> and <code>toHSL()</code> respectively.</p>
+<pre class="code prettyprint">&#x2F;&#x2F; register update events
+rSlider.after(&#x27;thumbMove&#x27;, function(e) {
+    rVal.set(&#x27;text&#x27;, rSlider.get(&#x27;value&#x27;));
+    updateColors();
+});
+gSlider.after(&#x27;thumbMove&#x27;, function(e) {
+    gVal.set(&#x27;text&#x27;, gSlider.get(&#x27;value&#x27;));
+    updateColors();
+});
+bSlider.after(&#x27;thumbMove&#x27;, function(e) {
+    bVal.set(&#x27;text&#x27;, bSlider.get(&#x27;value&#x27;));
+    updateColors();
+});
+
+&#x2F;&#x2F; update the colors strings
+function updateColors() {
+    var r = rSlider.get(&#x27;value&#x27;),
+        g = gSlider.get(&#x27;value&#x27;),
+        b = bSlider.get(&#x27;value&#x27;),
+        rgbStr = Y.Color.fromArray([r,g,b], Y.Color.TYPES.RGB);
+
+    color.setStyle(&#x27;backgroundColor&#x27;, rgbStr);
+
+    rgb.set(&#x27;text&#x27;, rgbStr);
+
+    hex.set(&#x27;text&#x27;, Y.Color.toHex(rgbStr));
+    hsl.set(&#x27;text&#x27;, Y.Color.toHSL(rgbStr));
+}</pre>
+
+
+<h3 id="start-it-up">Start it up!</h3>
+<p>Now that we have our UI built and events bound, we need to do an initial update to the UI.</p>
+<p>First we display the each <code>slider</code>'s current value. Next we update the color strings with <code>updateColors()</code>.</p>
+<pre class="code prettyprint">rVal.set(&#x27;text&#x27;, rSlider.get(&#x27;value&#x27;));
+gVal.set(&#x27;text&#x27;, gSlider.get(&#x27;value&#x27;));
+bVal.set(&#x27;text&#x27;, bSlider.get(&#x27;value&#x27;));
+updateColors();</pre>
+
+
+
+<h3 id="the-whole-example">The Whole Example</h3>
+<p>Now let's see it all together!</p>
+<pre class="code prettyprint">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;style&gt;
+        .sliders {
+    display: inline-block;
+    zoom: 1; *display: inline;
+    width: 210px;
+    vertical-align: middle;
+    overflow: hidden;
+}
+.color {
+    display: inline-block;
+    zoom:1; *display: inline;
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+    margin: 0 20px;
+    vertical-align: middle;
+}
+.output {
+    display: inline-block;
+    zoom: 1; *display: inline;
+    vertical-align: middle;
+    overflow: hidden;
+}
+.sliders dt,
+.output dt {
+    float: left;
+    clear: left;
+    width: 50px;
+    height: 40px;
+    line-height: 40px;
+}
+.sliders dd,
+.output dd {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    margin: 0;
+}
+
+        &lt;&#x2F;style&gt;
+    &lt;&#x2F;head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;sliders yui3-skin-sam&quot;&gt;
+    &lt;dl&gt;
+        &lt;dt&gt;R: &lt;span id=&quot;r-val&quot; class=&quot;val&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;dt&gt;&lt;dd id=&quot;r-slider&quot;&gt;&lt;&#x2F;dd&gt;
+        &lt;dt&gt;G: &lt;span id=&quot;g-val&quot; class=&quot;val&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;dt&gt;&lt;dd id=&quot;g-slider&quot;&gt;&lt;&#x2F;dd&gt;
+        &lt;dt&gt;B: &lt;span id=&quot;b-val&quot; class=&quot;val&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;dt&gt;&lt;dd id=&quot;b-slider&quot;&gt;&lt;&#x2F;dd&gt;
+    &lt;&#x2F;dl&gt;
+&lt;&#x2F;div&gt;
+&lt;div class=&quot;color&quot;&gt;&lt;&#x2F;div&gt;
+&lt;div class=&quot;output&quot;&gt;
+    &lt;dl&gt;
+        &lt;dt&gt;Hex:&lt;&#x2F;dt&gt;&lt;dd id=&quot;hex&quot;&gt;&lt;&#x2F;dd&gt;
+        &lt;dt&gt;RGB:&lt;&#x2F;dt&gt;&lt;dd id=&quot;rgb&quot;&gt;&lt;&#x2F;dd&gt;
+        &lt;dt&gt;HSL:&lt;&#x2F;dt&gt;&lt;dd id=&quot;hsl&quot;&gt;&lt;&#x2F;dd&gt;
+    &lt;&#x2F;dl&gt;
+&lt;&#x2F;div&gt;
+        &lt;script&gt;
+            YUI().use(&#x27;slider&#x27;, &#x27;color&#x27;, function(Y){
+                &#x2F;&#x2F; sliders
+    var rSlider = new Y.Slider({ min: 0, max: 255, value: Math.round(Math.random()*255) }),
+        gSlider = new Y.Slider({ min: 0, max: 255, value: Math.round(Math.random()*255) }),
+        bSlider = new Y.Slider({ min: 0, max: 255, value: Math.round(Math.random()*255) }),
+
+        &#x2F;&#x2F; slider values
+        rVal = Y.one(&#x27;#r-val&#x27;),
+        gVal = Y.one(&#x27;#g-val&#x27;),
+        bVal = Y.one(&#x27;#b-val&#x27;),
+
+        &#x2F;&#x2F; color strings
+        hex = Y.one(&#x27;#hex&#x27;),
+        rgb = Y.one(&#x27;#rgb&#x27;),
+        hsl = Y.one(&#x27;#hsl&#x27;),
+
+        &#x2F;&#x2F; color chip
+        color = Y.one(&#x27;.color&#x27;);
+
+    &#x2F;&#x2F; render sliders
+    rSlider.render(&#x27;#r-slider&#x27;);
+    gSlider.render(&#x27;#g-slider&#x27;);
+    bSlider.render(&#x27;#b-slider&#x27;);
+
+
+                &#x2F;&#x2F; register update events
+    rSlider.after(&#x27;thumbMove&#x27;, function(e) {
+        rVal.set(&#x27;text&#x27;, rSlider.get(&#x27;value&#x27;));
+        updateColors();
+    });
+    gSlider.after(&#x27;thumbMove&#x27;, function(e) {
+        gVal.set(&#x27;text&#x27;, gSlider.get(&#x27;value&#x27;));
+        updateColors();
+    });
+    bSlider.after(&#x27;thumbMove&#x27;, function(e) {
+        bVal.set(&#x27;text&#x27;, bSlider.get(&#x27;value&#x27;));
+        updateColors();
+    });
+
+    &#x2F;&#x2F; update the colors strings
+    function updateColors() {
+        var r = rSlider.get(&#x27;value&#x27;),
+            g = gSlider.get(&#x27;value&#x27;),
+            b = bSlider.get(&#x27;value&#x27;),
+            rgbStr = Y.Color.fromArray([r,g,b], Y.Color.TYPES.RGB);
+
+        color.setStyle(&#x27;backgroundColor&#x27;, rgbStr);
+
+        rgb.set(&#x27;text&#x27;, rgbStr);
+
+        hex.set(&#x27;text&#x27;, Y.Color.toHex(rgbStr));
+        hsl.set(&#x27;text&#x27;, Y.Color.toHSL(rgbStr));
+    }
+
+
+            
+    rVal.set(&#x27;text&#x27;, rSlider.get(&#x27;value&#x27;));
+    gVal.set(&#x27;text&#x27;, gSlider.get(&#x27;value&#x27;));
+    bVal.set(&#x27;text&#x27;, bSlider.get(&#x27;value&#x27;));
+    updateColors();
+
+            });
+        &lt;&#x2F;script&gt;
+    &lt;&#x2F;body&gt;
+&lt;&#x2F;html&gt;</pre>
+
+</div>
+            </div>
+        </div>
+
+        <div class="yui3-u-1-4">
+            <div class="sidebar">
+                
+                    <div id="toc" class="sidebox">
+                        <div class="hd">
+                            <h2 class="no-toc">Table of Contents</h2>
+                        </div>
+
+                        <div class="bd">
+                            <ul class="toc">
+<li>
+<a href="#setting-up-the-sliders">Setting Up the Sliders</a>
+</li>
+<li>
+<a href="#setting-up-the-yui-instance">Setting Up the YUI Instance</a>
+</li>
+<li>
+<a href="#building-the-ui">Building the UI</a>
+</li>
+<li>
+<a href="#binding-events">Binding Events</a>
+</li>
+<li>
+<a href="#start-it-up">Start it up!</a>
+</li>
+<li>
+<a href="#the-whole-example">The Whole Example</a>
+</li>
+</ul>
+                        </div>
+                    </div>
+                
+
+                
+                    <div class="sidebox">
+                        <div class="hd">
+                            <h2 class="no-toc">Examples</h2>
+                        </div>
+
+                        <div class="bd">
+                            <ul class="examples">
+                                
+                                    
+                                        <li data-description="Use three sliders to control RGB values and update Hex and HSL strings.">
+                                            <a href="rgb-slider.html">RGB Slider</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="Use the HSL color picker to select a new color. Then chose the color type you like best.">
+                                            <a href="hsl-picker.html">HSL Color Picker</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="Use the HSL color picker to create harmony colors.">
+                                            <a href="hsl-harmony.html">HSL Harmony</a>
+                                        </li>
+                                    
+                                
+                            </ul>
+                        </div>
+                    </div>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+
+<script>
+YUI.Env.Tests = {
+    examples: [],
+    project: '../assets',
+    assets: '../assets/color',
+    name: 'rgb-slider',
+    title: 'RGB Slider',
+    newWindow: '',
+    auto:  false 
+};
+YUI.Env.Tests.examples.push('rgb-slider');
+YUI.Env.Tests.examples.push('hsl-picker');
+YUI.Env.Tests.examples.push('hsl-harmony');
+
+</script>
+<script src="../assets/yui/test-runner.js"></script>
+
+
+
+</body>
+</html>

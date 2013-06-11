@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Tree</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+    <link rel="stylesheet" href="../../build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="../../build/yui/yui-min.js"></script>
+    
+</head>
+<body>
+<!--
+<a href="https://github.com/yui/yui3"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+-->
+<div id="doc">
+    <div id="hd">
+        <h1><img src="http://yuilibrary.com/img/yui-logo.png"></h1>
+    </div>
+    
+        <a href="#toc" class="jump">Jump to Table of Contents</a>
+    
+
+            <h1>Tree</h1>
+    <div class="yui3-g">
+        <div class="yui3-u-3-4">
+            <div id="main">
+                <div class="content"><div class="intro">
+<p>
+The Tree component provides a generic tree data structure, which is good for efficiently representing hierarchical data.
+</p>
+
+<p>
+A tree has a root node, which may contain any number of child nodes, which may themselves contain child nodes, <i>ad infinitum</i>. Child nodes are lightweight function instances which delegate to the tree for all significant functionality, so trees remain performant and memory-efficient even when they contain thousands and thousands of nodes.
+</p>
+
+<p>
+The Tree component itself is purely a data structure and doesn't expose any UI, but it works well as a base class for a <a href="../view/index.html">View</a> or a <a href="../widget/index.html">Widget</a>.
+</p>
+</div>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>
+To include the source files for Tree and its dependencies, first load
+the YUI seed file if you haven't already loaded it.
+</p>
+
+<pre class="code prettyprint">&lt;script src=&quot;http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.10.0&#x2F;build&#x2F;yui&#x2F;yui-min.js&quot;&gt;&lt;&#x2F;script&gt;</pre>
+
+
+<p>
+Next, create a new YUI instance for your application and populate it with the
+modules you need by specifying them as arguments to the <code>YUI().use()</code> method.
+YUI will automatically load any dependencies required by the modules you
+specify.
+</p>
+
+<pre class="code prettyprint">&lt;script&gt;
+&#x2F;&#x2F; Create a new YUI instance and populate it with the required modules.
+YUI().use(&#x27;tree&#x27;, function (Y) {
+    &#x2F;&#x2F; Tree is available and ready for use. Add implementation
+    &#x2F;&#x2F; code here.
+});
+&lt;&#x2F;script&gt;</pre>
+
+
+<p>
+For more information on creating YUI instances and on the
+<a href="http://yuilibrary.com/yui/docs/api/classes/YUI.html#method_use"><code>use()</code> method</a>, see the
+documentation for the <a href="../yui/index.html">YUI Global Object</a>.
+</p>
+
+
+<h2 id="using-tree">Using Tree</h2>
+
+<h3 id="creating-a-tree">Creating a Tree</h3>
+
+<p>
+Create an empty Tree by instantiating <code>Y.Tree</code> without any options.
+</p>
+
+<pre class="code prettyprint lang-js">&#x2F;&#x2F; Create a new empty Tree.
+var tree = new Y.Tree();</pre>
+
+
+<p>
+Trees always have a single root node, so an "empty" tree is really just a tree without any child nodes.
+</p>
+
+<p>
+To populate a tree with an initial set of nodes at instantiation time, pass an array of node configuration objects to Tree's constructor.
+</p>
+
+<pre class="code prettyprint lang-js">&#x2F;&#x2F; Create a new tree with some child nodes.
+var tree = new Y.Tree({
+    nodes: [
+        {id: &#x27;node 1&#x27;},
+        {id: &#x27;node 2&#x27;, children: [
+            {id: &#x27;node 2.1&#x27;},
+            {id: &#x27;node 2.2&#x27;}
+        ]},
+        {id: &#x27;node 3&#x27;}
+    ]
+});</pre>
+
+
+<p>
+This creates a tree structure that looks like this:
+</p>
+
+<pre>
+        root node
+       /    |    \
+  node 1  node 2  node 3
+           /  \
+    node 2.1  node 2.2
+</pre>
+
+<p>
+The <code>id</code> property of node objects is optional. If not specified, a unique node id will be generated automatically.
+</p>
+
+<pre class="code prettyprint lang-js">&#x2F;&#x2F; Use empty objects to create child nodes with auto-generated ids.
+var tree = new Y.Tree({
+    nodes: [{}, {children: [{}, {}]}, {}]
+});</pre>
+
+
+<p>
+If you do choose to provide custom node ids, be sure that they're unique. No two nodes in a tree may share the same id.
+</p>
+
+<h3 id="tree-properties">Tree Properties</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td><code>children</code></td>
+            <td>Array</td>
+            <td>
+                Reference to the <code>children</code> property of the Tree's <code>rootNode</code>. This is a convenience property to allow you to type <code>tree.children</code> instead of <code>tree.rootNode.children</code>.
+            </td>
+        </tr>
+
+        <tr>
+            <td><code>nodeClass</code></td>
+            <td>String / Tree.Node</td>
+            <td>
+                The <code>Y.Tree.Node</code> class or subclass that should be used for nodes created by the tree. You may specify an actual class reference or a string that resolves to a class reference at runtime. By default this is a reference to <code>Y.Tree.Node</code>.
+            </td>
+        </tr>
+
+        <tr>
+            <td><code>nodeExtensions</code></td>
+            <td>Array</td>
+            <td>
+                <p>
+                Optional array containing one or more extension classes that should be mixed into the <code>nodeClass</code> when the Tree is instantiated. The resulting composed node class will be unique to the Tree instance and will not affect any other instances, nor will it modify the defined <code>nodeClass</code> itself.
+                </p>
+
+                <p>
+                This provides a late-binding extension mechanism for nodes that doesn't require them to extend <code>Y.Base</code>, which would incur a significant performance hit.
+                </p>
+            </td>
+        </tr>
+
+        <tr>
+            <td><code>rootNode</code></td>
+            <td>Tree.Node</td>
+            <td>
+                The root node of the tree.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="working-with-tree-nodes">Working with Tree Nodes</h3>
+
+<h4 id="tree-node-properties">Tree Node Properties</h4>
+
+<p>Tree nodes use properties exclusively rather than using attributes as many YUI classes do. This ensures that <code>Y.Tree.Node</code> instances are lightweight and extremely fast to create. Using attributes would require extending <a href="../attribute/index.html"><code>Y.Attribute</code></a>, which incurs significant instantiation and memory cost.</p>
+
+<p>All nodes have the following built-in properties:</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>canHaveChildren</td>
+            <td>Boolean</td>
+            <td>
+                <p>Whether or not the node can contain child nodes.</p>
+
+                <p>This value is falsy by default unless child nodes are added at instantiation time, in which case it will be automatically set to <code>true</code>. You can also manually set it to <code>true</code> to indicate that a node <i>can</i> have children even though it might not currently have any children.</p>
+
+                <p>Note that regardless of the value of this property, appending, prepending, or inserting a node into this node will cause <code>canHaveChildren</code> to be set to true automatically.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>children</td>
+            <td>Array</td>
+            <td>
+                Child nodes contained within this node.
+            </td>
+        </tr>
+
+        <tr>
+            <td>data</td>
+            <td>Object</td>
+            <td>
+                Arbitrary serializable data related to the node. Use this property to store any data that should accompany a node when that node is serialized to JSON.
+            </td>
+        </tr>
+
+        <tr>
+            <td>id</td>
+            <td>String</td>
+            <td>
+                Unique id for the node. If you don't specify a custom id when creating a node, one will be generated automatically.
+            </td>
+        </tr>
+
+        <tr>
+            <td>parent</td>
+            <td>Tree.Node</td>
+            <td>
+                Parent node of the node, or <code>undefined</code> for an unattached node or the root node.
+            </td>
+        </tr>
+
+        <tr>
+            <td>state</td>
+            <td>Object</td>
+            <td>
+                Arbitrary serializable state information related to the node. Use this property to store state-specific info &mdash; such as whether a node is "open", "selected", or any other arbitrary state &mdash; that should accompany a node when that node is serialized to JSON.
+            </td>
+        </tr>
+
+        <tr>
+            <td>tree</td>
+            <td>Tree</td>
+            <td>
+                Reference to the Tree instance with which the node is associated.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<p>When creating a node, any properties you specify in the node's config object will be applied to the created <code>Y.Tree.Node</code> instance. These can be built-in <code>Y.Tree.Node</code> properties or arbitrary properties for your own use.</p>
+
+<pre class="code prettyprint lang-js">&#x2F;&#x2F; Create a tree with some nodes containing arbitrary properties.
+var tree = new Y.Tree({
+    nodes: [
+        {foo: &#x27;bar&#x27;},
+        {baz: &#x27;quux&#x27;}
+    ]
+});
+
+console.log(tree.children[0].foo); &#x2F;&#x2F; =&gt; &#x27;bar&#x27;
+console.log(tree.children[1].baz); &#x2F;&#x2F; =&gt; &#x27;quux&#x27;</pre>
+
+
+<p>Note that arbitrary properties placed on the node itself won't be serialized if you call the node's <a href="http://yuilibrary.com/yui/docs/api/classes/Tree.Node.html#method_toJSON"><code>toJSON()</code></a> method or pass it to <code>JSON.stringify()</code>. If you want to store serializable data on a node, store it in the node's <code>data</code> property.</p>
+
+<h4 id="creating-unattached-nodes">Creating Unattached Nodes</h4>
+
+<p>An unattached node is a node that has been created, but hasn't yet been added to a tree. Unattached nodes can be created using a tree's <code>createNode()</code> method.</p>
+
+<pre class="code prettyprint lang-js">&#x2F;&#x2F; Create an unattached node.
+var node = tree.createNode();</pre>
+
+
+<p>A node created using <code>createNode()</code> is associated with the tree that created it, so the node's <code>tree</code> property is a reference to that tree, but since it isn't yet a child of a node in that tree, its <code>parent</code> property will be <code>undefined</code>.</p>
+
+<pre class="code prettyprint lang-js">console.log(node.tree);   &#x2F;&#x2F; =&gt; the Y.Tree instance that created the node
+console.log(node.parent); &#x2F;&#x2F; =&gt; undefined</pre>
+
+
+<p>An unattached node may have children. Children of an unattached node have a <code>parent</code>, but are still considered unattached because the top-most parent node is not the <code>rootNode</code> of a tree.</p>
+
+<pre class="code prettyprint lang-js">&#x2F;&#x2F; Create an unattached node with children.
+var node = tree.createNode({
+    children: [
+        {id: &#x27;unattached child 1&#x27;},
+        {id: &#x27;unattached child 2&#x27;},
+        {id: &#x27;unattached child 3&#x27;}
+    ]
+});</pre>
+
+
+<p>To test whether a node is attached, call the node's <code>isInTree()</code> method.</p>
+
+<pre class="code prettyprint lang-js">var node = tree.createNode();
+console.log(node.isInTree()); &#x2F;&#x2F; =&gt; false
+
+tree.rootNode.append(node);
+console.log(node.isInTree()); &#x2F;&#x2F; =&gt; true</pre>
+
+
+<p>An unattached node that was created in one tree can be moved to another tree by passing it to the second tree's <code>createNode()</code> method. The node and all its children will lose their association to the original tree and become associated with the second tree, but will remain unattached.</p>
+
+<pre class="code prettyprint lang-js">&#x2F;&#x2F; Create two trees.
+var treeA = new Y.Tree(),
+    treeB = new Y.Tree();
+
+&#x2F;&#x2F; Create an unattached node in Tree A.
+var node = treeA.createNode();
+console.log(node.tree); &#x2F;&#x2F; =&gt; treeA
+
+&#x2F;&#x2F; Move the node to Tree B.
+treeB.createNode(node);
+console.log(node.tree); &#x2F;&#x2F; =&gt; treeB</pre>
+
+
+<h4 id="adding-nodes-to-a-tree">Adding Nodes To a Tree</h4>
+
+<p>Use <code>Y.Tree.Node</code>'s <a href="http://yuilibrary.com/yui/docs/api/classes/Tree.Node.html#method_append"><code>append()</code></a>, <a href="http://yuilibrary.com/yui/docs/api/classes/Tree.Node.html#method_insert"><code>insert()</code></a>, and <a href="http://yuilibrary.com/yui/docs/api/classes/Tree.Node.html#method_prepend"><code>prepend()</code></a> methods to add nodes to other nodes as children. Each method accepts a <code>Y.Tree.Node</code> instance, a node config object, or an array of Node instances or config objects.</p>
+
+<p>After adding the node, each method returns the node that was added.</p>
+
+<pre class="code prettyprint lang-js">var tree   = new Y.Tree(),
+    parent = tree.rootNode;
+
+&#x2F;&#x2F; Append a node (it becomes the parent&#x27;s last child).
+parent.append({id: &#x27;appended&#x27;});
+
+&#x2F;&#x2F; Prepend a node (it becomes the parent&#x27;s first child).
+parent.prepend({id: &#x27;prepended&#x27;});
+
+&#x2F;&#x2F; Insert a node at a specific zero-based index.
+parent.insert({id: &#x27;inserted&#x27;}, {index: 1});</pre>
+
+
+<p>You may also pass a <code>Y.Tree.Node</code> instance instead of a config object.</p>
+
+<pre class="code prettyprint lang-js">&#x2F;&#x2F; Append a previously created Tree.Node instance.
+var node = tree.createNode();
+parent.append(node);</pre>
+
+
+<p>To add multiple nodes at once, pass an array of nodes or config objects.</p>
+
+<pre class="code prettyprint lang-js">&#x2F;&#x2F; Append multiple nodes at once.
+parent.append([
+    {id: &#x27;zero&#x27;},
+    {id: &#x27;one&#x27;},
+    {id: &#x27;two&#x27;}
+]);</pre>
+
+
+<p>
+If you add an existing node that's already a child of another node, the node will be removed from its current parent and moved under the new parent. Similarly, if you add a node that's associated with another tree, the node will be removed from that tree and associated with the new tree.
+</p>
+
+<h4 id="getting-nodes-from-a-tree">Getting Nodes From a Tree</h4>
+
+<p>Use <code>Y.Tree</code>'s <a href="http://yuilibrary.com/yui/docs/api/classes/Tree.html#method_getNodeById"><code>getNodeById()</code></a> method to look up any node in the tree (including <a href="#creating-unattached-nodes">unattached nodes</a>) by its <code>id</code>.</p>
+
+<pre class="code prettyprint lang-js">tree.rootNode.append({id: &#x27;foo&#x27;});
+
+&#x2F;&#x2F; Look up a node by its id.
+var node = tree.getNodeById(&#x27;foo&#x27;); &#x2F;&#x2F; returns the previously added node</pre>
+
+
+<p>Use <code>Y.Tree.Node</code>'s <a href="http://yuilibrary.com/yui/docs/api/classes/Tree.Node.html#method_next"><code>next()</code></a> and <a href="http://yuilibrary.com/yui/docs/api/classes/Tree.Node.html#method_previous"><code>previous()</code></a> methods to get the next and previous siblings of a node, respectively.</p>
+
+<pre class="code prettyprint lang-js">tree.rootNode.append([
+    {id: &#x27;zero&#x27;},
+    {id: &#x27;one&#x27;},
+    {id: &#x27;two&#x27;}
+]);
+
+&#x2F;&#x2F; Get the next&#x2F;previous siblings of a node.
+tree.children[1].next();     &#x2F;&#x2F; =&gt; node &#x27;two&#x27;
+tree.children[1].previous(); &#x2F;&#x2F; =&gt; node &#x27;one&#x27;</pre>
+
+
+<p>If you know the numerical index of a node, you can retrieve it directly from the parent's <code>children</code> array.</p>
+
+<pre class="code prettyprint lang-js">&#x2F;&#x2F; Look up a child node by numerical index.
+parent.children[0]; &#x2F;&#x2F; returns the first child of &#x60;parent&#x60;</pre>
+
+
+<h4 id="removing-nodes-from-a-tree">Removing Nodes From a Tree</h4>
+
+<p>Use <code>Y.Tree.Node</code>'s <a href="http://yuilibrary.com/yui/docs/api/classes/Tree.Node.html#method_empty"><code>empty()</code></a> and <a href="http://yuilibrary.com/yui/docs/api/classes/Tree.Node.html#method_remove"><code>remove()</code></a> methods to remove nodes from a tree.</p>
+
+<pre class="code prettyprint lang-js">&#x2F;&#x2F; Remove all of this node&#x27;s children.
+node.empty(); &#x2F;&#x2F; returns an array of removed child nodes
+
+&#x2F;&#x2F; Remove this node (and its children, if any) from its parent node.
+node.remove(); &#x2F;&#x2F; chainable</pre>
+
+
+<p>Removing a node causes it to become <a href="#creating-unattached-nodes">unattached</a>, but doesn't destroy it entirely. A removed node can still be re-added to the tree later.</p>
+
+<p>To both remove a node and ensure that it can't be reused (freeing up memory in the process), set the <code>destroy</code> option to <code>true</code> when calling <code>empty()</code> or <code>remove()</code>.</p>
+
+<pre class="code prettyprint lang-js">&#x2F;&#x2F; Remove and destroy all of this node&#x27;s children.
+node.empty({destroy: true});
+
+&#x2F;&#x2F; Remove and destroy this node and all of its children.
+node.remove({destroy: true});</pre>
+
+
+<p>Use <code>Y.Tree</code>'s <a href="http://yuilibrary.com/yui/docs/api/classes/Tree.html#method_clear"><code>clear()</code></a> method to completely clear a tree by destroying all its nodes (including the root node) and then creating a new root node.</p>
+
+<pre class="code prettyprint lang-js">&#x2F;&#x2F; Remove and destroy all the tree&#x27;s nodes, including the root node.
+tree.clear();</pre>
+
+
+<p>Note that while it's possible to manually remove a tree's root node by calling its <code>remove()</code> method, this will just cause another root node to be created automatically, since a tree must always have a root node.</p>
+
+<h3 id="tree-events">Tree Events</h3>
+
+<p><code>Y.Tree</code> instances expose the following events:</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Event</th>
+            <th>When</th>
+            <th>Payload</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td><code>add</code></td>
+            <td>A node is added to the tree.</td>
+            <td>
+                <dl>
+                    <dt>index (<em>Number</em>)</dt>
+                    <dd>Index at which the node will be added.</dd>
+
+                    <dt>node (<em>Tree.Node</em>)</dt>
+                    <dd>Node being added.</dd>
+
+                    <dt>parent (<em>Tree.Node</em>)</dt>
+                    <dd>Parent node to which the node will be added.</dd>
+
+                    <dt>src (<em>String</em>)</dt>
+                    <dd>Source of the event ("append", "prepend", "insert", etc.)</dd>
+                </dl>
+            </td>
+        </tr>
+
+        <tr>
+            <td><code>clear</code></td>
+            <td>The tree is cleared.</td>
+            <td>
+                <dl>
+                    <dt>rootNode (<em>Tree.Node</em>)</dt>
+                    <dd>The tree's new root node.</dd>
+                </dl>
+            </td>
+        </tr>
+
+        <tr>
+            <td><code>remove</code></td>
+            <td>A node is removed from the tree.</td>
+            <td>
+                <dl>
+                    <dt>destroy (<em>Boolean</em>)</dt>
+                    <dd>Whether or not the node will be destroyed after being removed.</dd>
+
+                    <dt>node (<em>Tree.Node</em>)</dt>
+                    <dd>Node being removed.</dd>
+
+                    <dt>parent (<em>Tree.Node</em>)</dt>
+                    <dd>Parent node from which the node will be removed.</dd>
+                </dl>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<p>All events exposed by <code>Y.Tree</code> are preventable, which means that the "on" phase of the event occurs before the event's default action takes place. You can prevent the default action from taking place by calling the <code>preventDefault()</code> method on the event fa&ccedil;ade.</p>
+
+<p>If you're only interested in being notified of an event after its default action has occurred, subscribe to the event's "after" phase.</p>
+
+<h2 id="plugins-extensions">Plugins &amp; Extensions</h2>
+
+<p>While the base functionality of Tree is kept intentionally simple and generic, extensions and plugins can be used to provide additional features. This makes it easy to adapt the Tree component to a variety of use cases.</p>
+
+<p>Each extension is described here individually, but a custom Tree class can mix in multiple extensions to compose a class with the perfect set of features to meet your needs.</p>
+
+<h3 id="labelable-extension">Labelable Extension</h3>
+
+<p>The Labelable extension adds support for a serializable <code>label</code> property on <code>Y.Tree.Node</code> instances. This can be useful when a tree is the backing data structure for a widget with labeled nodes, such as a treeview or menu.</p>
+
+<p>To use the Labelable extension, include the <a href="http://yuilibrary.com/yui/docs/api/modules/tree-labelable.html"><code>tree-labelable</code></a> module, then create a class that extends <code>Y.Tree</code> and mixes in <code>Y.Tree.Labelable</code>.</p>
+
+<pre class="code prettyprint lang-js">&#x2F;&#x2F; Load the tree-labelable module.
+YUI().use(&#x27;tree-labelable&#x27;, function (Y) {
+    &#x2F;&#x2F; Create a custom Tree class that mixes in the Labelable extension.
+    Y.PieTree = Y.Base.create(&#x27;pieTree&#x27;, Y.Tree, [Y.Tree.Labelable]);
+
+    &#x2F;&#x2F; ... additional implementation code here ...
+});</pre>
+
+
+<p>Tree nodes created by this custom class can now take advantage of the <code>label</code> property.</p>
+
+<pre class="code prettyprint lang-js">&#x2F;&#x2F; Create a new tree with some labeled nodes.
+var tree = new Y.PieTree({
+    nodes: [
+        {label: &#x27;fruit pies&#x27;, children: [
+            {label: &#x27;apple&#x27;},
+            {label: &#x27;peach&#x27;},
+            {label: &#x27;marionberry&#x27;}
+        ]},
+
+        {label: &#x27;custard pies&#x27;, children: [
+            {label: &#x27;maple custard&#x27;},
+            {label: &#x27;pumpkin&#x27;}
+        ]}
+    ]
+});</pre>
+
+
+<h3 id="openable-extension">Openable Extension</h3>
+
+<p>The Openable extension adds the concept of an "open" and "closed" state for tree nodes, along with related methods and events.</p>
+
+<p>To use the Openable extension, include the <a href="http://yuilibrary.com/yui/docs/api/modules/tree-openable.html"><code>tree-openable</code></a> module, then create a class that extends <code>Y.Tree</code> and mixes in <a href="http://yuilibrary.com/yui/docs/api/classes/Tree.Openable.html"><code>Y.Tree.Openable</code></a>.</p>
+
+<pre class="code prettyprint lang-js">&#x2F;&#x2F; Load the tree-openable module.
+YUI().use(&#x27;tree-openable&#x27;, function (Y) {
+    &#x2F;&#x2F; Create a custom Tree class that mixes in the Openable extension.
+    Y.MenuTree = Y.Base.create(&#x27;menuTree&#x27;, Y.Tree, [Y.Tree.Openable]);
+
+    &#x2F;&#x2F; ... additional implementation code here ...
+});</pre>
+
+
+<p>Tree nodes created by this custom class are now considered closed by default, but can be opened either by setting the <code>state.open</code> property to <code>true</code> at creation time or by calling the node's <a href="http://yuilibrary.com/yui/docs/api/classes/Tree.Node.Openable.html#method_open"><code>open()</code></a> method.</p>
+
+<pre class="code prettyprint lang-js">&#x2F;&#x2F; Create a new tree with some openable nodes.
+var tree = new Y.MenuTree({
+    nodes: [
+        {id: &#x27;file&#x27;, children: [
+            {id: &#x27;new&#x27;},
+            {id: &#x27;open&#x27;},
+            {id: &#x27;save&#x27;}
+        ]},
+
+        {id: &#x27;edit&#x27;, state: {open: true}, children: [
+            {id: &#x27;copy&#x27;},
+            {id: &#x27;cut&#x27;},
+            {id: &#x27;paste&#x27;}
+        ]}
+    ]
+});
+
+&#x2F;&#x2F; Close the &quot;edit&quot; node.
+tree.getNodeById(&#x27;edit&#x27;).close();
+
+&#x2F;&#x2F; Open the &quot;file&quot; node.
+tree.getNodeById(&#x27;file&#x27;).open();</pre>
+
+
+<p>Tree instances that mix in the Openable extension receive two new events: <a href="http://yuilibrary.com/yui/docs/api/classes/Tree.Openable.html#event_open"><code>open</code></a> and <a href="http://yuilibrary.com/yui/docs/api/classes/Tree.Openable.html#event_close"><code>close</code></a>. These events fire when a node is opened or closed, respectively.</p>
+
+<p>See the <a href="http://yuilibrary.com/yui/docs/api/modules/tree-openable.html">API docs</a> for more details on the methods and events added by the Openable extension.</p>
+
+<h4 id="lazy-tree-plugin">Lazy Tree Plugin</h4>
+
+<p>The Lazy Tree plugin is a companion for the Openable extension that makes it easy to load and populate a node's children on demand the first time that node is opened. This can help improve performance in very large trees by avoiding populating the children of closed nodes until they're needed.</p>
+
+<p>To use the Lazy Tree plugin, include the <a href="http://yuilibrary.com/yui/docs/api/modules/tree-lazy.html"><code>tree-lazy</code></a> and <a href="http://yuilibrary.com/yui/docs/api/modules/tree-openable.html"><code>tree-openable</code></a> modules and create a custom tree class that mixes in the <a href="#openable-extension">Openable extension</a>, as described above.</p>
+
+<pre class="code prettyprint lang-js">&#x2F;&#x2F; Load the tree-lazy and tree-openable modules. In this example we&#x27;ll also
+&#x2F;&#x2F; load the jsonp module to demonstrate how to load node data via JSONP.
+YUI().use(&#x27;jsonp&#x27;, &#x27;tree-lazy&#x27;, &#x27;tree-openable&#x27;, function (Y) {
+    &#x2F;&#x2F; Create a custom Tree class that mixes in the Openable extension.
+    Y.LazyTree = Y.Base.create(&#x27;lazyTree&#x27;, Y.Tree, [Y.Tree.Openable]);
+
+    &#x2F;&#x2F; ... additional implementation code here ...
+});</pre>
+
+
+<p>Next, create an instance of your tree class, and plug <a href="http://yuilibrary.com/yui/docs/api/classes/Plugin.Tree.Lazy.html"><code>Y.Plugin.Tree.Lazy</code></a> into it. Provide a custom <code>load()</code> function that will be called the first time a node is opened. This callback is responsible for populating the node with children if necessary.</p>
+
+<pre class="code prettyprint lang-js">&#x2F;&#x2F; Create a new tree instance.
+var tree = new Y.LazyTree();
+
+&#x2F;&#x2F; Plug in the Lazy Tree plugin and provide a load() callback that will
+&#x2F;&#x2F; populate child nodes on demand.
+tree.plug(Y.Plugin.Tree.Lazy, {
+
+    &#x2F;&#x2F; Custom function that Y.Plugin.Tree.Lazy will call when it needs to
+    &#x2F;&#x2F; load the children for a node.
+    load: function (node, callback) {
+        &#x2F;&#x2F; Request child nodes via JSONP.
+        Y.jsonp(&#x27;http:&#x2F;&#x2F;example.com&#x2F;data?callback={callback}&#x27;, function (data) {
+            &#x2F;&#x2F; If we didn&#x27;t get any data back, treat this as an error.
+            if (!data) {
+                callback(new Error(&#x27;No data!&#x27;));
+                return;
+            }
+
+            &#x2F;&#x2F; Append the loaded children to the node (for the sake of this
+            &#x2F;&#x2F; example, assume that data.children is an array of node config
+            &#x2F;&#x2F; objects).
+            node.append(data.children);
+
+            &#x2F;&#x2F; Call the callback function to tell Y.Plugin.Tree.Lazy that
+            &#x2F;&#x2F; we&#x27;re done loading data.
+            callback();
+        });
+    },
+
+    &#x2F;&#x2F; Handle events.
+    on: {
+        &#x2F;&#x2F; Called before the load() function is executed for a node.
+        beforeLoad: function () { &#x2F;* ... *&#x2F; },
+
+        &#x2F;&#x2F; Called if the load() method passes an error to its callback.
+        error: function () { &#x2F;* ... *&#x2F; },
+
+        &#x2F;&#x2F; Called when the load() method executes its callback without an
+        &#x2F;&#x2F; error.
+        load: function () { &#x2F;* ... *&#x2F; }
+    }
+
+});</pre>
+
+
+<p>The first time any node with a truthy <code>canHaveChildren</code> property is opened, the Lazy Tree plugin will fire a <a href="http://yuilibrary.com/yui/docs/api/classes/Plugin.Tree.Lazy.html#event_beforeLoad"><code>beforeLoad</code></a> event and then call your custom <code>load()</code> function, passing in the node being opened and a callback that you should call once you've finished populating the node with children.</p>
+
+<p>How you load your node data is entirely up to you. You could use JSONP, XHR, pull it out of localStorage, or use any number of other techniques. All the Lazy Tree plugin cares about is that you populate the node and call the provided callback when you're done.</p>
+
+<p>If you pass an error to the callback, the plugin will fire an <a href="http://yuilibrary.com/yui/docs/api/classes/Plugin.Tree.Lazy.html#event_error"><code>error</code></a> event.</p>
+
+<p>If you call the callback without an error, the plugin will fire a <a href="http://yuilibrary.com/yui/docs/api/classes/Plugin.Tree.Lazy.html#event_load"><code>load</code></a> event to indicate that the node's children were loaded successfully.</p>
+
+<h3 id="selectable-extension">Selectable Extension</h3>
+
+<p>The Selectable extension adds the concept of a "selected" state for tree nodes, along with related methods, events, and tree attributes.</p>
+
+<p>To use the Selectable extension, include the <a href="http://yuilibrary.com/yui/docs/api/modules/tree-selectable.html"><code>tree-selectable</code></a> module, then create a class that extends <code>Y.Tree</code> and mixes in <a href="http://yuilibrary.com/yui/docs/api/classes/Tree.Selectable.html"><code>Y.Tree.Selectable</code></a>.</p>
+
+<pre class="code prettyprint lang-js">&#x2F;&#x2F; Load the tree-selectable module.
+YUI().use(&#x27;tree-selectable&#x27;, function (Y) {
+    &#x2F;&#x2F; Create a custom Tree class that mixes in the Selectable extension.
+    Y.OptionTree = Y.Base.create(&#x27;optionTree&#x27;, Y.Tree, [Y.Tree.Selectable]);
+
+    &#x2F;&#x2F; ... additional implementation code here ...
+});</pre>
+
+
+<p>Tree nodes created by this custom class are now considered unselected by default, but can be selected either by setting the <code>state.selected</code> property to <code>true</code> at creation time or by calling the node's <a href="http://yuilibrary.com/yui/docs/api/classes/Tree.Node.Selectable.html#method_select"><code>select()</code></a> method.</p>
+
+
+<pre class="code prettyprint lang-js">&#x2F;&#x2F; Create a new tree with selectable nodes.
+var tree = new Y.OptionTree({
+    nodes: [
+        {id: &#x27;kittens&#x27;, children: [
+            {id: &#x27;chartreux&#x27;, state: {selected: true}},
+            {id: &#x27;maine coon&#x27;},
+            {id: &#x27;british shorthair&#x27;}
+        ]},
+
+        {id: &#x27;puppies&#x27;, children: [
+            {id: &#x27;pug&#x27;},
+            {id: &#x27;dachshund&#x27;},
+            {id: &#x27;miniature schnauzer&#x27;}
+        ]}
+    ]
+});
+
+&#x2F;&#x2F; Select a puppy.
+tree.getNodeById(&#x27;pug&#x27;).select();</pre>
+
+
+<p>By default, only one node in the tree may be selected at a time. Selecting a node when another node is already selected will cause the original node to be unselected. To allow multiple selection, set the tree's <a href="http://yuilibrary.com/yui/docs/api/classes/Tree.Selectable.html#attr_multiSelect"><code>multiSelect</code></a> attribute to <code>true</code>.</p>
+
+<p>When a node is selected, the Selectable extension fires a <a href="http://yuilibrary.com/yui/docs/api/classes/Tree.Selectable.html#event_select"><code>select</code></a> event. When a node is unselected, it fires an <a href="http://yuilibrary.com/yui/docs/api/classes/Tree.Selectable.html#event_unselect"><code>unselect</code></a> event.</p>
+
+<p>See the <a href="http://yuilibrary.com/yui/docs/api/modules/tree-selectable.html">API docs</a> for more details.</p>
+
+<h3 id="sortable-extension">Sortable Extension</h3>
+
+<p>The Sortable extension makes it possible to sort the children of any node using custom sorting logic, and also ensures that inserted nodes are added at the appropriate index to maintain the current sort order.</p>
+
+<p>To use the Sortable extension, include the <a href="http://yuilibrary.com/yui/docs/api/modules/tree-sortable.html"><code>tree-sortable</code></a> module, then create a class that extends <code>Y.Tree</code> and mixes in <a href="http://yuilibrary.com/yui/docs/api/classes/Tree.Sortable.html"><code>Y.Tree.Sortable</code></a>.</p>
+
+<pre class="code prettyprint lang-js">&#x2F;&#x2F; Load the tree-sortable module.
+YUI().use(&#x27;tree-sortable&#x27;, function (Y) {
+    &#x2F;&#x2F; Create a custom Tree class that mixes in the Sortable extension.
+    Y.SortableTree = Y.Base.create(&#x27;sortableTree&#x27;, Y.Tree, [Y.Tree.Sortable]);
+
+    &#x2F;&#x2F; ... additional implementation code here ...
+});</pre>
+
+
+<p>Nodes will now be sorted automatically as they're inserted in this tree, or you can manually re-sort all children of a specific node by calling that node's <a href="http://yuilibrary.com/yui/docs/api/classes/Tree.Node.Sortable.html#method_sort"><code>sort()</code></a> method.</p>
+
+<p>By default, nodes are sorted in insertion order, meaning that the first node you insert gets index 0, the second node inserted gets index 1, and so on. To customize the sort criteria, pass a custom <code>sortComparator</code> function to the tree's constructor, or set it on the tree's prototype. This function will receive a node as an argument, and should return a value by which that node should be sorted.</p>
+
+<p>Here's a <code>sortComparator</code> function that sorts nodes by id:</p>
+
+<pre class="code prettyprint lang-js">var tree = new Y.SortableTree({
+    sortComparator: function (node) {
+        return node.id;
+    }
+});</pre>
+
+
+<p>To sort nodes in descending order instead of ascending order, set the tree's <a href="http://yuilibrary.com/yui/docs/api/classes/Tree.Sortable.html#property_sortReverse"><code>sortReverse</code></a> property to <code>true</code>.</p>
+
+<p>Each node in a tree may optionally have its own custom <code>sortComparator</code> and/or <code>sortReverse</code> properties to govern the sort order of its children. This makes it possible to use different sort criteria for different nodes in the tree. Setting these properties on a node will override the tree's <code>sortComparator</code> and <code>sortReverse</code> properties for that node's children (but not for its children's children).</p>
+
+<p>Tree instances that mix in the Sortable extension receive a <a href="http://yuilibrary.com/yui/docs/api/classes/Tree.Sortable.html#event_sort"><code>sort</code></a> event that fires when a node's children are manually re-sorted by calling the <code>sort()</code> method.</p>
+
+<p>See the <a href="http://yuilibrary.com/yui/docs/api/modules/tree-sortable.html">API docs</a> for more details on the methods and events added by the Sortable extension.</p>
+
+<h2 id="creating-custom-tree-extensions">Creating Custom Tree Extensions</h2>
+
+<p><code>Y.Tree</code> extends <a href="../base/index.html"><code>Y.Base</code></a>, so a Tree extension begins just like any other Base extension class. However, since <code>Y.Tree.Node</code> doesn't extend <code>Y.Base</code> for performance reasons, a special composition mechanism is used to allow for lightweight <code>Y.Tree.Node</code> extensions.</p>
+
+<p>For a simple example, let's look at the implementation of the <a href="#labelable-extension">Labelable extension</a>.</p>
+
+<p>The <code>Y.Tree.Labelable</code> class, which will be mixed into a Tree as a Base extension, looks like this:</p>
+
+<pre class="code prettyprint lang-js">&#x2F;&#x2F; Y.Tree.Labelable extension class.
+function Labelable() {}
+
+Labelable.prototype = {
+    initializer: function () {
+        this.nodeExtensions = this.nodeExtensions.concat(Y.Tree.Node.Labelable);
+    }
+};
+
+Y.Tree.Labelable = Labelable;</pre>
+
+
+<p>In the <code>initializer()</code> method, the Labelable extension creates a copy of the tree's <a href="http://yuilibrary.com/yui/docs/api/classes/Tree.html#property_nodeExtensions"><code>nodeExtensions</code></a> array, then adds the <code>Y.Tree.Node.Labelable</code> class to it.</p>
+
+<p>The <code>Y.Tree.Node.Labelable</code> class looks like this:</p>
+
+<pre class="code prettyprint lang-js">&#x2F;&#x2F; Y.Tree.Node.Labelable class.
+function NodeLabelable(tree, config) {
+    this._serializable = this._serializable.concat(&#x27;label&#x27;);
+
+    if (&#x27;label&#x27; in config) {
+        this.label = config.label;
+    }
+}
+
+NodeLabelable.prototype = {
+    label: &#x27;&#x27;
+};
+
+Y.Tree.Node.Labelable = NodeLabelable;</pre>
+
+
+<p>The specific implementation here isn't important, but it illustrates how node extensions work.</p>
+
+<p>When a Tree instance is created, <code>Y.Tree</code> extensions have a chance to add their custom <code>Y.Tree.Node</code> extension classes to the <code>nodeExtensions</code> array. Once all the tree extension initializers have run, a "composed" Tree Node class is created.</p>
+
+<p>This composed Tree Node class mixes in all the prototype properties of every class in <code>nodeExtensions</code> and automatically chains their constructor functions. This is similar in some ways to how <code>Y.Base</code> extensions work, but much lighter and faster, so composed nodes remain very efficient.</p>
+
+<p>For more detailed examples of Tree and Tree Node extensions, take a look at the <a href="https://github.com/yui/yui3/tree/dev-3.x/src/tree/js/extensions">source code</a> for the Openable and Selectable extensions.</p>
+</div>
+            </div>
+        </div>
+
+        <div class="yui3-u-1-4">
+            <div class="sidebar">
+                
+                    <div id="toc" class="sidebox">
+                        <div class="hd">
+                            <h2 class="no-toc">Table of Contents</h2>
+                        </div>
+
+                        <div class="bd">
+                            <ul class="toc">
+<li>
+<a href="#getting-started">Getting Started</a>
+</li>
+<li>
+<a href="#using-tree">Using Tree</a>
+<ul class="toc">
+<li>
+<a href="#creating-a-tree">Creating a Tree</a>
+</li>
+<li>
+<a href="#tree-properties">Tree Properties</a>
+</li>
+<li>
+<a href="#working-with-tree-nodes">Working with Tree Nodes</a>
+<ul class="toc">
+<li>
+<a href="#tree-node-properties">Tree Node Properties</a>
+</li>
+<li>
+<a href="#creating-unattached-nodes">Creating Unattached Nodes</a>
+</li>
+<li>
+<a href="#adding-nodes-to-a-tree">Adding Nodes To a Tree</a>
+</li>
+<li>
+<a href="#getting-nodes-from-a-tree">Getting Nodes From a Tree</a>
+</li>
+<li>
+<a href="#removing-nodes-from-a-tree">Removing Nodes From a Tree</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#tree-events">Tree Events</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#plugins-extensions">Plugins &amp; Extensions</a>
+<ul class="toc">
+<li>
+<a href="#labelable-extension">Labelable Extension</a>
+</li>
+<li>
+<a href="#openable-extension">Openable Extension</a>
+<ul class="toc">
+<li>
+<a href="#lazy-tree-plugin">Lazy Tree Plugin</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#selectable-extension">Selectable Extension</a>
+</li>
+<li>
+<a href="#sortable-extension">Sortable Extension</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#creating-custom-tree-extensions">Creating Custom Tree Extensions</a>
+</li>
+</ul>
+                        </div>
+                    </div>
+                
+
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+
+<script>
+YUI.Env.Tests = {
+    examples: [],
+    project: '../assets',
+    assets: '../assets/tree',
+    name: 'tree',
+    title: 'Tree',
+    newWindow: '',
+    auto:  false 
+};
+
+</script>
+<script src="../assets/yui/test-runner.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+RewriteEngine on
+RewriteBase /
+
+# deny access to *.{asciidoc}
+<FilesMatch "\.(asciidoc)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# route /css/*.scss to scss.php
+RewriteCond %{REQUEST_URI} ^/css/.*\.scss$
+RewriteRule .* scss.php [L]
+
+# route /* to index.php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule .* index.php [L]

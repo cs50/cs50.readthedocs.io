@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Example: Adding Node Content - Burger Builder</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+    <link rel="stylesheet" href="../../build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="../../build/yui/yui-min.js"></script>
+    
+</head>
+<body>
+<!--
+<a href="https://github.com/yui/yui3"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+-->
+<div id="doc">
+    <div id="hd">
+        <h1><img src="http://yuilibrary.com/img/yui-logo.png"></h1>
+    </div>
+    
+
+            <h1>Example: Adding Node Content - Burger Builder</h1>
+    <div class="yui3-g">
+        <div class="yui3-u-3-4">
+            <div id="main">
+                <div class="content"><div class="intro">
+    <p>This example demonstrates how to insert content when working with <code>NodeList</code> instances.</p>
+    <p>Click buttons to build your burger.</p>
+</div>
+
+<div class="example">
+<style>
+.example .demo, .example .buttons-list{
+    width: 302px;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    text-align: center;        
+}
+.example .buttons-list{
+    list-style: none;
+    text-align: left;
+    margin-left: 100px;
+    width: auto;
+    height: 21em;    
+}
+.example .buttons-list .yui3-button {
+    margin-bottom: 0.5em;
+}
+.example .buttons-list .ketchup{
+    margin-bottom: 1em;
+}
+.example .buttons-list .another{
+    display: none;
+}
+.example .demo li {
+    position: relative;
+    list-style: none;
+    height: 0;
+    width: 302px;
+    opacity: 0;
+    margin: 0 0 0 -800px;
+    cursor: no-drop;
+    font-size: 1px;
+}
+.example .demo li img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.example .demo .bun-top, .example .demo .bun-bottom{
+    opacity: 1;
+    height: 106px;
+    margin: 0;
+}
+</style>
+    <ul class="demo">
+        <li class="bun-top"><img src="../assets/node/images/burg_bun_top.png" width="271" height="106" alt="Burger bun top"/></li>
+        <li class="bun-bottom"><img src="../assets/node/images/burg_bun_bottom.png" width="291" height="115" alt="Burger bun bottom"/></li>
+    </ul>
+    <ul class="buttons-list">
+        <li><button class='yui3-button patty'> Patty &#183; Before Last Bun</button></li>
+        <li><button class='yui3-button lettuce'> Lettuce &#183; Before Last Bun</button></li>
+        <li><button class='yui3-button cheese' disabled="disabled"> Cheese &#183; Before First Patty</button></li>
+        <li><button class='yui3-button tomato'> Tomato &#183; After First Bun</button></li>
+        <li><button class='yui3-button onions'> Onions &#183; After First Bun</button></li>
+        <li><button class='yui3-button pickles'> Pickles &#183; After First Bun</button></li>
+        <li><button class='yui3-button ketchup'> Ketchup &#183; After First Bun</button></li>
+        <li><button class='yui3-button done'> Done</button></li>
+        <li><button class='yui3-button another'> Another Please</button></li>
+    </ul>
+<script>
+YUI().use('node', 'cssbutton', 'transition', 'UA', function (Y) {
+    var demo = Y.one('.demo'),
+        btnList = Y.all('.buttons-list .yui3-button'),
+        i = 0,
+        objList,
+        myZIndex,
+        imgPath = '../assets/node/images/';
+
+    if (Y.UA.ie && Y.UA.ie < 7) {
+
+        // Add a prefix to the image file name in the imgPath.
+        // This is needed to work around IE6 non-support of alpha pngs
+        imgPath = imgPath + '8bit_';
+        Y.one('.example .demo .bun-top img').setAttribute('src', imgPath + 'burg_bun_top.png');
+        Y.one('.example .demo .bun-bottom img').setAttribute('src', imgPath + 'burg_bun_bottom.png');
+    }
+
+    // This smoothes out the visual experience of adding
+    // an element to the burger
+    var transitionObject = function (obj) {
+        obj.transition({
+            duration: 0.8,
+
+            // height grows from initial 0, to height of contained image
+            height: obj.one('img').getStyle('height'),
+            marginLeft: '0px', // transition into place from offscreen left.
+            opacity: {
+                delay: 0.2,
+                duration: 0.5,
+                value: 1
+            }
+        });
+    }
+
+    // This removes an element of the burger
+    // the height transitions to 0, it moves left, and fades out
+    var removeObject = function(e) {
+        e.currentTarget.transition({
+            duration: 0.8,
+            height: 0,
+            marginLeft: '-400px',
+            opacity: {
+                delay: 0.2,
+                duration: 0.5,
+                value: 0
+            }
+        },
+            // after the transition finishes...
+            function(){
+                e.currentTarget.remove(); // remove the clicked item from the DOM
+
+                // If there's no patty in the burger
+                if (Y.one('.example .demo').getHTML().indexOf('patty') === -1) {
+                    // Disable the cheese button
+                    // Cheese is inserted before first patty.
+                    // The cheese button will be enabled when there's a patty
+                    Y.one('.buttons-list .cheese')._node.disabled = true;
+                }
+        });
+    }
+
+    // This inserts burger parts and manages the display of buttons
+    var buttonClicks = function (e) {
+        var obj;
+        if (this.hasClass('patty')) {
+            // Create a node with an image of the burger part
+            obj = Y.Node.create('<li class="patty"><img src="' + imgPath + 'burg_patty.png" width="268" height="75" alt="Burger patty"/></li>');
+
+            // Insert it before the bottom bun
+            demo.insert(obj, Y.one('.bun-bottom'));
+
+            // Smooth out insert with transition
+            transitionObject(obj);
+            
+            // Cheese button becomes available 
+            // only when there's a patty to insert before
+            Y.one('.buttons-list .cheese')._node.disabled = false; 
+        } else if (this.hasClass('lettuce')) {
+            obj = Y.Node.create('<li class="lettuce"><img src="' + imgPath + 'burg_lettuce.png" width="302" height="87" alt="Lettuce"/></li>');
+            demo.insert(obj, Y.one('.bun-bottom'));
+            transitionObject(obj);        
+        } else if (this.hasClass('cheese')) {
+            obj = Y.Node.create('<li class="cheese"><img src="' + imgPath + 'burg_cheese.png" width="274" height="89" alt="Cheese"/></li>');
+            demo.insert(obj, Y.one('.patty'));
+            transitionObject(obj);
+        } else if (this.hasClass('ketchup')) {
+            obj = Y.Node.create('<li class="ketchup"><img src="' + imgPath + 'burg_ketchup.png" width="208" height="66" alt="Ketchup"/></li>');
+            Y.one('.bun-top').insert(obj, 'after');
+            transitionObject(obj);
+        } else if (this.hasClass('pickles')) {
+            obj = Y.Node.create('<li class="pickles"><img src="' + imgPath + 'burg_pickles.png" width="236" height="61" alt="Pickles"/></li>');
+            Y.one('.bun-top').insert(obj, 'after');
+            transitionObject(obj);
+        } else if (this.hasClass('onions')) {
+            obj = Y.Node.create('<li class="onions"><img src="' + imgPath + 'burg_onions.png" width="248" height="77" alt="Onions"/></li>');
+            Y.one('.bun-top').insert(obj, 'after');
+            transitionObject(obj);
+        } else if (this.hasClass('tomato')) {
+            obj = Y.Node.create('<li class="tomato"><img src="' + imgPath + 'burg_tomato.png" width="225" height="68" alt="Tomato slice"/></li>');
+            Y.one('.bun-top').insert(obj, 'after');
+            transitionObject(obj);
+        } else if (this.hasClass('done')) {
+            objList = Y.all('.demo li');
+            myZIndex = objList.size();  // for resetting z-index of burger parts
+            
+            // Hide all the buttons when done
+            btnList.setStyle('display', 'none');
+            
+            // Show the "Another Please" button
+            Y.one('.buttons-list .another').setStyle('display', 'block');
+
+            // The normal z-index of <li>s in a <ul> results in the
+            // bottom of the bun picture being on top
+            // The z-index of the burger elements must be reversed.
+            for (i = 0; i < objList.size(); i += 1) {
+                objList.item(i).setStyle('zIndex', myZIndex);
+                myZIndex -= 1;
+                objList.item(i).setStyle('position', 'relative');
+                // transition the height of the elements proportionally smaller
+                // so you could get your mouth around it
+                objList.item(i).transition({
+                    duration: 0.5,
+                    height: parseInt(objList.item(i).one('img').getStyle('height'), 10) * 0.15 + 'px'
+                });
+            }    
+        } else if (this.hasClass('another')) {
+            // Empty out the content of the burger image
+            demo.setContent('');
+
+            // Insert just the buns
+            demo.append('<li class="bun-top"><img src="' + imgPath + 'burg_bun_top.png" width="271" height="106" alt="Burger bun top"/></li>');
+            demo.append('<li class="bun-bottom"><img src="' + imgPath + 'burg_bun_bottom.png" width="291" height="115" alt="Burger bun bottom"/></li>');
+
+            // Disable the cheese button
+            // Cheese is inserted before first patty.
+            // The cheese button will be enabled when there's a patty
+            Y.one('.buttons-list .cheese')._node.disabled = true;
+
+            // Display all the buttons except the "Another Please"
+            btnList.setStyle('display', 'block');
+            Y.one('.buttons-list .another').setStyle('display', 'none');
+        }
+    }
+    Y.on('click', buttonClicks, '.example .buttons-list .yui3-button');
+    Y.one('.example .demo').delegate('click', removeObject, 'li');
+});
+</script>
+
+</div>
+
+<h2>Setting up the NodeList</h2>
+<p>First we need some HTML to work with.</p>
+<pre class="code prettyprint">&lt;ul class=&quot;demo&quot;&gt;
+    &lt;li class=&quot;bun-top&quot;&gt;&lt;img src=&quot;assets&#x2F;images&#x2F;bun_top.png&quot;&#x2F;&gt;&lt;&#x2F;li&gt;
+    &lt;li class=&quot;bun-bottom&quot;&gt;&lt;img src=&quot;assets&#x2F;images&#x2F;bun_bottom.png&quot;&#x2F;&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;</pre>
+
+<p>Next we'll add some buttons to be clicked.</p>
+<pre class="code prettyprint">&lt;ul class=&quot;buttons-list&quot;&gt;
+    &lt;li&gt;&lt;button class=&#x27;yui3-button patty&#x27;&gt; Patty &amp;#183; Before Last Bun&lt;&#x2F;button&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;button class=&#x27;yui3-button lettuce&#x27;&gt; Lettuce &amp;#183; Before Last Bun&lt;&#x2F;button&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;button class=&#x27;yui3-button cheese&#x27; disabled=&quot;disabled&quot;&gt; Cheese &amp;#183; Before First Patty&lt;&#x2F;button&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;button class=&#x27;yui3-button tomato&#x27;&gt; Tomato &amp;#183; After First Bun&lt;&#x2F;button&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;button class=&#x27;yui3-button onions&#x27;&gt; Onions &amp;#183; After First Bun&lt;&#x2F;button&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;button class=&#x27;yui3-button pickles&#x27;&gt; Pickles &amp;#183; After First Bun&lt;&#x2F;button&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;button class=&#x27;yui3-button ketchup&#x27;&gt; Ketchup &amp;#183; After First Bun&lt;&#x2F;button&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;button class=&#x27;yui3-button done&#x27;&gt; Done&lt;&#x2F;button&gt;&lt;&#x2F;li&gt;
+    &lt;li&gt;&lt;button class=&#x27;yui3-button another&#x27;&gt; Another Please&lt;&#x2F;button&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;</pre>
+
+<h2>Adding Content</h2>
+<p>After defining some <code>var</code>s, we'll
+add a <code>buttonClicks</code> handler to run when an event is fired.
+It will add content to the <code>demo</code> node.</p>
+<p>Note that the <code>this</code> in the handler is the object that was clicked.</p>
+<pre class="code prettyprint">var demo = Y.one(&#x27;.demo&#x27;),
+    btnList = Y.all(&#x27;.buttons-list .yui3-button&#x27;),
+    ...;
+
+    &#x2F;&#x2F; This inserts burger parts and manages the display of buttons
+    var buttonClicks = function (e) {
+        var obj;
+        if (this.hasClass(&#x27;patty&#x27;)) {
+            &#x2F;&#x2F; Create a node with an image of the burger part
+            obj = Y.Node.create(&#x27;&lt;li class=&quot;patty&quot;&gt;&lt;img src=&quot;&#x27; + imgPath + &#x27;burg_patty.png&quot;&#x2F;&gt;&lt;&#x2F;li&gt;&#x27;);
+
+            &#x2F;&#x2F; Insert it before the bottom bun
+            demo.insert(obj, Y.one(&#x27;.bun-bottom&#x27;));
+
+            &#x2F;&#x2F; ...
+        } else if &#x2F;&#x2F; other buttons follow...</pre>
+
+<p>The handler inserts different objects into the <code>demo</code> container object 
+in different places based on these methods:
+<ul>
+    <li><code>prepend</code> - as firstChild</li>
+    <li><code>append</code> - as lastChild</li>
+    <li><code>insert</code> - before a specified node or childNode index</li>
+</ul> 
+</p>
+
+<h2>Attaching Events</h2>
+<p>We assign our handler to all of the <code>yui3-button</code> objects through
+event subscription to the matching selector.</p>
+<pre class="code prettyprint">Y.on(&#x27;click&#x27;, buttonClicks, &#x27;.example .buttons-list .yui3-button&#x27;);</pre>
+
+<h2>Transitions</h2>
+<p>When an event handler simply inserts an object, it appears instantly, and
+other DOM objects are rendered in their new locations, which
+can be a visually jarring experience.
+</p>
+<p>
+In this example, we've added a <code>transitionObject</code> function to smooth things out.
+Inserted burger elements have an initial CSS <code>height</code> of 0.
+After each insertion, we call the <code>transitionObject</code> function,
+passing the inserted object. It begins growing to a height equal to the image
+it contains (the images are different heights). This gradually pushes open a space
+for itself, while it moves in from offscreen left, and fades in.
+</p>
+<pre class="code prettyprint">var transitionObject = function (obj) {
+    obj.transition({
+        duration: 0.8,
+
+        &#x2F;&#x2F; height grows from initial 0, to height of contained image
+        height: obj.one(&#x27;img&#x27;).getStyle(&#x27;height&#x27;),
+        marginLeft: &#x27;0px&#x27;, &#x2F;&#x2F; transition into place from offscreen left.
+        opacity: {
+            delay: 0.2,
+            duration: 0.5,
+            value: 1
+        }
+    });
+}</pre>
+
+<p>
+Here's more code in the <code>buttonClicks</code> handler where we call <code>transitionObject</code>,
+and do some special handling for the cheese button state.
+</p>
+<pre class="code prettyprint">&#x2F;&#x2F; This inserts burger parts and manages the display of buttons
+var buttonClicks = function (e) {
+    var obj;
+    if (this.hasClass(&#x27;patty&#x27;)) {
+        &#x2F;&#x2F; Create a node with an image of the burger part
+        obj = Y.Node.create(&#x27;&lt;li class=&quot;patty&quot;&gt;&lt;img src=&quot;&#x27; + imgPath + &#x27;burg_patty.png&quot;&#x2F;&gt;&lt;&#x2F;li&gt;&#x27;);
+
+        &#x2F;&#x2F; Insert it before the bottom bun
+        demo.insert(obj, Y.one(&#x27;.bun-bottom&#x27;));
+
+        &#x2F;&#x2F; Smooth out insert with transition
+        transitionObject(obj);
+
+        &#x2F;&#x2F; Cheese button becomes available
+        &#x2F;&#x2F; only when there&#x27;s a patty to insert before
+        Y.one(&#x27;.buttons-list .cheese&#x27;)._node.disabled = false;
+    } else if &#x2F;&#x2F; other buttons follow...</pre>
+
+<h2>Complete Example Source</h2>
+<p>
+In the complete source you'll see we also added handling for:
+<ul>
+<li>Removing elements from the burger</li>
+<li>Clicking the Done button to vertically compress the burger</li>
+<li>Requesting another</li>
+</ul>
+</p>
+<pre class="code prettyprint">&lt;style&gt;
+.example .demo, .example .buttons-list{
+    width: 302px;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    text-align: center;        
+}
+.example .buttons-list{
+    list-style: none;
+    text-align: left;
+    margin-left: 100px;
+    width: auto;
+    height: 21em;    
+}
+.example .buttons-list .yui3-button {
+    margin-bottom: 0.5em;
+}
+.example .buttons-list .ketchup{
+    margin-bottom: 1em;
+}
+.example .buttons-list .another{
+    display: none;
+}
+.example .demo li {
+    position: relative;
+    list-style: none;
+    height: 0;
+    width: 302px;
+    opacity: 0;
+    margin: 0 0 0 -800px;
+    cursor: no-drop;
+    font-size: 1px;
+}
+.example .demo li img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.example .demo .bun-top, .example .demo .bun-bottom{
+    opacity: 1;
+    height: 106px;
+    margin: 0;
+}
+&lt;&#x2F;style&gt;
+    &lt;ul class=&quot;demo&quot;&gt;
+        &lt;li class=&quot;bun-top&quot;&gt;&lt;img src=&quot;..&#x2F;assets&#x2F;node&#x2F;images&#x2F;burg_bun_top.png&quot; width=&quot;271&quot; height=&quot;106&quot; alt=&quot;Burger bun top&quot;&#x2F;&gt;&lt;&#x2F;li&gt;
+        &lt;li class=&quot;bun-bottom&quot;&gt;&lt;img src=&quot;..&#x2F;assets&#x2F;node&#x2F;images&#x2F;burg_bun_bottom.png&quot; width=&quot;291&quot; height=&quot;115&quot; alt=&quot;Burger bun bottom&quot;&#x2F;&gt;&lt;&#x2F;li&gt;
+    &lt;&#x2F;ul&gt;
+    &lt;ul class=&quot;buttons-list&quot;&gt;
+        &lt;li&gt;&lt;button class=&#x27;yui3-button patty&#x27;&gt; Patty &amp;#183; Before Last Bun&lt;&#x2F;button&gt;&lt;&#x2F;li&gt;
+        &lt;li&gt;&lt;button class=&#x27;yui3-button lettuce&#x27;&gt; Lettuce &amp;#183; Before Last Bun&lt;&#x2F;button&gt;&lt;&#x2F;li&gt;
+        &lt;li&gt;&lt;button class=&#x27;yui3-button cheese&#x27; disabled=&quot;disabled&quot;&gt; Cheese &amp;#183; Before First Patty&lt;&#x2F;button&gt;&lt;&#x2F;li&gt;
+        &lt;li&gt;&lt;button class=&#x27;yui3-button tomato&#x27;&gt; Tomato &amp;#183; After First Bun&lt;&#x2F;button&gt;&lt;&#x2F;li&gt;
+        &lt;li&gt;&lt;button class=&#x27;yui3-button onions&#x27;&gt; Onions &amp;#183; After First Bun&lt;&#x2F;button&gt;&lt;&#x2F;li&gt;
+        &lt;li&gt;&lt;button class=&#x27;yui3-button pickles&#x27;&gt; Pickles &amp;#183; After First Bun&lt;&#x2F;button&gt;&lt;&#x2F;li&gt;
+        &lt;li&gt;&lt;button class=&#x27;yui3-button ketchup&#x27;&gt; Ketchup &amp;#183; After First Bun&lt;&#x2F;button&gt;&lt;&#x2F;li&gt;
+        &lt;li&gt;&lt;button class=&#x27;yui3-button done&#x27;&gt; Done&lt;&#x2F;button&gt;&lt;&#x2F;li&gt;
+        &lt;li&gt;&lt;button class=&#x27;yui3-button another&#x27;&gt; Another Please&lt;&#x2F;button&gt;&lt;&#x2F;li&gt;
+    &lt;&#x2F;ul&gt;
+&lt;script&gt;
+YUI().use(&#x27;node&#x27;, &#x27;cssbutton&#x27;, &#x27;transition&#x27;, &#x27;UA&#x27;, function (Y) {
+    var demo = Y.one(&#x27;.demo&#x27;),
+        btnList = Y.all(&#x27;.buttons-list .yui3-button&#x27;),
+        i = 0,
+        objList,
+        myZIndex,
+        imgPath = &#x27;..&#x2F;assets&#x2F;node&#x2F;images&#x2F;&#x27;;
+
+    if (Y.UA.ie &amp;&amp; Y.UA.ie &lt; 7) {
+
+        &#x2F;&#x2F; Add a prefix to the image file name in the imgPath.
+        &#x2F;&#x2F; This is needed to work around IE6 non-support of alpha pngs
+        imgPath = imgPath + &#x27;8bit_&#x27;;
+        Y.one(&#x27;.example .demo .bun-top img&#x27;).setAttribute(&#x27;src&#x27;, imgPath + &#x27;burg_bun_top.png&#x27;);
+        Y.one(&#x27;.example .demo .bun-bottom img&#x27;).setAttribute(&#x27;src&#x27;, imgPath + &#x27;burg_bun_bottom.png&#x27;);
+    }
+
+    &#x2F;&#x2F; This smoothes out the visual experience of adding
+    &#x2F;&#x2F; an element to the burger
+    var transitionObject = function (obj) {
+        obj.transition({
+            duration: 0.8,
+
+            &#x2F;&#x2F; height grows from initial 0, to height of contained image
+            height: obj.one(&#x27;img&#x27;).getStyle(&#x27;height&#x27;),
+            marginLeft: &#x27;0px&#x27;, &#x2F;&#x2F; transition into place from offscreen left.
+            opacity: {
+                delay: 0.2,
+                duration: 0.5,
+                value: 1
+            }
+        });
+    }
+
+    &#x2F;&#x2F; This removes an element of the burger
+    &#x2F;&#x2F; the height transitions to 0, it moves left, and fades out
+    var removeObject = function(e) {
+        e.currentTarget.transition({
+            duration: 0.8,
+            height: 0,
+            marginLeft: &#x27;-400px&#x27;,
+            opacity: {
+                delay: 0.2,
+                duration: 0.5,
+                value: 0
+            }
+        },
+            &#x2F;&#x2F; after the transition finishes...
+            function(){
+                e.currentTarget.remove(); &#x2F;&#x2F; remove the clicked item from the DOM
+
+                &#x2F;&#x2F; If there&#x27;s no patty in the burger
+                if (Y.one(&#x27;.example .demo&#x27;).getHTML().indexOf(&#x27;patty&#x27;) === -1) {
+                    &#x2F;&#x2F; Disable the cheese button
+                    &#x2F;&#x2F; Cheese is inserted before first patty.
+                    &#x2F;&#x2F; The cheese button will be enabled when there&#x27;s a patty
+                    Y.one(&#x27;.buttons-list .cheese&#x27;)._node.disabled = true;
+                }
+        });
+    }
+
+    &#x2F;&#x2F; This inserts burger parts and manages the display of buttons
+    var buttonClicks = function (e) {
+        var obj;
+        if (this.hasClass(&#x27;patty&#x27;)) {
+            &#x2F;&#x2F; Create a node with an image of the burger part
+            obj = Y.Node.create(&#x27;&lt;li class=&quot;patty&quot;&gt;&lt;img src=&quot;&#x27; + imgPath + &#x27;burg_patty.png&quot; width=&quot;268&quot; height=&quot;75&quot; alt=&quot;Burger patty&quot;&#x2F;&gt;&lt;&#x2F;li&gt;&#x27;);
+
+            &#x2F;&#x2F; Insert it before the bottom bun
+            demo.insert(obj, Y.one(&#x27;.bun-bottom&#x27;));
+
+            &#x2F;&#x2F; Smooth out insert with transition
+            transitionObject(obj);
+            
+            &#x2F;&#x2F; Cheese button becomes available 
+            &#x2F;&#x2F; only when there&#x27;s a patty to insert before
+            Y.one(&#x27;.buttons-list .cheese&#x27;)._node.disabled = false; 
+        } else if (this.hasClass(&#x27;lettuce&#x27;)) {
+            obj = Y.Node.create(&#x27;&lt;li class=&quot;lettuce&quot;&gt;&lt;img src=&quot;&#x27; + imgPath + &#x27;burg_lettuce.png&quot; width=&quot;302&quot; height=&quot;87&quot; alt=&quot;Lettuce&quot;&#x2F;&gt;&lt;&#x2F;li&gt;&#x27;);
+            demo.insert(obj, Y.one(&#x27;.bun-bottom&#x27;));
+            transitionObject(obj);        
+        } else if (this.hasClass(&#x27;cheese&#x27;)) {
+            obj = Y.Node.create(&#x27;&lt;li class=&quot;cheese&quot;&gt;&lt;img src=&quot;&#x27; + imgPath + &#x27;burg_cheese.png&quot; width=&quot;274&quot; height=&quot;89&quot; alt=&quot;Cheese&quot;&#x2F;&gt;&lt;&#x2F;li&gt;&#x27;);
+            demo.insert(obj, Y.one(&#x27;.patty&#x27;));
+            transitionObject(obj);
+        } else if (this.hasClass(&#x27;ketchup&#x27;)) {
+            obj = Y.Node.create(&#x27;&lt;li class=&quot;ketchup&quot;&gt;&lt;img src=&quot;&#x27; + imgPath + &#x27;burg_ketchup.png&quot; width=&quot;208&quot; height=&quot;66&quot; alt=&quot;Ketchup&quot;&#x2F;&gt;&lt;&#x2F;li&gt;&#x27;);
+            Y.one(&#x27;.bun-top&#x27;).insert(obj, &#x27;after&#x27;);
+            transitionObject(obj);
+        } else if (this.hasClass(&#x27;pickles&#x27;)) {
+            obj = Y.Node.create(&#x27;&lt;li class=&quot;pickles&quot;&gt;&lt;img src=&quot;&#x27; + imgPath + &#x27;burg_pickles.png&quot; width=&quot;236&quot; height=&quot;61&quot; alt=&quot;Pickles&quot;&#x2F;&gt;&lt;&#x2F;li&gt;&#x27;);
+            Y.one(&#x27;.bun-top&#x27;).insert(obj, &#x27;after&#x27;);
+            transitionObject(obj);
+        } else if (this.hasClass(&#x27;onions&#x27;)) {
+            obj = Y.Node.create(&#x27;&lt;li class=&quot;onions&quot;&gt;&lt;img src=&quot;&#x27; + imgPath + &#x27;burg_onions.png&quot; width=&quot;248&quot; height=&quot;77&quot; alt=&quot;Onions&quot;&#x2F;&gt;&lt;&#x2F;li&gt;&#x27;);
+            Y.one(&#x27;.bun-top&#x27;).insert(obj, &#x27;after&#x27;);
+            transitionObject(obj);
+        } else if (this.hasClass(&#x27;tomato&#x27;)) {
+            obj = Y.Node.create(&#x27;&lt;li class=&quot;tomato&quot;&gt;&lt;img src=&quot;&#x27; + imgPath + &#x27;burg_tomato.png&quot; width=&quot;225&quot; height=&quot;68&quot; alt=&quot;Tomato slice&quot;&#x2F;&gt;&lt;&#x2F;li&gt;&#x27;);
+            Y.one(&#x27;.bun-top&#x27;).insert(obj, &#x27;after&#x27;);
+            transitionObject(obj);
+        } else if (this.hasClass(&#x27;done&#x27;)) {
+            objList = Y.all(&#x27;.demo li&#x27;);
+            myZIndex = objList.size();  &#x2F;&#x2F; for resetting z-index of burger parts
+            
+            &#x2F;&#x2F; Hide all the buttons when done
+            btnList.setStyle(&#x27;display&#x27;, &#x27;none&#x27;);
+            
+            &#x2F;&#x2F; Show the &quot;Another Please&quot; button
+            Y.one(&#x27;.buttons-list .another&#x27;).setStyle(&#x27;display&#x27;, &#x27;block&#x27;);
+
+            &#x2F;&#x2F; The normal z-index of &lt;li&gt;s in a &lt;ul&gt; results in the
+            &#x2F;&#x2F; bottom of the bun picture being on top
+            &#x2F;&#x2F; The z-index of the burger elements must be reversed.
+            for (i = 0; i &lt; objList.size(); i += 1) {
+                objList.item(i).setStyle(&#x27;zIndex&#x27;, myZIndex);
+                myZIndex -= 1;
+                objList.item(i).setStyle(&#x27;position&#x27;, &#x27;relative&#x27;);
+                &#x2F;&#x2F; transition the height of the elements proportionally smaller
+                &#x2F;&#x2F; so you could get your mouth around it
+                objList.item(i).transition({
+                    duration: 0.5,
+                    height: parseInt(objList.item(i).one(&#x27;img&#x27;).getStyle(&#x27;height&#x27;), 10) * 0.15 + &#x27;px&#x27;
+                });
+            }    
+        } else if (this.hasClass(&#x27;another&#x27;)) {
+            &#x2F;&#x2F; Empty out the content of the burger image
+            demo.setContent(&#x27;&#x27;);
+
+            &#x2F;&#x2F; Insert just the buns
+            demo.append(&#x27;&lt;li class=&quot;bun-top&quot;&gt;&lt;img src=&quot;&#x27; + imgPath + &#x27;burg_bun_top.png&quot; width=&quot;271&quot; height=&quot;106&quot; alt=&quot;Burger bun top&quot;&#x2F;&gt;&lt;&#x2F;li&gt;&#x27;);
+            demo.append(&#x27;&lt;li class=&quot;bun-bottom&quot;&gt;&lt;img src=&quot;&#x27; + imgPath + &#x27;burg_bun_bottom.png&quot; width=&quot;291&quot; height=&quot;115&quot; alt=&quot;Burger bun bottom&quot;&#x2F;&gt;&lt;&#x2F;li&gt;&#x27;);
+
+            &#x2F;&#x2F; Disable the cheese button
+            &#x2F;&#x2F; Cheese is inserted before first patty.
+            &#x2F;&#x2F; The cheese button will be enabled when there&#x27;s a patty
+            Y.one(&#x27;.buttons-list .cheese&#x27;)._node.disabled = true;
+
+            &#x2F;&#x2F; Display all the buttons except the &quot;Another Please&quot;
+            btnList.setStyle(&#x27;display&#x27;, &#x27;block&#x27;);
+            Y.one(&#x27;.buttons-list .another&#x27;).setStyle(&#x27;display&#x27;, &#x27;none&#x27;);
+        }
+    }
+    Y.on(&#x27;click&#x27;, buttonClicks, &#x27;.example .buttons-list .yui3-button&#x27;);
+    Y.one(&#x27;.example .demo&#x27;).delegate(&#x27;click&#x27;, removeObject, &#x27;li&#x27;);
+});
+&lt;&#x2F;script&gt;</pre>
+
+</div>
+            </div>
+        </div>
+
+        <div class="yui3-u-1-4">
+            <div class="sidebar">
+                
+
+                
+                    <div class="sidebox">
+                        <div class="hd">
+                            <h2 class="no-toc">Examples</h2>
+                        </div>
+
+                        <div class="bd">
+                            <ul class="examples">
+                                
+                                    
+                                        <li data-description="Using selectors and property accessors with Node.">
+                                            <a href="properties.html">Set and Get Properties</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="Using DOM methods with Node.">
+                                            <a href="dom-node.html">DOM Methods</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="Building a simple store and shopping cart.">
+                                            <a href="store.html">DOM Methods - Store</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="Listening for DOM events with Node instances.">
+                                            <a href="events.html">Handling DOM Events</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="NodeList provides Node functionality for manipulating multiple nodes at once.">
+                                            <a href="nodelist.html">Using NodeList - Simple</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="How to use multiple NodeList features to build a simple game.">
+                                            <a href="ducks.html">Using NodeList - Ducks Game</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="Using a single event listener to handle events on multiple nodes.">
+                                            <a href="node-evt-delegation.html">Delegating Node Events</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="This example demonstrates how to position an element in page coordinates.">
+                                            <a href="node-xy.html">Node Positioning</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="This example demonstrates how to set styles and get style information.">
+                                            <a href="node-style.html">Node Styling</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="This example demonstrates how to insert content into a Node.">
+                                            <a href="node-insert.html">Adding Node Content - Burger Builder</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="This example demonstrates how to show and hide a Node.">
+                                            <a href="node-view.html">Showing and Hiding</a>
+                                        </li>
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                            </ul>
+                        </div>
+                    </div>
+                
+
+                
+                    <div class="sidebox">
+                        <div class="hd">
+                            <h2 class="no-toc">Examples That Use This Component</h2>
+                        </div>
+
+                        <div class="bd">
+                            <ul class="examples">
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <li data-description="Example Photo Browser application.">
+                                            <a href="../dd/photo-browser.html">Photo Browser</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="Portal style example using Drag &amp; Drop Event Bubbling and Animation.">
+                                            <a href="../dd/portal-drag.html">Portal Style Example</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="Use the Event Utility to attach simple DOM event handlers.">
+                                            <a href="../event/basic-example.html">Simple DOM Events</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="Use IO to request XML data from a remote web service.">
+                                            <a href="../io/weather.html">Request XML data from Yahoo! Weather</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="Use IO to make a cross-domain request to Yahoo! Pipes, returning data from disparate sources.">
+                                            <a href="../io/xdr.html">Request JSON using Yahoo! Pipes</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="Creating an accessible toolbar using the Focus Manager Node Plugin and Node&#x27;s support for the WAI-ARIA Roles and States.">
+                                            <a href="../node-focusmanager/node-focusmanager-toolbar.html">Accessible Toolbar</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="Creating an accessible menu button using the Focus Manager Node Plugin, Event&#x27;s delegation support and mouseenter event, along with the Overlay widget and Node&#x27;s support for the WAI-ARIA Roles and States.">
+                                            <a href="../node-focusmanager/node-focusmanager-button.html">Accessible Menu Button</a>
+                                        </li>
+                                    
+                                
+                            </ul>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+
+<script>
+YUI.Env.Tests = {
+    examples: [],
+    project: '../assets',
+    assets: '../assets/node',
+    name: 'node-insert',
+    title: 'Adding Node Content - Burger Builder',
+    newWindow: '',
+    auto:  false 
+};
+YUI.Env.Tests.examples.push('properties');
+YUI.Env.Tests.examples.push('dom-node');
+YUI.Env.Tests.examples.push('store');
+YUI.Env.Tests.examples.push('events');
+YUI.Env.Tests.examples.push('nodelist');
+YUI.Env.Tests.examples.push('ducks');
+YUI.Env.Tests.examples.push('node-evt-delegation');
+YUI.Env.Tests.examples.push('node-xy');
+YUI.Env.Tests.examples.push('node-style');
+YUI.Env.Tests.examples.push('node-insert');
+YUI.Env.Tests.examples.push('node-view');
+YUI.Env.Tests.examples.push('photo-browser');
+YUI.Env.Tests.examples.push('portal-drag');
+YUI.Env.Tests.examples.push('basic-example');
+YUI.Env.Tests.examples.push('weather');
+YUI.Env.Tests.examples.push('xdr');
+YUI.Env.Tests.examples.push('node-focusmanager-toolbar');
+YUI.Env.Tests.examples.push('node-focusmanager-button');
+
+</script>
+<script src="../assets/yui/test-runner.js"></script>
+
+
+
+</body>
+</html>

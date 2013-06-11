@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Example: Address Completion on Google&#x27;s Geocoding Service</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic">
+    <link rel="stylesheet" href="../../build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="../../build/yui/yui-min.js"></script>
+    
+</head>
+<body>
+<!--
+<a href="https://github.com/yui/yui3"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+-->
+<div id="doc">
+    <div id="hd">
+        <h1><img src="http://yuilibrary.com/img/yui-logo.png"></h1>
+    </div>
+    
+
+            <h1>Example: Address Completion on Google&#x27;s Geocoding Service</h1>
+    <div class="yui3-g">
+        <div class="yui3-u-3-4">
+            <div id="main">
+                <div class="content"><div class="intro">
+    <p>
+        This example demonstrates how to provide AutoComplete suggestions for
+        an address calling Google's Geocoding Service.
+    </p>
+    <p>
+        Geocoding is the process of converting addresses into geographic
+        coordinates. The <a href="https://developers.google.com/maps/documentation/geocoding/">Google Geocoding API</a>
+        provides a direct way to access a geocoder via an HTTP request.
+    </p>
+    <p>
+        Google's Geocoding Service returns a JSON object literal. The service does
+        not provide a JSONP API. AutoComplete cannot use that object
+        directly for security reasons. So the workaround is calling the service
+        using YQL as source.
+    </p>
+</div>
+
+<div class="example">
+    <div id="demo" class="yui3-skin-sam"> <!-- You need this skin class -->
+    <p>
+        <label for="ac-input">Enter an address:</label>
+        <input id="ac-input" type="text" />
+    </p>
+
+    <ul>
+        <li>Latitude: <strong id="locationLat"></strong></li>
+        <li>Longitude: <strong id="locationLng"></strong></li>
+    </ul>
+</div>
+
+    <script>
+        YUI().use('autocomplete', function (Y) {
+    var acNode = Y.one('#ac-input');
+
+    acNode.plug(Y.Plugin.AutoComplete, {
+        // Highlight the first result of the list.
+        activateFirstItem: true,
+
+        // The list of the results contains up to 10 results.
+        maxResults: 10,
+
+        // To display the suggestions, the minimum of typed chars is five.
+        minQueryLength: 5,
+
+        // Number of milliseconds to wait after user input before triggering a
+        // <code>query</code> event. This is useful to throttle queries to a remote data
+        // source.
+        queryDelay: 500,
+
+        // Handling the list of results is mandatory, because the service can be
+        // unavailable, can return an error, one result, or an array of results.
+        // However <code>resultListLocator</code> needs to always return an array.
+        resultListLocator: function (response) {
+            // Makes sure an array is returned even on an error.
+            if (response.error) {
+                return [];
+            }
+
+            var query = response.query.results.json,
+                addresses;
+
+            if (query.status !== 'OK') {
+                return [];
+            }
+
+            // Grab the actual addresses from the YQL query.
+            addresses = query.results;
+
+            // Makes sure an array is always returned.
+            return addresses.length > 0 ? addresses : [addresses];
+        },
+
+        // When an item is selected, the value of the field indicated in the
+        // <code>resultTextLocator</code> is displayed in the input field.
+        resultTextLocator: 'formatted_address',
+
+        // {query} placeholder is encoded, but to handle the spaces correctly,
+        // the query is has to be encoded again:
+        //
+        // "my address" -> "my%2520address" // OK => {request}
+        // "my address" -> "my%20address"   // OK => {query}
+        requestTemplate: function (query) {
+            return encodeURI(query);
+        },
+
+        // {request} placeholder, instead of the {query} one, this will insert
+        // the <code>requestTemplate</code> value instead of the raw <code>query</code> value for
+        // cases where you actually want a double-encoded (or customized) query.
+        source: 'SELECT * FROM json WHERE ' +
+                    'url="http://maps.googleapis.com/maps/api/geocode/json?' +
+                        'sensor=false&' +
+                        'address={request}"',
+
+        // Automatically adjust the width of the dropdown list.
+        width: 'auto'
+    });
+
+    // Adjust the width of the input container.
+    acNode.ac.after('resultsChange', function () {
+        var newWidth = this.get('boundingBox').get('offsetWidth');
+        acNode.setStyle('width', Math.max(newWidth, 100));
+    });
+
+    // Fill the <code>lat</code> and <code>lng</code> fields when the user selects an item.
+    acNode.ac.on('select', function (e) {
+        var location = e.result.raw.geometry.location;
+
+        Y.one('#locationLat').set('text', location.lat);
+        Y.one('#locationLng').set('text', location.lng);
+    });
+});
+
+    </script>
+</div>
+
+<h2>Complete Example Source</h2>
+
+<h3>JavaScript</h3>
+<pre class="code prettyprint">YUI().use(&#x27;autocomplete&#x27;, function (Y) {
+    var acNode = Y.one(&#x27;#ac-input&#x27;);
+
+    acNode.plug(Y.Plugin.AutoComplete, {
+        &#x2F;&#x2F; Highlight the first result of the list.
+        activateFirstItem: true,
+
+        &#x2F;&#x2F; The list of the results contains up to 10 results.
+        maxResults: 10,
+
+        &#x2F;&#x2F; To display the suggestions, the minimum of typed chars is five.
+        minQueryLength: 5,
+
+        &#x2F;&#x2F; Number of milliseconds to wait after user input before triggering a
+        &#x2F;&#x2F; &#x60;query&#x60; event. This is useful to throttle queries to a remote data
+        &#x2F;&#x2F; source.
+        queryDelay: 500,
+
+        &#x2F;&#x2F; Handling the list of results is mandatory, because the service can be
+        &#x2F;&#x2F; unavailable, can return an error, one result, or an array of results.
+        &#x2F;&#x2F; However &#x60;resultListLocator&#x60; needs to always return an array.
+        resultListLocator: function (response) {
+            &#x2F;&#x2F; Makes sure an array is returned even on an error.
+            if (response.error) {
+                return [];
+            }
+
+            var query = response.query.results.json,
+                addresses;
+
+            if (query.status !== &#x27;OK&#x27;) {
+                return [];
+            }
+
+            &#x2F;&#x2F; Grab the actual addresses from the YQL query.
+            addresses = query.results;
+
+            &#x2F;&#x2F; Makes sure an array is always returned.
+            return addresses.length &gt; 0 ? addresses : [addresses];
+        },
+
+        &#x2F;&#x2F; When an item is selected, the value of the field indicated in the
+        &#x2F;&#x2F; &#x60;resultTextLocator&#x60; is displayed in the input field.
+        resultTextLocator: &#x27;formatted_address&#x27;,
+
+        &#x2F;&#x2F; {query} placeholder is encoded, but to handle the spaces correctly,
+        &#x2F;&#x2F; the query is has to be encoded again:
+        &#x2F;&#x2F;
+        &#x2F;&#x2F; &quot;my address&quot; -&gt; &quot;my%2520address&quot; &#x2F;&#x2F; OK =&gt; {request}
+        &#x2F;&#x2F; &quot;my address&quot; -&gt; &quot;my%20address&quot;   &#x2F;&#x2F; OK =&gt; {query}
+        requestTemplate: function (query) {
+            return encodeURI(query);
+        },
+
+        &#x2F;&#x2F; {request} placeholder, instead of the {query} one, this will insert
+        &#x2F;&#x2F; the &#x60;requestTemplate&#x60; value instead of the raw &#x60;query&#x60; value for
+        &#x2F;&#x2F; cases where you actually want a double-encoded (or customized) query.
+        source: &#x27;SELECT * FROM json WHERE &#x27; +
+                    &#x27;url=&quot;http:&#x2F;&#x2F;maps.googleapis.com&#x2F;maps&#x2F;api&#x2F;geocode&#x2F;json?&#x27; +
+                        &#x27;sensor=false&amp;&#x27; +
+                        &#x27;address={request}&quot;&#x27;,
+
+        &#x2F;&#x2F; Automatically adjust the width of the dropdown list.
+        width: &#x27;auto&#x27;
+    });
+
+    &#x2F;&#x2F; Adjust the width of the input container.
+    acNode.ac.after(&#x27;resultsChange&#x27;, function () {
+        var newWidth = this.get(&#x27;boundingBox&#x27;).get(&#x27;offsetWidth&#x27;);
+        acNode.setStyle(&#x27;width&#x27;, Math.max(newWidth, 100));
+    });
+
+    &#x2F;&#x2F; Fill the &#x60;lat&#x60; and &#x60;lng&#x60; fields when the user selects an item.
+    acNode.ac.on(&#x27;select&#x27;, function (e) {
+        var location = e.result.raw.geometry.location;
+
+        Y.one(&#x27;#locationLat&#x27;).set(&#x27;text&#x27;, location.lat);
+        Y.one(&#x27;#locationLng&#x27;).set(&#x27;text&#x27;, location.lng);
+    });
+});</pre>
+
+
+<h3>HTML</h3>
+<p>
+<strong>Note:</strong> be sure to add the <code>yui3-skin-sam</code> classname to the
+page's <code>&lt;body&gt;</code> element or to a parent element of the widget in order to apply
+the default CSS skin. See <a href="http://yuilibrary.com/yui/docs/tutorials/skins/">Understanding Skinning</a>.
+</p>
+<pre class="code prettyprint">&lt;div id=&quot;demo&quot; class=&quot;yui3-skin-sam&quot;&gt; &lt;!-- You need this skin class --&gt;
+    &lt;p&gt;
+        &lt;label for=&quot;ac-input&quot;&gt;Enter an address:&lt;&#x2F;label&gt;
+        &lt;input id=&quot;ac-input&quot; type=&quot;text&quot; &#x2F;&gt;
+    &lt;&#x2F;p&gt;
+
+    &lt;ul&gt;
+        &lt;li&gt;Latitude: &lt;strong id=&quot;locationLat&quot;&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+        &lt;li&gt;Longitude: &lt;strong id=&quot;locationLng&quot;&gt;&lt;&#x2F;strong&gt;&lt;&#x2F;li&gt;
+    &lt;&#x2F;ul&gt;
+&lt;&#x2F;div&gt;</pre>
+
+
+
+</div>
+            </div>
+        </div>
+
+        <div class="yui3-u-1-4">
+            <div class="sidebar">
+                
+
+                
+                    <div class="sidebox">
+                        <div class="hd">
+                            <h2 class="no-toc">Examples</h2>
+                        </div>
+
+                        <div class="bd">
+                            <ul class="examples">
+                                
+                                    
+                                        <li data-description="How to provide autocomplete suggestions from a local array.">
+                                            <a href="ac-local.html">Basic Local Data</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="How to provide autocomplete suggestions using a remote JSONP source.">
+                                            <a href="ac-jsonp.html">Remote Data via JSONP</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="How to provide autocomplete suggestions using a YQL query source.">
+                                            <a href="ac-yql.html">Remote Data via YQL</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="How to provide autocomplete suggestions using a DataSource instance.">
+                                            <a href="ac-datasource.html">Remote Data via DataSource</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="How to implement delimited tag completion.">
+                                            <a href="ac-tagging.html">Tag Completion Using Query Delimiters</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="How to find and select Flickr photos using a YQL source and a custom autocomplete result formatter.">
+                                            <a href="ac-flickr.html">Find Photos on Flickr (Custom Formatting, YQL Source)</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="How to use autocomplete-base to filter a set of existing items on a page.">
+                                            <a href="ac-filter.html">Filter a Set of Existing Items on a Page</a>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li data-description="How to find an address using a YQL source calling Google&#x27;s Geocoding Service">
+                                            <a href="ac-geocode.html">Address Completion on Google&#x27;s Geocoding Service</a>
+                                        </li>
+                                    
+                                
+                            </ul>
+                        </div>
+                    </div>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+
+<script>
+YUI.Env.Tests = {
+    examples: [],
+    project: '../assets',
+    assets: '../assets/autocomplete',
+    name: 'ac-geocode',
+    title: 'Address Completion on Google&#x27;s Geocoding Service',
+    newWindow: '',
+    auto:  false 
+};
+YUI.Env.Tests.examples.push('ac-local');
+YUI.Env.Tests.examples.push('ac-jsonp');
+YUI.Env.Tests.examples.push('ac-yql');
+YUI.Env.Tests.examples.push('ac-datasource');
+YUI.Env.Tests.examples.push('ac-tagging');
+YUI.Env.Tests.examples.push('ac-flickr');
+YUI.Env.Tests.examples.push('ac-filter');
+YUI.Env.Tests.examples.push('ac-geocode');
+
+</script>
+<script src="../assets/yui/test-runner.js"></script>
+
+
+
+</body>
+</html>
