@@ -18,12 +18,17 @@
             // parse post's YAML front matter
             $contents = file_get_contents($file);
             if (preg_match("/^---\s*\n(.*?)\n---\s*\n(.*)$/ms", $contents, $matches)) {
+                // ensure content exists before trying to convert it
+                if (count($matches) !== 3) {
+                    trigger_error("malformed asciidoc file.");
+                    return false;
+                }
+
                 $yaml = yaml_parse($matches[1]);
             }
 
             // parse post's AsciiDoc
             if ($html === true) {
-
                 // pipe post's AsciiDoc into asciidoctor
                 $process = proc_open(
                     join(" ", [
