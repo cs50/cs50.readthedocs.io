@@ -1,0 +1,14 @@
+Current issues:
+    Loading logic:
+        trailing slashes break the path finding (/appliance/17 will render /html/appliance/17.asciidoc, but /appliance/17/ will render a blank page)
+    Mediawiki files:
+        YAML is not added by pandoc, a small wrapper can make this work (FIXED - file name is temporary title)
+        Category at the bottom is left in
+        internal anchors are broken
+        asciidoc warnings are printed out at the top of the page (see appliance/17)
+        some things unsupported
+            multicell tables in appliance/17
+            code/text rendering in api/courses
+            ...
+
+
