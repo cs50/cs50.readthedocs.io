@@ -11,6 +11,8 @@
 
 <html>
     <head>
+        <script type="text/javascript" src="//use.typekit.net/unc2dip.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
         <!-- http://yuilibrary.com/yui/docs/cssreset/ -->
         <link href="/lib/yui-3.10.0/build/cssreset/cssreset-min.css" rel="stylesheet"/>
@@ -47,7 +49,7 @@
     </head>
 
     <body>
-
+        <div id="background"></div>
         <div class="container">
 
             <?php if (isset($yaml["title"])): ?>

@@ -1,0 +1,204 @@
+@import "mixins";
+
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0px auto;
+    padding: 0px;
+    min-width: 700px;
+    max-width: 1200px;
+    font-family: "futura-pt";
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: League Gothic;
+    color: inherit;
+}
+
+h1 {
+    font-size: 2.125em;
+}
+
+h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 1.8em;
+}
+
+h3 {
+    font-size: 1.25em;
+}
+
+#background {
+    width: 100%;
+    height: 100%;
+    background-image: url(/img/low_contrast_linen.png);
+    @include opacity(.9);
+}
+
+#container {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 50px;
+    right: 50px;
+    background-color: white;
+    @include box-shadow(0px 0px 8px #222);
+    overflow: auto;
+    min-width: 700px;
+    max-width: 1200px;
+
+    .sect1 {
+        padding: 0px 0px 10px 0px;
+        margin: 10px 0px 0px 0px;    
+ 
+        .sectionbody {
+            padding: 5px 20px 0px 20px;   
+        
+            > .ulist > ul {
+                margin-bottom: 0px;    
+            }
+        }
+       
+        > h2 {
+            padding: 0px 15px;
+        }
+
+        &:nth-child(6n+1) {
+            > h2 {
+                border-left: 5px solid pink;
+            }
+        }
+        
+        &:nth-child(6n+2) {
+            > h2 {
+                border-left: 5px solid #17B0BD;
+            }
+        }
+        
+        &:nth-child(6n+3) {
+            > h2 {
+                border-left: 5px solid #C69DD6;
+            }
+        }
+        
+        &:nth-child(6n+4) {
+            > h2 {
+                border-left: 5px solid #E4C182;
+            }
+        }
+        
+        &:nth-child(6n+5) {
+            > h2 {
+                border-left: 5px solid #82B5E4;
+            }
+        }
+        
+        &:nth-child(6n+6) {
+            > h2 {
+                border-left: 5px solid #82E4A1;
+            }
+        }
+    }
+
+    > h1 {
+        border-bottom: 1px solid #AAA;
+        //border-bottom: 3px double #CCC;
+        padding-left: 20px;
+        margin-top: .5em;
+    }
+
+    .ulist ul {
+        list-style-type: none;
+    }
+
+    > .ulist > ul {
+        margin: 0px;
+        font-family: League Gothic;
+
+        a {
+            color: #333;
+            text-decoration: none;
+
+            &:hover {
+                color: #888;
+            }
+        }
+
+        > li {
+            position: relative;
+            counter-increment: customlistcounter;
+            margin-bottom: 30px;
+                
+            &:before {
+                // content: counters(customlistcounter, " ", decimal-leading-zero);
+                font-weight: bold;
+                line-height: 1;
+                position: absolute;
+                text-align: right;
+                left: -40px;
+                font-size: 35px;
+                text-shadow: 0px -2px 0px black;
+                color: white;
+                top: 2px;
+            }
+        
+            ul {
+                font-size: 20px;
+            
+                p {
+                    line-height: 1.2;
+                    margin: 0px;
+                }
+            }
+
+            > p {
+                font-size: 35px; 
+                margin: 0px 0px 10px 0px;
+                padding-left: 15px;
+                line-height: 1;
+
+                a {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+              
+            &:nth-child(6n+1) {
+                > p {
+                    border-left: 5px solid pink;
+                }
+            }
+            
+            &:nth-child(6n+2) {
+                > p {
+                    border-left: 5px solid #17B0BD;
+                }
+            }
+            
+            &:nth-child(6n+3) {
+                > p {
+                    border-left: 5px solid #C69DD6;
+                }
+            }
+            
+            &:nth-child(6n+4) {
+                > p {
+                    border-left: 5px solid #E4C182;
+                }
+            }
+            
+            &:nth-child(6n+5) {
+                > p {
+                    border-left: 5px solid #82B5E4;
+                }
+            }
+            
+            &:nth-child(6n+6) {
+                > p {
+                    border-left: 5px solid #82E4A1;
+                }
+            }
+        }
+    }
+}
