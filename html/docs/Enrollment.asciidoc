@@ -1,0 +1,21 @@
+---
+tags: []
+title: Enrollment
+---
+Below is a visualization of CS50's enrollments since the course's
+introduction in 1989. Click bars for more details.
+
+We used Google's
+http://code.google.com/apis/visualization/documentation/gallery/columnchart.html[Column
+Chart] API to make this visualization. (You can too!)
+
+Below is a visualization of CS50's female enrollments since the course's
+introduction in 1989. Click bars for more details.
+
+We used Google's
+http://code.google.com/apis/visualization/documentation/gallery/columnchart.html[Column
+Chart] API to make this visualization. (You can too!)
+
+//
+
+Category:Data

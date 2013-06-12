@@ -1,0 +1,164 @@
+---
+tags: []
+title: ACLs
+---
+__TOC__ Access Control Lists (ACLs) are lists of permissions that can be
+attached to files and directories. They offer finer-grained control than
+chmod alone allows.
+
+Suppose that you (`alice`) are collaborating with two classmates (`bob`
+and `charlie`) on a final project. Rather than tell `bob` and `charlie`
+your cloud account's password, which would give them access to
+everything in your account, you should instead create a directory in
+your account and set up an ACL that gives `bob` and `charlie` access to
+only that directory.
+
+Incidentally, to share a MySQL database (e.g., `alice_project`), it's
+probably simplest to tell your partners your MySQL password; be sure
+that it's not the same as your cloud account's password. You can change
+your MySQL password via https://cloud.cs50.net/phpMyAdmin/[phpMyAdmin].
+If you'd rather not share your MySQL password, email sysadmins@cs50.net
+to make other arrangements.
+
+[[]]
+How to Share a Directory
+------------------------
+
+Suppose that you (`alice`) want to share `~/public_html/project/` with
+`bob` and `charlie` in such a way that, even though the project lives in
+your account, they can work on it too.
+
+First, create `~/public_html/project/` if you haven't already:
+
+`mkdir ~/public_html/project/`
+
+Second, create a default ACL for that directory that any files and
+directories within will subsequently inherit:
+
+`setfacl -m default:user::rwx,default:group::rwx,default:other:--- ~/public_html/project/`
+
+That comma-separated list of "ACL entries" specifies that the
+directory's owner (`user`) and group (i.e., `student`) will be able to
+read (`r`), write (`w`), and execute (`x`) any files and directories
+created within that directory.
+
+Third, give `bob` access to the directory itself:
+
+`setfacl -m user:bob:rwx ~/public_html/project/`
+
+That ACL entry specifies that `bob` can read (`r`), write (`w`), and
+execute (`x`) `~/public_html/project/` itself.
+
+Fourth (assuming you indeed have a second partner), give `charlie`
+access to the directory itself:
+
+`setfacl -m user:charlie:rwx ~/public_html/project/`
+
+That ACL entry specifies that `charlie` can read (`r`), write (`w`), and
+execute (`x`) `~/public_html/project/` itself.
+
+Finally, review the ACL you just configured:
+
+`getfacl ~/public_html/project/`
+
+You should see output like the below. If you don't, best to
+link:#How_to_Unshare_a_Directory[unshare the directory] and try these
+steps again.
+
+`# file: home/alice/public_html/project` +
+`# owner: alice` +
+`# group: student` +
+`user::rwx` +
+`user:bob:rwx` +
+`user:charlie:rwx` +
+`group::---` +
+`mask::rwx` +
+`other::---` +
+`default:user::rwx` +
+`default:group::rwx` +
+`default:other::---`
+
+Thereafter, both `bob` and `charlie` should be able to `cd` into the
+shared directory, as with:
+
+`cd ~alice/public_html/project/`
+
+However, to make their lives easier, tell them to make sure they don't
+already have a `~/public_html/project/` directory of their own; if they
+do, tell them to remove or rename it. Then tell them to execute the
+command below, where `alice` is your username, not theirs. (Don't
+execute this command yourself, else you'll create a symbolic loop!)
+
+`ln -s ~alice/public_html/project ~/public_html/project`
+
+That command will create the illusion, via a symlink, that the project
+lives in their accounts too, even though it actually lives in yours. And
+so they should be able to `cd` with:
+
+`cd ~/public_html/project/`
+
+[[]]
+Troubleshooting
+~~~~~~~~~~~~~~~
+
+Note that any files and directories that you create in
+`~/public_html/project/` must remain readable (`r`), writable (`w`),
+and, if applicable, executable (`x`) not only by you (their owner) but
+also by your group (i.e., `student`) in order for your partners to
+access them. By default, the default ACL you created for
+`~/public_html/project/` should ensure that those permissions are set
+correctly by default. Take care, though, not to revoke permissions from
+your group, as by executing something like:
+
+`chmod 600 foo.php`
+
+The result would be that only you could read and write `foo.php`, and so
+your partners might get *permission denied*. If you do accidentally
+revoke said permissions, you can restore them with something like:
+
+`chmod 660 foo.php`
+
+Take care _not_ to execute something like
+
+`chmod 666 foo.php`
+
+else anyone on the system might be able to read and write `foo.php`.
+
+In case you do goof, here's a summary of the permissions you probably
+want to give to your files to ensure that they're properly shared:
+
+* `chmod 664 *.css`
+* `chmod 664 *.gif`
+* `chmod 664 *.html`
+* `chmod 664 *.jpg`
+* `chmod 664 *.js`
+* `chmod 660 *.php`
+* `chmod 664 *.png`
+* `chmod 771 subdirectory/`
+
+Email help@cs50.net if you need any help.
+
+[[]]
+How to Unshare a Directory
+--------------------------
+
+Suppose that you want to unshare `~/public_html/project/` or goofed when
+trying to link:#How_to_Share_a_Directory[share a directory] and want to
+start over. Simply remove any ACL entries that you added:
+
+`setfacl --remove-all ~/public_html/project/`
+
+Review the changes you've made:
+
+`getfacl ~/public_html/project/`
+
+You should see output like the below:
+
+`# file: home/alice/public_html/project` +
+`# owner: alice` +
+`# group: student` +
+`user::rwx` +
+`group::---` +
+`other::---`
+
+Category:HOWTO

@@ -1,0 +1,6 @@
+---
+tags: []
+title: gcc
+---
+1.  redirect Compiler
+

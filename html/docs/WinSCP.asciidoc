@@ -1,0 +1,82 @@
+---
+tags: []
+title: WinSCP
+---
+*WinSCP* is an open source SFTP client and FTP client for Windows. It
+facilitates secure file transfer.
+
+If you haven't already, head on over to
+http://winscp.net/eng/download.php and download the installation
+package. Once downloaded, double-click the icon to run and install. It's
+fine to breeze through, leaving the defaults (do watch for third-party
+recommendations and select no if you don't want extra, irrelevant
+software).
+
+Like SSH'ing, you'll be SFTP'ing to cloud.cs50.net.
+
+[[]]
+Starting a Session
+^^^^^^^^^^^^^^^^^^
+
+After launching the program by double-clicking its icon, you should see
+a window like the following:
+
+image:WSCPLogin.jpg[WSCPLogin.jpg,title="image"]
+
+For the host name, type *cloud.cs50.net*. Type in your cloud username
+and password for future convenience. Leave the port number and other
+settings be, as seen below:
+
+image:WSCPSession.jpg[WSCPSession.jpg,title="image"]
+
+Hit *Save* to save the session. You'll be prompted to name the session;
+leaving it as cloud.cs50.net is fine. Hit *OK* and you should be a
+window similar to that below, showing your stored (saved) sessions:
+
+image:WSCPStored.jpg[WSCPStored.jpg,title="image"]
+
+Double-click the cloud.cs50.net session to connect. A window should
+appear to show connection status. If a warning like that below appears,
+click *Yes*.
+
+image:WSCPKey.jpg[WSCPKey.jpg,title="image"]
+
+If your username and password weren't saved, you'll be prompted here to
+enter it in a text field, like:
+
+image:WSCPun.jpg[WSCPun.jpg,title="image"]
+image:WSCPpwd.jpg[WSCPpwd.jpg,title="image"]
+
+[[]]
+Transferring Files
+^^^^^^^^^^^^^^^^^^
+
+After logging in, you should be at the main screen, something like:
+
+image:WSCPMain.jpg[WSCPMain.jpg,title="image"]
+
+with your computer's directories in one window (on the left by default),
+and your cloud directories in the other (commonly on the right). To
+transfer files, use the drop-down menu or double-click the appropriate
+folders to navigate to the directories where your file to transfer is in
+one window, and where you want to transfer to in the other. (If you need
+to create one or more directories in the window, simply left click
+within the window and click *Create Directory* at the bottom of the main
+window, or press F7.)
+
+image:WSCPNavi.jpg[WSCPNavi.jpg,title="image"]
+
+Once you've your desired file to transfer in one window and directory to
+transfer to in the other, drag the file(s) from one window (e.g. your
+computer's directories) to the other (e.g. cloud directories). You'll
+get a window like that below confirming the file you want to copy over
+and where you'll be copying it to.
+
+image:WSCPCopy.jpg[WSCPCopy.jpg,title="image"]
+
+Confirm by hitting *Copy*. A progress window should show up as the
+transfer happens, disappearing when done, so you'll see the main window
+again. Your file should now be all transferred. =)
+
+(Keyboard shortcuts should work too, e.g. ctrl+c for copy and ctrl+v for
+pasting.)

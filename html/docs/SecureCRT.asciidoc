@@ -1,0 +1,63 @@
+---
+tags: []
+title: SecureCRT
+---
+SecureCRT is a commercial SSH client for Windows for which Harvard has a
+site license. It's installed on most PCs in labs on campus, but, on your
+own PC, best to install link:PuTTY HOWTO[ PuTTY] instead (since you can
+continue using it after you leave Harvard). To run SecureCRT, simply
+double-click its icon. You should see a window like the below.
+
+image:Crt0.jpg[Crt0.jpg,title="image"]
+
+Let's add *cloud.cs50.net* to the list. Click the third icon (from the
+right) on top for a *New Session*. Click *Next*, and type
+*cloud.cs50.net* for the Hostname. Go *Next*, then *Finish*. You should
+now see cloud.cs50.net under Sessions, like below:
+
+image:Crt1.jpg[Crt1.jpg,title="image"]
+
+Let's make a few changes to its configuration, though. (Because PCs in
+labs on campus tend to reset themselves after you log out, you may need
+to make these changes every time you use SecureCRT.) Right-click
+*cloud.cs50.net*, then choose *Properties*. In the window that appears,
+click *Emulation* under *Terminal*, then select *Linux* from the
+drop-down menu to the left of *ANSI color*. (The box immediately to the
+left of *ANSI Color* should become checked automatically.) Then input
+*32000* next to *Scrollback buffer*. Your window should ultimately
+resemble the below.
+
+image:Crt2.jpg[Crt2.jpg,title="image"]
+
+Next click *Emacs* under *Emulation* and check *Use ALT as meta key*,
+per the below.
+
+image:Crt3.jpg[Crt3.jpg,title="image"]
+
+Next click *Mapped Keys* under *Emulation* and check *Backspace sends
+delete*, per the below.
+
+image:Crt4.jpg[Crt4.jpg,title="image"]
+
+Then click *OK*. You should be returned to the window below.
+
+image:Crt5.jpg[Crt5.jpg,title="image"]
+
+To actually SSH to a server, double-click, e.g., *cloud.cs50.net*. If
+you see a window like the below, click *Accept & Save*.
+
+image:Crt6.jpg[Crt6.jpg,title="image"]
+
+Type your own username when prompted, as in the below, then click *OK*.
+
+image:Crt7.jpg[Crt7.jpg,title="image"]
+
+Then type your password, as in the below, then click *OK*.
+
+image:Crt8.jpg[Crt8.jpg,title="image"]
+
+You should then find yourself at the server's prompt, as in the below!
+
+image:Crt9.jpg[Crt9.jpg,title="image"]
+
+Category:HOWTO

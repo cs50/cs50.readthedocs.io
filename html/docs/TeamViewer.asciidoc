@@ -1,0 +1,119 @@
+---
+tags: []
+title: TeamViewer
+---
+TeamViewer is free software with which CS50 staff can connect to your
+computer so as to see your screen and even control your mouse in order
+to troubleshoot problems you're having. CS50 staff can only connect to
+your computer if you actually run TeamViewer _and_ provide us with the
+unique ID and temporary password that TeamViewer assigns to you upon
+launch. Once you quit TeamViewer, we can no longer connect. And the next
+time you launch TeamViewer, it should assign you a new password so that
+the old one no longer works.
+
+If you only wish to share your terminal window with CS50 staff, you
+should use tunnel50 instead.
+
+[[]]
+How to Use
+----------
+
+[[]]
+Inside CS50 Appliance
+~~~~~~~~~~~~~~~~~~~~~
+
+If asked by CS50 staff to connect to your link:CS50 Appliance[appliance]
+(and not to your actual PC or Mac):
+
+1.  Start the appliance.
+2.  Select *Menu > TeamViewer* (or, if present instead, *Menu > Share
+Screen*).
+3.  If prompted with a *TeamViewer License Agreement*, click *Accept
+License Agreement*.
+4.  A window entitled *TeamViewer* should appear. Beneath *Wait for
+session* should be an *ID* and *Password*. Provide CS50 staff with that
+ID and password (as via email, IM, or a private post to
+http://help.cs50.net/[help.cs50.net]).
+
+[[]]
+On Windows
+~~~~~~~~~~
+
+If asked by CS50 staff to connect to your PC (and not to the
+link:CS50 Appliance[CS50 Appliance] itself):
+
+1.  If you haven't already installed TeamViewer:
+1.  Download TeamViewer from http://www.teamviewer.com/en/download/, if
+you haven't already. *Take care not to download a beta version.* If
+asked whether you *want to run or save this file*, click *Save*.
+2.  Double-click the file you just downloaded. If asked whether you
+*want to run this file*, click *Run*.
+3.  A window entitled *Welcome to TeamViewer* should then appear.
+4.  If not selected already, select *Install*, then click *Next*.
+5.  If asked whether you *want to allow the following program to make
+changes to this computer*, click *Yes*.
+6.  When asked how you *want to use TeamViewer*, select *personal /
+non-commercial use*, then click *Next*.
+7.  When asked to *review the license terms*, check both boxes in
+agreement, then click *Next*.
+8.  When asked if you *want remote access to the computer you are
+installing TeamViewer on*, select *No* (if not already selected), then
+click *Next*.
+9.  A few seconds or minutes later, a window entitled *TeamViewer*
+should appear.
+2.  If not already running, launch TeamViewer via the *TeamViewer 6*
+icon on your desktop. A window entitled *TeamViewer* should appear.
+3.  Beneath *Allow Remote Control* should be *Your ID* and *Password*.
+Provide CS50 staff with that ID and password (as via email, IM, or a
+private post to http://help.cs50.net/[help.cs50.net]).
+
+[[]]
+On Mac OS
+~~~~~~~~~
+
+If asked by CS50 staff to connect to your Mac (and not to the
+link:CS50 Appliance[CS50 Appliance] itself):
+
+1.  If you haven't already installed TeamViewer:
+1.  Download TeamViewer from http://www.teamviewer.com/en/download/, if
+you haven't already. *Take care not to download a beta version.*
+2.  Double-click the file you just downloaded. You may see a window that
+says *Verifying...* after which a *TeamViewer* icon should appear on
+your desktop (or on the lefthand side of a Finder window).
+3.  Double-click the which a *TeamViewer* icon on your desktop (or
+single-click the icon on the lefthand side of a Finder window). A window
+entitled *TeamViewer* containing *TeamViewer.app* and *Applications*
+should then appear.
+4.  Drag *TeamViewer.app* into *Applications*.
+5.  Close the window entitled *TeamViewer*.
+6.  Drag the *TeamViewer* icon on your desktop to the trash icon in your
+dock (which will become an eject symbol once you start dragging the
+icon) or click the eject symbol next to *TeamViewer* in the lefthand
+side of a Finder window.
+2.  Launch TeamViewer via *Applications > TeamViewer*.
+3.  Another window entitled *TeamViewer* should appear. Beneath *Allow
+Remote Control* should be an *ID* and *Password*. Provide CS50 staff
+with that ID and password (as via email, IM, or a private post to
+http://help.cs50.net/[help.cs50.net]).
+
+[[]]
+On Linux
+~~~~~~~~
+
+If asked by CS50 staff to connect to your PC (and not to the
+link:CS50 Appliance[CS50 Appliance] itself):
+
+1.  If you haven't already installed TeamViewer:
+1.  Download TeamViewer from http://www.teamviewer.com/en/download/, if
+you haven't already. *Take care not to download a beta version.*
+2.  Install the file you just downloaded in a manner consistent with
+your distribution (as with `dpkg`, `rpm`, or `yum`).
+2.  Launch TeamViewer.
+3.  If prompted with a *TeamViewer License Agreement*, click *Accept
+License Agreement*.
+4.  A window entitled *TeamViewer* should appear. Beneath *Wait for
+session* should be an *ID* and *Password*. Provide CS50 staff with that
+ID and password (as via email, IM, or a private post to
+http://help.cs50.net/[help.cs50.net]).
+
+Category:HOWTO

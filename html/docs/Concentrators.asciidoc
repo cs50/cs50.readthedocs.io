@@ -1,0 +1,31 @@
+---
+tags: []
+title: Concentrators
+---
+Below is a visualization of the number of concentrators in Computer
+Science since the concentration's introduction in 1984. In green are
+graduates whose primary field (i.e., major) was Computer Science. In
+yellow are graduates with joint concentrations whose "secondary
+concentration" was Computer Science or whose secondary field (i.e.,
+minor) was Computer Science; the Faculty of Arts and Sciences introduced
+"secondary fields" in 2007.
+
+*Data for the classes of 2013, 2014, and 2015 are incomplete (until
+those classes' graduations).*
+
+We used Google's
+http://code.google.com/apis/visualization/documentation/gallery/columnchart.html[Column
+Chart] API to make this visualization. (You can too!) Click bars for
+more details.
+
+Below is a visualization of the percentage of female concentrators in
+Computer Science since the concentration's introduction in 1984.
+
+We used Google's
+http://code.google.com/apis/visualization/documentation/gallery/columnchart.html[Column
+Chart] API to make this visualization. (You can too!) Click bars for
+more details.
+
+//
+
+Category:Data

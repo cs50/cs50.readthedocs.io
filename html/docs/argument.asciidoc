@@ -1,0 +1,54 @@
+---
+tags: []
+title: argument
+---
+An *argument*, or a parameter, is something (e.g. a variable, a pointer,
+a piece of data) that is passed into a function. The function can then
+use the parameter in its execution. Depending on what the function
+takes, multiple arguments may be passed in separated by commas.
+
+For example,
+
+code,c------------------------------ code,c
+ printf("Hello, %s!\n", str); 
+------------------------------
+
+is a call to link:printf[`printf()`], a function included in the
+standard input/output library (`stdio`), passing in two arguments: the
+string `"Hello, %s!\n"`, and the variable `str`. `printf()` then takes
+the two, does its magic and volia! Your sentence prints to screen.
+
+Functions that you write may take parameters as well (they are
+link:Function[functions], after all). A familiar example should be
+link:main#int_main.28int_argc.2C_char_.2Aargv.5B.5D.29[`main()`'s
+parameters], or the `swap()` we love making an example of:
+
+code,c-------------------------- code,c
+ #include <stdio.h>
+
+// function prototype 
+void swap(int *a, int *b);
+
+int main(void)
+{
+    int x = 50;
+    int y = 61;
+
+    swap(&x, &y);
+}
+
+// Swap function:
+void swap(int *a, int *b)
+{
+    int tmp = *a;
+    *a = *b;
+    *b = tmp;
+}
+--------------------------
+
+Here, we call `swap()` in `main()`, passing two arguments: the address
+of `x` and the address of `y`. These two arguments are then used in
+`swap()` (albeit, renamed as `a` and `b` respectively) to, ultimately,
+exchange the values of x and y.
+
+Category: Week 1[Category: Week 1] Category: Week 2[Category: Week 2]

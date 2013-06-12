@@ -1,0 +1,28 @@
+---
+tags: []
+title: ABRDs
+---
+[cols=",,,,,,,,",]
+|=======================================================================
+|*Crimson Yard* |Suzanne Duke |crimson-rd@fas.harvard.edu |+ |*Elm Yard*
+|Sue Brown |elm-rd@fas.harvard.edu |+ |*Ivy Yard* |William Cooper
+|ivy-rd@fas.harvard.edu
+|=======================================================================
+
+[cols=",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",]
+|=======================================================================
+|*Adams House* |Sharon Howell |ad-abrd@fas.harvard.edu |+ |*Cabot House*
+|Jill Constantino |ca-abrd@fas.harvard.edu |+ |*Currier House*
+|Katherine Stanton |cu-abrd@fas.harvard.edu |+ |*Dudley House* |Karen
+Flood |dd-abrd@fas.harvard.edu |+ |*Dunster House* |Carlos Diaz
+|dn-abrd@fas.harvard.edu |+ |*Eliot House* |Michael Canfield
+|el-abrd@fas.harvard.edu |+ |*Kirkland House* |David Smith
+|ki-abrd@fas.harvard.edu |+ |*Leverett House* |Lauren Brandt
+|le-abrd@fas.harvard.edu |+ |*Lowell House* |Brett Flehinger
+|lo-abrd@fas.harvard.edu |+ |*Mather House* |Laura Schlosberg
+|ma-abrd@fas.harvard.edu |+ |*Pforzheimer House* |Lisa Boes
+|pf-abrd@fas.harvard.edu |+ |*Quincy House* |Judith Flynn Chapman
+|qu-abrd@fas.harvard.edu |+ |*Winthrop House* |Gregg Peeples
+|wi-abrd@fas.harvard.edu
+|=======================================================================
+

@@ -1,0 +1,29 @@
+---
+tags: []
+title: Cyberduck
+---
+Cyberduck is a free SFTP client for Mac OS that you can download from
+http://cyberduck.ch/[http://cyberduck.ch/]. Once downloaded, drag
+*Cyberduck.app* from your *Downloads* folder (or wherever you saved it)
+to your *Applications* folder.
+
+Once installed, launch Cyberduck, and you should see a window like the
+below.
+
+image:Cyberduck0.png[Cyberduck0.png,title="image"]
+
+Proceed to click *Bookmarks* at top-left, then click the plus (*+*) icon
+at bottom-right. Configure the window that appears per the below, where
+*username* is your own username on `cloud.cs50.net`. Take care to select
+*SFTP (SSH File Transfer Protocol)* via the drop-down menu at the top of
+the window.
+
+image:Cyberduck1.png[Cyberduck1.png,title="image"]
+
+Then close the smaller of the two windows and double-click
+*cloud.cs50.net* in the original window. Provide your password when
+prompted. You should then see the contents of your home directory. You
+can then proceed to drag and drop files to and from your own desktop.
+Explore the program's menus for additional features.
+
+Category:HOWTO

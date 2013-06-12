@@ -1,0 +1,246 @@
+---
+tags: []
+title: cloud08
+---
+[[]]
+Back-End VM (192.168.1.21)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[[]]
+/root/back.sh
+^^^^^^^^^^^^^
+
+-------------------------------------------------------
+#!/bin/sh
+
+echo 80 lvs >>/etc/iproute2/rt_tables
+ip route add default via 192.168.1.1 dev tun0 table lvs
+ip rule add from 192.168.1.21 table lvs
+-------------------------------------------------------
+
+[[]]
+/etc/fstab
+^^^^^^^^^^
+
+--------------------------------------------------------------------------
+/dev/sda1               /                       ext3    defaults 1 1
+/dev/sda2               /mnt                     ext3    defaults 0 0
+/dev/sda3               swap                    swap    defaults 0 0
+none                    /dev/pts                devpts  gid=5,mode=620 0 0
+none                    /dev/shm                tmpfs   defaults 0 0
+none                    /proc                   proc    defaults 0 0
+none                    /sys                    sysfs   defaults 0 0
+192.168.1.1:/home       /home   nfs     rw      0       0
+192.168.1.1:/scratch    /scratch        nfs     rw      0       0
+192.168.1.1:/snapshots  /snapshots      nfs     ro      0       0
+--------------------------------------------------------------------------
+
+[[]]
+/etc/security/limits.conf
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+------------------------------------------
+*        hard    as              500000
+*        hard    cpu             10
+mtucker  hard    fsize           unlimited
+*        hard    fsize           100000
+*        hard    core            2000
+*        hard    nproc           20
+------------------------------------------
+
+[[]]
+vtund.conf
+^^^^^^^^^^
+
+--------------------------------------------------------
+# vtund -n -s -f vtund.conf
+
+options {
+   port 5000;
+   ifconfig   /sbin/ifconfig;
+}
+default {
+   compress no;   # Compression is off
+   encrypt no;    # ssh does the encryption
+   speed 0;       # By default maximum speed
+   keepalive yes;
+   stat yes;
+}
+
+21 {
+   passwd PASSWORD;
+   type tun;
+   proto tcp;
+   up {
+     ifconfig
+     "%% 192.168.1.21 pointopoint 192.168.1.1 mtu 1450";
+   };
+   down {
+     ifconfig "%% down";
+   };
+}
+--------------------------------------------------------
+
+[[]]
+Front-End VM (192.168.1.1)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[[]]
+front.sh
+^^^^^^^^
+
+------------------------------------------------------------------
+#!/bin/sh
+
+echo "1" >/proc/sys/net/ipv4/ip_forward
+echo "0" >/proc/sys/net/ipv4/conf/all/send_redirects
+echo "0" >/proc/sys/net/ipv4/conf/default/send_redirects
+echo "0" >/proc/sys/net/ipv4/conf/eth0/send_redirects
+echo "0" >/proc/sys/net/ipv4/conf/tun0/send_redirects
+
+ipvsadm -C
+ipvsadm -A -t 10.253.131.161:22 -s wlc
+ipvsadm -a -t 10.253.131.161:22 -r 192.168.1.20:22 -m -w 1
+ipvsadm -a -t 10.253.131.161:22 -r 192.168.1.22:22 -m -w 1
+
+iptables -t nat -F
+iptables -t nat -A POSTROUTING -o eth0 -j SNAT --to 10.253.131.161
+------------------------------------------------------------------
+
+[[]]
+vtund.conf
+^^^^^^^^^^
+
+--------------------------------------------------------
+# vtund -n -f vtund.conf CONFIG HOSTNAME
+
+options {
+   port 5000;
+   ifconfig   /sbin/ifconfig;
+}
+default {
+   compress yes;   # Compression is off
+   encrypt yes;    # ssh does the encryption
+   speed 0;       # By default maximum speed
+   keepalive yes;
+   stat yes;
+}
+
+2 {
+   passwd 34j34kjsdf9878u34kjkj;
+   type tun;
+   proto tcp;
+   up {
+     ifconfig
+     "%% 192.168.1.1 pointopoint 192.168.1.2 mtu 1450";
+   };
+   down {
+     ifconfig "%% down";
+   };
+}
+
+panel {
+   passwd PASSWORD;
+   type tun;
+   proto tcp;
+   up {
+     ifconfig
+     "%% 192.168.1.1 pointopoint 192.168.2.1 mtu 1450";
+   };
+   down {
+     ifconfig "%% down";
+   };
+}
+
+10 {
+   passwd PASSWORD;
+   type tun;
+   proto tcp;
+   up {
+     ifconfig
+     "%% 192.168.1.1 pointopoint 192.168.1.10 mtu 1450";
+   };
+   down {
+     ifconfig "%% down";
+   };
+}
+
+
+11 {
+   passwd PASSWORD;
+   type tun;
+   proto tcp;
+   up {
+     ifconfig
+     "%% 192.168.1.1 pointopoint 192.168.1.11 mtu 1450";
+   };
+   down {
+     ifconfig "%% down";
+   };
+}
+
+20 {
+   passwd PASSWORD;
+   type tun;
+   proto tcp;
+   up {
+     ifconfig
+     "%% 192.168.1.1 pointopoint 192.168.1.20 mtu 1450";
+   };
+   down {
+     ifconfig "%% down";
+   };
+}
+
+21 {
+   passwd PASSWORD;
+   type tun;
+   proto tcp;
+   up {
+     ifconfig
+     "%% 192.168.1.1 pointopoint 192.168.1.21 mtu 1450";
+   };
+   down {
+     ifconfig "%% down";
+   };
+}
+
+22 {
+   passwd PASSWORD;
+   type tun;
+   proto tcp;
+   up {
+     ifconfig
+     "%% 192.168.1.1 pointopoint 192.168.1.22 mtu 1450";
+   };
+   down {
+     ifconfig "%% down";
+   };
+
+
+23 {
+   passwd PASSWORD;
+   type tun;
+   proto tcp;
+   up {
+     ifconfig
+     "%% 192.168.1.1 pointopoint 192.168.1.23 mtu 1450";
+   };
+   down {
+     ifconfig "%% down";
+   };
+}
+
+24 {
+   passwd PASSWORD;
+   type tun;
+   proto tcp;
+   up {
+     ifconfig
+     "%% 192.168.1.1 pointopoint 192.168.1.24 mtu 1450";
+   };
+   down {
+     ifconfig "%% down";
+   };
+}
+--------------------------------------------------------

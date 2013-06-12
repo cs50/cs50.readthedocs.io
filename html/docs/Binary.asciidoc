@@ -1,0 +1,98 @@
+---
+tags: []
+title: Binary
+---
+[[]]
+About
+~~~~~
+
+Binary is a number system that computers use in all functions including
+(but not limited to) storing data, performing computations, and output
+to a user. Binary numbers consist entirely of 1s and 0s, called
+link:Bit[bits], though normally we refer to a link:Bit[byte], which is 8
+bits.
+
+Counting is handled differently since it is a different number system
+from decimal. For example:
+
+[cols=",",options="header",]
+|===============
+|Decimal |Binary
+|0 |0
+|1 |1
+|2 |10
+|3 |11
+|4 |100
+|5 |101
+|6 |110
+|7 |111
+|8 |1000
+|9 |1001
+|10 |1010
+|11 |1011
+|===============
+
+Each place in a decimal number can be one of 10 different numbers, which
+is why we'd call decimal a base-10 system. Binary, on the other hand, is
+base-2 as it can only have 2 different numbers in each place.
+
+Computers can store other types of data by using encoding schemes. For
+example, a computer might use ASCII to encode letters and characters in
+binary.
+
+[[]]
+Conversion
+~~~~~~~~~~
+
+It is possible to convert binary to decimal numbers and vice versa.
+Typically, we'd say that decimal has "ones", "tens", "hundreds", etc.,
+places. Since binary is base-2, we instead have "ones", "twos", "fours",
+"eights", etc., places. In other words, a new place is required for
+every increase in the power of 2 of a number, rather than an increase in
+a power of 10 as with decimal. Using this knowledge allows us to perform
+conversions both ways.
+
+[[]]
+Binary to Decimal
+^^^^^^^^^^^^^^^^^
+
+To convert a binary number to decimal, we just need to add up the powers
+of two that make up the binary number. For example, to convert the
+binary number 10101 to decimal, we would do the following:
+
+[cols=",,,,,",options="header",]
+|================================================
+|Binary  |1 |0 |1 |0 |1
+|Place  |sixteens |eights |fours |twos |ones
+|Decimal  |1×2^4^ |0×2^3^ |1×2^2^ |0×2^1^ |1×2^0^
+|================================================
+
+To do the conversion, we add up the decimal values:
+
+1×2^4^ + 0×2^3^ + 1×2^2^ + 0×2^1^ + 1×2^0^ = 21
+
+The binary number 10101, then, is equivalent to the decimal number 21.
+
+[[]]
+Decimal to Binary
+^^^^^^^^^^^^^^^^^
+
+To convert a decimal number to binary, we divide the number by 2 and use
+the remainder to determine the value in binary at the least significant
+place. We then take the quotient, and divide it by 2 to find the next
+binary digit, and repeat until we get a quotient of zero. For example,
+to convert the decimal number 19 to binary, we would do the following:
+
+-----------------------------
+19 / 2 = 9 with a remainder 1
+ 9 / 2 = 4 with a remainder 1
+ 4 / 2 = 2 with a remainder 0
+ 2 / 2 = 1 with a remainder 0
+ 1 / 2 = 0 with a remainder 1
+-----------------------------
+
+Once we reach a result of 0, we're done. Now, we read our binary number
+going from the bottom up. In other words, the number 19 in binary is
+10011.
+
+Category:Week 0[Category:Week 0]

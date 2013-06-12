@@ -1,0 +1,132 @@
+---
+tags: []
+title: Global_Variable
+---
+A global variable is a variable whose scope is global, meaning it can be
+accessed anywhere in a program by any function. In C, global variables
+are declared before the definition of `main`:
+
+code,c--------------------------- code,c
+int num_open_files = 0;
+
+int
+main(int argc, char *argv[]
+{
+    // your program here
+}
+---------------------------
+
+Global variables are stored in the data segment of a program's memory.
+Conceptually, as we've visualized a program's memory as vertical, this
+data segment is at the top, below the text segment of the program (which
+contains the actual source code) and above the heap.
+
+Global variables are useful if you have multiple functions that you want
+to manipulate a single variable. If you use a global variable, each
+function can manipulate it without having been passed it as an argument.
+For example:
+
+code,c-----------------------------------------------------------------
+code,c
+FILE *
+OpenFile()
+{   
+    char *filename = sprintf("some_file_%d.txt", num_open_files);
+    num_open_files++;
+    return fopen(filename, "w");
+}
+
+int
+CloseFile(FILE *fileptr)
+{
+    fclose(fileptr);
+    num_open_files--;
+}
+-----------------------------------------------------------------
+
+Global variables are generally considered bad style because they are
+easy to lose track of. If your program includes several source files,
+one of which defines a global variable, you may unknowingly declare a
+new local variable that has the same name as that global variable. This
+is known as shadowing a variable and is an acceptable practice as long
+as you do it knowingly. For example, even though we have a global
+variable named `num_open_files`, we can declare a local variable of the
+same name within a different function without affecting the value of the
+global variable:
+
+code,c--------------------------------- code,c
+int
+Shadow()
+{
+    int num_open_files = 5;
+    
+    printf("%d", num_open_files);
+}
+---------------------------------
+
+This function will print the number 5 no matter what the value of the
+global variable `num_open_files` is.
+
+Take a look at a full program that uses the functions defined above:
+
+code,c-----------------------------------------------------------------
+code,c
+#include <stdio.h>
+
+int num_open_files = 0;
+
+int
+main(int argc, char *argv[]
+{
+    FILE *fileptr = OpenFile();
+    FILE *fileptr2 = OpenFile();
+    
+    printf("%d\n", num_open_files);
+    
+    Shadow();
+    
+    CloseFile(fileptr);
+    CloseFile(fileptr2);
+    
+    printf("%d\n", num_open_files);
+    
+    return 0;
+}
+
+FILE *
+OpenFile()
+{   
+    char *filename = sprintf("some_file_%d.txt", num_open_files);
+    num_open_files++;
+    return fopen(filename, "w");
+}
+
+int
+CloseFile(FILE *fileptr)
+{
+    fclose(fileptr);
+    num_open_files--;
+}
+
+int
+Shadow()
+{
+    int num_open_files = 5;
+    printf("%d\n", num_open_files);
+}
+-----------------------------------------------------------------
+
+As you can hopefully see, the use of a global variable is not necessary
+for this program. We could've chosen either to pass a variable local to
+`main` to these functions (by reference) or to increment and decrement
+the number of open files within `main` itself.
+
+The output of this program would be as follows:
+
+-
+2
+5
+0
+-
+
+Category: Week 2[Category: Week 2]

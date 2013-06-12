@@ -1,0 +1,156 @@
+---
+tags: []
+title: Debugging
+---
+__FORCETOC__ Debugging is the process of discovering and fixing errors
+in code which lead to unexpected and incorrect behaviors, known
+colloquially as "bugs," in your program. Debugging can often be tedious
+which is why we encourage you to follow certain conventions and to
+practice good design and style. If your code is properly formatted,
+well-commented, and well-designed, you'll have a much easier time
+debugging it.
+
+[[]]
+`printf` Statements
+-------------------
+
+The simplest way of debugging a program is inserting `printf` statements
+at key places. Consider the following lines of code:
+
+code,C---------------------- code,C
+int i = 0;
+while (i < 10)
+{
+    SomeFunction();
+}
+
+printf("We're done!");
+----------------------
+
+Clearly our intent here is to call `SomeFunction` ten times and then to
+print out a statement indicating that the loop is finished. If we
+execute these lines of code, however, we never actually observe the
+"We're done!" statement.
+
+To figure out what's going wrong, let's try printing something out
+within the loop so we can make sure it's executing:
+
+code,C---------------------- code,C
+int i = 0;
+while (i < 10)
+{
+    SomeFunction();
+    printf("%d\n", i);
+}
+
+printf("We're done!");
+----------------------
+
+When we execute these lines of code, we'll see the number 0 printed over
+and over again and it will be clear that we need to add a line within
+the loop that adds one to `i`.
+
+[[]]
+Isolating the Problem
+---------------------
+
+If you've recently added a large chunk of code to your program or you
+haven't tried executing it in a while, you may be at a loss as to where
+to begin debugging if you suddenly find your program failing. Your best
+course of action is to isolate the problem by running your program in
+bits and pieces. For example, let's say we have the following lines of
+code:
+
+code,C---------------------- code,C
+int i = 0;
+while (i < 10)
+{
+    SomeFunction();
+    i++;
+}
+
+BuggyFunction();
+
+printf("We're done!");
+----------------------
+
+Let's assume that when we execute these lines of code, we get a
+segmentation fault. How do we determine which part of the program caused
+the segmentation fault? We can begin by isolating the problem like so:
+
+code,C---------------------- code,C
+int i = 0;
+while (i < 10)
+{
+    SomeFunction();
+    i++;
+}
+
+//BuggyFunction();
+
+printf("We're done!");
+----------------------
+
+Now we see that the program executes just fine and the "We're done!"
+statement is printed. Clearly, then, the problem lies in the code of
+`BuggyFunction` which we now can investigate.
+
+[[]]
+GDB
+---
+
+*GDB,* or the http://www.gnu.org/software/gdb/[GNU Project Debugger], is
+a program that allows you to step through your program while it's
+executing and thus to examine its state at runtime.
+
+To use GDB to its full effect, you should compile your program with the
+`-ggdb` flag, which tells the compiler to insert special markers in the
+binary which GDB can interpret. Know that compiling your program with
+this flag will add to its size, so when your program is ready for
+production, you should recompile it without this flag.
+
+To run GDB, execute the following command:
+
+`
+gdb a.out
+`
+
+`a.out`, of course, should be the name of your program's binary.
+
+Having executed this command, you'll be presented with a prompt. Typing
+`run` at this prompt will execute your program as normal. If we did so
+with the program in the previous section, we would see an error message
+indicating that the program exited with a segmentation fault. Now that
+we've narrowed down the cause of the segmentation fault to
+`BuggyFunction`, we can poke around in it using GDB. At the GDB prompt,
+we type the following:
+
+`
+break BuggyFunction
+`
+
+This tells GDB to pause execution of the program when it reaches
+`BuggyFunction`. Now, when we type `run` at the prompt, GDB will tell us
+that we've reached the breakpoint which we previously set at the
+beginning of `BuggyFunction`. From here, we can use commands like `list`
+to see the lines of code surrounding our current place, `next` or `step`
+to move forward one line at a time, `continue` to resume execution of
+the program until another breakpoint is reached, and `print` to view the
+contents of variables.
+
+GDB can also be used to examine the `core` files which are created by
+segmentation faults. Simply run the following command:
+
+`
+gdb a.out core
+`
+
+Again, `a.out` is the name of your program's binary. Once you've
+executed this command, you'll be presented with the familiar GDB prompt.
+The most useful command you'll find is `backtrace` which will allow you
+to examine the stack at the time your program exited abnormally.
+
+For more on GDB, check out the https://www.cs50.net/resources/[Resources
+page] on the course website.
+
+Category: Week 3[Category: Week 3]

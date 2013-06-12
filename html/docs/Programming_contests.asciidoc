@@ -1,0 +1,62 @@
+---
+tags: []
+title: Programming_contests
+---
+[[]]
+http://www.ecs.csus.edu/pc2/[PC^2^]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This seems like a pretty popular option. According to the website, it is
+the system that the http://cm.baylor.edu/welcome.icpc[ACM-ICPC] uses.
+The entire thing runs in Java, has a score board, works with C, and we'd
+be able to run it on our own website. Unfortunately, it is not
+open-source, so we'd be somewhat stuck with what we get. Also, I'm not
+really sure how geared it is toward the types of contests we might run,
+so I'd have to look more into how tweakable the stuff is if this is the
+best-looking option.
+
+[[]]
+http://spoj.pl[SPOJ]
+~~~~~~~~~~~~~~~~~~~~
+
+Another supposedly popular one, but with this one they only run
+exclusively on their own website. Maybe it's not a good sign that as I'm
+trying to look at the site right now it's not loading. So anyway, from
+what I remember we could have our own "group" with just a quick email
+and we'd give the password out for contests in CS50 so they can access
+the contest problems and what not. They support tons of languages, so
+it's nothing we'd have to worry about. To be honest, the site didn't
+seem that great, but it's possible that with access to the "create a
+contest" tools it could be really intuitive.
+
+[[]]
+`code.google.com` options
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The advantage to these options is that we'd have the source code in our
+hands, and would consequently be able to implement things to our liking.
+On the other hand, it's hard to tell exactly how real-world tested they
+are compared to the two above. Both of them seem fairly similar since
+they describe themselves in such abstract terms.
+
+[[]]
+http://code.google.com/p/codechecker/[codechecker]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This one seems somewhat better than the latter. It was updated only 3
+days ago, so they seem to be on top of working on it. They have a more
+thorough documentation and a relatively simple setup.
+
+[[]]
+http://code.google.com/p/hackzor/[Hackzor]
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This one hasn't been updated in about a year, so I'm not really sure
+finished of a product it is. Either way, looking at the source code, it
+could be a good framework.
+
+[[]]
+http://topcoder.com[TopCoder] and http://codechef.com[CodeChef]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+For comprehensiveness, there's always these options too.

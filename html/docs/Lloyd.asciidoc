@@ -1,0 +1,221 @@
+---
+tags: []
+title: Lloyd
+---
+[[]]
+Resources (2012)
+~~~~~~~~~~~~~~~~
+
+Any TF may use these resources, just please don't remove my name from
+the materials if you use them as-is!
+
+[[]]
+Practice Problems
+^^^^^^^^^^^^^^^^^
+
+* *Practice Problems - Week 5*
+** Media:PracProb5-2012.pdf[PDF version]
+** Media:PracProb5-2012.zip[LaTeX source (ZIP)]
+
+* *Practice Problems - Week 5 (Sample Solutions)*
+** Media:PracProb5Sols-2012.pdf[PDF version]
+** Media:PracProb5Sols-2012.zip[LaTeX source (ZIP)]
+
+* *Practice Problems - Week 4*
+** Media:PracProb4-2012.pdf[PDF version]
+** Media:PracProb4-2012.zip[LaTeX source (ZIP)]
+
+* *Practice Problems - Week 4 (Sample Solutions)*
+** Media:PracProb4Sols-2012.pdf[PDF version]
+** Media:PracProb4Sols-2012.zip[LaTeX source (ZIP)]
+
+* *Practice Problems - Week 3*
+** Media:PracProb3-2012.pdf[PDF version]
+** Media:PracProb3-2012.zip[LaTeX source (ZIP)]
+
+* *Practice Problems - Week 3 (Sample Solutions)*
+** Media:PracProb3Sols-2012.pdf[PDF version]
+** Media:PracProb3Sols-2012.zip[LaTeX source (ZIP)]
+
+* *Practice Problems - Week 2*
+** Media:PracProb2-2012.pdf[PDF version]
+** Media:PracProb2-2012.zip[LaTeX source (ZIP)]
+
+* *Practice Problems - Week 2 (Sample Solutions)*
+** Media:PracProb2Sols-2012.pdf[PDF version]
+** Media:PracProb2Sols-2012.zip[LaTeX source (ZIP)]
+
+[[]]
+Cheat Sheets
+^^^^^^^^^^^^
+
+* '''Full Set of Cheat Sheets (2012)
+** Media:CheatSheetsPDF-2012.zip[All PDFs (ZIP)]
+** Media:CheatSheetsTEX-2012.1.zip[All LaTeX sources (ZIP)]
+
+* *Cheat Sheet - Week 6*
+** Media:CheatSheet6-2012.pdf[PDF version]
+** Media:CheatSheet6-2012.1.zip[LaTeX source (ZIP)]
+
+* *Cheat Sheet - Week 5*
+** Media:CheatSheet5-2012.pdf[PDF version]
+** Media:CheatSheet5-2012.zip[LaTeX source (ZIP)]
+
+* *Cheat Sheet - Week 4*
+** Media:CheatSheet4-2012.pdf[PDF version]
+** Media:CheatSheet4-2012.zip[LaTeX source (ZIP)]
+
+* *Cheat Sheet - Week 3*
+** Media:CheatSheet3-2012.pdf[PDF version]
+** Media:CheatSheet3-2012.zip[LaTeX source (ZIP)]
+
+* *Cheat Sheet - Week 2*
+** Media:CheatSheet2-2012.pdf[PDF version]
+** Media:CheatSheet2-2012.zip[LaTeX source (ZIP)]
+
+* *Cheat Sheet - Week 1*
+** Media:CheatSheet1-2012.pdf[PDF version]
+** Media:CheatSheet1-2012.zip[LaTeX source (ZIP)]
+
+[[]]
+Practice Quizzes
+^^^^^^^^^^^^^^^^
+
+* *Practice Quiz 1*
+** Media:PracticeQuiz1-2012.pdf[PDF version]
+** Media:PracticeQuiz1-2012.zip[LaTeX source (ZIP)]
+
+* *Practice Quiz 1 - Answer Key*
+** Media:PracticeQuiz1-2012A.pdf[PDF version]
+** Media:PracticeQuiz1-2012A.zip[LaTeX source (ZIP)]
+
+* *Practice Quiz 1 - Study Tips*
+** Media:Quiz1StudyTips-2012.pdf[PDF version]
+** Media:Quiz1StudyTips-2012.zip[LaTeX source (ZIP)]
+
+* *Practice Quiz 0*
+** Media:PracticeQuiz0-2012.pdf[PDF version]
+** Media:PracticeQuiz0-2012.1.zip[LaTeX source (ZIP)]
+
+* *Practice Quiz 0 - Answer Key*
+** Media:PracticeQuiz0-2012A.pdf[PDF version]
+** Media:PracticeQuiz0-2012A.zip[LaTeX source (ZIP)]
+
+* *Practice Quiz 0 - Study Tips*
+** Media:Quiz0StudyTips-2012.pdf[PDF version]
+** Media:Quiz0StudyTips-2012.zip[LaTeX source (ZIP)]
+
+[[]]
+Resources (2011)
+~~~~~~~~~~~~~~~~
+
+Any TF may use these resources, just please don't remove my name from
+the materials if you use them as-is!
+
+[[]]
+Practice Problems
+^^^^^^^^^^^^^^^^^
+
+* *Practice Problems - Week 6*
+** Media:PracProb6-2011A.pdf[PDF version]
+** Media:PracProb6-2011A.zip[LaTeX source (ZIP)]
+
+* *Practice Problems - Week 4*
+** Media:PracProb4-2011.pdf[PDF version]
+** Media:PracProb4-2011.zip[LaTeX source (ZIP)]
+
+* *Practice Problems - Week 3*
+** Media:PracProb3-2011.pdf[PDF version]
+** Media:PracProb3-2011.zip[LaTeX source (ZIP)]
+
+* *Practice Problems - Week 2*
+** Media:PracProb2-2011.pdf[PDF version]
+** Media:PracProb2-2011.zip[LaTeX source (ZIP)]
+
+[[]]
+Cheat Sheets
+^^^^^^^^^^^^
+
+* *Cheat Sheet - Week 7*
+** Media:CheatSheet7-2011.pdf[PDF version]
+** Media:CheatSheet7-2011.zip[LaTeX source (ZIP)]
+
+* *Cheat Sheet - Week 6*
+** Media:CheatSheet6-2011.pdf[PDF version]
+** Media:CheatSheet6-2011.zip[LaTeX source (ZIP)]
+
+* *Cheat Sheet - Week 4*
+** Media:CheatSheet4-2011.pdf[PDF version]
+** Media:CheatSheet4-2011.zip[LaTeX source (ZIP)]
+
+* *Cheat Sheet - Week 3*
+** Media:CheatSheet3-2011.pdf[PDF version]
+** Media:CheatSheet3-2011.zip[LaTeX source (ZIP)]
+
+* *Cheat Sheet - Week 2*
+** Media:CheatSheet2-2011.pdf[PDF version]
+** Media:CheatSheet2-2011.zip[LaTeX source (ZIP)]
+
+* *Cheat Sheet - Week 1*
+** Media:CheatSheet1-2011.pdf[PDF version]
+** Media:CheatSheet1-2011.zip[LaTeX source (ZIP)]
+
+[[]]
+Practice Quizzes
+^^^^^^^^^^^^^^^^
+
+* *Practice Quiz 1*
+** Media:PracticeQuiz1-2011.pdf[PDF version]
+** Media:PracticeQuiz1-2011.zip[LaTeX source (ZIP)]
+* *Practice Quiz 1 - Answer Key*
+** Media:PracticeQuiz1-2011A.pdf[PDF version]
+** Media:PracticeQuiz1-2011A.zip[LaTeX source (ZIP)]
+* *Practice Quiz 1 - Study Tips*
+** Media:Quiz1StudyTips.pdf[PDF version]
+** Media:Quiz1StudyTips.zip[LaTeX source (ZIP)]
+
+* *Practice Quiz 0*
+** Media:PracticeQuiz0-2011A.pdf[PDF version]
+** Media:PracticeQuiz0-2011A.zip[LaTeX source (ZIP)]
+* *Practice Quiz 0 - Answer Key*
+** Media:PracticeQuiz0Answers-2011.pdf[PDF version]
+** Media:PracticeQuiz0Answers-2011.zip[LaTeX source (ZIP)]
+* *Practice Quiz 0 - Study Tips*
+** Media:Quiz0StudyTips.pdf[PDF version]
+** Media:Quiz0StudyTips.zip[LaTeX source (ZIP)]
+
+[[]]
+Resources (2010)
+~~~~~~~~~~~~~~~~
+
+[[]]
+Cheat Sheets
+^^^^^^^^^^^^
+
+* Media:CheatSheet1_1.pdf[Cheat Sheet - Week 1] (PDF)
+* Media:CheatSheet2.pdf[Cheat Sheet - Week 2] (PDF)
+* Media:CheatSheet3_1.pdf[Cheat Sheet - Week 3] (PDF)
+* Media:CheatSheet4.pdf[Cheat Sheet - Week 4] (PDF)
+* Media:CheatSheet6.pdf[Cheat Sheet - Week 6] (PDF)
+* Media:CheatSheet7.pdf[Cheat Sheet - Week 7] (PDF)
+
+* Media:Quiz1Topics-Lloyd.pdf[CS50 Topical Review] (PDF)
+
+[[]]
+Practice Quizzes
+^^^^^^^^^^^^^^^^
+
+* Media:Quiz0-Lloyd2.pdf[Practice Quiz 0] (PDF)
+** Media:Quiz0Answers-lloyd.pdf[Practice Quiz 0 - Answers] (PDF)
+* Media:Quiz1-Lloyd.pdf[Practice Quiz 1] (PDF)
+** Media:Quiz1Answers-Lloyd.pdf[Practice Quiz 1 - Answers] (PDF)
+
+[[]]
+LaTeX Source Files
+^^^^^^^^^^^^^^^^^^
+
+* Media:CheatSheets1-2-4Quiz0.zip[Source for Cheat Sheets 1, 2, and 4,
+Practice Quiz 0, and Practice Quiz 0 Answers] (zip)
+** The LaTeX source file for Cheat Sheet 3 was inadvertently overwritten
+and is not currently available.
+

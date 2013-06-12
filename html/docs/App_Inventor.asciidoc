@@ -1,0 +1,170 @@
+---
+tags: []
+title: App_Inventor
+---
+http://sites.google.com/site/appinventorhelp/[App Inventor for Android]
+is a http://scratch.mit.edu/[Scratch]-like environment that lets you
+create new mobile applications. With it, you can explore communication,
+location-awareness, social networking, and massive Web-based data
+collections. This is a great way to try out mobile apps, and to
+collaborate with a community of developers at Google and other colleges
+participating in the App Inventor alpha.
+
+Below are some apps made by the staff from whose source code you're
+welcome to learn.
+
+[[]]
+AndroidPharma
+~~~~~~~~~~~~~
+
+by mailto:fzembow@fas.harvard.edu[Filip Zembowicz]
+
+This is a tool that allows users to search for a particular
+pharmaceutical and get some reference information, such as the chemical
+structure, drug targets, interactions, etc. It's currently still a work
+in progress. I have been focusing on developing a new App Engine
+Component that will drive the database interactivity behind the
+application -- it does not store any information locally, but just gets
+it from the net when requested. Currently, App Inventor's support for
+such web-based implementations is a bit hackish, but if you want to
+tackle an interesting problem then definitely take a look!
+
+The application itself:
+http://people.fas.harvard.edu/~fzembow/Drugbase.apk The app engine
+backend: http://people.fas.harvard.edu/~fzembow/androindpharma.zip
+
+[[]]
+Chinese Flash Cards
+~~~~~~~~~~~~~~~~~~~
+
+by mailto:wchao@post.harvard.edu[Wellie Chao]
+
+Learn Chinese characters with this rudimentary flash card application.
+More Chinese characters and definitions can be added by the enterprising
+Android Blocks developer without too much trouble. Future potential
+improvements include: reverse flash cards (given the definition, choose
+the character), as well as tying into a web service for the database
+backend rather than loading the cards into memory.
+
+Download from: http://209.190.22.48/app_inventor/ChineseFlashCards.zip
+
+Barcode for direct-to-phone download:
+http://www.hugiegames.com/android/welliechao.png
+
+[[]]
+Paintball
+~~~~~~~~~
+
+by mailto:krakip@fas.harvard.edu[Kent Rakip]
+
+A simple app that allows you to paint a canvas by tilting the phone to
+control a rolling ball. Shaking will change the paint color.
+Demonstrates the use of the G1's orientation and acceleration sensors as
+well as the handy timer widget, which allows you to write programs that
+run in loops.
+
+Download: http://people.fas.harvard.edu/~krakip/cs50/Paintball.zip
+
+[[]]
+Screamer
+~~~~~~~~
+
+by mailto:ahugon@fas.harvard.edu[Alex Hugon]
+
+This immensely-useful application, when activated, causes your phone to
+scream (remember those good old Male-Scream sound files from Scratch?)
+when the built-in accelerometer detects a sudden change in z-axis
+movement. Effectively, this translates to the phone shrieking whenever
+you shake it vigorously or toss it in a high arc to a sure-handed
+friend. Perfect for annoying your roommates!
+
+Download (from my personal website):
+http://www.hugiegames.com/Screamer.zip
+
+[[]]
+Spoon
+~~~~~
+
+by mailto:nleiby@fas.harvard.edu[Nathan Leiby]
+
+Get the answer to the time honored question: who's big spoon, and who's
+little spoon?
+
+(This app is a test of some simple functionality: buttons, the
+accelerometer, colors, and vibrate.)
+
+Download here: http://hcs.harvard.edu/~nleiby/files/Spoon.apk
+
+[[]]
+Tickle Me Elmo
+~~~~~~~~~~~~~~
+
+by mailto:achang88@fas.harvard.edu[Alex Chang]
+
+The popular "Tickle Me Elmo" toy is now available on your Android phone!
+Tickle the cute red monster on his belly and hear him LOL. _Feel_ his
+joy in your hand as the phone vibrates along with his laugh. Tickle him
+once, or tickle him continuously until your friends get annoyed by
+Elmo's laughing sound! This application serves a great introduction for
+new developers who are working with Android Blocks for the first time.
+
+Download (from my personal website):
+http://www.alexchang.me/TickleMeElmo.apk
+
+[[]]
+TO-DO List
+~~~~~~~~~~
+
+by mailto:bzali@fas.harvard.edu[Batool Ali]
+
+This is a tool that will allow you to store a to-do list on your phone
+and mark off items as you've completed them. What's interesting about
+this project is that it allows you to store persistent data - however,
+it's not on your phone, it's on a web database. As it's currently set
+up, it only works on a demo database that the Android folks have exposed
+for our use (which is why it only has two things to do) - if you want to
+extend this concept for your own project, talk to me about setting up a
+dedicated Web server for that use. Similarly, quirky behavior with the
+app as it is now can be traced to the demo-server we're using, so let me
+know if you're having troubles. Persisting data is a root component of
+many apps, so knowing how to do will be a boon for many things.
+
+'''''
+
+*STUDENT APPS:*
+
+[[]]
+Willie Yao:
+~~~~~~~~~~~
+
+`Barcode for direct-to-phone download: `http://www.hugiegames.com/android/willieyao.jpg[`http://www.hugiegames.com/android/willieyao.jpg`]
+
+[[]]
+Tal Oppenheimer:
+~~~~~~~~~~~~~~~~
+
+`Barcode for direct-to-phone download: `http://www.hugiegames.com/android/taloppenheimer.png[`http://www.hugiegames.com/android/taloppenheimer.png`]
+
+[[]]
+Jon Mizrahi:
+~~~~~~~~~~~~
+
+`Barcode for direct-to-phone download: `http://www.hugiegames.com/android/jonmizrahi.jpg[`http://www.hugiegames.com/android/jonmizrahi.jpg`]
+
+[[]]
+Calvin McEachron:
+~~~~~~~~~~~~~~~~~
+
+`Barcode for direct-to-phone download: `http://www.hugiegames.com/android/calvinmceachron.jpg[`http://www.hugiegames.com/android/calvinmceachron.jpg`]
+
+[[]]
+Kate Obst:
+~~~~~~~~~~
+
+`Barcode for direct-to-phone download: `http://www.hugiegames.com/android/kateobst.jpg[`http://www.hugiegames.com/android/kateobst.jpg`]
+
+[[]]
+Shiyu Wei:
+~~~~~~~~~~
+
+`Barcode for direct-to-phone download: `http://www.hugiegames.com/android/shiyuwei.jpg[`http://www.hugiegames.com/android/shiyuwei.jpg`]

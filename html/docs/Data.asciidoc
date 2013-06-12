@@ -1,0 +1,65 @@
+---
+tags: []
+title: Data
+---
+[[]]
+HarvardCourses
+--------------
+
+_Below are fields that we would love to have included in clean data
+feed. If any are particularly tricky, we'd be happy to cross some off
+the list in the interests of forging ahead sooner rather than later.
+We're also happy to accommodate whatever schema is easiest for FAS to
+provide._
+
+* course
+** year
+** term
+** number
+** section
+** department(s)
+** faculty member(s)
+** exam group
+** FAS catalog number
+** location
+** description
+** prerequisites
+** notes
+** website/syllabus
+** textbooks
+** meetings
+*** day
+*** time
+*** optional
+** Gen Ed areas satisfied
+** Core areas satisified
+** location
+*** building id
+*** room id (or number)
+** prior names/numbers for this course (if renamed/renumbered, as many
+Gen Eds were)
+
+* faculty
+** unique id
+** prefix
+** first name
+** middle name/initial
+** last name
+** suffix
+** name that faculty member prefers to appear in print
+
+* Q
+** course id
+** year
+** term
+** scores
+** publishable student comments
+** faculty member(s)
+*** scores
+
+* enrollment
+** course id
+** year
+** term
+** n
+

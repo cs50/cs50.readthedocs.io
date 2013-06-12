@@ -1,0 +1,22 @@
+---
+tags: []
+title: shortcut
+---
+|
+
+Meta:Shortcut[Shortcut]: +
+
+}}}
+
+'''''
+
+This template is primarily used on Meta process and policy pages to show
+the shortest alias of a given page. For example, WM:DP redirects to
+Meta:Deletion policy[Meta:Deletion policy]. The optional parameter is
+typically a link to a shortcut. This behaviour is *inconsistent with
+Wikipedia \{\{shortcut}}*, which expects different parameter (you use
+_WP:MOS_ there, instead of _[[WP:MOS]]_ link).
+
+For usage within other templates no parameter results in no output.
+
+Category:Miscellaneous templates[]

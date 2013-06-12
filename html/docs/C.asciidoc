@@ -1,0 +1,29 @@
+---
+tags: []
+title: C
+---
+*C* is the main programming language used in CS50. It's a relatively
+low-level language, meaning that it gives you direct access to the
+computer's memory.
+
+When a C program starts execution the function called `main` is
+executed. Within this function, the link:statement[statements] that make
+up the function are executed in sequence. For example, the following
+program:
+
+--------------------------------
+int main(int argc, char *argv[])
+{
+   int a = 17;
+   int b = 42;
+   int c = a + b;
+   return c;
+}
+--------------------------------
+
+will successively set one variable to 17, another to 42, a third to the
+sum of those variables, and then return that value.
+
+For more information on specific features of C, see the articles on
+Type, Operator, Precedence, Function, Variable,
+link:Dynamic Memory Allocation[Dynamic Memory Allocation], Argument, ...

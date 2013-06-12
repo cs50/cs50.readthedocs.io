@@ -1,0 +1,9 @@
+---
+tags: []
+title: Videos
+---
+As of Week 1 in Fall 2009, CS50 produces its own videos of lectures with
+these specs:
+
+*Video*: H.264 Video, 640 x 360, 512 kbps +
+*Audio:* AAC-LC Music, Mono, 64 kbps, 32.000 kHz

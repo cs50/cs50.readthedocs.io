@@ -1,0 +1,37 @@
+---
+tags: []
+title: CS50_APIs
+---
+Below are the
+http://en.wikipedia.org/wiki/Application_programming_interface[application
+programming interfaces] (APIs) that CS50 currently offers. Use of each
+API is governed by a
+http://creativecommons.org/licenses/by-nc/3.0/[Creative Commons
+Attribution-Noncommerical 3.0 Unported] license, which means that you
+may use their data for non-commercial purposes so long as you attribute
+your data to the API.
+
+* link:HarvardCourses API[HarvardCourses API]. HarvardCourses exposes
+the
+http://www.registrar.fas.harvard.edu/fasro/courses/index.jsp?cat=ugrad&subcat=courses[Current
+Courses of Instruction] in CSV format.
+* link:HarvardEnergy API[HarvardEnergy API]. The HarvardEnergy API
+allows you to request data programmatically from
+http://energy.cs50.net/[HarvardEnergy].
+* link:HarvardEvents API[HarvardEvents API]. HarvardEvents aggregates
+calendars from all over campus.
+* link:HarvardFood API[HarvardFood API]. The HarvardFood API allows you
+to retrieve http://www.dining.harvard.edu/[HUDS] menus in CSV, JSON,
+JSONP, PHP, or XML format.
+**
+http://chrome.google.com/extensions/detail/kolkghlafoledmpdmpgjahlcehclkbpa[HUDS
+Daily Menu], by Filip Zembowicz
+* link:HarvardMaps API[HarvardMaps API]. HarvardMaps lets you embed
+Harvard's campus in your own website.
+* link:HarvardNews API[HarvardNews API]. "HarvardNews aggregates RSS
+channels from all over campus."
+* link:HarvardTweets API[HarvardTweets API]. "HarvardTweets aggregates
+tweets from Harvard affiliates."
+* link:Shuttleboy API[Shuttleboy API]. Shuttleboy lets you find the next
+shuttles between any two stops on campus.
+

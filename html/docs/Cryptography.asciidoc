@@ -1,0 +1,51 @@
+---
+tags: []
+title: Cryptography
+---
+Cryptography is the study of passing information secretly between a
+sender and a recipient. Most often, cryptography involves a manipulation
+of the original text of the message into ciphertext which is difficult
+to cipher even if intercepted by an adversary.
+
+One famous example of cryptography was the use of the Enigma machine by
+the Axis powers during World War II. The secret of the German code
+actually lay in the mechanics of the Enigma machine, so physical
+possession of the machine was necessary to encrypt or decrypt messages
+(although American and British codebreakers were able to decipher some
+of the messages without having the machine).
+
+For our purposes, cryptography can be divided into two types: symmetric
+key and public key. Symmetric-key cryptography uses the same key to
+encrypt and decrypt messages. Thus, both the sender and the recipient of
+a message must know the key ahead of time. This presents a problem,
+however. If you are buying something on Amazon.com and you'd like your
+credit card information encrypted before it's sent, how will you and
+Amazon agree on a key ahead of time?
+
+Enter public-key cryptography. In public-key cryptography, different
+keys are used to encrypt and decrypt messages. Both sender and recipient
+have a set of private and public keys. The private keys are used to
+decrypt messages and the public keys are used to encrypt messages. When
+the sender wants to transmit an encrypted message to the recipient, he
+encrypts it using the recipient's public key, which can be widely
+distributed without jeopardizing the message. The recipient can then
+decrypt the message using his private key. This is because there is a
+close mathematical relationship between the private and public keys. RSA
+and Diffie-Hellman are two well-known implementations of public-key
+cryptography.
+
+Returning to the Amazon problem, we can see that with public-key
+cryptography, there is no longer a need to communicate a secret key
+between sender and recipient before the actual message is transmitted.
+However, we can actually combine symmetric-key and public-key
+cryptography in a compelling way. If we use public-key cryptography to
+send a message consisting of a secret key to the recipient, then the
+sender and recipient can thereafter use symmetric-key cryptography to
+transmit messages because they will both have knowledge of the shared
+secret key.
+
+Two implementations of symmetric-key cryptography we've looked at are
+link:Caesar cipher[Caesar cipher] and link:Vigenère cipher[Vigenère
+cipher].
+
+Category: Week 2[Category: Week 2]

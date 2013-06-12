@@ -1,0 +1,63 @@
+---
+tags: []
+title: argv
+---
+`argv` is an argument of the `main` method which stores as strings the
+link:command-line arguments[command-line arguments] passed to a program.
+`argv` is an array of strings which has a length of `[[argc]]`. When
+writing a program that will take
+link:command-line arguments[command-line arguments], you must define
+`main` as follows:
+
+code,c---------------------------- code,c
+int
+main(int argc, char *argv[])
+{
+    // your program here
+}
+----------------------------
+
+As we've already learned, an array is simply a pointer, so `argv` is
+technically a pointer to a `char *`--a pointer to a pointer. Thus, it's
+a `char **` and you may see `main` defined in some textbooks like so:
+
+code,c--------------------------- code,c
+int
+main(int argc, char **argv)
+{
+    // your program here
+}
+---------------------------
+
+The two ways of defining `main` are equivalent.
+
+`argv` will always have a length of at least one because the name of the
+program itself is stored as the first element in `argv`.
+
+As with any other array, we use bracket notation to access the elements
+of `argv`. For example, a program that prints out the command-line
+arguments passed to it would look like the following:
+
+code,c--------------------------------- code,c
+int
+main(int argc, char *argv[])
+{
+    for(int i = 0; i < argc; i++)
+    {
+        printf("%s\n", argv[i]);
+    }
+}
+---------------------------------
+
+If this program were called `args`, and you executed
+`./args foo bar baz` from the command line, the output would look like
+so:
+
+------
+./args
+foo
+bar
+baz
+------
+
+Category: Week 2[Category: Week 2]

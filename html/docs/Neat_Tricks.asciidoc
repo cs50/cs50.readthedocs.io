@@ -1,0 +1,183 @@
+---
+tags: []
+title: Neat_Tricks
+---
+Below are neat tricks that the http://www.cs50.net/staff/[staff] find
+useful from time to time. We've tried to keep the code below simple at
+the expense of rigorous error-checking; we leave it to you to check
+return values more rigorously than we do!
+
+[[]]
+Authenticating Users
+~~~~~~~~~~~~~~~~~~~~
+
+This topic warrants some discussion, so here's a whole article on
+link:Authenticating Users[authenticating users].
+
+[[]]
+Parsing CSV
+~~~~~~~~~~~
+
+Below is some PHP code with which you can parse a CSV feed (e.g.,
+http://news.cs50.net/api/1.1/items?output=csv). It assumes that the CSV
+file's first row contains fields' names. We avoid hard-coding fields'
+indices into the code by creating a map (`$fields`) between fields'
+names and their indices. As a result, if the order of fields in the CSV
+file changes, our code won't break (assuming the first row still
+contains fields' names).
+
+code,php----------------------------------------------------------------------
+code,php
+// open CSV file
+$handle = fopen("http://news.cs50.net/api/1.1/items?output=csv", "r");
+ 
+// determine fields' indices
+$row = fgetcsv($handle);
+for ($i = 0, $n = count($row); $i < $n; $i++)
+    $fields[$row[$i]] = $i;
+
+// iterate over CSV file's rows
+while ($row = fgetcsv($handle))
+{
+    // extract fields
+    $title = $row[$fields["title"]];
+    $link = $row[$fields["link"]];
+    $description = $row[$fields["description"]];
+    $pubDate = $row[$fields["pubDate"]];
+
+    // do something with fields
+}
+
+// close CSV file
+fclose($handle);
+----------------------------------------------------------------------
+
+[[]]
+Parsing Dates/Times
+~~~~~~~~~~~~~~~~~~~
+
+CS50's APIs format dates and times in a certain way, namely *YYYY-MM-DD*
+and *YYYY-MM-DDTHH:MM:SS*, where *HH* is in 24-hour format. (Don't
+overlook the *T* between *YYYY-MM-DD* and *HH:MM:SS* in the latter.) For
+the curious, these formats are actually defined by
+http://en.wikipedia.org/wiki/ISO_8601[ISO 8601].
+
+The upside of these formats is that they're very machine-readable. The
+downside is that they're not as human-friendly. Fortunately, it's easy
+to parse them. Below is some PHP code that does exactly that:
+
+code,php--------------------------------------- code,php
+// convert date to a UNIX timestamp
+$t0 = strtotime("2009-11-11");
+
+// date/time to a UNIX timestamp
+$t1 = strtotime("2009-11-11T12:00:00");
+---------------------------------------
+
+You can then use PHP's http://php.net/manual/en/function.date.php[date]
+function to massage `$t0` and `$t1` into any format you'd like.
+
+[[]]
+Parsing JSON
+~~~~~~~~~~~~
+
+Below is some PHP code with which you can parse JSON (e.g.,
+http://news.cs50.net/api/1.1/items?output=json).
+
+code,php--------------------------------------------------------------------------------
+code,php
+// load URL
+$contents = file_get_contents("http://news.cs50.net/api/1.1/items?output=json");
+
+// parse JSON and build an array of associative arrays in memory
+$items = json_decode($contents);
+
+// iterate over items
+foreach ($items as $item)
+{
+    // extract fields
+    $title = $item["title"];
+    $link = $item["link"];
+    $description = $item["description"];
+    $pubDate = $item["pubDate"];
+
+    // do something with fields
+}
+--------------------------------------------------------------------------------
+
+[[]]
+Parsing RSS
+~~~~~~~~~~~
+
+Below is some PHP code with which you can parse an RSS feed (e.g.,
+http://news.cs50.net/api/1.1/items?output=rss).
+
+code,php----------------------------------------------------------------------------
+code,php
+// load URL, parse RSS, and build a DOM in memory
+$dom = simplexml_load_file("http://news.cs50.net/api/1.1/items?output=rss");
+
+// iterate over RSS channel's items
+foreach ($dom->channel->item as $item)
+{
+    // extract fields
+    $title = $item->title;
+    $link = $item->link;
+    $description = $item->description;
+    $pubDate = $item->pubDate;
+
+    // do something with fields
+}
+----------------------------------------------------------------------------
+
+[[]]
+Screen Scraping
+~~~~~~~~~~~~~~~
+
+This topic warrants some discussion, so here's a whole article on
+link:Screen Scraping[screen scraping].
+
+[[]]
+Sending Mail
+~~~~~~~~~~~~
+
+This topic warrants some discussion, so here's a whole article on
+link:Sending Mail[sending mail].
+
+[[]]
+Sending Text Messages via Email
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This topic warrants some discussion, so here's a whole article on
+link:Sending Texts[sending texts].
+
+[[]]
+Unserializing PHP
+~~~~~~~~~~~~~~~~~
+
+Below is some PHP code with which you can
+http://php.net/manual/en/function.unserialize.php[unserialize] a PHP
+array or object that has been serialized with
+http://php.net/manual/en/function.serialize.php[serialize] (e.g.,
+http://news.cs50.net/api/1.1/items?output=php).
+
+code,php-------------------------------------------------------------------------------
+code,php
+// load URL
+$contents = file_get_contents("http://news.cs50.net/api/1.1/items?output=php");
+
+// parse serialized PHP and build array of associative arrays in memory
+$items = unserialize($contents);
+
+// iterate over items
+foreach ($items as $item)
+{
+    // extract fields
+    $title = $item["title"];
+    $link = $item["link"];
+    $description = $item["description"];
+    $pubDate = $item["pubDate"];
+
+    // do something with fields
+}
+-------------------------------------------------------------------------------

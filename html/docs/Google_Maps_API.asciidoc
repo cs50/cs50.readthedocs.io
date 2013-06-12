@@ -1,0 +1,462 @@
+---
+tags: []
+title: Google_Maps_API
+---
+Traffic data. Directions. Satellite imagery. Placemarks. These and more
+await you when you use the Google Maps API! This tutorial is designed to
+empower you to use the Google Maps API for JavaScript to add this
+content to your website.
+
+[[]]
+Resources
+---------
+
+*
+https://developers.google.com/maps/documentation/javascript/reference[Google
+Maps API Reference]
+*
+https://developers.google.com/maps/documentation/javascript/tutorial[Getting
+Started]
+
+[[]]
+First Things First
+------------------
+
+Before you are able to access Google's API, you'll need to
+https://developers.google.com/maps/documentation/javascript/tutorial#api_key[get
+an API key] from Google.
+
+[[]]
+An Example Map
+--------------
+
+You'll find Google's
+https://developers.google.com/maps/documentation/javascript/tutorial#HelloWorld[Hello
+World] tutorial useful in getting started. Follow that tutorial, and see
+if you can get a working map display. (A discussion follows below.)
+
+Here is the source code from the tutorial:
+
+----------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map_canvas { height: 100% }
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&sensor=false">
+    </script>
+    <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(-34.397, 150.644),
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"),
+            mapOptions);
+      }
+    </script>
+  </head>
+  <body onload="initialize()">
+    <div id="map_canvas" style="width:100%; height:100%"></div>
+  </body>
+</html>
+----------------------------------------------------------------------------------
+
+If you try this code out in a browser, you'll see that it displays a
+full screen Google Maps pane on your page. But how does it accomplish
+this?
+
+First, let's take a look at the JavaScript. Notice that we have imported
+the Google Maps JavaScript via a `script` tag, so that we have access to
+the Maps API's functionality. Immediately below that, you'll see some
+JavaScript code for an `initialize` function. Notice that the
+`initialize` function is called on the page load, as specified in the
+*attributes* of `body` tag. So what does the initialize function do?
+
+* First, it declares a new variable (object) called `mapOptions`:
+`mapOptions` is a JavaScript *object* with a set of keys and values;
+these specify various parameters to configure the map display.
+* Next, it declares a new variable called `map`, and assigns this to the
+result of calling the *constructor* function for a Google Maps display.
+You can think of a *constructor* as a function that builds a certain
+type of thing: here, we're building a new Google Maps display.
+Sometimes, we'll want to customize exactly how this object is built,
+which is what those function arguments are for. Note that two arguments
+are passed to this function: the DOM element where the map will live,
+and then the options.
+
+[[]]
+Tasks
+~~~~~
+
+* Customize the center latitude and longitude of the map to be the
+coordinates of Sanders Theatre. Those are 42.375787, -71.114784.
+* Make this map start out as a satellite map, as opposed to a roadmap.
+Chances are you'll find the
+https://developers.google.com/maps/documentation/javascript/reference#MapTypeId[API
+reference on this topic] helpful for learning about the different map
+types.
+* Remove the user's ability to zoom in and out. Can you find what
+property controls this, by looking at the
+https://developers.google.com/maps/documentation/javascript/reference[API
+reference]?
+* Make the map start zoomed in a little closer, perhaps at `zoom` 20.
+
+You should end up with source code that looks like this:
+
+----------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map_canvas { height: 100% }
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&sensor=false">
+    </script>
+    <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(42.375787, -71.114784),
+          zoom: 20,
+          mapTypeId: google.maps.MapTypeId.SATELLITE, 
+          zoomControl: false
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"),
+            mapOptions);
+      }
+    </script>
+  </head>
+  <body onload="initialize()">
+    <div id="map_canvas" style="width:100%; height:100%"></div>
+  </body>
+</html>
+----------------------------------------------------------------------------------
+
+[[]]
+Discussion
+~~~~~~~~~~
+
+* By consulting the API reference, list five other things you can
+customize about the Maps display.
+* Remember the map *constructor* we talked about earlier? Here's the
+documentation for it, available in the API reference:
+
+`Map(mapDiv:Node, opts?:MapOptions)` +
+`Creates a new map inside of the given HTML container, which is typically a DIV element.`
+
+What does the question mark next to `opts` mean? (Try not passing
+`mapOptions` as an argument to your constructor and see what happens!)
+
+* Why do you think we had to write all of our code that created the map
+inside of an function (remember, called `initialize`)? What happens if
+we don't? Think about the location of that code in the file and how
+JavaScript is evaluated on a webpage.
+
+[[]]
+Markers
+-------
+
+OK, so this is exciting. Now, we have a map! But what if we want to add
+markers to the map, to distinguish certain places?
+
+We should start by consulting the
+https://developers.google.com/maps/documentation/javascript/reference#Marker[API
+reference on Markers]. Notice that the documentation refers to the
+`google.maps.Marker` class; this tells us the constructor we'll want to
+use. You'll also see immediately below that the *constructor* takes a
+single argument for the options. So to create a new marker, we'll need
+to use:
+
+code,javascript---------------------------------------------------
+code,javascript
+var marker = new google.maps.Marker(markerOptions);
+---------------------------------------------------
+
+where `markerOptions` is a variable that stores, well, the marker
+options. Before this line of code, then, we'll need to declare
+`markerOptions`.
+
+So how do we declare this variable? You'll note that the
+https://developers.google.com/maps/documentation/javascript/reference#MarkerOptions[valid
+list of fields] for variables (objects) that hold marker options is also
+available. For now, let's set the `position` and `map` fields. You
+should think about what each of these fields specify. It's important
+that the `position` field expects a `LatLng` object: that means we'll
+have to get one of these!
+
+With that in mind, here is source code for creating a marker that starts
+out at Sanders Theatre, to be added to a map whose variable name is
+`map` (as in the example from before):
+
+code,javascript----------------------------------------------------------------------------------------
+code,javascript
+var markerOptions = {map: map, position: new google.maps.LatLng(42.375787, -71.114784)};
+var marker = new google.maps.Marker(markerOptions);
+----------------------------------------------------------------------------------------
+
+Putting this together with the previous example:
+
+------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map_canvas { height: 100% }
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&sensor=false">
+    </script>
+    <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(42.375787, -71.114784),
+          zoom: 20,
+          mapTypeId: google.maps.MapTypeId.SATELLITE, 
+          zoomControl: false
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"),
+            mapOptions);
+
+        var markerOptions = {map: map, position: new google.maps.LatLng(42.375787, -71.114784)};
+        var marker = new google.maps.Marker(markerOptions);
+
+      }
+    </script>
+  </head>
+  <body onload="initialize()">
+    <div id="map_canvas" style="width:100%; height:100%"></div>
+  </body>
+</html>
+------------------------------------------------------------------------------------------------
+
+[[]]
+Tasks
+~~~~~
+
+* Add a marker to your code at Sanders Theatre, as is done above.
+* Notice that, in the code above, we invoke the `google.maps.LatLng`
+constructor twice (where?) and both times, we use the same starting
+latitude and longitude. This seems silly! Instead of making objects
+twice, modify the code so that `google.maps.LatLng`'s constructor is
+called only once, but the map is still centered at those coordinates and
+the marker is still centered at those coordinates. Hint: Think about how
+you can save the result of calling the constructor in a variable.
+* Change the icon of the marker from its default to the image at the
+following URL:
+
+------------------------------------------------
+https://www.cs50.net/images/property-122x124.png
+------------------------------------------------
+
+You'll want to consult the API reference to understand what property of
+`markerOptions` specifies the icon, and how to declare an object that
+specifies an icon! Because the training wheels are slowly coming off,
+less hints this time.
+
+* Make the marker `BOUNCE`.
+
+* Implementing these changes, your source code should look like this:
+
+-----------------------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map_canvas { height: 100% }
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&sensor=false">
+    </script>
+    <script type="text/javascript">
+      function initialize() {
+        var sanders_lat_lng = new google.maps.LatLng(42.375787, -71.114784);
+        var mapOptions = {
+          center: sanders_lat_lng,
+          zoom: 20,
+          mapTypeId: google.maps.MapTypeId.SATELLITE, 
+          zoomControl: false
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"),
+            mapOptions);
+ 
+        var icon = {url: "https://www.cs50.net/images/property-122x124.png"};
+ 
+        var markerOptions = {map: map, position: sanders_lat_lng, icon: icon, animation: google.maps.Animation.BOUNCE};
+        var marker = new google.maps.Marker(markerOptions);
+ 
+      }
+    </script>
+  </head>
+  <body onload="initialize()">
+    <div id="map_canvas" style="width:100%; height:100%"></div>
+  </body>
+</html>
+-----------------------------------------------------------------------------------------------------------------------
+
+[[]]
+Discussion
+~~~~~~~~~~
+
+* We've seen two instances now where the "options" for a particular type
+of thing (maps and markers) were passed in as a single argument: an
+option containing various properties. Why do you think the authors of
+the API chose this approach, as opposed to, say, using multiple
+arguments (one for each "option")?
+* How can you tell, from reading the documentation, that the `Icon` does
+not need an explicit constructor, while the `Marker` does? Why do you
+think that the `Icon` doesn't use an explicit constructor?
+
+[[]]
+Events
+------
+
+The user clicks a button! The user mouses over an image! A server
+replies to an AJAX request!
+
+These are all examples of *events* which we can use JavaScript to
+respond to. The Google Maps API offers the ability to add *event
+listeners* for map-related events, such as clicking on a marker,
+changing the center of the map, etc. In this section, we'll add some
+events to the map.
+
+You'll find
+https://developers.google.com/maps/documentation/javascript/events[Google's
+event documentation] helpful, as well as the
+https://developers.google.com/maps/documentation/javascript/reference#MapsEventListener[section
+of the API reference] that documents the event-related functions.
+
+The training wheels are slowly coming off, so much less example code
+this time before you dive in!
+
+[[]]
+Tasks
+~~~~~
+
+* Start with the code you had from the end of the second part, and add
+the modifications above, if you haven't already.
+* Take the user to http://cs50.net when they double click on the CS50
+marker.
+** First, you'll have to customize the marker so that it's `clickable`.
+Can you use the API reference to figure out how to do this?
+** Next, you'll have to add an *event listener* that listens for when
+the marker is clicked. (If unclear about the general concept of event
+listeners, best to read up online.) According to the
+https://developers.google.com/maps/documentation/javascript/reference#event[API
+reference], you can achieve this by calling the
+`google.maps.event.addListener` function. Adding the event listener will
+entail associating a *handler function* with this event. Here is a
+handler function that you can use that will redirect the user to
+http://cs50.net when it's called:
+
+code,javascript-------------------------------------------
+code,javascript
+
+function redirect_to_cs50()
+{
+      window.location = "https://cs50.net";
+}
+-------------------------------------------
+
+* Make the marker stop bouncing when the user single clicks on the CS50
+marker.
+** It may be best to use an *anonymous function* to do this, as in:
+
+code,javascript-----------------------------------------------------------
+code,javascript
+google.maps.event.addListener(marker, 'click', function() {
+     // stop the marker's bouncing
+});
+-----------------------------------------------------------
+
+so that you have access to the `marker` variable from before. What
+function attached to markers could you use to stop the bouncing?
+
+* You should end up with code that looks like this:
+
+-----------------------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map_canvas { height: 100% }
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&sensor=false">
+    </script>
+    <script type="text/javascript">
+      function redirect_to_cs50()  {
+        window.location = "https://cs50.net";
+      };
+      function initialize() {
+        var sanders_lat_lng = new google.maps.LatLng(42.375787, -71.114784);
+        var mapOptions = {
+          center: sanders_lat_lng,
+          zoom: 20,
+          mapTypeId: google.maps.MapTypeId.SATELLITE, 
+          zoomControl: false
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"),
+            mapOptions);
+ 
+        var icon = {url: "https://www.cs50.net/images/property-122x124.png"};
+ 
+        var markerOptions = {map: map, position: sanders_lat_lng, icon: icon, animation: google.maps.Animation.BOUNCE};
+        var marker = new google.maps.Marker(markerOptions);
+
+        google.maps.event.addListener(marker, 'dblclick', redirect_to_cs50);
+        google.maps.event.addListener(marker, 'click', function() {
+          marker.setAnimation(null);
+        }); 
+      }
+    </script>
+  </head>
+  <body onload="initialize()">
+    <div id="map_canvas" style="width:100%; height:100%"></div>
+  </body>
+</html>
+-----------------------------------------------------------------------------------------------------------------------
+
+[[]]
+Discussion
+~~~~~~~~~~
+
+* What is the difference between
+
+code,javascript--------------------------------------------------------------------
+code,javascript
+google.maps.event.addListener(marker, 'dblclick', redirect_to_cs50);
+--------------------------------------------------------------------
+
+and
+
+code,javascript----------------------------------------------------------------------
+code,javascript
+google.maps.event.addListener(marker, 'dblclick', redirect_to_cs50());
+----------------------------------------------------------------------
+
+aside from "two parentheses"? :) Which one works, and why?
+
+* You probably used the `setAnimation` function to implement the second
+part. In light of this, why do you think such *setters* (and *getters*)
+exist? What's different about between passing this information as
+options into the constructor, and using these setters?
+

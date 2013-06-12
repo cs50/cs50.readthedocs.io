@@ -1,0 +1,18 @@
+---
+tags: []
+title: CS50_Mobile
+---
+CS50 Mobile enables you to "take" CS50, even if you're not a student at
+Harvard.
+
+[[]]
+Support
+-------
+
+To report trouble with the app, email bugs@cs50.net.
+
+[[]]
+Known Issues
+------------
+
+_None at this time._

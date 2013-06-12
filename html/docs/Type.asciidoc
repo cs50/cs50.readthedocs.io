@@ -1,0 +1,182 @@
+---
+tags: []
+title: Type
+---
+The *type* of a variable is the kind of data it can hold. For example, a
+C variable holding the value `3` is likely to be a variable of the type
+`int`, which holds integers. Other common types in C include `char` for
+characters, `float` for non-integer numbers, `char *` for strings
+(technically, link:pointer[pointers] to `char`s).
+
+In C, the type of each variable must be specified when it is declared
+(for example `int i = 0;`), and the type of the variable remains
+unchanged for the lifetime of the variable. Therefore, C is considered a
+_strongly typed_ language. Other languages, including PHP and
+JavaScript, do not require (or even allow) you to specify the type of a
+variable, and they allow variables to change type during the execution
+of a program; such languages are considered _weakly typed_.
+
+In C, it is possible to define other and more complex types using the
+`[[typedef]]` keyword as well as link:struct[structs] and similar
+compound types.
+
+[[]]
+Detailed Description
+~~~~~~~~~~~~~~~~~~~~
+
+[[]]
+Integer types: `char, int, long, ...`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+C defines a number of types that all hold integer values, but have
+different ranges of numbers that they can represent. The precise ranges
+often depend on the computer architecture; the numbers given here are
+the most common. The narrowest is the `char`, which is a single-byte
+value and is often used to hold a single character. Although it may seem
+counter-intuitive, a `char` is not essentially different from other
+integer types: you can assign values like `'A'` to any integer type and
+you can do arithmetic with `char`s just like with other integer types.
+The widest integer type is the `long long`, which is 8 bytes long.
+
+The integer types are as follows:
+
+[cols=",,,,",options="header",]
+|=======================================================================
+|Name |Bytes |Bits |Smallest possible value |Largest possible value
+|`char` |1 |8 |-128 (-2^7^) |127 (2^7^-1)
+
+|`short` |2 |16 |-32,768 (-2^15^) |32,767 (2^15^-1)
+
+|`int` |4 |32 |-2,147,483,648 (-2^31^) |2,147,483,647 (2^31^-1)
+
+|`long` |32-bit |4 |32 |-2,147,483,648 (-2^31^) |2,147,483,647 (2^31^-1)
+
+|64-bit |8 |64 |-9,223,372,036,854,775,808 (-2^63^)
+|9,223,372,036,854,775,807 (2^63^-1)
+
+|`long long` |8 |64 |-9,223,372,036,854,775,808 (-2^63^)
+|9,223,372,036,854,775,807 (2^63^-1)
+|=======================================================================
+
+Each type has an unsigned variants, which has the same size, but can
+only hold nonnegative numbers. Such variables are declared as, for
+example, `unsigned int i = 1`.
+
+A special kind of integer variable is the `bool`, which can only hold
+the values `true` and `false`. In C, a `bool` is technically a special
+kind of integer variable that can only hold the values `1` and `0`,
+which are equivalent to `true` and `false`.
+
+[[]]
+Floating points: `float, double`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To represent non-integer numbers, C uses floating-point values: a
+special kind of value that can hold arbitrary real numbers. If you want
+to know more, see
+http://en.wikipedia.org/wiki/IEEE_floating-point_standard[Wikipedia] for
+a description of how floating points are represented. C has two commonly
+used types for floating points: `float` and `double`. The former is 4
+byte long and the latter 8 byte long, so it can hold more possible
+values. There is another (rarely used) type, the `long double`, that is
+12 bytes long.
+
+For example, you could use floating points as follows:
+
+--------------------
+float pi = 3.14;
+float e = 2.18;
+float pie = pi * e;
+printf("%f\n", pie);
+--------------------
+
+[[]]
+Pointers, arrays, and strings
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Every C type has a corresponding pointer type, denoted by the name of
+that type plus a `*`. For example, `bool *a;` declares a pointer to a
+`bool`. A pointer holds the memory address of the value it points to;
+because memory addresses are 32 bits in a 32-bit machine and 64 bits in
+a 64-bit machine, a pointer is 4 bytes long in the former and 8 bytes
+long in the latter case.
+
+link:Array[Arrays] are special kinds of variables that themselves hold a
+number of variables. For example, a variable declared as `bool a[8];` is
+an array containing 8 `bool`s, which can be individually accessed as for
+example `a[1]` (for the second value). Arrays and pointers are
+implemented very similarly in C; for example, it is possible to
+dereference a pointer using `a[0]` instead of `*a`, and to access an
+array using `*(a+1)` instead of `a[1]`.
+
+link:String[Strings] in C are just arrays of `char`s. When you declare a
+string as `char *str = "Hello, world!"`, the value in the variable `str`
+is simply the memory address of the place in memory where the sequence
+of characters `"Hello, world!"` is stored.
+
+[[]]
+Other types
+^^^^^^^^^^^
+
+C allows you to define more complex types if you need to. For example,
+you can define a `[[struct]]`, a special data structure that contains a
+sequence of variables of other types. A similar concept is a
+`[[union]]`, which also contains a series of variables, but stores them
+in the same space. This sometimes allows you to be more economical with
+memory space. Last, an `[[enum]]` is a kind of integer variables that
+can only hold a pre-defined set of values. For example, you can think of
+a `bool` as an `enum` that can hold the values `true` and `false`
+(however, a `bool` is not actually implemented as an `enum`).
+
+These types may be useful, for example, if you're writing an interpreter
+for a programming language where variables can be of two types: integers
+and strings. You'll want a single data structure that can hold both the
+value of the variable and a label indicating the type. Also, the value
+can be either a C `int` or a C `char *`, depending on the variable's
+type. You may use the following data structures:
+
+---------------------------------------------
+// list the types used for our language
+typedef enum { integer, variable } type_enum;
+
+// struct to hold variables in our language
+typedef struct {
+    type_enum type;
+    union {
+        int integerv;
+        char *stringv;
+    } value;
+} variable;
+---------------------------------------------
+
+You can then use these structures as follows:
+
+------------------------------------
+// declare an integer variable
+variable var1;
+var1.type = integer;
+var1.value.integerv = 42;
+// declare a string variable
+variable var2;
+var2.type = string;
+var2.value.stringv = "This is CS50";
+------------------------------------
+
+[[]]
+Type casting
+^^^^^^^^^^^^
+
+In C, you can use a cast to convert a variable from one type to another.
+For example, `(int) 2.0` will convert the `float` with value `2.0` into
+an integer value `2`.
+
+[[]]
+Other languages
+^^^^^^^^^^^^^^^
+
+PHP and JavaScript do not let you specify the type of a variable, but
+internally they do in fact have types, and it is possible to cast a
+variable from one type to another. PHP, for example, has eight basic
+types (see http://www.php.net/manual/en/language.types.intro.php[the
+manual]), and JavaScript has a similar number
+(https://developer.mozilla.org/en/JavaScript/Reference/Operators/Special/typeof[1]).

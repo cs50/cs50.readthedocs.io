@@ -1,0 +1,80 @@
+---
+tags: []
+title: Django
+---
+The cloud is essentially a
+http://docs.djangoproject.com/en/dev/howto/deployment/fastcgi/#running-django-on-a-shared-hosting-provider-with-apache[shared-hosting
+provider], and so it's possible to run Django using "Web server-spawned
+processes" thanks to http://en.wikipedia.org/wiki/FastCGI[FastCGI].
+
+To start a Django project on the cloud, SSH to the cloud and execute the
+following commands:
+
+code,bash-------------------------------- code,bash
+mkdir -p ~/public_html/project/
+cd ~/public_html/project/
+django-admin startproject final 
+--------------------------------
+
+Next create a file called `final.fcgi` in `~/public_html/project/`, as
+with `nano`, paste
+
+code,python-------------------------------------------------------
+code,python
+#!/usr/bin/python
+import sys, os
+
+os.environ["DJANGO_SETTINGS_MODULE"] = "final.settings"
+
+from django.core.servers.fastcgi import runfastcgi
+runfastcgi(method="threaded", daemonize="false")
+-------------------------------------------------------
+
+into that file, save, and quit. Then create a file called `.htaccess` in
+`~/public_html/project/`, as with `nano`, paste
+
+code,apache-----------------------------------------------------------
+code,apache
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ /~username/project/final.fcgi/$1 [QSA,L]
+-----------------------------------------------------------
+
+into that file, where `username` is your own username, save, and quit.
+Finally, execute the below.
+
+code,bash------------------------------------------ code,bash
+chmod 644 ~/public_html/project/.htaccess
+chmod 700 ~/public_html/project/final.fcgi
+------------------------------------------
+
+If you now run
+
+code,bash--------------------------- code,bash
+find ~/public_html/project/
+---------------------------
+
+you should see that you have the below.
+
+code,bash---------------------------------------------------- code,bash
+/home/username/public_html/project/
+/home/username/public_html/project/.htaccess
+/home/username/public_html/project/final
+/home/username/public_html/project/final/settings.py
+/home/username/public_html/project/final/__init__.py
+/home/username/public_html/project/final/manage.py
+/home/username/public_html/project/final/urls.py
+/home/username/public_html/project/final.fcgi
+----------------------------------------------------
+
+If you now visit
+`<nowiki>http://cloud.cs50.net/~username/project/</nowiki>`, you should
+see *It worked!* If you've set up a link:Virtual_Host[virtual host] on
+the cloud for a domain that you own (e.g., `example.com`), you should
+also be able to visit `<nowiki>http://example.com/</nowiki>` and see the
+same.
+
+If not, review and/or retry the steps above, and email help@cs50.net if
+you need assistance!
+
+Category:HOWTO

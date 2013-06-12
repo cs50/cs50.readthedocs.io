@@ -1,0 +1,99 @@
+---
+tags: []
+title: pset8
+---
+Unfortunately, the latest version of the Google Earth Plugin (which is
+required for Problem Set 8) seems to be very buggy, the result of which
+is error messages like
+
+* *There was a problem with the Google Earth Plugin*
+* *The Google Earth Plugin had an internal error*
+
+in the bottom-left corner of CS50 Shuttle (where a 3D earth should be).
+Thus far, we've been able to resolve these errors at office hours per
+the steps below.
+
+*Because of these issues, it's fine if your implementation only works in
+one (1) browser instead of two (2).*
+
+[[]]
+PC Users
+^^^^^^^^
+
+1.  Be sure you have the latest version of Firefox installed from
+http://www.mozilla.org/en-US/firefox/new/. It should be 8.0.
+2.  Launch Firefox.
+3.  Be sure you've already installed the Google Earth Plugin from
+http://code.google.com/apis/earth/.
+4.  Type *about:config* in the address bar (where a URL should normally
+be). If warned that "This might void your warranty," click *I'll be
+careful, I promise*. (It's just a joke.)
+5.  Type *dom.ipc.plugins.enabled* into the Filter: bar. The table below
+should then reveal a default value of true for
+*dom.ipc.plugins.enabled*. Double-click that row to change *true* to
+*false*.
+6.  Hit *Alt* to reveal Firefox's menu, then select *Tools > Clear
+Recent History....*
+7.  Select *Everything* next to *Time range to clear*.
+8.  Click *Clear Now*.
+9.  Quit Firefox (closing all of its windows).
+10. Re-launch Firefox.
+11. Visit https://www.cs50.net/pset8/ to test Problem Set 8's distro
+code.
+12. Visit http://192.168.56.50/~jharvard/pset8/ to test your own code.
+
+*So long as http://192.168.56.50/~jharvard/pset8/ now works, don't worry
+if you can't get http://shuttle.cs50.net/[shuttle.cs50.net] to work on
+your own computer.*
+
+[[]]
+Mac Users
+^^^^^^^^^
+
+1.  Be sure you have the latest version of Firefox installed from
+http://www.mozilla.org/en-US/firefox/new/. It should be 8.0.
+2.  Launch Firefox.
+3.  Be sure you've already installed the Google Earth Plugin from
+http://code.google.com/apis/earth/.
+4.  Type *about:config* in the address bar (where a URL should normally
+be). If warned that "This might void your warranty," click *I'll be
+careful, I promise*. (It's just a joke.)
+5.  Type *dom.ipc.plugins.enabled* into the Filter: bar. The table below
+should then reveal a default value of true for
+*dom.ipc.plugins.enabled.i386* and *dom.ipc.plugins.enabled.x86_64*.
+Ensure that the *Status* for both is *default* (and not boldfaced);
+double-click a row to toggle its status as needed.
+6.  Select *Tools > Clear Recent History....*
+7.  Select *Everything* next to *Time range to clear*.
+8.  Click *Clear Now*.
+9.  Quit Firefox (closing all of its windows).
+10. Open *service.js* in gedit inside of your appliance.
+11. Change
++
+------------------------------------------------------------------
+// show buildings
+earth.getLayerRoot().enableLayerById(earth.LAYER_BUILDINGS, true);
+------------------------------------------------------------------
++
+to
++
+-------------------------------------------------------------------
+// show buildings
+earth.getLayerRoot().enableLayerById(earth.LAYER_BUILDINGS, false);
+-------------------------------------------------------------------
++
+in `initCB`. Note the change from `true` to `false`. *This change will
+disable 3D buildings altogether (i.e., you won't see University Hall or
+any other buildings anymore), but it should at least get the plugin
+working.*
+12. Save your changes, as via *File > Save*.
+13. Re-launch Firefox.
+14. Visit http://www.google.com/earth/explore/products/plugin.html and
+make sure the 3D earth loads in the page.
+15. Visit https://www.cs50.net/pset8/ to test Problem Set 8's distro
+code.
+16. Visit http://192.168.56.50/~jharvard/pset8/ to test your own code.
+
+*So long as http://192.168.56.50/~jharvard/pset8/ now works, don't worry
+if you can't get http://shuttle.cs50.net/[shuttle.cs50.net] to work on
+your own computer.*

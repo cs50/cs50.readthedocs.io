@@ -1,0 +1,896 @@
+---
+tags: []
+title: CS50_ID
+---
+CS50 ID is an http://en.wikipedia.org/wiki/OpenID[OpenID]-based service
+that allows you to authenticate Harvard affiliates. It lives at
+https://id.cs50.net/.
+
+With CS50 ID, rather than ask users to log into your website (or even
+register), you can instead redirect them to CS50 ID, where they'll be
+prompted to log in with a Harvard email address or PIN. Once they've
+authenticated, CS50 ID will redirect users back to your website, at
+which point you'll know that they're indeed Harvard affiliates! CS50 ID
+will provide you with a unique identifier for each user (that you can
+use as a key in your own database). And, depending on how the user
+logged in, CS50 ID might also provide you with the user's full name
+and/or email address. CS50 ID will not provide you with users'
+passwords, HUIDs, XIDs, or PINs.
+
+To see CS50 ID in action, try out the
+https://id.cs50.net/example/[example]. All the example does is tell you
+whether you're logged in (and what information about you was returned by
+CS50 ID).
+
+[[]]
+How CS50 ID Works
+-----------------
+
+Per CS50 ID's link:#Implementation_Details[implementation details], the
+diagram below (inspired by
+http://code.google.com/apis/accounts/docs/OpenID.html#Interaction[Google's
+own]) depicts how CS50 ID works (in 8 steps, from top to bottom).
+
+image:CS50_ID.png[CS50_ID.png,title="image"]
+
+Thanks to the link:CS50 Library[CS50 Library], though, you don't need to
+implement (or even understand!) all of these steps in order to
+link:#How_to_Add_CS50_ID_to_Your_Website[add CS50 ID to your website].
+Per the link:#Examples[examples] for link:#PHP[PHP],
+link:#Python[Python], and link:#Ruby[Ruby], all you need do is call two
+methods (inspired by https://github.com/facebook/php-sdk[Facebook's
+own]):
+
+* `getLoginUrl`, which returns a URL via which a user can log into CS50
+ID
+* `getUser`, which verifies CS50 ID's response
+
+[[]]
+How to Add CS50 ID to Your Website
+----------------------------------
+
+1.  Decide who should be allowed to log into your website. Even though
+CS50 ID supports multiple options, it's best to choose just one so that
+users always log in with the same account. If you allow users multiple
+options (e.g., an `@college.harvard.edu` email address or an
+`@fas.harvard.edu` address), a user might log in as
+`jharvard@college.harvard.edu` one day but as `jharvard@fas.harvard.edu`
+another day, in which case your website won't realize they're they same
+user (since CS50 ID will return a different identifier for each). You
+can allow:
+* Anyone with a Harvard PIN
+* Anyone with an `@college.harvard.edu` email address
+* Anyone with an `@fas.harvard.edu` email address
+* Anyone with an `@post.harvard.edu` email address
+* Anyone with an `@seas.harvard.edu` email address
+2.  Decide on:
+* The URL at which your website will live (e.g.,
+`<nowiki>https://cloud.cs50.net/~jharvard/</nowiki>`,
+`<nowiki>http://isawyouharvard.com/</nowiki>`, etc.), otherwise known as
+your `trust_root` (or `realm`) address. This must be a prefix of your
+`return_to` address. *If you later need to change this address, you'll
+need to contact sysadmins@cs50.net.*
+* The URL to which CS50 ID should return users after authentication
+(e.g.,
+`<nowiki>https://cloud.cs50.net/~jharvard/return_to.php</nowiki>`,
+`<nowiki>http://isawyouharvard.com/return_to.php</nowiki>`, etc.),
+otherwise known as your `return_to` address. *If you later need to
+change this address, you'll need to contact sysadmins@cs50.net.*
+3.  Fill out the
+https://spreadsheets1.google.com/spreadsheet/viewform?hl=en&hl=en&formkey=dFkxWmJHSkd3N1haM1pRN3JabnFaRkE6MQ[CS50
+ID Application]. If you don't hear back within 72 hours, email
+sysadmins@cs50.net to inquire.
+4.  Download the latest version of the link:CS50 Library[CS50 Library]
+for http://mirror.cs50.net/library/php/[PHP],
+http://mirror.cs50.net/library/python/[Python], or
+http://mirror.cs50.net/library/ruby/[Ruby] and integrate it into your
+website, per the link:#Examples[examples] below.
+
+[[]]
+Examples
+--------
+
+Below are examples of how to add CS50 ID to your website in
+link:#PHP[PHP], link:#Python[Python], and link:#Ruby[Ruby] using the
+link:CS50 Library[CS50 Library]. Each example implements the behavior at
+https://id.cs50.net/example/.
+
+To add CS50 ID to your website using some other library or language,
+review link:#How_CS50_ID_Works[How CS50 ID Works].
+
+[[]]
+PHP
+~~~
+
+This example is available for download at
+http://mirror.cs50.net/id50/php/id-1.1.zip.
+
+[[]]
+config.php
+^^^^^^^^^^
+
+In this file, we define three constants:
+
+* `TRUST_ROOT`, one of two URLs that you submitted on your
+https://spreadsheets1.google.com/spreadsheet/viewform?hl=en&hl=en&formkey=dFkxWmJHSkd3N1haM1pRN3JabnFaRkE6MQ[CS50
+ID Application].
+* `RETURN_TO`, one of two URLs that you submitted on your
+https://spreadsheets1.google.com/spreadsheet/viewform?hl=en&hl=en&formkey=dFkxWmJHSkd3N1haM1pRN3JabnFaRkE6MQ[CS50
+ID Application].
+
+And we also `require` the link:CS50 Library[CS50 Library].
+
+code,php-------------------------------------------------------------------------------------
+code,php
+<?php
+
+    // URL that CS50 ID should ask users to trust; must be registered with CS50,
+    // per the HOWTO at https://manual.cs50.net/ID; must be a prefix of RETURN_TO
+    define("TRUST_ROOT", "https://cloud.cs50.net/~jharvard/");
+
+    // URL to which CS50 ID should return users; must be registered with CS50,
+    // per the HOWTO at https://manual.cs50.net/ID
+    define("RETURN_TO", "https://cloud.cs50.net/~jharvard/return_to.php");
+
+    // CS50 Library; ideally, this should not be inside public_html (or DocumentRoot)
+    require_once(dirname(__FILE__) . "/relative/path/to/CS50/CS50.php");
+
+    // ensure $_SESSION exists
+    session_start();
+
+?>
+-------------------------------------------------------------------------------------
+
+Note that, on `cloud.cs50.net` and in the link:CS50 Appliance[CS50
+Appliance], the CS50 Library is installed in `/usr/share/php/`, which is
+in PHP's `include_path`, which means you can `require` it with a much
+shorter path:
+
+code,php------------------------------ code,php
+require_once("CS50/CS50.php");
+------------------------------
+
+[[]]
+index.php
+^^^^^^^^^
+
+Notice how this file requires link:#config.php[config.php]. And notice
+how it infers whether a user is logged in by checking whether
+`$_SESSION["user"]` has a value; that value is set by
+link:#return_to.php[return_to.php].
+
+code,php------------------------------------------------------------------------------------------------------------------------
+code,php
+<?php
+
+    // configuration
+    require_once(dirname(__FILE__) . "/config.php");
+
+?>
+
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width" name="viewport">
+    <title>Example</title>
+  </head>
+  <body>
+    <?php
+
+        if (isset($_SESSION["user"]))
+        {
+            echo "<div>You are logged in.  <a href='logout.php'>Log out</a>.</div>";
+            echo "<div>Your unique identifier is <b>" . htmlspecialchars($_SESSION["user"]["identity"]) . "</b>.</div>";
+            if (isset($_SESSION["user"]["fullname"]))
+                echo "<div>Your full name is <b>" . htmlspecialchars($_SESSION["user"]["fullname"]) . "</b>.</div>";
+            if (isset($_SESSION["user"]["email"]))
+                echo "<div>Your email address is <b>" . htmlspecialchars($_SESSION["user"]["email"]) . "</b>.</div>";
+        }
+        else
+            echo "You are not logged in.  <a href='login.php'>Log in</a>.";
+
+      ?>
+    </ul>
+  </body>
+</html>
+------------------------------------------------------------------------------------------------------------------------
+
+[[]]
+login.php
+^^^^^^^^^
+
+Rather than display a login form to the user, notice how this file
+simply redirects the user to CS50 ID, specifically to the URL returned
+by `getLoginUrl`, a static method defined in the link:CS50 Library[CS50
+Library].
+
+code,php------------------------------------------------------------------------
+code,php
+<?php
+
+    // configuration
+    require_once(dirname(__FILE__) . "/config.php");
+
+    // if user is already logged in, redirect to index.php
+    if (isset($_SESSION["user"]))
+    {
+        $protocol = (isset($_SERVER["HTTPS"])) ? "https" : "http";
+        $host  = $_SERVER["HTTP_HOST"];
+        $path = rtrim(dirname($_SERVER["PHP_SELF"]), "/\\");
+        header("Location: {$protocol}://{$host}{$path}/index.php");
+    }
+
+    // else redirect user to CS50 ID
+    else
+        header("Location: " . CS50::getLoginUrl(TRUST_ROOT, RETURN_TO));
+
+?>
+------------------------------------------------------------------------
+
+[[]]
+return_to.php
+^^^^^^^^^^^^^
+
+This is the page to which the user will be returned by CS50 ID (per the
+definition of `RETURN_TO` in link:#config.php[config.php]). Note that
+`getUser`, a static method defined in the link:CS50 Library[CS50
+Library], will return an associative array that represents the user who
+logged in via CS50 ID. Included in that associative array will be at
+least one key:
+
+* `identity`, a string (that happens to be a URL) that uniquely
+identifies the user
+
+Also included in that associative array may be one or both of these
+keys:
+
+* `email`, the user's Harvard email address, if the user logged in via
+PIN or via an `@college.harvard.edu` or `@fas.harvard.edu` address
+* `fullname`, the user's full name, if the user logged in via PIN
+
+Note that `getUser` will return `false` if the user did not, in fact,
+just log in successfully via CS50 ID.
+
+Finally, note that we "remember" that the user has logged in by storing
+the associative array returned by `getUser` as the value of
+`$_SESSION["user"]`. Recall that link:#index.php[index.php] checks
+`$_SESSION["user"]` to determine whether a user is logged in.
+
+code,php---------------------------------------------------------------
+code,php
+<?php
+
+    // configuration
+    require_once(dirname(__FILE__) . "/config.php");
+
+    // remember which user, if any, logged in
+    $user = CS50::getUser(RETURN_TO);
+    if ($user !== false)
+        $_SESSION["user"] = $user;
+
+    // redirect user to index.php
+    $protocol = (isset($_SERVER["HTTPS"])) ? "https" : "http";
+    $host  = $_SERVER["HTTP_HOST"];
+    $path = rtrim(dirname($_SERVER["PHP_SELF"]), "/\\");
+    header("Location: {$protocol}://{$host}{$path}/index.php");
+
+?>
+---------------------------------------------------------------
+
+[[]]
+logout.php
+^^^^^^^^^^
+
+Note that logouts are not handled by CS50 ID but by your own website. So
+long as you have "remembered" that a user is logged in by storing the
+associative array returned by `getLoginUrl` as the value of
+`$_SESSION["user"]`, per link:#return_to.php[return_to.php], it suffices
+to unset `$_SESSION["user"]` to log the user out; you should not
+redirect the user back to CS50 ID.
+
+code,php---------------------------------------------------------------
+code,php
+<?php
+
+    // configuration
+    require_once(dirname(__FILE__) . "/config.php");
+
+    // if user is already logged in, log out
+    if (isset($_SESSION["user"]))
+        unset($_SESSION["user"]);
+
+    // redirect user to index.php
+    $protocol = (isset($_SERVER["HTTPS"])) ? "https" : "http";
+    $host  = $_SERVER["HTTP_HOST"];
+    $path = rtrim(dirname($_SERVER["PHP_SELF"]), "/\\");
+    header("Location: {$protocol}://{$host}{$path}/index.php");
+
+?>
+---------------------------------------------------------------
+
+[[]]
+Python
+~~~~~~
+
+This example is available for download at
+http://mirror.cs50.net/library/python/examples/id.zip.
+
+COMING SOON
+
+[[]]
+Ruby
+~~~~
+
+This example is available for download at
+http://mirror.cs50.net/library/ruby/examples/id.zip.
+
+[[]]
+Setup
+^^^^^
+
+Once you've installed Ruby, Ruby on Rails, and RubyGems, download a copy
+of the CS50 Library from RubyGems via:
+
+code,bash------------------ code,bash
+$ gem install cs50
+------------------
+
+Now, create a new project, like `cs50id`:
+
+code,bash------------------ code,bash
+$ rails new cs50id
+------------------
+
+Now, add the CS50 library to the project by adding the following to
+`/Gemfile`:
+
+code,ruby---------- code,ruby
+gem 'cs50'
+----------
+
+The project has been configured to use the CS50 Library, so a new
+controller, called `Auth`, can be created to handle user authentication:
+
+code,bash-------------------------------- code,bash
+$ rails generate controller Auth
+--------------------------------
+
+[[]]
+login
+^^^^^
+
+In order to log in, users will be redirected to CS50 ID, via a link
+generated by the CS50 Library. We must specify the location of a
+temporary directory to store login information, the registered
+`TRUST_ROOT` and `RETURN_TO`, and the object representing the current
+session. In `/add/controllers/auth_controller.rb`, create a new action
+for logging in:
+
+code,ruby-----------------------------------------------------------------------------------------------------------------------------------
+code,ruby
+def login
+    # user already logged in, redirect to index
+    if (session["user"])
+        redirect_to :action => :index
+
+    # redirect to CS50 ID
+    else
+        redirect_to CS50.getLoginUrl(Rails.root.join("tmp"), "http://localhost:3000", "http://localhost:3000/auth/return", session)
+    end
+end
+-----------------------------------------------------------------------------------------------------------------------------------
+
+[[]]
+return
+^^^^^^
+
+Once the user authenticates via CS50 ID, they'll be brought back to
+`<nowiki>http://localhost:3000/auth/return</nowiki>`. At this point, we
+can retrieve information associated with the user that successfully
+logged in. To do so, we must again specify our temporary directory and
+RETURN_TO, as well as the current session and params objects (where the
+user information is stored). Because our RETURN_TO is `/auth/return`, we
+need to create a `return` action:
+
+code,ruby-----------------------------------------------------------------------------------------------------
+code,ruby
+def return
+    # get authenticated user information
+    user = CS50.getUser(Rails.root.join("tmp"), "http://localhost:3000/auth/return", session, params)
+
+    # remember which user, if any, logged in
+    if (user)
+        session["user"] = user
+    end
+
+    redirect_to :action => :index
+end
+-----------------------------------------------------------------------------------------------------
+
+[[]]
+logout
+^^^^^^
+
+Because we stored user information in the session, a logout is
+accomplished by clearing the session.
+
+code,ruby--------------------------------------------------- code,ruby
+def logout
+    # clear the user's information from the session
+    session["user"] = nil
+
+    redirect_to :action => :index
+end
+---------------------------------------------------
+
+[[]]
+index
+^^^^^
+
+We have specified an `index` action in both `login` and `logout`, so we
+must create one:
+
+code,ruby--------- code,ruby
+def index
+end
+---------
+
+Now, create the corresponding view, `/app/views/auth/index.html.erb`:
+
+code,ruby---------------------------------------------------------------------------------------------
+code,ruby
+<% if (session["user"]) %>
+
+    You are logged in. <%= link_to "Log out", :action => "logout" %><br />
+    Your unique ID for this site is <strong><%= session["user"]["identity"] %></strong><br />
+    <% if (session["user"]["fullname"]) %>
+        Your full name is <strong><%= session["user"]["fullname"] %></strong><br />
+    <% end %>
+    <% if (session["user"]["email"]) %>
+        Your email address is <strong><%= session["user"]["email"] %></strong><br />
+    <% end %>
+
+
+<% else %>
+    You are not logged in. <%= link_to "Log in", :action => "login" %>
+<% end %>
+---------------------------------------------------------------------------------------------
+
+Finally, we must set up routes to the four actions we've created, so add
+the following to `/app/config/routes.rb`
+
+code,ruby------------------------------------ code,ruby
+match 'auth' => 'auth#index'
+match 'auth/login' => 'auth#login'
+match 'auth/logout' => 'auth#logout'
+match 'auth/return' => 'auth#return'
+------------------------------------
+
+To run the app, start the Rails server with:
+
+code,bash--------- code,bash
+$ rails s
+---------
+
+Now, navigate to `http://localhost:3000/auth`. You should see a link to
+log in, at which point you'll be redirected to CS50 ID. After
+authenticating, you'll be brought back to your app, and you'll see your
+user information and a logout link!
+
+[[]]
+Implementation Details
+----------------------
+
+*If you would like to add CS50 ID to your own site, you probably only
+need to follow the link:#How_to_Add_CS50_ID_to_Your_Website[directions
+above].*
+
+If, though, you would like to add CS50 ID to your website using some
+library other than the link:CS50 Library[CS50 Library] or some language
+other than link:#PHP[PHP], link:#Python[Python], and link:#Ruby[Ruby]
+(which the link:CS50 Library[CS50 Library] supports), below are
+implementation details for the technically curious.
+
+[[]]
+Overview
+~~~~~~~~
+
+CS50 ID is based on
+http://openid.net/get-an-openid/what-is-openid/[OpenID], which "allows
+you to use an existing account to sign in to multiple websites." In
+http://openid.net/specs/openid-authentication-2_0.html#terminology[OpenID
+terminology], CS50 is an _OpenID Provider_, and a website that uses CS50
+ID (e.g., yours!) is a _Relying Party_. CS50's _OP Identifier_ (i.e.,
+the address on which discovery should be performed) is
+`<nowiki>https://id.cs50.net/</nowiki>`. (Note the `https`.)
+
+As per link:#How_CS50_ID_Works[how CS50 ID works], whether you use the
+link:CS50 Library[CS50 Library] or some other library to add CS50 ID to
+your website, here's how authentication must flow:
+
+1.  User tries to access a page on your website that requires login.
+2.  Your website performs "discovery" for CS50 ID (via
+http://yadis.org/papers/yadis-v1.0.pdf[Yadis] or
+http://openid.net/specs/openid-authentication-2_0.html#html_disco[HTML]).
+3.  CS50 ID responds to your website with its
+https://id.cs50.net/xrds[XRDS file] (which contains CS50 ID's endpoint
+URL).
+4.  Your website establishes a shared secret with CS50 ID (using an
+OpenID `associate` request), constructs a URL with which user can log in
+via CS50 ID (using an OpenID `check_setup` request), and then redirects
+user to that URL (as with an
+http://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection[HTTP
+302] status code).
+5.  CS50 ID prompts user to log in.
+6.  User logs into CS50 ID.
+7.  CS50 ID redirects user back to your website (via a URL whose
+parameters include digitally signed OpenID fields, among which are a
+unique identifier for the user as well as, possibly, the user's full
+name and/or email address).
+8.  Your website verifies CS50 ID's digital signature, remembers (as
+with a server-side session) that the user is now logged in, and then
+shows the user the page that required login.
+
+[[]]
+Compatibility
+~~~~~~~~~~~~~
+
+CS50 ID supports
+
+* http://openid.net/specs/openid-authentication-2_0.html[OpenID
+Authentication 2.0]
+*
+http://openid.net/specs/openid-simple-registration-extension-1_0.html[OpenID
+Simple Registration Extension 1.0]
+* http://openid.net/specs/openid-attribute-exchange-1_0.html[OpenID
+Attribute Exchange 1.0]
+
+but with some constraints.
+
+[[]]
+OpenID Authentication 2.0
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+CS50 ID supports
+http://openid.net/specs/openid-authentication-2_0.html[OpenID
+Authentication 2.0] but with these constraints:
+
+* A Relying Party must be approved to use CS50 ID. Review
+link:#How_to_Add_CS50_ID_to_Your_Website[How to Add CS50 ID to Your
+Website] to apply for approval.
+* Discovery must be performed via
+http://yadis.org/papers/yadis-v1.0.pdf[Yadis] or
+http://openid.net/specs/openid-authentication-2_0.html#html_disco[HTML].
+http://docs.oasis-open.org/xri/2.0/specs/cd02/xri-resolution-V2.0-cd-02.html[XRI
+Resolution] is not supported.
+* Only `checkid_setup` is supported for authentication;
+`checkid_immediate` is not supported. CS50 ID requires interactive
+authentication.
+* Claimed Identifiers are not supported for `checkid_setup`. A Relying
+Party MUST provide a value of
+`<nowiki>http://specs.openid.net/auth/2.0/identifier_select</nowiki>`
+for both `openid.claimed_id` and `openid.identity`.
+* CS50 ID responds to `check_setup` requests with a unique identifier of
+the form +
+`<nowiki>https://id.cs50.net/################################################################</nowiki>` +
+ for both `openid.claimed_id` and `openid.identity`, where +
+`################################################################` +
+represents 64 hexadecimal digits. That identifier is dependent on the
+account with which the user authenticated: if John Harvard authenticates
+as `jharvard@college.harvard.edu`, CS50 ID will return a different
+identifier than it would if John Harvard authenticates as
+`jharvard@fas.harvard.edu`. CS50 ID does not allow users to "link"
+accounts (whereby the same identifier would be returned for a user, no
+matter the account with which the user authenticated).
+
+[[]]
+OpenID Simple Registration Extension 1.0
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+CS50 ID supports
+http://openid.net/specs/openid-simple-registration-extension-1_0.html[OpenID
+Simple Registration Extension 1.0] but only for `fullname` and `email`.
+
+If requested, CS50 ID may return, if available, a value for
+
+* `fullname`
+
+where `fullname` is a user's full name.
+
+If requested, CS50 ID will return, if available, a value for
+
+* `email`
+
+where `email` is a user's email address.
+
+[[]]
+OpenID Attribute Exchange 1.0
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+CS50 ID supports
+http://openid.net/specs/openid-attribute-exchange-1_0.html[OpenID
+Attribute Exchange 1.0] but only for
+`<nowiki>http://axschema.org/namePerson</nowiki>` and
+`<nowiki>http://axschema.org/contact/email</nowiki>`.
+
+If requested, CS50 ID will return, if available, a value for
+
+* `<nowiki>http://axschema.org/namePerson</nowiki>`
+
+where `namePerson` is a user's full name.
+
+If requested, CS50 ID will return, if available, a value for
+
+* `<nowiki>http://axschema.org/contact/email</nowiki>`
+
+where `email` is a user's Harvard email address.
+
+[[]]
+FAQs
+----
+
+[[]]
+How should I store users in my database?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+When a user authenticates, CS50 ID returns an 84-character URL that
+uniquely identifies that user; the URL begins with
+`<nowiki>https://id.cs50.net/</nowiki>` (which is 20 characters in
+length) and ends with 64 hexadecimal digits. In a MySQL database, you
+can thus store that identifier in a `CHAR( 84 )` field. For efficiency,
+though, it's best to associate a unique, auto-incrementing `INT` with
+each user as well (so that you can `SELECT` users based on 4 bytes
+instead of 84), as with the schema below (which assumes that `email` and
+`fullname` will be no more than 128 characters each):
+
+code,sql---------------------------------------------------- code,sql
+CREATE TABLE  `users` (
+`id` INT( 11 ) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+`identity` CHAR( 84 ) NOT NULL ,
+`fullname` VARCHAR( 128 ) NULL DEFAULT NULL ,
+`email` VARCHAR( 128 ) NULL DEFAULT NULL ,
+UNIQUE (
+`identity`
+)
+) ENGINE = MYISAM ;
+----------------------------------------------------
+
+In theory, you could probably get away with storing only the URL's
+trailing 64 hexadecimal digits, but, to be consistent with OpenID, you
+should store all 84, especially if you might decide to allow your users
+to log in via other means as well (e.g., via
+http://www.janrain.com/products/engage[Janrain Engage]).
+
+[[]]
+Why does CS50 ID uniquely identify users with 84-character URLs?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+CS50 ID is based on http://en.wikipedia.org/wiki/OpenID[OpenID], which
+dictates that users be uniquely identified with URLs. By convention,
+OpenID providers (like CS50) return URLs based on domains that they own
+(e.g., `id.cs50.net`) so that their identifiers won't be identical to
+other providers' by accident. CS50 thus standardized on URLs that begin
+with `<nowiki>https://id.cs50.net/</nowiki>`.
+
+[[]]
+Why doesn't CS50 ID always return a user's full name and/or email
+address?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+When a user authenticates, CS50 ID will always return an 84-character
+URL that uniquely identifies that user. Depending on how a user
+authenticates, CS50 ID might also return the user's full name and/or
+email address.
+
+CS50 ID may return a user's full name if a user authenticates via:
+
+* a Harvard PIN
+* an `@college.harvard.edu` email address
+* an `@fas.harvard.edu` email address
+* an `@seas.harvard.edu` email address
+
+CS50 ID will not return a user's full name if a user authenticates via:
+
+* an `@post.harvard.edu` email address
+
+CS50 ID will return a user's email address if a user authenticates via:
+
+* an `@college.harvard.edu` email address
+* an `@fas.harvard.edu` email address
+* an `@seas.harvard.edu` email address
+
+CS50 ID may return a user's email address if a user authenticates via:
+
+* a Harvard PIN
+
+CS50 ID will not return a user's email address if a user authenticates
+via:
+
+* an `@post.harvard.edu` email address
+
+[[]]
+Can I develop my site on localhost (127.0.0.1)?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Yes, even though you must register your own website's URLs, CS50 ID also
+trusts URLs that begin with `<nowiki>http://localhost/</nowiki>` and
+`<nowiki>http://127.0.0.1/</nowiki>` automatically so that you can
+develop your website locally and still interact with CS50 ID, provided
+you're running a web server that's listening for requests on `localhost`
+or `127.0.0.1` (on any TCP port). During development, simply change
+`TRUST_ROOT` and `RETURN_TO`, per the link:#Examples[examples], to refer
+to `localhost` or `127.0.0.1`; just be sure that `RETURN_TO` is still a
+prefix of `TRUST_ROOT`. Note that, when using `localhost` or
+`127.0.0.1`, you'll be able to log into CS50 ID using any supported
+account (email, PIN, etc.), not just those that you chose to enable when
+you registered for CS50 ID.
+
+*You do not need to register `localhost` or `127.0.0.1` when you apply
+for CS50 ID.*
+
+When ready to launch your website, just remember to change `TRUST_ROOT`
+and `RETURN_TO` to the URLs with which you applied for CS50 ID.
+
+[[]]
+Can I develop my site on a private network?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Yes, even though you must register your own website's URLs, CS50 ID also
+trusts URLs that refer to
+http://en.wikipedia.org/wiki/Private_network#Private_IPv4_address_spaces[private
+IPv4 addresses] (e.g., 192.168.56.50) automatically so that you can
+develop your website locally and still interact with CS50 ID, provided
+you're running a web server that's listening for requests on an private
+IPv4 address (on any TCP port). During development, simply change
+`TRUST_ROOT` and `RETURN_TO`, per the link:#Examples[examples], to refer
+to the server's private IP address; just be sure that `RETURN_TO` is
+still a prefix of `TRUST_ROOT`. Note that, when using a private IPv4
+address, you'll be able to log into CS50 ID using any supported account
+(email, PIN, etc.), not just those that you chose to enable when you
+registered for CS50 ID.
+
+*You do not need to register your server's private IPv4 address when you
+apply for CS50 ID.*
+
+When ready to launch your website, just remember to change `TRUST_ROOT`
+and `RETURN_TO` to the URLs with which you applied for CS50 ID.
+
+[[]]
+Troubleshooting
+---------------
+
+[[]]
+The site you tried to log into is not configured properly for CS50 ID
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If a user reports seeing this message, odds are you're using incorrect
+(or unapproved) values for `TRUST_ROOT` and/or `RETURN_TO` in your code.
+Best to double-check those values.
+
+If still unsure what's wrong (or if you don't recall which URLs we
+approved), email sysadmins@cs50.net to inquire.
+
+[[]]
+Invalid username and/or password
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If a user reports seeing this message, odds are the user is using the
+wrong account, username, and/or password. Encourage the user to try
+again.
+
+If the user continues to have trouble logging in ...
+
+* ... with an `@college.harvard.edu` account, ask the user to try
+logging into https://webmail.college.harvard.edu/. If the user *cannot*,
+refer the user to https://webmail.college.harvard.edu/feedback.asp. If
+the user *can*, email sysadmins@cs50.net to inquire, CCing the user.
+* ... with an `@fas.harvard.edu` account, ask the user to try logging
+into https://webmail.fas.harvard.edu/. If the user *cannot*, refer the
+user to help@fas.harvard.edu or 617-495-5000. If the user *can*, email
+sysadmins@cs50.net to inquire, CCing the user.
+* ... with an `@seas.harvard.edu` account, ask the user to try logging
+into both https://mail.seas.harvard.edu/ and
+https://email.seas.harvard.edu/. If the user *cannot* log into either,
+refer the user to help@fas.harvard.edu or 617-495-5000. If the user
+*can* log into at least one, email sysadmins@cs50.net to inquire, CCing
+the user.
+* ... with a PIN, ask the user to try logging into
+https://id.cs50.net/example/ via PIN. If the user *cannot*, refer the
+user to http://reference.pin.harvard.edu/login-help. If the user *can*,
+email sysadmins@cs50.net to inquire, CCing the user.
+
+[[]]
+CS50 Library requires bcmath or gmp extension module
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The link:Library#PHP[CS50 Library for PHP] is pre-installed in the
+link:Appliance[CS50 Appliance] and on `cloud.cs50.net`, as are all
+dependencies. But if using the library on some other server, you may see
+this error if http://php.net/manual/en/book.bc.php[BC Math] and
+http://php.net/manual/en/book.gmp.php[GMP] are not already installed.
+
+[[]]
+CentOS, Fedora, RedHat
+++++++++++++++++++++++
+
+Try running the following commands as `root`:
+
+`yum install php-bcmath php-gmp` +
+`service httpd restart`
+
+[[]]
+Debian, Ubuntu
+++++++++++++++
+
+Try running the following commands as `root`:
+
+`apt-get install php5-gmp` +
+`service apache2 restart`
+
+[[]]
+Windows
++++++++
+
+Open `php.ini` with a text editor and change:
+
+`;extension=php_gmp.dll`
+
+if present to:
+
+`extension=php_gmp.dll`
+
+Then restart your web server.
+
+[[]]
+CS50 Library requires dom or domxml extension module
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The link:Library#PHP[CS50 Library for PHP] is pre-installed in the
+link:Appliance[CS50 Appliance] and on `cloud.cs50.net`, as are all
+dependencies. But if using the library on some other server, you may see
+this error if PHP's http://php.net/manual/en/book.dom.php[DOM] and
+http://php.net/manual/en/book.domxml.php[DOM XML] are not already
+installed.
+
+[[]]
+CentOS, Fedora, RedHat
+++++++++++++++++++++++
+
+Try running the following commands as `root`:
+
+`yum install php-xml` +
+`service httpd restart`
+
+[[]]
+CS50 Library requires openssl extension module
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The link:Library#PHP[CS50 Library for PHP] is pre-installed in the
+link:Appliance[CS50 Appliance] and on `cloud.cs50.net`, as are all
+dependencies. But if using the library on some other server, you may see
+this error if http://php.net/manual/en/book.openssl.php[OpenSSL] is not
+already installed.
+
+[[]]
+Windows
++++++++
+
+Open `php.ini` with a text editor and change:
+
+`;extension=php_openssl.dll`
+
+if present to:
+
+`extension=php_openssl.dll`
+
+Then restart your web server.
+
+[[]]
+Support
+-------
+
+Email sysadmins@cs50.net with questions.
+
+Category:HOWTO

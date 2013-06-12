@@ -1,0 +1,48 @@
+---
+tags: []
+title: cron
+---
+Cron is a utility found on most Linux systems that allows you to execute
+commands on a schedule (e.g., daily at midnight). Those commands can be
+C programs, PHP scripts, or any executable at all. A scheduled command
+is called a "cron job." If your cron job is a script, written in an
+interpreted language be sure that the file's first line is a
+http://en.wikipedia.org/wiki/Shebang_(Unix)[shebang]. For instance, if
+your script is written in PHP, its first two lines should be:
+
+`#!/usr/bin/php` +
+`u``), as by executing:`
+
+`chmod u+x script`
+
+And if it is written in PHP, be sure not to give it a `.php` file
+extension if lives somewhere in `~/public_html/`, lest someone else be
+able to execute it via a browser; name it something like `script`, not
+`script.php`.
+
+[[]]
+How to Schedule a Cron Job
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1.  Visit https://cloud.cs50.net/usermin.
+2.  Log in with your cloud username and password if prompted.
+3.  Click *Others* at top-left.
+4.  Click *Scheduled Cron Jobs* at top-left.
+5.  Click *Create a new scheduled cron job*.
+6.  Under *Job Details*, ensure that *Yes* is checked to the right of
+*Active?*, then input the full path to the script you want executed
+(e.g., `/home/jharvard/public_html/project/script`) to the right of
+*Command*. Be sure to test the path first: SSH to the cloud and try
+executing at your prompt it via copy/paste. If you see something like
+*No such file or directory*, it's not the right path!
+7.  Under *When to execute*, specify a schedule.
+8.  Under *Date range to execute*, specify a schedule.
+9.  Click *Create*.
+
+For instance, if John Harvard `jharvard` wants to schedule
+`~/public_html/project/script` to run daily at midnight, he should
+schedule a cron job per the below.
+
+image:Cron.png[Cron.png,title="image"]
+
+Category:HOWTO

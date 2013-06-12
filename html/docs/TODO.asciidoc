@@ -1,0 +1,132 @@
+---
+tags: []
+title: TODO
+---
+[[]]
+Week 0
+------
+
+* Algorithm
+* Array
+* ASCII
+* Binary
+* Bit
+* [line-through]*link:Boolean Expression[Boolean Expression]*
+* [line-through]*Condition*
+* link:Control Flow[Control Flow]
+* Event
+* Loops
+* Scratch
+* Statement
+* Thread
+* Variable
+
+[[]]
+Week 1
+------
+
+* \n
+* \r
+* [line-through]*Argument*
+* Associativity
+* [line-through]*bool*
+* C
+* [line-through]*Casting*
+* char
+* [line-through]*Comment*
+* Compiler
+* link:CS50 Library[CS50 Library]
+* double
+* float
+* Function
+* GCC
+* GetDouble
+* GetFloat
+* GetInt
+* GetLongLong
+* GetString
+* link:Header File[Header File]
+* int
+* Library
+* link:Local Variable[Local Variable]
+* long
+* link:long long[long long]
+* main
+* Modulus
+* link:Object Code[Object Code]
+* [line-through]*printf*
+* [line-through]*Parameter*
+* Precedence
+* link:Source Code[Source Code]
+* SFTP
+* SSH
+* link:Standard Input[Standard Input]
+* link:Standard Output[Standard Output]
+* string
+* [line-through]*switch*
+* Type
+
+[[]]
+Week 2
+------
+
+* [line-through]*argc*
+* [line-through]*argv*
+* [line-through]*Argument*
+* [line-through]*Array*
+* [line-through]*link:Caesar Cipher[Caesar Cipher]*
+* [line-through]*link:Command-Line Argument[Command-Line Argument]*
+* [line-through]*Cryptanalysis*
+* [line-through]*Cryptography*
+* [line-through]*Frame*
+* [line-through]*link:Global Variable[Global Variable]*
+* [line-through]*Parameter*
+* [line-through]*link:Return Value[Return Value]*
+* [line-through]*Scope*
+* [line-through]*Stack*
+* [line-through]*link:Vigenère Cipher[Vigenère Cipher]*
+
+[[]]
+Week 3
+------
+
+* [line-through]*link:Asymptotic Notation[Asymptotic Notation]*
+* [line-through]*link:Binary Search[Binary Search]*
+* [line-through]*link:Bubble Sort[Bubble Sort]*
+* [line-through]*Debugging*
+* [line-through]*GDB*
+* [line-through]*link:Insertion Sort[Insertion Sort]*
+* [line-through]*link:Linear Search[Linear Search]*
+* [line-through]*O*
+* [line-through]*Ω*
+* [line-through]*Recursion*
+* [line-through]*link:Running Time[Running Time]*
+* [line-through]*link:Selection Sort[Selection Sort]*
+* [line-through]*Θ*
+
+[[]]
+Week 4
+------
+
+* [line-through]*Address*
+* [line-through]*link:Base Case[Base Case]*
+* [line-through]*Heap*
+* [line-through]*malloc*
+* [line-through]*link:Merge Sort[Merge Sort]*
+* [line-through]*Pointer*
+* [line-through]*Recursion*
+* [line-through]*link:Recursive Case[Recursive Case]*
+* [line-through]*Stack*
+* [line-through]*struct*
+* [line-through]*typedef*
+
+[[]]
+Week 5
+------
+
+* [line-through]*link:File I/O[File I/O]*
+* [line-through]*Forensics*
+* [line-through]*link:Linked List[Linked List]*
+* [line-through]*Queue*
+* [line-through]*link:Stack (data structure)[Stack (data structure)]*
+

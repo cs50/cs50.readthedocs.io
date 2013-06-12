@@ -1,0 +1,100 @@
+---
+tags: []
+title: argc
+---
+`argc` is an integer argument passed to the main method which stores the
+number of command-line arguments that the program was executed with. For
+example, if you run a program named `foo` like so,
+
+-------------
+./foo bar baz
+-------------
+
+the value of `argc` will be 3.
+
+`argc` is passed to main as the first of two arguments, the second being
+`[[argv]]`:
+
+code,c----------------------------- code,c
+int
+main (int argc, char *argv[])
+{
+    // your program
+}
+-----------------------------
+
+Within your program, `argc` is useful for iterating over the
+command-line arguments. For example, to print out all of the
+command-line arguments, you might write the following loop:
+
+code,c------------------------------ code,c
+for (int i = 0; i < argc; i++)
+{
+    printf("%s\n", argv[i]);
+}
+------------------------------
+
+In the example above, this would print:
+
+-----
+./foo
+bar
+baz
+-----
+
+It's important to note that `argc` will always be at least 1. This is
+because the name of the program is always stored as the first
+command-line argument.
+
+`argc` is also useful for checking the proper usage of your program. For
+example, if your program requires one or more command-line arguments,
+you can check that they have been provided by testing `argc`:
+
+code,c----------------------------------------------------- code,c
+if (argc < 2)
+{
+    printf{"Must specify a command-line argument.\n"}
+    return 1;
+}
+-----------------------------------------------------
+
+If this `argc` test is included in your program for guessing David's
+age, then the output of your program might look like the following:
+
+-------------------------------------
+./guess_Davids_age
+Must specify a command-line argument.
+-------------------------------------
+
+Running it again with a single command-line argument, your output might
+look like this:
+
+----------------------
+./guess_Davids_age 100
+You are correct!
+----------------------
+
+Here's the full program for guessing David's age:
+
+code,c--------------------------------------------------------- code,c
+#include <cs50.h>
+#include <stdio.h>
+
+int
+main(int argc, char *argv[])
+{
+    if (argc < 2)
+    {
+        printf{"Must specify a command-line argument.\n"}
+    return 1;
+    }
+
+    int guess = argv[1];
+    if (guess == 100)
+    {
+        printf("You are correct!\n");
+    }
+}
+---------------------------------------------------------
+
+Category: Week 2[Category: Week 2]

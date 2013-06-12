@@ -1,0 +1,20 @@
+---
+tags: []
+title: Week_11
+---
+_Review for Quiz 1._
+
+[[]]
+Agenda
+------
+
+* Announcements
+** Quiz 1 is on Wed 11/17 during lecture; see
+http://www.cs50.net/quizzes/2010/fall/1/aboutquiz1.pdf[About Quiz 1] for
+details.
+** Problem Set 8 has been returned.
+* Quiz 1 Q&A
+
+[[]]
+Materials
+---------

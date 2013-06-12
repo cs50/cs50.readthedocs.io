@@ -1,0 +1,84 @@
+---
+tags: []
+title: Quiz_0
+---
+[[]]
+Before Arrival
+--------------
+
+* Divvy up semester's topics among TFs leading review. Prep
+material/examples as you see fit.
+* If you want to provide printouts of anything, photocopy on 2nd or 3rd
+floor of MD: input *5050* for access code, then hit *ID* button; no
+password.
+* Bring/charge your laptop.
+* Bring the right VGA dongle, if applicable, for your laptop.
+
+[[]]
+Upon Arrival
+------------
+
+_Arrive 15 minutes early to test mics and projector._
+
+* Test projector
+* Test mics with Chris Thayer.
+* Call Cansu (617-832-5239) or David (617-523-0925) if you have any
+problems.
+
+[[]]
+Announcements
+-------------
+
+* Quiz 0 is Wed 10/13 during lecture but not in Sanders. See
+http://www.cs50.net/quizzes/2010/fall/aboutquiz0.pdf[About Quiz 0] for
+instructions on where to go based on your last name.
+* Quiz 0 covers weeks 0 through 5.
+* Quiz 0 is "closed-book," but you may utilize during each quiz one
+two‐sided page (8.5” × 11”) of notes, typed or written, and a pen or
+pencil, nothing else.
+* Quiz 0 is 15% of final grade.
+* Past years' quizzes are at
+http://www.cs50.net/quizzes/[cs50.net/quizzes]. However, see this year's
+syllabus and lectures for definitive guide as to what's actually been
+covered this year.
+* Take advantage of available resources:
+** Lecture videos with transcripts
+** Problem set specs
+** Scribe notes
+** Slides
+** Section videos
+** Source code from lectures
+
+[[]]
+Agenda
+------
+
+* Offer some general strategies that you think are good to share.
+* Suggest how best to design one's two-sided page of notes.
+* Have one TF ask audience what topics they'd like to cover while
+another TF writes down bulleted list on board. If audience is quiet or
+list feels short, add your own to the board.
+* Via rapid shows of hands, prioritize list on board. Counting hands
+probably isn't efficient. Perhaps estimate by flagging each topic as
+HIGH, MEDIUM, or LOW interest.
+* Dive into topics that you prepared, emphasizing the ones prioritized
+on the board. Or, if board contains topics not on your list, be sure to
+integrate discussion thereof.
+* For each topic you cover, recommend where students can get more review
+on that subject (e.g., "re-watch Week 2's Wednesday lecture for more on
+this"). One TF can search for such recommendations on his or her laptop
+as another speaks.
+* You're welcome to explain answers to past quizzes' questions, but try
+not to dwell on past quizzes. Not the best use of time since sample
+solutions are already available.
+
+[[]]
+Afterward
+---------
+
+* If you used any slides, email .key/.ppt and also PDF to David for
+website.
+* If you used any code, email ZIP to David for website.
+* If you made any handouts, email .doc/.pages and also PDF to David for
+website.
+

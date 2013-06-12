@@ -1,0 +1,25 @@
+---
+tags: []
+title: char
+---
+*char* is the data type for characters, or symbols found in the
+link:ASCII#Table[ASCII table]. It is often pronounced "ch-ar," but "car"
+is also common. A `char` variable can hold a single character. A `char`
+constant (e.g. the link:int[`int`]'s equivalent of numbers) is denoted
+by single quotation marks, e.g. `'a'` represents the letter a and `'*'`
+represents the asterisk. For example,
+
+code,c--------------- code,c
+ char c = 'r'; 
+---------------
+
+stores the letter r into `c`. An array of `char`s make up a string.
+
+Although an link:printf#Escape_Characters[escape character] visually
+appears as two characters (e.g. the `\` and another letter), it is
+treated as a single `char` because the `\` is special in C and doesn't
+count as a character. Hence, the C compiler treats escape characters
+like `\n` as a single `char` and referring to them requires the use of
+single quotes (e.g. `'\n'`).
+
+Category:pending

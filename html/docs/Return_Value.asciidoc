@@ -1,0 +1,110 @@
+---
+tags: []
+title: Return_Value
+---
+A return value is a value that is passed by a callee function back to
+the caller function when the callee function has finished executing. A
+return value can be of any type, whether built-in or user-defined (with
+`typedef`). The type of the return value is specified in the function
+definition like so:
+
+code,c-------------------------- code,c
+int
+GetLastLetter(char *s)
+{
+    if (s == NULL)
+    {
+        return -1;
+    }
+    
+    index = strlen(s) - 1;
+    
+    return s[index];
+}
+--------------------------
+
+Here, the type of the return value is `int`. We could have specified it
+as `char`, but this way, we can use -1 as a sentinel value when `s` is
+`NULL`. And, recall that a `char` is actually implemented as an `int`
+underneath the hood, so this works just fine.
+
+A function need not have a return value if it only produces side
+effects, for example printing a message, within the program. In that
+case, the type of the return value is specified as `void`:
+
+code,c----------------------- code,c
+void
+Hello()
+{
+    printf("Hello!\n");
+}
+-----------------------
+
+Because `main` is itself a function, it also has a return value,
+generally of type `int`. If `main` returns a value of 0, then everything
+in the program executed properly. If `main` returns a non-zero value,
+then an error occurred. It is good practice to assign different non-zero
+values to different errors so that you can quickly find the source of an
+error in your program.
+
+Here's a full program that uses the functions above. Its purpose is to
+take a string as a link:command-line argument[command-line argument] and
+print out its last letter:
+
+code,c------------------------------------------------------------
+code,c
+#include <stdio.h>
+#include <stdlib.h>
+
+int
+main(int argc, char *argv[])
+{
+    if (argc < 2)
+    {
+        printf("Must specify a command-line argument.\n");
+        return 1;
+    }
+    
+    if (atoi(argv[1]) != 0)
+    {
+        printf("Command-line argument must be a string.\n");
+        return 2;
+    }
+    
+    Hello();
+    
+    printf("%c\n", GetLastLetter(argv[1]));
+}
+
+void
+Hello()
+{
+    printf("Hello!\n");
+}
+
+int
+GetLastLetter(char *s)
+{
+    if (s == NULL)
+    {
+        return -1;
+    }
+    
+    index = strlen(s) - 1;
+    
+    return s[index];
+}
+------------------------------------------------------------
+
+`atoi` is a function which tries to convert a string to an integer. If
+it successfully does so, it returns the integer. If it fails, it returns
+0. Here, we're checking if it doesn't return 0, in which case we know
+that the user provided an integer
+link:command-line argument[command-line argument] (not what we want,
+obviously).
+
+There are two error cases for `main` as written above. In each case, we
+return a different non-zero value so that we can easily trace back to
+the source of the error.
+
+Category: Week 2[Category: Week 2]

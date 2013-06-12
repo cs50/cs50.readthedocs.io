@@ -1,0 +1,6 @@
+---
+tags: []
+title: Heap
+---
+1.  redirect Heap
+

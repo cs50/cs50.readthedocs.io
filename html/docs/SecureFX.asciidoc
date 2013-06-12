@@ -1,0 +1,113 @@
+---
+tags: []
+title: SecureFX
+---
+`  :*'".|                                 ";----- -,    -,` +
+`  ':.                                     ;    "   \  /` +
+`    *:.                                   ;--|      \/` +
+`     '":.  .*-.  .*-; ,: ,:  ';/".  .*-.  ;         /\` +
+`       :; :'/'  :'     :  |   ;    :./'   ;        /  \` +
+` |,._.:*  ':.,* ':.,*  :._|, _;_   ';,.* _;_     _'    '_  `
+
+*SecureFX* is commercial software for Windows that Harvard has a site
+license for. It is installed on most PCs around campus and can be
+installed on yours as well. It is used for file transfers, through
+Secure File Transfer Protocol (SFTP).
+
+If you don't already have SecureFX installed on your computer already,
+head on over to the course's website and download the installer for
+SecureFX under *Software*. After it has been downloaded, double-click
+the installer's icon and follow the on-screen instructions. It's fine to
+breeze through them, leaving all defaults selected.
+
+Although you can't SSH to fas.harvard.edu (and must use
+nice.fas.harvard), you can SFTP to the both former and latter, as your
+home directory is accessible on both.
+
+__TOC__
+
+[[]]
+Launching SecureFX
+^^^^^^^^^^^^^^^^^^
+
+Launch SecureFX via its icon. You should see a window like:
+
+image:FXConnect.jpg[FXConnect.jpg,title="image"]
+
+Otherwise, bring it up with *File* -> *Connect...* Your window may or
+may not list the same sessions (eecs.harvard.edu and fas.harvard.edu, in
+the image). If fas.harvard.edu does not appear in your Connect window,
+proceed to *Creating a Session* below. If fas.harvard.edu _does_ appear,
+skip to *Using SecureFX*.
+
+[[]]
+Creating a Session
+^^^^^^^^^^^^^^^^^^
+
+In the *Connect* window, click the "*New Session*" icon (third from the
+top-left) in the toolbar, shown below.
+
+image:FXNewSession.jpg[FXNewSession.jpg,title="image"]
+
+Make sure the settings in the window that appears look exactly like:
+
+image:FXWiz1.jpg[FXWiz1.jpg,title="image"]
+
+Click *Next* and, again, make sure the window looks like:
+
+image:FXWiz2.jpg[FXWiz2.jpg,title="image"]
+
+Another *Next*, and another window to match:
+
+image:FXWiz3.jpg[FXWiz3.jpg,title="image"]
+
+Finally, click *Finish*. You should see the *Connect* window again, but
+with fas.harvard.edu as a session (as shown above).
+
+[[]]
+Using SecureFX
+^^^^^^^^^^^^^^
+
+Launch it. It should look something like:
+
+image:FXConnect.jpg[FXConnect.jpg,title="image"]
+
+Highlight fas.harvard.edu by clicking it and click *Connect*. If you see
+a window like the one below, click *Accept & Save*.
+
+image:FXUsing1.jpg[FXUsing1.jpg,title="image"]
+
+If prompted, provide your username and password. A window containing at
+least two smaller windows should then appear, like that shown below.
+Your smaller windows may be arranged differently, but one of them should
+provide access to your computer's contents while the other contains your
+home directory's contents.
+
+image:FXUsing2.jpg[FXUsing2.jpg,title="image"]
+
+Navigate, via the correct smaller window, to the file(s) you would like
+to upload/download by double-clicking the appropriate icons. If you are
+looking to upload something from your computer, navigate to the file(s)
+to upload in your local computer's window. If you are looking to
+download from your home directory, navigate to the file(s) to download
+in your home directory's window.
+
+Then, navigate to your destination (where you would like to put the
+file(s)) in the other window via the same double-clicking method. (If
+you need to create one or more directories in the window, simply
+right-click within the window and select *New* -> *Folder*.) Drag the
+file(s) from the source window to the destination. If prompted with a
+window like below, be sure to select *ASCII (text)* only if the file you
+are transferring is purely text (e.g. C source code, CSS, XHTML, etc.).
+Otherwise, leave *Binary (non-text)* selected, and click *OK*.
+
+image:FXUsing3.jpg[FXUsing3.jpg,title="image"]
+
+Near the bottom of SecureFX's window you may see the transfer's
+progress. Once it is complete, your window should resemble the one
+depicted below:
+
+image:FXUsing4.jpg[FXUsing4.jpg,title="image"]
+
+(Needless to say, in this screenshot, 'username' uploaded 'Oscartime.sb'
+from his or her desktop to his or her ~/cs50/ directory. )

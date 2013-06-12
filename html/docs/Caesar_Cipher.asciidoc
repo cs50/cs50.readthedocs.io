@@ -1,0 +1,39 @@
+---
+tags: []
+title: Caesar_Cipher
+---
+Caesar cipher is an implementation of symmetric-key cryptography which
+was first used by Julius Caesar to communicate with his generals. The
+symmetric key is a number between 0 and 25 (or, if greater, is converted
+to a number between 0 and 25 using the modulo operation) which indicates
+how many letters down the alphabet to shift the plaintext message being
+encrypted. For example, if the key were 3, the letter B would be shifted
+to E, as shown in the following diagram:
+
+image: Caesar.png[ Caesar.png,title="image"]
+
+If the plaintext letter being shifted were Y, the ciphertext output
+letter would be B, as the letters rotate back to A once they've reached
+Z.
+
+As an implementation of symmetric-key cryptography, Caesar cipher
+requires that both the sender and the recipient have knowledge of the
+secret key since it is used both to encrypt and to decrypt messages.
+
+Given that the security of a cryptographic algorithm is loosely
+correlated with the amount of time it takes to be cracked by brute
+force, Caesar cipher is highly insecure. Because there are only 26
+possible keys (a key of 27 is equivalent to a key of 1), an adversary
+can quite easily try to decrypt a message using every single one and
+quickly discover the original message.
+
+Caesar cipher played an integral role (sort of, not really) in the movie
+http://en.wikipedia.org/wiki/A_Christmas_Story[A Christmas Story] in
+which Ralphie discovered the message "Be sure to drink your Ovaltine"
+using his secret decoder device. The secret decoder device had two
+alphabets written in concentric circles. By turning the dial, each
+letter on one of the alphabets would match up with a different letter on
+the other alphabet. The number of positions that the dial was turned
+represents the value of the key for Caesar cipher.
+
+Category: Week 2[Category: Week 2]

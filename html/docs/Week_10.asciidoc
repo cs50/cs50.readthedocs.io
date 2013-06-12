@@ -1,0 +1,21 @@
+---
+tags: []
+title: Week_10
+---
+_TF's choice._
+
+[[]]
+Agenda
+------
+
+* Announcements
+** Want to do Problem Set 5's scavenger hunt?? Ends at 11:59pm on Fri
+11/12, but we should submit sooner in case there's a tie!
+** Quiz 1 is on Wed 11/17 during lecture; see
+http://www.cs50.net/quizzes/2010/fall/1/aboutquiz1.pdf[About Quiz 1] for
+details.
+** Problem Set 7 has been returned.
+
+[[]]
+Materials
+---------

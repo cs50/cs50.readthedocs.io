@@ -1,0 +1,125 @@
+---
+tags: []
+title: Week_2
+---
+_Functions, continued. Global variables. Parameters. Return values.
+Stack. Frames. Scope. Arrays. Strings. Command-line arguments.
+Cryptography._
+
+[[]]
+Agenda
+------
+
+* Introductions
+* Announcements
+** Attend or watch Problem Set 2's walkthrough on Sun 9/19, 7pm - 8:30pm
+in Harvard Hall 201; video will be up by Tue 9/21, if not sooner.
+** Expect Problem Set 0 feedback and scores by Friday 9/24.
+** Expect Problem Set 1 feedback and scores by Mon 9/27.
+** Take advantage of resources from lectures at
+http://www.cs50.net/lectures/[cs50.net/lectures]: scribe notes, slides,
+source code, videos.
+** Attend office hours; see http://www.cs50.net/ohs/[cs50.net/ohs] for
+times.
+** Take advantage of http://help.cs50.net/[help.cs50.net].
+* Functions
+** Return Values
+** Parameters
+* `main`
+** `int main(void)`
+** `int main(int argc, char *argv[])`
+* Arrays
+** Iterating over elements in an array
+* Strings (as Arrays)
+** Casting from `int` to `char` and vice versa
+** Iterating over characters in a string
+* Caesar Cipher
+* Vigenère cipher
+
+[[]]
+References
+----------
+
+* http://cdn.cs50.net/2009/fall/sections/2/section2.pdf[Section Notes],
+Fall 2009
+* http://cdn.cs50.net/2009/fall/sections/2/section2.flv?play[Video],
+Fall 2009
+
+[[]]
+Materials
+---------
+
+[[]]
+Matt Chartier
+~~~~~~~~~~~~~
+
+Below are some Media:Mattweek2.zip[demo programs] I used in Fall 2009
+for Week 2.
+
+* *array1.c*: Declares an array of ints of length 7 and allows user to
+query contents.
+* *array2.c*: Declares and initializes an array of ints of length 7,
+then scales 2nd element by 2 using a function. Note pass by reference!
+* *charinc.c*: What happens when we increment a char?
+* *fun1.c*: Takes an int from the user and then squares(?) it using a
+function.
+* *fun2.c*: Uses functions to square a user-inputted int and print it
+nicely.
+
+And here are the Media:Week 2.pptx[slides] I prepared in Fall 2010 for
+Week 2.
+
+[[]]
+link:Rose's Section[Rose Cao]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+*Fall '10*:
+
+:* Less comfy Media:Week2.ppt[Powerpoint Slides]!
+
+:* Media:2source.zip[Source Code] (mostly embedded/referred to in
+slides) *Fall '09*:
+
+:* Less comfy Media:Section1.doc[Section Lesson Plan].
+
+:* This was before I switched to PowerPoints, so it's probably
+underwhelming and/or sloppy.
+
+[[]]
+Mike Teodorescu
+~~~~~~~~~~~~~~~
+
+Media:section1.pdf[Here] my in-between section as prepared for Week 2 in
+Fall 2009. I also added my source code I used for that week. You can
+find source code examples Media:sect1_code.zip[here].
+
+[[]]
+Ashin Shah
+~~~~~~~~~~
+
+Media:Section 1 and 2 Handout - CS50 Ashin Shah.pdf[These] are my
+handouts for Section 0 and Section 1. Enjoy! If other TFs intend to use
+them, please keep the attribution to me, and just send me an email
+saying that you are.
+
+[[]]
+Tommy MacWilliam
+~~~~~~~~~~~~~~~~
+
+Media:section1_tmm.pdf[Here] are my slides for Section 1. Zipped source
+code examples are Media:section1_tmm.zip[here].
+
+[[]]
+Doug Lloyd
+~~~~~~~~~~
+
+I have always taught a section "for those less comfortable". Here are my
+"cheat sheets" for Media:CheatSheet1_1.pdf[Week 1] and for
+Media:CheatSheet2.pdf[Week 2]. 2010 was the first year I made these, and
+I intend to hand them out (1) after section (2) only to those people who
+actually attended. These are intended as a two-page capsule summary of
+important topics. The goal is to refresh students' minds on these for
+quiz-preparation purposes, ie. to remember the syntax of a loop. If
+other TFs intend to use them, please keep the attribution to me, and
+just send me an email saying that you are using them. These were
+prepared using LaTeX.

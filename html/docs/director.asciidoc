@@ -1,0 +1,74 @@
+---
+tags: []
+title: director
+---
+[[]]
+TEMP
+~~~~
+
+* Created VM
+* Installed http://www.ubuntu.com/getubuntu/download-server[Ubuntu 9.04
+Server]
+
+[[]]
+MySQL
+~~~~~
+
+[[]]
+Ubuntu
+~~~~~~
+
+`% aptitude update; aptitude upgrade`
+
+[[]]
+Configured `/etc/network/interfaces` as follows
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+-------------------------------------------------------------------
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+    address 140.247.63.240
+    netmask 255.255.255.0
+    network 140.247.63.0
+    broadcast 140.247.63.255
+    gateway 140.247.63.1
+    dns-nameservers 140.247.233.200 140.247.233.195 128.103.201.100
+    dns-search seas.harvard.edu
+
+auto eth1
+iface eth1 inet static
+    address 10.50.1.1
+    netmask 255.255.0.0
+    network 10.50.0.0
+    broadcast 10.50.255.255
+    dns-nameservers 10.50.0.1
+    dns-search cs50.net
+-------------------------------------------------------------------
+
+[[]]
+Per http://www.webmin.com/deb.html
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* **
+`aptitude install perl libnet-ssleay-perl openssl libauthen-pam-perl libpam-runtime libio-pty-perl libmd5-perl`
+** added to bottom of `/etc/apt/sources.list`:
++
+----------------------------------------------------------------
+deb http://download.webmin.com/download/repository sarge contrib
+----------------------------------------------------------------
+** `wget http://www.webmin.com/jcameron-key.asc -O ~/`
+** `apt-key add ~/jcameron-key.asc`
+** `aptitude update`
+** `aptitude install webmin`
+
+* Per https://help.ubuntu.com/9.04/serverguide/C/openldap-server.html:
+
+`% aptitude install slapd ldap-utils` +
+`% dpkg-reconfigure slapd` +
+`% aptitude install libnet-ldap-perl` +
+`% aptitude install libnss-ldap` +
+`% auth-client-config -t nss -p lac_ldap` +
+`% pam-auth-update`

@@ -1,0 +1,82 @@
+---
+tags: []
+title: stack
+---
+In the general sense, a stack is a data structure which exhibits
+last-in-first-out (LIFO) storage. In the specific sense, the stack
+refers to a program's memory.
+
+[[]]
+Data Structure
+--------------
+
+When inserting to a stack, data is added to the top and when removing
+from a stack, data is removed from the top. Thus, the last chunk of data
+to be inserted is the first to be removed. Inserting to a stack is
+called pushing and removing from a stack is called popping.
+
+A useful analogy for a stack is an actual stack of cafeteria trays. The
+last tray to be added to the stack is on top and is thus the first to be
+removed.
+
+To implement a stack, we can make use of a `[[struct]]`:
+
+code,C------------------------------ code,C
+typedef struct
+{
+        int numbers[CAPACITY];
+        int size;
+        int top;
+}
+stack;
+------------------------------
+
+The `numbers` array stores the actual values that the stack contains
+while `size` keeps track of how many values are in the stack. We also
+need `top` in the case that the stack is empty: in all other cases,
+`size` will be one greater than the value of `top`, but when the stack
+is empty, both `size` and `top` will be zero.
+
+[[]]
+A Program's Memory
+------------------
+
+For our purposes, a stack is most useful in representing a program's
+memory, as in the diagram below:
+
+image:stack_and_heap.png[stack_and_heap.png,title="image"]
+
+Somewhat counterintuitively, memory addresses grow downward as the stack
+grows upward. Whereas the stack grows upward, the heap grows downward.
+If either of them takes up too much memory, they can collide with each
+other which will most likely cause your program to fail with a
+segmentation fault.
+
+The stack consists of frames for each function that is called within a
+program. At the bottom of the stack is `main`'s frame (this is where the
+term mainframe comes from). Any link:local variables[local variables]
+that are declared in `main` will exist in memory on the stack in
+`main`'s frame. Likewise, when `main` calls a function and a frame gets
+pushed onto the stack, that function's link:local variables[local
+variables] are stored on the stack within its frame. As we saw in
+`buggy3.c`, this is why we must pass local variables by reference if we
+want them to be permanently modified. If we pass them by value instead
+of by reference, then copies of these local variables will be created in
+the callee function's frame and as soon as the callee function returns,
+the copies will be lost.
+
+In addition to frames, other data is pushed onto the stack as needed.
+Whenever a function is called, for example, the caller function pushes a
+return address and a frame pointer onto the stack, as this diagram
+shows:
+
+image:stack_upclose.png[stack_upclose.png,title="image"]
+
+We won't concern ourselves too much with these, but realize that the
+presence of this return address on the stack exposes programs to buffer
+overrun attacks. If you fail to check the bounds of an array within a
+function in your program, an adversary can iterate beyond the bounds of
+that array and overwrite this return address that is stored on the
+stack. If he does so intelligently, he can provide a different valid
+address so that when your function returns, it will jump to a place in
+memory owned by the adversary and execute whatever code he wants.

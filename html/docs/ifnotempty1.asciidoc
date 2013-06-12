@@ -1,0 +1,23 @@
+---
+tags: []
+title: ifnotempty1
+---
+#if:|p1|p2}}||}}
+
+This is a version of Template:Ifnotempty with the condition-string equal
+to the then-part. In this case using this separate template is
+especially useful if the expansion of the condition-string/then-part
+gives a large preprocessor node count, as it avoids doubling this
+amount.
+
+Spaces and newlines are ignored for the condition, but preserved in the
+result.
+
+[[]]
+Usage
+~~~~~
+
+* `<nowiki>{{ifnotempty1| p | q }}</nowiki>` gives ""
+* `<nowiki>{{ifnotempty1| | q }}</nowiki>` gives ""
+
+Category:Branching templates[Category:Branching templates]

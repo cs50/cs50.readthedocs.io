@@ -1,0 +1,64 @@
+---
+tags: []
+title: Main_Page
+---
+This is CS50's manual. CS50's own website is at https://www.cs50.net/.
+CS50's OpenCourseWare is at http://cs50.tv/.
+
+* APIs by CS50
+** link:HarvardCourses API[HarvardCourses API]
+** link:HarvardEvents API[HarvardEvents API]
+** link:HarvardFood API[HarvardFood API]
+** link:HarvardMaps API[HarvardMaps API]
+** link:HarvardNews API[HarvardNews API]
+** link:HarvardTweets API[HarvardTweets API]
+** link:Shuttleboy API[Shuttleboy API]
+* Data
+** Concentrators
+** Enrollment
+* Discounts
+* link:Fun APIs[Fun APIs]
+* HOWTOs
+** ACLs
+** link:Authenticating Users[Authenticating Users]
+** cron
+** CS50 Appliance
+*** link:CS50 Appliance 1.4[CS50 Appliance 1.4] (Fall 2009)
+*** link:CS50 Appliance 2.1[CS50 Appliance 2.1] (link:Fall 2010[Fall
+2010])
+*** link:CS50 Appliance 2.3[CS50 Appliance 2.3] (link:Fall 2011[Fall
+2011])
+** link:CS50 ID[CS50 ID]
+** Cyberduck
+** Django
+** FAQs
+** link:Hardware Virtualization[Hardware Virtualization]
+** link:How_to_Attend_Virtual_Office_Hours[How to Attend Virtual Office
+Hours]
+** link:iOS University Program[iOS University Program]
+** Notepad++
+** Parsing
+** PuTTY
+** link:Screen Scraping[Screen Scraping]
+** SecureCRT
+** SecureFX
+** link:Sending Mail[Sending Mail]
+** link:Sending Texts[Sending Texts]
+** snapshots
+** TeamViewer
+** Terminal
+** TextWrangler
+** tunnel50
+** link:Virtual Host[Virtual Host]
+** VirtualBox
+** WinSCP
+* link:Mailing Lists[Mailing Lists]
+* link:Neat Tricks[Neat Tricks]
+* Seminars
+* Software
+** link:CS50 Library[CS50 Library]
+** render50
+** submit50
+** Turk50
+* link:Style Guide[Style Guide]
+

@@ -1,0 +1,99 @@
+---
+tags: []
+title: CS50_Cloud
+---
+The CS50 Cloud is a cluster of servers configured much like the
+link:CS50 Appliance[CS50 Appliance]. With a CS50 Cloud account can you
+host websites on `cloud.cs50.net`. If your CS50 Cloud account's username
+is *username*, your websites' URLs will be
+http://cloud.cs50.net/~username/ (or similar). If you would instead like
+to buy a domain name that "resolves" to your CS50 Cloud account, you may
+set up a link:Virtual Host[virtual host].
+
+Below are instructions on how to migrate link:#Files[files] and
+link:#Databases[databases] from the link:CS50 Appliance[CS50 Appliance]
+to the CS50 Cloud.
+
+[[]]
+Files
+^^^^^
+
+To migrate web work from the link:CS50 Appliance[CS50 Appliance] to the
+CS50 Cloud:
+
+1.  Start your link:CS50 Appliance[CS50 Appliance].
+2.  Upon reaching John Harvard's desktop,
+link:Appliance#How_to_Open_a_Terminal[open a terminal window].
+3.  Execute
++
+---------------------------
+ssh username@cloud.cs50.net
+---------------------------
++
+where `username` is your CS50 Cloud account's username; input your CS50
+Cloud account's password when prompted. You should then find yourself in
+your CS50 Cloud account's home directory (which is separate from your
+CS50 Appliance's home directory).
+4.  Prepare your CS50 Cloud account's home directory with a
+`public_html` directory as follows:
++
+-----------------------
+mkdir ~/public_html
+chmod 711 ~
+chmod 711 ~/public_html
+-----------------------
+5.  Select *Menu > Run Program...*.
+6.  In the window that appears, input
+*sftp://cloud.cs50.net/home/username*, where *username* is your CS50
+Cloud account's username. Do not check *Run in terminal*. Click *Run*.
+You should then see the contents of your CS50 Cloud account's home
+directory (i.e., a *public_html* folder minimally) in a window entitled
+*username - File Manager*. Double-click the *public_html* folder
+therein.
+7.  Open your CS50 Appliance's home directory, as by double-clicking
+*Home* on John Harvard's desktop. Double-click the *public_html* folder
+therein.
+8.  Drag the contents of your appliance's *public_html* folder to your
+cloud account's *public_html* folder in order to copy (i.e., upload)
+them.
+9.  Return to your cloud account's terminal window and `chmod` the newly
+uploaded files appropriately.
+10. Visit http://cloud.cs50.net/~username/, where *username* is your
+cloud account's username, to see your work on the Web!
+
+[[]]
+Databases
+^^^^^^^^^
+
+To migrate a MySQL database from the link:CS50 Appliance[CS50 Appliance]
+to the CS50 Cloud:
+
+1.  Start your link:CS50 Appliance[CS50 Appliance].
+2.  Upon reaching John Harvard's desktop, visit
+http://localhost/phpMyAdmin/ using Firefox within the appliance.
+3.  Log into phpMyAdmin with a username of *jharvard* and a password of
+*crimson* if prompted.
+4.  In phpMyAdmin's top-left corner, click the database (not table) that
+you'd like to export.
+5.  Click phpMyAdmin's *Export* tab.
+6.  Click *Go*. A file named *jharvard_database.sql* (or similar) will
+be downloaded to John Harvard's *Downloads* folder.
+7.  Visit https://www.cs50.net/me/. Log in with your CS50 Cloud
+account's username and password if prompted.
+8.  You should see your very own *DB_USERNAME* and *DB_PASSWORD* (for a
+MySQL account on the cloud that we've pre-created for you). Remember
+those values. (Your value for *DB_SERVER* will still be *localhost*,
+since the cloud's MySQL server is on the same host as the web server.)
+9.  Visit http://cloud.cs50.net/phpMyAdmin/ (in a separate tab) using
+Firefox within the appliance.
+10. Log in with your own username and password (i.e.), with the values
+of *DB_USERNAME* and *DB_PASSWORD*, not with *jharvard* and *crimson*).
+11. Click phpMyAdmin's *Databases* tab.
+12. Create a database called *username_database* (or similar). Your
+database's name must start with *username_*, where *username* is your
+CS50 Cloud account's username.
+13. Click phpMyAdmin's *Import* tab. Import the file that you exported
+earlier (i.e., *jharvard_database.sql*).
+
+Be sure to update your code on the cloud to use your very own values for
+*DB_USERNAME* and *DB_PASSWORD* instead of John Harvard's.

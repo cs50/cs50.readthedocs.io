@@ -1,0 +1,94 @@
+---
+tags: []
+title: Roses_Section
+---
+`rcao@fas's   ,.` +
+`          +*";:,` +
+`        :"   ;'                 ,:` +
+`       :;                       :;` +
+`        ':;,.,.     ,.+,  ,+., =:;=  ()  ,+, ,:;+*,` +
+`           "'*:;, :;"':; :;  "  :;   :; :; :; :; :;` +
+`               ;: :;+*"  :;     :;   :; :; :; :; :;` +
+`   ,\`"*,       ;: :;     :;     :;   :; :; :; :; :; ` +
+`       +.      :' ";,.;' ";,.+  :;., :;':; :; :; :;,'` +
+`        *+=;::'                   "      "+"   "  "    @};~`
+
+Tuesdays, 5:30pm - 7pm @ CGIS South-003, if you're curious. =) +
+(Or just want to steal candy, I guess)
+
+[[]]
+Week 1
+++++++
+
+* Media:Section1.ppt[Supersection Slides!] (with Mike Teodorescu)
+
+:* Media:Flowcharts.zip["Do you understand flowcharts?"]
+
+[[]]
+Week 2
+++++++
+
+* Media:Week2.ppt[Powerpoint]
+
+:* Media:2source.zip[Source Code]
+
+[[]]
+Week 3
+++++++
+
+* Media:Week3.ppt[Powerpoint] (Grr, have to fix a few minor bugs on a
+few slides....)
+* Media:Week3Updated.ppt[Updated Powerpoint!]
+** Media:RcaoWeek3.zip[Source code]
+** Media:RcaoGDBcmd.pdf[GDB Cheat Sheet] (as a pdf!)
+*** Another helpful GDB command: `print *array@n`
+
+::
+  ;;
+    It'll print the first `n` elements of `array[]`.
+
+[[]]
+Week 4
+++++++
+
+* Media:Week4.ppt[Powerpoint]
+** [http://cslibrary.stanford.edu/104/| Binky Pointer Fun] video
+** Media:Src4.zip[Source Code]
+
+[[]]
+Week 5
+++++++
+
+* Media:Week5.ppt[Powerpoint]
+** Media:Section6.pdf[Practice Questions]
+** Media:Sec6ans.pdf[Practice Answers]
+
+[[]]
+Week 6
+++++++
+
+* Media:Week6.ppt[Powerpoint]
+** Media:Src6.zip[Source Code]
+*** *fileRead.c*: reads a .txt file, prints contents to screen
+*** *fileWrite.c*: prompts for text, stores in .txt file
+*** *pkmn.c*: demonstrates linked list operations with Pokemon and
+Pokemon Battling =)
+
+[[]]
+Week 7
+++++++
+
+* Media:0Week7.ppt[Powerpoint]
+** Should be all fixed, but let me know if you've found more
+iffy/possibly buggy things!
+
+Like my powerpoint backgrounds, but don't want to advertise for my
+section?
+
+* Media:HappyCatBG.jpg[Happy Cat] (dark)
+* Media:CeilingCatBG.jpg[Ceiling Cat] (dark)
+* Media:TryBG.png[Trying (Computer) Science] (dark)
+
+If there are more designs you'd like to see, do tell!
+
+Category:Sections

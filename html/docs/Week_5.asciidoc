@@ -1,0 +1,91 @@
+---
+tags: []
+title: Week_5
+---
+_CS50 Library. Stack and heap, continued. Pointers, continued. File I/O.
+Forensics. Linked lists._
+
+[[]]
+Agenda
+------
+
+* Announcements
+** Quiz 0 is on Wed 10/13 during lecture; see
+http://www.cs50.net/quizzes/2010/fall/0/aboutquiz0.pdf[About Quiz 0] for
+details.
+** Problem Set 3 has been returned.
+** Expect Problem Set 4 by Fri 10/15.
+* Pointers
+* Stack, heap
+* File I/O
+** `fprintf`
+* Singly linked lists
+* Quiz 0 Q&A
+
+[[]]
+References
+----------
+
+* http://www.cs50.net/quizzes/[Quizzes]
+* http://cdn.cs50.net/2009/fall/sections/5/section5.pdf[Section Notes],
+Fall 2009
+
+[[]]
+Materials
+---------
+
+[[]]
+User:lloyd[Doug Lloyd]
+~~~~~~~~~~~~~~~~~~~~~~
+
+*Note: Prior to 11:45am on 10/10/10, the Quiz was subject to the below
+listed errata.*
+
+I have always taught a section "for those less comfortable". Over the
+last several years I have made my sections "practice quizzes" that are
+full of questions similar to those you might find on the quiz. There are
+always way more questions than actually would ever appear on the quiz,
+but I have always received positive feedback on them from my students.
+The materials that comprise these practice quizzes come primarily from
+either (a) me or (b) the former "section notes". This is the
+Media:Quiz0-Lloyd2.pdf[practice quiz] I am distributing to my section in
+2010. You should feel free to use this quiz for your own section if you
+like. I'd appreciate an e-mail letting me know before you do, if you
+choose to.
+
+The answer key is Media:Quiz0Answers-lloyd2.pdf[here]. Note that this
+answer key corresponds to the current version of the practice quiz, not
+the earlier posted version that contained some errors. These were
+prepared using LaTeX.
+
+[[]]
+Errata in version distributed prior to 11:45am on October 10, 2010
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In Question 7, the function declaration should read:
+`int *mult_binomials(int A[2], int B[2])`
+
+In Question 24, the function's body should read: `
+   if(y == 0)
+      return 1;
+   else
+      return x * secret(x, y-1);
+`
+
+Question 31 should precede Question 32. Students should be using the
+solution to `gcd()` to solve `lcm()`.
+
+[[]]
+link:Rose's Section[Rose Cao]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+*Fall '09*
+
+:* Less comfy Media:RcaoSec6.ppt[Slides] on File I/O, Linked Lists,
+Enums, Structs, Stacks, Queues
+
+:** All topics don't quite align with this week's
+
+:** Things arranged not-quite-correctly thanks to un-embedded fonts =/
+
+:* Media:RcaoSection5Q0r.ppt[Slides for Quiz 0 Review] in section

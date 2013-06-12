@@ -1,0 +1,6 @@
+---
+tags: []
+title: Base_Case
+---
+1.  REDIRECT link:Recursion#The_Base_Case[Recursion#The Base Case]
+

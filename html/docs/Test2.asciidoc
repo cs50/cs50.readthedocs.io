@@ -1,0 +1,820 @@
+---
+tags: []
+title: Test2
+---
+[[]]
+Author
+------
+
+To report bugs or request features, contact:
+
+mailto:malan@post.harvard.edu[David J. Malan '99] +
+http://www.cs.harvard.edu/malan/
+
+[[]]
+Overview
+--------
+
+The Shuttleboy API allows you to retrieve shuttles and stops from
+http://shuttleboy.cs50.net/[Shuttleboy] in
+http://en.wikipedia.org/wiki/Comma-separated_values[CSV],
+http://en.wikipedia.org/wiki/JSON[JSON], or
+http://php.net/manual/en/function.serialize.php[serialized PHP] format.
+
+Shuttleboy's database contains items from 2009-08-30 through the end of
+the current school year.
+
+The API provides a
+http://en.wikipedia.org/wiki/Representational_State_Transfer[RESTful]
+interface, which means that you can query it using simple HTTP GET
+requests.
+
+[[]]
+Usage
+-----
+
+To query the Shuttleboy API for shuttles, contact the server via URLs in
+this format:
+
+`http://shuttleboy.cs50.net/api/1.0/shuttles?param1=value1&param2=value2&...`
+
+Supported parameters include:
+
+[cols=",",options="header",]
+|=======================================================================
+|parameter |description
+|a |_Required._ TODO
+|b |_Required._ TODO
+|edt |_Optional._ TODO
+|output |_Required._ Format for output. Must be *csv*, *json*, or *php*.
+|sdt |_Optional._ TODO
+|=======================================================================
+
+If any parameters are malformed or any required parameters are omitted,
+an empty response will be returned along with HTTP status code
+http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1[400 Bad
+Request].
+
+[[]]
+CSV
+~~~
+
+If you request data in CSV format (e.g.,
+http://shuttleboy.cs50.net/api/1.0/items?cid=23&output=csv), the
+response will be a series of comma-delimited rows, per the below:
+
+code,text-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+code,text
+channel.title,channel.link,item.title,item.link,item.description,item.pubDate
+"Harvard Extension School News",http://www.extension.harvard.edu/,"In memoriam: Karel Liem",http://feedproxy.google.com/~r/harvardextension/~3/b-zOk9Izi4M/liem.jsp,"Biologist Karel F. Liem, PhD, the Henry Bryant Bigelow Professor of Ichthyology at Harvard and long-time Extension School faculty member passed away this summer after a long illness.","Mon, 26 Oct 2009 00:00:00 -0400"
+"Harvard Extension School News",http://www.extension.harvard.edu/,"Pfister honored for work with fungi",http://feedproxy.google.com/~r/harvardextension/~3/SaPl0v01SmU/pfister.jsp,"The Northeast Mycological Federation has presented the Amicus Tironum Award to Donald Pfister, Asa Gray Professor of Systematic Botany at Harvard, curator of Harvard‚Äôs Farlow Library and Herbarium, and Harvard Extension School faculty member.","Mon, 26 Oct 2009 00:00:00 -0400"
+"Harvard Extension School News",http://www.extension.harvard.edu/,"Read the new student blogs",http://feedproxy.google.com/~r/harvardextension/~3/quYHjJ_fzjY/,"Extension School students are blogging. Read what they have to say about coursework, faculty, and balancing the pursuit of a degree with careers, families, and everything in between.","Mon, 19 Oct 2009 00:00:00 -0400"
+"Harvard Extension School News",http://www.extension.harvard.edu/,"Students launch food and clothing drive",http://feedproxy.google.com/~r/harvardextension/~3/5TbjieLr5tY/food.jsp,"Boston and Cambridge food pantries and homeless and women‚Äôs shelters will receive much-needed assistance this fall through the charitable efforts of members of the Harvard Extension Service and Leadership Society (a subgroup of the Harvard Extension Student Association).","Mon, 19 Oct 2009 00:00:00 -0400"
+"Harvard Extension School News",http://www.extension.harvard.edu/,"Harvard monitoring H1N1 influenza, provides tips to avoid it",http://feedproxy.google.com/~r/harvardextension/~3/BP0BqdQqZSw/h1n1.jsp,"Harvard University officials are monitoring the H1N1 influenza (swine flu) and have provided tips for students to help avoid catching or spreading the flu this fall.","Wed, 07 Oct 2009 13:45:01 -0400"
+"Harvard Extension School News",http://www.extension.harvard.edu/,"Registration open: US-Pakistan Foreign Relations Conference",http://feedproxy.google.com/~r/harvardextension/~3/I-w_NE3JqQE/foreignrelations.jsp,"Through October 10, you can register for the United States-Pakistan Foreign Relations Conference, which features keynote speakers such as Massachusetts Congressman John F. Tierney and Pakistan‚Äôs ambassador to the United States, Husain Haqqani, and several well-known panelists.
+ ","Wed, 07 Oct 2009 13:45:01 -0400"
+"Harvard Extension School News",http://www.extension.harvard.edu/,"Watch the videos of Centennial Academic Convocation",http://feedproxy.google.com/~r/harvardextension/~3/iny6dYoSKFs/convovideo.jsp,"Watch the video stream of our Centennial Academic Convocation that was on September 25.
+ ","Wed, 07 Oct 2009 13:45:01 -0400"
+"Harvard Extension School News",http://www.extension.harvard.edu/,"Check out the free career, academic, and graduate school workshops",http://feedproxy.google.com/~r/harvardextension/~3/OxGE9aGHrMI/,"Throughout the year CARC offers more than 60 free academic, graduate school, and career workshops. The sessions include topics like how to improve your reading strategies, how to write a solid graduate application essay, and how to leverage your degree in your current career. ","Mon, 31 Aug 2009 00:00:00 -0400"
+"Harvard Extension School News",http://www.extension.harvard.edu/,"Late registration with fee continues through Sept. 13",http://feedproxy.google.com/~r/harvardextension/~3/v2z8rgKcfY8/,"You can still register for courses, with a $50 late fee, through September 13. ","Mon, 31 Aug 2009 00:00:00 -0400"
+"Harvard Extension School News",http://www.extension.harvard.edu/,"New bioengineering and nanotechnologies offerings keep biotech program current",http://feedproxy.google.com/~r/harvardextension/~3/yGfGxkOLliQ/biotech.jsp,"The biotechnology program at the Harvard Extension School continues to find itself at the leading edge of science education, this year offering several new courses and a new master‚Äôs concentration in the hot topic area of bioengineering and nanotechnologies. ","Mon, 31 Aug 2009 00:00:00 -0400"
+"Harvard Extension School News",http://www.extension.harvard.edu/,"Discounted gym membership available to Extension School students through October 20",http://feedproxy.google.com/~r/harvardextension/~3/ybKWdvjxlm0/gym.jsp,"Until October 20th Extension School students will receive 50 percent off the enrollment fee and $60 dollars off per month at Wellbridge Athletic Club. Students will need to present a valid ID or a copy of their registration in order to receive the special rates. ","Sat, 29 Aug 2009 23:41:49 -0400"
+"Harvard Extension School News",http://www.extension.harvard.edu/,"Gary King named University Professor",http://feedproxy.google.com/~r/harvardextension/~3/wnFYP_Y5h7U/king.jsp,"Gary King, the David Florence Professor of Government in the Faculty of Arts and Sciences and Extension School faculty, is one of 2 Harvard faculty members to have recently been named University Professor, Harvard‚Äôs highest professorial distinction. ","Sat, 29 Aug 2009 23:41:49 -0400"
+"Harvard Extension School News",http://www.extension.harvard.edu/,"Management class project nets record donations for School on Wheels",http://feedproxy.google.com/~r/harvardextension/~3/yfH8DdGCx30/croteau.jsp,"The spring 2009 students of MGMT E-4000 collected child backpacks and adult school bags to make a record donation to School on Wheels as part of a class project. ","Sat, 29 Aug 2009 23:41:49 -0400"
+"Harvard Extension School News",http://www.extension.harvard.edu/,"Pizzagalli makes strides to understand impact of childhood adversity",http://feedproxy.google.com/~r/harvardextension/~3/iIcGTUt2k8I/pizzagalli.jsp,"A new study by Harvard Extension School faculty member Diego Pizzagalli, the John and Ruth Hazel Associate Professor of the Social Sciences in the Department of Psychology at Harvard, and Daniel Dillion, a Harvard postdoctoral researcher, found that people who faced adversity in their childhoods are less likely to respond in the reward-processing regions of their brains. ","Sat, 29 Aug 2009 23:41:49 -0400"
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Note that the response's first row defines the CSV file's fields.
+Fields' order may change over time, so do not hardcode indices into your
+own code. Use that first row to determine fields' indices dynamically,
+per this article on link:Neat_Tricks#Parsing_CSV[parsing CSV].
+
+[[]]
+JSON
+~~~~
+
+If you request data in JSON format (e.g.,
+http://news.cs50.net/api/1.0/items?cid=23&output=json), the response wil
+be an array of objects, per the below:
+
+code,javascript----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+code,javascript
+[
+   {
+      "channel":{
+         "title":"Harvard Extension School News",
+         "link":"http:\/\/www.extension.harvard.edu\/"
+      },
+      "item":{
+         "title":"In memoriam: Karel Liem",
+         "link":"http:\/\/feedproxy.google.com\/~r\/harvardextension\/~3\/b-zOk9Izi4M\/liem.jsp",
+         "description":"Biologist Karel F. Liem, PhD, the Henry Bryant Bigelow Professor of Ichthyology at Harvard and long-time Extension School faculty member passed away this summer after a long illness.",
+         "pubDate":"Mon, 26 Oct 2009 00:00:00 -0400"
+      }
+   },
+   {
+      "channel":{
+         "title":"Harvard Extension School News",
+         "link":"http:\/\/www.extension.harvard.edu\/"
+      },
+      "item":{
+         "title":"Pfister honored for work with fungi",
+         "link":"http:\/\/feedproxy.google.com\/~r\/harvardextension\/~3\/SaPl0v01SmU\/pfister.jsp",
+         "description":"The Northeast Mycological Federation has presented the Amicus Tironum Award to Donald Pfister, Asa Gray Professor of Systematic Botany at Harvard, curator of Harvard\u2019s Farlow Library and Herbarium, and Harvard Extension School faculty member.",
+         "pubDate":"Mon, 26 Oct 2009 00:00:00 -0400"
+      }
+   },
+   {
+      "channel":{
+         "title":"Harvard Extension School News",
+         "link":"http:\/\/www.extension.harvard.edu\/"
+      },
+      "item":{
+         "title":"Read the new student blogs",
+         "link":"http:\/\/feedproxy.google.com\/~r\/harvardextension\/~3\/quYHjJ_fzjY\/",
+         "description":"Extension School students are blogging. Read what they have to say about coursework, faculty, and balancing the pursuit of a degree with careers, families, and everything in between.",
+         "pubDate":"Mon, 19 Oct 2009 00:00:00 -0400"
+      }
+   },
+   {
+      "channel":{
+         "title":"Harvard Extension School News",
+         "link":"http:\/\/www.extension.harvard.edu\/"
+      },
+      "item":{
+         "title":"Students launch food and clothing drive",
+         "link":"http:\/\/feedproxy.google.com\/~r\/harvardextension\/~3\/5TbjieLr5tY\/food.jsp",
+         "description":"Boston and Cambridge food pantries and homeless and women\u2019s shelters will receive much-needed assistance this fall through the charitable efforts of members of the Harvard Extension Service and Leadership Society (a subgroup of the Harvard Extension Student Association).",
+         "pubDate":"Mon, 19 Oct 2009 00:00:00 -0400"
+      }
+   },
+   {
+      "channel":{
+         "title":"Harvard Extension School News",
+         "link":"http:\/\/www.extension.harvard.edu\/"
+      },
+      "item":{
+         "title":"Harvard monitoring H1N1 influenza, provides tips to avoid it",
+         "link":"http:\/\/feedproxy.google.com\/~r\/harvardextension\/~3\/BP0BqdQqZSw\/h1n1.jsp",
+         "description":"Harvard University officials are monitoring the H1N1 influenza (swine flu) and have provided tips for students to help avoid catching or spreading the flu this fall.",
+         "pubDate":"Wed, 07 Oct 2009 13:45:01 -0400"
+      }
+   },
+   {
+      "channel":{
+         "title":"Harvard Extension School News",
+         "link":"http:\/\/www.extension.harvard.edu\/"
+      },
+      "item":{
+         "title":"Registration open: US-Pakistan Foreign Relations Conference",
+         "link":"http:\/\/feedproxy.google.com\/~r\/harvardextension\/~3\/I-w_NE3JqQE\/foreignrelations.jsp",
+         "description":"Through October 10, you can register for the United States-Pakistan Foreign Relations Conference, which features keynote speakers such as Massachusetts Congressman John F. Tierney and Pakistan\u2019s ambassador to the United States, Husain Haqqani, and several well-known panelists.\n ",
+         "pubDate":"Wed, 07 Oct 2009 13:45:01 -0400"
+      }
+   },
+   {
+      "channel":{
+         "title":"Harvard Extension School News",
+         "link":"http:\/\/www.extension.harvard.edu\/"
+      },
+      "item":{
+         "title":"Watch the videos of Centennial Academic Convocation",
+         "link":"http:\/\/feedproxy.google.com\/~r\/harvardextension\/~3\/iny6dYoSKFs\/convovideo.jsp",
+         "description":"Watch the video stream of our Centennial Academic Convocation that was on September 25.\n ",
+         "pubDate":"Wed, 07 Oct 2009 13:45:01 -0400"
+      }
+   },
+   {
+      "channel":{
+         "title":"Harvard Extension School News",
+         "link":"http:\/\/www.extension.harvard.edu\/"
+      },
+      "item":{
+         "title":"Check out the free career, academic, and graduate school workshops",
+         "link":"http:\/\/feedproxy.google.com\/~r\/harvardextension\/~3\/OxGE9aGHrMI\/",
+         "description":"Throughout the year CARC offers more than 60 free academic, graduate school, and career workshops. The sessions include topics like how to improve your reading strategies, how to write a solid graduate application essay, and how to leverage your degree in your current career. ",
+         "pubDate":"Mon, 31 Aug 2009 00:00:00 -0400"
+      }
+   },
+   {
+      "channel":{
+         "title":"Harvard Extension School News",
+         "link":"http:\/\/www.extension.harvard.edu\/"
+      },
+      "item":{
+         "title":"Late registration with fee continues through Sept. 13",
+         "link":"http:\/\/feedproxy.google.com\/~r\/harvardextension\/~3\/v2z8rgKcfY8\/",
+         "description":"You can still register for courses, with a $50 late fee, through September 13. ",
+         "pubDate":"Mon, 31 Aug 2009 00:00:00 -0400"
+      }
+   },
+   {
+      "channel":{
+         "title":"Harvard Extension School News",
+         "link":"http:\/\/www.extension.harvard.edu\/"
+      },
+      "item":{
+         "title":"New bioengineering and nanotechnologies offerings keep biotech program current",
+         "link":"http:\/\/feedproxy.google.com\/~r\/harvardextension\/~3\/yGfGxkOLliQ\/biotech.jsp",
+         "description":"The biotechnology program at the Harvard Extension School continues to find itself at the leading edge of science education, this year offering several new courses and a new master\u2019s concentration in the hot topic area of bioengineering and nanotechnologies. ",
+         "pubDate":"Mon, 31 Aug 2009 00:00:00 -0400"
+      }
+   },
+   {
+      "channel":{
+         "title":"Harvard Extension School News",
+         "link":"http:\/\/www.extension.harvard.edu\/"
+      },
+      "item":{
+         "title":"Discounted gym membership available to Extension School students through October 20",
+         "link":"http:\/\/feedproxy.google.com\/~r\/harvardextension\/~3\/ybKWdvjxlm0\/gym.jsp",
+         "description":"Until October 20th Extension School students will receive 50 percent off the enrollment fee and $60 dollars off per month at Wellbridge Athletic Club. Students will need to present a valid ID or a copy of their registration in order to receive the special rates. ",
+         "pubDate":"Sat, 29 Aug 2009 23:41:49 -0400"
+      }
+   },
+   {
+      "channel":{
+         "title":"Harvard Extension School News",
+         "link":"http:\/\/www.extension.harvard.edu\/"
+      },
+      "item":{
+         "title":"Gary King named University Professor",
+         "link":"http:\/\/feedproxy.google.com\/~r\/harvardextension\/~3\/wnFYP_Y5h7U\/king.jsp",
+         "description":"Gary King, the David Florence Professor of Government in the Faculty of Arts and Sciences and Extension School faculty, is one of 2 Harvard faculty members to have recently been named University Professor, Harvard\u2019s highest professorial distinction. ",
+         "pubDate":"Sat, 29 Aug 2009 23:41:49 -0400"
+      }
+   },
+   {
+      "channel":{
+         "title":"Harvard Extension School News",
+         "link":"http:\/\/www.extension.harvard.edu\/"
+      },
+      "item":{
+         "title":"Management class project nets record donations for School on Wheels",
+         "link":"http:\/\/feedproxy.google.com\/~r\/harvardextension\/~3\/yfH8DdGCx30\/croteau.jsp",
+         "description":"The spring 2009 students of MGMT E-4000 collected child backpacks and adult school bags to make a record donation to School on Wheels as part of a class project. ",
+         "pubDate":"Sat, 29 Aug 2009 23:41:49 -0400"
+      }
+   },
+   {
+      "channel":{
+         "title":"Harvard Extension School News",
+         "link":"http:\/\/www.extension.harvard.edu\/"
+      },
+      "item":{
+         "title":"Pizzagalli makes strides to understand impact of childhood adversity",
+         "link":"http:\/\/feedproxy.google.com\/~r\/harvardextension\/~3\/iIcGTUt2k8I\/pizzagalli.jsp",
+         "description":"A new study by Harvard Extension School faculty member Diego Pizzagalli, the John and Ruth Hazel Associate Professor of the Social Sciences in the Department of Psychology at Harvard, and Daniel Dillion, a Harvard postdoctoral researcher, found that people who faced adversity in their childhoods are less likely to respond in the reward-processing regions of their brains. ",
+         "pubDate":"Sat, 29 Aug 2009 23:41:49 -0400"
+      }
+   }
+]
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[[]]
+PHP
+~~~
+
+If you request data in serialized PHP format (e.g.,
+http://news.cs50.net/api/1.0/items?cid=23&output=php), the response will
+be a serialized array of associative arrays, per the below:
+
+code,php-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+code,php
+a:14:{i:0;a:2:{s:7:"channel";a:2:{s:5:"title";s:29:"Harvard Extension School News";s:4:"link";s:33:"http://www.extension.harvard.edu/";}s:4:"item";a:4:{s:5:"title";s:23:"In memoriam: Karel Liem";s:4:"link";s:71:"http://feedproxy.google.com/~r/harvardextension/~3/b-zOk9Izi4M/liem.jsp";s:11:"description";s:182:"Biologist Karel F. Liem, PhD, the Henry Bryant Bigelow Professor of Ichthyology at Harvard and long-time Extension School faculty member passed away this summer after a long illness.";s:7:"pubDate";s:31:"Mon, 26 Oct 2009 00:00:00 -0400";}}i:1;a:2:{s:7:"channel";a:2:{s:5:"title";s:29:"Harvard Extension School News";s:4:"link";s:33:"http://www.extension.harvard.edu/";}s:4:"item";a:4:{s:5:"title";s:35:"Pfister honored for work with fungi";s:4:"link";s:74:"http://feedproxy.google.com/~r/harvardextension/~3/SaPl0v01SmU/pfister.jsp";s:11:"description";s:244:"The Northeast Mycological Federation has presented the Amicus Tironum Award to Donald Pfister, Asa Gray Professor of Systematic Botany at Harvard, curator of Harvard‚Äôs Farlow Library and Herbarium, and Harvard Extension School faculty member.";s:7:"pubDate";s:31:"Mon, 26 Oct 2009 00:00:00 -0400";}}i:2;a:2:{s:7:"channel";a:2:{s:5:"title";s:29:"Harvard Extension School News";s:4:"link";s:33:"http://www.extension.harvard.edu/";}s:4:"item";a:4:{s:5:"title";s:26:"Read the new student blogs";s:4:"link";s:63:"http://feedproxy.google.com/~r/harvardextension/~3/quYHjJ_fzjY/";s:11:"description";s:182:"Extension School students are blogging. Read what they have to say about coursework, faculty, and balancing the pursuit of a degree with careers, families, and everything in between.";s:7:"pubDate";s:31:"Mon, 19 Oct 2009 00:00:00 -0400";}}i:3;a:2:{s:7:"channel";a:2:{s:5:"title";s:29:"Harvard Extension School News";s:4:"link";s:33:"http://www.extension.harvard.edu/";}s:4:"item";a:4:{s:5:"title";s:39:"Students launch food and clothing drive";s:4:"link";s:71:"http://feedproxy.google.com/~r/harvardextension/~3/5TbjieLr5tY/food.jsp";s:11:"description";s:273:"Boston and Cambridge food pantries and homeless and women‚Äôs shelters will receive much-needed assistance this fall through the charitable efforts of members of the Harvard Extension Service and Leadership Society (a subgroup of the Harvard Extension Student Association).";s:7:"pubDate";s:31:"Mon, 19 Oct 2009 00:00:00 -0400";}}i:4;a:2:{s:7:"channel";a:2:{s:5:"title";s:29:"Harvard Extension School News";s:4:"link";s:33:"http://www.extension.harvard.edu/";}s:4:"item";a:4:{s:5:"title";s:60:"Harvard monitoring H1N1 influenza, provides tips to avoid it";s:4:"link";s:71:"http://feedproxy.google.com/~r/harvardextension/~3/BP0BqdQqZSw/h1n1.jsp";s:11:"description";s:165:"Harvard University officials are monitoring the H1N1 influenza (swine flu) and have provided tips for students to help avoid catching or spreading the flu this fall.";s:7:"pubDate";s:31:"Wed, 07 Oct 2009 13:45:01 -0400";}}i:5;a:2:{s:7:"channel";a:2:{s:5:"title";s:29:"Harvard Extension School News";s:4:"link";s:33:"http://www.extension.harvard.edu/";}s:4:"item";a:4:{s:5:"title";s:59:"Registration open: US-Pakistan Foreign Relations Conference";s:4:"link";s:83:"http://feedproxy.google.com/~r/harvardextension/~3/I-w_NE3JqQE/foreignrelations.jsp";s:11:"description";s:281:"Through October 10, you can register for the United States-Pakistan Foreign Relations Conference, which features keynote speakers such as Massachusetts Congressman John F. Tierney and Pakistan‚Äôs ambassador to the United States, Husain Haqqani, and several well-known panelists.
+ ";s:7:"pubDate";s:31:"Wed, 07 Oct 2009 13:45:01 -0400";}}i:6;a:2:{s:7:"channel";a:2:{s:5:"title";s:29:"Harvard Extension School News";s:4:"link";s:33:"http://www.extension.harvard.edu/";}s:4:"item";a:4:{s:5:"title";s:51:"Watch the videos of Centennial Academic Convocation";s:4:"link";s:77:"http://feedproxy.google.com/~r/harvardextension/~3/iny6dYoSKFs/convovideo.jsp";s:11:"description";s:89:"Watch the video stream of our Centennial Academic Convocation that was on September 25.
+ ";s:7:"pubDate";s:31:"Wed, 07 Oct 2009 13:45:01 -0400";}}i:7;a:2:{s:7:"channel";a:2:{s:5:"title";s:29:"Harvard Extension School News";s:4:"link";s:33:"http://www.extension.harvard.edu/";}s:4:"item";a:4:{s:5:"title";s:66:"Check out the free career, academic, and graduate school workshops";s:4:"link";s:63:"http://feedproxy.google.com/~r/harvardextension/~3/OxGE9aGHrMI/";s:11:"description";s:277:"Throughout the year CARC offers more than 60 free academic, graduate school, and career workshops. The sessions include topics like how to improve your reading strategies, how to write a solid graduate application essay, and how to leverage your degree in your current career. ";s:7:"pubDate";s:31:"Mon, 31 Aug 2009 00:00:00 -0400";}}i:8;a:2:{s:7:"channel";a:2:{s:5:"title";s:29:"Harvard Extension School News";s:4:"link";s:33:"http://www.extension.harvard.edu/";}s:4:"item";a:4:{s:5:"title";s:53:"Late registration with fee continues through Sept. 13";s:4:"link";s:63:"http://feedproxy.google.com/~r/harvardextension/~3/v2z8rgKcfY8/";s:11:"description";s:79:"You can still register for courses, with a $50 late fee, through September 13. ";s:7:"pubDate";s:31:"Mon, 31 Aug 2009 00:00:00 -0400";}}i:9;a:2:{s:7:"channel";a:2:{s:5:"title";s:29:"Harvard Extension School News";s:4:"link";s:33:"http://www.extension.harvard.edu/";}s:4:"item";a:4:{s:5:"title";s:78:"New bioengineering and nanotechnologies offerings keep biotech program current";s:4:"link";s:74:"http://feedproxy.google.com/~r/harvardextension/~3/yGfGxkOLliQ/biotech.jsp";s:11:"description";s:261:"The biotechnology program at the Harvard Extension School continues to find itself at the leading edge of science education, this year offering several new courses and a new master‚Äôs concentration in the hot topic area of bioengineering and nanotechnologies. ";s:7:"pubDate";s:31:"Mon, 31 Aug 2009 00:00:00 -0400";}}i:10;a:2:{s:7:"channel";a:2:{s:5:"title";s:29:"Harvard Extension School News";s:4:"link";s:33:"http://www.extension.harvard.edu/";}s:4:"item";a:4:{s:5:"title";s:83:"Discounted gym membership available to Extension School students through October 20";s:4:"link";s:70:"http://feedproxy.google.com/~r/harvardextension/~3/ybKWdvjxlm0/gym.jsp";s:11:"description";s:263:"Until October 20th Extension School students will receive 50 percent off the enrollment fee and $60 dollars off per month at Wellbridge Athletic Club. Students will need to present a valid ID or a copy of their registration in order to receive the special rates. ";s:7:"pubDate";s:31:"Sat, 29 Aug 2009 23:41:49 -0400";}}i:11;a:2:{s:7:"channel";a:2:{s:5:"title";s:29:"Harvard Extension School News";s:4:"link";s:33:"http://www.extension.harvard.edu/";}s:4:"item";a:4:{s:5:"title";s:36:"Gary King named University Professor";s:4:"link";s:71:"http://feedproxy.google.com/~r/harvardextension/~3/wnFYP_Y5h7U/king.jsp";s:11:"description";s:252:"Gary King, the David Florence Professor of Government in the Faculty of Arts and Sciences and Extension School faculty, is one of 2 Harvard faculty members to have recently been named University Professor, Harvard‚Äôs highest professorial distinction. ";s:7:"pubDate";s:31:"Sat, 29 Aug 2009 23:41:49 -0400";}}i:12;a:2:{s:7:"channel";a:2:{s:5:"title";s:29:"Harvard Extension School News";s:4:"link";s:33:"http://www.extension.harvard.edu/";}s:4:"item";a:4:{s:5:"title";s:67:"Management class project nets record donations for School on Wheels";s:4:"link";s:74:"http://feedproxy.google.com/~r/harvardextension/~3/yfH8DdGCx30/croteau.jsp";s:11:"description";s:162:"The spring 2009 students of MGMT E-4000 collected child backpacks and adult school bags to make a record donation to School on Wheels as part of a class project. ";s:7:"pubDate";s:31:"Sat, 29 Aug 2009 23:41:49 -0400";}}i:13;a:2:{s:7:"channel";a:2:{s:5:"title";s:29:"Harvard Extension School News";s:4:"link";s:33:"http://www.extension.harvard.edu/";}s:4:"item";a:4:{s:5:"title";s:68:"Pizzagalli makes strides to understand impact of childhood adversity";s:4:"link";s:77:"http://feedproxy.google.com/~r/harvardextension/~3/iIcGTUt2k8I/pizzagalli.jsp";s:11:"description";s:374:"A new study by Harvard Extension School faculty member Diego Pizzagalli, the John and Ruth Hazel Associate Professor of the Social Sciences in the Department of Psychology at Harvard, and Daniel Dillion, a Harvard postdoctoral researcher, found that people who faced adversity in their childhoods are less likely to respond in the reward-processing regions of their brains. ";s:7:"pubDate";s:31:"Sat, 29 Aug 2009 23:41:49 -0400";}}}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Once you http://php.net/manual/en/function.unserialize.php[unserialize]
+that response, you'll have the below in memory:
+
+code,php---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+code,php
+Array
+(
+    [0] => Array
+        (
+            [channel] => Array
+                (
+                    [title] => Harvard Extension School News
+                    [link] => http://www.extension.harvard.edu/
+                )
+
+            [item] => Array
+                (
+                    [title] => In memoriam: Karel Liem
+                    [link] => http://feedproxy.google.com/~r/harvardextension/~3/b-zOk9Izi4M/liem.jsp
+                    [description] => Biologist Karel F. Liem, PhD, the Henry Bryant Bigelow Professor of Ichthyology at Harvard and long-time Extension School faculty member passed away this summer after a long illness.
+                    [pubDate] => Mon, 26 Oct 2009 00:00:00 -0400
+                )
+
+        )
+
+    [1] => Array
+        (
+            [channel] => Array
+                (
+                    [title] => Harvard Extension School News
+                    [link] => http://www.extension.harvard.edu/
+                )
+
+            [item] => Array
+                (
+                    [title] => Pfister honored for work with fungi
+                    [link] => http://feedproxy.google.com/~r/harvardextension/~3/SaPl0v01SmU/pfister.jsp
+                    [description] => The Northeast Mycological Federation has presented the Amicus Tironum Award to Donald Pfister, Asa Gray Professor of Systematic Botany at Harvard, curator of Harvard’s Farlow Library and Herbarium, and Harvard Extension School faculty member.
+                    [pubDate] => Mon, 26 Oct 2009 00:00:00 -0400
+                )
+
+        )
+
+    [2] => Array
+        (
+            [channel] => Array
+                (
+                    [title] => Harvard Extension School News
+                    [link] => http://www.extension.harvard.edu/
+                )
+
+            [item] => Array
+                (
+                    [title] => Read the new student blogs
+                    [link] => http://feedproxy.google.com/~r/harvardextension/~3/quYHjJ_fzjY/
+                    [description] => Extension School students are blogging. Read what they have to say about coursework, faculty, and balancing the pursuit of a degree with careers, families, and everything in between.
+                    [pubDate] => Mon, 19 Oct 2009 00:00:00 -0400
+                )
+
+        )
+
+    [3] => Array
+        (
+            [channel] => Array
+                (
+                    [title] => Harvard Extension School News
+                    [link] => http://www.extension.harvard.edu/
+                )
+
+            [item] => Array
+                (
+                    [title] => Students launch food and clothing drive
+                    [link] => http://feedproxy.google.com/~r/harvardextension/~3/5TbjieLr5tY/food.jsp
+                    [description] => Boston and Cambridge food pantries and homeless and women’s shelters will receive much-needed assistance this fall through the charitable efforts of members of the Harvard Extension Service and Leadership Society (a subgroup of the Harvard Extension Student Association).
+                    [pubDate] => Mon, 19 Oct 2009 00:00:00 -0400
+                )
+
+        )
+
+    [4] => Array
+        (
+            [channel] => Array
+                (
+                    [title] => Harvard Extension School News
+                    [link] => http://www.extension.harvard.edu/
+                )
+
+            [item] => Array
+                (
+                    [title] => Harvard monitoring H1N1 influenza, provides tips to avoid it
+                    [link] => http://feedproxy.google.com/~r/harvardextension/~3/BP0BqdQqZSw/h1n1.jsp
+                    [description] => Harvard University officials are monitoring the H1N1 influenza (swine flu) and have provided tips for students to help avoid catching or spreading the flu this fall.
+                    [pubDate] => Wed, 07 Oct 2009 13:45:01 -0400
+                )
+
+        )
+
+    [5] => Array
+        (
+            [channel] => Array
+                (
+                    [title] => Harvard Extension School News
+                    [link] => http://www.extension.harvard.edu/
+                )
+
+            [item] => Array
+                (
+                    [title] => Registration open: US-Pakistan Foreign Relations Conference
+                    [link] => http://feedproxy.google.com/~r/harvardextension/~3/I-w_NE3JqQE/foreignrelations.jsp
+                    [description] => Through October 10, you can register for the United States-Pakistan Foreign Relations Conference, which features keynote speakers such as Massachusetts Congressman John F. Tierney and Pakistan’s ambassador to the United States, Husain Haqqani, and several well-known panelists.
+ 
+                    [pubDate] => Wed, 07 Oct 2009 13:45:01 -0400
+                )
+
+        )
+
+    [6] => Array
+        (
+            [channel] => Array
+                (
+                    [title] => Harvard Extension School News
+                    [link] => http://www.extension.harvard.edu/
+                )
+
+            [item] => Array
+                (
+                    [title] => Watch the videos of Centennial Academic Convocation
+                    [link] => http://feedproxy.google.com/~r/harvardextension/~3/iny6dYoSKFs/convovideo.jsp
+                    [description] => Watch the video stream of our Centennial Academic Convocation that was on September 25.
+ 
+                    [pubDate] => Wed, 07 Oct 2009 13:45:01 -0400
+                )
+
+        )
+
+    [7] => Array
+        (
+            [channel] => Array
+                (
+                    [title] => Harvard Extension School News
+                    [link] => http://www.extension.harvard.edu/
+                )
+
+            [item] => Array
+                (
+                    [title] => Check out the free career, academic, and graduate school workshops
+                    [link] => http://feedproxy.google.com/~r/harvardextension/~3/OxGE9aGHrMI/
+                    [description] => Throughout the year CARC offers more than 60 free academic, graduate school, and career workshops. The sessions include topics like how to improve your reading strategies, how to write a solid graduate application essay, and how to leverage your degree in your current career. 
+                    [pubDate] => Mon, 31 Aug 2009 00:00:00 -0400
+                )
+
+        )
+
+    [8] => Array
+        (
+            [channel] => Array
+                (
+                    [title] => Harvard Extension School News
+                    [link] => http://www.extension.harvard.edu/
+                )
+
+            [item] => Array
+                (
+                    [title] => Late registration with fee continues through Sept. 13
+                    [link] => http://feedproxy.google.com/~r/harvardextension/~3/v2z8rgKcfY8/
+                    [description] => You can still register for courses, with a $50 late fee, through September 13. 
+                    [pubDate] => Mon, 31 Aug 2009 00:00:00 -0400
+                )
+
+        )
+
+    [9] => Array
+        (
+            [channel] => Array
+                (
+                    [title] => Harvard Extension School News
+                    [link] => http://www.extension.harvard.edu/
+                )
+
+            [item] => Array
+                (
+                    [title] => New bioengineering and nanotechnologies offerings keep biotech program current
+                    [link] => http://feedproxy.google.com/~r/harvardextension/~3/yGfGxkOLliQ/biotech.jsp
+                    [description] => The biotechnology program at the Harvard Extension School continues to find itself at the leading edge of science education, this year offering several new courses and a new master’s concentration in the hot topic area of bioengineering and nanotechnologies. 
+                    [pubDate] => Mon, 31 Aug 2009 00:00:00 -0400
+                )
+
+        )
+
+    [10] => Array
+        (
+            [channel] => Array
+                (
+                    [title] => Harvard Extension School News
+                    [link] => http://www.extension.harvard.edu/
+                )
+
+            [item] => Array
+                (
+                    [title] => Discounted gym membership available to Extension School students through October 20
+                    [link] => http://feedproxy.google.com/~r/harvardextension/~3/ybKWdvjxlm0/gym.jsp
+                    [description] => Until October 20th Extension School students will receive 50 percent off the enrollment fee and $60 dollars off per month at Wellbridge Athletic Club. Students will need to present a valid ID or a copy of their registration in order to receive the special rates. 
+                    [pubDate] => Sat, 29 Aug 2009 23:41:49 -0400
+                )
+
+        )
+
+    [11] => Array
+        (
+            [channel] => Array
+                (
+                    [title] => Harvard Extension School News
+                    [link] => http://www.extension.harvard.edu/
+                )
+
+            [item] => Array
+                (
+                    [title] => Gary King named University Professor
+                    [link] => http://feedproxy.google.com/~r/harvardextension/~3/wnFYP_Y5h7U/king.jsp
+                    [description] => Gary King, the David Florence Professor of Government in the Faculty of Arts and Sciences and Extension School faculty, is one of 2 Harvard faculty members to have recently been named University Professor, Harvard’s highest professorial distinction. 
+                    [pubDate] => Sat, 29 Aug 2009 23:41:49 -0400
+                )
+
+        )
+
+    [12] => Array
+        (
+            [channel] => Array
+                (
+                    [title] => Harvard Extension School News
+                    [link] => http://www.extension.harvard.edu/
+                )
+
+            [item] => Array
+                (
+                    [title] => Management class project nets record donations for School on Wheels
+                    [link] => http://feedproxy.google.com/~r/harvardextension/~3/yfH8DdGCx30/croteau.jsp
+                    [description] => The spring 2009 students of MGMT E-4000 collected child backpacks and adult school bags to make a record donation to School on Wheels as part of a class project. 
+                    [pubDate] => Sat, 29 Aug 2009 23:41:49 -0400
+                )
+
+        )
+
+    [13] => Array
+        (
+            [channel] => Array
+                (
+                    [title] => Harvard Extension School News
+                    [link] => http://www.extension.harvard.edu/
+                )
+
+            [item] => Array
+                (
+                    [title] => Pizzagalli makes strides to understand impact of childhood adversity
+                    [link] => http://feedproxy.google.com/~r/harvardextension/~3/iIcGTUt2k8I/pizzagalli.jsp
+                    [description] => A new study by Harvard Extension School faculty member Diego Pizzagalli, the John and Ruth Hazel Associate Professor of the Social Sciences in the Department of Psychology at Harvard, and Daniel Dillion, a Harvard postdoctoral researcher, found that people who faced adversity in their childhoods are less likely to respond in the reward-processing regions of their brains. 
+                    [pubDate] => Sat, 29 Aug 2009 23:41:49 -0400
+                )
+
+        )
+
+)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[[]]
+RSS
+~~~
+
+If you request data in RSS format (e.g.,
+http://news.cs50.net/api/1.0/items?cid=23&output=rss), the response will
+be an XML document, per the below:
+
+code,xml------------------------------------------------------------------------------------------------
+code,xml
+<?xml version="1.0" encoding="utf-8"?>
+<rss version='2.0'>
+  <channel>
+    <title>HarvardNews</title>
+    <description>Property of CS 50</description>
+    <link>http://news.cs50.net/</link>
+    <item>
+      <guid isPermaLink='false'>
+      http://feedproxy.google.com/~r/harvardextension/~3/b-zOk9Izi4M/liem.jsp</guid>
+      <title>In memoriam: Karel Liem</title>
+      <link>
+      http://feedproxy.google.com/~r/harvardextension/~3/b-zOk9Izi4M/liem.jsp</link>
+      <description>Biologist Karel F. Liem, PhD, the Henry Bryant
+      Bigelow Professor of Ichthyology at Harvard and long-time
+      Extension School faculty member passed away this summer after
+      a long illness.</description>
+      <category></category>
+      <pubDate>Mon, 26 Oct 2009 00:00:00 -0400</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink='false'>
+      http://feedproxy.google.com/~r/harvardextension/~3/SaPl0v01SmU/pfister.jsp</guid>
+      <title>Pfister honored for work with fungi</title>
+      <link>
+      http://feedproxy.google.com/~r/harvardextension/~3/SaPl0v01SmU/pfister.jsp</link>
+      <description>The Northeast Mycological Federation has
+      presented the Amicus Tironum Award to Donald Pfister, Asa
+      Gray Professor of Systematic Botany at Harvard, curator of
+      Harvard&#226;&#8364;&#8482;s Farlow Library and Herbarium,
+      and Harvard Extension School faculty member.</description>
+      <category></category>
+      <pubDate>Mon, 26 Oct 2009 00:00:00 -0400</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink='false'>
+      http://feedproxy.google.com/~r/harvardextension/~3/quYHjJ_fzjY/</guid>
+      <title>Read the new student blogs</title>
+      <link>
+      http://feedproxy.google.com/~r/harvardextension/~3/quYHjJ_fzjY/</link>
+      <description>Extension School students are blogging. Read
+      what they have to say about coursework, faculty, and
+      balancing the pursuit of a degree with careers, families, and
+      everything in between.</description>
+      <category></category>
+      <pubDate>Mon, 19 Oct 2009 00:00:00 -0400</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink='false'>
+      http://feedproxy.google.com/~r/harvardextension/~3/5TbjieLr5tY/food.jsp</guid>
+      <title>Students launch food and clothing drive</title>
+      <link>
+      http://feedproxy.google.com/~r/harvardextension/~3/5TbjieLr5tY/food.jsp</link>
+      <description>Boston and Cambridge food pantries and homeless
+      and women&#226;&#8364;&#8482;s shelters will receive
+      much-needed assistance this fall through the charitable
+      efforts of members of the Harvard Extension Service and
+      Leadership Society (a subgroup of the Harvard Extension
+      Student Association).</description>
+      <category></category>
+      <pubDate>Mon, 19 Oct 2009 00:00:00 -0400</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink='false'>
+      http://feedproxy.google.com/~r/harvardextension/~3/BP0BqdQqZSw/h1n1.jsp</guid>
+      <title>Harvard monitoring H1N1 influenza, provides tips to
+      avoid it</title>
+      <link>
+      http://feedproxy.google.com/~r/harvardextension/~3/BP0BqdQqZSw/h1n1.jsp</link>
+      <description>Harvard University officials are monitoring the
+      H1N1 influenza (swine flu) and have provided tips for
+      students to help avoid catching or spreading the flu this
+      fall.</description>
+      <category></category>
+      <pubDate>Wed, 07 Oct 2009 13:45:01 -0400</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink='false'>
+      http://feedproxy.google.com/~r/harvardextension/~3/I-w_NE3JqQE/foreignrelations.jsp</guid>
+      <title>Registration open: US-Pakistan Foreign Relations
+      Conference</title>
+      <link>
+      http://feedproxy.google.com/~r/harvardextension/~3/I-w_NE3JqQE/foreignrelations.jsp</link>
+      <description>Through October 10, you can register for the
+      United States-Pakistan Foreign Relations Conference, which
+      features keynote speakers such as Massachusetts Congressman
+      John F. Tierney and Pakistan&#226;&#8364;&#8482;s ambassador
+      to the United States, Husain Haqqani, and several well-known
+      panelists.</description>
+      <category></category>
+      <pubDate>Wed, 07 Oct 2009 13:45:01 -0400</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink='false'>
+      http://feedproxy.google.com/~r/harvardextension/~3/iny6dYoSKFs/convovideo.jsp</guid>
+      <title>Watch the videos of Centennial Academic
+      Convocation</title>
+      <link>
+      http://feedproxy.google.com/~r/harvardextension/~3/iny6dYoSKFs/convovideo.jsp</link>
+      <description>Watch the video stream of our Centennial
+      Academic Convocation that was on September 25.</description>
+      <category></category>
+      <pubDate>Wed, 07 Oct 2009 13:45:01 -0400</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink='false'>
+      http://feedproxy.google.com/~r/harvardextension/~3/OxGE9aGHrMI/</guid>
+      <title>Check out the free career, academic, and graduate
+      school workshops</title>
+      <link>
+      http://feedproxy.google.com/~r/harvardextension/~3/OxGE9aGHrMI/</link>
+      <description>Throughout the year CARC offers more than 60
+      free academic, graduate school, and career workshops. The
+      sessions include topics like how to improve your reading
+      strategies, how to write a solid graduate application essay,
+      and how to leverage your degree in your current
+      career.</description>
+      <category></category>
+      <pubDate>Mon, 31 Aug 2009 00:00:00 -0400</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink='false'>
+      http://feedproxy.google.com/~r/harvardextension/~3/v2z8rgKcfY8/</guid>
+      <title>Late registration with fee continues through Sept.
+      13</title>
+      <link>
+      http://feedproxy.google.com/~r/harvardextension/~3/v2z8rgKcfY8/</link>
+      <description>You can still register for courses, with a $50
+      late fee, through September 13.</description>
+      <category></category>
+      <pubDate>Mon, 31 Aug 2009 00:00:00 -0400</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink='false'>
+      http://feedproxy.google.com/~r/harvardextension/~3/yGfGxkOLliQ/biotech.jsp</guid>
+      <title>New bioengineering and nanotechnologies offerings keep
+      biotech program current</title>
+      <link>
+      http://feedproxy.google.com/~r/harvardextension/~3/yGfGxkOLliQ/biotech.jsp</link>
+      <description>The biotechnology program at the Harvard
+      Extension School continues to find itself at the leading edge
+      of science education, this year offering several new courses
+      and a new master&#226;&#8364;&#8482;s concentration in the
+      hot topic area of bioengineering and
+      nanotechnologies.</description>
+      <category></category>
+      <pubDate>Mon, 31 Aug 2009 00:00:00 -0400</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink='false'>
+      http://feedproxy.google.com/~r/harvardextension/~3/ybKWdvjxlm0/gym.jsp</guid>
+      <title>Discounted gym membership available to Extension
+      School students through October 20</title>
+      <link>
+      http://feedproxy.google.com/~r/harvardextension/~3/ybKWdvjxlm0/gym.jsp</link>
+      <description>Until October 20th Extension School students
+      will receive 50 percent off the enrollment fee and $60
+      dollars off per month at Wellbridge Athletic Club. Students
+      will need to present a valid ID or a copy of their
+      registration in order to receive the special
+      rates.</description>
+      <category></category>
+      <pubDate>Sat, 29 Aug 2009 23:41:49 -0400</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink='false'>
+      http://feedproxy.google.com/~r/harvardextension/~3/wnFYP_Y5h7U/king.jsp</guid>
+      <title>Gary King named University Professor</title>
+      <link>
+      http://feedproxy.google.com/~r/harvardextension/~3/wnFYP_Y5h7U/king.jsp</link>
+      <description>Gary King, the David Florence Professor of
+      Government in the Faculty of Arts and Sciences and Extension
+      School faculty, is one of 2 Harvard faculty members to have
+      recently been named University Professor,
+      Harvard&#226;&#8364;&#8482;s highest professorial
+      distinction.</description>
+      <category></category>
+      <pubDate>Sat, 29 Aug 2009 23:41:49 -0400</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink='false'>
+      http://feedproxy.google.com/~r/harvardextension/~3/yfH8DdGCx30/croteau.jsp</guid>
+      <title>Management class project nets record donations for
+      School on Wheels</title>
+      <link>
+      http://feedproxy.google.com/~r/harvardextension/~3/yfH8DdGCx30/croteau.jsp</link>
+      <description>The spring 2009 students of MGMT E-4000
+      collected child backpacks and adult school bags to make a
+      record donation to School on Wheels as part of a class
+      project.</description>
+      <category></category>
+      <pubDate>Sat, 29 Aug 2009 23:41:49 -0400</pubDate>
+    </item>
+    <item>
+      <guid isPermaLink='false'>
+      http://feedproxy.google.com/~r/harvardextension/~3/iIcGTUt2k8I/pizzagalli.jsp</guid>
+      <title>Pizzagalli makes strides to understand impact of
+      childhood adversity</title>
+      <link>
+      http://feedproxy.google.com/~r/harvardextension/~3/iIcGTUt2k8I/pizzagalli.jsp</link>
+      <description>A new study by Harvard Extension School faculty
+      member Diego Pizzagalli, the John and Ruth Hazel Associate
+      Professor of the Social Sciences in the Department of
+      Psychology at Harvard, and Daniel Dillion, a Harvard
+      postdoctoral researcher, found that people who faced
+      adversity in their childhoods are less likely to respond in
+      the reward-processing regions of their brains.</description>
+      <category></category>
+      <pubDate>Sat, 29 Aug 2009 23:41:49 -0400</pubDate>
+    </item>
+  </channel>
+</rss>
+------------------------------------------------------------------------------------------------
+
+[[]]
+Examples
+--------
+
+* Returns today's entire menu:
+** http://food.cs50.net/apis/menus?output=csv
+** http://food.cs50.net/apis/menus?output=json
+** http://food.cs50.net/apis/menus?output=php
+* Returns today's lunch menu:
+** http://food.cs50.net/apis/menus?meal=Lunch&output=csv
+** http://food.cs50.net/apis/menus?meal=Lunch&output=json
+** http://food.cs50.net/apis/menus?meal=Lunch&output=php
+* Returns 11 November 2009's entire menu:
+** http://food.cs50.net/apis/menus?date=2009-11-11&output=csv
+** http://food.cs50.net/apis/menus?date=2009-11-11&output=json
+** http://food.cs50.net/apis/menus?date=2009-11-11&output=php
+* Returns 11 November 2009's breakfast menu:
+**
+http://food.cs50.net/apis/menus?date=2009-11-11&meal=Breakfast&output=csv
+**
+http://food.cs50.net/apis/menus?date=2009-11-11&meal=Breakfast&output=json
+**
+http://food.cs50.net/apis/menus?date=2009-11-11&meal=Breakfast&output=php
+
+[[]]
+See Also
+--------
+
+* link:Neat_Tricks#Parsing_CSV[Parsing CSV]
+* link:Neat_Tricks#Parsing_RSS[Parsing RSS]
+* link:Screen Scraping[Screen Scraping]
+* link:Neat_Tricks#Unserializing_PHP[Unserializing PHP]
+
+[[]]
+External Links
+--------------
+
+* http://en.wikipedia.org/wiki/Comma-separated_values[Comma-separated
+values]
+* http://en.wikipedia.org/wiki/JSON[JSON]
+* http://php.net/manual/en/function.serialize.php[PHP: serialize]
+* http://php.net/manual/en/function.unserialize.php[PHP: unserialize]
+* http://en.wikipedia.org/wiki/RSS[RSS]
+
+Category:APIs

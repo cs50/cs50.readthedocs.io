@@ -1,0 +1,13 @@
+---
+tags: []
+title: Documentation
+---
+``
+
+}}
+
+This w:Wikipedia:Template documentation[documentation] is
+w:Wikipedia:Transclusion[transcluded] from link:{{{1[/doc}}}].
+_(link:{{{1[/doc}}}|view] | [ ] | [ history])_
+
+SUBJECTPAGENAME}}/doc}}}}}

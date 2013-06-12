@@ -1,0 +1,147 @@
+---
+tags: []
+title: Tender
+---
+__FORCETOC__ http://help.cs50.net/[help.cs50.net] is powered by
+http://tenderapp.com/[Tender Support], which is a "simple helpdesk
+application." Not only does http://help.cs50.net/[help.cs50.net] now
+serve as the course's "bulletin board," emails sent to help@cs50.net are
+also routed to the site and queued in an invisible, private category
+that only staff can see. Tender calls threads "discussions," but you can
+also think of them as "tickets." To close a ticket, you "resolve" it in
+Tenderspeak.
+
+[[]]
+Quickstart Guide
+----------------
+
+If you've not logged into http://help.cs50.net/[help.cs50.net] yet, do
+so and let sysadmins@cs50.net know that you have so that we can promote
+you to "support staff." You can still respond to students' questions
+before you're support staff, but you won't be able to see the staff's
+"dashboard" with which you can resolve tickets and more.
+
+Once you've been promoted to support staff, you should find yourself at
+http://help.cs50.net/dashboard[help.cs50.net/dashboard] by default
+anytime you log in. To get there manually, click
+
+CS50 Support
+
+in the site's top-left corner. Odds are the dashboard will resemble the
+below:
+
+image:Dashboard.png[Dashboard.png,title="image"]
+
+The *4* to the right of *Pending* means that we had 4 tickets in our
+inbox when I took this particular screenshot. Suppose that you click the
+first of those issues (*Sensor board not recognized by Mac... help!*),
+you should see a screen like the below:
+
+image:Discussion.png[Discussion.png,title="image"]
+
+If you decide to field the ticket, click *ACKNOWLEDGE UPDATE* in the
+blue bar atop the post so that it no longer appears as *Pending*, lest
+someone else start replying to the same ticket:
+
+image:Admin.png[Admin.png,title="image"]
+
+Then proceed to write your response. You should find the interface
+fairly self-explanatory, but take particular note of these features:
+
+* Under *Reply to this discussion*, there's a checkbox labeled *Only
+show this comment to our staff*. If you'd like to comment on this
+discussion for other staff's eyes (e.g., because you're not sure of the
+answer and want to ask someone), do so by checking that box.
+* On the righthand side of this screen is a button labeled *MAKE
+PRIVATE*. If you decide that this discussion should really be between us
+and the student only (because they've shared too much code or you want
+to reply with too much detail), simply click that button.
+* On the righthand side of the screen is a button labeled *SUBSCRIBE TO
+UPDATES*. If unsure how to answer a question and want to be sure you see
+others' replies, click that button to subscribe via email to updates. If
+you want someone else to see any replies (e.g., a student who's
+struggling with the same question), click *Others* just above that
+button, input his or her email address, then click *NOTIFY*.
+* Also on the righthand side is a link labeled *Resolve the discussion*.
+Click that link if an additional comment in the thread isn't warranted
+and you want to signify to fellow staff that the issue is indeed
+resolved.
+* To add a comment to the discussion and resolve it at the same time,
+click the button labeled *COMMENT & CLOSE* instead of that labeled just
+*COMMENT* after typing your reply.
+* Click *Formatting help* for a summary of common formatting tricks. Or
+see the section on link:#Markdown[Markdown] below.
+
+If you determine that a discussion is best answered by
+mailto:heads@cs50.net[heads@] or mailto:sysadmins@cs50.net[sysadmins@],
+click *ADD TO QUEUE* in the blue bar atop the discussion and then click
+the team's name. If you determine that a discussion was mis-categorized,
+click *CHANGE CATEGORY* in the blue bar and then select the better fit.
+If you determine that a student has posted too much code, you're welcome
+to click *EDIT* or, per the link:#Quickstart_Guide[Quickstart Guide],
+*MAKE PRIVATE*. Only in rare cases (e.g., offensive) should you consider
+clicking *REMOVE*, but even then, probably best to *MAKE PRIVATE* and
+escalate to mailto:heads@cs50.net[heads@] for review.
+
+[[]]
+Markdown
+--------
+
+Tender supports
+http://daringfireball.net/projects/markdown/syntax[Markdown], which is a
+wiki-like syntax with which you can format your comments. Odds are
+you'll find these tricks the most useful:
+
+image:Formatting.png[Formatting.png,title="image"]
+
+You can see this same window by clicking *Formatting help* beneath any
+discussion. Know that, for multiple lines of code, it's probably
+simplest (and prettiest) to surround them with `&lt;pre&gt;` and
+`&lt;/pre&gt;`.
+
+[[]]
+Email Preferences
+-----------------
+
+You can actually interact with http://help.cs50.net/[help.cs50.net]
+almost entirely via email. To receive notifications
+
+* of discussions you're involved with
+* when someone starts a new discussion
+* of all discussions in a particular category
+
+click your name in the top-right corner of any page, then click the
+button labeled *EDIT YOUR PROFILE*, also at top-right. Under *Email
+Preferences* can you sign up for notifications.
+
+In the footer of the emails you'll start to receive will be:
+
+`You can use commands on a new line at the top of this email.` +
+`Available commands: #resolve #acknowledge #spam #delete #queue #notify #ignore #public #private` +
+`More information: `https://help.tenderapp.com/faqs/email-integration/commands[https://help.tenderapp.com/faqs/email-integration/commands[`https://help.tenderapp.com/faqs/email-integration/commands`]]
+
+As the footer suggests, you can execute all sorts of commands via email;
+just take care that any command (even if preceded or followed by your
+reply to a student) is on a line of its own.
+
+[[]]
+Commands
+~~~~~~~~
+
+Odds are you'll find these commands the most useful, but more
+https://help.tenderapp.com/faqs/email-integration/commands[commands] do
+exist:
+
+* `#resolve`: resolves a discussion (i.e., closes a ticket)
+* `#acknowledge`: removes a discussion from the staff's inbox without
+actually marking it "resolved." Appropriate if you want to close a
+ticket for which it doesn't make sense, semantically, to mark it as
+"resolved" (e.g., because no question was actually asked).
+* `#private`: flags the discussion as private. Appropriate if the
+student posted too much detail or if you want to reply with private
+details (e.g., the student's default password).
+* `#queue heads`: queues the discussion for
+mailto:heads@cs50.net[heads@]
+* `#queue sysadmins`: queues the discussion for
+mailto:sysadmins@cs50.net[sysadmins@]
+

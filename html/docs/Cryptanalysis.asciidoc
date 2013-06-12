@@ -1,0 +1,34 @@
+---
+tags: []
+title: Cryptanalysis
+---
+Cryptanalysis is the study of codebreaking. Whereas the aim of
+cryptography is to devise methods and algorithms for encrypting
+messages, the aim of cryptanalysis is to devise methods and algorithms
+for decrypting those same messages.
+
+Although other techniques abound, the most common technique of
+cryptanalysis is brute force. In the Hacker Edition of Problem Set 2,
+for example, you were tasked with cryptanalyzing passwords that had been
+encrypted by the built-in `crypt` function. To do so, you might have
+tried passing combinations of letters and numbers to `crypt` until the
+output matched the encrypted password. This was a brute-force technique.
+
+The security of cryptographic algorithms is loosely measured by the
+amount of time it would take to crack them by brute force. In the case
+of link:Caesar cipher[Caesar cipher], for example, because the keyspace
+is very small (26), it may only take seconds or minutes to crack it by
+brute force, i.e. trying each of the 26 possible keys. As a result,
+link:Caesar cipher[Caesar cipher] is generally considered to be
+insecure.
+
+However, an algorithm like RSA with 1024- or 2048-bit keys would take on
+the order of years or lifetimes to crack using brute force with current
+hardware. Generally speaking, the security of cryptographic algorithms
+depends upon the fact that two very large prime numbers can be
+multiplied in polynomial time to produce a key, but that key can only be
+factored in exponential time. If you want to become rich beyond your
+wildest dreams or perhaps bring the world to its knees, just prove that
+http://en.wikipedia.org/wiki/P_versus_NP_problem[P = NP].
+
+Category: Week 2[Category: Week 2]

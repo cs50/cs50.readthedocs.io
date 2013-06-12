@@ -1,0 +1,34 @@
+---
+tags: []
+title: PuTTY
+---
+PuTTY is a free SSH client for Windows that you can download from
+http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe[http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe].
+Once downloaded, there's no need to install PuTTY, per se, since what
+you just downloaded is the program itself! You're welcome to move it to
+*C:\Program Files\* or wherever you'd like. To run PuTTY, simply
+double-click its icon. You should see a window like the below.
+
+image:Putty0.jpg[Putty0.jpg,title="image"]
+
+Let's make a few changes to its configuration, though. Under *Host Name
+(or IP address)* enter the address of a server to which you plan to SSH
+(e.g., *cloud.cs50.net*), then type that same address under *Saved
+Sessions*, then click *Save*. Your window should then resemble the
+below.
+
+image:Putty1.jpg[Putty1.jpg,title="image"]
+
+To actually SSH to a server, double-click, e.g., *cloud.cs50.net* under
+*Saved Sessions*. If you see a window like the below, click *Yes*.
+
+image:PuTTY_Security_Alert.jpg[PuTTY_Security_Alert.jpg,title="image"]
+
+When prompted to login as, enter your username, then *Enter*, then your
+password (whose characters you won't actually see for security reasons),
+then *Enter*. You should then find yourself at the server's prompt, as
+in the below!
+
+image:Putty2.jpg[Putty2.jpg,title="image"]
+
+Category:HOWTO

@@ -1,0 +1,111 @@
+---
+tags: []
+title: Apps
+---
+Below are apps created by CS50's students and staff, past and present.
+Report any broken links to sysadmins@cs50.net.
+
+[[]]
+Crimson Dining
+~~~~~~~~~~~~~~
+
+by mailto:keito@cs.harvard.edu[Keito Uchiyama '11], Computer Science,
+Adams House
+
+Places menus from Harvard University Dining Services on your Facebook
+profile. Browse through menu items past and future and see statistics
+for each dish as well as trends in HUDS menus.
+
+* *Facebook App:* http://apps.facebook.com/myplate/
+* *Website:* http://crimsondining.org/
+
+[[]]
+HarvardEvents
+~~~~~~~~~~~~~
+
+by mailto:malan@post.harvard.edu[David J. Malan '99], Computer Science,
+Mather House
+
+HarvardEvents aggregates calendars from all over campus so that you can
+find out what's happening on campus (and where) in one, central place.
+
+* link:HarvardEvents API[HarvardEvents API]: integrate HarvardMaps data
+into your own app
+* *HarvardEvents Web:* http://events.college.harvard.edu/
+
+[[]]
+HarvardMaps
+~~~~~~~~~~~
+
+by mailto:malan@post.harvard.edu[David J. Malan '99], Computer Science,
+Mather House
+
+HarvardMaps lets you search for buildings on campus by mashing together
+Harvard's official map with Google Maps.
+
+* link:HarvardMaps API[HarvardMaps API]: integrate HarvardMaps data into
+your own app
+* *HarvardMaps Web:* http://maps.cs50.net/
+
+[[]]
+HarvardNews
+~~~~~~~~~~~
+
+by mailto:malan@post.harvard.edu[David J. Malan '99], Computer Science,
+Mather House
+
+HarvardNews aggregates news feeds from all over campus.
+
+* link:HarvardNews API[HarvardNews API]: integrate HarvardNews data into
+your own app
+* *HarvardNews Web:* http://news.cs50.net/
+
+[[]]
+HarvardTweets
+~~~~~~~~~~~~~
+
+by mailto:malan@post.harvard.edu[David J. Malan '99], Computer Science,
+Mather House
+
+HarvardTweets aggregates tweets from Harvard affiliances from all over
+campus.
+
+* link:HarvardTweets API[HarvardTweets API]: integrate HarvardTweets
+data into your own app
+* *HarvardTweets Web:* http://tweets.cs50.net/
+
+[[]]
+Rover
+~~~~~
+
+by mailto:bick@fas.harvard.edu[Alex Bick '10], Engineering Sciences,
+Cabot House; and mailto:wyan@fas.harvard.edu[Winston Yan '10], Physics,
+Adams House
+
+Rover is a platform for connecting students with each other, their
+school and their community. Rover puts you in touch with what is
+happening in your campus microenvironment through our local deals,
+events, news and transportation.
+
+* *iPhone App:*
+http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=312281600&mt=8
+* *Website:* http://www.hcs.harvard.edu/rover/
+
+[[]]
+Shuttleboy
+~~~~~~~~~~
+
+by mailto:malan@post.harvard.edu[David J. Malan '99], Computer Science,
+Mather House
+
+Shuttleboy lets you look up shuttle schedules quickly in several ways:
+
+* link:Shuttleboy API[Shuttleboy API]: integrate Shuttleboy data into
+your own app
+* *Shuttleboy Card:* request a plastic card for you wallet at
+http://shuttleboy.cs50.net/
+* *Shuttleboy SMS:* text *sboy a b* to 41411, where *a* is your origin
+and *b* is your destination
+* *Shuttleboy Voice:* call 617-BUG-CS50 (617-284-2750), option 1
+* *Shuttleboy Web:* http://shuttleboy.cs50.net/
+

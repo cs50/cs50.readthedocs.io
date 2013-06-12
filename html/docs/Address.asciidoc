@@ -1,0 +1,48 @@
+---
+tags: []
+title: Address
+---
+An address is a location in memory, usually specified by a hexadecimal
+number and stored as an integer. Just as a postal address tells a mail
+carrier where to deliver and retrieve mail, a memory address tells the
+operating system where to deliver and retrieve data.
+
+Although data on hard disks also have addresses, generally when we refer
+to memory addresses, we will mean an address in RAM, the computer's
+temporary memory that stores the current state of the operating system
+and running programs.
+
+You may have heard of computers having either a 32-bit or 64-bit
+architecture. This value refers to the size of the integers that are
+used to store memory addresses. On a 32-bit architecture, a 32-bit
+`[[int]]` is used whereas on a 64-bit architecture, a 64-bit `[[int]]`
+is used. As we've already learned, an unsigned 32-bit `[[int]]` has a
+maximum value of latexmath:[$2^{32}$], or approximately 4 billion. This
+means that on a 32-bit architecture, the maximum amount of usable RAM is
+4 gigabytes since addresses larger than 4 billion can't be stored
+without overflow. Recently, this problem has been solved using
+http://en.wikipedia.org/wiki/Physical_Address_Extension[PAE], or
+Physical Address Extension. Of course, 64-bit architectures support a
+much higher maximum of RAM, approximately latexmath:[$2^{64}$] bytes.
+
+image:bsod.jpg[ A Windows blue screen of death, or stop error, which
+gives provides several 32-bit memory addresses for debugging purposes
+under the Technical Information section.,title="image"]Whether 32-bit or
+64-bit, an `[[int]]` which stores a memory address is called a pointer.
+In the case of a 32-bit architecture, an address might be written in
+hexadecimal like so: 0x883456a2. This notation for addresses might be
+familiar to you if you've ever seen the Windows blue screen of death or
+set a breakpoint in GDB. Recall that in lecture on Week 3 Wednesday (see
+https://www.cs50.net/lectures/3/notes3w.pdf[notes3w]), we saw the
+following output from GDB when we set a breakpoint at the beginning of
+`[[main]]`:
+
+`
+Breakpoint 1 at 0x804842d: file buggy3.c, line 21.
+`
+
+This output implies that GDB knows where to pause our program based on
+an address 0x804842d which corresponds to `[[main]]`'s location in
+memory.
+
+Category: Week 4[Category: Week 4]

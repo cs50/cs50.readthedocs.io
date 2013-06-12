@@ -1,0 +1,86 @@
+---
+tags: []
+title: printf
+---
+*`printf()`* is a function in the `stdio` library that facilitates
+printing strings with embedded formats to the screen. For its
+argument(s), `printf()` takes a format string, which is a string that
+may contain format specifiers (we'll get to this in a bit), along with
+what to embed in the format string (commonly ).
+
+A call to `printf()` generally looks like:
+
+code,c---------------------------------------------------------------------------------------------
+code,c
+printf("This is the format string. Here are two format specifier: %d and %s.\n", arg2, arg3);
+---------------------------------------------------------------------------------------------
+
+As previously mentioned the first argument to `printf()` is the format
+string, a string possibly containing format specifiers. Format
+specifiers are `%i` characters, where `i` is a specific letter that
+specifies the type of the variable to be substituted there. For the
+example above, there are two format specifiers, `%d` and `%s`, which
+correspond to the specifiers for data types `int` and
+link:string[`string`].
+
+A few more common format specifiers are:
+
+[cols=",,,,,,,,,,,,,",options="header",]
+|=======================================================================
+|% character |type to display |- align="center" |c |char |-
+align="center" |s |string |- align="center" |d |int |- align="center" |f
+|float |- align="center" |x |hexadecimal |- align="center" |p |pointer
+address
+|=======================================================================
+
+When `printf()` encounters these format specifiers, it substitutes in
+the value of the next corresponding argument. In our example, there are
+two format specifiers and two arguments besides the format string. The
+first specifier corresponds to the first non-format-string argument, and
+`arg2`'s value will take the place of `%d`. Similarly, `arg3`'s value
+will replace `%s` when printed. (Knowing the format specifiers for
+`arg2` and `arg3`, what data types do you suppose are contained in those
+variables?)
+
+The non-first arguments for `printf` need not simply be variables, they
+may be expressions as well. For example,
+
+code,c------------------------------------------------- code,c
+int i = 10, j = 3; 
+printf("%s now has %d lives.\n", "David", i * j);
+-------------------------------------------------
+
+will print to screen `David now has 30 lives.` using the hard-coded
+string and the product of `j` and `i`.
+
+[[]]
+Escape Characters
+~~~~~~~~~~~~~~~~~
+
+To include certain characters that have another meaning in the context
+of C (e.g. `"`, `%`, `\`, etc) in the format string, we need to use
+pre-determined escape characters. Instead of typing just the problematic
+character, you usually need to prefix it with a backslash (`/`).
+
+Below is a table of common escape characters:
+
+[cols=",,,,,,,,,",options="header",]
+|=======================================================================
+|escape character |to display |- align="center" |\\ |`\` |-
+align="center" |\" |`"` |- align="center" |\' |`'` |- align="center" |%%
+|`%`
+|=======================================================================
+
+(For a bit of fun, try adding an `\a` to your format string. `;)` )
+
+Because printf() sends the characters to `stdout`, the
+link:Standard Output[standard output stream], where they may be stored
+in a temporary buffer before printing for optimization, it may be
+necessary to flush, or force, `stdout` to write to the screen. The line
+for that is:
+
+code,c--------------- code,c
+fflush(stdout);
+---------------
+
+Category: Week 1[Category: Week 1]

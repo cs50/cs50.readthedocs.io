@@ -1,0 +1,774 @@
+---
+tags: []
+title: Screen_Scraping
+---
+http://en.wikipedia.org/wiki/Web_scraping[Screen scraping] (the
+programmatic extraction of data from some website's source code) should
+really be a last resort, since things tend to break if the site you're
+scraping happens to alter its format, the result of which is more work
+for you. Always look for data in some machine-readable format (CSV,
+JSON, RSS, etc.) first.
+
+If you must resort to screen scraping, read on for a tutorial that
+discusses the link:HarvardFood API[HarvardFood API]'s implementation.
+
+[[]]
+HarvardFood
+~~~~~~~~~~~
+
+As you probably know, you can find out what's for breakfast, lunch (or
+brunch), or dinner by checking
+http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp[This Week's
+Menu] on http://www.dining.harvard.edu/[Harvard University Dining
+Services]'s website.
+
+For instance, this link used to display what was for breakfast on 30
+November 2009:
+
+`http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date=11-30-2009&type=30&meal=0`
+
+This link used to display what was for lunch on 1 December 2009:
+
+`http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date=12-1-2009&type=30&meal=1`
+
+And this link used to display what was for dinner on 2 December 2009:
+
+`http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date=12-2-2009&type=30&meal=2`
+
+I found these URLs, incidentally, simply by clicking and playing around,
+which is generally the first step toward screen scraping. Anyhow, notice
+the patterns. It looks *menu_items.asp* supports at least three
+parameters: *date*, which appears to be a date in *MM-DD-YYYY* or
+(annoyingly) *MM-D-YYYY* format; *type*, which appears to indicate what
+types of food to return (whereby a value of *30* appears to mean all
+types); and *meal*, which appears to be *0* for breakfast, *1* for
+lunch, or *2* for dinner. Patterns like these are good because we can
+generate them programmatically.
+
+Now let's take a look at the source code for, say, that last URL (i.e.,
+`<nowiki>http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date=12-2-2009&type=30&meal=2</nowiki>`):
+
+code,html4strict----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+code,html4strict
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <base href="http://www.dining.harvard.edu/" />
+    <title>HUDS: This Week's Menu</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <link rel="stylesheet" href="css/global_style.css" type="text/css" />
+    <!-- Libraries -->
+    <script src="scripts/jquery.js" type="text/javascript"></script>
+    <script src="scripts/jquery.ifixpng.js" type="text/javascript"></script>
+    <!-- Our Scripts -->
+    <script src="scripts/scripts.js" type="text/javascript"></script>
+</head>
+<body class="residential" onload="adjustHeight()">
+<div id="master_container">
+    <div id="header">
+        <a href="index.html" title="" id="logo"><img src="images/art/fp_logo.gif" alt="Harvard Dining Services" /></a>
+        <ul id="global_nav">
+            <li><a href="residential_dining/index.html" title="" id="residential">Residential Dining</a></li>
+            <li><a href="retail_dining/index.html" title="" id="retail">Retail Dining</a></li>
+            <li><a href="crimson_catering/index.html" title="" id="catering">Crimson Catering</a></li>
+            <li><a href="crimson_cash/index.html" title="" id="cash">Crimson Cash</a></li>
+        </ul>
+        <div class="clear"></div>
+    </div>  
+    <div class="clear"></div>
+<div id="navigation">
+    <a href="http://www.dining.harvard.edu/residential_dining/menus.html">
+        <img src="images/menus_nutrition/back_to_menu.gif" alt="Back to menus" class="no_hover"  /></a>
+    <ul id="nutrition_nav">
+    
+        <li><a href="http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date=11-26-2009&amp;type=05">
+        Thursday, November 26</a></li>
+    
+        <li><a href="http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date=11-27-2009&amp;type=05">
+        Friday, November 27</a></li>
+    
+        <li><a href="http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date=11-28-2009&amp;type=05">
+        Saturday, November 28</a></li>
+    
+        <li><a href="http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date=11-29-2009&amp;type=05">
+        Sunday, November 29</a></li>
+    
+        <li><a href="http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date=11-30-2009&amp;type=05">
+        Monday, November 30</a></li>
+    
+        <li><a href="http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date=12-1-2009&amp;type=05">
+        Tuesday, December 1</a></li>
+    
+        <li><a href="http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date=12-2-2009&amp;type=05">
+        Wednesday, December 2</a></li>
+    
+    </ul>   
+    <div id="legend">
+        <img src="images/menus_nutrition/legend.gif" alt="" />  
+    </div>
+</div>
+
+    <div id="content">
+        <div class="item no_pad menu">
+            <a href="residential_dining/menus.html" class="left no_hover"><img src="images/residential/subtitle_menus.gif" alt="Menus" /></a>
+            <div class="clear"></div>
+            <img src="images/menus_nutrition/title_this_weeks_menu.gif" alt="Daily Offerings" />
+        </div>
+        
+        <div class="item dynamic_content">
+        
+            <div class="sub_head">
+                <p>
+                    Hot Entrees, Starches, Bean/Grain and Vegetables<br />
+                    <span class="sub_title">Wednesday, December 2, 2009</span>
+                </p>
+            </div>
+            
+            <p>Select the menu items from below to create an interactive nutritional analysis report. To view the detailed nutritional information or ingredients of an item, click on the item name.</p>
+            <!-- 
+                Count: 3
+                    Title: Breakfast Entrees <br><br>
+                    Title: Breakfast Entrees <br><br>
+                    Title: Lunch Entrees, <br>Starches & Veggies<br>
+            -->
+            
+            <script type="text/javascript">
+                
+                function submitForm()
+                {
+                    var form = document.getElementById("report_form");
+                    form.submit();
+                }
+                
+                function clearForm()
+                {
+                    var inputs = document.getElementsByTagName("input");
+                    for(var i=0;i<inputs.length;i++)
+                    {
+                        if((" "+inputs[i].className+" ").indexOf(" quantity_box ") != -1)
+                            inputs[i].value = "";
+                        if((" "+inputs[i].className+" ").indexOf(" check ") != -1)
+                            inputs[i].checked = false;
+                    }
+                }
+                
+                function checkChanged(id)
+                {
+                    var input = document.getElementById("qty_" + id);
+                    var check = document.getElementById("check_" + id);
+                    if(input && check)
+                    {
+                        if(check.checked && input.value == "")
+                            input.value = "1";
+                        else if(!check.checked)
+                            input.value = "";
+                    }
+                }
+                
+                function quantityChanged(id)
+                {
+                    var input = document.getElementById("qty_" + id);
+                    var check = document.getElementById("check_" + id);
+                    if(input && check)
+                    {
+                        var count = new Number(input.value);
+                        if(isNaN(count) || !count || count == 0)
+                        {
+                            check.checked = false;
+                            input.value = "";
+                        }
+                        else
+                        {
+                            check.checked = true;
+                            input.value = count;
+                        }
+                    }
+                }
+                
+            </script>
+            <form id="report_form" method="post" 
+                action="http://www.foodpro.huds.harvard.edu/foodpro/report.asp?date=12-2-2009&amp;type=05&amp;meal=2">
+                <div class="table_nav">
+                    <span class="left">
+                    
+                        <a 
+                            href="http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date=12-2-2009&amp;type=05&amp;meal=0">
+                            Breakfast</a>
+                        
+                             &nbsp;|&nbsp;  
+                        
+                        <a 
+                            href="http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date=12-2-2009&amp;type=05&amp;meal=1">
+                            Lunch</a>
+                        
+                             &nbsp;|&nbsp;  
+                        
+                        <a class="active"
+                            href="http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date=12-2-2009&amp;type=05&amp;meal=2">
+                            Dinner</a>
+                        
+                    </span>
+                    <a href="javascript:submitForm();">
+                        <img src="images/menus_nutrition/btn_create_report.gif" alt="Create Nutrition Report" class="right borderless" /></a>
+                    <div class="clear"></div>
+                </div>
+                <table cellpadding="0" cellspacing="0">
+                    <tr>
+                        <th>Menu Items</th>
+                        <th>Portion</th>
+                        <th class="last">Qty</th>
+                    </tr>
+                    
+                        <tr class="category">
+                            <td colspan="3">TODAY'S SOUP</td>
+                        </tr>
+                        
+                        <tr>
+                        <td class="menu_item">
+                            <input id="check_023555" name="recipe" value="023555*6" 
+                                class="check" type="checkbox" onclick="checkChanged('023555')" />
+                            <div class="item_wrap">
+                                <span><a href="http://www.foodpro.huds.harvard.edu/foodpro/item.asp?recipe=023555&amp;portion=6&amp;date=12-2-2009&type=05">
+                                    Chipotle Corn Bisque</a>
+                                    &nbsp;|&nbsp;&nbsp;
+                                </span>
+                                 <img src="images/menus_nutrition/icon_veg.gif" alt="Vegetarian" /> 
+                            </div>
+                            <div class="clear"></div>
+                        </td>
+                        <td><span class="portion">6&nbsp;fl. oz</span></td>
+                        <td class="last"><input id="qty_023555" onblur="quantityChanged('023555');" 
+                            name="QTY" class="text quantity_box" type="text" /></td>
+                    </tr>
+                        
+                        <tr>
+                        <td class="menu_item">
+                            <input id="check_023516" name="recipe" value="023516*6" 
+                                class="check" type="checkbox" onclick="checkChanged('023516')" />
+                            <div class="item_wrap">
+                                <span><a href="http://www.foodpro.huds.harvard.edu/foodpro/item.asp?recipe=023516&amp;portion=6&amp;date=12-2-2009&type=05">
+                                    Turkey Noodle Soup</a>
+                                    
+                                </span>
+                                
+                            </div>
+                            <div class="clear"></div>
+                        </td>
+                        <td><span class="portion">6&nbsp;fl. oz</span></td>
+                        <td class="last"><input id="qty_023516" onblur="quantityChanged('023516');" 
+                            name="QTY" class="text quantity_box" type="text" /></td>
+                    </tr>
+                        
+                        <tr class="category">
+                            <td colspan="3">ENTREES</td>
+                        </tr>
+                        
+                        <tr>
+                        <td class="menu_item">
+                            <input id="check_503083" name="recipe" value="503083*1" 
+                                class="check" type="checkbox" onclick="checkChanged('503083')" />
+                            <div class="item_wrap">
+                                <span><a href="http://www.foodpro.huds.harvard.edu/foodpro/item.asp?recipe=503083&amp;portion=1&amp;date=12-2-2009&type=05">
+                                    Cajun Chicken</a>
+                                    
+                                </span>
+                                
+                            </div>
+                            <div class="clear"></div>
+                        </td>
+                        <td><span class="portion">1&nbsp;each</span></td>
+                        <td class="last"><input id="qty_503083" onblur="quantityChanged('503083');" 
+                            name="QTY" class="text quantity_box" type="text" /></td>
+                    </tr>
+                        
+                        <tr>
+                        <td class="menu_item">
+                            <input id="check_142037" name="recipe" value="142037*4" 
+                                class="check" type="checkbox" onclick="checkChanged('142037')" />
+                            <div class="item_wrap">
+                                <span><a href="http://www.foodpro.huds.harvard.edu/foodpro/item.asp?recipe=142037&amp;portion=4&amp;date=12-2-2009&type=05">
+                                    Curry Almond Lentil Bake</a>
+                                    &nbsp;|&nbsp;&nbsp;
+                                </span>
+                                 <img src="images/menus_nutrition/icon_veg.gif" alt="Vegetarian" /> 
+                            </div>
+                            <div class="clear"></div>
+                        </td>
+                        <td><span class="portion">4&nbsp;oz</span></td>
+                        <td class="last"><input id="qty_142037" onblur="quantityChanged('142037');" 
+                            name="QTY" class="text quantity_box" type="text" /></td>
+                    </tr>
+                        
+                        <tr>
+                        <td class="menu_item">
+                            <input id="check_071001" name="recipe" value="071001*4" 
+                                class="check" type="checkbox" onclick="checkChanged('071001')" />
+                            <div class="item_wrap">
+                                <span><a href="http://www.foodpro.huds.harvard.edu/foodpro/item.asp?recipe=071001&amp;portion=4&amp;date=12-2-2009&type=05">
+                                    Roast Beef w/Peppercorn Sauce</a>
+                                    
+                                </span>
+                                
+                            </div>
+                            <div class="clear"></div>
+                        </td>
+                        <td><span class="portion">4&nbsp;oz</span></td>
+                        <td class="last"><input id="qty_071001" onblur="quantityChanged('071001');" 
+                            name="QTY" class="text quantity_box" type="text" /></td>
+                    </tr>
+                        
+                        <tr class="category">
+                            <td colspan="3">ACCOMPANIMENTS</td>
+                        </tr>
+                        
+                        <tr>
+                        <td class="menu_item">
+                            <input id="check_505084" name="recipe" value="505084*2" 
+                                class="check" type="checkbox" onclick="checkChanged('505084')" />
+                            <div class="item_wrap">
+                                <span><a href="http://www.foodpro.huds.harvard.edu/foodpro/item.asp?recipe=505084&amp;portion=2&amp;date=12-2-2009&type=05">
+                                    Black Peppercorn Sauce</a>
+                                    
+                                </span>
+                                
+                            </div>
+                            <div class="clear"></div>
+                        </td>
+                        <td><span class="portion">2&nbsp;fl. oz</span></td>
+                        <td class="last"><input id="qty_505084" onblur="quantityChanged('505084');" 
+                            name="QTY" class="text quantity_box" type="text" /></td>
+                    </tr>
+                        
+                        <tr class="category">
+                            <td colspan="3">STARCH & POTATOES</td>
+                        </tr>
+                        
+                        <tr>
+                        <td class="menu_item">
+                            <input id="check_161016" name="recipe" value="161016*4" 
+                                class="check" type="checkbox" onclick="checkChanged('161016')" />
+                            <div class="item_wrap">
+                                <span><a href="http://www.foodpro.huds.harvard.edu/foodpro/item.asp?recipe=161016&amp;portion=4&amp;date=12-2-2009&type=05">
+                                    Scalloped Potatoes</a>
+                                    &nbsp;|&nbsp;&nbsp;
+                                </span>
+                                 <img src="images/menus_nutrition/icon_veg.gif" alt="Vegetarian" /> 
+                            </div>
+                            <div class="clear"></div>
+                        </td>
+                        <td><span class="portion">4&nbsp;oz</span></td>
+                        <td class="last"><input id="qty_161016" onblur="quantityChanged('161016');" 
+                            name="QTY" class="text quantity_box" type="text" /></td>
+                    </tr>
+                        
+                        <tr class="category">
+                            <td colspan="3">VEGETABLES</td>
+                        </tr>
+                        
+                        <tr>
+                        <td class="menu_item">
+                            <input id="check_508006" name="recipe" value="508006*4" 
+                                class="check" type="checkbox" onclick="checkChanged('508006')" />
+                            <div class="item_wrap">
+                                <span><a href="http://www.foodpro.huds.harvard.edu/foodpro/item.asp?recipe=508006&amp;portion=4&amp;date=12-2-2009&type=05">
+                                    Maple Roasted Butternut Squash</a>
+                                    &nbsp;|&nbsp;&nbsp;
+                                </span>
+                                 <img src="images/menus_nutrition/icon_veg.gif" alt="Vegetarian" />  <img src="images/menus_nutrition/icon_loc.gif" alt="Local" /> 
+                            </div>
+                            <div class="clear"></div>
+                        </td>
+                        <td><span class="portion">4&nbsp;oz</span></td>
+                        <td class="last"><input id="qty_508006" onblur="quantityChanged('508006');" 
+                            name="QTY" class="text quantity_box" type="text" /></td>
+                    </tr>
+                        
+                        <tr>
+                        <td class="menu_item">
+                            <input id="check_171036" name="recipe" value="171036*4" 
+                                class="check" type="checkbox" onclick="checkChanged('171036')" />
+                            <div class="item_wrap">
+                                <span><a href="http://www.foodpro.huds.harvard.edu/foodpro/item.asp?recipe=171036&amp;portion=4&amp;date=12-2-2009&type=05">
+                                    Whole Green Beans</a>
+                                    &nbsp;|&nbsp;&nbsp;
+                                </span>
+                                 <img src="images/menus_nutrition/icon_vgn.gif" alt="Vegan" /> 
+                            </div>
+                            <div class="clear"></div>
+                        </td>
+                        <td><span class="portion">4&nbsp;oz</span></td>
+                        <td class="last"><input id="qty_171036" onblur="quantityChanged('171036');" 
+                            name="QTY" class="text quantity_box" type="text" /></td>
+                    </tr>
+                        
+                        <tr class="category">
+                            <td colspan="3">DESSERTS</td>
+                        </tr>
+                        
+                        <tr>
+                        <td class="menu_item">
+                            <input id="check_599062" name="recipe" value="599062*1" 
+                                class="check" type="checkbox" onclick="checkChanged('599062')" />
+                            <div class="item_wrap">
+                                <span><a href="http://www.foodpro.huds.harvard.edu/foodpro/item.asp?recipe=599062&amp;portion=1&amp;date=12-2-2009&type=05">
+                                    Peach Bar</a>
+                                    &nbsp;|&nbsp;&nbsp;
+                                </span>
+                                 <img src="images/menus_nutrition/icon_veg.gif" alt="Vegetarian" /> 
+                            </div>
+                            <div class="clear"></div>
+                        </td>
+                        <td><span class="portion">1&nbsp;piece</span></td>
+                        <td class="last"><input id="qty_599062" onblur="quantityChanged('599062');" 
+                            name="QTY" class="text quantity_box" type="text" /></td>
+                    </tr>
+                        
+                        <tr class="category">
+                            <td colspan="3">BREAD,ROLLS, MISC BAKERY</td>
+                        </tr>
+                        
+                        <tr>
+                        <td class="menu_item">
+                            <input id="check_503087" name="recipe" value="503087*1" 
+                                class="check" type="checkbox" onclick="checkChanged('503087')" />
+                            <div class="item_wrap">
+                                <span><a href="http://www.foodpro.huds.harvard.edu/foodpro/item.asp?recipe=503087&amp;portion=1&amp;date=12-2-2009&type=05">
+                                    Wheat Rolls</a>
+                                    &nbsp;|&nbsp;&nbsp;
+                                </span>
+                                 <img src="images/menus_nutrition/icon_vgn.gif" alt="Vegan" /> 
+                            </div>
+                            <div class="clear"></div>
+                        </td>
+                        <td><span class="portion">1&nbsp;each</span></td>
+                        <td class="last"><input id="qty_503087" onblur="quantityChanged('503087');" 
+                            name="QTY" class="text quantity_box" type="text" /></td>
+                    </tr>
+                        
+                        <tr class="category">
+                            <td colspan="3">BEAN, WHOLE GRAIN</td>
+                        </tr>
+                        
+                        <tr>
+                        <td class="menu_item">
+                            <input id="check_502068" name="recipe" value="502068*4" 
+                                class="check" type="checkbox" onclick="checkChanged('502068')" />
+                            <div class="item_wrap">
+                                <span><a href="http://www.foodpro.huds.harvard.edu/foodpro/item.asp?recipe=502068&amp;portion=4&amp;date=12-2-2009&type=05">
+                                    Black Beans & Rice</a>
+                                    &nbsp;|&nbsp;&nbsp;
+                                </span>
+                                 <img src="images/menus_nutrition/icon_vgn.gif" alt="Vegan" /> 
+                            </div>
+                            <div class="clear"></div>
+                        </td>
+                        <td><span class="portion">4&nbsp;oz</span></td>
+                        <td class="last"><input id="qty_502068" onblur="quantityChanged('502068');" 
+                            name="QTY" class="text quantity_box" type="text" /></td>
+                    </tr>
+                        
+                </table>
+                <div class="table_nav">
+                    <a href="javascript:submitForm();">
+                        <img src="images/menus_nutrition/btn_create_report.gif" alt="Create Nutrition Report" class="right borderless" /></a>
+                    <a href="javascript:clearForm();">
+                        <img src="images/menus_nutrition/btn_clear_quantity.gif" alt="Clear Quantities" class="right borderless" /></a>
+                    <div class="clear"></div>
+                </div>
+            </form>
+        </div>
+        
+        <div class="item flp_banner">
+            <img src="images/menus_nutrition/ahead_flp_promo.gif" alt="Locations" class="left borderless" />
+            <a href="flp/index.html"><img src="images/menus_nutrition/btn_visit_flp.gif" alt="Visit the Food Literacy Project" class="left borderless" /></a>
+            <div class="clear"></div>
+        </div>
+        <div class="item responsibility last">
+            <p>
+            <span>* Consumer Responsibility *</span> Ingredients and nutritional content may vary. Manufacturers may change their product formulation or consistency of ingredients without our knowledge, and product availability may fluctuate. While we make every effort to identify ingredients, we cannot assure against these contingencies. Therefore, it is ultimately the responsibility of the consumer to judge whether or not to question ingredients or choose to eat selected foods. Food-allergic guests and those with specific concerns should speak with a manager for individualized assistance. 
+            </p>
+        </div>
+        
+    </div>
+<div class="clear"></div>
+    <div id="footer">
+        <div class="left">Copyright &copy; Harvard University Dining Services. All rights reserved. </div>
+        <div class="right">
+            <span>
+            <a href="flp/index.html">Food Literacy Project</a> &nbsp;|&nbsp;
+            <a href="about_huds/index.html">About Us</a> &nbsp;|&nbsp;
+            <a href="http://www.harvard.edu">Harvard Home</a> &nbsp;|&nbsp;         </span>
+            <a href="http://www.facebook.com/group.php?sid=8fbf1c9a3b54c51d4a0b20351dd8e459&amp;gid=27619822152" title="HUDS on Facebook" class="no_hover" target="_blank"><img src="images/nav/footer_facebook.gif" alt="Facebook Icon" class="facebook"/></a>
+            <span>
+            &nbsp;|&nbsp;
+            <a href="#" onclick="javascript:OpenPopup('privacy.html', 400, 400)" class="popup">Privacy</a> &nbsp;|&nbsp;
+            <a href="#" onclick="javascript:OpenPopup('1terms.html', 400, 400)" class="popup">Terms</a>         </span>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>   
+    </div>  
+</div>
+</body>
+</html>
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Wow, what a mess, eh? Go ahead and view that same source code in
+http://getfirebug.com/[Firebug]'s HTML tab so that everything is
+pretty-printed for you; it should look a lot less scary.
+
+Now let's look for more patterns. Let's start by looking more closely at
+the HTML surrounding *Maple Roasted Butternut Squash*. (I'm not a fan,
+but so be it.) For clarity, I've indented everything nicely, even though
+the original source code is messier:
+
+code,html4strict----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+code,html4strict
+<tr>
+  <td class="menu_item">
+    <input id="check_508006" name="recipe" value="508006*4" class="check" type="checkbox" onclick="checkChanged('508006')" />
+    <div class="item_wrap">
+      <span><a href="http://www.foodpro.huds.harvard.edu/foodpro/item.asp?recipe=508006&amp;portion=4&amp;date=12-2-2009&type=05">Maple Roasted Butternut Squash</a>&nbsp;|&nbsp;&nbsp;</span>
+     <img src="images/menus_nutrition/icon_veg.gif" alt="Vegetarian" />  <img src="images/menus_nutrition/icon_loc.gif" alt="Local" /> 
+    </div>
+    <div class="clear"></div>
+  </td>
+  <td><span class="portion">4&nbsp;oz</span></td>
+  <td class="last"><input id="qty_508006" onblur="quantityChanged('508006');" name="QTY" class="text quantity_box" type="text" /></td>
+</tr>
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Okay, interesting. It looks as though *Maple Roasted Butternut Squash*
+is inside of an *a* element, which is inside of a *span*, which is
+inside of a *div* (whose class is *item_wrap*), which is inside of a
+*td* (whose class is *menu_item*), which is inside of a *tr*. If you
+glance back at the whole page's source code, you'll see that other items
+on the menu are similarly wrapped. Feels like there a bunch of patterns
+here we can leverage when scraping. In fact, notice also that all of
+those *tr* elements are inside of a *table*, which is inside of a *form*
+(whose id is *report_form*).
+
+Alright, so which data do we want to scrape? Why don't we scrape items'
+names (e.g., *Maple Roasted Butternut Squash*) and recipe IDs (e.g.,
+*508006*), along with any attributes (e.g., *Vegetarian* and *Local*).
+
+Thanks to those patterns we found, we could extract those values
+programmatically using
+http://en.wikipedia.org/wiki/Regular_expression[regular expressions],
+but there's an easier way using a query language for XML called
+http://en.wikipedia.org/wiki/XPath[XPath]. XPath lets you access nodes
+in a http://en.wikipedia.org/wiki/Document_Object_Model[DOM] via
+"location paths." For instance, ''' /html/body[0] ''' would select the
+first (and presumably only) ''' body ''' element in an XHTML page,
+whereas *//a* would select all *a* elements in an XHTML page, no matter
+where in the DOM they are.
+
+Neat, eh? But XPath only works on XML (i.e., XHTML), not HTML. Let's see
+if HUDS's source code is indeed valid (and well-formed) XHTML by asking
+the http://www.w3.org/[W3C]'s http://validator.w3.org/[Markup Validation
+Service]:
+
+http://validator.w3.org/check?uri=http%3A%2F%2Fwww.foodpro.huds.harvard.edu%2Ffoodpro%2Fmenu_items.asp%3Fdate%3D12-2-2009%26meal%3D2&charset[`http://validator.w3.org/check?uri=http%3A%2F%2Fwww.foodpro.huds.harvard.edu%2Ffoodpro%2Fmenu_items.asp%3Fdate%3D12-2-2009%26meal%3D2&charset`]`=%28detect+automatically%29&doctype=Inline&group=0`
+
+Damn it! Despite the page's DOCTYPE, it is not, in fact, valid XHTML.
+(Why do they lie!) You can confirm as much with a PHP program like:
+
+code,php--------------------------------------------------------------------------------------------------------------------
+code,php
+<?
+    simplexml_load_file("http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date=12-2-2009&type=30&meal=2");
+?>
+--------------------------------------------------------------------------------------------------------------------
+
+You should see a whole bunch of warnings. Fortunately, libraries exist
+that can (try to) fix such problems, among them PHP's
+http://php.net/manual/en/book.tidy.php[Tidy]
+(http://tidy.sourceforge.net/docs/quickref.html[configuration options]).
+For instance, we can clean up HUDS's "XHTML" with code like the below
+(assuming the library is installed):
+
+code,php-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+code,php
+<?
+    $tidy = tidy_parse_file("http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date=12-2-2009&type=30&meal=2", array("numeric-entities" => true, "output-xhtml" => true));
+    $tidy->cleanRepair();
+    $xhtml = (string) $tidy;
+?>
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+We can then build a DOM, as with:
+
+code,php----------------------------------------- code,php
+<?
+    $dom = simplexml_load_string($xhtml);
+?>
+-----------------------------------------
+
+And we can then query the DOM for an array of all those *tr* elements we
+identified earlier:
+
+code,php-------------------------------------------------------------------------------
+code,php
+<?
+    $dom->registerXPathNamespace("xhtml", "http://www.w3.org/1999/xhtml");
+    $trs = $dom->xpath("//xhtml:form[@id='report_form']/xhtml:table/xhtml:tr");
+?>
+-------------------------------------------------------------------------------
+
+Note that PHP's http://php.net/manual/en/book.simplexml.php[SimpleXML]
+API (annoyingly) requires that we prefix XHTML elements' names with,
+e.g., *xhtml:*. Now that we have all those *tr* elements of interest, we
+can extract those fields we want pretty easily.
+
+[[]]
+Source Code
+^^^^^^^^^^^
+
+Below is (a simplified version of) the screen scraper used by the
+link:HarvardFood API[HarvardFood API]; it assumes that *DB_HOST*,
+*DB_NAME*, *DB_USER*, and *DB_PASS* are constants defined in a file
+called *constants.php*.
+
+code,php-------------------------------------------------------------------------------------------------------------------------------------
+code,php
+#!/usr/bin/env php
+<?
+    // constants
+    require("constants.php");
+
+    // connect to database
+    mysql_connect(DB_HOST, DB_USER, DB_PASS);
+    mysql_select_db(DB_NAME);
+
+    // get start and end dates
+    $sd = getdate();
+    $ed = getdate(strtotime("+6 days", $sd[0]));
+
+    // iterate over dates
+    for ($date = $sd; $date[0] <= $ed[0]; $date = getdate(strtotime("+1 day", $date[0])))
+    {
+        // get today's date in M-D-YYYY format
+        $njY= date("n-j-Y", $date[0]);
+
+        // get today's date in YYYY-MM-DD format
+        $Ymd = date("Y-m-d", $date[0]);
+
+        // get today's month and day in (M)MDD format
+        $nd = (int) date("nd", $date[0]);
+
+        // determine which meals are avaialble; assume that Summer School 
+        // (which has breakfast, lunch, and dinner on Sundays) starts no sooner
+        // than 15 June and runs no later than 15 August
+        if ($date["wday"] == 0 && ($nd < 615 || 815 < $nd))
+            $meals = array("Brunch", "Dinner");
+        else
+            $meals = array("Breakfast", "Lunch", "Dinner");
+
+        // get meals
+        for ($i = 0, $n = count($meals); $i < $n; $i++)
+        {
+            // fetch meal's menu
+            if (!($tidy = tidy_parse_file("http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date={$njY}&type=30&meal={$i}",
+                                          array("numeric-entities" => true, "output-xhtml" => true))))
+                continue;
+
+            // convert menu to XHTML
+            $tidy->cleanRepair();
+            $xhtml = (string) $tidy;
+
+            // parse XHTML
+            $dom = simplexml_load_string($xhtml);
+
+            // register XHTML namespace
+            $dom->registerXPathNamespace("xhtml", "http://www.w3.org/1999/xhtml");
+
+            // get menu's TRs
+            $trs = $dom->xpath("//xhtml:form[@id='report_form']/xhtml:table/xhtml:tr");
+
+            // get categories (and items therein)
+            unset($category);
+            foreach ($trs as $tr)
+            {
+                // remember category
+                if ($tr["class"] == "category")
+                    $category = trim((string) $tr->td);
+
+                // skip leading category-less TRs
+                else if (!isset($category))
+                    continue;
+
+                // associate item with current category
+                else
+                {
+                    // get item
+                    $a = $tr->td->div->span->a;
+                    if (!($item = trim($a)))
+                        continue;
+
+                    // determine recipe
+                    if (!preg_match("/recipe=(\d+)/", $a["href"], $matches))
+                        continue;
+                    $recipe = $matches[1];
+        
+                    // INSERT INTO into items
+                    $sql = sprintf("INSERT IGNORE INTO items (recipe, item) VALUES('%s', '%s')",
+                                   mysql_real_escape_string($recipe),
+                                   mysql_real_escape_string($item));
+                    mysql_query($sql);
+
+                    // INSERT INTO legend
+                    $a->registerXPathNamespace("xhtml", "http://www.w3.org/1999/xhtml");
+                    foreach ($a->xpath("../../xhtml:img") as $img)
+                    {
+                        $sql = sprintf("INSERT IGNORE INTO legend (recipe, `key`) VALUES('%s', '%s')",
+                                       mysql_real_escape_string($recipe),
+                                       mysql_real_escape_string($img["alt"]));
+                        mysql_query($sql);
+                    }
+
+                    // INSERT INTO menu
+                    $sql = sprintf("INSERT INTO menu (date, meal, category, recipe) VALUES('%s', '%s', '%s', '%s')",
+                                   mysql_real_escape_string($Ymd),
+                                   mysql_real_escape_string($meals[$i]),
+                                   mysql_real_escape_string($category),
+                                   mysql_real_escape_string($recipe));
+                    mysql_query($sql);
+                }
+            }
+
+            // avoid blacklisting
+            sleep(1);
+        }
+    }
+
+?>
+-------------------------------------------------------------------------------------------------------------------------------------
+
+This code assumes that three tables exist in *DB_NAME*:
+
+code,sql------------------------------------------------------------------------------
+code,sql
+CREATE TABLE IF NOT EXISTS `items` (
+  `recipe` char(6) NOT NULL,
+  `item` varchar(255) NOT NULL,
+  PRIMARY KEY  (`recipe`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+CREATE TABLE IF NOT EXISTS `legend` (
+  `recipe` char(6) NOT NULL,
+  `key` enum('Vegetarian','Vegan','Mollie Katzen','Local','Organic') NOT NULL,
+  UNIQUE KEY `recipe` (`recipe`,`key`),
+  KEY `recipe_2` (`recipe`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+CREATE TABLE IF NOT EXISTS `menu` (
+  `date` date NOT NULL,
+  `meal` enum('Breakfast','Brunch','Lunch','Dinner') NOT NULL,
+  `category` varchar(255) NOT NULL,
+  `recipe` char(6) NOT NULL,
+  UNIQUE KEY `date_2` (`date`,`meal`,`category`,`recipe`),
+  KEY `date` (`date`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+------------------------------------------------------------------------------
+
+Category:HOWTO

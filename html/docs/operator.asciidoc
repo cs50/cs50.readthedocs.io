@@ -1,0 +1,29 @@
+---
+tags: []
+title: operator
+---
+An *operator* is a special symbol that takes one or more arguments
+("operands") and returns a value. For example, `+` is an operator in C,
+and returns the sum of its two operands.
+
+Operators take some fixed number of operands; in the material covered by
+CS50, this number varies from one to three. Operators with just one
+operand ("unary operators") include boolean (`!)`, bitwise (`~`), and
+arithmetical (`-`) negation, the address-of operator (`&`), and a number
+of operators. Operators with two operands ("binary operators") are most
+common; examples include common mathematical operators like `+` and `/`,
+but also `.` (for struct access) and `=` (for variable assignment). C
+and related languages have a single operator that has three operands:
+the ternary operator `?:`.
+
+Sometimes the meaning of an operand is dependent on context. In
+JavaScript, for example, `+` is also an operator, but it does more than
+just addition: if its two operands are strings, it concatenates them.
+Similarly, the `*` operator in C can be either a unary operator,
+signifying a pointer dereference, or a binary operator, signifying
+multiplication.
+
+The order that operators are evaluated (that is, whether `O + 1 * 2`
+equals `(0 + 1) * 2` or `0 + (1 * 2)`) depends on precedence.
+
+Category:Glossary

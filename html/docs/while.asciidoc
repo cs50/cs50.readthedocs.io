@@ -1,0 +1,87 @@
+---
+tags: []
+title: while
+---
+A *while* loop is a loop that keeps executing until its condition is
+false. While loops exist in all of C, JavaScript, and PHP, with very
+similar semantics.
+
+[[]]
+Detailed description
+~~~~~~~~~~~~~~~~~~~~
+
+The syntax for a while loop is as follows:
+
+----------------
+while(condition)
+{
+   statements;
+}
+----------------
+
+When program execution reaches `while`, the condition is checked. If the
+condition evaluates to `true`, the statements in the body of the loop
+get executed. After that, the condition is checked again and if it is
+still true, the statements get executed again, and so on.
+
+Sometimes you don't want to wait until all the statements are executed
+before leaving the loop. In that case, you can use `break`. It is also
+sometimes desirable to continue in the loop, but not to execute the rest
+of the loop body. There is another statement for that: `continue`.
+
+[[]]
+Examples
+~~~~~~~~
+
+A while loop can be used to implement a simple counter:
+
+-------------------------
+int i = 10;
+while(i >= 0) 
+{
+    printf("%d...\n", i);
+    i--;
+}
+-------------------------
+
+The following example uses a seemingly infinite loop, with the condition
+simply set to `true`. However, a `break` statement is used to break out
+of the loop, and a `continue` statement is used to short-circuit to the
+next iteration of the loop.
+
+-----------------------------------------------------------------------------------------------------
+// Process a string so that it only contains lowercase alphabetical characters.
+char *clean_string(char *in)
+{
+    int len = strlen(in);
+    // allocate memory and check that we succeeded
+    char *out = malloc(len + sizeof(char));
+    if(out == NULL)
+    {
+        fprintf(stderr, "Unable to allocate memory\n");
+        return NULL;
+    }
+    // counters for the in- and output strings
+    int i = 0, j = 0;
+    while(true)
+    {
+        // break if we've reached the end of the string
+        if(in[i] == '\0')
+        {
+            out[j] = '\0';
+            break;
+        }
+        // if we found something that is not a letter, ignore it and continue with the next character
+        if(in[i] < 'a' || in[i] > 'z')
+        {
+            i++;
+            continue;
+        }
+        // add this letter to the output string
+        out[j++] = in[i++];
+    }
+    return out;
+}
+-----------------------------------------------------------------------------------------------------
+
+Category:Glossary

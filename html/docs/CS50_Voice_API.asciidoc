@@ -1,0 +1,18 @@
+---
+tags: []
+title: CS50_Voice_API
+---
+[[]]
+Authors
+^^^^^^^
+
+mailto:wchao@post.harvard.edu[Wellie Chao '98] +
+mailto:malan@post.harvard.edu[David J. Malan '99]
+
+[[]]
+Status
+^^^^^^
+
+Email authors if you would like to use this API.
+
+Category:APIs

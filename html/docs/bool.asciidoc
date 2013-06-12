@@ -1,0 +1,50 @@
+---
+tags: []
+title: bool
+---
+A *bool* is a data type whose value can only be true or false. It's from
+the `stdbool` library that CS50 automatically includes in our header
+file.
+
+Variables can be declared and initialized as bools, as with any other
+data type.
+
+code,c------------------ code,c
+ bool lie = false;
+------------------
+
+declares a boolean variable named `lie` and sets its value to `false`.
+
+Bools are useful when you need a variable with only two states, usually
+as an indicator. You can think of them as a physical switch (like a
+light switch; not the C [[switch|`switch()]]`!).
+
+Here's an example that illustrates the use of a bool:
+
+code,c-----------------------------------------------------------------
+code,c
+#include <cs50.h>
+#include <stdio.h>
+
+int
+main(void)
+{
+    // loop until user provides a positive integer
+    bool thankful = false;
+    do
+    {
+        printf("I demand that you give me a positive integer: ");
+        if (GetInt() > 0)
+            thankful = true;
+    }
+    while (!thankful);
+    printf("Thanks for the positive integer!\n");
+} 
+-----------------------------------------------------------------
+
+Here, the bool `thankful` is initialized as `false`, and is only set to
+`true` when `GetInt()` is greater than 0, or the user provides a
+positive integer in other words. When `thankful` is `true`, the loop
+breaks out and the program expresses its gratitude.
+
+Category: Week 1[Category: Week 1]

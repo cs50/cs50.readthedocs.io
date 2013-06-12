@@ -1,0 +1,1191 @@
+---
+tags: []
+title: CS50_Appliance_1.4
+---
+*This HOWTO is for version 1.4 of the CS50 Appliance. You should only
+use this version if you are "taking" http://cs50.tv/2009/fall/[Fall
+2009] of CS50. Otherwise, a link:Appliance[newer version] is available.*
+
+The CS50 Appliance (aka "CS50 in a Box") is a virtual machine (VM) that
+lets anyone on the Internet (like you!) tackle the
+http://cs50.tv/2009/fall/#l=psets[problem sets] at
+http://cs50.tv/[cs50.tv], even if they're not students at Harvard.
+
+It's based on http://en.wikipedia.org/wiki/Ubuntu_JeOS[Ubuntu JeOS], "an
+efficient variant of the Ubuntu Server operating system, configured
+specifically for virtual appliances." It is an
+http://en.wikipedia.org/wiki/Computer_appliance[appliance] in the sense
+that we've preconfigured this VM for a specific purpose: enabling folks
+(like you!) to tackle CS50's http://cs50.tv/2009/fall/#l=psets[problem
+sets].
+
+In other words, if you don't have an account on *nice.fas.harvard.edu*
+or *cloud.cs50.net* (because you're not a student in CS50), you can
+still play along at home. The CS50 Appliance will let you compile source
+code from http://cs50.tv/2009/fall#l=lectures[lectures] and implement
+http://cs50.tv/2009/fall#l=psets[problem sets] without having to figure
+out how to configure
+http://en.wikipedia.org/wiki/GNU_Compiler_Collection[GCC], etc.
+yourself. Having the CS50 Appliance on your computer is like having your
+own, local version of *nice.fas.harvard.edu* and *cloud.cs50.net*! Put
+another way, the CS50 Appliance lets you run (Ubuntu) Linux inside of a
+window on your own computer, even if you're already running (some other
+version of) Linux, Mac OS, Solaris, or Windows!
+
+Make sense? (If not, you may want to watch, at least, Week 0's and Week
+1's http://cs50.tv/2009/fall/#l=lectures[lectures]. :-)
+
+Incidentally, this appliance is a work in progress, so please forgive
+any bugs! We've documented link:#Known_Issues[known issues] down below.
+Do turn to the course's http://cs50.tv/2009/fall/#r=group[Google Group]
+if you run into problems, and we'll do our best to improve the
+experience.
+
+[[]]
+Cheatsheet
+----------
+
+See link:#Instructions[instructions] for more detail.
+
+[cols=",",]
+|=======================================================================
+|*Your Name* |John Harvard
+
+|*Your Username* |jharvard
+
+|*Your Password* |crimson
+
+|*Appliance's IP* |192.168.56.50
+
+|*Your Computer's IP* |192.168.56.1
+
+|*Your MySQL Server (DB_SERVER)* |localhost
+
+|*Your MySQL Username (DB_USER)* |jharvard
+
+|*Your MySQL Password (DB_PASS)* |crimson
+
+|*Superuser's MySQL Username* |root
+
+|*Superuser's MySQL Password* |crimson
+
+|*phpMyAdmin* |http://192.168.56.50/phpmyadmin/
+
+|*Your Homepage* |http://192.168.56.50/~jharvard/
+
+|*VirtualBox's Host Key* |left-Command on a Mac; right-Control on any
+other OS
+|=======================================================================
+
+[[]]
+Instructions
+------------
+
+[[]]
+How to Install Appliance
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+1.  To use CS50 in a Box, you'll first need to install
+http://www.virtualbox.org/wiki/Download_Old_Builds_3_2[VirtualBox
+3.2.6], a free program (known as a
+http://en.wikipedia.org/wiki/Hypervisor[hypervisor]) from
+http://www.oracle.com/[Oracle] (formerly
+http://www.sun.com/software/products/virtualbox/[Sun Microsystems]) that
+will let you run http://en.wikipedia.org/wiki/Virtual_machine[virtual
+machines] on your own computer, whether you run Linux, Mac OS, Solaris,
+or Windows. Go ahead and download the version for your OS from
+http://www.virtualbox.org/wiki/Downloads. Then install it. (If you run
+into trouble, there's a http://blip.tv/play/Aee3VQI[video] that might
+help. On Windows, you may need to click *Install*, *OK*, or the like one
+or more times if prompted, and if the installer appears to hang, try
+dragging the installer's window to the side to see if there's a dialogue
+waiting for your input hidden behind it.)
+2.  Next, download the latest CS50 Appliance at
+http://mirror.cs50.net/appliance/1/cs50-1.4.zip. Then unzip it.
+3.  Finally, launch VirtualBox (as by clicking its icon wherever you
+installed it). Select *Import Appliance...* from VirtualBox's *File*
+menu. Click *Choose*. Navigate your way to that unzipped *cs50-1.4*
+folder, highlight the *cs50-1.4.ovf* file within, and click *Open*. Then
+click *Next*. You should see a summary of the appliance's settings.
+Click *Import*. Then click *Agree* if you agree with the
+http://creativecommons.org/licenses/by-nc-sa/3.0/[license]. Within a few
+seconds or minutes, you should see *CS50 in a Box 1.4* in VirtualBox's
+left-hand menu. Highlight it, then click *Start*.
+
+OMG, you just booted your own copy of
+http://en.wikipedia.org/wiki/Ubuntu_(operating_system)[Ubuntu Linux].
+
+[[]]
+How to Use Appliance
+~~~~~~~~~~~~~~~~~~~~
+
+The first thing you should see when the appliance boots up is a login
+screen. Hit *Enter* or click John Harvard's name. (Oh, henceforth, you
+are http://en.wikipedia.org/wiki/John_Harvard_(clergyman)[John Harvard].
+Your initial password is *crimson*. And here's
+http://en.wikipedia.org/wiki/File:BostonTrip-91.jpg[what you look
+like].) When prompted for a password, type your password, then hit
+*Enter* or click *Log In*. After a few seconds, you should see your
+desktop. Even though you may think of Linux as having only a
+http://en.wikipedia.org/wiki/Command-line_interface[command-line
+interface],
+http://en.wikipedia.org/wiki/Graphical_user_interface[graphical user
+interfaces] do exist. We've installed
+http://en.wikipedia.org/wiki/GNOME[GNOME], one of the most popular, for
+you. However, we installed as few programs as possible to keep the
+appliance small. You're welcome to install additional programs via
+*System → Administration → Add/Remove Applications*.
+
+[[]]
+How to Change Name
+^^^^^^^^^^^^^^^^^^
+
+As much as you might not like being called John, allow us to suggest
+that you not change your name (or username) yet. Life will be simpler as
+John.
+
+[[]]
+How to Change Password
+^^^^^^^^^^^^^^^^^^^^^^
+
+Select *System → Preferences → About Me*, then click *Change
+Password...*. Or, link:#How_to_Open_a_Terminal[open a terminal] and
+execute *passwd* at the prompt.
+
+With that said, allow us to suggest that you not change your password
+yet. (Life will be simpler with *crimson*.) The appliance has been
+configured in such a way that only someone with access to your computer
+(e.g., you) can access the appliance. Even though the appliance can
+connect to the Internet, the Internet cannot connect to the appliance.
+
+[[]]
+How to Change Language
+^^^^^^^^^^^^^^^^^^^^^^
+
+If English is not your native language, you may want to change the
+appliance's default language. Some things will remain in English, but
+you might find yourself more at home nonetheless. Select *System →
+Administration → Language Support*. Click *OK* if prompted to download
+additional languages. Then click *Install/Remove Languages*, click the
+box next to your preferred language, then click *Apply Changes*. Click
+*OK* if prompted. Then select your language from the menus beneath *For
+my menus and windows* and *For everyone at startup and login*. Then
+close the window and select '''
+
+→ Restart...''' from the appliance's top-right corner.
+
+[[]]
+How to Change Keyboard Layout
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you have a non-U.S. (or non-standard) keyboard, you may want (or
+need!) to change your keyboard's layout. Select *System → Preferences →
+Keyboard*. Then click the *Layouts* tab and configure as desired.
+
+[[]]
+How to Change Timezone
+^^^^^^^^^^^^^^^^^^^^^^
+
+If you don't live in Cambridge, Massachusetts, USA, you may want to
+change the appliance's timezone. Select *System → Administration → Time
+and Date*. To unlock the window that appears, you may need to click the
+keys next to *Click to make changes*. Enter your password if prompted.
+Then make any changes you'd like.
+
+[[]]
+How to Open a Terminal
+^^^^^^^^^^^^^^^^^^^^^^
+
+Select *Applications → Accessories → Terminal* (or simply right-click
+anywhere on your desktop and select *Open in Terminal*). Ta da! You
+should see a command-line interface much like the one you've probably
+seen in http://cs50.tv/2009/fall/#l=lectures[lectures]! It's at this
+blinking prompt that you'll be able to type commands like *cd*, *gcc*,
+*ls*, and *nano*, as discussed in
+http://cs50.tv/2009/fall/#l=lectures[lectures] and
+http://cs50.tv/2009/fall/#l=psets[problem sets].
+
+When a problem set tells you to "ssh to nice.fas.harvard.edu" or "ssh to
+cloud.cs50.net", you can simply open a terminal instead (or you can
+link:#How_to_SSH_to_Appliance[SSH to the appliance]).
+
+Just realize that when you open a terminal by right-clicking your
+desktop, you'll start in your ~/Desktop/ directory instead of your home
+directory (i.e., ~).
+
+[[]]
+How to SSH to Appliance
+^^^^^^^^^^^^^^^^^^^^^^^
+
+If you'd like to SSH to the appliance from your own computer (as with
+Terminal on Mac OS or with PuTTY on Windows), you can SSH from your
+computer to *192.168.56.50*, which is the appliance's static IP address.
+(The appliance actually has a second IP address, obtained via DHCP, but
+it uses that IP to access the Internet.)
+
+If you'd instead like to SSH _from_ the appliance _to_ your computer
+(assuming your computer is running an SSH server), you can SSH from the
+appliance to *192.168.56.1*, which is the static IP address that
+VirtualBox has secretly assigned to your computer.
+
+[[]]
+How to Release Keyboard and Mouse
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Once you click inside of the appliance, it "captures" (i.e., "owns")
+your keyboard's keystrokes and your mouse's movements. To release your
+keyboard and mouse from the appliance's clutches, hit VirtualBox's "host
+key": on a Mac, VirtualBox's host key is your keyboard's left-Command
+key; on any other OS, VirtualBox's host key is your keyboard's
+right-Control key. Once you hit that key, should be able to move your
+mouse anywhere on your screen.
+
+[[]]
+How to Install Guest Additions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+"Guest additions" are device drivers and system applications that come
+with VirtualBox that can improve the performance and usability of the
+CS50 Appliance. Those additions allow you to
+link:#How_to_Change_Resolution[change the appliance's resolution],
+link:#How_to_Enter/Exit_Seamless_Mode[enter/exit seamless mode], and
+link:#How_to_Transfer_Files_between_Appliance_and_Your_Computer[share
+folders] between host and guest machines. They may also eliminate the
+need to "release" your keyboard and mouse via VirtualBox's "host key."
+
+To install them, select *Install Guest Additions...* from VirtualBox's
+*Devices* menu while the appliance is running. (This menu is outside of
+the appliance, not inside of it. You may need to
+link:#How_to_Release_Keyboard_and_Mouse[release your keyboard and mouse]
+first.) Then link:#How_to_Open_a_Terminal[open a terminal] and execute
+the commands below. Input your password if prompted. (For security, you
+will not see your password as you type it.)
+
+`sudo su -` +
+`aptitude install dkms` +
+`mount /dev/cdrom /mnt` +
+`/mnt/VBoxLinuxAdditions.run`
+
+Once the software has been installed, execute the command below:
+
+`umount /mnt`
+
+Then select *CD/DVD Devices → Remove disk from virtual drive* from
+VirtualBox's *Devices* menu. (This menu is outside of the appliance, not
+inside of it. You may need to
+link:#How_to_Release_Keyboard_and_Mouse[release your keyboard and mouse]
+first.) Then reboot the appliance by selecting '''
+
+→ Restart...''' in the appliance's top-right corner.
+
+[[]]
+How to Change Resolution
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+By default, the appliance's resolution is 800 x 600, but, odds are, your
+own screen's resolution is higher. But if you try to make VirtualBox's
+window bigger, the appliance itself won't grow. At least not yet! You'll
+first need to link:#How_to_Install_Guest_Additions[install guest
+additions] if you haven't already. Then you'll be able to click and drag
+the appliance's bottom-right corner to resize it.
+
+[[]]
+How to Enter/Exit Fullscreen Mode
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For fullscreen mode to work (well), you'll first need to
+link:#How_to_Install_Guest_Additions[install guest additions] if you
+haven't already.
+
+To enter fullscreen mode thereafter, select *Fullscreen Mode* ... from
+VirtualBox's *Machine* menu while the appliance is running. (This menu
+is outside of the appliance, not inside of it.) Or hit VirtualBox's
+"host key" and F together: on a Mac, VirtualBox's host key is your
+keyboard's left-Command key; on any other OS, VirtualBox's host key is
+your keyboard's right-Control key.
+
+To exit fullscreen mode, hit VirtualBox's "host key" and F together
+again.
+
+[[]]
+How to Enter/Exit Seamless Mode
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Seamless mode lets you "extract" windows (e.g., a Terminal window) from
+the CS50 Appliance and position them right alongside your computer's own
+windows; in seamless mode, the appliance's windows are no longer
+confined to the appliance's own rectangular window.
+
+For seamless mode to work, you'll first need to increase the appliance's
+video memory. With the appliance powered off, highlight *CS50 in a Box
+1.4* in VirtualBox's list of VMs, then click *Settings*. Click
+*Display*. Then ensure that *Video Memory* is at least *17* MB. Then
+click *OK*, start the appliance, and proceed to install
+link:#How_to_Install_Guest_Additions[install guest additions] if you
+haven't already.
+
+To enable seamless mode thereafter, hit VirtualBox's "host key" and L
+together: on a Mac, VirtualBox's host key is your keyboard's
+left-Command key; on any other OS, VirtualBox's host key is your
+keyboard's right-Control key.
+
+To exit seamless mode, hit VirtualBox's "host key" and L together again.
+
+[[]]
+How to Use phpMyAdmin
+^^^^^^^^^^^^^^^^^^^^^
+
+Visit http://192.168.56.50/phpmyadmin/ using Firefox within the
+appliance or using your own computer's browser. You will automatically
+be logged in as John Harvard for whom we have created two databases
+(*jharvard_pset7* and *jharvard_pset8*) by default; you are welcome to
+create others.
+
+[[]]
+How to Transfer Files between Appliance and Your Computer
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you'd like to
+http://en.wikipedia.org/wiki/SSH_file_transfer_protocol[SFTP] to the
+appliance from your own computer (as with
+http://cyberduck.ch/[Cyberduck] on Mac OS or with
+http://winscp.net/eng/download.php[WinSCP] on Windows), you can SFTP
+from your computer to 192.168.56.50, which is the appliance's static IP
+address. (The appliance actually has a second IP address, obtained via
+DHCP, but it uses that IP to access the Internet.)
+
+Alternatively, you can create a "shared folder" on your own computer's
+hard drive that the CS50 Appliance can access directly, thereby allowing
+you to share files between your computer and the appliance without
+having to use SFTP.
+
+To create a shared folder, you must first have installed VirtualBox's
+link:#How_to_Install_Guest_Additions[guest additions]. Next, select
+*Shared Folders...* from VirtualBox's *Devices* menu while the appliance
+is running. (This menu is outside of the appliance, not inside of it.
+You may need to link:#How_to_Release_Keyboard_and_Mouse[release your
+keyboard and mouse] first.) In the window that appears, click the little
+folder icon with a plus (+) sign. In the *Add Share* window that
+appears, click the downward-pointing arrow next to *Folder Path* and
+select *Other...*. Navigate your way to a folder on your own hard drive
+that you'd like to share with the appliance, creating a new folder if
+desired; once you've selected that folder, click *Choose*. (*For
+simplicity, select a folder whose name is entirely alphanumeric; don't
+select a folder with spaces or punctuation in its name.* If you create a
+new folder, you may need to highlight some other file or folder after
+creating it, then re-highlight that new folder in order for the *Choose*
+button to work.) In the *Add Share* window, be sure that the folder you
+selected now appears next to *Folder Path*. Next to *Folder Name*,
+confirm that the name does not have any spaces or punctuation; remember
+this name. Click *OK*. You should now see your choice of shared folders
+in the *Shared Folders* window. Then click *OK*.
+
+Next, link:#How_to_Open_a_Terminal[open a terminal] and execute these
+commands, where *sharename* is the name of your shared folder:
+
+`mkdir ~/Desktop/sharename/` +
+`sudo modprobe vboxsf` +
+`sudo mount -t vboxsf -o uid=1000,gid=1000 sharename ~/Desktop/sharename/`
+
+Because these commands require superuser privileges, you may be prompted
+to provide your password. (For security, you will not see your password
+as you type it.)
+
+Your shared folder should now be "mounted" inside of the appliance right
+on your desktop. To confirm, create a file inside of that shared folder
+on your own computer (e.g., drag some file from your desktop into that
+folder). Then double-click the mounted folder on the appliance's
+desktop. That same file should be listed.
+
+Next create a file inside of that shared from within the appliance by
+executing a command like this one:
+
+`touch ~/Desktop/sharename/foo`
+
+Then open that shared folder on your own computer. You should see both
+foo and whatever other file you put there.
+
+At this point, you can transfer files between the appliance and your own
+computer by way of that folder.
+
+To unmount (i.e., unshare) that folder, you can execute this command:
+
+`sudo umount ~/Desktop/sharename/`
+
+If you'd like this shared folder to be permanent (and exist every time
+you boot the appliance), select *Shared Folders...* from VirtualBox's
+*Devices* menu while the appliance is running. Highlight the shared
+folder. Click the little folder icon with a circle (below the little
+folder icon with a plus (+) sign and above the little folder icon with a
+minus (-) sign). Check *Make Permanent* in the *Edit Share* window that
+appears, then click *OK*. Confirm that your shared folder is now under
+*Machine Folders* instead of *Transient Folders*, then click *OK*. Next,
+link:#How_to_Open_a_Terminal[open a terminal] and execute this command:
+
+`sudo nano /etc/fstab`
+
+Add this line to the bottom of that file, taking care not to change
+anything else:
+
+`sharename /home/jharvard/Desktop/sharename/ vboxsf uid=1000,gid=1000 0 0`
+
+Save the file by hitting *Ctrl-x* followed by *y*. Then restart the
+appliance to confirm that the shared folder gets mounted automatically
+at startup. Note that /home/jharvard/Desktop/sharename/ (aka
+~/Desktop/sharename/) must exist; the shared folder's contents get
+mounted _inside of_ that directory.
+
+[[]]
+How to Shut Down
+^^^^^^^^^^^^^^^^
+
+Select '''
+
+→ Shut Down...''' in the appliance's top-right corner.
+
+[[]]
+How to Compile Source Code from Lectures
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To compile some lecture's source code, figure out the URL of the file
+you'd like to download, as by browsing the "index" for some lecture's
+source code (e.g., http://cdn.cs50.net/2009/fall/lectures/1/src/). Then
+download that URL (e.g.,
+http://cdn.cs50.net/2009/fall/lectures/1/src/hai1.c) with this command:
+
+`wget `http://cdn.cs50.net/2009/fall/lectures/1/src/hai1.c[`http://cdn.cs50.net/2009/fall/lectures/1/src/hai1.c`]
+
+Odds are you can then compile the file with:
+
+`gcc hai1.c`
+
+And you can then run the program with this command:
+
+`a.out`
+
+[[]]
+Caveats
+^^^^^^^
+
+* Some source code might require tweaks to get it to compile inside of
+the appliance. If you run into a compilation error, simply turn to the
+course's http://cs50.net/2009/fall/#r=group[Google Group] for
+assistance!
+
+[[]]
+How to Do Problem Sets
+~~~~~~~~~~~~~~~~~~~~~~
+
+You'll first want to link:#How_to_Install_Appliance[install the CS50
+Appliance]. Then you'll want to download and read the problem set's PDF,
+which is available at http://cs50.tv/2009/fall/#l=psets[cs50.tv].
+Perhaps needless to say, ignore any sentences that appear to be intended
+only for CS50's own students. You'll notice that most problem sets
+instruct you to "SSH to nice.fas.harvard.edu" or "SSH to
+cloud.cs50.net". If you're not a CS50 student, you won't have an account
+on either server, but that's what the CS50 Appliance is for! Anytime
+you're told to SSH to nice.fas.harvard.edu or cloud.cs50.net, instead
+just link:#How_to_Open_a_Terminal[open a terminal] or
+link:#How_to_SSH_to_Appliance[SSH to your appliance].
+
+Anyhow, for problem sets that come with distros (i.e., source code),
+figure out the URL of the source code's ZIP (e.g.,
+http://cdn.cs50.net/2009/fall/psets/3/pset3.zip), as by right-clicking
+or Ctrl-clicking the link at http://cs50.tv/2009/fall/#l=psets[cs50.tv]
+and selecting *Copy Link* or the like. Then launch the appliance,
+link:#How_to_Open_a_Terminal[open a terminal], and execute a command
+like the below:
+
+`wget `http://cdn.cs50.net/2009/fall/psets/3/pset3.zip[`http://cdn.cs50.net/2009/fall/psets/3/pset3.zip`]
+
+Unzip that ZIP with this command:
+
+`unzip pset3.zip`
+
+And then "cd into" the unzipped directory with this command:
+
+`cd pset3/`
+
+Then proceed to follow the PDF's directions!
+
+[[]]
+Caveats
+^^^^^^^
+
+* For problem sets that involve phpMyAdmin, you should
+link:#How_to_Use_phpMyAdmin[use your appliance's own installation].
+* For problem sets that involve web programming, your home will be
+http://192.168.56.50/~jharvard/, once you've created a *~/public_html/*
+directory.
+* Some commands mentioned in PDFs may not work inside of the appliance
+(e.g., *challenge*). We've made sure that the pedagogically important
+ones do, though.
+* Some source code might require tweaks to get it to compile inside of
+the appliance. If you run into a compilation error that's not discussed
+in the PDF, simply turn to the course's
+http://cs50.net/2009/fall/#r=group[Google Group] for assistance!
+
+[[]]
+Implementation Details
+----------------------
+
+Below are details on how we implemented the CS50 Appliance in case
+you're curious or would like to reproduce these steps yourself. *You do
+NOT need to follow these directions to if you simply want to USE the
+CS50 Appliance:* you only need to follow link:#Instructions[the
+instructions above].
+
+We built the appliance with Ubuntu's
+http://help.ubuntu.com/community/JeOSVMBuilder[vmbuilder], "a script
+that automates the process of creating a ready to use VM based on
+Ubuntu." Even though vmbuilder doesn't officially support creation of
+VirtualBox appliances, it does support creation of VMware appliances.
+But VirtualBox can read VMware virtual disks (*.vmdk files), so, by
+transitivity, you can use vmbuilder to create VirtualBox appliances!
+
+It took us a while to figure everything out, but now that we (and you)
+know what we're doing, it only takes about 20 minutes to build the
+appliance (and most of that time is spent waiting for vmbuilder to run).
+
+The directions below assume familiarity with
+http://en.wikipedia.org/wiki/Ubuntu_(operating_system)[Ubuntu] and
+installation thereof as well as with
+http://en.wikipedia.org/wiki/VirtualBox[VirtualBox]. If you have
+questions, you may want to join CS50's Google Group at
+http://cs50.tv/2009/fall/#l=psets&r=group[cs50.tv].
+
+[[]]
+Install Ubuntu
+^^^^^^^^^^^^^^
+
+First, you'll need a running instance of Ubuntu 10.04 with which to
+build the appliance. If you don't have such, download Ubuntu 10.04 from
+http://www.ubuntu.com/GetUbuntu/download (32-bit or 64-bit) and install
+it on a physical machine or in a virtual machine. Boot the OS, then make
+sure it's up-to-date:
+
+`sudo aptitude update` +
+`sudo aptitude full-upgrade`
+
+[[]]
+Install vmbuilder
+^^^^^^^^^^^^^^^^^
+
+Installing vmbuilder is easy:
+
+`sudo aptitude install python-vm-builder`
+
+Unfortunately, vmbuilder's *--firstboot* option is broken in Ubuntu
+10.04 LTS, but a fix is available:
+
+`sudo su -` +
+`wget `http://launchpadlibrarian.net/47840185/vm-builder.bug536942.patch[`http://launchpadlibrarian.net/47840185/vm-builder.bug536942.patch`] +
+`cd /usr/share/pyshared/` +
+`patch -p1 < ~/vm-builder.bug536942.patch`
+
+[[]]
+Configure vmbuilder
+^^^^^^^^^^^^^^^^^^^
+
+If you're not (still) already, you might as well become root for
+simplicity:
+
+`sudo su -`
+
+Provide your password if prompted.
+
+Then, to speed things up (especially if you build the appliance multiple
+times) install
+http://en.wikipedia.org/wiki/Advanced_Packaging_Tool[APT]'s caching
+proxy:
+
+`aptitude install apt-proxy`
+
+Then create a file called *boot.sh* in */root/* with these contents:
+
+-----------------------------------------------------------------------------------------------
+############################################################################
+# regenerate SSH keys (so that every user doesn't have same)
+############################################################################
+
+/bin/rm -f /etc/ssh/ssh_host*key*
+/usr/sbin/dpkg-reconfigure -fnoninteractive -pcritical openssh-server
+
+
+############################################################################
+# remove MOTD
+############################################################################
+
+/bin/rm -f /etc/motd
+
+
+############################################################################
+# customize /etc/skel/
+############################################################################
+
+/bin/cat >> /etc/skel/.bashrc <<"EOF"
+
+if [ -f /home/cs50/pub/etc/bashrc ]; then
+  . /home/cs50/pub/etc/bashrc;
+fi
+EOF
+
+/bin/cat >> /etc/skel/.profile <<"EOF"
+
+if [ -f /home/cs50/pub/etc/profile ]; then
+  . /home/cs50/pub/etc/profile;
+fi
+EOF
+/bin/cp -f /etc/skel/.profile /home/jharvard/
+
+/bin/cat >> /etc/skel/.bash_logout <<"EOF"
+
+if [ -f /home/cs50/pub/etc/bash_logout ]; then
+  . /home/cs50/pub/etc/bash_logout;
+fi
+EOF
+
+/bin/chown -R jharvard:jharvard /home/jharvard
+
+
+############################################################################
+# configure cs50
+############################################################################
+
+/usr/sbin/adduser --disabled-login --system --uid 50 cs50
+/bin/mkdir -p /home/cs50/pub/bin
+/bin/mkdir -p /home/cs50/pub/etc
+
+/bin/cat > /home/cs50/pub/bin/cs50ci <<"EOF"
+#!/usr/bin/tcsh
+
+onintr -
+
+if ($#argv == 0) then
+    /bin/echo "Usage: ci file"
+    exit 1
+else
+    set files = "$argv[1*]"
+endif
+
+# ensure RCS directory exists
+if ( ! -d RCS) then
+    if ( -e RCS ) then
+        mv -f RCS RCS.old
+    endif
+    /bin/mkdir RCS
+endif
+
+# check in file(s)
+foreach file ( $files)
+    if ( -f $file) then
+        set type = `/usr/bin/file $file | grep text`
+        if ( "$type" != "") then
+
+            if ( ! -e RCS/$file,v ) then
+                /usr/bin/rcs -i $file
+                /usr/bin/rcs -U $file
+            endif
+            /usr/bin/ci -l $file
+        endif
+    endif
+end
+
+exit 0
+EOF
+/bin/chmod 0755 /home/cs50/pub/bin/cs50ci
+
+/bin/cat > /home/cs50/pub/bin/cs50co <<"EOF"
+#!/usr/bin/tcsh
+
+onintr -
+
+# ensure proper usage
+if ($#argv == 0) then
+    /bin/echo "Usage: co [-rversion] file"
+    exit 1
+else
+    set files = "$argv[1*]"
+endif
+
+# handle versions
+if ( "$argv[1]" == "-r" ) then
+    if ( $#argv < 3 ) then
+        echo "Usage: co [-rversion] file"
+        exit 1
+    endif
+
+    set version = $argv[2]
+    set files   = "$argv[3*]"
+
+else if ( `/bin/echo $argv[1] | /bin/grep '^-r'` != "" ) then
+    if ( $#argv < 2 ) then
+        echo "Usage: co [-rversion] file"
+        exit 1
+    endif
+
+    set version = `/bin/echo $argv[1] | /bin/sed -e 's/^-r//'`
+    set files   = "$argv[2*]"
+else
+    set version = ""
+    set files   = "$argv[1*]"
+endif
+endif
+
+# ensure RCS directory exists
+if ( ! -d RCS) then
+    exit 1
+endif
+
+# check out file(s)
+foreach file ( $files )
+    if ( -e $file ) then
+        /bin/rm -f .$file.bak
+        /bin/cp $file .$file.bak
+    endif
+    /usr/bin/co -u$version $file
+end
+
+exit 0
+EOF
+/bin/chmod 0755 /home/cs50/pub/bin/cs50co
+
+/bin/cat > /home/cs50/pub/etc/banner <<"EOF"
+
+           ____   ___               _
+   ___ ___| ___| / _ \   _ __   ___| |_
+  / __/ __|___ \| | | | | '_ \ / _ \ __|
+ | (__\__ \___) | |_| |_| | | |  __/ |_
+  \___|___/____/ \___/(_)_| |_|\___|\__|
+
+                 This is CS50. In a box.
+
+                      CS50 Appliance 1.4
+
+
+EOF
+
+/bin/cat > /home/cs50/pub/etc/bashrc <<"EOF"
+# set BASH_ENV
+export BASH_ENV=~/.bashrc
+
+# set umask
+umask 0077
+
+# configure prompt
+export PS1="\u@\h (\w): "
+
+# protect user
+alias cp="cp -i"
+alias mv="mv -i"
+alias rm="rm -i"
+
+# RCS
+alias ci="/home/cs50/pub/bin/cs50ci"
+alias co="/home/cs50/pub/bin/cs50co"
+
+# allow core dumps
+ulimit -c unlimited
+
+# disable auto-logout
+export TMOUT=0
+
+# configure gcc
+export CC=gcc
+export CFLAGS="-ggdb -std=c99 -Wall -Werror -Wformat=0"
+export LANG=C
+export LDLIBS="-lcs50 -lm"
+alias gcc="gcc $CFLAGS"
+
+# if not running interactively, don't do anything else
+[ -z "$PS1" ] && return
+
+# show banner
+if [ -f /home/cs50/pub/etc/banner ]; then
+    /bin/cat /home/cs50/pub/etc/banner
+fi
+EOF
+
+/bin/cat > /home/cs50/pub/etc/profile <<"EOF"
+# prepend . to path
+PATH=.:$PATH
+export PATH
+EOF
+
+/bin/chown -R cs50:nogroup /home/cs50/
+/bin/chmod 0711 /home/cs50
+/bin/chmod -R a+rX /home/cs50/pub/
+
+
+############################################################################
+# configure jharvard
+############################################################################
+
+/bin/cp -f /etc/skel/.bashrc /home/jharvard/
+/bin/cp -f /etc/skel/.profile /home/jharvard/
+/bin/cp -f /etc/skel/.bash_logout /home/jharvard/
+
+
+############################################################################
+# configure rsnapshot (to automatically back up jharvard's C and PHP code
+# every 10 minutes)
+############################################################################
+
+/bin/cat > /etc/rsnapshot.conf <<"EOF"
+config_version  1.2
+snapshot_root   /.snapshots/
+cmd_rm      /bin/rm
+cmd_rsync   /usr/bin/rsync
+cmd_logger  /usr/bin/logger
+interval    minutely    6
+verbose     2
+loglevel    3
+lockfile    /var/run/rsnapshot.pid
+include */
+include *.c
+include *.h
+include *.inc
+include *.php
+exclude *
+include Makefile
+backup  /home       ./
+EOF
+/bin/cat > /etc/cron.d/rsnapshot <<"EOF"
+*/10 * * * * root /usr/bin/rsnapshot minutely
+EOF
+
+
+############################################################################
+# configure Nano
+############################################################################
+
+/bin/cat > /etc/nanorc <<"EOF"
+set autoindent
+set const
+set fill 80
+set matchbrackets "(<[{)>]}"
+set nowrap
+set smooth
+set suspend
+set tabsize 4
+include "/usr/share/nano/c.nanorc"
+include "/usr/share/nano/html.nanorc"
+include "/usr/share/nano/nanorc.nanorc"
+EOF
+
+
+############################################################################
+# configure network
+############################################################################
+
+/bin/cat > /etc/network/interfaces <<"EOF"
+auto lo
+iface lo inet loopback
+
+# NAT
+auto eth0
+iface eth0 inet dhcp
+
+# Host-only Adapter
+auto eth1
+iface eth1 inet static
+address 192.168.56.50
+netmask 255.255.255.0
+network 192.168.56.0
+broadcast 192.168.56.255
+EOF
+/usr/bin/service networking restart
+
+
+############################################################################
+# configure suPHP
+############################################################################
+
+/bin/cat > /etc/apache2/mods-available/suphp.conf <<"EOF"
+<IfModule mod_suphp.c>
+    AddType application/x-httpd-suphp .php .php3 .php4 .php5 .phtml
+    suPHP_AddHandler application/x-httpd-suphp
+
+    <Directory />
+        suPHP_Engine on
+    </Directory>
+
+    # By default, disable suPHP for debian packaged web applications as files
+    # are owned by root and cannot be executed by suPHP because of min_uid.
+    #<Directory /usr/share>
+    #    suPHP_Engine off
+    #</Directory>
+
+# # Use a specific php config file (a dir which contains a php.ini file)
+#   suPHP_ConfigPath /etc/php4/cgi/suphp/
+# # Tells mod_suphp NOT to handle requests with the type <mime-type>.
+#   suPHP_RemoveHandler <mime-type>
+</IfModule>
+EOF
+
+/bin/sed -i -e 's/^docroot=.*/docroot=\//' /etc/suphp/suphp.conf
+/bin/sed -i -e 's/^check_vhost_docroot=true/check_vhost_docroot=false/' /etc/suphp/suphp.conf
+/bin/sed -i -e 's/^min_uid=.*/min_uid=1/' /etc/suphp/suphp.conf
+/bin/sed -i -e 's/^min_gid=.*/min_gid=1/' /etc/suphp/suphp.conf
+/bin/sed -i -e 's/^suPHP_Engine off/suPHP_Engine on/' /etc/apache2/mods-available/suphp.conf
+
+
+############################################################################
+# configure phpMyAdmin
+############################################################################
+
+/bin/chown -R www-data:www-data /usr/share/phpmyadmin
+/bin/cat >> /etc/phpmyadmin/config.inc.php <<"EOF"
+
+$cfg["Servers"][1]["AllowNoPassword"] = TRUE;
+$cfg["Servers"][1]["auth_type"] = "http";
+$cfg["Servers"][1]["hide_db"] = "information_schema";
+
+EOF
+/bin/ln -s /etc/phpmyadmin/apache.conf /etc/apache2/conf.d/phpmyadmin.conf
+
+
+############################################################################
+# configure Apache 
+############################################################################
+
+/bin/sed -i -e 's/^;session\.save_path = .*/session.save_path = "\/tmp"/' /etc/php5/cgi/php.ini
+/usr/sbin/a2enmod userdir
+/usr/bin/service apache2 restart
+
+
+############################################################################
+# configure MySQL (for pset7 and pset8)
+############################################################################
+
+/bin/cat | /usr/bin/mysql -u root <<"EOF"
+CREATE USER 'jharvard'@'%' IDENTIFIED BY 'crimson';
+GRANT USAGE ON *.* TO 'jharvard'@'%' IDENTIFIED BY 'crimson';
+GRANT ALL PRIVILEGES ON `jharvard_%`.* TO 'jharvard'@'%';
+CREATE DATABASE `jharvard_pset7`;
+CREATE TABLE `jharvard_pset7`.`users` (
+ `uid` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+ `username` VARCHAR(255) NOT NULL,
+ `password` VARCHAR(255) NOT NULL,
+ PRIMARY KEY (`uid`),
+ UNIQUE KEY `username` (`username`)
+) ENGINE = MYISAM;
+INSERT INTO `jharvard_pset7`.`users` (`uid`, `username`, `password`) VALUES 
+ (1, 'julius', '13'),
+ (2, 'skroob', '12345'),
+ (3, 'wbrandes', 'voice'),
+ (4, 'baravelli', 'swordfish'),
+ (5, 'blaise', 'FOOBAR'),
+ (6, 'gcostanza', 'Bosco'),
+ (7, 'malan', 'ftw!!!111');
+CREATE DATABASE `jharvard_pset8`;
+EOF
+/usr/bin/mysqladmin -u root password "crimson"
+
+
+############################################################################
+# purge unused packages
+############################################################################
+
+/usr/bin/aptitude -q -y purge
+-----------------------------------------------------------------------------------------------
+
+This file, *boot.sh*, is a bash script that will be run the very first
+time the appliance boots up. You're welcome to alter the file as you see
+fit, especially if you don't need or like our customizations.
+
+[[]]
+Create VMware Appliance
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Now create the VMware (vmw6) appliance by executing the below in
+*/root/*:
+
+`/usr/bin/vmbuilder vmw6 ubuntu --addpkg=acpid,apache2,build-essential,ethtool,firefox,ftp,gcc,gdb,gdm,gnome-app-install,gnome-core,gnome-system-tools,indicator-applet-session,language-selector,libapache2-mod-suphp,linux-headers-generic,lynx,make,manpages-dev,menu,mysql-client,mysql-server,nano,nautilus-open-terminal,ncftp,libapache2-mod-php5,libapache2-mod-suphp,libncurses5-dev,openssh-server,php5-cli,php5-mysql,phpmyadmin,rcs,rsnapshot,tcsh,unattended-upgrades,valgrind,vim,wamerican,wget,xorg,zip --arch=i386 --components=main,universe --copy=copy.txt --firstboot=boot.sh --flavour=generic --hostname=appliance --install-mirror=`http://127.0.0.1:9999/ubuntu[`http://127.0.0.1:9999/ubuntu`]` --lang=en_US.UTF-8 --name="John Harvard" --pass=crimson --removepkg=emacs,emacs22-gtk,emacs22-nox,gnome-media,gwibber,indicator-me,indicator-messages,libapache2-mod-php5,ubuntuone-client --rootsize=16384 --suite=lucid --swapsize=1024 --timezone=America/New_York --user=jharvard`
+
+20+ minutes later, you should have a directory called *ubuntu-vmw6* in
+*/root/*, inside of which are two files: *tmpm9biYE.vmdk* (or something
+similarly pseudorandom) and *appliance.vmx*. Together, those files
+represent a VMware appliance: *tmpm9biYE.vmdk* is the appliance's
+virtual disk (hard drive), and *appliance.vmx* is the appliance's
+configuration. You're welcome to delete *appliance.vmx*; we're only
+going to use *tmpm9biYE.vmdk* to create our VirtualBox appliance.
+
+[[]]
+Create VirtualBox Appliance
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Rename *tmpm9biYE.vmdk* to *disk0.vmdk* and move it to a physical
+machine that has http://www.virtualbox.org/wiki/Downloads[VirtualBox
+3.2.6] or higher installed. (You may find it easiest to *scp* the file
+to that machine.) Launch VirtualBox and create a new VM as follows:
+
+1.  Click *New*.
+2.  Click *Next*.
+3.  Input *CS50 in a Box 1.4* for *Name*. Select *Linux* and *Ubuntu*
+for *Operating System* and *Version* respectively. (Do not select
+*Ubuntu (64 bit)*.) Click *Next*.
+4.  Input *512* MB for *Base Memory Size*.
+5.  Leave *Boot Hard Disk (Primary Master)* checked. Select *Use
+existing hard disk*, then click the folder icon. Click *Add*, navigate
+your way to *disk0.vmdk*, click *Open*. (If you get an error message
+explaining that VirtualBox "Failed to open the hard disk," odds are you
+already have another VM using *disk0.vmdk* or you once had a VM that
+used *disk0.vmdk*. If the former, click *Cancel* and go delete that VM;
+if the latter, click *Remove* and remove *disk0.vmdk* from the *Virtual
+Media Manager*. Then resume or restart these steps.) It may take a few
+seconds for *disk0.vmdk* to appear in the list of *Hard Disks*. Once it
+does, make sure it's highlighted, then click *Select*. Then click
+*Next*.
+6.  Click *Finish* if everything looks correct.
+7.  Highlight *CS50 in a Box 1.4* in VirtualBox's list of VMs, then
+click *Settings*.
+8.  Click *Network*. On the *Adapter 1* tab, make sure *Enable Network
+Adapter* is checked and that *NAT* is selected for *Attached to*. Click
+*Adapter 2*. Check *Enable Network Adapter*. Select *Host-only Adapter*
+for *Attached to*. Click *OK*.
+9.  Select *Export Appliance...* from VirtualBox's *File* menu.
+10. Highlight *CS50 in a Box 1.4* in the *Appliance Export Wizard*.
+Click *Next*.
+11. Click *Next*.
+12. Click *Choose...*. Create a new folder somewhere for the appliance.
+Input *cs50-1.4.ovf* for *Save As*. Click *Save*. Do not check *Write
+legacy OVF 0.9*.
+13. Click *Export*.
+14. An inaccurate number of seconds later, you should find three files
+in the folder you created: *cs50-1.4.mf* (which contains SHA1 hashes for
+*cs50-1.4.ovf* and *cs50-1.4.vmdk*), *cs50-1.4.ovf* (which contain's the
+VM's configuration), and *cs50-1.4.vmdk* (which is the VM's hard disk).
+15. Open *cs50-1.4.ovf* with a text editor and delete:
+1.  the *xmlns:vbox* attribute in the *Envelope* element's start tag;
+2.  the *vbox:uuid* attribute in the *Disk* element's tag;
+3.  the entire *Item* element for *ideController1* (i.e., everything
+between that IDE Controller's ** and ** tags);
+4.  the entire *vbox:Machine* element (i.e., everything between ** and
+**).
+16. Delete *cs50-1.4.mf* (or update the hash within for *cs50-1.4.ovf*).
+17. Create a ZIP file containing, at least, *cs50-1.4.ovf* and
+*cs50-1.4.vmdk*, and the appliance is ready for distribution!
+
+[[]]
+Troubleshooting
+---------------
+
+If you are having problems that aren't addressed under
+link:#Known_Issues[Known Issues], turn to the course's
+http://cs50.tv/2009/fall/#r=group[Google Group] for help.
+
+[[]]
+Known Issues
+------------
+
+* http://wiki.cs50.net/index.php?title=Appliance&oldid=1273[1.0.0]
+** *alias gcc gcc* in /etc/csh.cshrc should be *alias gcc gcc -ggdb
+-std=c99 -Wall -Werror -Wformat=0*.
+** *$PATH* was incorrectly defined in /etc/csh.cshrc.
+* http://wiki.cs50.net/index.php?title=Appliance&oldid=1770[1.0.1]
+** /etc/csh.cshrc invokes `/bin/cat /etc/banner` for non-interactive
+shells, which breaks SFTP (which errs with, e.g., "Received message too
+long 169877536").
+** In /etc/network/interfaces, "broadcast" is misspelled.
+** On first boot, eth0 obtains DNS server(s) via DHCP, which then get
+saved permanently in /etc/resolv.conf, even if user moves to different
+network.
+** jharvard_pset7 database lacks users table.
+* http://wiki.cs50.net/index.php?title=Appliance&oldid=1806[1.1]
+** On (some) Windows hosts, when the appliance is first booted,
+VirtualBox displays a VERR_INTERNAL_ERROR, describing it as "Inexistent
+host networking interface, name 'vboxnet0'". This appears to be a bug in
+VirtualBox 3.2.x, but a
+http://wiki.cs50.net/index.php?title=Appliance&oldid=1824#Inexistent_host_networking_interface.2C_name_.27vboxnet0.27[workaround]
+exists.
+* http://wiki.cs50.net/index.php?title=Appliance&oldid=1824[1.2]
+** Appliance continues not to import properly on (at least) Windows.
+Upon starting appliance (after import), VirtualBox reports
+"VERR_INTERNAL_ERROR: Inexistent host networking interface, named
+'vboxnet0'" as well as, on occasion, errors pertaining to audio.
+* http://wiki.cs50.net/index.php?title=Appliance&oldid=1874[1.3]
+** PHPs do not work within John Harvard's account.
+** /usr/share/dict/words is missing.
+* 1.4
+** We've received reports that the appliance doesn't work always work
+with VirtualBox 4.x. For now, using
+http://www.virtualbox.org/wiki/Download_Old_Builds_3_2[VirtualBox 3.2.x]
+is a workaround if you encounter any trouble; a new version of the
+Appliance will soon be released.
+
+[[]]
+Changelog
+---------
+
+* http://wiki.cs50.net/index.php?title=Appliance&oldid=1273[1.0.0]
+* http://wiki.cs50.net/index.php?title=Appliance&oldid=1770[1.01]
+** Fixed bug in /etc/csh.cshrc whereby $variables in boot.sh were
+prematurely interpolated by changing *EOT* to *"EOF"* (because bash
+disables interpolation of $variables when heredocs' delimeters are
+quoted).
+** Changed all instances of *EOT* in boot.sh to *"EOF"* (for
+consistency's sake).
+** Upped appliance's video memory from 12MB to 17MB so that seamless
+mode would work.
+* http://wiki.cs50.net/index.php?title=Appliance&oldid=1806[1.1]
+** Upgraded OS from Ubuntu 9.04 (Karmic) to 10.04 LTS (Lucid).
+** Appliance no longer requires Internet access on first boot.
+** Changed eth0 to use DHCP (and thus obtain DNS server(s) dynamically).
+** Changed jharvard's shell from tcsh to bash.
+** phpMyAdmin is now pre-installed.
+** phpMyAdmin now requires authentication.
+** Changed hostname to "appliance".
+** Increased virtual disk size to 16 GB.
+** Appliance now includes jharvard_pset7.users table.
+** Appliance no longer requires PAE/NX support.
+** Fixed "Received message too long" SFTP problem.
+** Fixed misspelling of "broadcast" in /etc/network/interfaces.
+* http://wiki.cs50.net/index.php?title=Appliance&oldid=1824[1.2]
+** Added support for (CS50's version of) ci and co
+** Changed appliance to use PCnet FAST III virtual NICs instead of Intel
+PRO/1000 MT Desktop virtual NICs.
+* http://wiki.cs50.net/index.php?title=Appliance&oldid=1874[1.3]
+** Eliminated "VERR_INTERNAL_ERROR: Inexistent host networking
+interface, named 'vboxnet0'" problem, which appears to be a
+http://www.virtualbox.org/ticket/7067[bug] in VirtualBox 3.2.x.
+* https://manual.cs50.net/index.php?title=CS50_Appliance&oldid=4602[1.4]
+** John Harvard's PHPs now work and execute as jharvard, while
+phpMyAdmin executes as www-data.
+** Appliance is now pre-configured with CS50 Library.
+** Installed /usr/share/dict/words.
+
+[[]]
+Future Work
+-----------
+
+Future versions of the CS50 Appliance may include these features:
+
+* Ability to download source code from lectures and problem sets via
+apt-get, git, or svn.
+* Automatic updates to appliance via apt-get.
+
+[[]]
+Resources
+---------
+
+* http://dlc.sun.com.edgesuite.net/virtualbox/3.2.6/UserManual.pdf[User
+Manual] for VirtualBox 3.2.6
+
+[[]]
+Acknowledgements
+----------------
+
+Many thanks to everyone who's helped us improve the CS50 Appliance,
+including, but not limited to:
+
+* Darrin Ragsdale
+* Dotty
+* Federico Lerner
+* Kartikeya Srivastava
+* Matthew Polega
+* Matthew Roknich
+* Rolando Cruz
+* Sergio Prado
+
+Category:HOWTO

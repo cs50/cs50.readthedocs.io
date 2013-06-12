@@ -1,0 +1,11 @@
+---
+tags: []
+title: VMware
+---
+[[]]
+References
+~~~~~~~~~~
+
+* https://www.vmware.com/pdf/vdr_12_admin.pdf[VMware Data Recovery
+Administration Guide] for Data Recovery 1.2
+

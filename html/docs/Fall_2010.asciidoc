@@ -1,0 +1,238 @@
+---
+tags: []
+title: Fall_2010
+---
+To "take" Fall 2010 of CS50, download and install *version 2.1* of the
+link:CS50 Appliance 2.1[CS50 Appliance]. Then follow the directions
+below.
+
+[[]]
+Lectures
+--------
+
+Videos of Fall 2010's lectures are available at
+http://cs50.tv/2010/fall/#l=lectures, as are PDFs of scribe notes,
+slides, and source code.
+
+[[]]
+Week 0
+~~~~~~
+
+Download and install Scratch from http://scratch.mit.edu/download, then
+download Week 0's Scratch projects from
+http://cdn.cs50.net/2010/fall/lectures/0/src/.
+
+[[]]
+Week 1
+~~~~~~
+
+To copy Week 1's source code into John Harvard's home directory in the
+CS50 Appliance, link:Appliance#How_to_Open_a_Terminal[open a terminal]
+and execute:
+
+`mkdir -p ~/lectures/` +
+`cp -r ~cs50/pub/src/lectures/1/ ~/lectures/`
+
+You can then compile and run, say, `hai1.c`, as follows:
+
+`cd ~/lectures/1/` +
+`make hai1` +
+`./hai1`
+
+Similarly can you compile and run other programs in `~/lectures/1/`.
+
+[[]]
+Week 2
+~~~~~~
+
+To copy Week 2's source code into John Harvard's home directory in the
+CS50 Appliance, link:Appliance#How_to_Open_a_Terminal[open a terminal]
+and execute:
+
+`mkdir -p ~/lectures/` +
+`cp -r ~cs50/pub/src/lectures/2/ ~/lectures/`
+
+You can then compile and run, say, `battleship.c`, as follows:
+
+`cd ~/lectures/2/` +
+`make battleship` +
+`./battleship`
+
+Similarly can you compile and run other programs in `~/lectures/2/`.
+
+[[]]
+Week 3
+~~~~~~
+
+To copy Week 3's source code into John Harvard's home directory in the
+CS50 Appliance, link:Appliance#How_to_Open_a_Terminal[open a terminal]
+and execute:
+
+`mkdir -p ~/lectures/` +
+`cp -r ~cs50/pub/src/lectures/3/ ~/lectures/`
+
+You can then compile and run, say, `sigma1.c`, as follows:
+
+`cd ~/lectures/3/` +
+`make sigma1` +
+`./sigma1`
+
+Similarly can you compile and run other programs in `~/lectures/3/`.
+
+[[]]
+Week 4
+~~~~~~
+
+To copy Week 4's source code into John Harvard's home directory in the
+CS50 Appliance, link:Appliance#How_to_Open_a_Terminal[open a terminal]
+and execute:
+
+`mkdir -p ~/lectures/` +
+`cp -r ~cs50/pub/src/lectures/3/ ~/lectures/`
+
+You can then compile and run, say, `swap.c`, as follows:
+
+`cd ~/lectures/4/` +
+`make swap` +
+`./swap`
+
+Similarly can you compile and run other programs in `~/lectures/4/`.
+
+[[]]
+Week 5
+~~~~~~
+
+To copy Week 5's source code into John Harvard's home directory in the
+CS50 Appliance, link:Appliance#How_to_Open_a_Terminal[open a terminal]
+and execute:
+
+`mkdir -p ~/lectures/` +
+`cp -r ~cs50/pub/src/lectures/5/ ~/lectures/`
+
+You can then compile and run, say, `list1.c`, as follows:
+
+`cd ~/lectures/5/` +
+`make list1` +
+`./list1`
+
+Similarly can you compile and run other programs in `~/lectures/5/`.
+
+[[]]
+Week 7
+~~~~~~
+
+To copy Week 7's source code into John Harvard's home directory in the
+CS50 Appliance, link:Appliance#How_to_Open_a_Terminal[open a terminal]
+and execute:
+
+`mkdir -p ~/lectures/` +
+`cp -r ~cs50/pub/src/lectures/7/ ~/lectures/`
+
+You can then compile and run, say, `binary.c`, as follows:
+
+`cd ~/lectures/7/` +
+`make binary` +
+`./binary`
+
+Similarly can you compile and run other programs in `~/lectures/7/`.
+
+[[]]
+Week 8
+~~~~~~
+
+To copy Week 8's source code into John Harvard's home directory in the
+CS50 Appliance, link:Appliance#How_to_Open_a_Terminal[open a terminal]
+and execute:
+
+`mkdir -p ~/public_html/lectures/8/` +
+`cp -r ~cs50/pub/src/lectures/8/ ~/public_html/lectures/` +
+`chmod 711 ~` +
+`chmod 711 ~/public_html/` +
+`chmod 711 ~/public_html/lectures/` +
+`chmod -R a+rX ~/public_html/lectures/8/`
+
+You can then access those files via a browser at
+http://192.168.56.50/~jharvard/lectures/8/.
+
+[[]]
+Week 9
+~~~~~~
+
+To copy Week 9's source code into John Harvard's home directory in the
+CS50 Appliance, link:Appliance#How_to_Open_a_Terminal[open a terminal]
+and execute:
+
+`mkdir -p ~/public_html/lectures/9/` +
+`cp -r ~cs50/pub/src/lectures/9/ ~/public_html/lectures/` +
+`chmod 711 ~` +
+`chmod 711 ~/public_html/` +
+`chmod 711 ~/public_html/lectures/` +
+`chmod -R a+rX ~/public_html/lectures/9/`
+
+You can then access those files via a browser at
+http://192.168.56.50/~jharvard/lectures/9/.
+
+[[]]
+Week 10
+~~~~~~~
+
+To copy Week 10's source code into John Harvard's home directory in the
+CS50 Appliance, link:Appliance#How_to_Open_a_Terminal[open a terminal]
+and execute:
+
+`mkdir -p ~/public_html/lectures/10/` +
+`cp -r ~cs50/pub/src/lectures/10/ ~/public_html/lectures/` +
+`chmod 711 ~` +
+`chmod 711 ~/public_html/` +
+`chmod 711 ~/public_html/lectures/` +
+`chmod -R a+rX ~/public_html/lectures/910/`
+
+You can then access those files via a browser at
+http://192.168.56.50/~jharvard/lectures/10/.
+
+[[]]
+Problem Sets
+------------
+
+PDFs of Fall 2010's problem sets are available at
+http://cs50.tv/2010/fall/#l=psets, as are videos of walkthroughs for
+most standard editions. Perhaps needless to say, ignore any sentences
+that appear to be intended only for CS50's own students. You'll notice
+that most problem sets instruct you to "SSH to `cloud.cs50.net`". If
+you're not a CS50 student, you won't have an account on that server, but
+that's what the CS50 Appliance is for! Having the CS50 Appliance is like
+having your very own copy of `cloud.cs50.net` on your own computer, with
+just a few caveats.
+
+[[]]
+Caveats
+^^^^^^^
+
+* The appliance does not support `submit` for problem sets' submission.
+* The appliance does not support `challenge` for Problem Set 6.
+* When advised by some problem set to SSH to `cloud.cs50.net`, you
+should instead link:Appliance#How_to_Open_a_Terminal[open a terminal] or
+link:Appliance#How_to_SSH_to_Appliance[SSH to the appliance].
+* When advised by Problem Set 7 to visit
+`<nowiki>http://cloud.cs50.net/~username/</nowiki>`, you should instead
+visit http://192.168.56.50/~jharvard/.
+* When advised by Problem Set 7 to visit
+`<nowiki>http://cloud.cs50.net/phpMyAdmin/</nowiki>`, you should instead
+visit http://192.168.56.50/phpMyAdmin/.
+* When advised by Problem Set 7 to visit
+`<nowiki>http://cloud.cs50.net/~username/pset7/</nowiki>`, you should
+instead visit http://192.168.56.50/~jharvard/pset7/.
+* When advised by Problem Set 8 to visit
+`<nowiki>http://cloud.cs50.net/~username/pset8/</nowiki>`, you should
+instead visit http://192.168.56.50/~jharvard/pset8/.
+
+[[]]
+Support
+-------
+
+To ask questions or report problems with these directions, even if
+you're not a student at Harvard, join
+http://groups.google.com/group/cs50-discuss/topics[cs50-discuss], the
+course's Google Group!
+
+Category:HOWTO

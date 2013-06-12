@@ -1,0 +1,501 @@
+---
+tags: []
+title: Where_to_Begin
+---
+Beginning to implement a final project can be overwhelming! Here are
+some setup tips designed to help you configure the CS50 Appliance for a
+PHP/MySQL project. Also included is some guidance on how to work with
+the framework provided by Problem Set 7.
+
+[[]]
+Configuring the Appliance
+-------------------------
+
+[[]]
+PHP/Hosting
+^^^^^^^^^^^
+
+_Adapted from Problem Set 7's
+http://cdn.cs50.net/2012/fall/psets/7/pset7.pdf[spec]._
+
+\1. Make sure you have the latest version of the CS50 Appliance
+installed. To update your Appliance, execute
+
+`update50`
+
+\2. link:Appliance#How_to_Enable_Apache[Enable Apache] and
+link:Appliance#How_to_Enable_MySQL[enable MySQL] in case they aren't
+enabled.
+
+\3. Open up your Appliance's `/etc/hosts` file:
+
+` sudo gedit /etc/hosts`
+
+\4. Chances are, you'll see an open text file with these two lines:
+
+`127.0.0.1 localhost localhost.localdomain` +
+`127.0.0.1 appliance appliance.localdomain`
+
+\5. Add the following line to the end of this file, then save and quit
+`gedit`:
+
+`127.0.0.1 project`
+
+\6. Create a directory to place your project's files, and enter that
+directory:
+
+`mkdir ~/vhosts/project` +
+`cd ~/vhosts/project`
+
+\7. Inside of this directory, obtain the source code for pset7, which
+will be a good starting point for your project!
+
+`wget `http://cdn.cs50.net/2012/fall/psets/7/pset7.zip[`http://cdn.cs50.net/2012/fall/psets/7/pset7.zip`]
+
+\8. "Unzip" this file and move some directories outside the folder where
+the items were unizpped:
+
+`unzip pset7.zip` +
+`mv pset7/html .` +
+`mv pset7/templates .` +
+`mv pset7/includes .`
+
+Optionally remove the ZIP file and the original extracted contents:
+
+` rm -rf pset7.zip` +
+` rm -rf pset7`
+
+\9. Now, we need to ensure that some directory permissions are correct.
+
+Execute
+
+`chmod a+x ~` +
+`chmod a+x ~/vhosts` +
+`chmod a+x ~/vhosts/project` +
+`chmod a+x ~/vhosts/project/html`
+
+one-by-one.
+
+\10. For convenience, enter the `html` directory before doing the next
+line, using `cd`:
+
+`cd ~/vhosts/project/html`
+
+Then `chmod` three directories appropriately:
+
+`chmod a+x css img js`
+
+\11. Make the contents of `css`, `img`, and `js` *world-readable* by
+executing
+
+`chmod a+r css/* img/* js/*`
+
+\12. If you'd like a way to backup your own work, you can tell Dropbox
+about your project's directory by creating a symbolic link within the
+Dropbox folder:
+
+` ln -s ~/vhosts/project ~/Dropbox`
+
+If working with one or more partners, you may be interested in learning
+about http://cs50.tv/2011/fall/seminars/Git_magic/Git_magic.mp4[version
+control software], which offers features more specifically designed for
+collaboration.
+
+\13. Now, open up Chrome and visit the URL `http://project`. Do you see
+something that looks like C$50 Finance? Hopefully, the answer is yes. If
+so, your PHP environment is setup, and you're free to use the
+distribution code for Problem Set 7 as a framework (which is now inside
+of your project's directory, `~/vhosts/project`). Recall that the code
+for Problem Set 7 adheres to the MVC paradigm, with views
+(`templates/`), models, and controllers. To review the structure of this
+code, refer to Zamyla's Problem Set 7
+http://cs50.tv/2012/fall/psets/7/walkthrough7-720p.mp4[walkthrough], or
+review your own submission. Or see the section in this article.
+
+[[]]
+External Access
+^^^^^^^^^^^^^^^
+
+If you'd like to view your project on your local computer outside of the
+Appliance, just edit your computer's local hosts file as follows:
+
+\1. First, find your local computer's `hosts` file.
+
+* On Windows, it can be found at
+`C:\WINDOWS\system32\drivers\etc\hosts`. If working with Windows 7, you
+can follow the directions
+http://helpdeskgeek.com/windows-7/windows-7-hosts-file/[here] to get
+administrative access to the file in Notepad. (A general solution would
+involve using Windows' "Run as..." feature to open a text editor with
+elevated privileges.)
+* On Mac OS X, it can be found at `/etc/hosts`. You can open this file
+through the Terminal with `nano`, say, by executing
+`sudo nano /etc/hosts`
+* On Linux, it can be found at `/etc/hosts`, which you should also
+access with elevated privileges, as by invoking `sudo`.
+
+\2. Next, determine the IP address of your Appliance, which is visible
+in the bottom right corner.
+
+\3. Add ` WWW.XXX.YYY.ZZZ project` (on a new line) to your `hosts` file,
+replacing `WWW.XXX.YYY.ZZZ` with the IP address you found earlier.
+
+\4. Save, and restart your browser (you may need to clear its DNS
+cache). See if you can visit your project at `http://project`!
+
+[[]]
+SQL
+^^^
+
+_This portion of this article assumes that you've followed the
+instructions in the PHP section successfully._
+
+\1. Open up your project's `constants.php` file, which specifies
+constants used to configure the connection to the database.
+
+`gedit ~/vhosts/project/includes/constants.php`
+
+\2. Edit the value of `SERVER` to be `project`.
+
+\3. Edit the value of `DATABASE` to also be `project`.
+
+\4. Create a new file called `config.sql`, and enter the following:
+
+code,sql----------------------------------------------------------------------------------------------
+code,sql
+--
+-- Database: `project`
+--
+
+CREATE DATABASE IF NOT EXISTS  `project` ;
+
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE IF NOT EXISTS `project`.`users` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL,
+  `hash` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+
+--
+-- Dumping data for table `project`.`users`
+--
+
+INSERT IGNORE INTO `project`.`users` VALUES(1, 'caesar', '$1$50$GHABNWBNE/o4VL7QjmQ6x0');
+INSERT IGNORE INTO `project`.`users` VALUES(2, 'cs50', '$1$50$ceNa7BV5AoVQqilACNLuC1');
+INSERT IGNORE INTO `project`.`users` VALUES(3, 'jharvard', '$1$50$RX3wnAMNrGIbgzbRYrxM1/');
+INSERT IGNORE INTO `project`.`users` VALUES(4, 'malan', '$1$HA$azTGIMVlmPi9W9Y12cYSj/');
+INSERT IGNORE INTO `project`.`users` VALUES(5, 'nate', '$1$50$sUyTaTbiSKVPZCpjJckan0');
+INSERT IGNORE INTO `project`.`users` VALUES(6, 'rbowden', '$1$50$lJS9HiGK6sphej8c4bnbX.');
+INSERT IGNORE INTO `project`.`users` VALUES(7, 'skroob', '$1$50$euBi4ugiJmbpIbvTTfmfI.');
+INSERT IGNORE INTO `project`.`users` VALUES(8, 'tmacwilliam', '$1$50$91ya4AroFPepdLpiX.bdP1');
+INSERT IGNORE INTO `project`.`users` VALUES(9, 'zamyla', '$1$50$Suq.MOtQj51maavfKvFsW1');
+----------------------------------------------------------------------------------------------
+
+\5. Close the text editor, and, once ensuring that you're in the same
+directory as your `config.sql` file, execute
+
+`mysql -ujharvard -pcrimson < config.sql`
+
+\6. Your website (`http://project`) should now have access to a
+database. You can login to PHPMyAdmin (`http://project/phpmyadmin`) to
+configure and manage the database. Note that the database will be called
+`project`.
+
+[[]]
+JavaScript
+^^^^^^^^^^
+
+By default, the distribution code for Problem Set 7 makes it so that an
+empty `scripts.js` file is included in every template/view of your
+website. You are welcome to edit `scripts.js`, which you'll find in
+`~/vhosts/project/html/js` to add your JavaScript code, or create new JS
+files! Just remember to edit `header.php` (a template inside
+`~/vhosts/project/templates`) to make sure these scripts are included.
+
+Note that the code also comes automatically with
+http://jquery.com/[jQuery], a JavaScript library. You can take advantage
+of jQuery to make some tasks in JavaScript, like DOM manipulation and
+making Ajax calls, easier.
+
+[[]]
+CSS
+^^^
+
+By default, the distribution code for Problem Set 7 makes it so that a
+`styles.css` file is included in every template/view of your website.
+You are welcome to edit `styles.css`, which you'll find in
+`~/vhosts/'''project''/html/css` to add your customized CSS, or create
+new CSS files! Just remember to edit `header.php` (a template inside
+`~/vhosts/project/templates`) to make sure these stylesheets are
+included.
+
+Note that the distribution code also includes Bootstrap, a CSS library.
+Find out more about Bootstrap
+http://twitter.github.com/bootstrap/[here].
+
+[[]]
+Working with Problem Set 7 Template Code
+----------------------------------------
+
+[[]]
+Adding a Navigation Bar
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Currently, when you are successfully able to log in to the website,
+you'll see a page that says with an "Under construction" image. This
+page is a little bare at the moment. For your project, you may be
+interested in adding a *navigation bar* that appears at the top of each
+"view" that presented to the user, which will allow them to easily visit
+the various pages of your website.
+
+\1. Open up `header.php` (remember where?), and add the following at the
+bottom:
+
+--------------------------------------------------
+<ul class="nav nav-pills">
+    <li><a href="portfolio.php">Portfolio</a></li>
+</ul>
+--------------------------------------------------
+
+\2. Then, open up `styles.css` (remember where?) and add the following
+at the bottom:
+
+--------------------------
+#middle .nav
+{
+    display: inline-block;
+}
+--------------------------
+
+Note that this navigation bar takes advantage of the features offered by
+Bootstrap, the CSS library included by default within the Problem Set 7
+distribution code. You're free to customize the navigation bar however
+you'd like; this is just a suggested model for getting started.
+
+To add a page, add another item to this unordered list!
+
+[[]]
+Adding a New Page
+~~~~~~~~~~~~~~~~~
+
+Suppose you want to add a new page to the website, available at
+`'''my_new_page'''.php` (we'll refer to the page name
+`'''my_new_page'''` from here).
+
+To conform to the structure of the Problem Set 7's code (and to MVC in
+general), your best bet is to add a *controller* and a *view*.
+
+[[]]
+Setting Up the View
+^^^^^^^^^^^^^^^^^^^
+
+\1. Enter your project's `templates` directory.
+
+`cd ~/vhosts/project/templates`
+
+\2. Decide on a name for your new *view* file. This name isn't
+particularly important, but it shouldn't conflict with a name you've
+previously chosen, and it probably should pertain to the specific page
+you're creating. Let's call this name `'''my_new_view_page.php'''` from
+now on.
+
+\3. Inside the `templates` directory, open gedit with a new file whose
+name is the name you previously chose.
+
+`gedit `*`my_new_view_page.php`*
+
+\4. For now, add some arbitrary text content, and save.
+
+[[]]
+Setting Up the Controller
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+\1. Enter your project's `html` directory.
+
+`cd ~/vhosts/project/html`
+
+\2. Open gedit with a new file, called `'''my_new_page'''.php`.
+
+\3. Add the following, for now:
+
+code,php---------------------------------------------------------------
+code,php
+<?php
+
+    // configuration
+    require("../includes/config.php"); 
+
+    // render portfolio
+    render("my_new_view_page.php", ["title" => "My New Page"]);
+
+?>
+---------------------------------------------------------------
+
+\4. Tweak the call to `render` in the code so that it reflects the page
+name for the view that you've chosen earlier.
+
+Note that the first line of this code uses `require`, which imports the
+contents of the page at `../includes/config.php`. (This allows for
+access to functionality like the `apologize` function, and the `render`
+function, for example.)
+
+Recall that the second line uses our magical `render` function. `render`
+is very powerful:
+
+* It not only `render`s the template at the file path you specify, but
+it also displays the `header` inside `header.php` and the footer inside
+`footer.php` (both of which you're free to edit to customize your
+header/footer!)
+* It also allows you to "pass variables" to that page, by way of the
+associative array in the second argument. If you leave the code as is,
+it will make a variable called `$title` within the scope of that page
+whose value is initially `"My New Page"`.
+** You are welcome to pass additional variables in this way:
+
+code,php-----------------------------------------------------------------------------------------------------------------
+code,php
+    render("my_new_view_page.php", ["title" => "My New Page", "francis_type" => "anteater", "francis_age" => 3]);
+-----------------------------------------------------------------------------------------------------------------
+
+* You don't necessarily have to call `render` from a controller in every
+path of your code - under error circumstances, for example, you are
+welcome to `apologize` to the user! With that in mind, you should
+probably have _something_ outputted to the user for each path through
+the code, but it doesn't necessarily need to be done through `render`.
+
+\5. What kind of `chmod`-ing would be necessary to ensure this page
+displays when you visit `http://project/my_new_page.php`?
+
+\6. For a more complex example of a controller, see `login.php`.
+
+[[]]
+Design
+^^^^^^
+
+Your controller should perform most of the "business-logic," which
+includes: fetching information from a database, computing information,
+figuring out what to do.
+
+Your view should take data obtained within your controller (what
+mechanism do we have so that we can do this explicitly?), and display
+it. Or, it may not need to take any data at all if you're just
+interested in displaying a static page. That's fine.
+
+You may need different views for different cases; that's okay. There are
+just certain times when this is more appropriate than others.
+
+[[]]
+Using the `query` Function
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+As part of Problem Set 7's distribution code, you get access to a
+wonderful `query` function, which allows you to retrieve information
+from your database and update the state of your database more easily!
+
+[[]]
+A Sample `SELECT` Query Operation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+code,php-----------------------------------------------------------------------------------------------------------------
+code,php
+
+$rows = query("SELECT habitat, species_name FROM animals WHERE common_name = 'anteater'");
+
+if ($rows === false)
+{
+     apologize("Sorry, the query failed.");
+}
+else
+{
+   // number of results returned
+   $n = count($rows);
+   
+   if ($n >= 1)
+   {
+        // the first animal in the result set's species name
+        $a = $rows[0]["species_name"]; 
+
+        // an associative array representing information about the first animal in the result set
+        // contains two keys: "species_name" and "habitat"
+        $b = $rows[0]; 
+   }
+
+   // you can also "loop" through the results
+   foreach ($rows as $row) 
+   {
+       // $row will be an associative array representing information about an individual animal in the result set
+   }
+}
+-----------------------------------------------------------------------------------------------------------------
+
+[[]]
+Using Variables in a Query Function Call
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Say you have a variable, `$desired_name`, that represents the name of
+the items you're looking for inside your database. How do you use this
+`$desired_name` inside your query?
+
+One way would be to concatenate the value of `$desired_name` inside of a
+query. But this way is not the safest, especially against bad or
+malicious user input.
+
+The safest way to do this is to use the built-in features of the `query`
+function.
+
+Every "blank" within your query statement (those places that will be
+replaced by the value of a variable) should be identified with a
+question mark ('?').
+
+Then, you should fill in those "blanks" by passing in additional
+arguments to the query function, as in the below:
+
+code,php-------------------------------------------------------------------------------------------------------------------------------------
+code,php
+  $rows = query("SELECT habitat FROM animals WHERE desired_name = ? AND coolness_level > ?", $desired_name, $minimum_coolness_level);
+-------------------------------------------------------------------------------------------------------------------------------------
+
+Don't think that this is limited to variables you've declared; you can
+also use information from the superglobal arrays, like `$_POST` and
+`$_GET`!
+
+[[]]
+Errors
+^^^^^^
+
+* If you try to use a query that has a syntax error, as is done in the
+following code
+
+code,php-------------------------------- code,php
+$result = query("syntax_error");
+--------------------------------
+
+you will see an error on the screen when you go to this controller's URL
+in your browser.
+
+* If there is a connection error, or a query was unable to be executed
+or prepared, or something other than a syntax error went wrong, you will
+get a return value of `false` from the query function.
+
+*To check whether the return value of the query function is `false`, you
+must use the === operator, which checks for type equality, too.*
+
+code,php-----------------------------------------------------------------------------------------
+code,php
+$result = query("UPDATE animals SET coolness_level = 100 WHERE common_name = 'anteater');
+
+if ($result === false)
+{
+   apologize("Query failed.");
+}
+else
+{
+   // success!
+}
+-----------------------------------------------------------------------------------------

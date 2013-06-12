@@ -1,0 +1,116 @@
+---
+tags: []
+title: Function
+---
+A *function* is a piece of code that performs a specific task. A
+function takes in zero or more link:argument[arguments] and may
+ultimately return a link:return value[return value]. For example, the
+following C function:
+
+---------------------
+int sum(int a, int b)
+{
+   return a + b;
+}
+---------------------
+
+takes in two integers as its arguments, and returns the sum of those
+arguments. You could use this function in C code like
+
+code,C------------------------ code,C
+int myvar = sum(23, 19);
+------------------------
+
+which will place the value 42 in `myvar`.
+
+A C program always starts execution in a special function called `main`.
+`main` can execute its own code and call other functions.
+
+[[]]
+Detailed Description
+~~~~~~~~~~~~~~~~~~~~
+
+[[]]
+When to use functions
+^^^^^^^^^^^^^^^^^^^^^
+
+Functions are useful to make your code shorter, more readable, more
+easily tested, and more easily reusable in other contexts. When you are
+doing the same thing many times in your program, it's a good idea to
+place that thing in its own function, so that you don't have to repeat
+the entire code every time you do that operation. If you have a large
+and complex function, it's often a good idea to split off some of the
+code into separate functions which perform intermediate computations.
+That way, it's easier to test whether each portion of your code works
+correctly and easier to debug problems. If you discover that some of the
+code in the complex function is also useful somewhere else in your
+program, it becomes easier to reuse the code if it's already in its own
+function.
+
+[[]]
+Prototypes
+^^^^^^^^^^
+
+At a place in your program where you call a function, that function must
+already be known to the compiler. So, if you were to use the function
+above like this:
+
+--------------------------------------
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+    if(argc < 3)
+    {
+        printf("Too few arguments\n");
+        return 1;
+    }
+    int a = atoi(argv[1]);
+    int b = atoi(argv[2]);
+    int c = sum(a, b);
+    printf("%d\n", c);
+    return 0;
+}
+
+int sum(int a, int b)
+{
+   return a + b;
+}
+--------------------------------------
+
+the compiler will emit an error. One solution is to place the definition
+of `sum` above `main`, but in a real-world program with many functions
+that call each other, that can quickly become unwieldy. Therefore, you
+can instead use a _function prototype_, which tells the compiler that
+the function exists, but does not define any code for it. A prototype
+uses the same syntax as a normal function declaration, except that the
+actual code between the curly braces is replaced by a semicolon. Thus,
+the program above could be fixed by adding a line
+`int sum(int a, int b);` above `main`.
+
+To be able to use a function in multiple link:source code[source code]
+files, you need to place the declaration in a link:header file[header
+file], which normally contains only prototypes and no function
+declarations.
+
+[[]]
+Miscellaneous
+^^^^^^^^^^^^^
+
+It is illegal in C to declare one function inside another, though
+`[[gcc]]` allows this as an extension to the language. Don't nest
+functions unless you know what you're doing and have a very good reason
+for it.
+
+[[]]
+Other languages
+^^^^^^^^^^^^^^^
+
+PHP and JavaScript functions work like those of C, but generally with
+fewer restrictions. There is no explicit `main` function, you don't need
+to use prototypes, and functions can take in arguments and return values
+of any type. Both languages also allow link:anonymous function[anonymous
+functions]—functions without an assigned name, which can be placed in
+variables.
+
+Category:Glossary

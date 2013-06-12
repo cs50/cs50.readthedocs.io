@@ -1,0 +1,27 @@
+---
+tags: []
+title: Software
+---
+__TOC__
+
+[[]]
+iOS University Program
+~~~~~~~~~~~~~~~~~~~~~~
+
+See link:iOS University Program[iOS University Program].
+
+[[]]
+DreamSpark
+~~~~~~~~~~
+
+Microsoft has donated a https://www.dreamspark.com/[DreamSpark]
+membership to Harvard. All Harvard undergraduates are eligible, as are
+other students currently enrolled in CS50. *Unfortunately, CS50x
+students are not eligible.* DreamSpark entitles you to most of
+Microsoft's development software free of charge. The available titles
+include Windows 7, Visual Studio, OneNote, Visio, and many other
+applications. The program does *not* offer the core applications of the
+Office suite (Word, Excel, PowerPoint, or Outlook).
+
+To sign up for DreamSpark, simply send a nice note from your Harvard
+email address to sysadmins@cs50.net explaining your eligibility.

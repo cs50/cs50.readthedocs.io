@@ -1,0 +1,27 @@
+---
+tags: []
+title: Scope
+---
+Scope refers to the accessibility of a variable by different functions
+within a program. Generally speaking, a variable can have either local
+or global scope. A variable with global scope is said to be a
+link:global variable[global variable] and is accessible by any function
+within a program. A variable with local scope is said to be a local
+variable and is only accessible by the function that created it unless
+it is passed by reference to another function.
+
+link:Global variables[Global variables] are stored in the data segment
+at the top of a program's memory, between the text segment and the heap.
+Local variables are stored on the stack frame of the function that
+created them.
+
+We saw issues of scope in the context of
+`[http://www.cs50.net/lectures/2/src/buggy3.c buggy3.c]`. The `swap`
+function was buggy because we passed the variables to be swapped, `x`
+and `y`, by value rather than by reference. Within `swap`, copies of `x`
+and `y` (stored in local variables `a` and `b`) were properly swapped,
+but because the variables `a` and `b` were local in scope and belonged
+to the `swap` function, their values were lost when the function
+returned.
+
+Category: Week 2[Category: Week 2]

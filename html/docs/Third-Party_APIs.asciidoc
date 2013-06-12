@@ -1,0 +1,336 @@
+---
+tags: []
+title: Third-Party_APIs
+---
+Below are
+http://en.wikipedia.org/wiki/Application_programming_interface[application
+programming interfaces] (APIs) that CS50's
+http://www.cs50.net/staff/[staff] find fun. To suggest additions to the
+list, email sysadmins@cs50.net. Actually, some of the below are just
+http://en.wikipedia.org/wiki/Data_set[data sets] in
+http://en.wikipedia.org/wiki/Comma-separated_values[CSV] or
+http://en.wikipedia.org/wiki/RSS[RSS] format more than they are APIs.
+But surely you can parse either using, e.g., PHP! Check out these
+link:Neat Tricks[Neat Tricks] to learn how.
+
+[[]]
+Calendars
+~~~~~~~~~
+
+* http://code.google.com/apis/calendar/[Google Calendar]. "Google
+Calendar Data API allows client applications to view and update calendar
+events in the form of Google Data API feeds."
+
+[[]]
+E-commerce
+~~~~~~~~~~
+
+* http://code.google.com/apis/checkout/[Google Checkout]. "Google
+Checkout allows buyers in over 140 countries to purchase goods and
+services using a credit or debit card through our fast, secure checkout
+process."
+*
+https://cms.paypal.com/cgi-bin/?cmd=_render-content&content_ID=developer/home_US[PayPal].
+"If you want to accept payments on a website or web application, you can
+find information on integrating PayPal right here."
+
+[[]]
+Finance
+~~~~~~~
+
+* http://code.google.com/apis/finance/[Google Finance API]. "Google
+Finance offers a variety of ways to access data programmatically,
+including the Google Finance Portfolio Data API and the ability to
+create financial gadgets."
+* Yahoo Finance
+** http://www.gummy-stuff.org/Yahoo-data.htm[CSV]. "Here's a neat way to
+download stock data from Yahoo, perhaps into a spreadsheet (so you can
+play with the data)."
+** http://biz.yahoo.com/rss.html[RSS]. "Yahoo! Finance is now offering
+company news feeds in the RSS format. Using the RSS URL Generator below,
+you can construct the URL you'll need to subscribe to news about your
+favorite companies."
+
+[[]]
+Government
+~~~~~~~~~~
+
+*
+http://wiki.sunlightlabs.com/Main_Page#Public_APIs_for_government_data[Public
+APIs for government data]. "This wiki serves as a central place for
+finding organizations with open source projects and problems that need
+to be solved to make government more transparent and accountable."
+
+[[]]
+Graphics
+~~~~~~~~
+
+[[]]
+ActionScript
+^^^^^^^^^^^^
+
+* http://flare.prefuse.org/[Flare]. "Flare is an ActionScript library
+for creating visualizations that run in the Adobe Flash Player."
+* http://code.google.com/apis/chart/[Google Charts Tools]. "The Google
+Chart Tools enable adding live charts to any web page."
+
+[[]]
+Java
+^^^^
+
+* http://prefuse.org/[Prefuse]. "Prefuse is a set of software tools for
+creating rich interactive data visualizations. The original prefuse
+toolkit provides a visualization framework for the Java programming
+language. The prefuse flare toolkit provides visualization and animation
+tools for ActionScript and the Adobe Flash Player."
+* http://processing.org/[Processing]. "Processing is an open source
+programming language and environment for people who want to create
+images, animations, and interactions."
+
+[[]]
+JavaScript
+^^^^^^^^^^
+
+* http://ejohn.org/blog/processingjs/[Processing.js]. "I've ported the
+Processing visualization language to JavaScript, using the Canvas
+element."
+* http://raphaeljs.com/[Raphaël]. "Raphaël is a small JavaScript library
+that should simplify your work with vector graphics on the web. If you
+want to create your own specific chart or image crop and rotate widget,
+for example, you can achieve it simply and easily with this library."
+
+[[]]
+XML
+^^^
+
+* http://www.maani.us/xml_charts/[XML/SWF Charts]. "XML/SWF Charts is a
+simple, yet powerful tool to create attractive charts and graphs from
+XML data."
+
+[[]]
+Harvard
+~~~~~~~
+
+* http://www.pin.harvard.edu/dev-resource-menu.shtml[Harvard University
+PIN System]. "The Harvard University PIN System provides centralized
+authentication services for online applications affiliated with the
+University."
+* http://isites.harvard.edu/developer_help[iSites]. "iSites is a web
+publishing system that enables all members of the Harvard community —
+students, faculty, teaching fellows, and staff — to develop and
+administer course management sites, community sites, portals, and
+intranets, with flexibility and ease."
+*
+http://thecrimson.com/article/2009/9/3/a-little-help-for-course-shoppers/[Q
+Guide]. "We've compiled a handy spreadsheet of Q Guide data you can use
+to sort by various rankings."
+
+And don't forget CS50's own APIs.
+
+[[]]
+JavaScript
+~~~~~~~~~~
+
+* http://dojotoolkit.org/[Dojo Toolkit]. "The Dojo Toolkit is an
+open-source JavaScript toolkit useful for building great web
+applications. It aims to shorten the timespan between idea and
+implementation by providing an exceptionally well conceived API and set
+of tools for assisting and fixing the issues experienced in everyday web
+development."
+* http://www.extjs.com/[Ext JS]. "Ext JS is a cross-browser JavaScript
+library for building rich internet applications."
+* http://code.google.com/closure/[Google Closure]. "The Closure tools
+help developers to build rich web applications with JavaScript that is
+both powerful and efficient."
+* http://code.google.com/webtoolkit/[Google Web Toolkit]. "Writing web
+apps today is a tedious and error-prone process. Developers can spend
+90% of their time working around browser quirks. In addition, building,
+reusing, and maintaining large JavaScript code bases and AJAX components
+can be difficult and fragile. Google Web Toolkit (GWT), especially when
+combined with the Google Plugin for Eclipse, eases this burden by
+allowing developers to quickly build and maintain complex yet highly
+performant JavaScript front-end applications in the Java programming
+language."
+* http://jquery.com/[jQuery]. "jQuery is a fast and concise JavaScript
+Library that simplifies HTML document traversing, event handling,
+animating, and Ajax interactions for rapid web development. jQuery is
+designed to change the way that you write JavaScript."
+* http://mootools.net/[MooTools]. "MooTools is a compact, modular,
+Object-Oriented JavaScript framework designed for the intermediate to
+advanced JavaScript developer. It allows you to write powerful,
+flexible, and cross-browser code with its elegant, well documented, and
+coherent API."
+* http://www.prototypejs.org/[Prototype]. "Prototype is a JavaScript
+Framework that aims to ease development of dynamic web applications."
+* http://script.aculo.us/[script.aculo.us]. "script.aculo.us provides
+you with easy-to-use, cross-browser user interface JavaScript libraries
+to make your web sites and web applications fly."
+* http://developer.yahoo.com/yui/2/[Yahoo! User Interface Library]. "YUI
+2 is a JavaScript and CSS library with more than 30 unique components
+including low-level DOM utiltiies and high-level user-interface
+widgets."
+
+[[]]
+Maps
+~~~~
+
+* http://www.microsoft.com/maps/developers/[Bing Maps]. "Developers
+using Bing Maps for Enterprise have access to rich tool sets, user
+forums, and enterprise-level Microsoft support for building map-based
+solutions."
+* http://code.google.com/apis/maps/[Google Maps API]. "The Google Maps
+API lets you embed Google Maps in your own web pages with JavaScript.
+The API provides a number of utilities for manipulating maps (just like
+on the http://maps.google.com web page) and adding content to the map
+through a variety of services, allowing you to create robust maps
+applications on your website."
+* http://www.eot.state.ma.us/developers/realtime/[MassDOT/MBTA Real-Time
+XML TRIAL Feed]. "The trial feed includes data for bus route 39 which
+serves Jamaica Plain, the Longwood Medical Area, and Back Bay in Boston;
+and bus routes 111, 114, 116, and 117 which serve Haymarket Station,
+East Boston, Chelsea, and Revere."
+* http://developer.yahoo.com/maps/[Yahoo! Maps Web Services]. "Yahoo!
+Maps APIs let you easily embed rich and interactive maps into your web
+and desktop applications using your choice of platform: we provide
+Flash, Ajax and Map Image APIs."
+
+[[]]
+Mobile
+~~~~~~
+
+* Android SDK
+** http://beta.appinventor.mit.edu/about/[App Inventor]. "App Inventor
+for Android lets you create new mobile applications, even if you don't
+have a programming background. With it, you can explore communication,
+location-awareness, social networking, and massive Web-based data
+collections."
+** http://developer.android.com/sdk/[Java]. "The Android SDK provides
+the tools and APIs necessary to begin developing applications that run
+on Android-powered devices."
+* http://na.blackberry.com/eng/developers/[BlackBerry Developer Zone].
+"The central place for developers to get tools, resources and
+information to develop, test and distribute for the BlackBerry
+Application Platform." You may also find RIM's
+http://na.blackberry.com/eng/ataglance/academic/content.jsp[academic
+content] and
+http://na.blackberry.com/eng/ataglance/academic/resources.jsp[resources]
+helpful.
+* http://developer.apple.com/iphone/[iPhone SDK]. "The iPhone Dev Center
+provides access to technical resources and information to assist you in
+developing with the latest technologies in iPhone OS." *You don't need
+to pay $99 or $299.* CS50 is already a member of the
+http://developer.apple.com/iphone/program/[iPhone Developer Program].
+Drop sysadmins@cs50.net a nice note from your harvard.edu address
+requesting an invitation to join our account.
+* http://lite.textmarks.com/[TextMarks]. "With the TextMarks Mobile
+Application Services Platform, you have access to powerful text
+messaging functionality for integration into your existing and new web
+and enterprise applications." *Per their
+http://help.textmarks.com/faqs/what-carriers-does-textmarks-work-with/carriers[FAQs],
+T-Mobile is currently only allowing only non ad supported messages to be
+delivered. If you are using TextMarks Lite, T-Mobile subscribers will
+not receive your texts.*
+* http://www.zeepmobile.com/developers/[Zeep Mobile]. "Zeep Mobile is a
+simple ad-supported SMS API that any web app can use to communicate with
+its users via SMS—for FREE!"
+
+[[]]
+News
+~~~~
+
+* http://www.google.com/support/news/bin/answer.py?answer=40796[Google
+News]. "Aggregated headlines and a search engine of many of the world's
+news sources."
+* http://www.guardian.co.uk/open-platform/[Guardian Open Platform]. "The
+Open Platform is a suite of services that enables partners to build
+applications with the Guardian. The first two products released as part
+of the platform are the Content API and the Data Store. The Content API
+is a mechanism for selecting and collecting Guardian content. The Data
+Store is a directory of important and useful data sets curated by
+Guardian journalists."
+* link:HarvardNews API[HarvardNews API]. "HarvardNews aggregates RSS
+channels from all over campus."
+*
+http://www.nytimes.com/packages/pdf/nycbabynamesethnicity1990-2008.csv[New
+York City Baby Names]. From Department of Health and Mental Hygiene.
+
+[[]]
+Photos
+~~~~~~
+
+* http://www.flickr.com/services/api/[Flickr API]. "The Flickr API is
+available for non-commercial use by outside developers."
+
+[[]]
+Profanity
+~~~~~~~~~
+
+* http://wiki.cdyne.com/wiki/index.php?title=Profanity_Filter[CDYNE
+Profanity Filter Web Service]. "CDYNE's FREE Profanity Filter API is a
+simple, but elegant way to remove words that are considered profanity to
+keep professionalism in online web-based applications using XML Web
+Services."
+* http://webpurify.com/profanity/filter/documentation.php[WebPurify
+Profanity Web Service]. "The WebPurify profanity filter web service has
+become the industry standard for profanity filtering." *You don't need
+to pay $100.* CS50 has an API key that you can use. Drop
+sysadmins@cs50.net a nice note from your harvard.edu address for the
+key.
+
+[[]]
+Search
+~~~~~~
+
+* http://code.google.com/apis/ajaxsearch/[Google AJAX Search API]. "The
+Google AJAX Search API lets you put Google Search in your web pages with
+JavaScript. You can embed a simple, dynamic search box and display
+search results in your own web pages or use the results in innovative,
+programmatic ways."
+* http://www.google.com/cse/[Google Custom Search]. "With Google Custom
+Search, you can harness the power of Google to create a customized
+search experience for your own website."
+* http://en.wikipedia.org/w/api.php[MediaWiki API]. "The goal of this
+API (Application Programming Interface) is to provide direct, high-level
+access to the data contained in the
+http://www.mediawiki.org/wiki/MediaWiki[MediaWiki] databases [like
+http://en.wikipedia.org/wiki/Main_Page[Wikipedia]]."
+* http://developer.yahoo.com/search/boss/[Yahoo! Search BOSS]. "BOSS
+(Build your Own Search Service) is Yahoo!'s open search web services
+platform."
+
+[[]]
+Social Networking
+~~~~~~~~~~~~~~~~~
+
+* http://disqus.com/comments/[DISQUS Comments]. "DISQUS Comments is a
+better comment system for your site."
+* http://developers.facebook.com/docs/[Facebook Platform]. "Facebook's
+powerful APIs enable you to create social experiences to drive growth
+and engagement on your web site."
+* http://intensedebate.com/[IntenseDebate]. "IntenseDebate is a
+feature-rich comment system for WordPress, Blogger, Tumblr and many
+other blogging/CMS platforms."
+* http://apiwiki.twitter.com/Twitter-API-Documentation[Twitter API].
+"The Twitter REST API methods allow developers to access core Twitter
+data. This includes update timelines, status data, and user information.
+The Search API methods give developers methods to interact with Twitter
+Search and trends data."
+
+[[]]
+Streaming Media
+~~~~~~~~~~~~~~~
+
+* http://www.red5.org/[Red5]. "Red5 is an Open Source Flash Server
+written in Java that supports Streaming Audio/Video..."
+* http://www.wowzamedia.com/products.html[Wowza Media Server 2]. "One
+Media Server. Any Platform. Any Screen."
+
+[[]]
+Videos
+~~~~~~
+
+* http://code.google.com/apis/youtube/code.html#client_libraries[YouTube
+APIs and Tools]. "The YouTube APIs and Tools let you bring the YouTube
+experience to your webpage, application, or device."
+
+Category:APIs

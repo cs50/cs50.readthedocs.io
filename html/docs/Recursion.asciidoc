@@ -1,0 +1,231 @@
+---
+tags: []
+title: Recursion
+---
+__FORCETOC__ *Recursion* in computer science refers to program design
+that relies on self-referential definitions. Any function that directly
+or indirectly calls itself or data structure that refers to itself in
+its definition qualifies as recursive. Recursion closely resembles
+inductive proofs and recursive function in mathematics in that is relies
+on a simple base case which gives a pre-defined result and a recursive
+case which refers to the structure being defined.
+
+Recursion lends itself to solving decomposable problems which rely on a
+consistent pattern. In this sense, the base case consists of the
+simplest sub-problem while the recursive case simplifies the problem
+into a series of similar operations until it reaches the base case. By
+reducing programs to a simple and repeatable set of operations,
+recursive functions often allow for more elegant and readable code.
+Popular recursive functions include factorial and fibonacci. Recursion
+also applies to data structures which rely on long or infinite series of
+similar components such as binary trees and linked lists.
+
+[[]]
+Recursive Functions
+-------------------
+
+*Recursive functions* consist of a base case which computes a result and
+a recursive case through which the function calls itself. As a result, a
+recursive function will call itself until it reaches the base case. In
+order to ensure the function does not cause an infinite loop, the
+function's argument must therefore approach the base case with each
+call. In this sense, recursive functions closely resemble proofs by
+induction in mathematics.
+
+[[]]
+The Recursive Case
+~~~~~~~~~~~~~~~~~~
+
+A recursive function's *recursive case* is the condition under which the
+function calls itself. The recursive case decomposes a problem into
+identical sub-problem that is a step closer to being solved.
+
+Factorial is a popular example of a recursive function. The function can
+be intuitively defined in the following manner:
+
+latexmath:[$ n! = n \times (n-1) \times (n-2) \times ... \times 1 $]
+
+Here, the ellipsis signifies the continuation of a pattern from n to 1.
+Factorial can be defined recursively because, as the ellipsis indicates,
+in is reducible to the single repeated operation:
+
+latexmath:[$ n! = n \times (n-1)!$]
+
+The equivalent definition in C code is
+
+code,c-------------------------------------- code,c
+unsigned int factorial(unsigned int n)
+{
+    return n * factorial(n-1);
+}
+--------------------------------------
+
+This recursive definition is not sufficient to solve the problem however
+because it causes an infinite loop. In order to complete the program,
+the function must include a base case.
+
+[[]]
+The Base Case
+~~~~~~~~~~~~~
+
+A recursive function's *base case* breaks the self-referential loop and
+produces a final result of the operation. Just as with recursive
+functions and inductive proofs in mathematics, the base case usually
+applies to the case where n=0 or n=1.
+
+In the case of factorial, for our purposes the function is only define
+over the set of non-negative numbers so the base case must occur before
+the function receives a negative argument. Luckily, there exists an
+explicit definition for the case where n=0:
+
+latexmath:[$ 0! = 1 $]
+
+Combining this base case and eh recursive case described earlier gives
+the recursive definition of the factorial function:
+
+latexmath:[$ n! = \begin{cases}
+1 & \text{if } n = 0, \\
+(n-1)!\times n & \text{if } n > 0.
+\end{cases}
+$]
+
+Here, it is clear that the base case can be treated either as n=0 or n=1
+since 0! and 1! both evaluate to 1. The equivalent in C code is
+therefore:
+
+code,c-------------------------------------- code,c
+unsigned int factorial(unsigned int n)
+{
+    if(n <= 1)
+        return 1;
+    else
+        return n * factorial(n-1);
+}
+--------------------------------------
+
+The function no longer creates an infinite loop because the base case
+returns a result. This is important because recursive definitions that
+never reach the base case are a common source of errors in programs
+using recursion.
+
+[[]]
+Recursive Functions and the Stack
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+image:Example.jpg[The call stack of factorial(5).,title="image"]
+
+The implementation of functions in C supports recursion. Like with any
+other function call, each call to a recursive function creates a new
+frame on the stack leading to a series of frames for the successive
+calls to the recursive function. As each call returns a result however
+each frame collapses until only the main frame remains. The diagram
+below illustrates the effect of calling factorial(5) on the stack.
+
+[[]]
+Popular Applications
+~~~~~~~~~~~~~~~~~~~~
+
+Although recursion provides elegant solutions that are easy to
+visualize, recursive functions can only resolve a limited number of
+problems. Below a a few category of problems that often lend themselves
+to recursive solutions.
+
+[[]]
+Numbers in a Set
+^^^^^^^^^^^^^^^^
+
+In mathematics, many sets of numbers can be described by recursive
+definitions. Recursive functions can therefore easily check whether a
+number belongs to such a set or print out a series of numbers belonging
+to the set.
+
+[[]]
+Even and Odd
+++++++++++++
+
+In the following example, the function `even` returns `even` if it is
+given an even number and `false` if it is given an odd number. The odd
+function does the same for odd numbers. Both functions use a base case
+of `n = 0`.
+
+code,c------------------------------------------ code,c
+bool even(unsigned int n);
+bool odd(unsigned int n);
+
+bool even(unsigned int n)
+{
+    return (n == 0) ? true : odd(n - 1);
+}
+
+bool odd(unsigned int n)
+{
+    return (n == 0) ? false : even(n - 1);
+}
+------------------------------------------
+
+[[]]
+Finonacci
++++++++++
+
+In the following example, the function `fibonacci` computes the
+`n + 1`th Fibonacci number.
+
+code,c------------------------------------------------ code,c
+unsigned int fibonacci(unsigned int n)
+{
+    unsigned int fib_n;
+
+    if(n == 0)
+        fib_n = n;
+    else if(n == 1)
+        fib_n = n + fibonacci(n-1); 
+    else
+        fib_n = fibonacci(n-1) + fibonacci(n-2);
+
+   return fib_n;
+}
+------------------------------------------------
+
+[[]]
+Sorts
+^^^^^
+
+Because sorting functions often repeat a number of similar steps in
+order to order elements in a set, they can often be implemented using
+recursive functions.
+
+[[]]
+Recursive Data Structures
+-------------------------
+
+Recursive data structures are data structures that include themselves in
+their definitions. Recursion is particularly useful in defining
+structures composed of a series of similar elements such as binary trees
+and linked lists. The advantage of recursive data structures is that
+they can grow dynamically, meaning that size of the structure can change
+without having to declare a new structure.
+
+[[]]
+Linked Lists
+~~~~~~~~~~~~
+
+The following example implements a linked list
+
+code,c---------------------- code,c
+typedef struct node
+{
+    char *s;
+    struct node *next;
+}
+
+node;
+
+node *topics;
+----------------------
+
+The pointer topics points to a list of strings that are linked by the
+pointers next. A pointer `next` which links to the following node
+represents a recursive case. The base case is the null pointer which
+brings the list to an end.
+
+Category: Week 4[Category: Week 4]

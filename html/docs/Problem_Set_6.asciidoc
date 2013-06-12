@@ -1,0 +1,65 @@
+---
+tags: []
+title: Problem_Set_6
+---
+*Deadline: Fri 11/5, 5:00am*
+
+` This problem set, like last, should be graded tougher than past problem sets.  Don't worry about being too "tough" on your students; grades will be normalized at term's end.`
+
+For this problem set, you should do the below:
+
+1.  Fetch your students' and render PDFs on the cloud.
+2.  Grab copies of the *cs50/2010/pset6/username* Google Spreadsheet.
+Hover over Column A cells that have orange triangles to see comments.
+3.  Assign Correctness, Design, and Style scores in each. Note
+questions.txt is factored into Correctness; the yellow row is for
+administrative purposes only. Only record the green rows in your
+gradebook as usual.
+4.  Record grades at http://www.cs50.net/tools/[cs50.net/tools].
+5.  Email your students their PDFs.
+6.  *SFTP your PDFs to ~cs50/staff/pdfs/username/6/standard/ and
+~cs50/staff/pdfs/username/6/Hacker/ on the cloud, where username is your
+username.*
+
+[[]]
+How to Fetch and Render
+^^^^^^^^^^^^^^^^^^^^^^^
+
+---------------------------------
+export PATH=~cs50/staff/bin:$PATH
+mkdir both6
+fetch pset6 both6
+fetch hacker6 both6
+render pset6 both6/*.pset6
+render hacker6 both6/*.hacker6
+---------------------------------
+
+[[]]
+How to Run Grading Scripts
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Grading for pset6 should be a snap if your students were good about
+using the bigboard!
+
+This week's grading includes scripts are based on the bigboard
+"challenge" program that you all know and love. From inside each
+unpacked submission directory you will run:
+
+--------------------------------------------------------------
+~mtucker/personal/scripts/trunk/pset6-scripts/check-speller.pl
+--------------------------------------------------------------
+
+This script runs all the basic checks (valgrind and correctness), but
+does not post the times to the actual bigboard. It then will attempt to
+do a valgrind and correctness check with a larger dictionary. Finally,
+assuming all has gone reasonably well, the script will print out scoring
+information.
+
+For students who submitted code that crashes or that has other issues,
+you may find that the script exits early. If this is the case, you may
+need to use its output to determine what is going on with the student's
+submission and judge the grade for yourself. If you have questions about
+how this script works or what grade a student should get in one of these
+failure cases, please let contact Mike Tucker.
+
+*email mailto:mtucker@eecs.harvard.edu[Mike Tucker] with questions*

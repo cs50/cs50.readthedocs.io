@@ -1,0 +1,25 @@
+---
+tags: []
+title: cdn.cs50.net
+---
+[[]]
+Overview
+~~~~~~~~
+
+`cdn.cs50.net` currently resolves to 140.247.197.141 which is bound to a
+single VM on homer.
+
+[[]]
+Implementation Details
+~~~~~~~~~~~~~~~~~~~~~~
+
+* Created VM.
+** 4 CPUs
+** 24 GB RAM
+** 73 GB HDD (for OS)
+** 2047 GB HDD (for content)
+** 1 NIC (public network)
+* Installed Ubuntu Server 9.04.
+* `aptitude upgrade`
+* `aptitude install lighttpd`
+

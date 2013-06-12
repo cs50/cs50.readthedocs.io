@@ -1,0 +1,218 @@
+---
+tags: []
+title: services
+---
+[[]]
+LDAP Server
+~~~~~~~~~~~
+
+First ran:
+
+`yum install openldap-clients openldap-servers perl-LDAP` +
+`service ldap start` +
+`chkconfig ldap on `
+
+Then visited Servers -> LDAP Server -> OpenLDAP Server Configuration in
+Webmin and made it look like OpenLDAP Server Configuration.png (plus a
+password). Then clicked *Save*. Then clicked *Apply Configuration*. Then
+clicked *Create Root DN*. Then visited Servers -> LDAP Server -> LDAP
+Access Control. Clicked *Add a new access control rule*. Left *All
+objects* checked; selected *Everyone* under *Grant access to*; left
+*Read* under *Access level*; clicked *Create*.
+
+`service ldap restart `
+
+Then visited Servers -> LDAP Client -> LDAP Server Configuration in
+Webmin and made it look like LDAP Server Configuration.png (plus the
+password). Then clicked *Save*. Then clicked Servers -> LDAP Client ->
+LDAP Search Bases and made it look like LDAP Search Bases.png. Then
+clicked *Save*.
+
+Then created `file.ldif` with these contents:
+
+-----------------------------------------------
+dn: ou=Users,dc=cs50,dc=net
+ou: Users
+objectClass: top
+objectClass: organizationalUnit
+description: Parent object of all UNIX accounts
+
+dn: ou=Groups,dc=cs50,dc=net
+ou: Groups
+objectClass: top
+objectClass: organizationalUnit
+description: Parent object of all UNIX groups
+-----------------------------------------------
+
+Then ran:
+
+`ldapadd -x -h localhost -W -D "cn=cs50,dc=cs50,dc=net"  -f file.ldif -c`
+
+and inputted password.
+
+Then added this to `/etc/openldap/slapd.conf`:
+
+`access to attrs=userPassword` +
+`        by anonymous auth` +
+`        by self write` +
+`        by * none` +
+ +
+`access to * by * read`
+
+Then ran:
+
+`cp /etc/openldap/DB_CONFIG.example /var/lib/ldap/DB_CONFIG` +
+`chown `ldap:ldap[`ldap:ldap`]` /var/lib/ldap/DB_CONFIG` +
+`service ldap restart`
+
+[[]]
+LDAP Client
+~~~~~~~~~~~
+
+1.  Run `setup`.
+2.  Select *Authentication and configuration*.
+3.  Check *Use LDAP* and *Use LDAP Authentication*.
+4.  Choose *Next*.
+5.  Leave *Use TLS* unchecked; put *http://127.0.0.1/* for *Server*; put
+*dc=cs50,dc=net* for *Base DN*.
+6.  Choose *Ok*.
+7.  Chose *Quit*.
+
+[[]]
+LVM
+~~~
+
+Visited Hardware -> Logical Volume Management in Webmin. Clicked *Add a
+new volume group* in *Volume Groups* tab. Inputted *VolGroup01* for
+*Volume group name.* Inputted */dev/sdb* for *Initial physical device*.
+Clicked *Create*.
+
+Visited Hardware -> Logical Volume Management in Webmin. Clicked *Add a
+new volume group* in *Volume Groups* tab. Inputted *VolGroup02* for
+*Volume group name.* Inputted */dev/sdc* for *Initial physical device*.
+Clicked *Create*.
+
+Clicked *Create a logical volume in VolGroup01* under *Logical Volumes*
+tab. Inputted *LogVol02* for *Volume name*. Checjed *Percentage of VG
+size* and inputted *100* next to *%*. Clicked *Create*.
+
+Clicked *Create a logical volume in VolGroup02* under *Logical Volumes*
+tab. Inputted *LogVol03* for *Volume name*. Checjed *Percentage of VG
+size* and inputted *100* next to *%*. Clicked *Create*.
+
+Clicked *LogVol02* under *Logical Volumes* tab. Left *Linux Native
+(ext3)* selected and clicked *Create filesystem of type*. Left defaults
+on subsequent screen and clicked *Create*. Clicked *LogVol02* under
+*Logical Volumes* tab again. Inputted */home* next to *Mount LV on* then
+clicked latter. On subsequent screen, checked *No* next to *Allow device
+files*; selected *Yes* next to *Use Quotas?*; clicked *Create*.
+
+Returned to Hardware -> Logical Volume Management. Clicked *LogVol03*
+under *Logical Volumes* tab. Left *Linux Native (ext3)* selected and
+clicked *Create filesystem of type*. Left defaults on subsequent screen
+and clicked *Create*. Clicked *LogVol03* under *Logical Volumes* tab
+again. Inputted */.snapshots* next to *Mount LV on* then clicked latter.
+On subsequent screen, checked *No* next to *Allow device files*; left
+*No* next to *Use Quotas?*; clicked *Create*.
+
+[[]]
+NFS
+~~~
+
+Added
+
+`/home       10.50.0.0/255.255.0.0(sync,no_subtree_check,no_root_squash,rw)` +
+`/snapshots  10.50.0.0/255.255.0.0(ro)`
+
+to `/etc/exports`. Then did:
+
+`service nfs restart`
+
+[[]]
+SSH
+~~~
+
+Added
+
+`AllowUsers cs50 malan holloway` +
+`PermitRootLogin no` +
+`PubkeyAuthentication yes` +
+`RSAAuthentication yes`
+
+to `/etc/ssh/ssd_config`.
+
+[[]]
+PHP
+~~~
+
+`yum install php-cli php-xml php-mysql`
+
+[[]]
+rsnapshot
+~~~~~~~~~
+
+`rpm -Uhv `http://apt.sw.be/redhat/el5/en/x86_64/rpmforge/RPMS//rpmforge-release-0.3.6-1.el5.rf.x86_64.rpm[`http://apt.sw.be/redhat/el5/en/x86_64/rpmforge/RPMS//rpmforge-release-0.3.6-1.el5.rf.x86_64.rpm`] +
+`yum install rsnapshot`
+
+Created `/etc/cron.d/rsnapshot` with these contents:
+
+`0 0 * * 0 root /usr/bin/rsnapshot weekly ` +
+`0 0 * * * root /usr/bin/rsnapshot daily` +
+`0 * * * * root /usr/bin/rsnapshot hourly` +
+`10,20,30,40,50 * * * * root /usr/bin/rsnapshot minutely`
+
+[[]]
+Webmin
+~~~~~~
+
+`yum install perl-Net-SSLeay` +
+`wget "`http://downloads.sourceforge.net/project/webadmin/webmin/1.510/webmin-1.510-1.noarch.rpm?use_mirror=cdnetworks-us-2[`http://downloads.sourceforge.net/project/webadmin/webmin/1.510/webmin-1.510-1.noarch.rpm?use_mirror=cdnetworks-us-2`]`"` +
+`rpm -ivh webmin-1.510-1.noarch.rpm`
+
+Then opened 10000:tcp via `setup`.
+
+[[]]
+Yum
+~~~
+
+[[]]
+cs50.repo
+^^^^^^^^^
+
+-----------------------------------------------------------------
+[base]
+name = CentOS-$releasever - Base
+baseurl = http://10.50.10.3/centos/$releasever/os/$basearch/
+gpgcheck = 1
+gpgkey = http://10.50.10.3/rpm-gpg/RPM-GPG-KEY-CentOS-5
+priority = 1
+
+[update]
+name = CentOS-$releasever - Updates
+baseurl = http://10.50.10.3/centos/$releasever/updates/$basearch/
+gpgcheck = 1
+gpgkey = http://10.50.10.3/rpm-gpg/RPM-GPG-KEY-CentOS-5
+priority = 1
+
+[extras]
+name = CentOS-$releasever - Extras
+baseurl = http://10.50.10.3/centos/$releasever/extras/$basearch/
+gpgcheck = 1
+gpgkey = http://10.50.10.3/rpm-gpg/RPM-GPG-KEY-CentOS-5
+priority = 1
+
+[rpmforge]
+name = Red Hat Enterprise $releasever - RPMforge.net - dag
+baseurl = http://10.50.10.3/redhat/el5/en/$basearch/dag
+gpgcheck = 1
+gpgkey = http://10.50.10.3/rpm-gpg/RPM-GPG-KEY.dag.txt
+priority = 2
+-----------------------------------------------------------------
+
+[[]]
+NTP
+~~~
+
+`chkconfig ntpd on` +
+`ntpdate -u 0.centos.pool.ntp.org` +
+`service ntpd start`
