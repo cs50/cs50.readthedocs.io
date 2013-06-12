@@ -1,6 +1,6 @@
 ---
 tags: []
-title: courses_api
+title: HarvardCourses API
 ---
 The HarvardCourses API allows you to request data programmatically from
 http://courses.cs50.net/[HarvardCourses] in

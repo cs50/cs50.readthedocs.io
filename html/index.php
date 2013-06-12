@@ -3,8 +3,7 @@
     require(__DIR__ . "/../includes/config.php");
 
     // get requested article's YAML and HTML
-    $path = ($_SERVER["SCRIPT_URL"] === "/") ? "/index" : $_SERVER["SCRIPT_URL"];
-    list($yaml, $html) = getArticle($path, true);
+    list($yaml, $html) = getArticle($_SERVER["SCRIPT_URL"], true);
 
 ?>
 

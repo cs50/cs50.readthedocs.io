@@ -12,6 +12,5 @@ RewriteCond %{REQUEST_URI} ^/css/.*\.scss$
 RewriteRule .* scss.php [L]
 
 # route /* to index.php
-RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule .* index.php [L]

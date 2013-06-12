@@ -11,6 +11,11 @@
      */
     function getArticle($path, $html = false) {
 
+        // map .../ to .../index
+        if (preg_match("#/$#", $path)) {
+            $path .= "index";
+        }
+
         // open post's file
         $file = __DIR__ . "/../html" . $path . ".asciidoc";
         if (file_exists($file)) {
