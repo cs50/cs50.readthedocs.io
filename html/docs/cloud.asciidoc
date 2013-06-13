@@ -1,6 +1,0 @@
----
-tags: []
-title: cloud
----
-1.  REDIRECT link:CS50 Cloud[CS50 Cloud]
-

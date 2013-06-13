@@ -1,0 +1,29 @@
+Here's how to install the [[CS50_Appliance_3|CS50 Appliance]] using VMware Workstation for [[#Installation|Windows]].
+
+== Installation ==
+
+# Download VMware Workstation as follows:
+#* If you're a student at Harvard, [https://docs.google.com/spreadsheet/viewform?hl=en_US&formkey=dHoyMG5LNTgxeGFhakNaaE9CdTlkbWc6MQ apply for the VMware Academic Program] (VMAP) in order to obtain a username and password with which you can download VMware Workstation for free from http://vmap.cs50.net/, along with a serial number.
+#* If you're not a student at Harvard, you can download a 30-day trial of VMware Workstation from http://www.vmware.com/products/workstation/.  After 30 days, you'll need to [http://www.vmware.com/a/buylink/9 purchase a license].
+# Double-click the file you just downloaded (which is likely in your '''Downloads''' folder) in order launch VMware Workstation's installer.  
+# If a window entitled '''User Account Control''', click '''Yes'''.
+# A window entitled '''VMware Workstation Setup''' should appear.  Click '''Next'''.
+# When prompted to '''Choose the setup type''', click the icon to the left of '''Typical'''.
+# When prompted to select a '''Destination Folder''', click '''Next'''.
+# When prompted about '''Software Updates''', ensure that '''Check for product updates on startup''' is checked, then click '''Next'''.
+# When prompted about the '''User Experience Improvement Program,''' click '''Next'''.  (Uncheck '''Help improve VMware Workstation''' if you'd like.)
+# When prompted about '''Shortcuts''', click '''Next'''.  (Uncheck '''Desktop''' and/or '''Start Menu Programs folder''' if you'd like.)
+# When prompted to '''Perform the Requested Operations''', click '''Continue'''.
+# Once the '''setup wizard has successfully completed''', click '''Restart Now''' if prompted, else '''Finish'''.
+# Download a ZIP file of the [[CS50_Appliance_3|CS50 Appliance]] at http://mirror.cs50.net/appliance/3/cs50-appliance-3-vmx.zip.  That ZIP file is over 1GB in size, so it might take a while to download.
+# Once downloaded, unzip the ZIP file, and you should have a folder named '''cs50-appliance-3''' with two files within ('''cs50-appliance-3-disk1.vmdk''' and '''cs50-appliance-3.vmx''').  Odds are that folder's in your '''Downloads''' folder, unless you saved it elsewhere. Do <u>not</u> double-click '''cs50-appliance-3-disk1.vmdk''' or '''cs50-appliance-3.vmx'''.
+# Drag that '''cs50-appliance-3''' folder somewhere safe, where you won't accidentally delete it.  Do <u>not</u> leave it in your '''Downloads''' folder.
+# Launch VMware Workstation, as by single- or double-clicking its icon, wherever it was installed.  
+# If prompted with '''Software Updates''', click '''Download and Install'''.  Else select '''Help > Software Updates''', then click '''Check for Updates'''.  Update and relaunch VMware Workstation as needed.
+# Select '''File > Open...'''.  Navigate your way to that '''cs50-appliance-3''' folder (wherever you moved it for safe-keeping), highlight the '''cs50-appliance-3''' (or '''cs50-appliance-3.vmx''') file within, and click '''Open'''.  Then click VMware Fusion's &#x25B6; button to start up the appliance.
+
+== Troubleshooting ==
+
+Email [mailto:sysadmins@cs50.net sysadmins@cs50.net] to report any issues.
+
+[[Category:HOWTO]]

@@ -1,0 +1,125 @@
+---
+tags: []
+title: Sending_Mail
+---
+Below is some code with which you can send email using a library called
+PHPMailer, which is pre-installed in the link:CS50 Appliance[CS50
+Appliance]. Although PHPMailer's
+http://phpmailer.worxware.com.php?pg=examples[examples] and
+http://phpmailer.worxware.com.php?pg=tutorial[tutorial] suggest
+different paths, include the library as follows in the appliance as
+follows.
+
+code,php---------------------------------------------- code,php
+require_once("PHPMailer/class.phpmailer.php");
+----------------------------------------------
+
+PHPMailer's website is a bit tricky to navigate, so here are direct
+links to some references:
+
+* http://phpmailer.worxware.com.php?pg=examples[examples]
+* http://phpmailer.worxware.com.php?pg=methods[methods]
+* http://phpmailer.worxware.com.php?pg=properties[properties]
+* http://phpmailer.worxware.com.php?pg=tutorial[tutorial]
+
+Per those references, if you'd like to send non-HTML email with
+PHPMailer, odds are you can use code like:
+
+code,php---------------------------------------------------------------------------------------------------------------------------------
+code,php
+require_once("PHPMailer/class.phpmailer.php");
+
+// instantiate mailer
+$mail = new PHPMailer();
+
+// use your ISP's SMTP server (e.g., smtp.fas.harvard.edu if on campus or smtp.comcast.net if off campus and your ISP is Comcast)
+$mail->IsSMTP();
+$mail->Host = "smtp.fas.harvard.edu";
+
+// set From:
+$mail->SetFrom("sender@example.com");
+
+// set To:
+$mail->AddAddress("recipient@example.com");
+
+// set Subject:
+$mail->Subject = "hello, world";
+
+// set body
+$mail->Body = "hello, world";
+
+// send mail
+if ($mail->Send() === false)
+    die($mail->ErrorInfo . "\n");
+---------------------------------------------------------------------------------------------------------------------------------
+
+If you'd like to send HTML email with PHPMailer, odds are you can use
+code like:
+
+code,php---------------------------------------------------------------------------------------------------------------------------------
+code,php
+require_once("PHPMailer/class.phpmailer.php");
+
+// instantiate mailer
+$mail = new PHPMailer();
+
+// use your ISP's SMTP server (e.g., smtp.fas.harvard.edu if on campus or smtp.comcast.net if off campus and your ISP is Comcast)
+$mail->IsSMTP();
+$mail->Host = "smtp.fas.harvard.edu";
+
+// set From:
+$mail->SetFrom("sender@example.com");
+
+// set To:
+$mail->AddAddress("recipient@example.com");
+
+// set Subject:
+$mail->Subject = "hello, world";
+
+// set body
+$mail->Body = "<html><body>hello, world</body></html>";
+
+// set alternative body, in case user's mail client doesn't support HTML
+$mail->AltBody = "hello, world";
+
+// send mail
+if ($mail->Send() === false)
+    die($mail->ErrorInfo . "\n");
+---------------------------------------------------------------------------------------------------------------------------------
+
+And if you'd like to send an attachment with PHPMailer, odds are you can
+use code like:
+
+code,php---------------------------------------------------------------------------------------------------------------------------------
+code,php
+require_once("PHPMailer/class.phpmailer.php");
+
+// instantiate mailer
+$mail = new PHPMailer();
+
+// use your ISP's SMTP server (e.g., smtp.fas.harvard.edu if on campus or smtp.comcast.net if off campus and your ISP is Comcast)
+$mail->IsSMTP();
+$mail->Host = "smtp.fas.harvard.edu";
+
+// set From:
+$mail->SetFrom("sender@example.com");
+
+// set To:
+$mail->AddAddress("recipient@example.com");
+
+// set Subject:
+$mail->Subject = "hello, world";
+
+// attach file (e.g., document.pdf)
+$mail->AddAttachment("path/to/document.pdf");
+
+// set body
+$mail->Body = "hello, world";
+
+// send mail
+if ($mail->Send() === false)
+    die($mail->ErrorInfo . "\n");
+---------------------------------------------------------------------------------------------------------------------------------
+
+Though, in each case, best not to `die` if there's an error; it's not
+user-friendly. Instead, handle the error more gracefully!

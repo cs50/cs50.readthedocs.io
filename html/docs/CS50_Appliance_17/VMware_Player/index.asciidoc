@@ -1,0 +1,26 @@
+Here's how to install the [[CS50_Appliance_17|CS50 Appliance]] using VMware Player for [[#Installation|Windows]].
+
+== Installation ==
+
+# Download VMware Player for free from http://www.vmware.com/go/downloadplayer/.
+# Double-click the file you just downloaded (which is likely in your '''Downloads''' folder) in order launch VMware Player's installer.
+# If a window entitled '''User Account Control''' appears, click '''Yes'''.
+# A window entitled '''VMware Player Setup''' should appear.  Click '''Next'''.
+# When prompted to select a '''Destination Folder''', click '''Next'''.
+# When prompted about '''Shortcuts''', click '''Next'''.  (Uncheck '''Desktop''' and/or '''Start Menu Programs folder''' if you'd like.)
+# When prompted to '''Perform the Requested Operations''', click '''Continue'''.
+# Once you see '''Setup Wizard Complete''', click '''Restart Now''' if prompted, else '''Continue'''.
+# Download a ZIP file of the [[CS50_Appliance_17|CS50 Appliance]] at http://mirror.cs50.net/appliance50/17/i386/appliance50-17-9-vmx.zip ([http://mirror.cs50.net.s3.amazonaws.com/appliance50/17/i386/appliance50-17-9-vmx.zip?torrent torrent]).  That ZIP file is over 1GB in size, so it might take a while to download.
+# Once downloaded, unzip the ZIP file, and you should have a folder named '''appliance50-17''' with two files within ('''appliance50-17.vmdk''' and '''appliance50-17.vmx''').  Odds are that folder's in your '''Downloads''' folder, unless you saved it elsewhere. Do <u>not</u> double-click '''appliance50-17.vmdk''' or '''appliance50-17.vmx'''.
+# Drag that '''appliance50-17''' folder somewhere safe, where you won't accidentally delete it.  Do <u>not</u> leave it in your '''Downloads''' folder.
+# Launch VMware Player, as by single- or double-clicking its icon, wherever it was installed.  
+# If prompted with '''Software Updates''', click '''Download and Install'''.  Else select '''Help > Software Updates''', then click '''Check for Updates'''.  Update and relaunch VMware Player as needed.
+# Select '''File > Open a Virtual Machine...'''.  Navigate your way to that '''appliance50-17-vmx''' folder (wherever you moved it for safe-keeping), highlight the '''appliance50-17-vmx''' (or '''appliance50-17.vmx''') file within, and click '''Open'''.  Then click VMware Player's &#x25B6; button to start up the appliance.
+
+== Troubleshooting ==
+
+=== Binary translation is incompatible with long mode on this platform ===
+
+If you see this message, you might need to enable [[Hardware_Virtualization|hardware virtualization]] on your computer.
+
+[[Category:HOWTO]]

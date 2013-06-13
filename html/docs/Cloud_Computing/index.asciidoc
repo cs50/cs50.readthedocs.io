@@ -1,0 +1,238 @@
+---
+tags: []
+title: Cloud_Computing
+---
+[[]]
+Instructor
+~~~~~~~~~~
+
+*David J. Malan* +
+Lecturer on Computer Science +
+http://www.cs.harvard.edu/malan/ +
+dmalan@harvard.edu
+
+[[]]
+Location
+~~~~~~~~
+
+http://maps.cs50.net/#f=search&ll=42.37411257777324%2C-71.11905097961426&q=Maxwell-Dworkin&z=16[Maxwell
+Dworkin] G125 +
+33 Oxford Street +
+Cambridge MA 02138
+
+[[]]
+Requirements
+~~~~~~~~~~~~
+
+* Wireless laptop (with power supply)
+* Credit card (you won't be billed anything, but you'll need it to
+register with Amazon)
+
+[[]]
+Outline
+~~~~~~~
+
+_subject to change_
+
+[[]]
+8:30
+^^^^
+
+* Breakfast
+
+[[]]
+9:00
+^^^^
+
+* Introductions
+
+[[]]
+9:15
+^^^^
+
+* Virtualization
+* Hypervisors
+** Commercial
+** Free
+* Virtual Private Servers
+* Managed Colocation
+* Clouds
+** Amazon Web Services
+** Google App Engine
+** Windows Azure Platform
+* Amazon Web Services
+** Amazon Elastic Compute Cloud (Amazon EC2)
+** Amazon Simple Storage Service (Amazon S3)
+** Amazon CloudFront
+** Amazon Virtual Private Cloud (Amazon VPC)
+** ...
+
+[[]]
+10:30
+^^^^^
+
+* Coffee Break
+
+[[]]
+11:00
+^^^^^
+
+* VMware ESXi, Demos
+* Oracle VirtualBox, Hands-On
+
+[[]]
+12:30
+^^^^^
+
+* Lunch Break
+
+[[]]
+13:30
+^^^^^
+
+* Amazon EC2, Hands-On
+** Signing up for AWS, EC2, and S3
+(http://docs.amazonwebservices.com/AWSEC2/latest/GettingStartedGuide.html?SignUp.html[help])
+** Using the Console
+(http://docs.amazonwebservices.com/AWSEC2/latest/GettingStartedGuide.html?LaunchInstance.html[help])
+*** Connecting to Linux/UNIX Instances
+(http://docs.amazonwebservices.com/AWSEC2/latest/GettingStartedGuide.html?ConnectToInstanceLinux.html[help])
+*** Connecting to Windows Instances
+(http://docs.amazonwebservices.com/AWSEC2/latest/GettingStartedGuide.html?ConnectToInstanceWindows.html[help])
+*** Terminating Instances
+(http://docs.amazonwebservices.com/AWSEC2/latest/GettingStartedGuide.html?TerminateInstance.html[help])
+*** Attaching Volumes
+** Command-Line Tools
+*** Prerequisites for the API Tools
+(http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide.html?prerequisites.html[help])
+*** Setting Up the API Tools
+(http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide.html?setting-up-your-tools.html[help])
+*** Finding a Suitable (Linux) AMI
+(http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide.html?finding-an-ami.html[help])
+*** Running an Instance
+(http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide.html?launching-an-instance.html[help])
+
+[[]]
+15:00
+^^^^^
+
+* Coffee Break
+
+[[]]
+15:30
+^^^^^
+
+* Choose Your Own Adventure
+** Stress-Testing a Server
+(http://httpd.apache.org/docs/2.0/programs/ab.html[help])
+** Creating an AMI
+(http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide.html?PreparingAndCreatingAMIs.html[help])
+** Load Balancing across Instances
+(http://docs.amazonwebservices.com/ElasticLoadBalancing/latest/DeveloperGuide/UserScenarios.html[help])
+** Tunneling Between Instances
+(http://malanrouge.com/usenix/Tunneling_Between_Instances[help])
+
+[[]]
+16:45
+^^^^^
+
+* Farewells
+
+[[]]
+Resources
+~~~~~~~~~
+
+* http://aws.amazon.com/ec2/[Amazon Elastic Compute Cloud (Amazon EC2)]
+**
+http://docs.amazonwebservices.com/AWSEC2/latest/DeveloperGuide/[Developer
+Guide]
+**
+http://docs.amazonwebservices.com/AWSEC2/latest/GettingStartedGuide/[Getting
+Started Guide]
+**
+http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference/OperationList-cmd.html[List
+of Command Line Operations by Function]
+** http://aws.amazon.com/ec2-sla/[Service Level Agreement]
+** http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide/[User
+Guide]
+*
+http://awsmedia.s3.amazonaws.com/pdf/AWS_Security_Whitepaper.pdf[Amazon
+Web Services: Overview of Security Processes]
+* http://aws.amazon.com/awscredits/[AWS Credits]
+* http://aws.amazon.com/education/[AWS in Education]
+* http://calculator.s3.amazonaws.com/calc5.html[AWS Simple Monthly
+Calculator]
+* http://www.cs.harvard.edu/malan/publications/ccscne10-malan.pdf[Moving
+CS50 into the Cloud]
+* Media:Cloud-computing-hands-on.pdf[Slides]
+*
+http://www.nytimes.com/idg/IDG_002570DE00740E180025742400363509.html[What
+Cloud Computing Really Means]
+
+[[]]
+Software
+~~~~~~~~
+
+[[]]
+Linux
+^^^^^
+
+*
+http://developer.amazonwebservices.com/connect/entry.jspa?externalID=351&categoryID=88[Amazon
+EC2 API Tools]
+*
+http://developer.amazonwebservices.com/connect/entry.jspa?externalID=2536&categoryID=88[Elastic
+Load Balancing API Tools]
+* J2SE 5 (if already installed) or
+http://cds.sun.com/is-bin/INTERSHOP.enfinity/WFS/CDS-CDS_Developer-Site/en_US/-/USD/ViewProductDetail-Start?ProductRef=jre-6u14-oth-JPR@CDS-CDS_Developer[Java
+SE 6]
+* http://www.rdesktop.org/[rdesktop]
+* http://www.virtualbox.org/wiki/Downloads[VirtualBox]
+
+[[]]
+Mac OS
+^^^^^^
+
+*
+http://developer.amazonwebservices.com/connect/entry.jspa?externalID=351&categoryID=88[Amazon
+EC2 API Tools]
+*
+http://developer.amazonwebservices.com/connect/entry.jspa?externalID=2536&categoryID=88[Elastic
+Load Balancing API Tools]
+* http://developer.apple.com/java/download/[J2SE 5] (for Mac OS 10.4) or
+http://developer.apple.com/java/download/[Java SE 6] (for Mac OS 10.5)
+*
+http://www.microsoft.com/mac/products/remote-desktop/default.mspx[Remote
+Desktop Connection Client for Mac 2]
+* http://www.virtualbox.org/wiki/Downloads[VirtualBox]
+
+[[]]
+Windows
+^^^^^^^
+
+*
+http://developer.amazonwebservices.com/connect/entry.jspa?externalID=351&categoryID=88[Amazon
+EC2 API Tools]
+*
+http://developer.amazonwebservices.com/connect/entry.jspa?externalID=2536&categoryID=88[Elastic
+Load Balancing API Tools]
+* J2SE 5 (if already installed) or
+http://cds.sun.com/is-bin/INTERSHOP.enfinity/WFS/CDS-CDS_Developer-Site/en_US/-/USD/ViewProductDetail-Start?ProductRef=jre-6u14-oth-JPR@CDS-CDS_Developer[Java
+SE 6]
+* http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html[PuTTY]
+and
+http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html[PuTTYgen]
+(or http://www.cygwin.com/[cygwin])
+* http://winscp.net/eng/download.php[WinSCP] (or another SFTP client)
+* http://www.virtualbox.org/wiki/Downloads[VirtualBox]
+
+[[]]
+ISOs
+~~~~
+
+* http://cdn.cs50.net/2009/fall/vms/cs50.zip[CS50 Appliance]
+*
+http://download.fedoraproject.org/pub/fedora/linux/releases/14/Live/i686/Fedora-14-i686-Live-Desktop.iso[Fedora
+14 Desktop Edition]
+
+Category:Seminars

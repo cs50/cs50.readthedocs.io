@@ -1,0 +1,748 @@
+---
+tags: []
+title: Shuttleboy_API
+---
+The Shuttleboy API allows you to request data programmatically from
+http://shuttleboy.cs50.net/[Shuttleboy] in
+http://en.wikipedia.org/wiki/Comma-separated_values[CSV],
+http://en.wikipedia.org/wiki/JSON[JSON],
+http://en.wikipedia.org/wiki/JSON#JSONP[JSONP],
+http://php.net/manual/en/function.serialize.php[serialized PHP], or
+http://en.wikipedia.org/wiki/XML[XML] format. The API provides a
+http://en.wikipedia.org/wiki/Representational_State_Transfer[RESTful]
+interface, which means that you can query it using simple HTTP GET
+requests.
+
+Shuttleboy knows about shuttles through the end of the current school
+year.
+
+[[]]
+Author
+------
+
+To report bugs or request features, contact:
+
+David J. Malan '99 +
+[mailto:dmalan@harvard[mailto:dmalan@harvard].edu dmalan@harvard.edu] +
+http://www.cs.harvard.edu/malan/
+
+[[]]
+License
+-------
+
+Use of this API is governed by a
+http://creativecommons.org/licenses/by-nc/3.0/[Creative Commons
+Attribution-Noncommerical 3.0 Unported] license, which means that you
+may use its data for non-commercial purposes so long as you attribute
+your data to this API, as by including a link to
+http://shuttleboy.cs50.net/[Shuttleboy] in your own work. To discuss
+commercial purposes, contact the author.
+
+[[]]
+Methods
+-------
+
+All methods support
+http://en.wikipedia.org/wiki/Cross-Origin_Resource_Sharing[CORS].
+
+[[]]
+stops
+~~~~~
+
+To query the Shuttleboy API for stops, contact the server via URLs in
+this format:
+
+`http://shuttleboy.cs50.net/api/1.2/stops?param1=value1&param2=value2&...`
+
+Supported parameters include:
+
+[cols=",",options="header",]
+|=======================================================================
+|parameter |description
+|callback |_Required iff *output* is *jsonp*_. Callback function with
+which response will be padded.
+
+|output |_Required._ Format for output. Must be *csv*, *json*, *jsonp*,
+or *php*.
+|=======================================================================
+
+If any parameters are malformed or any required parameters are omitted,
+an empty response will be returned along with, possibly, HTTP status
+code
+http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1[400 Bad
+Request].
+
+http://www.uos.harvard.edu/transportation/passenger_transport_services/[University
+Operations Services] tends rename stops each year, so try not to
+hardcode them into your own code (for very long).
+
+[[]]
+CSV
+^^^
+
+If you request stops in CSV format (e.g.,
+http://shuttleboy.cs50.net/api/1.2/stops?output=csv), the response will
+be a series of comma-delimited rows, per the below:
+
+code,text------------------------------------------ code,text
+stop,lat,lng
+"114 Western Ave",,
+"Boylston Gate",42.373078,-71.117578
+"Harvard Square",42.373226,-71.119527
+"HBS Rotary",42.365290,-71.122905
+HKS,42.371515,-71.120910
+i-Lab,42.364618,-71.123360
+"Lamont Library",42.372862,-71.115046
+"Mass Ave Garden St",42.375186,-71.119394
+"Mather House",42.368719,-71.115170
+"Maxwell Dworkin",42.378795,-71.116738
+"Memorial Hall",42.376273,-71.114441
+"Peabody Terrace",42.367034,-71.114936
+"Pound Hall",42.378184,-71.119992
+Quad,42.381820,-71.125369
+"Soldiers Field Park",42.364965,-71.120287
+Stadium,42.367007,-71.124832
+"Winthrop House",42.370570,-71.119220
+------------------------------------------
+
+Note that the response's first row defines the CSV file's fields.
+Fields' order may change over time, so do not hardcode indices into your
+own code. Use that first row to determine fields' indices dynamically,
+per this article on link:Neat_Tricks#Parsing_CSV[parsing CSV].
+
+[[]]
+JSON
+^^^^
+
+If you request stops in JSON format (e.g.,
+http://shuttleboy.cs50.net/api/1.2/stops?output=json), the response wil
+be an array of objects, per the below:
+
+code,javascript----------------------------------- code,javascript
+[
+   {
+      "stop":"114 Western Ave",
+      "lat":null,
+      "lng":null
+   },
+   {
+      "stop":"Boylston Gate",
+      "lat":"42.373078",
+      "lng":"-71.117578"
+   },
+   {
+      "stop":"Harvard Square",
+      "lat":"42.373226",
+      "lng":"-71.119527"
+   },
+   {
+      "stop":"HBS Rotary",
+      "lat":"42.365290",
+      "lng":"-71.122905"
+   },
+   {
+      "stop":"HKS",
+      "lat":"42.371515",
+      "lng":"-71.120910"
+   },
+   {
+      "stop":"i-Lab",
+      "lat":"42.364618",
+      "lng":"-71.123360"
+   },
+   {
+      "stop":"Lamont Library",
+      "lat":"42.372862",
+      "lng":"-71.115046"
+   },
+   {
+      "stop":"Mass Ave Garden St",
+      "lat":"42.375186",
+      "lng":"-71.119394"
+   },
+   {
+      "stop":"Mather House",
+      "lat":"42.368719",
+      "lng":"-71.115170"
+   },
+   {
+      "stop":"Maxwell Dworkin",
+      "lat":"42.378795",
+      "lng":"-71.116738"
+   },
+   {
+      "stop":"Memorial Hall",
+      "lat":"42.376273",
+      "lng":"-71.114441"
+   },
+   {
+      "stop":"Peabody Terrace",
+      "lat":"42.367034",
+      "lng":"-71.114936"
+   },
+   {
+      "stop":"Pound Hall",
+      "lat":"42.378184",
+      "lng":"-71.119992"
+   },
+   {
+      "stop":"Quad",
+      "lat":"42.381820",
+      "lng":"-71.125369"
+   },
+   {
+      "stop":"Soldiers Field Park",
+      "lat":"42.364965",
+      "lng":"-71.120287"
+   },
+   {
+      "stop":"Stadium",
+      "lat":"42.367007",
+      "lng":"-71.124832"
+   },
+   {
+      "stop":"Winthrop House",
+      "lat":"42.370570",
+      "lng":"-71.119220"
+   }
+]
+-----------------------------------
+
+[[]]
+JSONP
+^^^^^
+
+If you request stops in JSONP format (e.g.,
+http://shuttleboy.cs50.net/api/1.2/stops?output=jsonp&callback=parseResponse),
+the response will be a padded array of objects, per the below:
+
+code,javascript---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+code,javascript
+parseResponse([{"stop":"114 Western Ave","lat":null,"lng":null},{"stop":"Boylston Gate","lat":"42.373078","lng":"-71.117578"},{"stop":"Harvard Square","lat":"42.373226","lng":"-71.119527"},{"stop":"HBS Rotary","lat":"42.365290","lng":"-71.122905"},{"stop":"HKS","lat":"42.371515","lng":"-71.120910"},{"stop":"i-Lab","lat":"42.364618","lng":"-71.123360"},{"stop":"Lamont Library","lat":"42.372862","lng":"-71.115046"},{"stop":"Mass Ave Garden St","lat":"42.375186","lng":"-71.119394"},{"stop":"Mather House","lat":"42.368719","lng":"-71.115170"},{"stop":"Maxwell Dworkin","lat":"42.378795","lng":"-71.116738"},{"stop":"Memorial Hall","lat":"42.376273","lng":"-71.114441"},{"stop":"Peabody Terrace","lat":"42.367034","lng":"-71.114936"},{"stop":"Pound Hall","lat":"42.378184","lng":"-71.119992"},{"stop":"Quad","lat":"42.381820","lng":"-71.125369"},{"stop":"Soldiers Field Park","lat":"42.364965","lng":"-71.120287"},{"stop":"Stadium","lat":"42.367007","lng":"-71.124832"},{"stop":"Winthrop House","lat":"42.370570","lng":"-71.119220"}])
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[[]]
+PHP
+^^^
+
+If you request stops in serialized PHP format (e.g.,
+http://shuttleboy.cs50.net/api/1.2/stops?output=php), the response will
+be a serialized array of associative arrays, per the below:
+
+code,php--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+code,php
+a:17:{i:0;a:3:{s:4:"stop";s:15:"114 Western Ave";s:3:"lat";N;s:3:"lng";N;}i:1;a:3:{s:4:"stop";s:13:"Boylston Gate";s:3:"lat";s:9:"42.373078";s:3:"lng";s:10:"-71.117578";}i:2;a:3:{s:4:"stop";s:14:"Harvard Square";s:3:"lat";s:9:"42.373226";s:3:"lng";s:10:"-71.119527";}i:3;a:3:{s:4:"stop";s:10:"HBS Rotary";s:3:"lat";s:9:"42.365290";s:3:"lng";s:10:"-71.122905";}i:4;a:3:{s:4:"stop";s:3:"HKS";s:3:"lat";s:9:"42.371515";s:3:"lng";s:10:"-71.120910";}i:5;a:3:{s:4:"stop";s:5:"i-Lab";s:3:"lat";s:9:"42.364618";s:3:"lng";s:10:"-71.123360";}i:6;a:3:{s:4:"stop";s:14:"Lamont Library";s:3:"lat";s:9:"42.372862";s:3:"lng";s:10:"-71.115046";}i:7;a:3:{s:4:"stop";s:18:"Mass Ave Garden St";s:3:"lat";s:9:"42.375186";s:3:"lng";s:10:"-71.119394";}i:8;a:3:{s:4:"stop";s:12:"Mather House";s:3:"lat";s:9:"42.368719";s:3:"lng";s:10:"-71.115170";}i:9;a:3:{s:4:"stop";s:15:"Maxwell Dworkin";s:3:"lat";s:9:"42.378795";s:3:"lng";s:10:"-71.116738";}i:10;a:3:{s:4:"stop";s:13:"Memorial Hall";s:3:"lat";s:9:"42.376273";s:3:"lng";s:10:"-71.114441";}i:11;a:3:{s:4:"stop";s:15:"Peabody Terrace";s:3:"lat";s:9:"42.367034";s:3:"lng";s:10:"-71.114936";}i:12;a:3:{s:4:"stop";s:10:"Pound Hall";s:3:"lat";s:9:"42.378184";s:3:"lng";s:10:"-71.119992";}i:13;a:3:{s:4:"stop";s:4:"Quad";s:3:"lat";s:9:"42.381820";s:3:"lng";s:10:"-71.125369";}i:14;a:3:{s:4:"stop";s:19:"Soldiers Field Park";s:3:"lat";s:9:"42.364965";s:3:"lng";s:10:"-71.120287";}i:15;a:3:{s:4:"stop";s:7:"Stadium";s:3:"lat";s:9:"42.367007";s:3:"lng";s:10:"-71.124832";}i:16;a:3:{s:4:"stop";s:14:"Winthrop House";s:3:"lat";s:9:"42.370570";s:3:"lng";s:10:"-71.119220";}}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Once you http://php.net/manual/en/function.unserialize.php[unserialize]
+that response, you'll have the below in memory:
+
+code,php----------------------------------------- code,php
+Array
+(
+    [0] => Array
+        (
+            [stop] => 114 Western Ave
+            [lat] => 
+            [lng] => 
+        )
+
+    [1] => Array
+        (
+            [stop] => Boylston Gate
+            [lat] => 42.373078
+            [lng] => -71.117578
+        )
+
+    [2] => Array
+        (
+            [stop] => Harvard Square
+            [lat] => 42.373226
+            [lng] => -71.119527
+        )
+
+    [3] => Array
+        (
+            [stop] => HBS Rotary
+            [lat] => 42.365290
+            [lng] => -71.122905
+        )
+
+    [4] => Array
+        (
+            [stop] => HKS
+            [lat] => 42.371515
+            [lng] => -71.120910
+        )
+
+    [5] => Array
+        (
+            [stop] => i-Lab
+            [lat] => 42.364618
+            [lng] => -71.123360
+        )
+
+    [6] => Array
+        (
+            [stop] => Lamont Library
+            [lat] => 42.372862
+            [lng] => -71.115046
+        )
+
+    [7] => Array
+        (
+            [stop] => Mass Ave Garden St
+            [lat] => 42.375186
+            [lng] => -71.119394
+        )
+
+    [8] => Array
+        (
+            [stop] => Mather House
+            [lat] => 42.368719
+            [lng] => -71.115170
+        )
+
+    [9] => Array
+        (
+            [stop] => Maxwell Dworkin
+            [lat] => 42.378795
+            [lng] => -71.116738
+        )
+
+    [10] => Array
+        (
+            [stop] => Memorial Hall
+            [lat] => 42.376273
+            [lng] => -71.114441
+        )
+
+    [11] => Array
+        (
+            [stop] => Peabody Terrace
+            [lat] => 42.367034
+            [lng] => -71.114936
+        )
+
+    [12] => Array
+        (
+            [stop] => Pound Hall
+            [lat] => 42.378184
+            [lng] => -71.119992
+        )
+
+    [13] => Array
+        (
+            [stop] => Quad
+            [lat] => 42.381820
+            [lng] => -71.125369
+        )
+
+    [14] => Array
+        (
+            [stop] => Soldiers Field Park
+            [lat] => 42.364965
+            [lng] => -71.120287
+        )
+
+    [15] => Array
+        (
+            [stop] => Stadium
+            [lat] => 42.367007
+            [lng] => -71.124832
+        )
+
+    [16] => Array
+        (
+            [stop] => Winthrop House
+            [lat] => 42.370570
+            [lng] => -71.119220
+        )
+
+)
+-----------------------------------------
+
+[[]]
+XML
+^^^
+
+If you request data in XML format (e.g.,
+http://shuttleboy.cs50.net/api/1.2/stops?output=xml), the response will
+be an XML document whose root element is *stops*, each of whose children
+is an *stop*, per the below:
+
+code,xml-------------------------------------- code,xml
+<?xml version="1.0" encoding="utf-8"?>
+<stops>
+  <stop>
+    <stop>114 Western Ave</stop>
+    <lat />
+    <lng />
+  </stop>
+  <stop>
+    <stop>Boylston Gate</stop>
+    <lat>42.373078</lat>
+    <lng>-71.117578</lng>
+  </stop>
+  <stop>
+    <stop>Harvard Square</stop>
+    <lat>42.373226</lat>
+    <lng>-71.119527</lng>
+  </stop>
+  <stop>
+    <stop>HBS Rotary</stop>
+    <lat>42.365290</lat>
+    <lng>-71.122905</lng>
+  </stop>
+  <stop>
+    <stop>HKS</stop>
+    <lat>42.371515</lat>
+    <lng>-71.120910</lng>
+  </stop>
+  <stop>
+    <stop>i-Lab</stop>
+    <lat>42.364618</lat>
+    <lng>-71.123360</lng>
+  </stop>
+  <stop>
+    <stop>Lamont Library</stop>
+    <lat>42.372862</lat>
+    <lng>-71.115046</lng>
+  </stop>
+  <stop>
+    <stop>Mass Ave Garden St</stop>
+    <lat>42.375186</lat>
+    <lng>-71.119394</lng>
+  </stop>
+  <stop>
+    <stop>Mather House</stop>
+    <lat>42.368719</lat>
+    <lng>-71.115170</lng>
+  </stop>
+  <stop>
+    <stop>Maxwell Dworkin</stop>
+    <lat>42.378795</lat>
+    <lng>-71.116738</lng>
+  </stop>
+  <stop>
+    <stop>Memorial Hall</stop>
+    <lat>42.376273</lat>
+    <lng>-71.114441</lng>
+  </stop>
+  <stop>
+    <stop>Peabody Terrace</stop>
+    <lat>42.367034</lat>
+    <lng>-71.114936</lng>
+  </stop>
+  <stop>
+    <stop>Pound Hall</stop>
+    <lat>42.378184</lat>
+    <lng>-71.119992</lng>
+  </stop>
+  <stop>
+    <stop>Quad</stop>
+    <lat>42.381820</lat>
+    <lng>-71.125369</lng>
+  </stop>
+  <stop>
+    <stop>Soldiers Field Park</stop>
+    <lat>42.364965</lat>
+    <lng>-71.120287</lng>
+  </stop>
+  <stop>
+    <stop>Stadium</stop>
+    <lat>42.367007</lat>
+    <lng>-71.124832</lng>
+  </stop>
+  <stop>
+    <stop>Winthrop House</stop>
+    <lat>42.370570</lat>
+    <lng>-71.119220</lng>
+  </stop>
+</stops>
+--------------------------------------
+
+[[]]
+trips
+~~~~~
+
+To query the Shuttleboy API for trips, contact the server via URLs in
+this format:
+
+`http://shuttleboy.cs50.net/api/1.2/trips?param1=value1&param2=value2&...`
+
+Supported parameters include:
+
+[cols=",",options="header",]
+|=======================================================================
+|parameter |description
+|a |stop]].
+
+|b |stop]].
+
+|callback |_Required iff *output* is *jsonp*_. Callback function with
+which response will be padded.
+
+|edt |_Optional._ An end date/time in *YYYY-MM-DD* or
+*YYYY-MM-DDTHH:MM:SS* format, where *HH* is in 24-hour time. (Don't
+overlook the *T* between *YYYY-MM-DD* and *HH:MM:SS* in the latter.)
+Shuttles departing origin before or on this date/time will be returned.
+If omitted, *sdt* plus 24 hours will be assumed.
+
+|output |_Required._ Format for output. Must be *csv*, *json*, *jsonp*,
+*php*, or *xml*.
+
+|sdt |_Optional._ A start date/time in *YYYY-MM-DD* or
+*YYYY-MM-DDTHH:MM:SS* format, where *HH* is in 24-hour time. (Don't
+overlook the *T* between *YYYY-MM-DD* and *HH:MM:SS* in the latter.)
+Shuttles departing origin on or after this date/time will be returned.
+If omitted, the current date/time will be assumed.
+|=======================================================================
+
+If any parameters are malformed or any required parameters are omitted,
+an empty response will be returned along with, possibly, HTTP status
+code
+http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1[400 Bad
+Request].
+
+[[]]
+CSV
+^^^
+
+If you request trips in CSV format (e.g.,
+http://shuttleboy.cs50.net/api/1.2/trips?a=Quad&b=Stadium&sdt=2009-12-02&output=csv),
+the response will be a series of comma-delimited rows, per the below:
+
+code,text--------------------------------------- code,text
+departs,arrives
+2009-12-02T05:40:00,2009-12-02T05:55:00
+2009-12-02T06:10:00,2009-12-02T06:25:00
+2009-12-02T06:35:00,2009-12-02T06:50:00
+2009-12-02T07:00:00,2009-12-02T07:20:00
+---------------------------------------
+
+Note that the response's first row defines the CSV file's fields.
+Fields' order may change over time, so do not hardcode indices into your
+own code. Use that first row to determine fields' indices dynamically,
+per this article on link:Neat_Tricks#Parsing_CSV[parsing CSV].
+
+[[]]
+JSON
+^^^^
+
+If you request trips in JSON format (e.g.,
+http://shuttleboy.cs50.net/api/1.2/trips?a=Quad&b=Stadium&sdt=2009-12-02&output=json),
+the response wil be an array of objects, per the below:
+
+code,javascript-------------------------------------- code,javascript
+[
+   {
+      "departs":"2009-12-02T05:40:00",
+      "arrives":"2009-12-02T05:55:00"
+   },
+   {
+      "departs":"2009-12-02T06:10:00",
+      "arrives":"2009-12-02T06:25:00"
+   },
+   {
+      "departs":"2009-12-02T06:35:00",
+      "arrives":"2009-12-02T06:50:00"
+   },
+   {
+      "departs":"2009-12-02T07:00:00",
+      "arrives":"2009-12-02T07:20:00"
+   }
+]
+--------------------------------------
+
+[[]]
+JSONP
+^^^^^
+
+If you request trips in JSONP format (e.g.,
+http://shuttleboy.cs50.net/api/1.2/trips?a=Quad&b=Stadium&sdt=2009-12-02&output=jsonp&callback=parseResponse),
+the response will be a padded array of objects, per the below:
+
+code,javascript----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+code,javascript
+parseResponse([{"departs":"2009-12-02T05:40:00","arrives":"2009-12-02T05:55:00"},{"departs":"2009-12-02T06:10:00","arrives":"2009-12-02T06:25:00"},{"departs":"2009-12-02T06:35:00","arrives":"2009-12-02T06:50:00"},{"departs":"2009-12-02T07:00:00","arrives":"2009-12-02T07:20:00"}])
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[[]]
+PHP
+^^^
+
+If you request trips in serialized PHP format (e.g.,
+http://shuttleboy.cs50.net/api/1.2/trips?a=Quad&b=Stadium&sdt=2009-12-02&output=php),
+the response will be a serialized array of associative arrays, per the
+below:
+
+code,php--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+code,php
+a:4:{i:0;a:2:{s:7:"departs";s:19:"2009-12-02T05:40:00";s:7:"arrives";s:19:"2009-12-02T05:55:00";}i:1;a:2:{s:7:"departs";s:19:"2009-12-02T06:10:00";s:7:"arrives";s:19:"2009-12-02T06:25:00";}i:2;a:2:{s:7:"departs";s:19:"2009-12-02T06:35:00";s:7:"arrives";s:19:"2009-12-02T06:50:00";}i:3;a:2:{s:7:"departs";s:19:"2009-12-02T07:00:00";s:7:"arrives";s:19:"2009-12-02T07:20:00";}}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Once you http://php.net/manual/en/function.unserialize.php[unserialize]
+that response, you'll have the below in memory:
+
+code,php-------------------------------------------- code,php
+Array
+(
+    [0] => Array
+        (
+            [departs] => 2009-12-02T05:40:00
+            [arrives] => 2009-12-02T05:55:00
+        )
+
+    [1] => Array
+        (
+            [departs] => 2009-12-02T06:10:00
+            [arrives] => 2009-12-02T06:25:00
+        )
+
+    [2] => Array
+        (
+            [departs] => 2009-12-02T06:35:00
+            [arrives] => 2009-12-02T06:50:00
+        )
+
+    [3] => Array
+        (
+            [departs] => 2009-12-02T07:00:00
+            [arrives] => 2009-12-02T07:20:00
+        )
+
+)
+--------------------------------------------
+
+[[]]
+XML
+^^^
+
+If you request data in XML format (e.g.,
+http://shuttleboy.cs50.net/api/1.2/trips?a=Quad&b=Stadium&sdt=2009-12-02&output=xml),
+the response will be an XML document whose root element is *trips*, each
+of whose children is an *trip*, per the below:
+
+code,xml---------------------------------------------- code,xml
+<?xml version="1.0" encoding="UTF-8"?>
+<trips>
+    <trip>
+        <departs>2009-12-02T05:40:00</departs>
+        <arrives>2009-12-02T05:55:00</arrives>
+    </trip>
+    <trip>
+        <departs>2009-12-02T06:10:00</departs>
+        <arrives>2009-12-02T06:25:00</arrives>
+    </trip>
+    <trip>
+        <departs>2009-12-02T06:35:00</departs>
+        <arrives>2009-12-02T06:50:00</arrives>
+    </trip>
+    <trip>
+        <departs>2009-12-02T07:00:00</departs>
+        <arrives>2009-12-02T07:20:00</arrives>
+    </trip>
+</trips>
+----------------------------------------------
+
+[[]]
+Examples
+--------
+
+* Returns all stops:
+** http://shuttleboy.cs50.net/api/1.2/stops?output=csv
+** http://shuttleboy.cs50.net/api/1.2/stops?output=json
+**
+http://shuttleboy.cs50.net/api/1.2/stops?output=json&callback=parseResponse
+** http://shuttleboy.cs50.net/api/1.2/stops?output=php
+** http://shuttleboy.cs50.net/api/1.2/stops?output=xml
+* Returns next 24 hours' worth of shuttles from Quad to Stadium:
+** http://shuttleboy.cs50.net/api/1.2/trips?a=Quad&b=Stadium&output=csv
+** http://shuttleboy.cs50.net/api/1.2/trips?a=Quad&b=Stadium&output=json
+**
+http://shuttleboy.cs50.net/api/1.2/trips?a=Quad&b=Stadium&output=json&callback=parseResponse
+** http://shuttleboy.cs50.net/api/1.2/trips?a=Quad&b=Stadium&output=php
+** http://shuttleboy.cs50.net/api/1.2/trips?a=Quad&b=Stadium&output=xml
+* Returns shuttles from Quad to Stadium for 2 December 2009:
+**
+http://shuttleboy.cs50.net/api/1.2/trips?a=Quad&b=Stadium&sdt=2009-12-02&output=csv
+**
+http://shuttleboy.cs50.net/api/1.2/trips?a=Quad&b=Stadium&sdt=2009-12-02&output=json
+**
+http://shuttleboy.cs50.net/api/1.2/trips?a=Quad&b=Stadium&sdt=2009-12-02&output=json&callback=parseResponse
+**
+http://shuttleboy.cs50.net/api/1.2/trips?a=Quad&b=Stadium&sdt=2009-12-02&output=php
+**
+http://shuttleboy.cs50.net/api/1.2/trips?a=Quad&b=Stadium&sdt=2009-12-02&output=xml
+* Returns 24 hours' worth of shuttles leaving Quad for Stadium at noon
+or later on 2 December 2009:
+**
+http://shuttleboy.cs50.net/api/1.2/trips?a=Quad&b=Stadium&sdt=2009-12-02T12:00:00&output=csv
+**
+http://shuttleboy.cs50.net/api/1.2/trips?a=Quad&b=Stadium&sdt=2009-12-02T12:00:00&output=json
+**
+http://shuttleboy.cs50.net/api/1.2/trips?a=Quad&b=Stadium&sdt=2009-12-02T12:00:00&output=json&callback=parseResponse
+**
+http://shuttleboy.cs50.net/api/1.2/trips?a=Quad&b=Stadium&sdt=2009-12-02T12:00:00&output=php
+**
+http://shuttleboy.cs50.net/api/1.2/trips?a=Quad&b=Stadium&sdt=2009-12-02T12:00:00&output=xml
+* Returns shuttles leaving Quad for Stadium between noon on 2 December
+2009 and noon on 4 December 2009:
+**
+http://shuttleboy.cs50.net/api/1.2/trips?a=Quad&b=Stadium&sdt=2009-12-02T12:00:00&edt=2009-12-04T12:00:00&output=csv
+**
+http://shuttleboy.cs50.net/api/1.2/trips?a=Quad&b=Stadium&sdt=2009-12-02T12:00:00&edt=2009-12-04T12:00:00&output=json
+**
+http://shuttleboy.cs50.net/api/1.2/trips?a=Quad&b=Stadium&sdt=2009-12-02T12:00:00&edt=2009-12-04T12:00:00&output=jsonp&callback=parseResponse
+**
+http://shuttleboy.cs50.net/api/1.2/trips?a=Quad&b=Stadium&sdt=2009-12-02T12:00:00&edt=2009-12-04T12:00:00&output=php
+**
+http://shuttleboy.cs50.net/api/1.2/trips?a=Quad&b=Stadium&sdt=2009-12-02T12:00:00&edt=2009-12-04T12:00:00&output=xml
+
+[[]]
+See Also
+--------
+
+* link:Neat_Tricks#Parsing_CSV[Parsing CSV]
+* link:Neat_Tricks#Parsing_Dates.2FTimes[Parsing Dates/Times]
+* link:Neat_Tricks#Parsing_JSON[Parsing JSON]
+* link:Neat_Tricks#Parsing_RSS[Parsing RSS]
+* link:Neat_Tricks#Unserializing_PHP[Unserializing PHP]
+
+[[]]
+Related APIs
+------------
+
+* link:HarvardCourses API[HarvardCourses API]
+* link:HarvardEnergy API[HarvardEnergy API]
+* link:HarvardEvents API[HarvardEvents API]
+* link:HarvardFood API[HarvardFood API]
+* link:HarvardMaps API[HarvardMaps API]
+* link:HarvardNews API[HarvardNews API]
+* link:HarvardTweets API[HarvardTweets API]
+
+[[]]
+External Links
+--------------
+
+* http://en.wikipedia.org/wiki/Comma-separated_values[Comma-separated
+values]
+* http://en.wikipedia.org/wiki/JSON[JSON]
+* http://en.wikipedia.org/wiki/JSON#JSONP[JSONP]
+* http://php.net/manual/en/function.serialize.php[PHP: serialize]
+* http://php.net/manual/en/function.unserialize.php[PHP: unserialize]
+* http://en.wikipedia.org/wiki/RSS[RSS]
+* http://en.wikipedia.org/wiki/XML[XML]
+
+[[]]
+Changelog
+---------
+
+* http://wiki.cs50.net.php?title=Shuttleboy_API&oldid=1006[1.0]
+* http://wiki.cs50.net.php?title=Shuttleboy_API&oldid=1915[1.1]
+** Added support for JSONP.
+* 1.2
+** Added support for XML.
+
+Category:API

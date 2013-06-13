@@ -1,6 +1,0 @@
----
-tags: []
-title: binary_search
----
-1.  REDIRECT Search_algorithms#Binary_Search
-

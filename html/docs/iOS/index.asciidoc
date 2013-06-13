@@ -1,0 +1,93 @@
+---
+tags: []
+title: iOS
+---
+[[]]
+Overview
+~~~~~~~~
+
+In order to install apps that you've written (or for which you have
+source code, as from a book, class, or website) on to your own iPad,
+iPhone, or iPod touch, you need to join the iOS Developer Program, which
+comes in three flavors:
+
+* http://developer.apple.com/programs/ios/[Standard Program], which
+costs $99 per year but lets you download Xcode 4 for free and submit
+apps to Apple's App Store.
+* http://developer.apple.com/programs/ios/enterprise/[Enterprise
+Program], which costs $299 per year but lets you (and anyone in your
+company) download Xcode 4 for free and distribute apps among your
+employees.
+* http://developer.apple.com/programs/ios/university/[University
+Program], which is free but does not let you download Xcode 4 for free
+or submit apps to Apple's App Store.
+
+CS50 is enrolled in the University Program.
+
+*You are welcome to join CS50's team if:*
+
+* You are a Harvard affiliate. *Unfortunately, CS50x students aren't
+eligible.*
+* You own an iPad, iPhone, or iPod touch.
+* You have (access to) an Intel-based Mac running Mac OS 10.7.3 (Lion)
+or higher (which the latest version of Xcode requires).
+* You want to install *and are ready to install* apps on to your own
+iPad, iPhone, or iPod touch (that you already wrote or for which you
+have source code, as from a book, class, or website).
+* You do not want to submit apps to Apple's App Store.
+
+*You should not join CS50's team if:*
+
+* You are not a Harvard affiliate.
+* You do not own an iPad, iPhone, or iPod touch. (There'd be no upside
+of joining CS50's team.)
+* You do not have (access) to an Intel-based Mac running Mac OS 10.7.3
+(Lion) or higher (which the latest version of Xcode requires).
+* You simply want to write code and test it in the iOS Simulator (that
+comes with Xcode).
+* You do not yet have a working app (that you already wrote or for which
+you have source code, as from a book, class, or website) that runs in
+the iOS Simulator (that comes with Xcode).
+* You want to submit apps to Apple's App Store. (To submit apps, you
+need to join the http://developer.apple.com/programs/ios/[Standard
+Program] yourself for $99/year.)
+* You simply want to download Xcode 4.3.1. (If running Mac OS 10.7.3 or
+higher, you can download Xcode 4.3.1 for free from the
+http://itunes.apple.com/us/app/xcode/id448457090?mt=12[Mac App Store].)
+
+[[]]
+How to Join CS50's Team
+~~~~~~~~~~~~~~~~~~~~~~~
+
+*To join CS50's team, you must have (access to) an Intel-based Mac
+running Mac OS 10.7.3 (Lion) or higher (which the latest version of
+Xcode requires).*
+
+Once on CS50's team, you should have access to the
+http://developer.apple.com/ios/my/overview.action[iOS Provisioning
+Portal], where you can
+http://developer.apple.com/ios/my/certificates/create.action[create a
+development certificate]. Once approved by a Team Agent or Team Admin
+(i.e., CS50's sysadmins), you'll be able to install apps on your iOS
+device with that certificate, per Apple's
+http://developer.apple.com/ios/my/certificates/howto.action[instructions].
+
+1.  http://developer.apple.com/programs/register/[Register as an Apple
+Developer] for free. You'll be prompted to create an _Apple ID_ or use
+an existing one (which you might have because you already use iTunes).
+2.  Download Xcode 4 for free from the
+http://itunes.apple.com/us/app/xcode/id448457090?mt=12[Mac App Store].
+3.  Locate your iOS device's Unique Device ID (UDID):
+1.  Connect your iOS device to your Mac and launch Xcode.
+2.  Select *Organizer* under Xcode's *Window* menu.
+3.  Highlight and copy the 40-character hexadecimal string to the right
+of *Identifier*. That's your UDID.
+4. 
+https://spreadsheets.google.com/viewform?hl=en&formkey=dDdtZHNEbGhESHgtVF92YXNGS3dRUFE6MQ[Apply
+to join CS50's team].
+5.  Check your email. Within 72 hours of applying to join CS50's team,
+you should receive an invitation containing a hyperlinked invitation
+code. (If not, email sysadmins@cs50.net to inquire.) Click that link to
+join CS50's team.
+
+Category:HOWTO

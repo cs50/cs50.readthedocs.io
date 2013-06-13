@@ -1,0 +1,99 @@
+---
+tags: []
+title: Cloud
+---
+[[]]
+Getting Started
+~~~~~~~~~~~~~~~
+
+`yum install alpine emacs git nano rsync unzip zip`
+
+[[]]
+Apache
+~~~~~~
+
+`yum install httpd php php-xml` +
+`chkconfig httpd on`
+
+`openssl genrsa -des3 -out cloud.cs75.net.key 2048` +
+`openssl req -new -key cloud.cs75.net.key -out cloud.cs75.net.csr` +
+`openssl rsa -in cloud.cs75.net.key -out cloud.cs75.net.key`
+
+[[]]
+KDE
+~~~
+
+`yum install kate konsole* kdebase`
+
+[[]]
+LDAP
+~~~~
+
+First ran:
+
+`yum install openldap-clients nss_ldap` +
+`authconfig --disablefingerprint --update`
+
+Then ran `setup` to configure *Authentication*.
+
+[[]]
+MySQL
+~~~~~
+
+`yum install php-mysql `
+
+[[]]
+NFS
+~~~
+
+In `/etc/sysconfig/selinux`, changed `SELINUX=enforcing` to
+`SELINUX=disabled`.
+
+[[]]
+PHP
+~~~
+
+`yum install php php-mysql php-xml mod_suphp`
+
+Then edited `vi /etc/suphp.conf` to have `check_vhost_docroot=false`.
+And uncommented `suPHP_AddHandler php5-script` in
+`/etc/httpd/conf.d/mod_suphp.conf`. And edited `/etc/php.ini` to have
+`session.save_path = "/tmp"`.
+
+[[]]
+phpMyAdmin
+~~~~~~~~~~
+
+`yum install phpmyadmin`
+
+[[]]
+Virtualmin
+~~~~~~~~~~
+
+`yum install perl-LDAP`
+
+System Settings -> Server Templates -> Default -> Apache Website, then
+make sure "Automatically add appropriate SuExec directive" is set to
+"No".
+
+[[]]
+Usermin
+~~~~~~~
+
+`wget "`http://downloads.sourceforge.net/project/webadmin/usermin/1.440/usermin-1.440-1.noarch.rpm?use_mirror=voxel[`http://downloads.sourceforge.net/project/webadmin/usermin/1.440/usermin-1.440-1.noarch.rpm?use_mirror=voxel`]`"` +
+`rpm -ivh usermin-1.440-1.noarch.rpm` +
+`mv /etc/pam.d/usermin /etc/pam.d/usermin.orig` +
+`cp -a /etc/pam.d/sshd /etc/pam.d/usermin` +
+`service usermin restart`
+
+[[]]
+Webmin
+~~~~~~
+
+`yum install perl-Authen-PAM perl-Net-SSLeay ` +
+`wget "`http://downloads.sourceforge.net/project/webadmin/webmin/1.510/webmin-1.510-1.noarch.rpm?use_mirror=cdnetworks-us-2[`http://downloads.sourceforge.net/project/webadmin/webmin/1.510/webmin-1.510-1.noarch.rpm?use_mirror=cdnetworks-us-2`]`"` +
+`rpm -ivh webmin-1.510-1.noarch.rpm`
+
+Then edited `/etc/webmin/miniserv.conf` and changed `ssl=0` to `ssl=1`.
+
+Then opened 10000:tcp via `setup`.

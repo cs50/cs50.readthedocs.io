@@ -1,0 +1,6 @@
+---
+tags: []
+title: Argument
+---
+1.  redirect Argument
+

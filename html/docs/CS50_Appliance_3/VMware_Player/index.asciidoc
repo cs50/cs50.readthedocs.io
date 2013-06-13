@@ -1,0 +1,24 @@
+Here's how to install the [[CS50_Appliance_3|CS50 Appliance]] using VMware Player for [[#Installation|Windows]].
+
+== Installation ==
+
+# Download VMware Player for free from http://www.vmware.com/products/player/.
+# Double-click the file you just downloaded (which is likely in your '''Downloads''' folder) in order launch VMware Player's installer.
+# If a window entitled '''User Account Control''', click '''Yes'''.
+# A window entitled '''VMware Player Setup''' should appear.  Click '''Next'''.
+# When prompted to select a '''Destination Folder''', click '''Next'''.
+# When prompted about '''Shortcuts''', click '''Next'''.  (Uncheck '''Desktop''' and/or '''Start Menu Programs folder''' if you'd like.)
+# When prompted to '''Perform the Requested Operations''', click '''Continue'''.
+# Once you see '''Setup Wizard Complete''', click '''Restart Now''' if prompted, else '''Continue'''.
+# Download a ZIP file of the [[CS50_Appliance_3|CS50 Appliance]] at http://mirror.cs50.net/appliance/3/cs50-appliance-3-15-vmx.zip.  That ZIP file is over 1GB in size, so it might take a while to download.
+# Once downloaded, unzip the ZIP file, and you should have a folder named '''cs50-appliance-3''' with two files within ('''cs50-appliance-3-disk1.vmdk''' and '''cs50-appliance-3.vmx''').  Odds are that folder's in your '''Downloads''' folder, unless you saved it elsewhere. Do <u>not</u> double-click '''cs50-appliance-3-disk1.vmdk''' or '''cs50-appliance-3.vmx'''.
+# Drag that '''cs50-appliance-3''' folder somewhere safe, where you won't accidentally delete it.  Do <u>not</u> leave it in your '''Downloads''' folder.
+# Launch VMware Player, as by single- or double-clicking its icon, wherever it was installed.  
+# If prompted with '''Software Updates''', click '''Download and Install'''.  Else select '''Help > Software Updates''', then click '''Check for Updates'''.  Update and relaunch VMware Player as needed.
+# Select '''File > Open a Virtual Machine...'''.  Navigate your way to that '''cs50-appliance-3''' folder (wherever you moved it for safe-keeping), highlight the '''cs50-appliance-3''' (or '''cs50-appliance-3.vmx''') file within, and click '''Open'''.  Then click VMware Fusion's &#x25B6; button to start up the appliance.
+
+== Troubleshooting ==
+
+Email [mailto:sysadmins@cs50.net sysadmins@cs50.net] to report any issues.
+
+[[Category:HOWTO]]

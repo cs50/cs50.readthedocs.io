@@ -1,0 +1,9 @@
+{{#switch:{{{1}}}
+|sa|See also=See also
+|see=See
+|req=Required
+|xmp|Examples=Examples
+|decsep|.=.|thsep|,=,
+}}<noinclude>
+
+{{text|see}} [[Template:Text]].</noinclude>

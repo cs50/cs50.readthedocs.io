@@ -1,0 +1,360 @@
+---
+tags: []
+title: Life_After_50
+---
+[[]]
+Appliance
+---------
+
+You're welcome to continue using the link:Appliance[CS50 Appliance]
+beyond term's end to write C code, develop websites, and the like. But
+if you'd like to put a website (e.g., your final project) on the
+Internet, you'll need more than just the appliance. Even though the
+appliance is itself a web server, it doesn't have (by default) a
+publicly accessible IP address, and so it's only accessible from your
+own Mac or PC. Moreover, if you were to try hosting an actual website on
+the appliance, anytime you powered your Mac or PC off, your website
+would go offline!
+
+Best, then, to host your website on a server that's actually on the
+Internet. Here are some options.
+
+* *nice.fas.harvard.edu*. Managed by FAS IT, `nice.fas.harvard.edu` is a
+cluster of Linux servers on campus. Thanks to Problem Set 0, you should
+already have an FAS username and password with which you can SSH or SFTP
+to `nice.fas.harvard.edu`. Installed on this cluster are `gcc`, `gdb`,
+and other familiar tools. With this account can you host an HTML- and
+CSS-based website at
+`<nowiki>http://www.people.fas.harvard.edu/~username/</nowiki>`, where
+`username` is your own username; simply create a `public_html` directory
+inside of your home directory and `chmod` both `711`. Note that PHP and
+MySQL are not available. And link:Virtual Host[vhosts] are not
+supported, so you can't map a domain name to your FAS account.
+* *hcs.harvard.edu*. Managed by the http://www.hcs.harvard.edu/[Harvard
+Computer Society] (HCS), `hcs.harvard.edu` is a cluster of Linux servers
+on campus on which many student groups' websites are hosted. To sign up
+for an account of your own, fill out the form at
+http://www.hcs.harvard.edu/acctrequest, selecting *CS50 Final Project*
+under *Harvard Affiliation* and checking the box under *MySQL* if you'd
+also like a MySQL account. PHP, Python, Perl, and Ruby on Rails are all
+supported, as are link:Virtual Host[vhosts], so you can map a domain
+name to your HCS account. See HCS's
+http://www.hcs.harvard.edu/tutorials[tutorials] for more details.
+* *http://www.google.com/apps/intl/en/group.html[Google Apps]*.
+Among other things, the free version of Google Apps allows you send and
+receive email for a domain name via Gmail without having to forward it
+to your own personal account. Most web hosts' webmail clients are pretty
+bad, so hosting a domain's email with Google Apps and the domain itself
+with a commercial web host is a popular option. Once you
+https://www.google.com/a/cpanel/domain/new[sign up for Google Apps], you
+should see instructions on how to configure your domain's DNS settings
+(with http://en.wikipedia.org/wiki/MX_record[CNAME] and
+http://en.wikipedia.org/wiki/MX_record[MX] records) for email without
+affecting your website.
+* *http://en.wikipedia.org/wiki/Web_hosting_service[Commercial Web
+Host]*. If you'd rather not host your website with HCS (e.g., because
+you're graduating soon), you can sign up for a commercial web host,
+which tend to cost a few dollars per month. Most support MySQL, PHP,
+Python, Ruby, and more, but not C. And almost all support
+link:Virtual Host[vhosts]; some even let you host multiple domains
+inside of one account. Odds are you'll prefer, for flexibility's sake, a
+web host that offers SSH and SFTP access and not just a Web-based
+http://en.wikipedia.org/wiki/Control_panel_(web_hosting)[control panel].
+Avoid any web host that only supports
+http://en.wikipedia.org/wiki/File_Transfer_Protocol[FTP], which is
+unencrypted; choose one that supports SFTP (or
+http://en.wikipedia.org/wiki/FTPS[FTPS]). Innumerable web hosts exist,
+and their quality varies, so be sure to Google around for reviews or ask
+friends for advice. But here are some popular choices:
+** http://www.bluehost.com/[Bluehost]
+** http://www.dreamhost.com/hosting.html[DreamHost]
+** http://www.godaddy.com/hosting/web-hosting.aspx[Go Daddy]
+** http://www.hostgator.com/shared.shtml[Host Gator]
+** http://www.pair.com/services/web_hosting/[pair Networks]
+* *http://en.wikipedia.org/wiki/Virtual_private_server[Virtual Private
+Server]*. If you would like more control over your hosting environment
+than a http://en.wikipedia.org/wiki/Web_hosting_service[commercial web
+host] allows, including root (i.e., administrative access) and the
+ability to install most any software you want, you might want to sign up
+for a virtual private server (VPS), which is a virtual machine hosted on
+someone else's hardware that tends to cost a few more dollars per month.
+Odds are you'll find a commercial web host simpler, but if you'd like to
+get your hands dirty with some system administration, you might enjoy
+using a VPS. Many providers exist, and their quality varies, so be sure
+to Google around for reviews or ask friends for advice. But here are
+some popular choices:
+** http://www.dreamhost.com/hosting-vps.html[DreamHost]
+**
+http://www.godaddy.com/hosting/virtual-dedicated-servers.aspx?ci=9013[Go
+Daddy]
+** http://www.hostgator.com/vps-hosting/[Host Gator]
+** http://www.linode.com/[Linode]
+** http://www.pair.com/services/vps/[pair Networks]
+** http://www.slicehost.com/[Slicehost]
+** http://vpsland.com/[VPSLAND]
+
+[[]]
+tl;dr
+^^^^^
+
+If overwhelmed by so many options, know that HCS and DreamHost are
+probably the most popular choices for hosting websites, and Google Apps
+is probably the best choice for hosting email.
+
+To move a domain from your appliance to a new host, you'll want to:
+
+1.  Sign up for hosting account.
+2.  Copy your files from the appliance to your new hosting account, as
+via SFTP.
+3.  Copy your MySQL database (if any) from the appliance to your new
+hosting account, as by exporting it via phpMyAdmin's *Export* tab on the
+appliance and then importing it via phpMyAdmin's *Import* tab on the new
+host (assuming it offers phpMyAdmin).
+4.  Update your domain's DNS settings per the new host's instructions.
+
+[[]]
+Courses
+-------
+
+Below are courses that you can take in the
+link:#Spring_courses_you_can_take_after_CS50[spring] and
+link:#Fall_courses_you_can_take_after_CS50[fall] after CS50. Hover over
+nodes for courses' descriptions; click nodes for courses' websites.
+
+We used Google's
+http://code.google.com/apis/visualization/documentation/gallery/orgchart.html[Organizational
+Chart] API to make these visualizations. (You can too!)
+
+// CS50
+
+Introduction to Computer Science I
+
+"}, "", "Introduction to the intellectual enterprises of computer
+science and the art of programming. This course teaches students how to
+think algorithmically and solve problems efficiently. Topics include
+abstraction, encapsulation, data structures, databases, memory
+management, software development, virtualization, and websites.
+Languages include C, PHP, and JavaScript plus SQL, CSS, and XHTML.
+Problem sets inspired by real-world domains of biology, cryptography,
+finance, forensics, and gaming. Designed for concentrators and
+non-concentrators alike, with or without prior programming
+experience."], [\{v: "CS20", f: "
+
+CS20
+
+Discrete Mathematics for Computer Science
+
+"}, "CS50", "Widely applicable mathematical tools for computer science,
+including topics from logic, set theory, combinatorics, number theory,
+probability theory, and graph theory. Practice in reasoning formally and
+proving theorems."], [\{v: "CS51", f: "
+
+CS51
+
+Introduction to Computer Science II"}, "CS50", "Abstraction and design
+in computation. Topics include: Functional and object-oriented styles of
+programming; software engineering in the small; models of computation.
+Goal: understanding how to design large programs to make them readable,
+maintainable, efficient, and elegant. Exercises in ML and Java."], [\{v:
+"CS105", f: "CS105
+
+Privacy and Technology"}, "CS50", "What is privacy, and how is it
+affected by recent developments in computer technology? Course
+critically examines popular concepts of privacy and uses a rigorous
+analysis of technologies to understand the policy and ethical issues at
+play. Case studies: RFID, database anonymity, research ethics,
+wiretapping. Course relies on some technical material, but is open and
+accessible to all students, especially those with interest in economics,
+engineering, political science, computer science, sociology, biology,
+law, government, philosophy."], [\{v: "CS124", f: "
+
+CS124
+
+Data Structures and Algorithms
+
+"}, "CS50", "Design and analysis of efficient algorithms and data
+structures. Algorithm design methods, graph algorithms, approximation
+algorithms, and randomized algorithms are covered."], [\{v: "CS164", f:
+"
+
+CS164
+
+Mobile Software Engineering
+
+"}, "CS50", "Introduction to principles of software engineering for
+mobile devices and best practices, including code reviews, source
+control, and unit tests. Topics include Ajax, encapsulation, event
+handling, HTTP, memory management, MVC, object-oriented design, and user
+experience. Languages include HTML5, JavaScript, and Objective-C.
+Projects include mobile web apps and native iOS apps."], [\{v: "CS171",
+f: "
+
+CS171
+
+Visualization
+
+"}, "CS50", "Introduction to key design principles and techniques for
+visualizing data. Covers design practices, data and image models, visual
+perception, interaction principles, tools from various fields, and
+applications. Introduces programming of interactive visualizations."],
+[\{v: "CS179", f: "
+
+CS179
+
+Design of Usable Interactive Systems
+
+"}, "CS50", "Usability and design as keys to successful technology.
+Covers user observation techniques, needs assessment, low and high
+fidelity prototyping, usability testing methods, as well as theory of
+human perception and performance, anddesign best practices. Focuses on
+understanding and applying the lessons of human interaction to the
+design of usable systems; will also look at lessons to be learned from
+less usable systems. The course includes several small and one large
+project."], [\{v: "CS201", f: "
+
+CS201
+
+Cyberlaw and Intellectual Property: Advanced Problem Solving Workshop
+
+"}, "CS50", "Students in this experimental capstone course will work in
+teams to solve a series of hard problems-based cases related to cyberlaw
+and intellectual property."] ];
+
+urls["spring"] = [
+"http://courses.cs50.net/?school=FAS%26number=COMPSCI+50",
+"http://courses.cs50.net/?school=FAS%26number=COMPSCI+20",
+"http://courses.cs50.net/?school=FAS%26number=COMPSCI+51",
+"http://courses.cs50.net/?school=FAS%26number=COMPSCI+105",
+"http://courses.cs50.net/?school=FAS%26number=COMPSCI+124",
+"http://courses.cs50.net/?school=FAS%26number=COMPSCI+164",
+"http://courses.cs50.net/?school=FAS%26number=COMPSCI+171",
+"http://courses.cs50.net/?school=FAS%26number=COMPSCI+179",
+"http://courses.cs50.net/?school=FAS%26number=COMPSCI+201" ];
+
+rows["fall"] = [ [\{v: "CS50", f: "
+
+CS50
+
+Introduction to Computer Science I
+
+"}, "", "Introduction to the intellectual enterprises of computer
+science and the art of programming. This course teaches students how to
+think algorithmically and solve problems efficiently. Topics include
+abstraction, encapsulation, data structures, databases, memory
+management, software development, virtualization, and websites.
+Languages include C, PHP, and JavaScript plus SQL, CSS, and XHTML.
+Problem sets inspired by real-world domains of biology, cryptography,
+finance, forensics, and gaming. Designed for concentrators and
+non-concentrators alike, with or without prior programming
+experience."], [\{v: "CS61", f: "
+
+CS61
+
+Systems Programming and Machine Organization"}, "CS50", "Fundamentals of
+computer systems programming, machine organization, and performance
+tuning. This course provides a solid background in systems programming
+and a deep understanding of low-level machine organization and design.
+Topics include C and assembly language programming, program
+optimization, memory hierarchy and caching, virtual memory and dynamic
+memory management, concurrency, threads, and synchronization."], [\{v:
+"CS121", f: "
+
+CS121
+
+Introduction to Formal Systems and Computation
+
+"}, "CS50", "General introduction to formal systems and the theory of
+computation, teaching how to reason precisely about computation and
+prove mathematical theorems about its capabilities and limitations.
+Finite automata, Turing machines, formal languages, computability,
+uncomputability, computational complexity, and the P vs. NP question."],
+[\{v: "CS141", f: "
+
+CS141
+
+Computing Hardware
+
+"}, "CS50", "Introduction to the design, structure, and operation of
+digital computers; logic circuits and digital electronics; computer
+arithmetic; computer architecture; and machine language programming.
+Consideration of the design interactions between hardware and software
+systems."], [\{v: "CS203hf", f: "
+
+CS203hf
+
+A Better Internet: Policy and Practice
+
+"}, "CS50", "Students will propose ideas for a better Internet, test
+them with stakeholders, prototype them for industries and organizations,
+and attack difficult implementation problems in a problem-solving
+capstone. Half course through the year, meeting in January at Stanford
+University."], [\{v: "CS205", f: "
+
+CS205
+
+Computing Foundations for Computational Science
+
+"}, "CS50", "An applications course highlighting the use of computers in
+solving scientific problems. Students will be exposed to fundamental
+computer science concepts such as computer architectures, data
+structures, algorithms, and parallel computing. Fundamentals of
+scientific computing including abstract thinking, algorithmic
+development, and assessment of computational approaches. Students will
+learn to use open source tools and libraries and apply them to data
+analysis, modeling, and visualization of real scientific problems.
+Emphasizes parallel programming and \"parallel thinking.\""] ];
+
+urls["fall"] = [
+"http://courses.cs50.net/?school=FAS%26number=COMPSCI+50",
+"http://courses.cs50.net/?school=FAS%26number=COMPSCI+61",
+"http://courses.cs50.net/?school=FAS%26number=COMPSCI+121",
+"http://courses.cs50.net/?school=FAS%26number=COMPSCI+141",
+"http://courses.cs50.net/?school=FAS%26number=COMPSCI+203hf",
+"http://courses.cs50.net/?school=FAS%26number=COMPSCI+205" ];
+
+tables["spring"] = new google.visualization.DataTable();
+tables["spring"].addColumn("string", "Course");
+tables["spring"].addColumn("string", "Prerequisite");
+tables["spring"].addColumn("string", "Tooltip");
+tables["spring"].addRows(rows["spring"]);
+tables["spring"].setRowProperty(0, "style", "background: #fff7ae;
+border: 2px solid #e3ca4b;");
+
+tables["fall"] = new google.visualization.DataTable();
+tables["fall"].addColumn("string", "Course");
+tables["fall"].addColumn("string", "Prerequisite");
+tables["fall"].addColumn("string", "Tooltip");
+tables["fall"].addRows(rows["fall"]); tables["fall"].setRowProperty(0,
+"style", "background: #fff7ae; border: 2px solid #e3ca4b;");
+
+charts["spring"] = new
+google.visualization.OrgChart(document.getElementById("spring"));
+charts["spring"].draw(tables["spring"], \{allowHtml: true,
+selectedNodeClass: " ", size: "large"});
+
+google.visualization.events.addListener(charts["spring"], "select",
+function() \{ var row = charts["spring"].getSelection()[0].row; if
+(urls["spring"][row]) \{ window.open(unescape(urls["spring"][row]),
+"_blank"); } else \{ alert("No website yet!"); } });
+
+charts["fall"] = new
+google.visualization.OrgChart(document.getElementById("fall"));
+charts["fall"].draw(tables["fall"], \{allowHtml: true,
+selectedNodeClass: " ", size: "large"});
+
+google.visualization.events.addListener(charts["fall"], "select",
+function() \{ var row = charts["fall"].getSelection()[0].row; if
+(urls["fall"][row]) \{ window.open(unescape(urls["fall"][row]),
+"_blank"); } else \{ alert("No website yet!"); } });
+
+});
+
+// ]]>
+
+[[]]
+Spring courses you can take after CS50
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[[]]
+Fall courses you can take after CS50
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

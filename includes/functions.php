@@ -39,7 +39,7 @@
                     join(" ", [
                         "/usr/local/bin/asciidoctor",
                         "-a",
-                        escapeshellarg("coderay-css=class,coderay-linenums-mode=inline,imagesdir={$path},source-highlighter=coderay"),
+                        escapeshellarg("coderay-css=class,coderay-linenums-mode=inline,imagesdir=.,source-highlighter=coderay"),
                         "-b",
                         "html5",
                         "--trace",

@@ -1,0 +1,70 @@
+Here's how to install the [[CS50_Appliance_17|CS50 Appliance]] using VMware Workstation for [[#Installation|Windows]] or [[#Installation_2|Linux]].
+
+= Windows =
+
+== Installation ==
+
+# Download a term-long trial of VMware Workstation as follows, courtesy of our friends at [http://www.vmware.com/ VMware]:
+## Visit <html><a href="https://x.cs50.net/2013/software" target="_blank">https://x.cs50.net/2013/software</a></html> and click the link for '''VMware Workstation'''.
+## You should find yourself at VMware's site.  Click the '''Create an Account''' tab, complete the form that appears (using the same email address with which you registered for edX), then click '''Free Trial'''.
+## Check your email for further instructions from VMware (which may take a few minutes to arrive).  If an email from them doesn't arrive within 10 minutes, try one or more of these suggestions:
+##* Click '''Resend Email'''.
+##* Check your junk or spam mail folder.
+##* Add <tt>donotreply@vmware.com</tt> to your email contacts list or whitelist.
+##* Ask your IT department to add <tt>donotreply@vmware.com</tt> to their email whitelist.
+##* Try creating an account with another email address.
+## Upon receiving an email from VMware, click the '''activate''' link or '''Activate Now''' button therein.
+## If prompted for your password, input the password you chose when creating an account, then click '''Continue'''.
+## Highlight and copy the '''LICENSE KEY''' that appears, then paste it somewhere safe.  (It will be an alphanumeric string of the form #####-#####-#####-#####-#####.)
+## Click the '''Download''' button to the right of '''VMware Workstation for Windows''' on the page that appears to download VMware Workstation.  (It may take a few minutes or hours.)
+# Double-click the file you just downloaded (which is likely in your '''Downloads''' folder) in order launch VMware Workstation's installer.
+# If a window entitled '''User Account Control''' appears, click '''Yes'''.
+# A window entitled '''VMware Workstation Setup''' should appear.  Click '''Next'''.  ''If you have already installed VMware Player (another product) on your computer before, the Setup Wizard will ask that you uninstall VMware Player before installing Workstation. To do so, click '''Uninstall'''. When this process finishes, a restart will be required. Once the restart finishes, log into your Desktop and <u>wait</u>. The VMware Software Installer should automatically open a window entitled '''User Account Control''', at which point you should click '''Yes'''.''
+# When prompted to select a '''Setup Type''', click '''Typical''', then click '''Next'''.
+# When prompted about '''Software Updates''', leave '''Check for product updates on startup''' checked and click '''Next'''. 
+# When prompted about the '''User Experience Improvement Program''', decide whether to check or uncheck the box, then click '''Next'''.
+# When prompted about '''Shortcuts''', click Next. (Uncheck '''Desktop''' and/or '''Start Menu Programs folder''' if you'd like.)
+# When prompted to '''Perform the Requested Operations''', click '''Continue'''.
+# When the installation completes, you will see '''Enter License Key'''. At this point in the process, you will want to enter the license key you were given on the page from which you downloaded VMware Workstation.  Recall that it's an alphanumeric string of the form #####-#####-#####-#####-#####, but you won't need to type the hyphens, as they'll be added automatically for you.  Should you ever lose the key, you can always return to VMware's site to retrieve it. Once you've inputted the key, click '''Enter >'''.
+# Once you see '''Setup Wizard Complete''', click '''Restart Now''' if prompted, else '''Finish'''.
+# Download a ZIP file of the CS50 Appliance at http://mirror.cs50.net/appliance50/17/i386/appliance50-17-9-vmx.zip ([http://mirror.cs50.net.s3.amazonaws.com/appliance50/17/i386/appliance50-17-9-vmx.zip?torrent torrent]). That ZIP file is over 1GB in size, so it might take a while to download.
+# Once downloaded, unzip the ZIP file, and you should have a folder named '''appliance50-17''' with two files within ('''appliance50-17.vmdk''' and '''appliance50-17.vmx'''). Odds are that folder's in your '''Downloads''' folder, unless you saved it elsewhere. Do <u>not</u> double-click appliance50-17.vmdk or appliance50-17.vmx.
+# Drag that appliance50-17 folder somewhere safe, where you won't accidentally delete it. Do <u>not</u> leave it in your '''Downloads''' folder.
+# Launch VMware Workstation, as by single- or double-clicking its icon, wherever it was installed. The first time you open the program, you will be asked to accept the terms to the license agreement. Do so by selecting the appropriate radio button and click '''Ok'''.
+# If presented with a '''Thank you for evaluating VMware Workstation''' dialog, simply press '''Close''' at bottom-right.
+# If prompted with '''Software Updates''', click '''Download and Install'''. Else select '''Help > Software Updates''', then click '''Check for Updates'''. Update and relaunch VMware Workstation as needed.
+# Select '''Preferences > Display''' and check the box labeled '''Autofit guest''', then click '''OK'''.
+# Select '''File > Open a Virtual Machine...'''. Navigate your way to that''' appliance50-17''' folder (wherever you moved it for safe-keeping), highlight the '''appliance50-17.vmx''' file within, and click '''Open'''. Then click VMware Workstation's &#x25B6; button to start up the appliance.
+
+== Troubleshooting ==
+
+=== Binary translation is incompatible with long mode on this platform ===
+
+If you see this message, you might need to enable [[Hardware_Virtualization|hardware virtualization]] on your computer.
+
+= Linux =
+
+== Installation ==
+
+# Download a 210-day trial of VMware Workstation as follows, courtesy of our friends at [http://www.vmware.com/ VMware]:
+## Visit http://www.vmware.com/go/edxworkstation.
+## Click the '''Create an Account''' tab, complete the form that appears (using the same email address with which you registered for edX), then click '''Free Trial'''.
+## Check your email for further instructions from VMware (which may take a few minutes to arrive).  If an email from them doesn't arrive within 10 minutes, try one or more of these suggestions:
+##* Click '''Resend Email'''.
+##* Check your junk or spam mail folder.
+##* Add <tt>donotreply@vmware.com</tt> to your email contacts list or whitelist.
+##* Ask your IT department to add <tt>donotreply@vmware.com</tt> to their email whitelist.
+##* Try creating an account with another email address.
+## Upon receiving an email from VMware, click the '''activate''' link or '''Activate Now''' button therein.
+## If prompted for your password, input the password you chose when creating an account, then click '''Continue'''.
+## Highlight and copy the '''LICENSE KEY''' that appears, then paste it somewhere safe.  (It will be an alphanumeric string of the form #####-#####-#####-#####-#####.)
+## Click the '''Download''' button to the right of '''VMware Workstation for Linux''' on the page that appears to download VMware Workstation.  (It may take a few minutes or hours.)  If unsure whether to select the 32-bit or 64-bit version, start with the 32-bit version.
+## Execute<pre>chmod u+x file</pre>where <tt>file</tt> is the name of the file you downloaded.
+## Execute<pre>./file</pre>where <tt>file</tt> is the name of the file you downloaded, and follow any on-screen prompts.
+# Download a ZIP file of the CS50 Appliance at http://mirror.cs50.net/appliance50/17/i386/appliance50-17-9-vmx.zip ([http://mirror.cs50.net.s3.amazonaws.com/appliance50/17/i386/appliance50-17-9-vmx.zip?torrent torrent]). That ZIP file is over 1GB in size, so it might take a while to download.
+# Once downloaded, unzip the ZIP file, and you should have a folder named '''appliance50-17''' with two files within ('''appliance50-17.vmdk''' and '''appliance50-17.vmx'''). Odds are that folder's in your '''Downloads''' folder, unless you saved it elsewhere. Do <u>not</u> double-click appliance50-17.vmdk or appliance50-17.vmx.
+# Drag that appliance50-17 folder somewhere safe, where you won't accidentally delete it. Do <u>not</u> leave it in your '''Downloads''' folder.
+# Launch VMware Workstation, as by single- or double-clicking its icon, wherever it was installed, and follow any on-screen instructions.
+# Open '''appliance50-17.vmx''' to start up the appliance.  If you see a black-and-white screen entitled '''GNU GRUB''', no need to do anything; the appliance will continue to boot after a few seconds!
+
+[[Category:HOWTO]]

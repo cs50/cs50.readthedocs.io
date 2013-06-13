@@ -1,0 +1,40 @@
+---
+tags: []
+title: Week_9
+---
+_CSS. Inheritance. JavaScript. Events, continued. Ajax._
+
+[[]]
+Agenda
+------
+
+* Announcements
+** Problem Set 6 has been returned.
+** Want to do Problem Set 5's scavenger hunt?? Ends at 11:59pm on Fri
+11/12, but we should submit sooner in case there's a tie!
+** Final Project's Proposal is due by 11:00am on Mon 11/15, per the
+http://www.cs50.net/projects/project.pdf[spec]
+* JavaScript
+** as values of event-handler attributes like `onclick`
+** external file (using `script` tag in `head` to reference external
+file)
+** internal script(s) (using `script` tag in `head` or `body`)
+* Using PHP to generate URLs for
+http://code.google.com/apis/chart.html[image charts] (i.e., PNGs)
+with http://code.google.com/apis/charttools/[Google Chart Tools]
+* Using JavaScript to generate
+http://code.google.com/apis/visualization/interactive_charts.html[interactive
+charts] with http://code.google.com/apis/charttools/[Google Chart Tools]
+
+[[]]
+References
+----------
+
+* http://cdn.cs50.net/2009/fall/sections/9/section9.pdf[Section Notes],
+Fall 2009
+* http://cdn.cs50.net/2009/fall/sections/9/section9.flv?play[Video],
+Fall 2009
+
+[[]]
+Materials
+---------

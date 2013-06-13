@@ -1,0 +1,392 @@
+---
+tags: []
+title: Turk50
+---
+*http://mirror.cs50.net/turk50/turk50-1.0.zip[download]*
+(link:#Installation[instructions])
+
+Turk50 is a PHP library that makes it "easier for you to build solutions
+leveraging http://aws.amazon.com/mturk/[Amazon Mechanical Turk]".
+Although an SDK exists for http://aws.amazon.com/sdkforphp/[PHP] (as
+well as for http://aws.amazon.com/sdkforjava/[Java],
+http://aws.amazon.com/sdkfornet/[.NET],
+http://developer.amazonwebservices.com/connect/entry.jspa?externalID=922&categoryID=121[Perl],
+and
+http://developer.amazonwebservices.com/connect/entry.jspa?externalID=793&categoryID=121[Ruby]),
+odds are you'll find Turk50's learning curve lower. Turk50 supports the
+entirety of Mechanical Turk's
+http://docs.amazonwebservices.com/AWSMturkAPI/2008-08-02/[API]). Because
+Turk50 essentially wraps Mechanical Turk's
+http://docs.amazonwebservices.com/AWSMechanicalTurkRequester/2008-08-02/MakingRequests_MakingSOAPRequestsArticle.html[SOAP
+service], it requires http://www.php.net/downloads.php[PHP 5.0.1] or
+higher as well as PHP's http://php.net/manual/en/book.soap.php[SOAP
+module].
+
+[[]]
+Author
+------
+
+mailto:dmalan@harvard.edu[David J. Malan '99] +
+http://www.cs.harvard.edu/malan/
+
+[[]]
+License
+-------
+
+Use of this API is governed by a
+http://creativecommons.org/licenses/by-sa/3.0/[Creative Commons
+Attribution-ShareAlike 3.0 Unported] license, which means that you may
+use it for commercial and non-commercial purposes so long as you
+acknowledge this library, as by including a link to
+http://wiki.cs50.net/Turk50[Turk50] in your own work.
+
+[[]]
+Background
+----------
+
+Turk50 assumes familiarity with http://aws.amazon.com/mturk/[Mechanical
+Turk] and PHP. We also recommend that you read (or, at least, skim!)
+these developer resources in order:
+
+1. 
+http://docs.amazonwebservices.com/AWSMechTurk/latest/AWSMechanicalTurkGettingStartedGuide/[Getting
+Started Guide]
+2. 
+http://docs.amazonwebservices.com/AWSMechanicalTurkRequester/2008-08-02/[Developer
+Guide]
+3.  http://docs.amazonwebservices.com/AWSMturkAPI/2008-08-02/[API
+Reference]
+
+[[]]
+Installation
+------------
+
+1.  Install PHP 5.0.1 or higher, if not already installed.
+2.  Install PHP's SOAP extension, if not already installed. Odds are, if
+you're running PHP on Mac OS or Windows, the extension's already
+installed.
+* CentOS/RedHat: `yum install php-soap`
+* Debian/Ubuntu: `apt-get install php5-soap`
+3.  Download http://mirror.cs50.net/turk50/turk50-1.0.zip, unzip it, and
+move `Turk50.php` (and `AWSMechanicalTurkRequester.wsdl`) wherever you'd
+like.
+4.  Include `require_once("/path/to/Turk50.php");` or similar atop your
+own code.
+
+Note that, for efficiency's sake, `turk50-1.0.zip` includes version
+2008-08-02 of `AWSMechanicalTurkRequester.wsdl`; if you delete that
+file, Turk50 will grab the latest version via HTTP.
+
+[[]]
+Usage
+-----
+
+Using Turk50 is pretty straightforward:
+
+1.  Instantiate a Turk50 object, providing your Access Key ID and Secret
+Access Key ID as arguments to the class's constructor (and, optionally,
+an associative array of options).
+2.  Invoke any of Mechanical Turk's
+http://docs.amazonwebservices.com/AWSMturkAPI/2008-08-02/ApiReference_OperationsArticle.html[operations]
+as though it's a method defined in the Turk50 class (even though it's
+not explicitly).
+
+By default, Turk50 talks to Mechanical Turk's
+http://sandbox.mturk.com/[sandbox]
+(`mechanicalturk.sandbox.amazonaws.com`), lest you incur charges
+accidentally. In other words, instantiating a Turk50 object with:
+
+code,php-----------------------------------------------------------
+code,php
+require_once("/path/to/Turk50.php");
+$turk50 = new Turk50(AWSAccessKeyId, AWSSecretAccessKeyId);
+-----------------------------------------------------------
+
+is equivalent to instantiating a Turk50 object with:
+
+code,php-------------------------------------------------------------------------------------
+code,php
+require_once("/path/to/Turk50.php");
+$turk50 = new Turk50(AWSAccessKeyId, AWSSecretAccessKeyId, array("sandbox" => TRUE));
+-------------------------------------------------------------------------------------
+
+To compel the library to talk to AWS's production servers
+(`mechanicalturk.amazonaws.com`), instantiate a Turk50 object with:
+
+code,php--------------------------------------------------------------------------------------
+code,php
+require_once("/path/to/Turk50.php");
+$turk50 = new Turk50(AWSAccessKeyId, AWSSecretAccessKeyId, array("sandbox" => FALSE));
+--------------------------------------------------------------------------------------
+
+You can also instantiate a Turk50 object in "trace mode," whereby SOAP
+requests and responses will be logged so that you can examine them
+whilst debugging:
+
+code,php------------------------------------------------------------------------------------
+code,php
+require_once("/path/to/Turk50.php");
+$turk50 = new Turk50(AWSAccessKeyId, AWSSecretAccessKeyId, array("trace" => TRACE));
+------------------------------------------------------------------------------------
+
+Enabling trace mode essentially enables some underlying
+http://www.php.net/manual/en/class.soapclient.php[SoapClient] methods.
+Odds are you'll find methods like
+http://www.php.net/manual/en/soapclient.getlastrequest.php[__getLastRequest]
+and
+http://www.php.net/manual/en/soapclient.getlastresponse.php[__getLastResponse]
+of particular help if trying to chase down some bug:
+
+code,php------------------------------------------------------------------------------------
+code,php
+require_once("/path/to/Turk50.php");
+$turk50 = new Turk50(AWSAccessKeyId, AWSSecretAccessKeyId, array("trace" => TRACE));
+$turk50->GetAccountBalance();
+print_r($turk50->__getLastRequest());
+print_r($turk50->__getLastResponse());
+------------------------------------------------------------------------------------
+
+How to invoke actual API operations? Let's consider two examples,
+link:#GetAccountBalance[GetAccountBalance] and
+link:#CreateHIT[CreateHIT], the first of which takes no parameters, the
+second of which does. You should be able to infer from these examples
+how to invoke other
+http://docs.amazonwebservices.com/AWSMturkAPI/2008-08-02.html?ApiReference_OperationsArticle.html[operations]
+whose parameters and responses are documented in the
+http://docs.amazonwebservices.com/AWSMturkAPI/2008-08-02/[API
+reference].
+
+[[]]
+Examples
+~~~~~~~~
+
+Each of the examples below assume that `AWSAccessKeyId` and
+`AWSSecretAccessKeyId` are constants defined as strings (by you)
+elsewhere. And each uses, by default, AWS's sandbox.
+
+[[]]
+GetAccountBalance
+^^^^^^^^^^^^^^^^^
+
+Suppose that you want to retrieve "the amount of money in your Amazon
+Mechanical Turk account," otherwise known as your account balance. First
+consult the
+http://docs.amazonwebservices.com/AWSMturkAPI/2008-08-02/[API's
+documentation] for the
+http://docs.amazonwebservices.com/AWSMturkAPI/2008-08-02/ApiReference_GetAccountBalanceOperation.html[GetAccountBalance]
+operation. Notice that it supports only one parameter (`Operation`), the
+name of the operation itself. And so you can invoke it as follows:
+
+code,php-----------------------------------------------------------
+code,php
+require_once("/path/to/Turk50.php");
+$turk50 = new Turk50(AWSAccessKeyId, AWSSecretAccessKeyId);
+$GetAccountBalanceResponse = $turk50->GetAccountBalance();
+print_r($GetAccountBalanceResponse);
+-----------------------------------------------------------
+
+In other words, even though the
+http://docs.amazonwebservices.com/AWSMturkAPI/2008-08-02.html?ApiReference_OperationsArticle.html[API
+reference] lists `Operation` as a parameter, it's actually implemented
+(thanks to the
+http://www.php.net/manual/en/class.soapclient.php[SoapClient] class) as
+an actual method. Per `print_r`'s output, `$GetAccountBalanceResponse`
+is a `stdClass` object that represents the server's response:
+
+code,php---------------------------------------------------------------
+code,php
+stdClass Object
+(
+    [OperationRequest] => stdClass Object
+        (
+            [RequestId] => 5a1e21f5-8c38-4783-b9a0-15447bb2f6d4
+        )
+
+    [GetAccountBalanceResult] => stdClass Object
+        (
+            [Request] => stdClass Object
+                (
+                    [IsValid] => True
+                )
+
+            [AvailableBalance] => stdClass Object
+                (
+                    [Amount] => 10000.000
+                    [CurrencyCode] => USD
+                    [FormattedPrice] => $10,000.00
+                )
+
+        )
+
+)
+---------------------------------------------------------------
+
+To confirm that the request was valid, you should check for `Errors` in
+both `OperationRequest` and `GetAccountBalanceResult`, as with code like
+the below:
+
+code,php--------------------------------------------------------------------------------------------------------------------------------------
+code,php
+if (isset($GetAccountBalanceResponse->OperationRequest->Errors) || isset($GetAccountBalanceResponse->GetAccountBalanceResult->Errors))
+{
+    // handle error
+}
+--------------------------------------------------------------------------------------------------------------------------------------
+
+What does an invalid request look like? Here's what's returned when you
+provide an invalid `AWSAccessKeyId` and/or `AWSSecretAccessKeyId`:
+
+code,php--------------------------------------------------------------------------
+code,php
+stdClass Object
+(
+    [OperationRequest] => stdClass Object
+        (
+            [RequestId] => 212189ec-3402-415b-b47c-bad056d24c8d
+            [Errors] => stdClass Object
+                (
+                    [Error] => stdClass Object
+                        (
+                            [Code] => AWS.BadClaimsSupplied
+                            [Message] => The specified claims are invalid.
+                        )
+
+                )
+
+        )
+
+)
+--------------------------------------------------------------------------
+
+Note that you'll see different values for `RequestId`; the above happen
+to be the unique identifiers that were assigned by AWS to my own
+requests.
+
+How to get at your actual account's balance? Simply traverse the
+server's response as you would any PHP object:
+
+code,php----------------------------------------------------------------------------------------
+code,php
+$Amount = $GetAccountBalanceResponse->GetAccountBalanceResult->AvailableBalance->Amount;
+----------------------------------------------------------------------------------------
+
+See the
+http://docs.amazonwebservices.com/AWSMechanicalTurkRequester/2008-08-02/[Developer
+Guide]'s discussion of
+http://docs.amazonwebservices.com/AWSMechanicalTurkRequester/2008-08-02/MakingRequests_UnderstandingResponsesArticle.html[Responses]
+for more details.
+
+[[]]
+CreateHIT
+^^^^^^^^^
+
+Suppose that you want to create a HIT (without a HIT Type ID) for an
+http://docs.amazonwebservices.com/AWSMturkAPI/2008-08-02/ApiReference_ExternalQuestionArticle.html[ExternalQuestion].
+First consult the
+http://docs.amazonwebservices.com/AWSMturkAPI/2008-08-02/[API's
+documentation] for the
+http://docs.amazonwebservices.com/AWSMturkAPI/2008-08-02/ApiReference_CreateHITOperation.html[CreateHIT]
+operation. Notice that it requires not only the `Operation` parameter
+but also a few others (i.e., `Title`, `Description`, `Question`,
+`Reward`, ` AssignmentDurationInSeconds`, and `LifetimeInSeconds`. As
+with link:#GetAccountBalance[GetAccountBalance], `Operation` is
+implemented as an actual method; other parameters must be provided as
+associative arrays. Note that the `Question` parameter, though, is a bit
+of an anomaly: per the
+http://docs.amazonwebservices.com/AWSMturkAPI/2008-08-02.html?ApiReference_XMLParameterValuesArticle.html[API
+Reference], it must be provided not as an associative array but instead
+as a string of XML (that happens to represent a
+http://docs.amazonwebservices.com/AWSMturkAPI/2008-08-02/ApiReference_QuestionFormDataStructureArticle.html[QuestionForm]
+data structure or an
+http://docs.amazonwebservices.com/AWSMturkAPI/2008-08-02/ApiReference_ExternalQuestionArticle.html[ExternalQuestion]
+data structure), as in the below:
+
+code,php--------------------------------------------------------------------------------------------------------------------------------
+code,php
+require_once("/path/to/Turk50.php");
+
+// instantiate SOAP client
+$turk50 = new Turk50(AWSAccessKeyId, AWSSecretAccessKeyId);
+
+// prepare ExternalQuestion
+$Question =
+ "<ExternalQuestion xmlns='http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2006-07-14/ExternalQuestion.xsd'>" .
+ "<ExternalURL>http://tictactoe.amazon.com/gamesurvey.cgi?gameid=01523</ExternalURL>" .
+ "<FrameHeight>400</FrameHeight>" .
+ "</ExternalQuestion>";
+
+// prepare Request
+$Request = array(
+ "Title" => "Foo",
+ "Description" => "Bar",
+ "Question" => $Question,
+ "Reward" => array("Amount" => "0.01", "CurrencyCode" => "USD"),
+ "AssignmentDurationInSeconds" => "30",
+ "LifetimeInSeconds" => "30",
+ "QualificationRequirement" => $QualificationRequirement
+);
+
+// invoke CreateHIT
+$CreateHITResponse = $turk50->CreateHIT($Request);
+--------------------------------------------------------------------------------------------------------------------------------
+
+Incidentally, if you want to require that workers have some
+http://docs.amazonwebservices.com/AWSMturkAPI/2008-08-02/ApiReference_QualificationDataStructureArticle.html[Qualification],
+you can include in the request an array of
+http://docs.amazonwebservices.com/AWSMturkAPI/2008-08-02/ApiReference_QualificationRequirementDataStructureArticle.html[QualificationRequirement]
+structures, each of which should be an associative array, as in the
+below:
+
+code,php--------------------------------------------------------------------------------------------------------------------------------
+code,php
+require_once("/path/to/Turk50.php");
+
+// instantiate SOAP client
+$turk50 = new Turk50(AWSAccessKeyId, AWSSecretAccessKeyId);
+
+// prepare ExternalQuestion
+$Question =
+ "<ExternalQuestion xmlns='http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2006-07-14/ExternalQuestion.xsd'>" .
+ "<ExternalURL>http://tictactoe.amazon.com/gamesurvey.cgi?gameid=01523</ExternalURL>" .
+ "<FrameHeight>400</FrameHeight>" .
+ "</ExternalQuestion>";
+
+// require Worker_Locale == US
+$Worker_Locale = array(
+ "QualificationTypeId" => "00000000000000000071",
+ "Comparator" => "EqualTo",
+ "LocaleValue" => array("Country" => "US")
+);
+
+// require Worker_PercentAssignmentsApproved >= 95%
+$Worker_PercentAssignmentsApproved = array(
+ "QualificationTypeId" => "000000000000000000L0",
+ "Comparator" => "GreaterThanOrEqualTo",
+ "IntegerValue" => "95"
+);
+
+// prepare Request
+$Request = array(
+ "Title" => "Foo",
+ "Description" => "Bar",
+ "Question" => $Question,
+ "Reward" => array("Amount" => "0.01", "CurrencyCode" => "USD"),
+ "AssignmentDurationInSeconds" => "30",
+ "LifetimeInSeconds" => "30",
+ "QualificationRequirement" => array($Worker_Locale, $Worker_PercentAssignmentsApproved)
+);
+
+// invoke CreateHIT
+$CreateHITResponse = $turk50->CreateHIT($Request);
+--------------------------------------------------------------------------------------------------------------------------------
+
+[[]]
+Support
+-------
+
+To ask questions or report bugs, even if you're not a student at
+Harvard, join
+http://groups.google.com/group/cs50-discuss/topics[cs50-discuss], the
+course's Google Group!
+
+Category:Software
