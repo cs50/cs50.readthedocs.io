@@ -77,7 +77,8 @@ If you request buildings in CSV format (e.g.,
 http://maps.cs50.net/api/1.0/buildings?bid=952,991&output=csv), the
 response will be a series of comma-delimited rows, per the below:
 
-code,text---------------------------------------- code,text
+[code,text]
+----------------------------------------
 bid,name,lat,lng
 991,"Mather House",42.368270,-71.115270
 952,"Matthews Hall",42.374070,-71.118150
@@ -96,7 +97,8 @@ If you request channels in JSON format (e.g.,
 http://maps.cs50.net/api/1.0/buildings?bid=952,991&output=json), the
 response wil be an array of objects, per the below:
 
-code,javascript----------------------------- code,javascript
+[code,javascript]
+-----------------------------
 [
    {
       "bid":"991",
@@ -122,15 +124,16 @@ http://maps.cs50.net/api/1.0/buildings?bid=952,991&output=php), the
 response will be a serialized array of associative arrays, per the
 below:
 
-code,php---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-code,php
+[code,php]
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 a:2:{i:0;a:4:{s:3:"bid";s:3:"991";s:4:"name";s:12:"Mather House";s:3:"lat";s:9:"42.368270";s:3:"lng";s:10:"-71.115270";}i:1;a:4:{s:3:"bid";s:3:"952";s:4:"name";s:13:"Matthews Hall";s:3:"lat";s:9:"42.374070";s:3:"lng";s:10:"-71.118150";}}
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Once you http://php.net/manual/en/function.unserialize.php[unserialize]
 that response, you'll have the below in memory:
 
-code,php----------------------------------- code,php
+[code,php]
+-----------------------------------
 Array
 (
     [0] => Array

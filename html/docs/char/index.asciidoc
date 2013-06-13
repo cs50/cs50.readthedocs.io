@@ -9,7 +9,8 @@ constant (e.g. the link:int[`int`]'s equivalent of numbers) is denoted
 by single quotation marks, e.g. `'a'` represents the letter a and `'*'`
 represents the asterisk. For example,
 
-code,c--------------- code,c
+[code,c]
+---------------
  char c = 'r'; 
 ---------------
 

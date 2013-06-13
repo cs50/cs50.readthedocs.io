@@ -9,8 +9,8 @@ user-specified variable type.
 Recall from Problem Set 5 the header file `bmp.h` which contains the
 following lines of code:
 
-code,C-------------------------------------------------------------------------------
-code,C
+[code,C]
+-------------------------------------------------------------------------------
 /* 
  * Common Data Types 
  *
@@ -32,7 +32,8 @@ For the remainder of the problem set, we were able to use the word
 fact, if we so chose, we could use `typedef` to create an alias for
 `[[int]]` like so:
 
-code,C--------------------- code,C
+[code,C]
+---------------------
 typedef int A_NUMBER;
 
 A_NUMBER foo = 6;
@@ -45,8 +46,8 @@ identical (except for the names of the variables).
 `typedef` can be used for even more complex aliasing, as exemplified by
 these other lines of code from `bmp.h`:
 
-code,C-----------------------------------------------------------------------------
-code,C
+[code,C]
+-----------------------------------------------------------------------------
 /*
  * BITMAPFILEHEADER
  *

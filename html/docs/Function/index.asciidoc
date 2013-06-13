@@ -17,7 +17,8 @@ int sum(int a, int b)
 takes in two integers as its arguments, and returns the sum of those
 arguments. You could use this function in C code like
 
-code,C------------------------ code,C
+[code,C]
+------------------------
 int myvar = sum(23, 19);
 ------------------------
 

@@ -9,7 +9,8 @@ store whatever changes were made by casting.
 
 An example:
 
-code,c------------------------- code,c
+[code,c]
+-------------------------
 int num = 42;
 char letter = (char) num;
 -------------------------
@@ -19,7 +20,8 @@ Here, after both lines are executed, `num` will still be 42, and
 of our nifty ASCII table, the '`*`' character. This operation can be
 done in one line as well, like:
 
-code,c-------------------------- code,c
+[code,c]
+--------------------------
  char letter2 = (char) 42;
 --------------------------
 
@@ -31,7 +33,8 @@ This may seem almost trivial at first, but there are some practical
 applications, especially for mathematical operations. Say, for example,
 you wanted to divide two numbers:
 
-code,c------------------------------------------------ code,c
+[code,c]
+------------------------------------------------
 int num1 = 50;
 int num2 = 61;
 

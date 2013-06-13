@@ -21,7 +21,8 @@ the first to be checked, so linear search is in latexmath:[$\Omega(1)$].
 
 Linear search is quite easy to implement, as the following code reveals:
 
-code,C------------------------------------------------- code,C
+[code,C]
+-------------------------------------------------
 int
 LinearSearch(int value_to_find, int values[])
 {

@@ -108,8 +108,8 @@ http://php.net/manual/en/function.preg-match.php[preg_match] with a
 http://www.webcheatsheet.com/php/regular_expressions.php[regular
 expression], as in:
 
-code,php----------------------------------------------------------------------------------
-code,php
+[code,php]
+----------------------------------------------------------------------------------
 if (preg_match("/^(140\.247|128\.103|10\.249|10\.250)/", $_SERVER["REMOTE_ADDR"]))
 {
     // show restricted content
@@ -137,8 +137,8 @@ isn't helpful. For PHP-based websites that are hosted on the cloud,
 then, you'll want to check `$_SERVER["HTTP_X_FORWARDED_FOR"]`, as in the
 below:
 
-code,php-------------------------------------------------------------------------------------------
-code,php
+[code,php]
+-------------------------------------------------------------------------------------------
 if (preg_match("/^(140\.247|128\.103|10\.249|10\.250)/", $_SERVER["HTTP_X_FORWARDED_FOR"]))
 {
     // show restricted content

@@ -68,8 +68,8 @@ No matter your OS, perform the steps as root (as via `sudo`).
 CentOS, RedHat
 ^^^^^^^^^^^^^^
 
-code,bash--------------------------------------------------------------
-code,bash
+[code,bash]
+--------------------------------------------------------------
 wget http://mirror.cs50.net/render50/render50-1.5-1.noarch.rpm
 rpm -ivh render50-1.5-1.noarch.rpm
 rm -f render50-1.5-1.noarch.rpm
@@ -79,7 +79,8 @@ rm -f render50-1.5-1.noarch.rpm
 Debian, Ubuntu
 ^^^^^^^^^^^^^^
 
-code,bash----------------------------------------------------- code,bash
+[code,bash]
+-----------------------------------------------------
 apt-get install php5 php5-mbstring
 wget http://mirror.cs50.net/render50/render50-1.5.zip
 unzip render50-1.5.zip
@@ -92,8 +93,8 @@ Then move `render50-1.5` wherever you'd like.
 Fedora
 ^^^^^^
 
-code,bash---------------------------------------------------------------------
-code,bash
+[code,bash]
+---------------------------------------------------------------------
 yum install http://mirror.cs50.net/render50/render50-1.5-1.noarch.rpm
 ---------------------------------------------------------------------
 

@@ -91,7 +91,8 @@ If you request buildings in CSV format (e.g.,
 http://energy.cs50.net/api/1.0/buildings?id=952,991&output=csv), the
 response will be a series of comma-delimited rows, per the below:
 
-code,text------------------------- code,text
+[code,text]
+-------------------------
 id,name,gsf
 991,"Mather House",209979
 952,"Matthews Hall",59075
@@ -114,7 +115,8 @@ http://energy.cs50.net/api/1.0/buildings?id=952,991&output=json), the
 response wil be an associative array (whose keys are buildings' IDs) of
 objects, per the below:
 
-code,javascript----------------------------- code,javascript
+[code,javascript]
+-----------------------------
 {
    "991":{
       "name":"Mather House",
@@ -136,8 +138,8 @@ http://energy.cs50.net/api/1.0/buildings?id=952,991&output=jsonp&callback=parseR
 the response will be a padded associative array (whose keys are
 buildings' IDs) of objects, per the below:
 
-code,javascript----------------------------------------------------------------------------------------------------------
-code,javascript
+[code,javascript]
+----------------------------------------------------------------------------------------------------------
 parseResponse({"991":{"name":"Mather House","gsf":"209979"},"952":{"name":"Matthews Hall","gsf":"59075"}})
 ----------------------------------------------------------------------------------------------------------
 
@@ -150,15 +152,16 @@ http://energy.cs50.net/api/1.0/buildings?id=952,991&output=php), the
 response will be a serialized associative array (whose keys are
 buildings' IDs) of associative arrays, per the below:
 
-code,php------------------------------------------------------------------------------------------------------------------------------------------
-code,php
+[code,php]
+------------------------------------------------------------------------------------------------------------------------------------------
 a:2:{i:991;a:2:{s:4:"name";s:12:"Mather House";s:3:"gsf";s:6:"209979";}i:952;a:2:{s:4:"name";s:13:"Matthews Hall";s:3:"gsf";s:5:"59075";}}
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 Once you http://php.net/manual/en/function.unserialize.php[unserialize]
 that response, you'll have the below in memory:
 
-code,php----------------------------------- code,php
+[code,php]
+-----------------------------------
 Array
 (
     [991] => Array
@@ -216,7 +219,8 @@ If you request utilities in CSV format (e.g.,
 http://energy.cs50.net/api/1.0/utilities?id=991&month=2010-01&output=csv),
 the response will be a series of comma-delimited rows, per the below:
 
-code,text------------------------------ code,text
+[code,text]
+------------------------------
 month,utility,cost,use
 2010-01,Electric,5440.37,51373
 2010-01,Steam,29332.96,1528
@@ -236,7 +240,8 @@ http://energy.cs50.net/api/1.0/utilities?id=991&month=2010-01&output=json),
 the response will be an associative array (whose keys are months) of
 objects, per the below:
 
-code,javascript--------------------------- code,javascript
+[code,javascript]
+---------------------------
 {
    "2010-01":{
       "Electric":{
@@ -260,8 +265,8 @@ http://energy.cs50.net/api/1.0/utilities?id=991&month=2010-01&output=jsonp&callb
 the response will be a padded associative array (whose keys are months)
 of objects, per the below:
 
-code,javascript-----------------------------------------------------------------------------------------------------------------
-code,javascript
+[code,javascript]
+-----------------------------------------------------------------------------------------------------------------
 parseResponse({"2010-01":{"Electric":{"cost":"5440.37","use":"51373"},"Steam":{"cost":"29332.96","use":"1528"}}})
 -----------------------------------------------------------------------------------------------------------------
 
@@ -274,15 +279,16 @@ http://energy.cs50.net/api/1.0/utilities?id=991&month=2010-01&output=php),
 the response will be a serialized associative array (whose keys are
 months) of associative arrays, per the below:
 
-code,php---------------------------------------------------------------------------------------------------------------------------------------------------------------
-code,php
+[code,php]
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
 a:1:{s:7:"2010-01";a:2:{s:8:"Electric";a:2:{s:4:"cost";s:7:"5440.37";s:3:"use";s:5:"51373";}s:5:"Steam";a:2:{s:4:"cost";s:8:"29332.96";s:3:"use";s:4:"1528";}}}
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Once you http://php.net/manual/en/function.unserialize.php[unserialize]
 that response, you'll have the below in memory:
 
-code,php-------------------------------------- code,php
+[code,php]
+--------------------------------------
 Array
 (
     [2010-01] => Array

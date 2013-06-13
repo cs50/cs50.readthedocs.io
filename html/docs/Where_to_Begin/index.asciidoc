@@ -161,8 +161,8 @@ constants used to configure the connection to the database.
 
 \4. Create a new file called `config.sql`, and enter the following:
 
-code,sql----------------------------------------------------------------------------------------------
-code,sql
+[code,sql]
+----------------------------------------------------------------------------------------------
 --
 -- Database: `project`
 --
@@ -324,8 +324,8 @@ Setting Up the Controller
 
 \3. Add the following, for now:
 
-code,php---------------------------------------------------------------
-code,php
+[code,php]
+---------------------------------------------------------------
 <?php
 
     // configuration
@@ -358,8 +358,8 @@ it will make a variable called `$title` within the scope of that page
 whose value is initially `"My New Page"`.
 ** You are welcome to pass additional variables in this way:
 
-code,php-----------------------------------------------------------------------------------------------------------------
-code,php
+[code,php]
+-----------------------------------------------------------------------------------------------------------------
     render("my_new_view_page.php", ["title" => "My New Page", "francis_type" => "anteater", "francis_age" => 3]);
 -----------------------------------------------------------------------------------------------------------------
 
@@ -402,8 +402,8 @@ from your database and update the state of your database more easily!
 A Sample `SELECT` Query Operation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-code,php-----------------------------------------------------------------------------------------------------------------
-code,php
+[code,php]
+-----------------------------------------------------------------------------------------------------------------
 
 $rows = query("SELECT habitat, species_name FROM animals WHERE common_name = 'anteater'");
 
@@ -456,8 +456,8 @@ question mark ('?').
 Then, you should fill in those "blanks" by passing in additional
 arguments to the query function, as in the below:
 
-code,php-------------------------------------------------------------------------------------------------------------------------------------
-code,php
+[code,php]
+-------------------------------------------------------------------------------------------------------------------------------------
   $rows = query("SELECT habitat FROM animals WHERE desired_name = ? AND coolness_level > ?", $desired_name, $minimum_coolness_level);
 -------------------------------------------------------------------------------------------------------------------------------------
 
@@ -472,7 +472,8 @@ Errors
 * If you try to use a query that has a syntax error, as is done in the
 following code
 
-code,php-------------------------------- code,php
+[code,php]
+--------------------------------
 $result = query("syntax_error");
 --------------------------------
 
@@ -486,8 +487,8 @@ get a return value of `false` from the query function.
 *To check whether the return value of the query function is `false`, you
 must use the === operator, which checks for type equality, too.*
 
-code,php-----------------------------------------------------------------------------------------
-code,php
+[code,php]
+-----------------------------------------------------------------------------------------
 $result = query("UPDATE animals SET coolness_level = 100 WHERE common_name = 'anteater');
 
 if ($result === false)

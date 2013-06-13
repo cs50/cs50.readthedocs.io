@@ -8,7 +8,8 @@ return value can be of any type, whether built-in or user-defined (with
 `typedef`). The type of the return value is specified in the function
 definition like so:
 
-code,c-------------------------- code,c
+[code,c]
+--------------------------
 int
 GetLastLetter(char *s)
 {
@@ -32,7 +33,8 @@ A function need not have a return value if it only produces side
 effects, for example printing a message, within the program. In that
 case, the type of the return value is specified as `void`:
 
-code,c----------------------- code,c
+[code,c]
+-----------------------
 void
 Hello()
 {
@@ -51,8 +53,8 @@ Here's a full program that uses the functions above. Its purpose is to
 take a string as a link:command-line argument[command-line argument] and
 print out its last letter:
 
-code,c------------------------------------------------------------
-code,c
+[code,c]
+------------------------------------------------------------
 #include <stdio.h>
 #include <stdlib.h>
 

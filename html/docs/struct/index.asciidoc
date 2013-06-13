@@ -6,7 +6,8 @@ A `struct` is a user-defined data structure in C that encapsulates
 related variables. Recall our definition of the `student` user-defined
 type for the use of `structs1.c` and `structs2.c`:
 
-code,C----------------------------------- code,C
+[code,C]
+-----------------------------------
 // structure representing a student
 typedef struct
 {
@@ -40,7 +41,8 @@ for yourself by using the `[[sizeof]]` operator.
 The notation for accessing the variables within a `struct` is as
 follows:
 
-code,C----------------------------------------------------- code,C
+[code,C]
+-----------------------------------------------------
 student foo;
 
 foo.id = 5;
@@ -53,7 +55,8 @@ printf("%s lived in %s House.", foo.name, foo.house);
 A dot operator is used to get and set the properties within a `struct`.
 The arrow operator can be used when working with pointers to `struct`'s:
 
-code,C----------------------------------------------------------- code,C
+[code,C]
+-----------------------------------------------------------
 student *foo = malloc(sizeof(student));
 
 foo->id = 5;
