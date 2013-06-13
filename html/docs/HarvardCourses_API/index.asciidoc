@@ -527,58 +527,44 @@ Examples
 * Returns all courses:
 ** http://api.cs50.net/courses/1.0/courses?output=csv
 ** http://api.cs50.net/courses/1.0/courses?output=json
-**
-http://api.cs50.net/courses/1.0/courses?output=jsonp&callback=parseResponse
+** http://api.cs50.net/courses/1.0/courses?output=jsonp&callback=parseResponse
 ** http://api.cs50.net/courses/1.0/courses?output=php
 ** http://api.cs50.net/courses/1.0/courses?output=xml
 * Returns course with catalog number 4949:
 ** http://api.cs50.net/courses/1.0/courses?cat_num=4949&output=csv
 ** http://api.cs50.net/courses/1.0/courses?cat_num=4949&output=json
-**
-http://api.cs50.net/courses/1.0/courses?cat_num=4949&output=jsonp&callback=parseResponse
+** http://api.cs50.net/courses/1.0/courses?cat_num=4949&output=jsonp&callback=parseResponse
 ** http://api.cs50.net/courses/1.0/courses?cat_num=4949&output=php
 ** http://api.cs50.net/courses/1.0/courses?cat_num=4949&output=xml
 * Returns courses taught by David J. Malan:
-**
-http://api.cs50.net/courses/1.0/courses?faculty=98d2c536d93571eff451df8bd44823d8&output=csv
-**
-http://api.cs50.net/courses/1.0/courses?faculty=98d2c536d93571eff451df8bd44823d8&output=json
-**
-http://api.cs50.net/courses/1.0/courses?faculty=98d2c536d93571eff451df8bd44823d8&output=jsonp&callback=parseResponse
-**
-http://api.cs50.net/courses/1.0/courses?faculty=98d2c536d93571eff451df8bd44823d8&output=php
+** http://api.cs50.net/courses/1.0/courses?faculty=98d2c536d93571eff451df8bd44823d8&output=csv
+** http://api.cs50.net/courses/1.0/courses?faculty=98d2c536d93571eff451df8bd44823d8&output=json
+** http://api.cs50.net/courses/1.0/courses?faculty=98d2c536d93571eff451df8bd44823d8&output=jsonp&callback=parseResponse
+** http://api.cs50.net/courses/1.0/courses?faculty=98d2c536d93571eff451df8bd44823d8&output=php
 **
 http://api.cs50.net/courses/1.0/courses?faculty=98d2c536d93571eff451df8bd44823d8&output=xml
 * Returns Computer Science courses:
 ** http://api.cs50.net/courses/1.0/courses?field=COMPSCI&output=csv
 ** http://api.cs50.net/courses/1.0/courses?field=COMPSCI&output=json
-**
-http://api.cs50.net/courses/1.0/courses?field=COMPSCI&output=jsonp&callback=parseResponse
+** http://api.cs50.net/courses/1.0/courses?field=COMPSCI&output=jsonp&callback=parseResponse
 ** http://api.cs50.net/courses/1.0/courses?field=COMPSCI&output=php
 ** http://api.cs50.net/courses/1.0/courses?field=COMPSCI&output=xml
 * Returns courses related to archaeology:
 ** http://api.cs50.net/courses/1.0/courses?q=archaeology&output=csv
 ** http://api.cs50.net/courses/1.0/courses?q=archaeology&output=json
-**
-http://api.cs50.net/courses/1.0/courses?q=archaeology&output=jsonp&callback=parseResponse
+** http://api.cs50.net/courses/1.0/courses?q=archaeology&output=jsonp&callback=parseResponse
 ** http://api.cs50.net/courses/1.0/courses?q=archaeology&output=php
 ** http://api.cs50.net/courses/1.0/courses?q=archaeology&output=xml
 * Returns David J. Malan:
-**
-http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&output=csv
-**
-http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&output=json
-**
-http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&output=jsonp&callback=parseResponse
-**
-http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&output=php
-**
-http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&output=xml
+** http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&output=csv
+** http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&output=json
+** http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&output=jsonp&callback=parseResponse
+** http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&output=php
+** http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&output=xml
 * Returns Computer Science:
 ** http://api.cs50.net/courses/1.0/fields?id=COMPSCI&output=csv
 ** http://api.cs50.net/courses/1.0/fields?id=COMPSCI&output=json
-**
-http://api.cs50.net/courses/1.0/fields?id=COMPSCI&output=jsonp&callback=parseResponse
+** http://api.cs50.net/courses/1.0/fields?id=COMPSCI&output=jsonp&callback=parseResponse
 ** http://api.cs50.net/courses/1.0/fields?id=COMPSCI&output=php
 ** http://api.cs50.net/courses/1.0/fields?id=COMPSCI&output=xml
 
