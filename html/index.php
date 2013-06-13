@@ -50,8 +50,10 @@
 
     <body>
         <div id="background"></div>
-        <div class="container">
-
+        <div id="container">
+            <div id="search-wrapper">
+                <input type="search" placeholder="Search the CS50 Manual..."/>
+            </div>
             <?php if (isset($yaml["title"])): ?>
                 <h1><?= htmlspecialchars($yaml["title"]) ?></h1>
                 <?= $html ?>

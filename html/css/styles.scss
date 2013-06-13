@@ -5,8 +5,6 @@ body, html {
     width: 100%;
     margin: 0px auto;
     padding: 0px;
-    min-width: 700px;
-    max-width: 1200px;
     font-family: "futura-pt";
 }
 
@@ -33,7 +31,7 @@ h3 {
     width: 100%;
     height: 100%;
     background-image: url(/img/low_contrast_linen.png);
-    @include opacity(.9);
+    @include opacity(.8);
 }
 
 #container {
@@ -47,11 +45,28 @@ h3 {
     overflow: auto;
     min-width: 700px;
     max-width: 1200px;
+    @include background-linear-gradient(top, #FFF, #F3F3F3);
+    text-shadow: 0px 1px 0px white;
+    color: #444;
+
+    #search-wrapper {
+        float: right;
+        margin-top: 10px;
+        margin-right: 10px;
+
+        &:after {
+            content: "";
+        }
+
+        input {
+            @include box-shadow("0px 1px 1px white, inset 0px 1px 3px #DDD"); 
+        }
+    }
 
     .sect1 {
         padding: 0px 0px 10px 0px;
         margin: 10px 0px 0px 0px;    
- 
+
         .sectionbody {
             padding: 5px 20px 0px 20px;   
         
@@ -102,10 +117,14 @@ h3 {
     }
 
     > h1 {
-        border-bottom: 1px solid #AAA;
+        border-bottom: 1px solid #C5C5C5;
         //border-bottom: 3px double #CCC;
         padding-left: 20px;
-        margin-top: .5em;
+        margin-top: 0px;
+        padding-top: .1em;
+        @include box-shadow(0px 1px 3px #DDD);
+        background-color: white;
+        @include background-linear-gradient(top, #FFF, #F5F5F5);
     }
 
     .ulist ul {
@@ -128,8 +147,8 @@ h3 {
         > li {
             position: relative;
             counter-increment: customlistcounter;
-            margin-bottom: 30px;
-                
+            margin-bottom: 20px;
+
             &:before {
                 // content: counters(customlistcounter, " ", decimal-leading-zero);
                 font-weight: bold;
@@ -144,8 +163,6 @@ h3 {
             }
         
             ul {
-                font-size: 20px;
-            
                 p {
                     line-height: 1.2;
                     margin: 0px;
@@ -153,7 +170,7 @@ h3 {
             }
 
             > p {
-                font-size: 35px; 
+                font-size: 1.2em; 
                 margin: 0px 0px 10px 0px;
                 padding-left: 15px;
                 line-height: 1;
