@@ -1,0 +1,1953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="Asciidoctor 0.1.3">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cheatsheet</title>
+<link rel="stylesheet" href="./asciidoctor.css">
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="paragraph">
+<p>---
+tags: []
+title: CS50_Appliance_17
+---</p>
+</div>
+<div class="paragraph">
+<p><strong>This HOWTO is for version 17 of the CS50 Appliance.</strong></p>
+</div>
+<div class="ulist">
+
+<ul>
+<li>
+<p><strong>If taking CS50x, you should use this version of the appliance.</strong></p>
+</li>
+<li>
+<p><strong>If following Fall 2012 of CS50 (or CSCI E-52), you should use this
+version of the appliance.</strong></p>
+</li>
+<li>
+<p><strong>If following Summer 2012 of CSCI S-75, you should also use this
+version of the appliance.</strong></p>
+</li>
+<li>
+<p><strong>If following Spring 2012 of CS1, CS51, or CS164, you should use
+link:CS50 Appliance 3[version 3] of the appliance.</strong></p>
+</li>
+<li>
+<p><strong>If following <a href="https://www.cs50.net/">Fall 2011</a> of CS50, you should use
+link:CS50 Appliance 2.3[version 2.3] of the appliance.</strong></p>
+</li>
+<li>
+<p><strong>If following <a href="http://cs50.tv/2010/fall/">Fall 2010</a> of CS50, you should
+use link:CS50 Appliance 2.1[version 2.1] of the appliance.</strong></p>
+</li>
+<li>
+<p><strong>If following <a href="http://cs50.tv/2009/fall/">Fall 2009</a> of CS50, you should
+use link:CS50 Appliance 1.4[version 1.4] instead.</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The CS50 Appliance is a
+<a href="http://en.wikipedia.org/wiki/Virtual_machine">virtual machine</a> (VM) that
+lets you "take" CS50 (and other courses!), even if you&#8217;re not a student
+at Harvard.</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s based on
+<a href="http://en.wikipedia.org/wiki/Fedora_(operating_system)">Fedora</a>, a
+<a href="http://en.wikipedia.org/wiki/Linux">Linux</a>-based
+<a href="http://en.wikipedia.org/wiki/Operating_system">operating system</a>. It&#8217;s an
+<a href="http://en.wikipedia.org/wiki/Computer_appliance">appliance</a> in the sense
+that we&#8217;ve preconfigured this VM for a specific purpose: CS50!</p>
+</div>
+<div class="paragraph">
+<p>In other words, even if you&#8217;re not a student in CS50, you can still play
+along at home. The CS50 Appliance will let you compile source code from
+<a href="https://www.cs50.net/lectures/">lectures</a> and implement
+<a href="https://cs50.tv/#l=psets/">problem sets</a> without having to figure out how
+to configure <a href="http://en.wikipedia.org/wiki/Clang">clang</a>, etc. yourself.
+Moreover, the CS50 Appliance lets you run Linux inside of a window on
+your own computer, even if you&#8217;re already running (some other version
+of) Linux, Mac OS, Solaris, or Windows!</p>
+</div>
+<div class="paragraph">
+<p>Incidentally, the appliance is always work in progress, so please
+forgive any bugs!</p>
+</div>
+<div class="sect1">
+<h2 id="_cheatsheet">Cheatsheet</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>See <a href="#_instructions">instructions</a> for much more detail.</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width:100%; ">
+<colgroup>
+<col style="width:%;">
+<col style="width:%;"> 
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Your Name</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">John Harvard</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Your Username</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jharvard</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Your Password</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">crimson</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Appliance&#8217;s IP Address</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a number of the form <strong>w.x.y.z</strong>, which can be found in the appliance&#8217;s bottom-right corner</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Appliance&#8217;s Version</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a number of the form <strong>17-#</strong>, which can be found in the appliance&#8217;s bottom-right corner</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Your MySQL Username</strong>*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jharvard</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Your MySQL Password</strong>*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">crimson</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>phpMyAdmin</strong>**</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://localhost/phpMyAdmin/">http://localhost/phpMyAdmin/</a> from within the appliance
+</p><p class="tableblock"><a href="http://w.x.y.z/phpMyAdmin/">http://w.x.y.z/phpMyAdmin/</a> from your own computer</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+
+<ul>
+<li>
+<p>* Once you <a href="#__how_to_enable_mysql">enable MySQL</a>.<br></p>
+</li>
+<li>
+<p>** Once you <a href="#<em>how_to_enable_apache">enable Apache</a> and
+<a href="#</em>how_to_enable_mysql">enable MySQL</a>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>'''In version 17 of the appliance, the superuser account (i.e., root) is
+locked (i.e., disabled). But John Harvard has "sudo" (i.e.,
+administrative) privileges.</p>
+</div>
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_instructions">Instructions</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_how_to_install_appliance">How to Install Appliance</h3>
+<div class="paragraph">
+<p>In order to install the CS50 Appliance, you first need to install a
+<a href="http://en.wikipedia.org/wiki/Hypervisor">hypervisor</a>, which is a program
+that will let you run
+<a href="http://en.wikipedia.org/wiki/Virtual_machine">virtual machines</a> on your
+own computer, whether you run Mac OS, Windows, or Linux.</p>
+</div>
+<div class="ulist">
+
+<ul>
+<li>
+<p>If you have a <strong>Mac</strong>, we recommend that you follow:</p>
+<div class="ulist">
+
+<ul>
+<li>
+<p><a href="VMware_Fusion">these instructions for VMware
+Fusion</a></p>
+</li>
+<li>
+<p><a href="CS50_Appliance_17/VirtualBox">these instructions for VirtualBox</a>
+if you end have trouble with VMware Fusion</p>
+</li>
+<li>
+<p><a href="CS50_Appliance_17/Parallels">these instructions for Parallels</a> if
+you already own Parallels</p>
+</li>
+</ul>
+</div>
+
+</li>
+<li>
+<p>If you have a <strong>PC running Windows</strong>, we recommend that you follow:</p>
+<div class="ulist">
+
+<ul>
+<li>
+<p><a href="CS50_Appliance_17/VMware_Player">these instructions for VMware
+Player</a></p>
+</li>
+<li>
+<p><a href="CS50_Appliance_17/VMware_Workstation">these instructions for
+VMware Workstation</a> if you have trouble with VMware Player</p>
+</li>
+<li>
+<p><a href="CS50_Appliance_17/VirtualBox">these instructions for VirtualBox</a>
+if you have trouble with VMware Workstation</p>
+</li>
+</ul>
+</div>
+
+</li>
+<li>
+<p>If you have a <strong>PC running Linux</strong>, we recommend that you follow:</p>
+<div class="ulist">
+
+<ul>
+<li>
+<p><a href="CS50_Appliance_17/VMware_Player">these instructions for VMware
+Player</a></p>
+</li>
+<li>
+<p><a href="CS50_Appliance_17/VirtualBox">these instructions for VirtualBox</a>
+if you have trouble with VMware Player</p>
+</li>
+<li>
+<p><a href="CS50_Appliance_17/VMware_Workstation">these instructions for
+VMware Workstation</a> if you have trouble with VirtualBox</p>
+</li>
+</ul>
+</div>
+
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Once installed, it&#8217;s not uncommon for the appliance to take a minute or
+so to boot. But if, once at John Harvard&#8217;s desktop, the appliance still
+feels unbearably slow, you might need to enable
+link:Hardware Virtualization[hardware virtualization] on your computer
+if it&#8217;s a PC running Windows or Linux. (Hardware virtualization should
+be enabled by default on any Intel-based Mac manufactured in the past
+few years.) Even with hardware virtualization enabled, though, virtual
+machines might still feel slow if your computer is a few years old, has
+a CPU that&#8217;s only 1GHz or so, or has only 1GB or so of RAM.</p>
+</div>
+
+</div>
+<div class="sect2">
+<h3 id="_how_to_update_appliance">How to Update Appliance</h3>
+<div class="paragraph">
+<p>The latest version of the CS50 Appliance is <strong>17-12</strong>. More precisely, the
+"latest release of version 17 of the appliance is 17-12." To confirm
+that you have 17-12, look in the appliance&#8217;s bottom-right corner, where
+you should see <strong>17-12</strong> in boldface. Alternatively, you can
+<a href="#_how_to_open_a_terminal">open a terminal</a> and execute</p>
+</div>
+<div class="paragraph">
+<p><code>version50</code></p>
+</div>
+<div class="paragraph">
+<p>which should report <code>17-12</code> as well.</p>
+</div>
+<div class="paragraph">
+<p>If you do not have the latest version, you can update your appliance by
+<a href="#_how_to_open_a_terminal">opening a terminal</a> and executing:</p>
+</div>
+<div class="paragraph">
+<p><code>update50</code></p>
+</div>
+<div class="paragraph">
+<p>Don&#8217;t worry if you see</p>
+</div>
+<div class="paragraph">
+<p><code>  Updating   : appliance50-17-12.i386</code></p>
+</div>
+<div class="paragraph">
+<p>or similar on the screen for a minute or more; it takes a while to
+restart each of the appliance&#8217;s services.</p>
+</div>
+<div class="paragraph">
+<p><strong>Note that you cannot update from version 1.4, 2.1, 2.3, 3, or 17a of
+the appliance to version 17. You must instead download 17, per the
+<a href="#_how_to_install_appliance">instructions</a> above. Thereafter, you&#8217;ll
+be able to update from 17-12 to future releases, per the above.</strong></p>
+</div>
+
+</div>
+<div class="sect2">
+<h3 id="_how_to_use_appliance">How to Use Appliance</h3>
+<div class="paragraph">
+<p>The first thing you should see when the appliance boots up is John
+Harvard&#8217;s desktop. (Oh, henceforth, you are
+<a href="http://en.wikipedia.org/wiki/John_Harvard_(clergyman)">John Harvard</a>.
+Your initial password is <strong>crimson</strong>. And here&#8217;s
+<a href="http://en.wikipedia.org/wiki/File:BostonTrip-91.jpg">what you look
+like</a>.) Even though you might think of Linux as having only a
+<a href="http://en.wikipedia.org/wiki/Command-line_interface">command-line
+interface</a>,
+<a href="http://en.wikipedia.org/wiki/Graphical_user_interface">graphical user
+interfaces</a> do exist. We&#8217;ve installed
+<a href="http://en.wikipedia.org/wiki/Xfce">Xfce</a>, one of the most popular, for
+you. However, we installed as few programs as possible to keep the
+appliance small. You&#8217;re welcome to install additional programs via <strong>Menu
+&gt; Administration &gt; Add/Remove Applications</strong>.</p>
+</div>
+<div class="sect3">
+<h4 id="_how_to_change_name">How to Change Name</h4>
+<div class="paragraph">
+<p>As much as you might not like being called John, <strong>do not try to change
+John Harvard&#8217;s name or username</strong>. Life will be simpler as John.</p>
+</div>
+<div class="paragraph">
+<p>With that said, if you&#8217;d <em>really</em> like to be yourself (or someone else
+altogether), you&#8217;re welcome to create a new account.
+<a href="#_how_to_open_a_terminal">Open a terminal</a> and execute</p>
+</div>
+<div class="paragraph">
+<p><code>sudo adduser --comment "Jane Harvard" --gid students --groups wheel janeh</code><br>
+<code>echo crimson | sudo passwd --stdin janeh</code><br>
+<code>echo -e "crimson\ncrimson" | sudo smbpasswd -a -s janeh</code></p>
+</div>
+<div class="paragraph">
+<p>where <code>Jane Harvard</code> is your desired name, <code>crimson</code> is your desired
+password, and <code>janeh</code> is your desired username. Be sure not to overlook
+the <code>\n</code> in the second command.</p>
+</div>
+<div class="paragraph">
+<p>If you&#8217;d also like to start logging into the appliance automatically
+under your new identity (instead of John Harvard&#8217;s), execute</p>
+</div>
+<div class="paragraph">
+<p><code>sudo nano /etc/gdm/custom.conf</code></p>
+</div>
+<div class="paragraph">
+<p>and change <code>jharvard</code> to your own username. Then hit <strong>ctrl-x</strong>, then <strong>y</strong>,
+then <strong>Enter</strong> to save and quit.</p>
+</div>
+
+</div>
+<div class="sect3">
+<h4 id="_how_to_change_password">How to Change Password</h4>
+<div class="paragraph">
+<p>You can change your password in any of these ways:</p>
+</div>
+<div class="ulist">
+
+<ul>
+<li>
+<p>Select <strong>Menu &gt; Settings &gt; Password</strong> and follow the on-screen prompts.</p>
+</li>
+<li>
+<p><a href="#_how_to_open_a_terminal">Open a terminal</a> and execute:<br></p>
+<div class="listingblock">
+
+<div class="content monospaced">
+<pre>passwd</pre>
+</div>
+</div>
+
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>With that said, allow us to suggest that you not change John Harvard&#8217;s
+password if your own computer is already password-protected. (Life will
+be simpler with <strong>crimson</strong>.) The appliance has been configured in such a
+way that only someone with access to your computer (e.g., you) can
+access the appliance. Even though the appliance can connect to the
+Internet, the Internet cannot connect to the appliance.</p>
+</div>
+
+</div>
+<div class="sect3">
+<h4 id="_how_to_change_language">How to Change Language</h4>
+<div class="paragraph">
+<p><strong>This feature may require Internet access.</strong></p>
+</div>
+<div class="paragraph">
+<p>If English is not your native language, you may want to change the
+appliance&#8217;s default language. Some things will remain in English, but
+you might find yourself more at home nonetheless. Select <strong>Menu &gt;
+Administration &gt; Language</strong>, inputting your password if prompted. Select
+your preferred language from the list that appears, then click <strong>OK</strong>. If
+prompted, click <strong>Import key</strong>. You may need to wait for a bit as the
+language is installed. Then <a href="#_how_to_restart_appliance">restart the
+appliance</a> and log back in.</p>
+</div>
+
+</div>
+<div class="sect3">
+<h4 id="_how_to_change_keyboard_layout">How to Change Keyboard Layout</h4>
+<div class="paragraph">
+<p>If you have a non-U.S. (or non-standard) keyboard, you may want (or
+need!) to change your keyboard&#8217;s layout as follows.</p>
+</div>
+<div class="olist arabic">
+
+<ol class="arabic">
+<li>
+<p>Select <strong>Menu &gt; Settings &gt; Keyboard</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Layout</strong>.</p>
+</li>
+<li>
+<p>Uncheck <strong>Use system defaults</strong>.</p>
+</li>
+<li>
+<p>Leave <strong>Keyboard model</strong> blank unless you have one of the keyboards
+listed.</p>
+</li>
+<li>
+<p>Click <strong>Add</strong> down below <strong>Keyboard layout</strong>.</p>
+</li>
+<li>
+<p>Select your keyboard&#8217;s layout (and variant, if any).</p>
+</li>
+<li>
+<p>Click <strong>OK</strong>.</p>
+</li>
+<li>
+<p>Ensure that your selection is now highlighted instead of <strong>English
+(US)</strong>, then click <strong>Close</strong>.</p>
+</li>
+</ol>
+</div>
+
+</div>
+<div class="sect3">
+<h4 id="_how_to_change_time_zone">How to Change Time Zone</h4>
+<div class="paragraph">
+<p>If you don&#8217;t live in Cambridge, Massachusetts, USA, you may want to
+change the appliance&#8217;s timezone. Select <strong>Menu &gt; Administration &gt; Date &amp;
+Time</strong>. Click the <strong>Time Zone</strong> tab, select the nearest city in your time
+zone, then click <strong>OK</strong>, leaving <strong>System clock uses UTC</strong> checked.</p>
+</div>
+
+</div>
+<div class="sect3">
+<h4 id="_how_to_open_a_terminal">How to Open a Terminal</h4>
+<div class="paragraph">
+<p>You can open a terminal in any of these ways:</p>
+</div>
+<div class="ulist">
+
+<ul>
+<li>
+<p>Select <strong>Menu &gt; Programming &gt; Terminal</strong> or <strong>Menu &gt; Accessories &gt;
+Terminal</strong>. You&#8217;ll find yourself in your home directory (<code>~</code>).</p>
+</li>
+<li>
+<p>Click Terminal&#8217;s icon (a black square) in the appliance&#8217;s bottom-left
+corner. You&#8217;ll find yourself in your home directory (<code>~</code>).</p>
+</li>
+<li>
+<p>Right-click anywhere on your desktop and select <strong>Open Terminal Here</strong>.
+You&#8217;ll find yourself in <code>~/Desktop/</code>.</p>
+</li>
+<li>
+<p>Select <strong>Menu &gt; Programming &gt; gedit</strong> or <strong>Menu &gt; Accessories &gt; gedit</strong>.
+You&#8217;ll find yourself in your home directory (<code>~</code>) in gedit&#8217;s bottom
+panel.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>No matter the approach you take, it&#8217;s in the terminal window that you&#8217;ll
+be able to type commands like <code>cd</code>, <code>gcc</code>, <code>ls</code>, etc.</p>
+</div>
+
+</div>
+<div class="sect3">
+<h4 id="_how_to_ssh_to_appliance">How to SSH to Appliance</h4>
+<div class="paragraph">
+<p>If you&#8217;d like to SSH to the appliance from your own computer (as with
+Terminal on Mac OS or with PuTTY on Windows), you can SSH from your
+computer to the appliance&#8217;s IP address (which is displayed in the
+appliance&#8217;s bottom-right corner).</p>
+</div>
+<div class="paragraph">
+<p><strong>Note that, for security&#8217;s sake, you can SSH to the appliance as
+<code>jharvard</code> but not as <code>root</code>.</strong></p>
+</div>
+
+</div>
+<div class="sect3">
+<h4 id="_how_to_assign_appliance_a_static_ip_address">How to Assign Appliance a Static IP Address</h4>
+<div class="paragraph">
+<p><em>Coming Soon</em></p>
+</div>
+
+</div>
+<div class="sect3">
+<h4 id="_how_to_change_resolution">How to Change Resolution</h4>
+<div class="paragraph">
+<p>You can change the appliance&#8217;s resolution (i.e., width and height) in
+either of these ways:</p>
+</div>
+<div class="ulist">
+
+<ul>
+<li>
+<p>Select <strong>Menu &gt; Settings &gt; Display</strong> within the appliance, select a new
+value to the right of <strong>Resolution</strong>, then click <strong>Close</strong>.</p>
+</li>
+<li>
+<p>Click and drag the appliance&#8217;s bottom-right corner.</p>
+</li>
+</ul>
+</div>
+
+</div>
+<div class="sect3">
+<h4 id="_how_to_change_volume">How to Change Volume</h4>
+<div class="olist arabic">
+
+<ol class="arabic">
+<li>
+<p>Select <strong>Menu &gt; Sound &amp; Video &gt; Mixer</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Playback: ES1371 [AudioPCO-97] Analog Stereo (PulseAudio
+Mixer)</strong> next to <strong>Sound card</strong>.</p>
+</li>
+<li>
+<p>Click '''Select Controls&#8230;".</p>
+</li>
+<li>
+<p>Check <strong>Master</strong> then click <strong>Close</strong>.</p>
+</li>
+<li>
+<p>Drag the sliders upward to increase the audio&#8217;s volume.</p>
+</li>
+<li>
+<p>Click <strong>Quit</strong>.</p>
+</li>
+<li>
+<p>Visit <a href="http://www.youtube.com/">http://www.youtube.com/</a> in Chrome to test with a video!</p>
+</li>
+</ol>
+</div>
+
+</div>
+<div class="sect3">
+<h4 id="_how_to_enter_exit_fullscreen_mode">How to Enter/Exit Fullscreen Mode</h4>
+<div class="sect4">
+<h5 id="_vmware_fusion">VMware Fusion</h5>
+<div class="paragraph">
+<p>To enter fullscreen mode, select <strong>Full Screen</strong> from VMware Fusion&#8217;s
+<strong>View</strong> menu while the appliance is running. (This menu is outside of the
+appliance, not inside of it.)</p>
+</div>
+<div class="paragraph">
+<p>To exit fullscreen mode, move your cursor to the middle of the top of
+your screen, at which point a menubar should appear. Select <strong>Single
+Window</strong> from the <strong>View</strong> menu.</p>
+</div>
+
+</div>
+<div class="sect4">
+<h5 id="_vmware_player">VMware Player</h5>
+<div class="paragraph">
+<p>To enter fullscreen mode, select <strong>Full Screen</strong> from VMware Player&#8217;s
+<strong>Player</strong> menu while the appliance is running. (This menu is outside of
+the appliance, not inside of it.)</p>
+</div>
+<div class="paragraph">
+<p>To exit fullscreen mode, move your cursor to the middle of the top of
+your screen, at which point a menubar should appear (if not there
+already), and again select <strong>Full Screen</strong> from VMware Player&#8217;s <strong>Player</strong>
+menu.</p>
+</div>
+
+</div>
+<div class="sect4">
+<h5 id="_vmware_workstation">VMware Workstation</h5>
+<div class="paragraph">
+<p>To enter fullscreen mode, select <strong>Full Screen</strong> from VMware Workstation&#8217;s
+<strong>View</strong> menu while the appliance is running. (This menu is outside of the
+appliance, not inside of it.)</p>
+</div>
+<div class="paragraph">
+<p>To exit fullscreen mode, move your cursor to the middle of the top of
+your screen, at which point a menubar should appear (if not there
+already), and again select <strong>Full Screen</strong> from VMware Workstation&#8217;s
+<strong>View</strong> menu.</p>
+</div>
+
+</div>
+<div class="sect4">
+<h5 id="_virtualbox">VirtualBox</h5>
+<div class="paragraph">
+<p>To enter fullscreen mode, select <strong>Switch to Fullscreen</strong> from
+VirtualBox&#8217;s <strong>Machine</strong> menu while the appliance is running. (This menu
+is outside of the appliance, not inside of it.)</p>
+</div>
+<div class="paragraph">
+<p>To exit fullscreen mode, move your cursor to the middle of the bottom of
+your screen, at which point a menu should appear. Click the second icon
+from the right (which resembles two squares).</p>
+</div>
+
+</div>
+
+</div>
+<div class="sect3">
+<h4 id="_how_to_enable_apache">How to Enable Apache</h4>
+<div class="paragraph">
+<p>By default, Apache (httpd) is disabled by default. To enable it,
+<a href="#_how_to_open_a_terminal">open a terminal</a> and execute:</p>
+</div>
+<div class="paragraph">
+<p><code>sudo chkconfig httpd on</code><br>
+<code>sudo service httpd start</code></p>
+</div>
+
+</div>
+<div class="sect3">
+<h4 id="_how_to_enable_mysql">How to Enable MySQL</h4>
+<div class="paragraph">
+<p>By default, MySQL (mysqld) is disabled by default. To enable it,
+<a href="#_how_to_open_a_terminal">open a terminal</a> and execute:</p>
+</div>
+<div class="paragraph">
+<p><code>sudo chkconfig mysqld on</code><br>
+<code>sudo service mysqld start</code></p>
+</div>
+
+</div>
+<div class="sect3">
+<h4 id="_how_to_use_phpmyadmin">How to Use phpMyAdmin</h4>
+<div class="paragraph">
+<p>You can access phpMyAdmin in either of these ways:</p>
+</div>
+<div class="ulist">
+
+<ul>
+<li>
+<p>Visit <a href="http://localhost/phpMyAdmin/">http://localhost/phpMyAdmin/</a> or <a href="http://w.x.y.z/phpMyAdmin/">http://w.x.y.z/phpMyAdmin/</a>
+(where <strong>w.x.y.z</strong> is the appliance&#8217;s IP address, which can be found in
+the appliance&#8217;s bottom-right corner) using Chrome within the appliance.</p>
+</li>
+<li>
+<p>Visit <a href="http://w.x.y.z/phpMyAdmin/">http://w.x.y.z/phpMyAdmin/</a> (where <strong>w.x.y.z</strong> is the appliance&#8217;s
+IP address, which can be found in the appliance&#8217;s bottom-right corner)
+using your own computer&#8217;s browser.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>No matter the approach you take, log in as <strong>jharvard</strong> with a password of
+<strong>crimson</strong> if prompted.</p>
+</div>
+
+</div>
+<div class="sect3">
+<h4 id="_how_to_restore_snapshots">How to Restore Snapshots</h4>
+<div class="paragraph">
+<p>Every 10 minutes, the appliance take "snapshots" of source code in
+<code>/home</code> just in case you accidentally delete something. You can also
+mitigate accidental deletions by
+<a href="#_how_to_synchronize_files_with_dropbox">synchronizing with Dropbox</a>
+so that you can restore files at <a href="https://www.dropbox.com/">dropbox.com</a>.</p>
+</div>
+<div class="paragraph">
+<p>Suppose that you just deleted <code>~/hello.c</code>. Odds are you&#8217;ll find it in
+the <code>minutely.0</code> or <code>minutely.1</code> snapshot, depending on the current
+time, in which case you can recover it with</p>
+</div>
+<div class="paragraph">
+<p><code>cp /.snapshots/minutely.0/home/jharvard/hello.c ~</code></p>
+</div>
+<div class="paragraph">
+<p>or with</p>
+</div>
+<div class="paragraph">
+<p><code>cp /.snapshots/minutely.1/home/jharvard/hello.c ~</code></p>
+</div>
+<div class="paragraph">
+<p>in a <a href="#_how_to_open_a_terminal">terminal</a>. If you need to recover an
+earlier version, you can go further back in time via <code>minutely.2</code>,
+<code>minutely.3</code>, or <code>minutely.4</code>. If you&#8217;d instead like to go back an hour
+or so, you can start with <code>hourly.0</code>, followed by <code>hourly.1</code>,
+<code>hourly.2</code>, and so on. Below are all of the intervals you can try.
+Realize that the times only estimates, since the intervals' definitions
+depend on the current time.</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width:100%; ">
+<colgroup>
+<col style="width:%;">
+<col style="width:%;"> 
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>minutely.0</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10 minutes ago</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>minutely.1</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20 minutes ago</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>minutely.2</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30 minutes ago</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>minutely.3</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">40 minutes ago</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>minutely.4</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">50 minutes ago</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hourly.0</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 hour ago</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hourly.1</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 hours ago</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hourly.22</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23 hours ago</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>daily.0</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yesterday</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>daily.1</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 days ago</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>daily.5</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6 days ago</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>weekly.0</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 week ago</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>weekly.1</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 weeks ago</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>weekly.51</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51 weeks ago</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>To see which intervals are actually available to you, execute:</p>
+</div>
+<div class="paragraph">
+<p><code>ls /.snapshots/</code></p>
+</div>
+
+</div>
+<div class="sect3">
+<h4 id="_how_to_enable_dropbox">How to Enable Dropbox</h4>
+<div class="paragraph">
+<p><strong>This feature requires Internet access.</strong></p>
+</div>
+<div class="paragraph">
+<p>To make it easier to back up files within the appliance automatically as
+well as share them with your own computer(s), you can synchronize a
+directory in John Harvard&#8217;s account with
+<a href="http://www.dropbox.com/features">Dropbox</a>. <strong>If taking a course, just take
+care to respect the course&#8217;s policies on academic honesty.</strong></p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s how to configure the appliance for Dropbox.</p>
+</div>
+<div class="olist arabic">
+
+<ol class="arabic">
+<li>
+<p>Select <strong>Menu &gt; Dropbox</strong>.</p>
+</li>
+<li>
+<p>You should be prompted to "download the proprietary daemon" (i.e.,
+software); click <strong>OK</strong>. The software should proceed to download and
+unpack.</p>
+</li>
+<li>
+<p>You should then be prompted to set up Dropbox.</p>
+<div class="ulist">
+
+<ul>
+<li>
+<p>If you don&#8217;t already have a Dropbox account, leave <strong>I don&#8217;t have a
+Dropbox account</strong> checked, then click <strong>Next</strong>. Create your Dropbox as
+prompted.</p>
+</li>
+<li>
+<p>If you already have an Dropbox account, check <strong>I already have a
+Dropbox account</strong>, then click <strong>OK</strong>. Log in as prompted.</p>
+</li>
+</ul>
+</div>
+
+</li>
+<li>
+<p>If prompted to upgrade your Dropbox, simply leave <strong>2 GB</strong> checked
+(which is free) then click <strong>Next</strong>, unless you want to upgrade to a paid
+account.</p>
+</li>
+<li>
+<p>If prompted to <strong>Choose setup type</strong>, leave <strong>Typical</strong> checked, then
+click <strong>Install</strong>. If prompted to "merge", click <strong>Merge</strong>.</p>
+</li>
+<li>
+<p>If prompted to take a 5-step tour, click <strong>Skip Tour</strong>; its
+screenshots won&#8217;t match what you&#8217;ll see in the appliance.</p>
+</li>
+<li>
+<p>When informed <strong>That&#8217;s it!</strong>, uncheck <strong>Open my Dropbox folder now</strong>,
+then click <strong>Finish</strong>. A Dropbox icon should then appear in the
+appliance&#8217;s bottom-right corner.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Only those files and folders that you save in <code>~/Dropbox/</code> will be
+synchronized with your Dropbox account.</strong></p>
+</div>
+<div class="sect4">
+<h5 id="_how_to_prevent_dropbox_from_synching_personal_files_em_into_em_the_appliance">How to Prevent Dropbox from Synching Personal Files <em>into</em> the Appliance</h5>
+<div class="olist arabic">
+
+<ol class="arabic">
+<li>
+<p>Ctrl-click on the Dropbox icon in the appliance&#8217;s bottom-right
+corner and select <strong>Preferences&#8230;</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Advanced</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Selective Sync&#8230;</strong>.</p>
+</li>
+<li>
+<p>Uncheck the folders that you don&#8217;t want synched into the appliance.</p>
+</li>
+<li>
+<p>Click <strong>Update</strong>.</p>
+</li>
+</ol>
+</div>
+
+</div>
+
+</div>
+<div class="sect3">
+<h4 id="_how_to_transfer_files_between_appliance_and_your_computer">How to Transfer Files between Appliance and Your Computer</h4>
+<div class="paragraph">
+<p>If you&#8217;d like to
+<a href="http://en.wikipedia.org/wiki/SSH_file_transfer_protocol">SFTP</a> to the
+appliance from your own computer (as with
+<a href="http://cyberduck.ch/">Cyberduck</a> on Mac OS or with
+<a href="http://winscp.net/eng/download.php">WinSCP</a> on Windows), you can SFTP
+from your computer to <strong>w.x.y.z</strong> (where <strong>w.x.y.z</strong> is the appliance&#8217;s IP
+address, which can be found in the appliance&#8217;s bottom-right corner).</p>
+</div>
+<div class="paragraph">
+<p>Alternatively, you can "mount" John Harvard&#8217;s home directory (via a
+protocol called <a href="http://en.wikipedia.org/wiki/Server_Message_Block">SMB</a>,
+otherwise known as <a href="http://en.wikipedia.org/wiki/CIFS">CIFS</a>) in a window
+on your own desktop, to and from which you can drag and drop files.
+Here&#8217;s how, whether you run Linux, Mac OS, or Windows.</p>
+</div>
+<div class="sect4">
+<h5 id="_windows">Windows</h5>
+<div class="olist arabic">
+
+<ol class="arabic">
+<li>
+<p>Open any folder on your hard drive.</p>
+</li>
+<li>
+<p>Click the address bar atop the folder&#8217;s window and input
+<strong>\\w.x.y.z\jharvard</strong> (where <strong>w.x.y.z</strong> is the appliance&#8217;s IP address,
+which can be found in the appliance&#8217;s bottom-right corner), then click
+<strong>Enter</strong>.</p>
+</li>
+<li>
+<p>If prompted for your name and password:</p>
+</li>
+<li>
+<p>Input <strong>jharvard</strong> for <strong>User name</strong>.</p>
+</li>
+<li>
+<p>Input <strong>crimson</strong> for <strong>Password</strong>.</p>
+</li>
+<li>
+<p>Check <strong>Remember my credentials</strong> if you&#8217;d like.</p>
+</li>
+<li>
+<p>Click <strong>Connect</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>John Harvard&#8217;s home directory should then open in a new window.</p>
+</div>
+
+</div>
+<div class="sect4">
+<h5 id="_mac_os">Mac OS</h5>
+<div class="olist arabic">
+
+<ol class="arabic">
+<li>
+<p>Select <strong>Connect to Server&#8230;</strong> from the Finder&#8217;s <strong>Go</strong> menu.</p>
+</li>
+<li>
+<p>Under <strong>Server Address:</strong>, input <strong>smb://w.x.y.z</strong> (where <strong>w.x.y.z</strong> is
+the appliance&#8217;s IP address, which can be found in the appliance&#8217;s
+bottom-right corner). (Click the <strong>+</strong> icon if you&#8217;d like to add the
+appliance to your <strong>Favorite Servers</strong>.) Then click <strong>Connect</strong>.</p>
+</li>
+<li>
+<p>If prompted for your name and password:</p>
+</li>
+<li>
+<p>Select <strong>Registered User</strong>.</p>
+</li>
+<li>
+<p>Input <strong>jharvard</strong> for <strong>Name</strong>.</p>
+</li>
+<li>
+<p>Input <strong>crimson</strong> for <strong>Password</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Connect</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>John Harvard&#8217;s home directory should then open in a new window.</p>
+</div>
+
+</div>
+<div class="sect4">
+<h5 id="_linux">Linux</h5>
+<div class="paragraph">
+<p>GNOME</p>
+</div>
+<div class="olist arabic">
+
+<ol class="arabic">
+<li>
+<p>Select <strong>Connect to Server&#8230;</strong> from the <strong>Places</strong> menu.</p>
+</li>
+<li>
+<p>Input <strong>w.x.y.z</strong> for <strong>Server</strong> (where <strong>w.x.y.z</strong> is the appliance&#8217;s IP
+address, which can be found in the appliance&#8217;s bottom-right corner).</p>
+</li>
+<li>
+<p>Select <strong>Windows share</strong> for <strong>Type</strong>.</p>
+</li>
+<li>
+<p>Input <strong>jharvard</strong> for <strong>Share</strong>.</p>
+</li>
+<li>
+<p>Input <strong>/</strong> for <strong>Folder</strong>.</p>
+</li>
+<li>
+<p>Input <strong>CS50</strong> for <strong>Domain name</strong>.</p>
+</li>
+<li>
+<p>Input <strong>jharvard</strong> for <strong>User name</strong>.</p>
+</li>
+<li>
+<p>Input <strong>crimson</strong> for <strong>Password</strong>.</p>
+</li>
+<li>
+<p>Check <strong>Remember this password</strong> if you&#8217;d like.</p>
+</li>
+<li>
+<p>Click <strong>Connect</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>John Harvard&#8217;s home directory should then open in a new window.</p>
+</div>
+<div class="paragraph">
+<p>KDE</p>
+</div>
+<div class="olist arabic">
+
+<ol class="arabic">
+<li>
+<p>Open Dolphin (as via <strong>Computer &gt; Network</strong>).</p>
+</li>
+<li>
+<p>Select <strong>Network</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Add Network Folder</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Microsoft® Windows® network drive</strong>, then click <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Input <strong>appliance</strong> for <strong>Name</strong>.</p>
+</li>
+<li>
+<p>Input <strong>w.x.y.z</strong> for <strong>Server</strong> (where <strong>w.x.y.z</strong> is the appliance&#8217;s IP
+address, which can be found in the appliance&#8217;s bottom-right corner).</p>
+</li>
+<li>
+<p>Input <strong>jharvard</strong> for <strong>Folder</strong>.</p>
+</li>
+<li>
+<p>Check <strong>Create an icon for this remote folder</strong> if you&#8217;d like.</p>
+</li>
+<li>
+<p>Click <strong>Finish</strong>.</p>
+</li>
+<li>
+<p>Input <strong>jharvard</strong> for <strong>Username</strong>.</p>
+</li>
+<li>
+<p>Input <strong>crimson</strong> for <strong>Password</strong>.</p>
+</li>
+<li>
+<p>Check <strong>Remember password</strong> if you&#8217;d like.</p>
+</li>
+<li>
+<p>Click <strong>OK</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>John Harvard&#8217;s home directory should then open in a new window.</p>
+</div>
+<div class="paragraph">
+<p>Xfce</p>
+</div>
+<div class="olist arabic">
+
+<ol class="arabic">
+<li>
+<p>Install <code>gvfs-smb</code> as <code>root</code> (as via <code>sudo</code>) if not installed
+already, as with</p>
+<div class="listingblock">
+
+<div class="content monospaced">
+<pre>yum -y install gvfs-smb</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>if running CentOS, Fedora, or RedHat or with</p>
+</div>
+<div class="listingblock">
+
+<div class="content monospaced">
+<pre>apt-get install gvfs-backends</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>if running Debian or Ubuntu.</p>
+</div>
+
+</li>
+<li>
+<p>Launch Thunar (as via <strong>Applications Menu &gt; System &gt; Thunar File
+Manager</strong>).</p>
+</li>
+<li>
+<p>Select <strong>Open Location&#8230;</strong> from the <strong>Go</strong> menu.</p>
+</li>
+<li>
+<p>Input <strong>smb://w.x.y.z/jharvard/</strong> (where <strong>w.x.y.z</strong> is the appliance&#8217;s
+IP address, which can be found in the appliance&#8217;s bottom-right corner)
+for <strong>Location</strong> then click <strong>Open</strong>.</p>
+</li>
+<li>
+<p>Input <strong>jharvard</strong> for <strong>Username</strong>.</p>
+</li>
+<li>
+<p>Input <strong>CS50</strong> for <strong>Domain</strong>.</p>
+</li>
+<li>
+<p>Input <strong>crimson</strong> for <strong>Password</strong>.</p>
+</li>
+<li>
+<p>Check <strong>Remember forever</strong> if you&#8217;d like.</p>
+</li>
+<li>
+<p>Click <strong>Connect</strong>.</p>
+</li>
+</ol>
+</div>
+
+</div>
+
+</div>
+<div class="sect3">
+<h4 id="_how_to_access_appliance_from_another_computer">How to Access Appliance from Another Computer</h4>
+<div class="paragraph">
+<p><strong>This feature is not supported on Harvard&#8217;s campus on the "Harvard
+University" SSID.</strong> It does work on the "CS50" SSID in Annenberg and
+Sanders Theatre, though.</p>
+</div>
+<div class="paragraph">
+<p>By default, you can access the appliance from your own computer via
+<strong>w.x.y.z</strong> (where <strong>w.x.y.z</strong> is the appliance&#8217;s IP address, which can be
+found in the appliance&#8217;s bottom-right corner). That IP address only
+exists within the confines of your hypervisor, though, so, by default,
+it&#8217;s <em>not</em> possible to access the appliance from other computers on your
+LAN (i.e., home network).</p>
+</div>
+<div class="paragraph">
+<p>However, the appliance also comes with a "bridged" network interface
+(<code>eth2</code>) that you can activate manually. So long as your LAN supports
+<a href="http://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol">DHCP</a>
+(which most home networks do), that interface will acquire an IP address
+on your LAN, at which point you can access the appliance via HTTP or SSH
+via <em>that</em> IP from any computer on your LAN.</p>
+</div>
+<div class="paragraph">
+<p>However, for security&#8217;s sake, you will not be able (from any computer
+besides your own, on which the appliance is running) to:</p>
+</div>
+<div class="ulist">
+
+<ul>
+<li>
+<p>access phpMyAdmin</p>
+</li>
+<li>
+<p>access Webmin</p>
+</li>
+<li>
+<p><a href="#_how_to_transfer_files_between_appliance_and_your_computer">mount
+John Harvard&#8217;s home directory</a> in a window on your desktop</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You will be able to:</p>
+</div>
+<div class="ulist">
+
+<ul>
+<li>
+<p>access John Harvard&#8217;s homepage</p>
+</li>
+<li>
+<p>SSH to the appliance</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Unfortunately, odds are <code>eth2</code> will not work on Harvard&#8217;s campus because
+of Harvard&#8217;s firewall.</p>
+</div>
+<div class="paragraph">
+<p><strong>Before activating <code>eth2</code>, you should first
+<a href="#_how_to_change_password">change John Harvard&#8217;s password</a> to
+something only you know for security&#8217;s sake.</strong></p>
+</div>
+<div class="paragraph">
+<p>To enable <code>eth2</code> temporarily, <a href="#_how_to_open_a_terminal">open a
+terminal</a> and execute:</p>
+</div>
+<div class="paragraph">
+<p><code>sudo ifup eth2</code></p>
+</div>
+<div class="paragraph">
+<p>If your LAN indeed supports DHCP, you should see:</p>
+</div>
+<div class="paragraph">
+<p><code>Determining IP information for eth2... done.</code></p>
+</div>
+<div class="paragraph">
+<p>To find out which IP address was assigned by your LAN to the appliance,
+execute</p>
+</div>
+<div class="paragraph">
+<p><code>ifconfig eth2</code></p>
+</div>
+<div class="paragraph">
+<p>and look to the right of <strong>inet addr</strong> (not <strong>inet6 addr</strong>). That&#8217;s the
+address via which you can accessible the appliance from another computer
+on your LAN. Odds are it will start with <strong>192.168.0</strong> or <strong>192.168.1</strong> or
+<strong>10.0.1</strong>, though other prefixes are possible.</p>
+</div>
+<div class="paragraph">
+<p>If you would like to enable <code>eth2</code> permanently:</p>
+</div>
+<div class="olist arabic">
+
+<ol class="arabic">
+<li>
+<p>Select <strong>Menu &gt; Administration &gt; Network</strong>.</p>
+</li>
+<li>
+<p>Highlight <strong>eth2</strong> in the window that appears, then click <strong>Edit</strong>.</p>
+</li>
+<li>
+<p>Check <strong>Activate device when computer starts</strong>, then click <strong>OK</strong>.</p>
+</li>
+<li>
+<p>Select <strong>File &gt; Save</strong>, then click <strong>OK</strong>.</p>
+</li>
+<li>
+<p>Select <strong>File &gt; Quit</strong>.</p>
+</li>
+<li>
+<p><a href="#_how_to_restart_appliance">Restart the appliance</a>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Just realize that each time the appliance starts, it may be assigned a
+different IP address on your LAN via DCHP, so you might need to re-run</p>
+</div>
+<div class="paragraph">
+<p><code>ifconfig eth2</code></p>
+</div>
+<div class="paragraph">
+<p>each time to find out the current address. If your home router supports
+"DHCP reservations," know that you can find out the MAC (i.e., Ethernet)
+address of <code>eth2</code> by running</p>
+</div>
+<div class="paragraph">
+<p><code>ifconfig eth2</code></p>
+</div>
+<div class="paragraph">
+<p>as well. Look to the right of <strong>HWaddr</strong> for the address. Alternatively,
+if you think it&#8217;s safe to assign the appliance a static IP address on
+your LAN without your home router even knowing, select <strong>Menu &gt;
+Administration &gt; Network</strong>, highlight <strong>eth2</strong> in the window that appears,
+click <strong>Edit</strong>, select <strong>Statically set IP addresses</strong>, and configure the
+interface as you see fit.</p>
+</div>
+
+</div>
+<div class="sect3">
+<h4 id="_how_to_take_a_screenshot">How to Take a Screenshot</h4>
+<div class="paragraph">
+<p>It&#8217;s sometimes helpful to take a screenshot of the appliance so that you
+can remember or share something you see on your screen. <strong>If taking a
+course, just take care to respect the course&#8217;s policies on academic
+honesty.</strong></p>
+</div>
+<div class="paragraph">
+<p>To take a screenshot inside of the appliance:</p>
+</div>
+<div class="olist arabic">
+
+<ol class="arabic">
+<li>
+<p>Select <strong>Menu &gt; Accessories &gt; Screenshot</strong>.</p>
+</li>
+<li>
+<p>Check a <strong>Region to capture</strong>.</p>
+</li>
+<li>
+<p>Leave <strong>Capture the mouse pointer</strong> checked unless you&#8217;d like to hide
+it.</p>
+</li>
+<li>
+<p>Leave <strong>Delay before capturing</strong> at <strong>1</strong>, unless you need more time.</p>
+</li>
+<li>
+<p>Click <strong>OK</strong>.</p>
+</li>
+<li>
+<p>You should then be prompted to decide on an <strong>Action</strong>. Leave <strong>Save</strong>
+checked and then click <strong>OK</strong> if you&#8217;d like to save the screenshot as a
+file; decide on a destination as prompted. You can then share that
+screenshot with someone if necessary, as by opening Gmail in Firefox and
+sending it as an attachment.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>You can also <a href="#_how_to_share_control_of_your_screen">share control of
+your screen</a> if you need someone else to see more than a screenshot.</p>
+</div>
+
+</div>
+<div class="sect3">
+<h4 id="_how_to_share_control_of_your_screen">How to Share Control of Your Screen</h4>
+<div class="paragraph">
+<p><strong>This feature requires Internet access.</strong></p>
+</div>
+<div class="paragraph">
+<p>So that you can help (and be helped by!) fellow learners on the
+Internet, the appliance comes with
+<a href="http://www.teamviewer.com/">TeamViewer</a>, which lets you share (control
+of) your screen with someone else (a "partner") on the Internet (and
+vice versa). <strong>If taking a course, just take care to respect the course&#8217;s
+policies on academic honesty.</strong></p>
+</div>
+<div class="paragraph">
+<p>To share your screen with some else:</p>
+</div>
+<div class="olist arabic">
+
+<ol class="arabic">
+<li>
+<p>Select <strong>Menu &gt; TeamViewer</strong>. (Click <strong>Accept License Agreement</strong> if
+prompted.) A window should appear.</p>
+</li>
+<li>
+<p>Tell your partner <strong>Your ID</strong> and <strong>Password</strong> that you see. Once your
+partner inputs those values, your screen should be shared. Though if
+your own computer has a firewall, you might first be prompted to "allow
+incoming connections" or the like.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>To see someone else&#8217;s screen:</p>
+</div>
+<div class="olist arabic">
+
+<ol class="arabic">
+<li>
+<p>Ask your partner for a <strong>Partner ID</strong> and <strong>Password</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Menu &gt; TeamViewer</strong>. (Click <strong>Accept License Agreement</strong> if
+prompted.) A window should appear.</p>
+</li>
+<li>
+<p>Input the <strong>Partner ID</strong> into that window, then click <strong>Connect to
+partner</strong>.</p>
+</li>
+<li>
+<p>When prompted, input the <strong>Password</strong>, at which point you should see
+your partner&#8217;s screen.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>If you would like to connect to someone else&#8217;s appliance from your own
+computer (rather than from your own appliance) or from a mobile device,
+you can download TeamViewer for free for Android, iOS, Linux, Mac OS, or
+Windows from <a href="http://www.teamviewer.com/en/download/">http://www.teamviewer.com/en/download/</a>.</p>
+</div>
+
+</div>
+<div class="sect3">
+<h4 id="_how_to_disable_automatic_login">How to Disable Automatic Login</h4>
+<div class="paragraph">
+<p>By default, the appliance logs you in as John Harvard. To disable
+automatic login, <a href="#_how_to_open_a_terminal">open a terminal</a> and
+execute:</p>
+</div>
+<div class="paragraph">
+<p><code>sudo rm -f /etc/gdm/custom.conf</code></p>
+</div>
+<div class="paragraph">
+<p>Then <a href="#_how_to_restart_appliance">restart the appliance</a>. You should
+now see a login prompt instead of John Harvard&#8217;s desktop.</p>
+</div>
+
+</div>
+<div class="sect3">
+<h4 id="_how_to_log_out_of_appliance">How to Log Out of Appliance</h4>
+<div class="paragraph">
+<p>To log out of the appliance, click
+<span class="image"><img src="Exit.png" alt="Exit.png" title="image"></span> in the appliance&#8217;s bottom-right
+corner, then click <strong>Log Out</strong>.</p>
+</div>
+
+</div>
+<div class="sect3">
+<h4 id="_how_to_restart_appliance">How to Restart Appliance</h4>
+<div class="paragraph">
+<p>You can restart the appliance in either of these ways:</p>
+</div>
+<div class="ulist">
+
+<ul>
+<li>
+<p>Click <span class="image"><img src="Exit.png" alt="Exit.png" title="image"></span> in the appliance&#8217;s
+bottom-right corner, then click <strong>Restart</strong>.</p>
+</li>
+<li>
+<p><a href="#_how_to_open_a_terminal">Open a terminal</a> and execute the below,
+inputting your password if prompted:</p>
+<div class="listingblock">
+
+<div class="content monospaced">
+<pre>reboot</pre>
+</div>
+</div>
+
+</li>
+</ul>
+</div>
+
+</div>
+<div class="sect3">
+<h4 id="_how_to_shut_down_appliance">How to Shut Down Appliance</h4>
+<div class="paragraph">
+<p>You can shut down the appliance in either of these ways:</p>
+</div>
+<div class="ulist">
+
+<ul>
+<li>
+<p>Click <span class="image"><img src="Exit.png" alt="Exit.png" title="image"></span> in the appliance&#8217;s
+bottom-right corner, then click <strong>Shut Down</strong>.</p>
+</li>
+<li>
+<p><a href="#_how_to_open_a_terminal">Open a terminal</a> and execute the below,
+inputting your password if prompted:</p>
+<div class="listingblock">
+
+<div class="content monospaced">
+<pre>sudo shutdown</pre>
+</div>
+</div>
+
+</li>
+</ul>
+</div>
+
+</div>
+<div class="sect3">
+<h4 id="_how_to_configure_appliance_for_a_proxy_server">How to Configure Appliance for a Proxy Server</h4>
+<div class="paragraph">
+<p>If your own computer sits behind an HTTP proxy server, you might need to
+configure the appliance to route HTTP traffic through that proxy as
+well. Here&#8217;s how.</p>
+</div>
+<div class="olist arabic">
+
+<ol class="arabic">
+<li>
+<p><a href="#_how_to_open_a_terminal">Open a terminal</a> and execute the below:</p>
+<div class="listingblock">
+
+<div class="content monospaced">
+<pre>sudo gedit /etc/profile.d/proxy.sh</pre>
+</div>
+</div>
+
+</li>
+<li>
+<p>Add the following line to that (otherwise empty) file, where
+<code>example.com</code> is the address of your proxy server and <code>80</code> is its port
+number:</p>
+<div class="listingblock">
+
+<div class="content monospaced">
+<pre>export http_proxy=http://example.com:80/</pre>
+</div>
+</div>
+
+</li>
+<li>
+<p>Select <strong>File &gt; Quit</strong>, and click <strong>Save</strong> when prompted.</p>
+</li>
+<li>
+<p>Execute</p>
+<div class="listingblock">
+
+<div class="content monospaced">
+<pre>sudo chmod 644 /etc/profile.d/proxy.sh</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>in the terminal.</p>
+</div>
+
+</li>
+<li>
+<p><a href="#_how_to_restart_appliance">Restart the appliance</a>.</p>
+</li>
+</ol>
+</div>
+
+</div>
+
+</div>
+<div class="sect2">
+<h3 id="_how_to_run_programs_from_lectures">How to Run Programs from Lectures</h3>
+<div class="paragraph">
+<p>See <a href="Fall_2012#Lectures">Fall 2012&#8217;s HOWTO</a>.</p>
+</div>
+
+</div>
+<div class="sect2">
+<h3 id="_how_to_do_problem_sets">How to Do Problem Sets</h3>
+<div class="paragraph">
+<p>See <a href="Fall_2012#Problem_Sets">Fall 2012&#8217;s HOWTO</a>.</p>
+</div>
+
+</div>
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_accessibility">Accessibility</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The CS50 Appliance comes pre-configured with
+<a href="http://live.gnome.org/Orca">Orca</a>, a screen reader. To enable Orca,
+select <strong>Menu &gt; Accessories &gt; Orca</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Note that Orca does work with:</p>
+</div>
+<div class="ulist">
+
+<ul>
+<li>
+<p>Chrome</p>
+</li>
+<li>
+<p>gedit (but not its built-in terminal window)</p>
+</li>
+<li>
+<p>NetBeans</p>
+</li>
+<li>
+<p>Xfce&#8217;s menu (in the appliance&#8217;s bottom-left corner)</p>
+</li>
+<li>
+<p>Xfce&#8217;s panel (along the bottom of the appliance&#8217;s screen)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>But Orca does not work with:</p>
+</div>
+<div class="ulist">
+
+<ul>
+<li>
+<p>gedit&#8217;s built-in terminal window</p>
+</li>
+<li>
+<p>Terminal</p>
+</li>
+<li>
+<p>Thunar, the appliance&#8217;s file manager (via which you can open the
+<strong>Home</strong> and <strong>File System</strong> icons on the appliance&#8217;s desktop)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>However, if you have a screen reader installed on your own computer, you
+needn&#8217;t rely on Orca alone. Instead, you can leverage your own screen
+reader for navigation by <a href="#_how_to_ssh_to_appliance">SSHing to the
+appliance</a> from your computer and by
+<a href="#_how_to_transfer_files_between_appliance_and_your_computer">mounting
+John Harvard&#8217;s home directory</a> on your own computer.</p>
+</div>
+<div class="paragraph">
+<p><strong>If you have suggestions on how to improve the appliance&#8217;s
+accessibility, please let <a href="mailto:sysadmins@cs50.net">sysadmins@cs50.net</a> know!</strong></p>
+</div>
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_forget_a_password">Forget a password?</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_i_changed_and_forgot_john_harvard_s_password">I changed and forgot John Harvard&#8217;s password</h3>
+<div class="olist arabic">
+
+<ol class="arabic">
+<li>
+<p>Start (or <a href="#_how_to_restart_appliance">restart</a>) the appliance.</p>
+</li>
+<li>
+<p>As soon as the appliance starts to boot, click inside of its window
+(again and again, if need be), until your cursor is "captured" (i.e.,
+disappears).</p>
+</li>
+<li>
+<p>When you see the black <strong>GNU GRUB</strong> screen, hit your keyboard&#8217;s down
+arrow to select <em>"Advanced options for Generic</em>', then hit Enter.</p>
+</li>
+<li>
+<p>On the screen that appears, select (with your keyboard&#8217;s arrow keys)
+the row that&#8217;s parenthetically called <strong>recovery mode</strong>, then hit Enter.</p>
+</li>
+<li>
+<p>The appliance should boot more quickly than usual. When you see a
+<strong>root@appliance (~):</strong> prompt, execute</p>
+<div class="listingblock">
+
+<div class="content monospaced">
+<pre>passwd jharvard</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and input a new password for John Harvard (e.g., <strong>crimson</strong>) twice as
+prompted.</p>
+</div>
+
+</li>
+<li>
+<p>Type</p>
+<div class="listingblock">
+
+<div class="content monospaced">
+<pre>exit</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>to restart the appliance.</p>
+</div>
+
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>You should then be able to log in as John Harvard again.</p>
+</div>
+
+</div>
+<div class="sect2">
+<h3 id="_i_forgot_john_harvard_s_mysql_password">I forgot John Harvard&#8217;s MySQL password</h3>
+<div class="paragraph">
+<p>John Harvard&#8217;s password for MySQL is <strong>crimson</strong> by default. But if you
+changed either to something you do not remember, you can change both
+back to <strong>crimson</strong> by <a href="#_how_to_open_a_terminal">opening a terminal</a>
+and executing the below:</p>
+</div>
+<div class="paragraph">
+<p><code>sudo yum -y reinstall appliance50</code></p>
+</div>
+<div class="paragraph">
+<p>That command will restore the appliance to "factory defaults." It will
+not delete any code that you&#8217;ve written.</p>
+</div>
+
+</div>
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_changelog">Changelog</h2>
+<div class="sectionbody">
+<div class="ulist">
+
+<ul>
+<li>
+<p>link:CS50 Appliance 1.4#Changelog[1.4]</p>
+</li>
+<li>
+<p>link:CS50 Appliance 2.0#Changelog[2.0]</p>
+</li>
+<li>
+<p>link:CS50 Appliance 2.1#Changelog[2.1]</p>
+</li>
+<li>
+<p>link:CS50 Appliance 2.2#Changelog[2.2]</p>
+</li>
+<li>
+<p>link:CS50 Appliance 2.3#Changelog[2.3]</p>
+</li>
+<li>
+<p>link:CS50 Appliance 3#Changelog[3]</p>
+</li>
+<li>
+<p>17-0</p>
+<div class="ulist">
+
+<ul>
+<li>
+<p>Upgraded to Fedora 17.</p>
+</li>
+<li>
+<p>Removed proftpd as unnecessary.</p>
+</li>
+<li>
+<p>Removed PECL&#8217;s installation of zip (since Fedora 17 has php-zip
+emboded in php-common).</p>
+</li>
+</ul>
+</div>
+
+</li>
+<li>
+<p>17-1</p>
+<div class="ulist">
+
+<ul>
+<li>
+<p>Fixed colors in gedit&#8217;s terminal with dconf-editor.</p>
+</li>
+<li>
+<p>Added gedit to Menu &gt; Programming.</p>
+</li>
+<li>
+<p>Fixed /home permissions to be rx.</p>
+</li>
+</ul>
+</div>
+
+</li>
+<li>
+<p>17-2</p>
+<div class="ulist">
+
+<ul>
+<li>
+<p>Fixed John Harvard&#8217;s MySQL password.</p>
+</li>
+<li>
+<p>Made gedit the default editor for most file types.</p>
+</li>
+<li>
+<p>Added <code>~/.config/google-chrome/First Run</code> file to quiet Chrome on
+first launch.</p>
+</li>
+<li>
+<p>Added <code>PEERDNS=yes</code> to /etc/sysconfig/network-scripts/ifcfg-eth0 for
+consistency with eth\{1,2}.</p>
+</li>
+<li>
+<p>Removed Trash icon from John Harvard&#8217;s desktop because it triggered
+Thunar, not Nautilus.</p>
+</li>
+</ul>
+</div>
+
+</li>
+<li>
+<p>17-3</p>
+<div class="ulist">
+
+<ul>
+<li>
+<p>Added <code>update50</code>.</p>
+</li>
+</ul>
+</div>
+
+</li>
+<li>
+<p>17-4</p>
+<div class="ulist">
+
+<ul>
+<li>
+<p>Changed <code>update50</code> to use <code>updates</code> instead of <code>available</code>.</p>
+</li>
+<li>
+<p>Postponed creation of <code>/home/jharvard/Dropbox</code> until user actually
+runs Dropbox installer because its presence seems to cause confusion
+because it&#8217;s empty by default.</p>
+</li>
+</ul>
+</div>
+
+</li>
+<li>
+<p>17-5</p>
+<div class="ulist">
+
+<ul>
+<li>
+<p>Added back <code>/home/jharvard/Dropbox</code> to simplify pset directions.</p>
+</li>
+<li>
+<p>Changed <code>-ggdb</code> to <code>-ggdb3</code> in <code>CFLAGS</code>.</p>
+</li>
+<li>
+<p>Added <code>-O0</code> <code>CFLAGS</code> to prevent optimizations that might confuse
+during debugging.</p>
+</li>
+<li>
+<p>No longer <code>chmod</code>'ing everything in <code>~jharvard/.ssh</code>, lest there be
+user-created scripts in there.</p>
+</li>
+</ul>
+</div>
+
+</li>
+<li>
+<p>17-11</p>
+<div class="ulist">
+
+<ul>
+<li>
+<p>Updated <code>/etc/httpd/conf.d/appliance50.conf</code> to use
+<code>/home/jharvard/vhosts/localhost</code> as default vhost.</p>
+</li>
+</ul>
+</div>
+
+</li>
+<li>
+<p>17-12</p>
+<div class="ulist">
+
+<ul>
+<li>
+<p>Disabled nodejs repo (since it no longer exists).</p>
+</li>
+<li>
+<p>Disabled NetworkManager (since a mid-semester update appears to have
+enabled it).</p>
+</li>
+</ul>
+</div>
+
+</li>
+</ul>
+</div>
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_known_issues">Known Issues</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><em>None at this time.</em></p>
+</div>
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_future_work">Future Work</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Below are features that may be included in some future version of the
+appliance.</p>
+</div>
+<div class="ulist">
+
+<ul>
+<li>
+<p>Add Selenium.</p>
+</li>
+<li>
+<p>Add dnsmasq and resolve *.localdomain to 127.0.0.1.</p>
+</li>
+<li>
+<p>Add support for static IPs.</p>
+</li>
+<li>
+<p>Add Trash icon to desktop that opens nautilus.</p>
+</li>
+</ul>
+</div>
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_acknowledgements">Acknowledgements</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Many thanks to everyone who&#8217;s helped us improve the CS50 Appliance,
+including, but not limited to:</p>
+</div>
+<div class="ulist">
+
+<ul>
+<li>
+<p>Aaron Oehlschlaeger</p>
+</li>
+<li>
+<p>Amir</p>
+</li>
+<li>
+<p>Chris Gerber</p>
+</li>
+<li>
+<p>Darrin Ragsdale</p>
+</li>
+<li>
+<p>Dotty</p>
+</li>
+<li>
+<p>Federico Lerner</p>
+</li>
+<li>
+<p>Glenn Holloway</p>
+</li>
+<li>
+<p>James Lankford</p>
+</li>
+<li>
+<p>Kartikeya Srivastava</p>
+</li>
+<li>
+<p>Matthew Polega</p>
+</li>
+<li>
+<p>Matthew Roknich</p>
+</li>
+<li>
+<p>Mauro Braunstein</p>
+</li>
+<li>
+<p>Nobu Kikuchi</p>
+</li>
+<li>
+<p>Philip Durbin</p>
+</li>
+<li>
+<p>R.J. Aquino</p>
+</li>
+<li>
+<p>Rob Bowden</p>
+</li>
+<li>
+<p>Rod Ruggiero</p>
+</li>
+<li>
+<p>Rolando Cruz</p>
+</li>
+<li>
+<p>Rory O&#8217;Reilly</p>
+</li>
+<li>
+<p>Sergio Prado</p>
+</li>
+<li>
+<p>Shaun Gibson</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Category:HOWTO</p>
+</div>
+
+</div>
+</div>
+
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2013-06-14 13:56:51 EDT
+</div>
+</div>
+</body>
+</html>
