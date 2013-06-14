@@ -1,7 +1,8 @@
 ---
 tags: []
-title: HarvardCourses API
+title: HarvardCourses_API
 ---
+
 
 [[]]
 Overview
@@ -17,7 +18,7 @@ http://en.wikipedia.org/wiki/Representational_State_Transfer[RESTful]
 interface, which means that you can query it using simple HTTP requests.
 
 At least once per day, CS50 synchronizes with the
-http://www.registrar.fas.harvard.edu/fasro/courses/index.jsp?cat=ugrad&subcat=courses[Courses
+http://www.registrar.fas.harvard.edu/fasro/courses.jsp?cat=ugrad&subcat=courses[Courses
 of Instruction]. Because FAS offers so many courses, this API tends to
 return a lot of data. For performance's sake, you yourself should cache
 your own copy locally and synchronize with this API once per day.
@@ -113,8 +114,8 @@ If you request data in CSV format (e.g.,
 http://api.cs50.net/courses/1.0/courses?cat_num=4949&output=csv), the
 response will be a series of comma-delimited rows, per the below:
 
-code,text--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-code,text
+[code,text]
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 cat_num,term,bracketed,field,number,title,faculty,description,prerequisites,notes,meetings,building,room
 4949,FALL,FALSE,COMPSCI,50,"Introduction to Computer Science I",98d2c536d93571eff451df8bd44823d8,"Introduction to the intellectual enterprises of computer science and the art of programming. This course teaches students how to think algorithmically and solve problems efficiently. Topics include abstraction, encapsulation, data structures, databases, memory management, software development, virtualization, and websites. Languages include C, PHP, and JavaScript plus SQL, CSS, and XHTML. Problem sets inspired by real-world domains of biology, cryptography, finance, forensics, and gaming. Designed for concentrators and non-concentrators alike, with or without prior programming experience.",,"This course may be taken for a letter grade or pass/fail. When taken for a letter grade, this course meets the General Education requirement for Empirical and Mathematical Reasoning or the Core area requirement for Quantitative Reasoning. This course will also meet F., 1-2:30pm on September 3, 2010 and September 10, 2010 only. Students with conflicts should watch those lectures online.","M., W., 1-2:30, and a weekly section.","Memorial Hall","Sanders Theatre"
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -132,8 +133,8 @@ If you request data in JSON format (e.g.,
 http://api.cs50.net/courses/1.0/courses?cat_num=4949&output=json), the
 response will be an array of objects, per the below:
 
-code,javascript------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-code,javascript
+[code,javascript]
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 [
    {
       "cat_num":"4949",
@@ -161,8 +162,8 @@ If you request data in JSONP format (e.g.,
 http://api.cs50.net/courses/1.0/courses?cat_num=4949&output=jsonp&callback=parseResponse),
 the response will be a padded array of objects, per the below:
 
-code,javascript---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-code,javascript
+[code,javascript]
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 parseResponse([{"cat_num":"4949","term":"FALL","bracketed":false,"field":"COMPSCI","number":"50","title":"Introduction to Computer Science I","faculty":"98d2c536d93571eff451df8bd44823d8","description":"Introduction to the intellectual enterprises of computer science and the art of programming. This course teaches students how to think algorithmically and solve problems efficiently. Topics include abstraction, encapsulation, data structures, databases, memory management, software development, virtualization, and websites. Languages include C, PHP, and JavaScript plus SQL, CSS, and XHTML. Problem sets inspired by real-world domains of biology, cryptography, finance, forensics, and gaming. Designed for concentrators and non-concentrators alike, with or without prior programming experience.","prerequisites":"","notes":"This course may be taken for a letter grade or pass\/fail. When taken for a letter grade, this course meets the General Education requirement for Empirical and Mathematical Reasoning or the Core area requirement for Quantitative Reasoning. This course will also meet F., 1-2:30pm on September 3, 2010 and September 10, 2010 only. Students with conflicts should watch those lectures online.","meetings":"M., W., 1-2:30, and a weekly section.","building":"Memorial Hall","room":"Sanders Theatre"}])
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -177,16 +178,16 @@ http://api.cs50.net/courses/1.0/courses?cat_num=4949&output=php), the
 response will be a serialized array of associative arrays, per the
 below:
 
-code,php--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-code,php
+[code,php]
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 a:1:{i:0;a:13:{s:7:"cat_num";s:4:"4949";s:4:"term";s:4:"FALL";s:9:"bracketed";b:0;s:5:"field";s:7:"COMPSCI";s:6:"number";s:2:"50";s:5:"title";s:34:"Introduction to Computer Science I";s:7:"faculty";s:32:"98d2c536d93571eff451df8bd44823d8";s:11:"description";s:595:"Introduction to the intellectual enterprises of computer science and the art of programming. This course teaches students how to think algorithmically and solve problems efficiently. Topics include abstraction, encapsulation, data structures, databases, memory management, software development, virtualization, and websites. Languages include C, PHP, and JavaScript plus SQL, CSS, and XHTML. Problem sets inspired by real-world domains of biology, cryptography, finance, forensics, and gaming. Designed for concentrators and non-concentrators alike, with or without prior programming experience.";s:13:"prerequisites";s:0:"";s:5:"notes";s:388:"This course may be taken for a letter grade or pass/fail. When taken for a letter grade, this course meets the General Education requirement for Empirical and Mathematical Reasoning or the Core area requirement for Quantitative Reasoning. This course will also meet F., 1-2:30pm on September 3, 2010 and September 10, 2010 only. Students with conflicts should watch those lectures online.";s:8:"meetings";s:37:"M., W., 1-2:30, and a weekly section.";s:8:"building";s:13:"Memorial Hall";s:4:"room";s:15:"Sanders Theatre";}}
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Once you http://php.net/manual/en/function.unserialize.php[unserialize]
 that response, you'll have the below in memory:
 
-code,php------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-code,php
+[code,php]
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Array
 (
     [0] => Array
@@ -218,8 +219,8 @@ http://api.cs50.net/courses/1.0/courses?cat_num=4949&output=xml), the
 response will be an XML document whose root element is `courses`, each
 of whose children is an `course`, per the below:
 
-code,xml-------------------------------------------------------------------
-code,xml
+[code,xml]
+-------------------------------------------------------------------
 <?xml version="1.0" encoding="UTF-8"?>
 <courses>
   <course>
@@ -290,7 +291,8 @@ If you request data in CSV format (e.g.,
 http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&output=csv),
 the response will be a series of comma-delimited rows, per the below:
 
-code,text------------------------------------------------ code,text
+[code,text]
+------------------------------------------------
 id,first,middle,last,suffix
 98d2c536d93571eff451df8bd44823d8,David,J.,Malan,
 ------------------------------------------------
@@ -308,8 +310,8 @@ If you request data in JSON format (e.g.,
 http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&output=json),
 the response will be an array of objects, per the below:
 
-code,javascript----------------------------------------------
-code,javascript
+[code,javascript]
+----------------------------------------------
 [
    {
       "id":"98d2c536d93571eff451df8bd44823d8",
@@ -329,8 +331,8 @@ If you request data in JSONP format (e.g.,
 http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&output=jsonp&callback=parseResponse),
 the response will be a padded array of objects, per the below:
 
-code,javascript-------------------------------------------------------------------------------------------------------------------
-code,javascript
+[code,javascript]
+-------------------------------------------------------------------------------------------------------------------
 parseResponse([{"id":"98d2c536d93571eff451df8bd44823d8","first":"David","middle":"J.","last":"Malan","suffix":""}])
 -------------------------------------------------------------------------------------------------------------------
 
@@ -345,15 +347,16 @@ http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&outp
 the response will be a serialized array of associative arrays, per the
 below:
 
-code,php----------------------------------------------------------------------------------------------------------------------------------------------------------
-code,php
+[code,php]
+----------------------------------------------------------------------------------------------------------------------------------------------------------
 a:1:{i:0;a:5:{s:2:"id";s:32:"98d2c536d93571eff451df8bd44823d8";s:5:"first";s:5:"David";s:6:"middle";s:2:"J.";s:4:"last";s:5:"Malan";s:6:"suffix";s:0:"";}}
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Once you http://php.net/manual/en/function.unserialize.php[unserialize]
 that response, you'll have the below in memory:
 
-code,php---------------------------------------------------- code,php
+[code,php]
+----------------------------------------------------
 Array
 (
     [0] => Array
@@ -376,7 +379,8 @@ http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&outp
 the response will be an XML document whose root element is `courses`,
 each of whose children is an `course`, per the below:
 
-code,xml--------------------------------------------- code,xml
+[code,xml]
+---------------------------------------------
 <?xml version="1.0" encoding="UTF-8"?>
 <faculty>
   <member>
@@ -423,7 +427,8 @@ If you request data in CSV format (e.g.,
 http://api.cs50.net/courses/1.0/fields?id=COMPSCI&output=csv), the
 response will be a series of comma-delimited rows, per the below:
 
-code,text-------------------------- code,text
+[code,text]
+--------------------------
 id,name
 COMPSCI,"Computer Science"
 --------------------------
@@ -441,7 +446,8 @@ If you request data in JSON format (e.g.,
 http://api.cs50.net/courses/1.0/fields?id=COMPSCI&output=json), the
 response will be an array of objects, per the below:
 
-code,javascript------------------------------- code,javascript
+[code,javascript]
+-------------------------------
 [
    {
       "id":"COMPSCI",
@@ -458,8 +464,8 @@ If you request data in JSONP format (e.g.,
 http://api.cs50.net/courses/1.0/fields?id=COMPSCI&output=jsonp&callback=parseResponse),
 the response will be a padded array of objects, per the below:
 
-code,javascript-----------------------------------------------------------
-code,javascript
+[code,javascript]
+-----------------------------------------------------------
 parseResponse([{"id":"COMPSCI","name":"Computer Science"}])
 -----------------------------------------------------------
 
@@ -474,15 +480,16 @@ http://api.cs50.net/courses/1.0/fields?id=COMPSCI&output=php), the
 response will be a serialized array of associative arrays, per the
 below:
 
-code,php--------------------------------------------------------------------------
-code,php
+[code,php]
+--------------------------------------------------------------------------
 a:1:{i:0;a:2:{s:2:"id";s:7:"COMPSCI";s:4:"name";s:16:"Computer Science";}}
 --------------------------------------------------------------------------
 
 Once you http://php.net/manual/en/function.unserialize.php[unserialize]
 that response, you'll have the below in memory:
 
-code,php-------------------------------------- code,php
+[code,php]
+--------------------------------------
 Array
 (
     [0] => Array
@@ -503,7 +510,8 @@ http://api.cs50.net/courses/1.0/fields?id=COMPSCI&output=xml), the
 response will be an XML document whose root element is `courses`, each
 of whose children is an `course`, per the below:
 
-code,xml-------------------------------------- code,xml
+[code,xml]
+--------------------------------------
 <?xml version="1.0" encoding="UTF-8"?>
 <fields>
   <field>
@@ -520,58 +528,44 @@ Examples
 * Returns all courses:
 ** http://api.cs50.net/courses/1.0/courses?output=csv
 ** http://api.cs50.net/courses/1.0/courses?output=json
-**
-http://api.cs50.net/courses/1.0/courses?output=jsonp&callback=parseResponse
+** http://api.cs50.net/courses/1.0/courses?output=jsonp&callback=parseResponse
 ** http://api.cs50.net/courses/1.0/courses?output=php
 ** http://api.cs50.net/courses/1.0/courses?output=xml
 * Returns course with catalog number 4949:
 ** http://api.cs50.net/courses/1.0/courses?cat_num=4949&output=csv
 ** http://api.cs50.net/courses/1.0/courses?cat_num=4949&output=json
-**
-http://api.cs50.net/courses/1.0/courses?cat_num=4949&output=jsonp&callback=parseResponse
+** http://api.cs50.net/courses/1.0/courses?cat_num=4949&output=jsonp&callback=parseResponse
 ** http://api.cs50.net/courses/1.0/courses?cat_num=4949&output=php
 ** http://api.cs50.net/courses/1.0/courses?cat_num=4949&output=xml
 * Returns courses taught by David J. Malan:
-**
-http://api.cs50.net/courses/1.0/courses?faculty=98d2c536d93571eff451df8bd44823d8&output=csv
-**
-http://api.cs50.net/courses/1.0/courses?faculty=98d2c536d93571eff451df8bd44823d8&output=json
-**
-http://api.cs50.net/courses/1.0/courses?faculty=98d2c536d93571eff451df8bd44823d8&output=jsonp&callback=parseResponse
-**
-http://api.cs50.net/courses/1.0/courses?faculty=98d2c536d93571eff451df8bd44823d8&output=php
+** http://api.cs50.net/courses/1.0/courses?faculty=98d2c536d93571eff451df8bd44823d8&output=csv
+** http://api.cs50.net/courses/1.0/courses?faculty=98d2c536d93571eff451df8bd44823d8&output=json
+** http://api.cs50.net/courses/1.0/courses?faculty=98d2c536d93571eff451df8bd44823d8&output=jsonp&callback=parseResponse
+** http://api.cs50.net/courses/1.0/courses?faculty=98d2c536d93571eff451df8bd44823d8&output=php
 **
 http://api.cs50.net/courses/1.0/courses?faculty=98d2c536d93571eff451df8bd44823d8&output=xml
 * Returns Computer Science courses:
 ** http://api.cs50.net/courses/1.0/courses?field=COMPSCI&output=csv
 ** http://api.cs50.net/courses/1.0/courses?field=COMPSCI&output=json
-**
-http://api.cs50.net/courses/1.0/courses?field=COMPSCI&output=jsonp&callback=parseResponse
+** http://api.cs50.net/courses/1.0/courses?field=COMPSCI&output=jsonp&callback=parseResponse
 ** http://api.cs50.net/courses/1.0/courses?field=COMPSCI&output=php
 ** http://api.cs50.net/courses/1.0/courses?field=COMPSCI&output=xml
 * Returns courses related to archaeology:
 ** http://api.cs50.net/courses/1.0/courses?q=archaeology&output=csv
 ** http://api.cs50.net/courses/1.0/courses?q=archaeology&output=json
-**
-http://api.cs50.net/courses/1.0/courses?q=archaeology&output=jsonp&callback=parseResponse
+** http://api.cs50.net/courses/1.0/courses?q=archaeology&output=jsonp&callback=parseResponse
 ** http://api.cs50.net/courses/1.0/courses?q=archaeology&output=php
 ** http://api.cs50.net/courses/1.0/courses?q=archaeology&output=xml
 * Returns David J. Malan:
-**
-http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&output=csv
-**
-http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&output=json
-**
-http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&output=jsonp&callback=parseResponse
-**
-http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&output=php
-**
-http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&output=xml
+** http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&output=csv
+** http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&output=json
+** http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&output=jsonp&callback=parseResponse
+** http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&output=php
+** http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&output=xml
 * Returns Computer Science:
 ** http://api.cs50.net/courses/1.0/fields?id=COMPSCI&output=csv
 ** http://api.cs50.net/courses/1.0/fields?id=COMPSCI&output=json
-**
-http://api.cs50.net/courses/1.0/fields?id=COMPSCI&output=jsonp&callback=parseResponse
+** http://api.cs50.net/courses/1.0/fields?id=COMPSCI&output=jsonp&callback=parseResponse
 ** http://api.cs50.net/courses/1.0/fields?id=COMPSCI&output=php
 ** http://api.cs50.net/courses/1.0/fields?id=COMPSCI&output=xml
 
@@ -611,7 +605,7 @@ Changelog
 ---------
 
 *
-http://wiki.cs50.net/index.php?title=HarvardCourses_API&oldid=3204[0.9]
+http://wiki.cs50.net.php?title=HarvardCourses_API&oldid=3204[0.9]
 * 1.0
 ** Complete overhaul. Integrated with
 http://courses.cs50.net/[HarvardCourses]. Added support for multiple
