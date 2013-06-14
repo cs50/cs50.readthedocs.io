@@ -43,11 +43,11 @@
                     join(" ", [
                         "/usr/local/bin/asciidoctor",
                         "-a",
-                        escapeshellarg("coderay-css=class,coderay-linenums-mode=inline,imagesdir=.,source-highlighter=coderay"),
+                        "coderay-css=class,coderay-linenums-mode=inline,imagesdir=.,source-highlighter=coderay,toc",
                         "-b",
                         "html5",
                         "--trace",
-                        "-s",
+                        //"-s",
                         "-"
                     ]),
                     [
