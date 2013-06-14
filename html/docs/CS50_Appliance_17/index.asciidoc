@@ -3,6 +3,8 @@ tags: []
 title: CS50_Appliance_17
 ---
 
+:toc:
+
 *This HOWTO is for version 17 of the CS50 Appliance.*
 
 * *If taking CS50x, you should use this version of the appliance.*

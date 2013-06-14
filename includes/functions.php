@@ -43,7 +43,7 @@
                     join(" ", [
                         "/usr/local/bin/asciidoctor",
                         "-a",
-                        "coderay-css=class,coderay-linenums-mode=inline,imagesdir=.,source-highlighter=coderay,toc",
+                        "coderay-css=class,coderay-linenums-mode=inline,imagesdir=.,source-highlighter=coderay",
                         "-b",
                         "html5",
                         "--trace",
