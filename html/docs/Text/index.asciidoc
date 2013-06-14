@@ -2,6 +2,7 @@
 tags: []
 title: Text
 ---
+
  This template produces certain text, given by the English version or a
 code, in a given language. By default, the fall-back language is
 English. Optionally this is suppressed, and the template produces

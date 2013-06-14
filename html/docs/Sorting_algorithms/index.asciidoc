@@ -2,6 +2,7 @@
 tags: []
 title: Sorting_algorithms
 ---
+
 [[]]
 Insertion Sort
 ~~~~~~~~~~~~~~

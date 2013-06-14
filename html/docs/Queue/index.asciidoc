@@ -2,6 +2,7 @@
 tags: []
 title: Queue
 ---
+
 A queue is a data structure which exhibits first-in-first-out (FIFO)
 storage. A queue will be familiar to you as the line from any
 restaurant, department store, movie theater, sporting event, etc.:

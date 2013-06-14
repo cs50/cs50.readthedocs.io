@@ -2,6 +2,7 @@
 tags: []
 title: TextWrangler
 ---
+
 TextWrangler is a text editor for Mac OS that you can download from
 http://www.barebones.com/products/textwrangler/download.html[http://www.barebones.com/products/textwrangler/download.html].
 Once downloaded, mount the `.dmg` file (if not already mounted

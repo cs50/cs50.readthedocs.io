@@ -2,6 +2,7 @@
 tags: []
 title: argv
 ---
+
 `argv` is an argument of the `main` method which stores as strings the
 link:command-line arguments[command-line arguments] passed to a program.
 `argv` is an array of strings which has a length of `[[argc]]`. When

@@ -2,5 +2,6 @@
 tags: []
 title: Linear_Search
 ---
+
 1.  REDIRECT Search_algorithms#Linear_Search
 

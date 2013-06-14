@@ -2,6 +2,7 @@
 tags: []
 title: Fall_2011
 ---
+
 To follow Fall 2011 of CS50, download and install *version 2.3* of the
 link:CS50 Appliance 2.3[CS50 Appliance]. Then follow the directions
 below.

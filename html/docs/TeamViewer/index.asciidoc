@@ -2,6 +2,7 @@
 tags: []
 title: TeamViewer
 ---
+
 TeamViewer is free software with which CS50 staff can connect to your
 computer so as to see your screen and even control your mouse in order
 to troubleshoot problems you're having. CS50 staff can only connect to

@@ -2,6 +2,7 @@
 tags: []
 title: argc
 ---
+
 `argc` is an integer argument passed to the main method which stores the
 number of command-line arguments that the program was executed with. For
 example, if you run a program named `foo` like so,

@@ -2,6 +2,7 @@
 tags: []
 title: Terminal
 ---
+
 Terminal is an SSH client that comes with Mac OS, so you don't need to
 download or install it. Its icon can already be found in *Macintosh HD →
 Applications → Utilities*. When you run Terminal (as by double-clicking

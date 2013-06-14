@@ -2,6 +2,7 @@
 tags: []
 title: Return_Value
 ---
+
 A return value is a value that is passed by a callee function back to
 the caller function when the callee function has finished executing. A
 return value can be of any type, whether built-in or user-defined (with

@@ -2,5 +2,6 @@
 tags: []
 title: Submit
 ---
+
 1.  REDIRECT link:CS50 Submit[CS50 Submit]
 

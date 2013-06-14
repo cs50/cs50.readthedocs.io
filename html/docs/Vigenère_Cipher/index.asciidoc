@@ -2,6 +2,7 @@
 tags: []
 title: Vigenère_Cipher
 ---
+
 Vigenère's cipher is rotational cryptographic algorithm which is
 slightly more secure than link:Caesar cipher[Caesar cipher]. Like
 link:Caesar cipher[Caesar cipher], Vigenère's cipher takes each

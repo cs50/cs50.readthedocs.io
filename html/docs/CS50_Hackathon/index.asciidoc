@@ -2,6 +2,7 @@
 tags: []
 title: CS50_Hackathon
 ---
+
 __NOTOC__ The CS50 Hackathon is an epic all-nighter at
 http://microsoftcambridge.com/[Microsoft NERD] in Kendall Square during
 which you can dive into your final project's implementation alongside

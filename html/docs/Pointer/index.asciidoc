@@ -2,5 +2,6 @@
 tags: []
 title: Pointer
 ---
+
 1.  redirect Pointer
 

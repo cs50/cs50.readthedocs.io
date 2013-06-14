@@ -2,6 +2,7 @@
 tags: []
 title: cron
 ---
+
 Cron is a utility found on most Linux systems that allows you to execute
 commands on a schedule (e.g., daily at midnight). Those commands can be
 C programs, PHP scripts, or any executable at all. A scheduled command

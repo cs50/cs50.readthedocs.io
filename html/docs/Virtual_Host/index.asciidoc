@@ -2,6 +2,7 @@
 tags: []
 title: Virtual_Host
 ---
+
 Because modern browsers include a `Host:` header in their HTTP requests,
 a server can host multiple websites at a single IP address by examining
 that header to determine which website was requested. A website that

@@ -2,6 +2,7 @@
 tags: []
 title: C
 ---
+
 *C* is the main programming language used in CS50. It's a relatively
 low-level language, meaning that it gives you direct access to the
 computer's memory.

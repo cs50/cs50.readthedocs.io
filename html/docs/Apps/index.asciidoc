@@ -2,6 +2,7 @@
 tags: []
 title: Apps
 ---
+
 Below are apps created by CS50's students and staff, past and present.
 Report any broken links to sysadmins@cs50.net.
 

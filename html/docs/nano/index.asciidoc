@@ -2,6 +2,7 @@
 tags: []
 title: nano
 ---
+
 image:Nano.png[The interface of the nano editor.,title="image"]`nano`is
 a keyboard-based editor in Linux (similar to Notepad in Windows and
 TextEdit on a Mac) that can be used to create and edit text files. It

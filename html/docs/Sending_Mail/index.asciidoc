@@ -2,6 +2,7 @@
 tags: []
 title: Sending_Mail
 ---
+
 Below is some code with which you can send email using a library called
 PHPMailer, which is pre-installed in the link:CS50 Appliance[CS50
 Appliance]. Although PHPMailer's

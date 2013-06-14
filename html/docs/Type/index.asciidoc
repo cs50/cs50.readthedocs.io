@@ -2,6 +2,7 @@
 tags: []
 title: Type
 ---
+
 The *type* of a variable is the kind of data it can hold. For example, a
 C variable holding the value `3` is likely to be a variable of the type
 `int`, which holds integers. Other common types in C include `char` for

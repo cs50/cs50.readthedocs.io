@@ -2,6 +2,7 @@
 tags: []
 title: Concentrators
 ---
+
 Below is a visualization of the number of concentrators in Computer
 Science since the concentration's introduction in 1984. In green are
 graduates whose primary field (i.e., major) was Computer Science. In

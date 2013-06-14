@@ -2,6 +2,7 @@
 tags: []
 title: Authentication
 ---
+
 To authenticate users (i.e., require that they log in), you can
 certainly rely on your own database of usernames and passwords, as in
 http://cdn.cs50.net/2011/fall/psets/7/pset7.pdf[Fall 2011's Problem Set

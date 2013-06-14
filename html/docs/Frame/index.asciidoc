@@ -2,6 +2,7 @@
 tags: []
 title: Frame
 ---
+
 A frame is a conceptual building block of the stack. At the bottom of
 the stack is the frame that corresponds to `main`. When `main` calls a
 function, another frame is pushed onto the stack. If the function that

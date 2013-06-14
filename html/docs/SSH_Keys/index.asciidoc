@@ -2,6 +2,7 @@
 tags: []
 title: SSH_Keys
 ---
+
 Alice and Bob would both like to work on a project on cloud.cs50.net.
 However, we know that Alice can only edit files that are located in
 `~alice` (or a subdirectory thereof), and Bob can only edit files that

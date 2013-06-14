@@ -2,6 +2,7 @@
 tags: []
 title: CS50_APIs
 ---
+
 Below are the
 http://en.wikipedia.org/wiki/Application_programming_interface[application
 programming interfaces] (APIs) that CS50 currently offers. Use of each

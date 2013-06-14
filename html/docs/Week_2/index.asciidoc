@@ -2,6 +2,7 @@
 tags: []
 title: Week_2
 ---
+
 _Functions, continued. Global variables. Parameters. Return values.
 Stack. Frames. Scope. Arrays. Strings. Command-line arguments.
 Cryptography._

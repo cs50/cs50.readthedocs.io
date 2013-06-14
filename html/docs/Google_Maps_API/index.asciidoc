@@ -2,6 +2,7 @@
 tags: []
 title: Google_Maps_API
 ---
+
 Traffic data. Directions. Satellite imagery. Placemarks. These and more
 await you when you use the Google Maps API! This tutorial is designed to
 empower you to use the Google Maps API for JavaScript to add this

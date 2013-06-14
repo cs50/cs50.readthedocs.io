@@ -2,6 +2,7 @@
 tags: []
 title: Scratch
 ---
+
 http://scratch.mit.edu[Scratch] is an interpreted programming language
 designed by the Lifelong Kindergarten group out of
 http://web.mit.edu[MIT's] http://www.media.mit.edu/[Media Lab] and is

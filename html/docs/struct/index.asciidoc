@@ -2,6 +2,7 @@
 tags: []
 title: struct
 ---
+
 A `struct` is a user-defined data structure in C that encapsulates
 related variables. Recall our definition of the `student` user-defined
 type for the use of `structs1.c` and `structs2.c`:

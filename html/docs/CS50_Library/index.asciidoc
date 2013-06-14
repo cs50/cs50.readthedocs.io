@@ -2,6 +2,7 @@
 tags: []
 title: CS50_Library
 ---
+
 The CS50 Library is a suite of C, Ruby, PHP, and Python code designed to
 simplify certain tasks, particularly user input (for C) and
 authentication (for PHP, Python, and Ruby).

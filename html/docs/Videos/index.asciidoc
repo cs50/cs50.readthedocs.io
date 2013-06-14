@@ -2,6 +2,7 @@
 tags: []
 title: Videos
 ---
+
 As of Week 1 in Fall 2009, CS50 produces its own videos of lectures with
 these specs:
 

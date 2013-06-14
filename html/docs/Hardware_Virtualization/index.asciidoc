@@ -2,6 +2,7 @@
 tags: []
 title: Hardware_Virtualization
 ---
+
 Many computers today come with support for "hardware virtualization"
 (called
 http://en.wikipedia.org/wiki/X86_virtualization#Intel_virtualization_.28VT-x.29[VT-x]

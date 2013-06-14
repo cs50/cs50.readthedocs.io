@@ -2,6 +2,7 @@
 tags: []
 title: Dynamic_Memory_Allocation
 ---
+
 *Dynamic memory allocation* is the allocation of memory on the heap
 instead of the stack. This allows you to store data across different
 function calls. If you instead put your data into a

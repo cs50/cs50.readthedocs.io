@@ -2,6 +2,7 @@
 tags: []
 title: Address
 ---
+
 An address is a location in memory, usually specified by a hexadecimal
 number and stored as an integer. Just as a postal address tells a mail
 carrier where to deliver and retrieve mail, a memory address tells the

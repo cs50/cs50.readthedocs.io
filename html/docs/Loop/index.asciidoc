@@ -2,6 +2,7 @@
 tags: []
 title: Loop
 ---
+
 A loop is simply a way of executing some code multiple times in a row. C
 gives us three main types of loops: while loops, do-while loops, and for
 loops. Usually (and with experience), you'll find that different types

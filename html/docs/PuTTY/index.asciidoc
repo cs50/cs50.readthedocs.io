@@ -2,6 +2,7 @@
 tags: []
 title: PuTTY
 ---
+
 PuTTY is a free SSH client for Windows that you can download from
 http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe[http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe].
 Once downloaded, there's no need to install PuTTY, per se, since what

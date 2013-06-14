@@ -2,6 +2,7 @@
 tags: []
 title: Screen_Scraping
 ---
+
 http://en.wikipedia.org/wiki/Web_scraping[Screen scraping] (the
 programmatic extraction of data from some website's source code) should
 really be a last resort, since things tend to break if the site you're

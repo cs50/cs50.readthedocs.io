@@ -2,6 +2,7 @@
 tags: []
 title: Functions
 ---
+
 Functions in the C programming language help you to partition your code
 into manageable pieces. A function is like a black box with a set of
 inputs and a single output. The rest of the program does not need to

@@ -2,6 +2,7 @@
 tags: []
 title: CSCI_E-52
 ---
+
 CS50 is offered through http://extension.harvard.edu/[Harvard Extension
 School] as
 http://extension.harvard.edu/courses/subject/computer-science#52[CSCI

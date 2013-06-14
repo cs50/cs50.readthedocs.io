@@ -2,6 +2,7 @@
 tags: []
 title: bool
 ---
+
 A *bool* is a data type whose value can only be true or false. It's from
 the `stdbool` library that CS50 automatically includes in our header
 file.

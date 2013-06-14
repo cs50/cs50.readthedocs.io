@@ -2,6 +2,7 @@
 tags: []
 title: Scope
 ---
+
 Scope refers to the accessibility of a variable by different functions
 within a program. Generally speaking, a variable can have either local
 or global scope. A variable with global scope is said to be a

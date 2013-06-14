@@ -2,6 +2,7 @@
 tags: []
 title: Expectations
 ---
+
 Being part of the CS50 staff is (we think) one of the most awesomest
 things you can do while at Harvard! It's fun, rewarding, and a fantastic
 learning experience. That said, it is a big commitment of your time and

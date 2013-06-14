@@ -2,6 +2,7 @@
 tags: []
 title: printf
 ---
+
 *`printf()`* is a function in the `stdio` library that facilitates
 printing strings with embedded formats to the screen. For its
 argument(s), `printf()` takes a format string, which is a string that

@@ -2,6 +2,7 @@
 tags: []
 title: Compiler
 ---
+
 A *compiler* is a program that transforms human-readable
 link:source code[source code] into _machine code_—the raw ones and
 zeroes that the CPU reads when it executes your program. The compiler

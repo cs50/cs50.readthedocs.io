@@ -2,6 +2,7 @@
 tags: []
 title: Loginprompt
 ---
+
 Access restricted to CS50 staff. Unauthorized logins prohibited.
 
 YAHOO.util.Event.onDOMReady(function() \{ var wpName1 =

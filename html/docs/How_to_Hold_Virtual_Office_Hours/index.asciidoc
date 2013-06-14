@@ -2,6 +2,7 @@
 tags: []
 title: How_to_Hold_Virtual_Office_Hours
 ---
+
 Thanks to technology, you can now help students troubleshoot bugs by
 observing or sharing control of their screen while chatting with them
 via IM or VOIP, no matter where you are on campus (or beyond). This

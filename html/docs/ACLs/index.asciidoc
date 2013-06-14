@@ -2,6 +2,7 @@
 tags: []
 title: ACLs
 ---
+
 __TOC__ Access Control Lists (ACLs) are lists of permissions that can be
 attached to files and directories. They offer finer-grained control than
 chmod alone allows.

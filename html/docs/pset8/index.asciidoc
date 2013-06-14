@@ -2,6 +2,7 @@
 tags: []
 title: pset8
 ---
+
 Unfortunately, the latest version of the Google Earth Plugin (which is
 required for Problem Set 8) seems to be very buggy, the result of which
 is error messages like

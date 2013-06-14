@@ -2,6 +2,7 @@
 tags: []
 title: typedef
 ---
+
 `typedef` is a keyword in C which allows a new variable type to be
 specified. `typedef` allows a new word to be used as an alias for the
 user-specified variable type.

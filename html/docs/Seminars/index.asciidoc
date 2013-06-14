@@ -2,6 +2,7 @@
 tags: []
 title: Seminars
 ---
+
 Each fall, CS50 offers a series of seminars. Led by the course's own
 https://www.cs50.net/staff[staff] as well as by
 http://huit.harvard.edu/[HUIT staff] and

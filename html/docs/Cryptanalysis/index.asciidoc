@@ -2,6 +2,7 @@
 tags: []
 title: Cryptanalysis
 ---
+
 Cryptanalysis is the study of codebreaking. Whereas the aim of
 cryptography is to devise methods and algorithms for encrypting
 messages, the aim of cryptanalysis is to devise methods and algorithms

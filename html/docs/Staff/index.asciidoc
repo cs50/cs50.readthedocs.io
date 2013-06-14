@@ -2,6 +2,7 @@
 tags: []
 title: Staff
 ---
+
 If you have questions not addressed below, simply contact
 heads@cs50.net!
 

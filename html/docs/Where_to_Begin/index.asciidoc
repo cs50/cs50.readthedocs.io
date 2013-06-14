@@ -2,6 +2,7 @@
 tags: []
 title: Where_to_Begin
 ---
+
 Beginning to implement a final project can be overwhelming! Here are
 some setup tips designed to help you configure the CS50 Appliance for a
 PHP/MySQL project. Also included is some guidance on how to work with

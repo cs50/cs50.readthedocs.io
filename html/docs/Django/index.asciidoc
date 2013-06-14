@@ -2,6 +2,7 @@
 tags: []
 title: Django
 ---
+
 The cloud is essentially a
 http://docs.djangoproject.com/en/dev/howto/deployment/fastcgi/#running-django-on-a-shared-hosting-provider-with-apache[shared-hosting
 provider], and so it's possible to run Django using "Web server-spawned

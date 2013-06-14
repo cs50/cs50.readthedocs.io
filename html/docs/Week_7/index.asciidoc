@@ -2,6 +2,7 @@
 tags: []
 title: Week_7
 ---
+
 _Stacks. Queues. Valgrind. Bitwise operators. Hash tables. Trees. Binary
 search trees. Tries._
 

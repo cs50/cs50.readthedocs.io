@@ -2,6 +2,7 @@
 tags: []
 title: Short_Course
 ---
+
 [[]]
 Instructor
 ----------

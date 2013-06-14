@@ -2,6 +2,7 @@
 tags: []
 title: Problem_Set_5
 ---
+
 *Deadline: Fri 10/29, 5:00am*
 
 ` Between us, this problem set should be graded tougher than past problem sets.  It's time to push your students to write the best possible code, so do call them out on absolutely anything that could be improved.  Especially if you have nitpicks with style, award no more than 4/5 for that axis.  Incentivize your students to really strive for perfection.  Don't worry about being too "tough" on your students; grades will be normalized at term's end.`

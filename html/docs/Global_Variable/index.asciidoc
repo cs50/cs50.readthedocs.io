@@ -2,6 +2,7 @@
 tags: []
 title: Global_Variable
 ---
+
 A global variable is a variable whose scope is global, meaning it can be
 accessed anywhere in a program by any function. In C, global variables
 are declared before the definition of `main`:

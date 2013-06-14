@@ -2,6 +2,7 @@
 tags: []
 title: Sending_Texts
 ---
+
 Most cellular carriers have email-to-SMS gateways, which means you can
 _send_ text messages to users programmatically (as via PHP's
 http://php.net/manual/en/function.mail.php[mail] function) by emailing

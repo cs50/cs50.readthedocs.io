@@ -2,6 +2,7 @@
 tags: []
 title: char
 ---
+
 *char* is the data type for characters, or symbols found in the
 link:ASCII#Table[ASCII table]. It is often pronounced "ch-ar," but "car"
 is also common. A `char` variable can hold a single character. A `char`

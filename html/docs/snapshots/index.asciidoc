@@ -2,6 +2,7 @@
 tags: []
 title: snapshots
 ---
+
 Every 10 minutes, we take "snapshots" of everything in `/home` on
 `cloud.cs50.net`, just in case you accidentally delete something.
 

@@ -2,6 +2,7 @@
 tags: []
 title: Problem_Set_6
 ---
+
 *Deadline: Fri 11/5, 5:00am*
 
 ` This problem set, like last, should be graded tougher than past problem sets.  Don't worry about being too "tough" on your students; grades will be normalized at term's end.`

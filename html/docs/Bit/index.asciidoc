@@ -2,6 +2,7 @@
 tags: []
 title: Bit
 ---
+
 A bit, short for binary digit, represents a number of either 0 or a 1.
 In other words, it represents the values that can occupy a single
 position in a link:Binary[binary] number. It is therefore the most

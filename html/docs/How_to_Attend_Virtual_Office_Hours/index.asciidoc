@@ -2,6 +2,7 @@
 tags: []
 title: How_to_Attend_Virtual_Office_Hours
 ---
+
 Thanks to technology, the staff can now help you troubleshoot bugs by
 observing or sharing control of your screen while chatting with you via
 IM or VOIP, whether you're at home, at work, at Starbucks, or beyond.

@@ -2,6 +2,7 @@
 tags: []
 title: main
 ---
+
 `main` is a function that is special in C programs. It is where the
 computer begins and finishes executing user-written code. All ".c" files
 must have a `main` function in order to compile into an executable

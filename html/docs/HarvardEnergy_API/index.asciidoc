@@ -2,6 +2,7 @@
 tags: []
 title: HarvardEnergy_API
 ---
+
 The HarvardEnergy API allows you to request data programmatically from
 http://energy.cs50.net/[HarvardEnergy] in
 http://en.wikipedia.org/wiki/Comma-separated_values[CSV],

@@ -2,6 +2,7 @@
 tags: []
 title: Debugging
 ---
+
 __FORCETOC__ Debugging is the process of discovering and fixing errors
 in code which lead to unexpected and incorrect behaviors, known
 colloquially as "bugs," in your program. Debugging can often be tedious

@@ -2,6 +2,7 @@
 tags: []
 title: Recursion
 ---
+
 __FORCETOC__ *Recursion* in computer science refers to program design
 that relies on self-referential definitions. Any function that directly
 or indirectly calls itself or data structure that refers to itself in

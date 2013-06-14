@@ -2,6 +2,7 @@
 tags: []
 title: App_Inventor
 ---
+
 http://sites.google.com/site/appinventorhelp/[App Inventor for Android]
 is a http://scratch.mit.edu/[Scratch]-like environment that lets you
 create new mobile applications. With it, you can explore communication,

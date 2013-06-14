@@ -2,6 +2,7 @@
 tags: []
 title: Search_algorithms
 ---
+
 [[]]
 Linear Search
 -------------

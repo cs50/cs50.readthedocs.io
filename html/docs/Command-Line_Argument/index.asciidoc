@@ -2,6 +2,7 @@
 tags: []
 title: Command-Line_Argument
 ---
+
 A command-line argument is an argument that is passed to a program when
 it is called at the command line (hence the name). For example, if your
 program's name is `foo`, you might pass it `bar` and `baz` as two
@@ -23,6 +24,6 @@ Here, `bar baz` is passed as a single command-line argument whereas
 earlier it was passed as two separate command-line arguments.
 
 A program can access the command-line arguments it's been passed via
-`[[argv]]` within `main`.
+link:../argv[argv] within `main`.
 
 Category: Week 2[Category: Week 2]

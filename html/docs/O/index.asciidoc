@@ -2,5 +2,6 @@
 tags: []
 title: O
 ---
+
 1.  REDIRECT Running_Time#Asymptotic_or_Big_O_Notation
 

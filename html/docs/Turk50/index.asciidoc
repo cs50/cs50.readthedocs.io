@@ -2,6 +2,7 @@
 tags: []
 title: Turk50
 ---
+
 *http://mirror.cs50.net/turk50/turk50-1.0.zip[download]*
 (link:#Installation[instructions])
 

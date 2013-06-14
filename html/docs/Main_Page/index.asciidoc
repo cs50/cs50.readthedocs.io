@@ -2,6 +2,7 @@
 tags: []
 title: Main_Page
 ---
+
 This is CS50's manual. CS50's own website is at https://www.cs50.net/.
 CS50's OpenCourseWare is at http://cs50.tv/.
 

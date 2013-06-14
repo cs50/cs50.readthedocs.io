@@ -2,6 +2,7 @@
 tags: []
 title: Week_3
 ---
+
 _Linear search. Binary search. Asymptotic notation. Recursion.
 Pseudorandomness. Bubble sort. Selection sort. Insertion sort.
 Debugging._

@@ -2,6 +2,7 @@
 tags: []
 title: Function
 ---
+
 A *function* is a piece of code that performs a specific task. A
 function takes in zero or more link:argument[arguments] and may
 ultimately return a link:return value[return value]. For example, the

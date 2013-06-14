@@ -2,6 +2,7 @@
 tags: []
 title: How_to_Lead_a_Seminar
 ---
+
 Each fall, CS50 offers a series of link:Seminars[seminars]. Led by the
 course's own https://www.cs50.net/staff[staff] as well as by
 http://huit.harvard.edu/[HUIT staff] and

@@ -2,6 +2,7 @@
 tags: []
 title: CS50_ID
 ---
+
 CS50 ID is an http://en.wikipedia.org/wiki/OpenID[OpenID]-based service
 that allows you to authenticate Harvard affiliates. It lives at
 https://id.cs50.net/.

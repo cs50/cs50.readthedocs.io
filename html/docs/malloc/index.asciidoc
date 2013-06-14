@@ -2,6 +2,7 @@
 tags: []
 title: malloc
 ---
+
 `[[malloc]]` is a function in C that dynamically allocates memory to the
 program in which it is called. It takes as its only argument a numeric
 value of bytes and returns a pointer to a chunk of memory with the

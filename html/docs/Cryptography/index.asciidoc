@@ -2,6 +2,7 @@
 tags: []
 title: Cryptography
 ---
+
 Cryptography is the study of passing information secretly between a
 sender and a recipient. Most often, cryptography involves a manipulation
 of the original text of the message into ciphertext which is difficult

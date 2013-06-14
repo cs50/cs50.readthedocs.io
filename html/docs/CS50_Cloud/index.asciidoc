@@ -2,6 +2,7 @@
 tags: []
 title: CS50_Cloud
 ---
+
 The CS50 Cloud is a cluster of servers configured much like the
 link:CS50 Appliance[CS50 Appliance]. With a CS50 Cloud account can you
 host websites on `cloud.cs50.net`. If your CS50 Cloud account's username

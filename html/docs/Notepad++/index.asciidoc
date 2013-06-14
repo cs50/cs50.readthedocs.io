@@ -2,6 +2,7 @@
 tags: []
 title: Notepad++
 ---
+
 Notepad++ is a text editor for Windows that you can download from
 http://notepad-plus-plus.org/download[http://notepad-plus-plus.org/download].
 Once downloaded, run the `.exe` file by double-clicking its icon and

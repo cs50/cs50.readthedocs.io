@@ -2,6 +2,7 @@
 tags: []
 title: Caesar_Cipher
 ---
+
 Caesar cipher is an implementation of symmetric-key cryptography which
 was first used by Julius Caesar to communicate with his generals. The
 symmetric key is a number between 0 and 25 (or, if greater, is converted
