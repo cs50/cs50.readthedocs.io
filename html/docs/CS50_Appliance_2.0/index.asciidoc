@@ -46,36 +46,37 @@ See link:#Instructions[instructions] for much more detail.
 
 [cols=",",]
 |=======================================================================
-|*Your Name* |[multiblock cell omitted]
+|*Your Name* |John Harvard
 
-|*Your Username* |[multiblock cell omitted]
+|*Your Username* |jharvard
 
-|*Your Password* |[multiblock cell omitted]
+|*Your Password* |crimson
 
-|*Superuser's Username* |[multiblock cell omitted]
+|*Superuser's Username* |root
 
-|*Superuser's Password* |[multiblock cell omitted]
+|*Superuser's Password* |crimson
 
-|*Appliance's IP Address* |[multiblock cell omitted]
+|*Appliance's IP* |192.168.56.50
 
-|*Your Computer's IP Address* |[multiblock cell omitted]
+|*Your Computer's IP* |192.168.56.1
 
-|*Your MySQL Server (DB_SERVER)* |[multiblock cell omitted]
+|*Your MySQL Server (DB_SERVER)* |localhost
 
-|*Your MySQL Username (DB_USER)* |[multiblock cell omitted]
+|*Your MySQL Username (DB_USER)* |jharvard
 
-|*Your MySQL Password (DB_PASS)* |[multiblock cell omitted]
+|*Your MySQL Password (DB_PASS)* |crimson
 
-|*Superuser's MySQL Username* |[multiblock cell omitted]
+|*Superuser's MySQL Username* |root
 
-|*Superuser's MySQL Password* |[multiblock cell omitted]
+|*Superuser's MySQL Password* |crimson
 
-|*Your Homepage* |[multiblock cell omitted]
+|*phpMyAdmin* |http://192.168.56.50/phpmyadmin/
 
-|*phpMyAdmin* |[multiblock cell omitted]
+|*Your Homepage* |http://192.168.56.50/~jharvard/
 
 |*VirtualBox's Host Key* |left-Command on a Mac; right-Control on any
 other OS
+
 |=======================================================================
 
 [[]]

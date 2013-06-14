@@ -2,6 +2,7 @@
 tags: []
 title: CS50_Appliance_2.3
 ---
+
 *This HOWTO is for version 2.3 of the CS50 Appliance.*
 
 * *If following https://www.cs50.net/[Fall 2011] of CS50, you should use

@@ -2,6 +2,7 @@
 tags: []
 title: CS50_Appliance_3
 ---
+
 *This HOWTO is for version 3 of the CS50 Appliance.*
 
 * *If following Spring 2012 of CS1, CS51, or CS164, you should use this
@@ -46,19 +47,25 @@ See link:#Instructions[instructions] for much more detail.
 
 [cols=",",]
 |=============================================================
-|*Your Name* |[multiblock cell omitted]
-|*Your Username* |[multiblock cell omitted]
-|*Your Password* |[multiblock cell omitted]
-|*Superuser's Username* |[multiblock cell omitted]
-|*Superuser's Password* |[multiblock cell omitted]
-|*Appliance's IP Address* |[multiblock cell omitted]
-|*Appliance's Version* |[multiblock cell omitted]
-|*Superuser's MySQL Username* |[multiblock cell omitted]
-|*Superuser's MySQL Password* |[multiblock cell omitted]
+|*Your Name* | John Harvard
+|*Your Username* | jharvard
+|*Your Password* | crimson
+|*Superuser's Username* | root
+|*Superuser's Password* | crimson
+|*Appliance's IP Address* | a number of the form *w.x.y.z*, which can be found in the appliance's bottom-right corner
+|*Appliance's Version* | a number of the form *17-#*, which can be found in the appliance's bottom-right corner
+|*Superuser's MySQL Username* | root
+|*Superuser's MySQL Password* | crimson
 |*Your Homepage* +
-once you create `public_html`, etc. |[multiblock cell omitted]
-|*phpMyAdmin* |[multiblock cell omitted]
-|*Webmin* |[multiblock cell omitted]
+once you create `public_html`, etc. | http://localhost/~jharvard/ from within the appliance
+
+http://w.x.y.z/~jharvard from your own computer
+|*phpMyAdmin*** | http://localhost/phpMyAdmin/ from within the appliance
+
+http://w.x.y.z/phpMyAdmin/ from your own computer
+|*Webmin* | http://localhost:10000/ from within the appliance
+
+http://w.x.y.z:10000/ from your own computer
 |=============================================================
 
 [[]]
