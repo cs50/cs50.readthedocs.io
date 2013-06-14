@@ -4,7 +4,7 @@ title: Turk50
 ---
 
 *http://mirror.cs50.net/turk50/turk50-1.0.zip[download]*
-(link:#Installation[instructions])
+(link:#_installation[instructions])
 
 Turk50 is a PHP library that makes it "easier for you to build solutions
 leveraging http://aws.amazon.com/mturk/[Amazon Mechanical Turk]".
@@ -148,8 +148,8 @@ print_r($turk50->__getLastResponse());
 ------------------------------------------------------------------------------------
 
 How to invoke actual API operations? Let's consider two examples,
-link:#GetAccountBalance[GetAccountBalance] and
-link:#CreateHIT[CreateHIT], the first of which takes no parameters, the
+link:#_getaccountbalance[GetAccountBalance] and
+link:#_createhit[CreateHIT], the first of which takes no parameters, the
 second of which does. You should be able to infer from these examples
 how to invoke other
 http://docs.amazonwebservices.com/AWSMturkAPI/2008-08-02.html?ApiReference_OperationsArticle.html[operations]
@@ -290,7 +290,7 @@ http://docs.amazonwebservices.com/AWSMturkAPI/2008-08-02/ApiReference_CreateHITO
 operation. Notice that it requires not only the `Operation` parameter
 but also a few others (i.e., `Title`, `Description`, `Question`,
 `Reward`, ` AssignmentDurationInSeconds`, and `LifetimeInSeconds`. As
-with link:#GetAccountBalance[GetAccountBalance], `Operation` is
+with link:#_getaccountbalance[GetAccountBalance], `Operation` is
 implemented as an actual method; other parameters must be provided as
 associative arrays. Note that the `Question` parameter, though, is a bit
 of an anomaly: per the

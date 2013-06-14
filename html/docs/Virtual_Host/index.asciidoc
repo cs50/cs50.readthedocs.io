@@ -19,12 +19,12 @@ to their cloud account.
 
 In order to make this happen, you need to:
 
-1.  link:#How_to_Buy_a_Domain_Name[Buy a domain name].
-2.  link:#How_to_Configure_DNS[Configure DNS for your domain] so that
+1.  link:#_how_to_buy_a_domain_name[Buy a domain name].
+2.  link:#_how_to_configure_dns[Configure DNS for your domain] so that
 your domain name "resolves" to the cloud's IP adddress.
-3.  link:#Inform_CS50_of_Your_Domain_Name[Inform CS50 of your domain
+3.  link:#_inform_cs50_of_your_domain_name[Inform CS50 of your domain
 name].
-4.  link:#How_to_Start_Implementing_Your_Website[Implement your website]
+4.  link:#_how_to_start_implementing_your_website[Implement your website]
 in your cloud account in
 `/home/username/vhosts/isawyouharvard.com/html/`, where `username` is
 your own username and `isawyouharvard.com` is your own domain name.
@@ -98,8 +98,8 @@ How to Inform CS50 of Your Domain Name
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Do not submit the form below until you have actually
-link:#How_to_Buy_a_Domain_Name[purchased your domain name] and
-link:#How_to_Configure_DNS[configured DNS].
+link:#_how_to_buy_a_domain_name[purchased your domain name] and
+link:#_how_to_configure_dns[configured DNS].
 
 Loading...
 
@@ -154,9 +154,9 @@ website at any of
 * `<nowiki>http://www.isawyouharvard.com.php</nowiki>`
 * `<nowiki>http://www.isawyouharvard.com/</nowiki>`
 
-as well, assuming you link:#How_to_Buy_a_Domain_Name[purchased your
-domain name], link:#How_to_Configure_DNS[configured DNS], and
-link:#How_to_Inform_CS50_of_Your_Domain_Name[informed CS50 of your
+as well, assuming you link:#_how_to_buy_a_domain_name[purchased your
+domain name], link:#_how_to_configure_dns[configured DNS], and
+link:#_how_to_inform_cs50_of_your_domain_name[informed CS50 of your
 domain name].
 
 Email help@cs50.net if you run into trouble; be sure to mention your

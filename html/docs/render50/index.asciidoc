@@ -254,8 +254,8 @@ Examples
 
 These examples assume that `render50` has been installed in such a way
 that it suffices to execute `render50` via its name alone (as will be
-the case if installed for link:#Linux[Linux] via `yum`), per the tool's
-link:#Usage[usage]. Be sure to quote any patterns that contain wildcards
+the case if installed for link:#_linux[Linux] via `yum`), per the tool's
+link:#_usage[usage]. Be sure to quote any patterns that contain wildcards
 (`*`) if you want to prevent your shell from
 http://en.wikipedia.org/wiki/Glob_(programming)[globbing] them.
 

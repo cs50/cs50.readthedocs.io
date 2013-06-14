@@ -10,12 +10,12 @@ http://en.wikipedia.org/wiki/Virtual_machine[virtual machines] on your
 own computer, whether you run Mac OS, Windows, or Linux.
 
 * If you have a *Mac*, we recommend that you install:
-** link:#VMware_Fusion[VMware Fusion] if you are a student at Harvard
-** link:#VirtualBox[VirtualBox] if you are not a student at Harvard
+** link:#_vmware_fusion[VMware Fusion] if you are a student at Harvard
+** link:#_virtualbox[VirtualBox] if you are not a student at Harvard
 * If you have a *PC running Windows*, we recommend that you install:
-** link:#VMware_Player[VMware Player]
+** link:#_vmware_player[VMware Player]
 * If you have a *PC running Linux*, we recommend that you install:
-** link:#VirtualBox[VirtualBox]
+** link:#_virtualbox[VirtualBox]
 
 *Once installed, it's not uncommon for the appliance to take 1 – 2
 minutes to boot. But if, once at John Harvard's desktop, the appliance
@@ -57,7 +57,7 @@ after a few seconds or minutes. Click *CS50 Appliance 3* to highlight
 it, then click *Start*.
 
 That's it! To learn how to use the appliance, see further
-link:#How_to_Use_Appliance[instructions] down below!
+link:#_how_to_use_appliance[instructions] down below!
 
 [[]]
 VMware Fusion

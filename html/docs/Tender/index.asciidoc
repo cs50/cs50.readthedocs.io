@@ -71,7 +71,7 @@ resolved.
 click the button labeled *COMMENT & CLOSE* instead of that labeled just
 *COMMENT* after typing your reply.
 * Click *Formatting help* for a summary of common formatting tricks. Or
-see the section on link:#Markdown[Markdown] below.
+see the section on link:#_markdown[Markdown] below.
 
 If you determine that a discussion is best answered by
 mailto:heads@cs50.net[heads@] or mailto:sysadmins@cs50.net[sysadmins@],
@@ -79,7 +79,7 @@ click *ADD TO QUEUE* in the blue bar atop the discussion and then click
 the team's name. If you determine that a discussion was mis-categorized,
 click *CHANGE CATEGORY* in the blue bar and then select the better fit.
 If you determine that a student has posted too much code, you're welcome
-to click *EDIT* or, per the link:#Quickstart_Guide[Quickstart Guide],
+to click *EDIT* or, per the link:#_quickstart_guide[Quickstart Guide],
 *MAKE PRIVATE*. Only in rare cases (e.g., offensive) should you consider
 clicking *REMOVE*, but even then, probably best to *MAKE PRIVATE* and
 escalate to mailto:heads@cs50.net[heads@] for review.

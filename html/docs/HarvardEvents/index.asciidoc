@@ -16,23 +16,23 @@ To add your event(s) to HarvardEvents, follow the appropriate set of
 directions below. *Be sure your calendar is not already listed under All
 Calendars at http://events.cs50.net/[HarvardEvents].*
 
-* link:#How_to_Add_a_Google_Calendar[How to Add a Google Calendar]. If
+* link:#_how_to_add_a_google_calendar[How to Add a Google Calendar]. If
 your calendar lives at http://calendar.google.com/[Google Calendar],
 follow these directions.
-* link:#How_to_Add_an_Individual_Event[How to Add an Individual Event].
+* link:#_how_to_add_an_individual_event[How to Add an Individual Event].
 If you would like to add an event that's not already on a calendar in
 some other format or would like to add a one-time event for which it
 doesn't really make sense to create a Google Calendar or Google
 Spreadsheet for just that event, follow these directions.
-* link:#How_to_Add_a_CSV_Feed[How to Add a CSV Feed]. If your calendar
+* link:#_how_to_add_a_csv_feed[How to Add a CSV Feed]. If your calendar
 can be exported (e.g., via a template or script written by you) in
 http://en.wikipedia.org/wiki/Comma-separated_values[CSV] format, follow
 these directions.
-* link:#How_to_Add_a_Google_Spreadsheet[How to Add a Google
+* link:#_how_to_add_a_google_spreadsheet[How to Add a Google
 Spreadsheet]. If, for some reason, it makes the most sense to store your
 events in a Google Spreadsheet, one event per row, follow these
 directions.
-* link:#How_to_Add_an_iCalendar_File[How to Add an iCalendar File]. If
+* link:#_how_to_add_an_icalendar_file[How to Add an iCalendar File]. If
 your calendar can be exported (e.g.,via a script written by you) in
 iCalendar format, follow these directions.
 

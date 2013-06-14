@@ -118,8 +118,8 @@ Courses
 -------
 
 Below are courses that you can take in the
-link:#Spring_courses_you_can_take_after_CS50[spring] and
-link:#Fall_courses_you_can_take_after_CS50[fall] after CS50. Hover over
+link:#_spring_courses_you_can_take_after_cs50[spring] and
+link:#_fall_courses_you_can_take_after_cs50[fall] after CS50. Hover over
 nodes for courses' descriptions; click nodes for courses' websites.
 
 We used Google's

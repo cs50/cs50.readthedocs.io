@@ -13,7 +13,7 @@ For this problem set, you should do the below:
 *cs50/2010/hacker2/username* Google Spreadsheets. Hover over Column A
 cells that have orange triangles to see comments.
 3.  Assign Correctness, Design, and Style scores in each, using
-link:#Grading_Scripts[Mike's scripts] for assistance.
+link:#_grading_scripts[Mike's scripts] for assistance.
 4.  Record grades at http://www.cs50.net/tools/[cs50.net/tools].
 5.  Email your students their PDFs. Hang on to the PDFs too; we'll
 eventually upload them to the cloud for archival.

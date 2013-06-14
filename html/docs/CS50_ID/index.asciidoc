@@ -27,7 +27,7 @@ CS50 ID).
 How CS50 ID Works
 -----------------
 
-Per CS50 ID's link:#Implementation_Details[implementation details], the
+Per CS50 ID's link:#_implementation_details[implementation details], the
 diagram below (inspired by
 http://code.google.com/apis/accounts/docs/OpenID.html#Interaction[Google's
 own]) depicts how CS50 ID works (in 8 steps, from top to bottom).
@@ -36,9 +36,9 @@ image:CS50_ID.png[CS50_ID.png,title="image"]
 
 Thanks to the link:CS50 Library[CS50 Library], though, you don't need to
 implement (or even understand!) all of these steps in order to
-link:#How_to_Add_CS50_ID_to_Your_Website[add CS50 ID to your website].
-Per the link:#Examples[examples] for link:#PHP[PHP],
-link:#Python[Python], and link:#Ruby[Ruby], all you need do is call two
+link:#_how_to_add_cs50_id_to_your_website[add CS50 ID to your website].
+Per the link:#_examples[examples] for link:#PHP[PHP],
+link:#_python[Python], and link:#Ruby[Ruby], all you need do is call two
 methods (inspired by https://github.com/facebook/php-sdk[Facebook's
 own]):
 
@@ -85,19 +85,19 @@ sysadmins@cs50.net to inquire.
 for http://mirror.cs50.net/library/php/[PHP],
 http://mirror.cs50.net/library/python/[Python], or
 http://mirror.cs50.net/library/ruby/[Ruby] and integrate it into your
-website, per the link:#Examples[examples] below.
+website, per the link:#_examples[examples] below.
 
 [[]]
 Examples
 --------
 
 Below are examples of how to add CS50 ID to your website in
-link:#PHP[PHP], link:#Python[Python], and link:#Ruby[Ruby] using the
+link:#_php[PHP], link:#Python[Python], and link:#Ruby[Ruby] using the
 link:CS50 Library[CS50 Library]. Each example implements the behavior at
 https://id.cs50.net/example/.
 
 To add CS50 ID to your website using some other library or language,
-review link:#How_CS50_ID_Works[How CS50 ID Works].
+review link:#_how_cs50_id_works[How CS50 ID Works].
 
 [[]]
 PHP
@@ -156,10 +156,10 @@ require_once("CS50/CS50.php");
 index.php
 ^^^^^^^^^
 
-Notice how this file requires link:#config.php[config.php]. And notice
+Notice how this file requires link:#_config.php[config.php]. And notice
 how it infers whether a user is logged in by checking whether
 `$_SESSION["user"]` has a value; that value is set by
-link:#return_to.php[return_to.php].
+link:#_return_to.php[return_to.php].
 
 [code,php]
 ------------------------------------------------------------------------------------------------------------------------
@@ -236,7 +236,7 @@ return_to.php
 ^^^^^^^^^^^^^
 
 This is the page to which the user will be returned by CS50 ID (per the
-definition of `RETURN_TO` in link:#config.php[config.php]). Note that
+definition of `RETURN_TO` in link:#_config.php[config.php]). Note that
 `getUser`, a static method defined in the link:CS50 Library[CS50
 Library], will return an associative array that represents the user who
 logged in via CS50 ID. Included in that associative array will be at
@@ -257,7 +257,7 @@ just log in successfully via CS50 ID.
 
 Finally, note that we "remember" that the user has logged in by storing
 the associative array returned by `getUser` as the value of
-`$_SESSION["user"]`. Recall that link:#index.php[index.php] checks
+`$_SESSION["user"]`. Recall that link:#_index.php[index.php] checks
 `$_SESSION["user"]` to determine whether a user is logged in.
 
 [code,php]
@@ -288,7 +288,7 @@ logout.php
 Note that logouts are not handled by CS50 ID but by your own website. So
 long as you have "remembered" that a user is logged in by storing the
 associative array returned by `getLoginUrl` as the value of
-`$_SESSION["user"]`, per link:#return_to.php[return_to.php], it suffices
+`$_SESSION["user"]`, per link:#_return_to.php[return_to.php], it suffices
 to unset `$_SESSION["user"]` to log the user out; you should not
 redirect the user back to CS50 ID.
 
@@ -494,12 +494,12 @@ Implementation Details
 ----------------------
 
 *If you would like to add CS50 ID to your own site, you probably only
-need to follow the link:#How_to_Add_CS50_ID_to_Your_Website[directions
+need to follow the link:#_how_to_add_cs50_id_to_your_website[directions
 above].*
 
 If, though, you would like to add CS50 ID to your website using some
 library other than the link:CS50 Library[CS50 Library] or some language
-other than link:#PHP[PHP], link:#Python[Python], and link:#Ruby[Ruby]
+other than link:#_php[PHP], link:#Python[Python], and link:#Ruby[Ruby]
 (which the link:CS50 Library[CS50 Library] supports), below are
 implementation details for the technically curious.
 
@@ -516,7 +516,7 @@ ID (e.g., yours!) is a _Relying Party_. CS50's _OP Identifier_ (i.e.,
 the address on which discovery should be performed) is
 `<nowiki>https://id.cs50.net/</nowiki>`. (Note the `https`.)
 
-As per link:#How_CS50_ID_Works[how CS50 ID works], whether you use the
+As per link:#_how_cs50_id_works[how CS50 ID works], whether you use the
 link:CS50 Library[CS50 Library] or some other library to add CS50 ID to
 your website, here's how authentication must flow:
 
@@ -568,7 +568,7 @@ http://openid.net/specs/openid-authentication-2_0.html[OpenID
 Authentication 2.0] but with these constraints:
 
 * A Relying Party must be approved to use CS50 ID. Review
-link:#How_to_Add_CS50_ID_to_Your_Website[How to Add CS50 ID to Your
+link:#_how_to_add_cs50_id_to_your_website[How to Add CS50 ID to Your
 Website] to apply for approval.
 * Discovery must be performed via
 http://yadis.org/papers/yadis-v1.0.pdf[Yadis] or
@@ -731,7 +731,7 @@ trusts URLs that begin with `<nowiki>http://localhost/</nowiki>` and
 develop your website locally and still interact with CS50 ID, provided
 you're running a web server that's listening for requests on `localhost`
 or `127.0.0.1` (on any TCP port). During development, simply change
-`TRUST_ROOT` and `RETURN_TO`, per the link:#Examples[examples], to refer
+`TRUST_ROOT` and `RETURN_TO`, per the link:#_examples[examples], to refer
 to `localhost` or `127.0.0.1`; just be sure that `RETURN_TO` is still a
 prefix of `TRUST_ROOT`. Note that, when using `localhost` or
 `127.0.0.1`, you'll be able to log into CS50 ID using any supported
@@ -755,7 +755,7 @@ IPv4 addresses] (e.g., 192.168.56.50) automatically so that you can
 develop your website locally and still interact with CS50 ID, provided
 you're running a web server that's listening for requests on an private
 IPv4 address (on any TCP port). During development, simply change
-`TRUST_ROOT` and `RETURN_TO`, per the link:#Examples[examples], to refer
+`TRUST_ROOT` and `RETURN_TO`, per the link:#_examples[examples], to refer
 to the server's private IP address; just be sure that `RETURN_TO` is
 still a prefix of `TRUST_ROOT`. Note that, when using a private IPv4
 address, you'll be able to log into CS50 ID using any supported account

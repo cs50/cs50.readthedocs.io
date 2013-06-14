@@ -7,7 +7,7 @@ A bit, short for binary digit, represents a number of either 0 or a 1.
 In other words, it represents the values that can occupy a single
 position in a link:Binary[binary] number. It is therefore the most
 fundamental unit of computing memory and storage, and it is frequently
-used in combination with link:#Prefixes[prefixes] to refer to quantities
+used in combination with link:#_prefixes[prefixes] to refer to quantities
 of permanent storage, memory, connection bandwidth, and others.
 
 Most commonly, bits are referred to in groups of 8, known as a byte.

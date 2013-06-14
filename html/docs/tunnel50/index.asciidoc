@@ -48,7 +48,7 @@ hit *ctl-d*.
 Staff
 ^^^^^
 
-1.  Ask student to run `tunnel50`, per the link:#Student[instructions
+1.  Ask student to run `tunnel50`, per the link:#_student[instructions
 above], and provide you with his or her 9-digit *ID* and 4-digit
 *Password*.
 2.  Open a terminal window in the link:CS50 Appliance[CS50 Appliance],

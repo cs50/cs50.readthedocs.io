@@ -18,7 +18,7 @@ activate with s/n 1118-1000-1694-3105-7694-0760
 license, for CS50 use this semester only*
 *** http://www.bluebeam.com/standard[Windows], activate with s/n
 1042911, product key VFWY9-L58E7AA
-* link:#Fetching_Submissions_and_Making_PDFs[Fetch your students' code
+* link:#_fetching_submissions_and_making_pdfs[Fetch your students' code
 and make PDFs] thereof.
 * Open the Google Spreadsheet called *cs50/2010/pset1/username* (which
 should have been shared with your @gmail.com account), make a copy via
@@ -29,7 +29,7 @@ tackled Hacker Edition (which you'll know if you have any directories in
 `both1` named `username.hacker1`).
 * Use your copy of the spreadsheet to determine a student's Correctness
 score (out of 5), which should auto-compute in the green row. *Use
-Mike's link:#Grading_Scripts[grading scripts] to automate the
+Mike's link:#_grading_scripts[grading scripts] to automate the
 calculation of correctness scores to the extent possible.* Manual
 evaluation might be necessary if, e.g., student's code doesn't compile.
 (If getting code to compile requires just a few tweaks on your part, do
@@ -275,7 +275,7 @@ Not scored. Comment on PDF only if applicable.
 skittles.c
 ~~~~~~~~~~
 
-See link:#standard_edition[standard edition].
+See link:#_standard_edition[standard edition].
 
 [[]]
 credit.c
@@ -304,5 +304,5 @@ named.
 chart.c
 ~~~~~~~
 
-See link:#standard_edition[standard edition], though remember that
+See link:#_standard_edition[standard edition], though remember that
 Hacker Edition mandates vertical bars.

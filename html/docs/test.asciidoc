@@ -1,0 +1,26 @@
+---
+tags: []
+title: test
+---
+
+Article
+=======
+:toc:
+
+== Section One
+
+It was a dark and stormy night...
+
+== Section Two
+
+They couldn't believe their eyes when...
+
+=== Interlude
+
+While they were waiting...
+
+== Section Three
+
+That's all she wrote!
+
+

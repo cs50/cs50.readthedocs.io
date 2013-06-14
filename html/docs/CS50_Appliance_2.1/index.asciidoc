@@ -37,7 +37,7 @@ Make sense? (If not, you may want to watch, at least, Week 0's and Week
 1's http://cs50.tv/2010/fall/#l=lectures[lectures]. :-)
 
 Incidentally, the Appliance is always work in progress, so please
-forgive any bugs! We'll document link:#Known_Issues[known issues] down
+forgive any bugs! We'll document link:#_known_issues[known issues] down
 below. Do turn to the course's http://cs50.tv/2009/fall/#r=group[Google
 Group] if you run into problems, and we'll do our best to improve the
 experience.
@@ -46,7 +46,7 @@ experience.
 Cheatsheet
 ----------
 
-See link:#Instructions[instructions] for much more detail.
+See link:#_instructions[instructions] for much more detail.
 
 [cols=",",]
 |=======================================================================
@@ -102,7 +102,7 @@ let you run http://en.wikipedia.org/wiki/Virtual_machine[virtual
 machines] on your own computer, whether you run Linux, Mac OS, Solaris,
 or Windows. Unless you already own a hypervisor (e.g., Parallels, VMware
 Fusion, or VMware Workstation), *CS50 recommends that you download and
-install link:#VirtualBox[VirtualBox] because it's free and
+install link:#_virtualbox[VirtualBox] because it's free and
 cross-platform.*
 
 [[]]
@@ -145,7 +145,7 @@ VMware Fusion
 ^^^^^^^^^^^^^
 
 Here's how to install the appliance using VMware Fusion. *However, CS50
-recommends that you use link:#VirtualBox[VirtualBox] unless you already
+recommends that you use link:#_virtualbox[VirtualBox] unless you already
 own and prefer VMware Fusion.* These instructions assume that VMware
 Fusion is already installed.
 
@@ -165,7 +165,7 @@ VMware Workstation
 ^^^^^^^^^^^^^^^^^^
 
 Here's how to install the appliance using VMware Workstation. *However,
-CS50 recommends that you use link:#VirtualBox[VirtualBox] unless you
+CS50 recommends that you use link:#_virtualbox[VirtualBox] unless you
 already own and prefer VMware Workstation.* These instructions assume
 that VMware Workstation is already installed.
 
@@ -189,7 +189,7 @@ Parallels
 ^^^^^^^^^
 
 Here's how to install the appliance using Parallels. *However, CS50
-recommends that you use link:#VirtualBox[VirtualBox] unless you already
+recommends that you use link:#_virtualbox[VirtualBox] unless you already
 own and prefer Parallels.* These instructions assume that Parallels is
 already installed.
 
@@ -200,7 +200,7 @@ KVM
 ^^^
 
 Here's how to install the appliance using KVM. *However, CS50 recommends
-that you use link:#VirtualBox[VirtualBox] unless you already own and
+that you use link:#_virtualbox[VirtualBox] unless you already own and
 prefer Parallels.* These instructions assume that KVM is already
 installed.
 
@@ -211,7 +211,7 @@ How to Update Appliance
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 The latest release of version 2.1 of the CS50 Appliance is *2.1-5*. To
-check which version you have, link:#How_to_Open_a_Terminal[open a
+check which version you have, link:#_how_to_open_a_terminal[open a
 terminal] and execute:
 
 `yum list installed cs50-appliance`
@@ -226,7 +226,7 @@ ways:
 
 * Select *Menu > Administration > Software Update*, then click *Install
 Updates* if any updates are available.
-* link:#How_to_Open_a_Terminal[Open a terminal] and execute:
+* link:#_how_to_open_a_terminal[Open a terminal] and execute:
 +
 ---------------------------------------
 sudo yum clean all ; sudo yum -y update
@@ -269,7 +269,7 @@ John Harvard's name or username*. Life will be simpler as John.
 
 With that said, if you'd _really_ like to be yourself (or someone else
 altogether), you're welcome to create a new account.
-link:#How_to_Open_a_Terminal[Open a terminal] and execute
+link:#_how_to_open_a_terminal[Open a terminal] and execute
 
 `sudo adduser --comment "Jane Harvard" --gid students --groups wheel --password crimson janeh` +
 `echo -e "crimson\ncrimson" | sudo smbpasswd -a -s janeh`
@@ -296,7 +296,7 @@ You can change your password in any of these ways:
 prompts.
 * Log into Usermin at http://192.168.56.50:20000/, select *Login >
 Change Password* at top-left, and follow the on-screen instructions.
-* link:#How_to_Open_a_Terminal[Open a terminal] and execute: +
+* link:#_how_to_open_a_terminal[Open a terminal] and execute: +
 +
 ------
 passwd
@@ -321,7 +321,7 @@ you might find yourself more at home nonetheless. Select *Menu >
 Administration > Language*, inputting your password if prompted. Select
 your preferred language from the list that appears, then click *OK*. If
 prompted, click *Import key*. You may need to wait for a bit as the
-language is installed. Then link:#How_to_Restart_Appliance[restart the
+language is installed. Then link:#_how_to_restart_appliance[restart the
 appliance] and log back in.
 
 [[]]
@@ -363,7 +363,7 @@ you'll be able to type commands like *cd*, `gcc`, `ls`, and `nano`.
 If you don't have an account on `nice.fas.harvard.edu` or
 `cloud.cs50.net` but a problem set tells you to "SSH to
 `nice.fas.harvard.edu`" or "SSH to `cloud.cs50.net`", you can simply
-open a terminal instead (or you can link:#How_to_SSH_to_Appliance[SSH to
+open a terminal instead (or you can link:#_how_to_ssh_to_appliance[SSH to
 the appliance]).
 
 [[]]
@@ -403,7 +403,7 @@ How to Change Host Key
 VirtualBox's "host key" allows you to release your keyboard and mouse
 from the appliance if they've been "captured," which happens when you
 click somewhere inside of the appliance's window (unless you have
-link:#How_to_Install_Guest_Additions[guest additions] installed).
+link:#_how_to_install_guest_additions[guest additions] installed).
 
 On a Mac, VirtualBox's host key is your keyboard's left-Command key; to
 change it, select *VirtualBox > Preferences... > Input*. On any other
@@ -424,10 +424,10 @@ want to install "VMware Tools."*
 "Guest Additions" are device drivers and system applications that come
 with VirtualBox that can improve the performance and usability of the
 CS50 Appliance. Those additions allow you to
-link:#How_to_Change_Resolution[change the appliance's resolution],
-link:#How_to_Enter.2FExit_Fullscreen_Mode[enter/exit fullscreen mode],
-link:#How_to_Enter/Exit_Seamless_Mode[enter/exit seamless mode], and
-link:#How_to_Transfer_Files_between_Appliance_and_Your_Computer[share
+link:#_how_to_change_resolution[change the appliance's resolution],
+link:#_how_to_enter.2fexit_fullscreen_mode[enter/exit fullscreen mode],
+link:#_how_to_enter/exit_seamless_mode[enter/exit seamless mode], and
+link:#_how_to_transfer_files_between_appliance_and_your_computer[share
 folders] between the appliance and your own computer. They may also
 eliminate the need to "release" your keyboard and mouse via VirtualBox's
 "host key."
@@ -435,9 +435,9 @@ eliminate the need to "release" your keyboard and mouse via VirtualBox's
 To install them, select *Install Guest Additions...* from VirtualBox's
 *Devices* menu while the appliance is running. (This menu is outside of
 the appliance, not inside of it. You may need to
-link:#How_to_Release_Keyboard_and_Mouse[release your keyboard and mouse]
+link:#_how_to_release_keyboard_and_mouse[release your keyboard and mouse]
 first.) An icon of a CD may then appear on your desktop, but no need to
-double-click it. Instead, link:#How_to_Open_a_Terminal[open a terminal]
+double-click it. Instead, link:#_how_to_open_a_terminal[open a terminal]
 and execute the commands below. Input your password if prompted. (For
 security, you will not see your password as you type it.)
 
@@ -451,8 +451,8 @@ Once the software has been installed, execute the command below:
 Then select *CD/DVD Devices > Remove disk from virtual drive* from
 VirtualBox's *Devices* menu. (This menu is outside of the appliance, not
 inside of it. You may need to
-link:#How_to_Release_Keyboard_and_Mouse[release your keyboard and mouse]
-first.) Then link:#How_to_Restart_Appliance[restart the appliance] and
+link:#_how_to_release_keyboard_and_mouse[release your keyboard and mouse]
+first.) Then link:#_how_to_restart_appliance[restart the appliance] and
 log back in.
 
 [[]]
@@ -468,7 +468,7 @@ resolution to 640x480 or increase the resolution to 1024x768, select
 To increase the appliance's resolution beyond 1024x768 and to enable
 auto-resize (whereby dragging VirtualBox's bottom-left corner will alter
 the appliance's resolution), you'll need to install
-link:#How_to_Install_Guest_Additions[install guest additions], if you
+link:#_how_to_install_guest_additions[install guest additions], if you
 haven't already.
 
 [[]]
@@ -493,7 +493,7 @@ How to Enter/Exit Fullscreen Mode
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For fullscreen mode to work, you'll first need to
-link:#How_to_Install_Guest_Additions[install guest additions] if you
+link:#_how_to_install_guest_additions[install guest additions] if you
 haven't already.
 
 Thereafter, you can enter fullscreen mode in either of these ways:
@@ -524,7 +524,7 @@ windows; in seamless mode, the appliance's windows are no longer
 confined to the appliance's own rectangular window.
 
 For seamless mode to work, you'll first need to
-link:#How_to_Install_Guest_Additions[install guest additions] if you
+link:#_how_to_install_guest_additions[install guest additions] if you
 haven't already.
 
 Thereafter, you can enter seamless mode in either of these ways:
@@ -555,7 +555,7 @@ How to Undelete Files
 Every 10 minutes, the appliance take "snapshots" of everything in
 `/home` just in case you accidentally delete something. (You can also
 mitigate accidental deletions by
-link:#How_to_Synchronize_Files_with_Dropbox[synchronizing with
+link:#_how_to_synchronize_files_with_dropbox[synchronizing with
 Dropbox].)
 
 Suppose that you just deleted `~/pset1/hello.c`. Odds are you'll find it
@@ -568,7 +568,7 @@ or with
 
 `cp /snapshots/minutely.1/home/jharvard/pset1/hello.c ~/pset1`
 
-in a link:#How_to_Open_a_Terminal[terminal]. If you need to recover an
+in a link:#_how_to_open_a_terminal[terminal]. If you need to recover an
 earlier version, you can go further back in time via `minutely.2`,
 `minutely.3`, or `minutely.4`. If you'd instead like to go back an hour
 or so, you can start with `hourly.0`, followed by `hourly.1`,
@@ -616,7 +616,7 @@ academic honesty.*
 
 Here's how to configure the appliance for Dropbox.
 
-1.  link:#How_to_Open_a_Terminal[Open a terminal].
+1.  link:#_how_to_open_a_terminal[Open a terminal].
 2.  Execute:
 +
 ----------------
@@ -807,7 +807,7 @@ besides your own, on which the appliance is running) to:
 * access phpMyAdmin, at http://192.168.56.50/phpMyAdmin/
 * access Usermin, at http://192.168.56.50:20000/
 * access Webmin, at http://192.168.56.50:10000/
-* link:#How_to_Transfer_Files_between_Appliance_and_Your_Computer[mount
+* link:#_how_to_transfer_files_between_appliance_and_your_computer[mount
 John Harvard's home directory] in a window on your desktop
 
 You will be able to:
@@ -818,7 +818,7 @@ You will be able to:
 *However, odds are `eth2` will not work on Harvard's campus because of
 Harvard's firewall.*
 
-To enable `eth2` temporarily, link:#How_to_Open_a_Terminal[open a
+To enable `eth2` temporarily, link:#_how_to_open_a_terminal[open a
 terminal] and execute:
 
 `sudo ifup eth2`
@@ -844,7 +844,7 @@ If you would like to enable `eth2` permanently:
 3.  Check *Activate device when computer starts*, then click *OK*.
 4.  Select *File > Save*, then click *OK*.
 5.  Select *File > Quit*.
-6.  link:#How_to_Restart_Appliance[Restart the appliance].
+6.  link:#_how_to_restart_appliance[Restart the appliance].
 
 Just realize that each time the appliance starts, it may be assigned a
 different IP address on your LAN via DCHP, so you might need to re-run
@@ -887,7 +887,7 @@ file; decide on a destination as prompted. You can then share that
 screenshot with someone if necessary, as by opening Gmail in Firefox and
 sending it as an attachment.
 
-You can also link:#How_to_Share_Control_of_Your_Screen[share control of
+You can also link:#_how_to_share_control_of_your_screen[share control of
 your screen] if you need someone else to see more than a screenshot.
 
 [[]]
@@ -927,12 +927,12 @@ How to Disable Automatic Login
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 By default, the appliance logs you in as John Harvard. To disable
-automatic login, link:#How_to_Open_a_Terminal[open a terminal] and
+automatic login, link:#_how_to_open_a_terminal[open a terminal] and
 execute:
 
 `sudo rm -f /etc/gdm/custom.conf`
 
-Then link:#How_to_Restart_Appliance[restart the appliance]. You should
+Then link:#_how_to_restart_appliance[restart the appliance]. You should
 now see a login prompt instead of John Harvard's desktop.
 
 [[]]
@@ -951,7 +951,7 @@ You can restart the appliance in either of these ways:
 
 * Click image:Exit.png[Exit.png,title="image"] in the appliance's
 bottom-right corner, then click *Restart*.
-* link:#How_to_Open_a_Terminal[Open a terminal] and execute the below,
+* link:#_how_to_open_a_terminal[Open a terminal] and execute the below,
 inputting your password if prompted:
 +
 ------------
@@ -966,7 +966,7 @@ You can shut down the appliance in either of these ways:
 
 * Click image:Exit.png[Exit.png,title="image"] in the appliance's
 bottom-right corner, then click *Shut Down*.
-* link:#How_to_Open_a_Terminal[Open a terminal] and execute the below,
+* link:#_how_to_open_a_terminal[Open a terminal] and execute the below,
 inputting your password if prompted:
 +
 -------------
@@ -981,7 +981,7 @@ If your own computer sits behind an HTTP proxy server, you might need to
 configure the appliance to route HTTP traffic through that proxy as
 well. Here's how.
 
-1.  link:#How_to_Open_a_Terminal[Open a terminal] and execute the below,
+1.  link:#_how_to_open_a_terminal[Open a terminal] and execute the below,
 inputting your password if prompted:
 +
 ---------------------------------
@@ -1000,7 +1000,7 @@ export http_proxy=http://example.com:80/
 --------------------------------------
 sudo chmod 644 /etc/profile.d/proxy.sh
 --------------------------------------
-5.  link:#How_to_Restart_Appliance[Restart the appliance].
+5.  link:#_how_to_restart_appliance[Restart the appliance].
 
 [[]]
 How to Run Programs from Lectures
@@ -1021,7 +1021,7 @@ Implementation Details
 Below are details on how we implemented the CS50 Appliance in case
 you're curious or would like to reproduce these steps yourself. *You do
 NOT need to follow these directions to if you simply want to use the
-CS50 Appliance:* you only need to follow link:#Instructions[the
+CS50 Appliance:* you only need to follow link:#_instructions[the
 instructions above].
 
 We built the appliance using a combination of
@@ -1255,7 +1255,7 @@ Troubleshooting
 ---------------
 
 If you are having problems that aren't addressed here or under
-link:#Known_Issues[Known Issues], turn to the course's
+link:#_known_issues[Known Issues], turn to the course's
 http://cs50.tv/2010/fall/#r=group[Google Group] for help.
 
 [[]]
@@ -1265,7 +1265,7 @@ Forgotten Password
 Follow these directions if you have forgotten the password with which
 jharvard or root can log into the appliance (as via the console or, in
 John Harvard's case, via SSH). If you have forgotten a MySQL password,
-see link:#Forgotten_MySQL_Password[further below].
+see link:#_forgotten_mysql_password[further below].
 
 [[]]
 jharvard
@@ -1275,11 +1275,11 @@ John Harvard's password is *crimson* by default. But if you changed it
 to something you do not remember, you can change it to something you
 know as follows:
 
-1.  link:#How_to_Log_Out_of_Appliance[Log out] of the appliance if
+1.  link:#_how_to_log_out_of_appliance[Log out] of the appliance if
 already logged in.
 2.  Log in as *root* with password *crimson* (unless you changed the
 superuser's password too).
-3.  link:#How_to_Open_a_Terminal[Open a terminal], execute
+3.  link:#_how_to_open_a_terminal[Open a terminal], execute
 +
 ---------------
 passwd jharvard
@@ -1287,7 +1287,7 @@ passwd jharvard
 +
 and input a new password for John Harvard (e.g., *crimson*) twice as
 prompted.
-4.  link:#How_to_Log_Out_of_Appliance[Log out] of the appliance.
+4.  link:#_how_to_log_out_of_appliance[Log out] of the appliance.
 
 You should then be able to log in as John Harvard again.
 
@@ -1299,9 +1299,9 @@ The superuser's password is *crimson* by default. But if you changed it
 to something you do not remember, you can change it to something you
 know as follows:
 
-1.  link:#How_to_Shut_Down_Appliance[Shut down the appliance] if it's
+1.  link:#_how_to_shut_down_appliance[Shut down the appliance] if it's
 already running.
-2.  link:#How_to_Start_Appliance[Start the appliance], immediately click
+2.  link:#_how_to_start_appliance[Start the appliance], immediately click
 once inside of its window (so that your cursor disappears), and
 immediately hold *Shift*. Within a few seconds, you should see a *GNU
 GRUB* screen with *Generic* highlighted in white. If not, start over and
@@ -1336,7 +1336,7 @@ Forgotten MySQL Password
 John Harvard's password for MySQL is *crimson* by default, as is the
 superuser's. But if you changed either to something you do not remember,
 you can change both back to *crimson* by
-link:#How_to_Open_a_Terminal[opening a terminal] and executing the
+link:#_how_to_open_a_terminal[opening a terminal] and executing the
 below:
 
 `sudo yum -y reinstall cs50-appliance`

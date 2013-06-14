@@ -4,8 +4,8 @@ title: VirtualBox
 ---
 
 Here's how to install the link:CS50_Appliance_17[CS50 Appliance] using
-VirtualBox for link:#Mac_OS[Mac OS], link:#Windows[Windows], and
-link:#Linux[Linux].
+VirtualBox for link:#_mac_os[Mac OS], link:#Windows[Windows], and
+link:#_linux[Linux].
 
 [[]]
 Mac OS
@@ -384,7 +384,7 @@ which are checked. If *VirtualBox Bridged Networking Driver* appears in
 the list, single-click it to highlight it, then click *Uninstall*.
 5.  If prompted if you are *sure you want to uninstall*, click *Yes*.
 6.  Click *Close*.
-7.  Proceed to reinstall VirtualBox per link:#Windows[the directions
+7.  Proceed to reinstall VirtualBox per link:#_windows[the directions
 above]. *Be sure to run the installer as an administrator.*
 
 Let sysadmins@cs50.net know if VirtualBox's installer still fails,
@@ -400,7 +400,7 @@ encountered an unexpected error installing this package.  This may
 indicate a problem with this package.  The error code is 2869.*
 
 See
-link:#The_installer_has_encountered_an_unexpected_error_installing_this_package..C2.A0_This_may_indicate_a_problem_with_this_package..C2.A0_The_error_code_is_2869.[troubleshooting
+link:#_the_installer_has_encountered_an_unexpected_error_installing_this_package..c2.a0_this_may_indicate_a_problem_with_this_package..c2.a0_the_error_code_is_2869.[troubleshooting
 tips for that other error].
 
 [[]]
@@ -413,7 +413,7 @@ encountered an unexpected error installing this package.  This may
 indicate a problem with this package.  The error code is 2869.*
 
 See
-link:#The_installer_has_encountered_an_unexpected_error_installing_this_package..C2.A0_This_may_indicate_a_problem_with_this_package..C2.A0_The_error_code_is_2869.[troubleshooting
+link:#_the_installer_has_encountered_an_unexpected_error_installing_this_package..c2.a0_this_may_indicate_a_problem_with_this_package..c2.a0_the_error_code_is_2869.[troubleshooting
 tips for that other error].
 
 [[]]

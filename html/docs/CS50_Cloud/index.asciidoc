@@ -11,8 +11,8 @@ http://cloud.cs50.net/~username/ (or similar). If you would instead like
 to buy a domain name that "resolves" to your CS50 Cloud account, you may
 set up a link:Virtual Host[virtual host].
 
-Below are instructions on how to migrate link:#Files[files] and
-link:#Databases[databases] from the link:CS50 Appliance[CS50 Appliance]
+Below are instructions on how to migrate link:#_files[files] and
+link:#_databases[databases] from the link:CS50 Appliance[CS50 Appliance]
 to the CS50 Cloud.
 
 [[]]

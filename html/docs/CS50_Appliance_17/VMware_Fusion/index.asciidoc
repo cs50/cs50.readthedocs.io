@@ -4,7 +4,7 @@ title: VMware Fusion
 ---
 
 Here's how to install the link:..[CS50 Appliance] using
-VMware Fusion for link:#Installation[Mac OS].
+VMware Fusion for link:#_installation[Mac OS].
 
 [[]]
 Installation

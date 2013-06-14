@@ -37,7 +37,7 @@ Make sense? (If not, you may want to watch, at least, Week 0's and Week
 1's http://cs50.tv/2009/fall/#l=lectures[lectures]. :-)
 
 Incidentally, this appliance is a work in progress, so please forgive
-any bugs! We've documented link:#Known_Issues[known issues] down below.
+any bugs! We've documented link:#_known_issues[known issues] down below.
 Do turn to the course's http://cs50.tv/2009/fall/#r=group[Google Group]
 if you run into problems, and we'll do our best to improve the
 experience.
@@ -46,7 +46,7 @@ experience.
 Cheatsheet
 ----------
 
-See link:#Instructions[instructions] for more detail.
+See link:#_instructions[instructions] for more detail.
 
 [cols=",",]
 |=======================================================================
@@ -150,7 +150,7 @@ How to Change Password
 ^^^^^^^^^^^^^^^^^^^^^^
 
 Select *System → Preferences → About Me*, then click *Change
-Password...*. Or, link:#How_to_Open_a_Terminal[open a terminal] and
+Password...*. Or, link:#_how_to_open_a_terminal[open a terminal] and
 execute *passwd* at the prompt.
 
 With that said, allow us to suggest that you not change your password
@@ -208,7 +208,7 @@ http://cs50.tv/2009/fall/#l=psets[problem sets].
 
 When a problem set tells you to "ssh to nice.fas.harvard.edu" or "ssh to
 cloud.cs50.net", you can simply open a terminal instead (or you can
-link:#How_to_SSH_to_Appliance[SSH to the appliance]).
+link:#_how_to_ssh_to_appliance[SSH to the appliance]).
 
 Just realize that when you open a terminal by right-clicking your
 desktop, you'll start in your ~/Desktop/ directory instead of your home
@@ -248,17 +248,17 @@ How to Install Guest Additions
 "Guest additions" are device drivers and system applications that come
 with VirtualBox that can improve the performance and usability of the
 CS50 Appliance. Those additions allow you to
-link:#How_to_Change_Resolution[change the appliance's resolution],
-link:#How_to_Enter/Exit_Seamless_Mode[enter/exit seamless mode], and
-link:#How_to_Transfer_Files_between_Appliance_and_Your_Computer[share
+link:#_how_to_change_resolution[change the appliance's resolution],
+link:#_how_to_enter/exit_seamless_mode[enter/exit seamless mode], and
+link:#_how_to_transfer_files_between_appliance_and_your_computer[share
 folders] between host and guest machines. They may also eliminate the
 need to "release" your keyboard and mouse via VirtualBox's "host key."
 
 To install them, select *Install Guest Additions...* from VirtualBox's
 *Devices* menu while the appliance is running. (This menu is outside of
 the appliance, not inside of it. You may need to
-link:#How_to_Release_Keyboard_and_Mouse[release your keyboard and mouse]
-first.) Then link:#How_to_Open_a_Terminal[open a terminal] and execute
+link:#_how_to_release_keyboard_and_mouse[release your keyboard and mouse]
+first.) Then link:#_how_to_open_a_terminal[open a terminal] and execute
 the commands below. Input your password if prompted. (For security, you
 will not see your password as you type it.)
 
@@ -274,7 +274,7 @@ Once the software has been installed, execute the command below:
 Then select *CD/DVD Devices → Remove disk from virtual drive* from
 VirtualBox's *Devices* menu. (This menu is outside of the appliance, not
 inside of it. You may need to
-link:#How_to_Release_Keyboard_and_Mouse[release your keyboard and mouse]
+link:#_how_to_release_keyboard_and_mouse[release your keyboard and mouse]
 first.) Then reboot the appliance by selecting '''
 
 → Restart...''' in the appliance's top-right corner.
@@ -286,7 +286,7 @@ How to Change Resolution
 By default, the appliance's resolution is 800 x 600, but, odds are, your
 own screen's resolution is higher. But if you try to make VirtualBox's
 window bigger, the appliance itself won't grow. At least not yet! You'll
-first need to link:#How_to_Install_Guest_Additions[install guest
+first need to link:#_how_to_install_guest_additions[install guest
 additions] if you haven't already. Then you'll be able to click and drag
 the appliance's bottom-right corner to resize it.
 
@@ -295,7 +295,7 @@ How to Enter/Exit Fullscreen Mode
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For fullscreen mode to work (well), you'll first need to
-link:#How_to_Install_Guest_Additions[install guest additions] if you
+link:#_how_to_install_guest_additions[install guest additions] if you
 haven't already.
 
 To enter fullscreen mode thereafter, select *Fullscreen Mode* ... from
@@ -322,7 +322,7 @@ video memory. With the appliance powered off, highlight *CS50 in a Box
 1.4* in VirtualBox's list of VMs, then click *Settings*. Click
 *Display*. Then ensure that *Video Memory* is at least *17* MB. Then
 click *OK*, start the appliance, and proceed to install
-link:#How_to_Install_Guest_Additions[install guest additions] if you
+link:#_how_to_install_guest_additions[install guest additions] if you
 haven't already.
 
 To enable seamless mode thereafter, hit VirtualBox's "host key" and L
@@ -361,10 +361,10 @@ you to share files between your computer and the appliance without
 having to use SFTP.
 
 To create a shared folder, you must first have installed VirtualBox's
-link:#How_to_Install_Guest_Additions[guest additions]. Next, select
+link:#_how_to_install_guest_additions[guest additions]. Next, select
 *Shared Folders...* from VirtualBox's *Devices* menu while the appliance
 is running. (This menu is outside of the appliance, not inside of it.
-You may need to link:#How_to_Release_Keyboard_and_Mouse[release your
+You may need to link:#_how_to_release_keyboard_and_mouse[release your
 keyboard and mouse] first.) In the window that appears, click the little
 folder icon with a plus (+) sign. In the *Add Share* window that
 appears, click the downward-pointing arrow next to *Folder Path* and
@@ -381,7 +381,7 @@ confirm that the name does not have any spaces or punctuation; remember
 this name. Click *OK*. You should now see your choice of shared folders
 in the *Shared Folders* window. Then click *OK*.
 
-Next, link:#How_to_Open_a_Terminal[open a terminal] and execute these
+Next, link:#_how_to_open_a_terminal[open a terminal] and execute these
 commands, where *sharename* is the name of your shared folder:
 
 `mkdir ~/Desktop/sharename/` +
@@ -421,7 +421,7 @@ folder icon with a plus (+) sign and above the little folder icon with a
 minus (-) sign). Check *Make Permanent* in the *Edit Share* window that
 appears, then click *OK*. Confirm that your shared folder is now under
 *Machine Folders* instead of *Transient Folders*, then click *OK*. Next,
-link:#How_to_Open_a_Terminal[open a terminal] and execute this command:
+link:#_how_to_open_a_terminal[open a terminal] and execute this command:
 
 `sudo nano /etc/fstab`
 
@@ -477,7 +477,7 @@ assistance!
 How to Do Problem Sets
 ~~~~~~~~~~~~~~~~~~~~~~
 
-You'll first want to link:#How_to_Install_Appliance[install the CS50
+You'll first want to link:#_how_to_install_appliance[install the CS50
 Appliance]. Then you'll want to download and read the problem set's PDF,
 which is available at http://cs50.tv/2009/fall/#l=psets[cs50.tv].
 Perhaps needless to say, ignore any sentences that appear to be intended
@@ -486,15 +486,15 @@ instruct you to "SSH to nice.fas.harvard.edu" or "SSH to
 cloud.cs50.net". If you're not a CS50 student, you won't have an account
 on either server, but that's what the CS50 Appliance is for! Anytime
 you're told to SSH to nice.fas.harvard.edu or cloud.cs50.net, instead
-just link:#How_to_Open_a_Terminal[open a terminal] or
-link:#How_to_SSH_to_Appliance[SSH to your appliance].
+just link:#_how_to_open_a_terminal[open a terminal] or
+link:#_how_to_ssh_to_appliance[SSH to your appliance].
 
 Anyhow, for problem sets that come with distros (i.e., source code),
 figure out the URL of the source code's ZIP (e.g.,
 http://cdn.cs50.net/2009/fall/psets/3/pset3.zip), as by right-clicking
 or Ctrl-clicking the link at http://cs50.tv/2009/fall/#l=psets[cs50.tv]
 and selecting *Copy Link* or the like. Then launch the appliance,
-link:#How_to_Open_a_Terminal[open a terminal], and execute a command
+link:#_how_to_open_a_terminal[open a terminal], and execute a command
 like the below:
 
 `wget `http://cdn.cs50.net/2009/fall/psets/3/pset3.zip[`http://cdn.cs50.net/2009/fall/psets/3/pset3.zip`]
@@ -514,7 +514,7 @@ Caveats
 ^^^^^^^
 
 * For problem sets that involve phpMyAdmin, you should
-link:#How_to_Use_phpMyAdmin[use your appliance's own installation].
+link:#_how_to_use_phpmyadmin[use your appliance's own installation].
 * For problem sets that involve web programming, your home will be
 http://192.168.56.50/~jharvard/, once you've created a *~/public_html/*
 directory.
@@ -533,7 +533,7 @@ Implementation Details
 Below are details on how we implemented the CS50 Appliance in case
 you're curious or would like to reproduce these steps yourself. *You do
 NOT need to follow these directions to if you simply want to USE the
-CS50 Appliance:* you only need to follow link:#Instructions[the
+CS50 Appliance:* you only need to follow link:#_instructions[the
 instructions above].
 
 We built the appliance with Ubuntu's
@@ -1073,7 +1073,7 @@ Troubleshooting
 ---------------
 
 If you are having problems that aren't addressed under
-link:#Known_Issues[Known Issues], turn to the course's
+link:#_known_issues[Known Issues], turn to the course's
 http://cs50.tv/2009/fall/#r=group[Google Group] for help.
 
 [[]]

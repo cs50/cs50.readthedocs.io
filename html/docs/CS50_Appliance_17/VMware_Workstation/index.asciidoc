@@ -4,8 +4,8 @@ title: VMware Workstation
 ---
 
 Here's how to install the link:CS50_Appliance_17[CS50 Appliance] using
-VMware Workstation for link:#Installation[Windows] or
-link:#Installation_2[Linux].
+VMware Workstation for link:#_installation[Windows] or
+link:#_installation_2[Linux].
 
 [[]]
 Windows

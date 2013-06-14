@@ -63,7 +63,7 @@ Finally, review the ACL you just configured:
 `getfacl ~/public_html/project/`
 
 You should see output like the below. If you don't, best to
-link:#How_to_Unshare_a_Directory[unshare the directory] and try these
+link:#_how_to_unshare_a_directory[unshare the directory] and try these
 steps again.
 
 `# file: home/alice/public_html/project` +
@@ -144,7 +144,7 @@ How to Unshare a Directory
 --------------------------
 
 Suppose that you want to unshare `~/public_html/project/` or goofed when
-trying to link:#How_to_Share_a_Directory[share a directory] and want to
+trying to link:#_how_to_share_a_directory[share a directory] and want to
 start over. Simply remove any ACL entries that you added:
 
 `setfacl --remove-all ~/public_html/project/`

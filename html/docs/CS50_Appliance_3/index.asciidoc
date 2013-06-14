@@ -43,7 +43,7 @@ forgive any bugs!
 Cheatsheet
 ----------
 
-See link:#Instructions[instructions] for much more detail.
+See link:#_instructions[instructions] for much more detail.
 
 [cols=",",]
 |=============================================================
@@ -111,7 +111,7 @@ The latest version of the CS50 Appliance is *3-15*. More precisely, the
 "latest release of version 3 of the appliance is 3-15." To confirm that
 you have 3-15, look in the appliance's bottom-right corner, where you
 should see *3-15* in boldface. Alternatively, you can
-link:#How_to_Open_a_Terminal[open a terminal] and execute
+link:#_how_to_open_a_terminal[open a terminal] and execute
 
 `version50`
 
@@ -122,7 +122,7 @@ either of two ways:
 
 * Select *Menu > Administration > Software Update*, then click *Install
 Updates* if any updates are available.
-* link:#How_to_Open_a_Terminal[Open a terminal] and execute:
+* link:#_how_to_open_a_terminal[Open a terminal] and execute:
 +
 ------------------
 sudo yum -y update
@@ -137,7 +137,7 @@ restart each of the appliance's services.
 
 *Note that you cannot update from version 1.4, 2.1, or 2.3 of the
 appliance to version 3. You must instead download 3-15, per the
-link:#How_to_Install_Appliance[instructions] above. Thereafter, you'll
+link:#_how_to_install_appliance[instructions] above. Thereafter, you'll
 be able to update from 3-15 to future releases, per the two ways above.*
 
 [[]]
@@ -168,7 +168,7 @@ John Harvard's name or username*. Life will be simpler as John.
 
 With that said, if you'd _really_ like to be yourself (or someone else
 altogether), you're welcome to create a new account.
-link:#How_to_Open_a_Terminal[Open a terminal] and execute
+link:#_how_to_open_a_terminal[Open a terminal] and execute
 
 `sudo adduser --comment "Jane Harvard" --gid students --groups wheel janeh` +
 `echo crimson | sudo passwd --stdin janeh` +
@@ -194,7 +194,7 @@ You can change your password in any of these ways:
 
 * Select *Menu > Preferences > Password* and follow the on-screen
 prompts.
-* link:#How_to_Open_a_Terminal[Open a terminal] and execute: +
+* link:#_how_to_open_a_terminal[Open a terminal] and execute: +
 +
 ------
 passwd
@@ -219,7 +219,7 @@ you might find yourself more at home nonetheless. Select *Menu >
 Administration > Language*, inputting your password if prompted. Select
 your preferred language from the list that appears, then click *OK*. If
 prompted, click *Import key*. You may need to wait for a bit as the
-language is installed. Then link:#How_to_Restart_Appliance[restart the
+language is installed. Then link:#_how_to_restart_appliance[restart the
 appliance] and log back in.
 
 [[]]
@@ -367,7 +367,7 @@ How to Restore Snapshots
 Every 10 minutes, the appliance take "snapshots" of source code in
 `/home` just in case you accidentally delete something. (You can also
 mitigate accidental deletions by
-link:#How_to_Synchronize_Files_with_Dropbox[synchronizing with
+link:#_how_to_synchronize_files_with_dropbox[synchronizing with
 Dropbox].)
 
 Suppose that you just deleted `~/pset1/hello.c`. Odds are you'll find it
@@ -380,7 +380,7 @@ or with
 
 `cp /.snapshots/minutely.1/home/jharvard/pset1/hello.c ~/pset1`
 
-in a link:#How_to_Open_a_Terminal[terminal]. If you need to recover an
+in a link:#_how_to_open_a_terminal[terminal]. If you need to recover an
 earlier version, you can go further back in time via `minutely.2`,
 `minutely.3`, or `minutely.4`. If you'd instead like to go back an hour
 or so, you can start with `hourly.0`, followed by `hourly.1`,
@@ -427,7 +427,7 @@ take care to respect the course's policies on academic honesty.*
 
 Here's how to configure the appliance for Dropbox.
 
-1.  link:#How_to_Open_a_Terminal[Open a terminal].
+1.  link:#_how_to_open_a_terminal[Open a terminal].
 2.  Execute:
 +
 ----------------
@@ -624,7 +624,7 @@ besides your own, on which the appliance is running) to:
 
 * access phpMyAdmin
 * access Webmin
-* link:#How_to_Transfer_Files_between_Appliance_and_Your_Computer[mount
+* link:#_how_to_transfer_files_between_appliance_and_your_computer[mount
 John Harvard's home directory] in a window on your desktop
 
 You will be able to:
@@ -636,10 +636,10 @@ Unfortunately, odds are `eth2` will not work on Harvard's campus because
 of Harvard's firewall.
 
 *Before activating `eth2`, you should first
-link:#How_to_Change_Password[change John Harvard's password] to
+link:#_how_to_change_password[change John Harvard's password] to
 something only you know for security's sake.*
 
-To enable `eth2` temporarily, link:#How_to_Open_a_Terminal[open a
+To enable `eth2` temporarily, link:#_how_to_open_a_terminal[open a
 terminal] and execute:
 
 `sudo ifup eth2`
@@ -665,7 +665,7 @@ If you would like to enable `eth2` permanently:
 3.  Check *Activate device when computer starts*, then click *OK*.
 4.  Select *File > Save*, then click *OK*.
 5.  Select *File > Quit*.
-6.  link:#How_to_Restart_Appliance[Restart the appliance].
+6.  link:#_how_to_restart_appliance[Restart the appliance].
 
 Just realize that each time the appliance starts, it may be assigned a
 different IP address on your LAN via DCHP, so you might need to re-run
@@ -708,7 +708,7 @@ file; decide on a destination as prompted. You can then share that
 screenshot with someone if necessary, as by opening Gmail in Firefox and
 sending it as an attachment.
 
-You can also link:#How_to_Share_Control_of_Your_Screen[share control of
+You can also link:#_how_to_share_control_of_your_screen[share control of
 your screen] if you need someone else to see more than a screenshot.
 
 [[]]
@@ -750,12 +750,12 @@ How to Disable Automatic Login
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 By default, the appliance logs you in as John Harvard. To disable
-automatic login, link:#How_to_Open_a_Terminal[open a terminal] and
+automatic login, link:#_how_to_open_a_terminal[open a terminal] and
 execute:
 
 `sudo rm -f /etc/gdm/custom.conf`
 
-Then link:#How_to_Restart_Appliance[restart the appliance]. You should
+Then link:#_how_to_restart_appliance[restart the appliance]. You should
 now see a login prompt instead of John Harvard's desktop.
 
 [[]]
@@ -774,7 +774,7 @@ You can restart the appliance in either of these ways:
 
 * Click image:Exit.png[Exit.png,title="image"] in the appliance's
 bottom-right corner, then click *Restart*.
-* link:#How_to_Open_a_Terminal[Open a terminal] and execute the below,
+* link:#_how_to_open_a_terminal[Open a terminal] and execute the below,
 inputting your password if prompted:
 +
 ------------
@@ -789,7 +789,7 @@ You can shut down the appliance in either of these ways:
 
 * Click image:Exit.png[Exit.png,title="image"] in the appliance's
 bottom-right corner, then click *Shut Down*.
-* link:#How_to_Open_a_Terminal[Open a terminal] and execute the below,
+* link:#_how_to_open_a_terminal[Open a terminal] and execute the below,
 inputting your password if prompted:
 +
 -------------
@@ -804,7 +804,7 @@ If your own computer sits behind an HTTP proxy server, you might need to
 configure the appliance to route HTTP traffic through that proxy as
 well. Here's how.
 
-1.  link:#How_to_Open_a_Terminal[Open a terminal] and execute the below,
+1.  link:#_how_to_open_a_terminal[Open a terminal] and execute the below,
 inputting your password if prompted:
 +
 ---------------------------------
@@ -823,7 +823,7 @@ export http_proxy=http://example.com:80/
 --------------------------------------
 sudo chmod 644 /etc/profile.d/proxy.sh
 --------------------------------------
-5.  link:#How_to_Restart_Appliance[Restart the appliance].
+5.  link:#_how_to_restart_appliance[Restart the appliance].
 
 [[]]
 How to Run Programs from Lectures
@@ -862,9 +862,9 @@ But Orca does not work with:
 
 However, if you have a screen reader installed on your own computer, you
 needn't rely on Orca alone. Instead, you can leverage your own screen
-reader for navigation by link:#How_to_SSH_to_Appliance[SSHing to the
+reader for navigation by link:#_how_to_ssh_to_appliance[SSHing to the
 appliance] from your computer and by
-link:#How_to_Transfer_Files_between_Appliance_and_Your_Computer[mounting
+link:#_how_to_transfer_files_between_appliance_and_your_computer[mounting
 John Harvard's home directory] on your own computer.
 
 *If you have suggestions on how to improve the appliance's
@@ -877,7 +877,7 @@ Implementation Details
 Below are details on how we implemented the CS50 Appliance in case
 you're curious or would like to reproduce these steps yourself. *You do
 NOT need to follow these directions to if you simply want to use the
-CS50 Appliance:* you only need to follow link:#Instructions[the
+CS50 Appliance:* you only need to follow link:#_instructions[the
 instructions above].
 
 We built the appliance using a combination of
@@ -1133,11 +1133,11 @@ John Harvard's password is *crimson* by default. But if you changed it
 to something you do not remember, you can change it to something you
 know as follows:
 
-1.  link:#How_to_Log_Out_of_Appliance[Log out] of the appliance if
+1.  link:#_how_to_log_out_of_appliance[Log out] of the appliance if
 already logged in.
 2.  Log in as *root* with password *crimson* (unless you changed the
 superuser's password too).
-3.  link:#How_to_Open_a_Terminal[Open a terminal], execute
+3.  link:#_how_to_open_a_terminal[Open a terminal], execute
 +
 ---------------
 passwd jharvard
@@ -1145,7 +1145,7 @@ passwd jharvard
 +
 and input a new password for John Harvard (e.g., *crimson*) twice as
 prompted.
-4.  link:#How_to_Log_Out_of_Appliance[Log out] of the appliance.
+4.  link:#_how_to_log_out_of_appliance[Log out] of the appliance.
 
 You should then be able to log in as John Harvard again.
 
@@ -1157,9 +1157,9 @@ The superuser's password is *crimson* by default. But if you changed it
 to something you do not remember, you can change it to something you
 know as follows:
 
-1.  link:#How_to_Shut_Down_Appliance[Shut down the appliance] if it's
+1.  link:#_how_to_shut_down_appliance[Shut down the appliance] if it's
 already running.
-2.  link:#How_to_Start_Appliance[Start the appliance], immediately click
+2.  link:#_how_to_start_appliance[Start the appliance], immediately click
 once inside of its window (so that your cursor disappears), and
 immediately hold *Shift*. Within a few seconds, you should see a *GNU
 GRUB* screen with *Generic* highlighted in white. If not, start over and
@@ -1194,7 +1194,7 @@ I forgot John Harvard's (or root's) MySQL password
 John Harvard's password for MySQL is *crimson* by default, as is the
 superuser's. But if you changed either to something you do not remember,
 you can change both back to *crimson* by
-link:#How_to_Open_a_Terminal[opening a terminal] and executing the
+link:#_how_to_open_a_terminal[opening a terminal] and executing the
 below:
 
 `sudo yum -y reinstall cs50-appliance`

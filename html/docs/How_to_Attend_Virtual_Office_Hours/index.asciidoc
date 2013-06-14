@@ -52,7 +52,7 @@ computer has a microphone, do beware the *Audio* area. Only one person
 can talk at once, and if you leave that *Talk* button depressed
 accidentally, everyone will hear you (and probably make fun of you). Be
 sure not to start sharing applications or your desktop until you are
-pulled into a private room, per link:#Step_3[Step 3]. Otherwise,
+pulled into a private room, per link:#_step_3[Step 3]. Otherwise,
 everyone (who’s not already in a private room) will see what you are
 doing. And try not to background or minimize the VTR’s window, lest you
 not notice when it’s your turn!
