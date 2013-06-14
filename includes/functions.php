@@ -31,6 +31,10 @@
 
                 $yaml = yaml_parse($matches[1]);
             }
+            else {
+                trigger_error("malformed asciidoc file.");
+                return false;
+            }
 
             // parse post's AsciiDoc
             if ($html === true) {
