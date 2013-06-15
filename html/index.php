@@ -51,6 +51,7 @@
     <body>
         <div id="background"></div>
         <div id="container">
+            <div id="container-background"></div>
             <div id="search-wrapper">
                 <input type="search" placeholder="Search the CS50 Manual..."/>
             </div>
@@ -58,7 +59,6 @@
                 <h1><?= htmlspecialchars($yaml["title"]) ?></h1>
                 <?= $html ?>
             <?php endif ?>
-
         </div>
 
 <?php /* TODO: uncomment me once ready to ship
