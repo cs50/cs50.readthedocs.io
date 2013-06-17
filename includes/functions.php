@@ -1,11 +1,11 @@
 <?php
 
     /**
-     * Returns YAML for article having $path.  Iff $html is true, returns
-     * [YAML, HTML] for article having $path.
+     * Returns [YAML, HTML] for article having $path iff $html
+     * is true, else YAML.
      *
      * @param string $path
-     * @param bool $path
+     * @param bool $html
      *
      * @return string|array
      */
@@ -23,6 +23,7 @@
             // parse post's YAML front matter
             $contents = file_get_contents($file);
             if (preg_match("/^---\s*\n(.*?)\n---\s*\n(.*)$/ms", $contents, $matches)) {
+
                 // ensure content exists before trying to convert it
                 if (count($matches) !== 3) {
                     trigger_error("malformed asciidoc file.");
@@ -38,6 +39,7 @@
 
             // parse post's AsciiDoc
             if ($html === true) {
+
                 // pipe post's AsciiDoc into asciidoctor
                 $process = proc_open(
                     join(" ", [
