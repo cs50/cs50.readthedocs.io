@@ -16,7 +16,7 @@ the value of `argc` will be 3.
 `argc` is passed to main as the first of two arguments, the second being
 `[[argv]]`:
 
-[code,c]
+[source,c]
 -----------------------------
 int
 main (int argc, char *argv[])
@@ -29,7 +29,7 @@ Within your program, `argc` is useful for iterating over the
 command-line arguments. For example, to print out all of the
 command-line arguments, you might write the following loop:
 
-[code,c]
+[source,c]
 ------------------------------
 for (int i = 0; i < argc; i++)
 {
@@ -53,7 +53,7 @@ command-line argument.
 example, if your program requires one or more command-line arguments,
 you can check that they have been provided by testing `argc`:
 
-[code,c]
+[source,c]
 -----------------------------------------------------
 if (argc < 2)
 {
@@ -80,7 +80,7 @@ You are correct!
 
 Here's the full program for guessing David's age:
 
-[code,c]
+[source,c]
 ---------------------------------------------------------
 #include <cs50.h>
 #include <stdio.h>

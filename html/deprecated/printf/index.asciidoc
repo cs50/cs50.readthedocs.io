@@ -11,7 +11,7 @@ what to embed in the format string (commonly ).
 
 A call to `printf()` generally looks like:
 
-[code,c]
+[source,c]
 ---------------------------------------------------------------------------------------------
 printf("This is the format string. Here are two format specifier: %d and %s.\n", arg2, arg3);
 ---------------------------------------------------------------------------------------------
@@ -46,7 +46,7 @@ variables?)
 The non-first arguments for `printf` need not simply be variables, they
 may be expressions as well. For example,
 
-[code,c]
+[source,c]
 -------------------------------------------------
 int i = 10, j = 3; 
 printf("%s now has %d lives.\n", "David", i * j);
@@ -81,7 +81,7 @@ in a temporary buffer before printing for optimization, it may be
 necessary to flush, or force, `stdout` to write to the screen. The line
 for that is:
 
-[code,c]
+[source,c]
 ---------------
 fflush(stdout);
 ---------------

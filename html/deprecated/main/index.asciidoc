@@ -36,7 +36,7 @@ begins, they work just like any other variables. The names `argc` and
 `argv` for the variables are chosen by convention, but you could use any
 name for them.
 
-[code,c]
+[source,c]
 --------------------------------------------
 #include <stdio.h>
 

@@ -14,7 +14,7 @@ use. In contrast, declaring and initializing a variable uses memory on
 the stack. For example, `foo` is stored on the heap whereas `bar` is
 stored on the stack:
 
-[code,C]
+[source,C]
 ---------------------------------------
 int *foo = (int *) malloc(sizeof(int));
 *foo = 6;
@@ -49,7 +49,7 @@ As a matter of good programming practice, every chunk of memory that is
 granted to a program by `malloc` should be explicitly released when the
 program is finished with it via a call to the `free` function:
 
-[code,C]
+[source,C]
 ----------
 free(foo);
 ----------

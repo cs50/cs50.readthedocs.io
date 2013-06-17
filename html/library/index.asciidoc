@@ -32,7 +32,7 @@ Linux
 If running Linux, you should include the CS50 Library's header file atop
 your own as follows:
 
-[code,c]
+[source,c]
 -----------------
 #include <cs50.h>
 -----------------
@@ -51,7 +51,7 @@ First become `root`, as with:
 
 Then install the CS50 Library as follows:
 
-[code,bash]
+[source,bash]
 ---------------------------------------------------------
 yum -y install gcc
 wget http://mirror.cs50.net/library50/c/library50-c-4.zip
@@ -81,7 +81,7 @@ First become `root`, as with:
 
 Then install the CS50 Library as follows:
 
-[code,bash]
+[source,bash]
 ---------------------------------------------------------
 apt-get install gcc
 wget http://mirror.cs50.net/library50/c/library50-c-4.zip
@@ -112,7 +112,7 @@ http://mirror.cs50.net/library50/c/library50-c-4.zip[library50-c-4.zip].
 the CS50 Library's directory, as with `cd`.
 4.  Execute the commands below, entering your password if prompted:
 
-[code,bash]
+[source,bash]
 --------------------------------------
 gcc -c -ggdb -std=c99 cs50.c -o cs50.o
 ar rcs libcs50.a cs50.o
@@ -129,7 +129,7 @@ rm -rf library50-c-4
 After installing the CS50 Library, you can include its header file atop
 your own code with:
 
-[code,c]
+[source,c]
 -----------------
 #include <cs50.h>
 -----------------
@@ -150,7 +150,7 @@ http://mirror.cs50.net/library50/c/library50-c-4.zip[library50-c-4.zip].
 After installing the CS50 Library, you can include its header file atop
 your own code with:
 
-[code,c]
+[source,c]
 -----------------
 #include "cs50.h"
 -----------------
@@ -193,7 +193,7 @@ Be sure to install the CS50 Library as root (as via `sudo`). After
 installing the CS50 Library, you can include its header file atop your
 own code with:
 
-[code,php]
+[source,php]
 -------------------------
 require("CS50/CS50.php");
 -------------------------
@@ -204,7 +204,7 @@ See CS50 ID's link:CS50 ID[HOWTO] for usage.
 CentOS, RedHat
 ++++++++++++++
 
-[code,bash]
+[source,bash]
 ----------------------------------------------------------------------
 wget http://mirror.cs50.net/library50/php/library50-php-2-0.noarch.rpm
 rpm -ivh library50-php-2-0.noarch.rpm
@@ -215,7 +215,7 @@ rm -f library50-php-2-0.noarch.rpm
 Fedora
 ++++++
 
-[code,bash]
+[source,bash]
 -----------------------------------------------------------------------------
 yum install http://mirror.cs50.net/library50/php/library50-php-2-0.noarch.rpm
 -----------------------------------------------------------------------------
@@ -224,7 +224,7 @@ yum install http://mirror.cs50.net/library50/php/library50-php-2-0.noarch.rpm
 Debian, Ubuntu
 ++++++++++++++
 
-[code,bash]
+[source,bash]
 -------------------------------------------------------------
 apt-get install php5 php5-curl php5-gmp php5-xml
 wget http://mirror.cs50.net/library50/php/library50-php-3.zip
@@ -248,7 +248,7 @@ http://mirror.cs50.net/library50/php/library50-php-2.zip[library50-php-2.zip].
 After installing the CS50 Library, you can include its header file atop
 your own code with:
 
-[code,php]
+[source,php]
 ----------------------------------
 require("/path/to/CS50/CS50.php");
 ----------------------------------
@@ -268,7 +268,7 @@ and `DocumentRoot` (if running Apache) for security's sake.
 After installing the CS50 Library, you can include its header file atop
 your own code with:
 
-[code,php]
+[source,php]
 ----------------------------------
 require("/path/to/CS50/CS50.php");
 ----------------------------------

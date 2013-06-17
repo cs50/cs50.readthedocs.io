@@ -26,7 +26,7 @@ names and their indices. As a result, if the order of fields in the CSV
 file changes, our code won't break (assuming the first row still
 contains fields' names).
 
-[code,php]
+[source,php]
 ----------------------------------------------------------------------
 // open CSV file
 $handle = fopen("http://news.cs50.net/api/1.1/items?output=csv", "r");
@@ -66,7 +66,7 @@ The upside of these formats is that they're very machine-readable. The
 downside is that they're not as human-friendly. Fortunately, it's easy
 to parse them. Below is some PHP code that does exactly that:
 
-[code,php]
+[source,php]
 ---------------------------------------
 // convert date to a UNIX timestamp
 $t0 = strtotime("2009-11-11");
@@ -85,7 +85,7 @@ Parsing JSON
 Below is some PHP code with which you can parse JSON (e.g.,
 http://news.cs50.net/api/1.1/items?output=json).
 
-[code,php]
+[source,php]
 --------------------------------------------------------------------------------
 // load URL
 $contents = file_get_contents("http://news.cs50.net/api/1.1/items?output=json");
@@ -113,7 +113,7 @@ Parsing RSS
 Below is some PHP code with which you can parse an RSS feed (e.g.,
 http://news.cs50.net/api/1.1/items?output=rss).
 
-[code,php]
+[source,php]
 ----------------------------------------------------------------------------
 // load URL, parse RSS, and build a DOM in memory
 $dom = simplexml_load_file("http://news.cs50.net/api/1.1/items?output=rss");
@@ -162,7 +162,7 @@ array or object that has been serialized with
 http://php.net/manual/en/function.serialize.php[serialize] (e.g.,
 http://news.cs50.net/api/1.1/items?output=php).
 
-[code,php]
+[source,php]
 -------------------------------------------------------------------------------
 // load URL
 $contents = file_get_contents("http://news.cs50.net/api/1.1/items?output=php");

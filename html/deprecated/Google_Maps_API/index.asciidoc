@@ -178,7 +178,7 @@ use. You'll also see immediately below that the *constructor* takes a
 single argument for the options. So to create a new marker, we'll need
 to use:
 
-[code,javascript]
+[source,javascript]
 ---------------------------------------------------
 var marker = new google.maps.Marker(markerOptions);
 ---------------------------------------------------
@@ -199,7 +199,7 @@ With that in mind, here is source code for creating a marker that starts
 out at Sanders Theatre, to be added to a map whose variable name is
 `map` (as in the example from before):
 
-[code,javascript]
+[source,javascript]
 ----------------------------------------------------------------------------------------
 var markerOptions = {map: map, position: new google.maps.LatLng(42.375787, -71.114784)};
 var marker = new google.maps.Marker(markerOptions);
@@ -365,7 +365,7 @@ entail associating a *handler function* with this event. Here is a
 handler function that you can use that will redirect the user to
 http://cs50.net when it's called:
 
-[code,javascript]
+[source,javascript]
 -------------------------------------------
 
 function redirect_to_cs50()
@@ -378,7 +378,7 @@ function redirect_to_cs50()
 marker.
 ** It may be best to use an *anonymous function* to do this, as in:
 
-[code,javascript]
+[source,javascript]
 -----------------------------------------------------------
 google.maps.event.addListener(marker, 'click', function() {
      // stop the marker's bouncing
@@ -442,14 +442,14 @@ Discussion
 
 * What is the difference between
 
-[code,javascript]
+[source,javascript]
 --------------------------------------------------------------------
 google.maps.event.addListener(marker, 'dblclick', redirect_to_cs50);
 --------------------------------------------------------------------
 
 and
 
-[code,javascript]
+[source,javascript]
 ----------------------------------------------------------------------
 google.maps.event.addListener(marker, 'dblclick', redirect_to_cs50());
 ----------------------------------------------------------------------

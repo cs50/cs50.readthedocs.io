@@ -18,7 +18,7 @@ debugging it.
 The simplest way of debugging a program is inserting `printf` statements
 at key places. Consider the following lines of code:
 
-[code,C]
+[source,C]
 ----------------------
 int i = 0;
 while (i < 10)
@@ -37,7 +37,7 @@ execute these lines of code, however, we never actually observe the
 To figure out what's going wrong, let's try printing something out
 within the loop so we can make sure it's executing:
 
-[code,C]
+[source,C]
 ----------------------
 int i = 0;
 while (i < 10)
@@ -64,7 +64,7 @@ course of action is to isolate the problem by running your program in
 bits and pieces. For example, let's say we have the following lines of
 code:
 
-[code,C]
+[source,C]
 ----------------------
 int i = 0;
 while (i < 10)
@@ -82,7 +82,7 @@ Let's assume that when we execute these lines of code, we get a
 segmentation fault. How do we determine which part of the program caused
 the segmentation fault? We can begin by isolating the problem like so:
 
-[code,C]
+[source,C]
 ----------------------
 int i = 0;
 while (i < 10)

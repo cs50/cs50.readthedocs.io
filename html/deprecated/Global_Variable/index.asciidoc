@@ -7,7 +7,7 @@ A global variable is a variable whose scope is global, meaning it can be
 accessed anywhere in a program by any function. In C, global variables
 are declared before the definition of `main`:
 
-[code,c]
+[source,c]
 ---------------------------
 int num_open_files = 0;
 
@@ -28,7 +28,7 @@ to manipulate a single variable. If you use a global variable, each
 function can manipulate it without having been passed it as an argument.
 For example:
 
-[code,c]
+[source,c]
 -----------------------------------------------------------------
 FILE *
 OpenFile()
@@ -56,7 +56,7 @@ variable named `num_open_files`, we can declare a local variable of the
 same name within a different function without affecting the value of the
 global variable:
 
-[code,c]
+[source,c]
 ---------------------------------
 int
 Shadow()
@@ -72,7 +72,7 @@ global variable `num_open_files` is.
 
 Take a look at a full program that uses the functions defined above:
 
-[code,c]
+[source,c]
 -----------------------------------------------------------------
 #include <stdio.h>
 

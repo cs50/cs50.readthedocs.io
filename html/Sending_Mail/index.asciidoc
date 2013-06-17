@@ -11,7 +11,7 @@ http://phpmailer.worxware.com.php?pg=tutorial[tutorial] suggest
 different paths, include the library as follows in the appliance as
 follows.
 
-[code,php]
+[source,php]
 ----------------------------------------------
 require_once("PHPMailer/class.phpmailer.php");
 ----------------------------------------------
@@ -27,7 +27,7 @@ links to some references:
 Per those references, if you'd like to send non-HTML email with
 PHPMailer, odds are you can use code like:
 
-[code,php]
+[source,php]
 ---------------------------------------------------------------------------------------------------------------------------------
 require_once("PHPMailer/class.phpmailer.php");
 
@@ -58,7 +58,7 @@ if ($mail->Send() === false)
 If you'd like to send HTML email with PHPMailer, odds are you can use
 code like:
 
-[code,php]
+[source,php]
 ---------------------------------------------------------------------------------------------------------------------------------
 require_once("PHPMailer/class.phpmailer.php");
 
@@ -92,7 +92,7 @@ if ($mail->Send() === false)
 And if you'd like to send an attachment with PHPMailer, odds are you can
 use code like:
 
-[code,php]
+[source,php]
 ---------------------------------------------------------------------------------------------------------------------------------
 require_once("PHPMailer/class.phpmailer.php");
 

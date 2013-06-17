@@ -17,7 +17,7 @@ to make a withdrawal is the first person to receive his money.
 To implement a queue in C, we'll need a `[[struct]]` that can keep track
 of the current state of affairs:
 
-[code,C]
+[source,C]
 --------------------------
 
 typedef struct

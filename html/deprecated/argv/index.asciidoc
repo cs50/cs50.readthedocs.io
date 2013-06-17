@@ -10,7 +10,7 @@ writing a program that will take
 link:command-line arguments[command-line arguments], you must define
 `main` as follows:
 
-[code,c]
+[source,c]
 ----------------------------
 int
 main(int argc, char *argv[])
@@ -23,7 +23,7 @@ As we've already learned, an array is simply a pointer, so `argv` is
 technically a pointer to a `char *`--a pointer to a pointer. Thus, it's
 a `char **` and you may see `main` defined in some textbooks like so:
 
-[code,c]
+[source,c]
 ---------------------------
 int
 main(int argc, char **argv)
@@ -41,7 +41,7 @@ As with any other array, we use bracket notation to access the elements
 of `argv`. For example, a program that prints out the command-line
 arguments passed to it would look like the following:
 
-[code,c]
+[source,c]
 ---------------------------------
 int
 main(int argc, char *argv[])

@@ -54,7 +54,7 @@ latexmath:[$ n! = n \times (n-1)!$]
 
 The equivalent definition in C code is
 
-[code,c]
+[source,c]
 --------------------------------------
 unsigned int factorial(unsigned int n)
 {
@@ -95,7 +95,7 @@ Here, it is clear that the base case can be treated either as n=0 or n=1
 since 0! and 1! both evaluate to 1. The equivalent in C code is
 therefore:
 
-[code,c]
+[source,c]
 --------------------------------------
 unsigned int factorial(unsigned int n)
 {
@@ -151,7 +151,7 @@ given an even number and `false` if it is given an odd number. The odd
 function does the same for odd numbers. Both functions use a base case
 of `n = 0`.
 
-[code,c]
+[source,c]
 ------------------------------------------
 bool even(unsigned int n);
 bool odd(unsigned int n);
@@ -174,7 +174,7 @@ Finonacci
 In the following example, the function `fibonacci` computes the
 `n + 1`th Fibonacci number.
 
-[code,c]
+[source,c]
 ------------------------------------------------
 unsigned int fibonacci(unsigned int n)
 {
@@ -216,7 +216,7 @@ Linked Lists
 
 The following example implements a linked list
 
-[code,c]
+[source,c]
 ----------------------
 typedef struct node
 {

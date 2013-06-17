@@ -11,7 +11,7 @@ processes" thanks to http://en.wikipedia.org/wiki/FastCGI[FastCGI].
 To start a Django project on the cloud, SSH to the cloud and execute the
 following commands:
 
-[code,bash]
+[source,bash]
 --------------------------------
 mkdir -p ~/public_html/project/
 cd ~/public_html/project/
@@ -21,7 +21,7 @@ django-admin startproject final
 Next create a file called `final.fcgi` in `~/public_html/project/`, as
 with `nano`, paste
 
-[code,python]
+[source,python]
 -------------------------------------------------------
 #!/usr/bin/python
 import sys, os
@@ -35,7 +35,7 @@ runfastcgi(method="threaded", daemonize="false")
 into that file, save, and quit. Then create a file called `.htaccess` in
 `~/public_html/project/`, as with `nano`, paste
 
-[code,apache]
+[source,apache]
 -----------------------------------------------------------
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
@@ -45,7 +45,7 @@ RewriteRule ^(.*)$ /~username/project/final.fcgi/$1 [QSA,L]
 into that file, where `username` is your own username, save, and quit.
 Finally, execute the below.
 
-[code,bash]
+[source,bash]
 ------------------------------------------
 chmod 644 ~/public_html/project/.htaccess
 chmod 700 ~/public_html/project/final.fcgi
@@ -53,14 +53,14 @@ chmod 700 ~/public_html/project/final.fcgi
 
 If you now run
 
-[code,bash]
+[source,bash]
 ---------------------------
 find ~/public_html/project/
 ---------------------------
 
 you should see that you have the below.
 
-[code,bash]
+[source,bash]
 ----------------------------------------------------
 /home/username/public_html/project/
 /home/username/public_html/project/.htaccess

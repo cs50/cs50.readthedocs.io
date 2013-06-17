@@ -51,7 +51,7 @@ little function named `accumulate_interest` taking two numbers, which
 might be a bank balance and an interest rate, and producing another
 number, an updated balance after interest has accrued.
 
-[code,c]
+[source,c]
 ------------------------------------------------
 double
 accumulate_interest(double balance, double rate)

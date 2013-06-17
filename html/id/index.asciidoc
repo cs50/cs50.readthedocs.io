@@ -121,7 +121,7 @@ ID Application].
 
 And we also `require` the link:CS50 Library[CS50 Library].
 
-[code,php]
+[source,php]
 -------------------------------------------------------------------------------------
 <?php
 
@@ -147,7 +147,7 @@ Appliance], the CS50 Library is installed in `/usr/share/php/`, which is
 in PHP's `include_path`, which means you can `require` it with a much
 shorter path:
 
-[code,php]
+[source,php]
 ------------------------------
 require_once("CS50/CS50.php");
 ------------------------------
@@ -161,7 +161,7 @@ how it infers whether a user is logged in by checking whether
 `$_SESSION["user"]` has a value; that value is set by
 link:#_return_to.php[return_to.php].
 
-[code,php]
+[source,php]
 ------------------------------------------------------------------------------------------------------------------------
 <?php
 
@@ -208,7 +208,7 @@ simply redirects the user to CS50 ID, specifically to the URL returned
 by `getLoginUrl`, a static method defined in the link:CS50 Library[CS50
 Library].
 
-[code,php]
+[source,php]
 ------------------------------------------------------------------------
 <?php
 
@@ -260,7 +260,7 @@ the associative array returned by `getUser` as the value of
 `$_SESSION["user"]`. Recall that link:#_index.php[index.php] checks
 `$_SESSION["user"]` to determine whether a user is logged in.
 
-[code,php]
+[source,php]
 ---------------------------------------------------------------
 <?php
 
@@ -292,7 +292,7 @@ associative array returned by `getLoginUrl` as the value of
 to unset `$_SESSION["user"]` to log the user out; you should not
 redirect the user back to CS50 ID.
 
-[code,php]
+[source,php]
 ---------------------------------------------------------------
 <?php
 
@@ -335,14 +335,14 @@ Setup
 Once you've installed Ruby, Ruby on Rails, and RubyGems, download a copy
 of the CS50 Library from RubyGems via:
 
-[code,bash]
+[source,bash]
 ------------------
 $ gem install cs50
 ------------------
 
 Now, create a new project, like `cs50id`:
 
-[code,bash]
+[source,bash]
 ------------------
 $ rails new cs50id
 ------------------
@@ -350,7 +350,7 @@ $ rails new cs50id
 Now, add the CS50 library to the project by adding the following to
 `/Gemfile`:
 
-[code,ruby]
+[source,ruby]
 ----------
 gem 'cs50'
 ----------
@@ -358,7 +358,7 @@ gem 'cs50'
 The project has been configured to use the CS50 Library, so a new
 controller, called `Auth`, can be created to handle user authentication:
 
-[code,bash]
+[source,bash]
 --------------------------------
 $ rails generate controller Auth
 --------------------------------
@@ -374,7 +374,7 @@ temporary directory to store login information, the registered
 session. In `/add/controllers/auth_controller.rb`, create a new action
 for logging in:
 
-[code,ruby]
+[source,ruby]
 -----------------------------------------------------------------------------------------------------------------------------------
 def login
     # user already logged in, redirect to index
@@ -400,7 +400,7 @@ RETURN_TO, as well as the current session and params objects (where the
 user information is stored). Because our RETURN_TO is `/auth/return`, we
 need to create a `return` action:
 
-[code,ruby]
+[source,ruby]
 -----------------------------------------------------------------------------------------------------
 def return
     # get authenticated user information
@@ -422,7 +422,7 @@ logout
 Because we stored user information in the session, a logout is
 accomplished by clearing the session.
 
-[code,ruby]
+[source,ruby]
 ---------------------------------------------------
 def logout
     # clear the user's information from the session
@@ -439,7 +439,7 @@ index
 We have specified an `index` action in both `login` and `logout`, so we
 must create one:
 
-[code,ruby]
+[source,ruby]
 ---------
 def index
 end
@@ -447,7 +447,7 @@ end
 
 Now, create the corresponding view, `/app/views/auth.html.erb`:
 
-[code,ruby]
+[source,ruby]
 ---------------------------------------------------------------------------------------------
 <% if (session["user"]) %>
 
@@ -469,7 +469,7 @@ Now, create the corresponding view, `/app/views/auth.html.erb`:
 Finally, we must set up routes to the four actions we've created, so add
 the following to `/app/config/routes.rb`
 
-[code,ruby]
+[source,ruby]
 ------------------------------------
 match 'auth' => 'auth#index'
 match 'auth/login' => 'auth#login'
@@ -479,7 +479,7 @@ match 'auth/return' => 'auth#return'
 
 To run the app, start the Rails server with:
 
-[code,bash]
+[source,bash]
 ---------
 $ rails s
 ---------
@@ -655,7 +655,7 @@ each user as well (so that you can `SELECT` users based on 4 bytes
 instead of 84), as with the schema below (which assumes that `email` and
 `fullname` will be no more than 128 characters each):
 
-[code,sql]
+[source,sql]
 ----------------------------------------------------
 CREATE TABLE  `users` (
 `id` INT( 11 ) NOT NULL AUTO_INCREMENT PRIMARY KEY ,

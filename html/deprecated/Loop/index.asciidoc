@@ -17,7 +17,7 @@ A while loop has two components: a _condition_ that must evaluate to
 true in order for the loop to execute, and the code itself that you'd
 like to execute repeatedly. It generally looks something like this:
 
-[code,c]
+[source,c]
 ----------------------
 while (condition)
 {
@@ -38,7 +38,7 @@ skip the corresponding block of code altogether.
 
 Here's a very simple while loop:
 
-[code,c]
+[source,c]
 -----------------------
 while (true)
 {
@@ -55,7 +55,7 @@ runaway program!)
 
 Here's a more functional example of a while loop:
 
-[code,c]
+[source,c]
 ----------------
 int i = 0;
 while (i < 5)
@@ -81,7 +81,7 @@ functional difference: a do-while loop is guaranteed to execute at least
 one iteration, even if your condition initially evaluates to false. The
 syntax is also slightly different:
 
-[code,c]
+[source,c]
 ----------------------
 do
 {
@@ -92,7 +92,7 @@ do
 Here's our star-printing example from above, this time using a do-while
 loop:
 
-[code,c]
+[source,c]
 ----------------
 int i = 0;
 do
@@ -110,7 +110,7 @@ Why use a do-while loop instead of a while loop? Truth be told, you
 won't need to very often. But one good use for do-while loops is getting
 user input:
 
-[code,c]
+[source,c]
 -----------------------------------------------------
 int n;
 do
@@ -138,7 +138,7 @@ A for loop is similar to a while loop in function, but its syntax is
 somewhat different. In addition to a condition, you can provide some
 _initialization_ and a _modifying statement_. Here's the basic syntax:
 
-[code,c]
+[source,c]
 ----------------------------------------------------
 for (initialization; condition; modifying statement)
 {
@@ -159,7 +159,7 @@ to keep track of loop iterations. This makes it very convenient to write
 a loop that runs a specified number of times, like our star-printing
 example from above:
 
-[code,c]
+[source,c]
 ---------------------------
 for (int i = 0; i < 5; i++)
 {
@@ -175,7 +175,7 @@ won't be able to access them again once your loop terminates.
 
 Note that you can nest loops within each other:
 
-[code,c]
+[source,c]
 -------------------------------
 for (int i = 0; i < 5; i++)
 {
@@ -209,7 +209,7 @@ break
 The keyword `break` exits out of your loop altogether. Consider this
 (silly) example:
 
-[code,c]
+[source,c]
 ---------------------------
 for (int i = 0; i < 5; i++)
 {
@@ -224,7 +224,7 @@ iterating, even though at this point `i` is still 0. This isn't a very
 useful use of `break`, since we don't need a loop at all in this case. A
 slightly more interesting example is this:
 
-[code,c]
+[source,c]
 --------------------------------------------------------------------
 for (int i = 0; i < 5; i++)
 {
@@ -253,7 +253,7 @@ iteration of the loop. The program will immediately execute the
 modifying statement (as it does after every loop iteration) and check
 the condition to see if it should terminate or not.
 
-[code,c]
+[source,c]
 ---------------------------
 for (int i = 0; i < 5; i++)
 {
@@ -266,7 +266,7 @@ This is a very useless example of `continue`, since it acts just like a
 normal loop--it only stops each loop iteration once it's about to finish
 anyway. Here's another example:
 
-[code,c]
+[source,c]
 --------------------------------------------------------------------
 for (int i = 0; i < 5; i++)
 {

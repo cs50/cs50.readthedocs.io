@@ -49,7 +49,7 @@ generate them programmatically.
 Now let's take a look at the source code for, say, that last URL (i.e.,
 `<nowiki>http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date=12-2-2009&type=30&meal=2</nowiki>`):
 
-[code,html4strict]
+[source,html4strict]
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -523,7 +523,7 @@ the HTML surrounding *Maple Roasted Butternut Squash*. (I'm not a fan,
 but so be it.) For clarity, I've indented everything nicely, even though
 the original source code is messier:
 
-[code,html4strict]
+[source,html4strict]
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 <tr>
   <td class="menu_item">
@@ -574,7 +574,7 @@ http://validator.w3.org/check?uri=http%3A%2F%2Fwww.foodpro.huds.harvard.edu%2Ffo
 Damn it! Despite the page's DOCTYPE, it is not, in fact, valid XHTML.
 (Why do they lie!) You can confirm as much with a PHP program like:
 
-[code,php]
+[source,php]
 --------------------------------------------------------------------------------------------------------------------
 <?
     simplexml_load_file("http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date=12-2-2009&type=30&meal=2");
@@ -588,7 +588,7 @@ http://php.net/manual/en/book.tidy.php[Tidy]
 For instance, we can clean up HUDS's "XHTML" with code like the below
 (assuming the library is installed):
 
-[code,php]
+[source,php]
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 <?
     $tidy = tidy_parse_file("http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date=12-2-2009&type=30&meal=2", array("numeric-entities" => true, "output-xhtml" => true));
@@ -599,7 +599,7 @@ For instance, we can clean up HUDS's "XHTML" with code like the below
 
 We can then build a DOM, as with:
 
-[code,php]
+[source,php]
 -----------------------------------------
 <?
     $dom = simplexml_load_string($xhtml);
@@ -609,7 +609,7 @@ We can then build a DOM, as with:
 And we can then query the DOM for an array of all those *tr* elements we
 identified earlier:
 
-[code,php]
+[source,php]
 -------------------------------------------------------------------------------
 <?
     $dom->registerXPathNamespace("xhtml", "http://www.w3.org/1999/xhtml");
@@ -631,7 +631,7 @@ link:HarvardFood API[HarvardFood API]; it assumes that *DB_HOST*,
 *DB_NAME*, *DB_USER*, and *DB_PASS* are constants defined in a file
 called *constants.php*.
 
-[code,php]
+[source,php]
 -------------------------------------------------------------------------------------------------------------------------------------
 #!/usr/bin/env php
 <?
@@ -748,7 +748,7 @@ called *constants.php*.
 
 This code assumes that three tables exist in *DB_NAME*:
 
-[code,sql]
+[source,sql]
 ------------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS `items` (
   `recipe` char(6) NOT NULL,

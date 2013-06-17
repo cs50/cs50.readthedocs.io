@@ -10,7 +10,7 @@ file.
 Variables can be declared and initialized as bools, as with any other
 data type.
 
-[code,c]
+[source,c]
 ------------------
  bool lie = false;
 ------------------
@@ -23,7 +23,7 @@ light switch; not the C [[switch|`switch()]]`!).
 
 Here's an example that illustrates the use of a bool:
 
-[code,c]
+[source,c]
 -----------------------------------------------------------------
 #include <cs50.h>
 #include <stdio.h>

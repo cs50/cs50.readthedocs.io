@@ -97,7 +97,7 @@ http://sandbox.mturk.com/[sandbox]
 (`mechanicalturk.sandbox.amazonaws.com`), lest you incur charges
 accidentally. In other words, instantiating a Turk50 object with:
 
-[code,php]
+[source,php]
 -----------------------------------------------------------
 require_once("/path/to/Turk50.php");
 $turk50 = new Turk50(AWSAccessKeyId, AWSSecretAccessKeyId);
@@ -105,7 +105,7 @@ $turk50 = new Turk50(AWSAccessKeyId, AWSSecretAccessKeyId);
 
 is equivalent to instantiating a Turk50 object with:
 
-[code,php]
+[source,php]
 -------------------------------------------------------------------------------------
 require_once("/path/to/Turk50.php");
 $turk50 = new Turk50(AWSAccessKeyId, AWSSecretAccessKeyId, array("sandbox" => TRUE));
@@ -114,7 +114,7 @@ $turk50 = new Turk50(AWSAccessKeyId, AWSSecretAccessKeyId, array("sandbox" => TR
 To compel the library to talk to AWS's production servers
 (`mechanicalturk.amazonaws.com`), instantiate a Turk50 object with:
 
-[code,php]
+[source,php]
 --------------------------------------------------------------------------------------
 require_once("/path/to/Turk50.php");
 $turk50 = new Turk50(AWSAccessKeyId, AWSSecretAccessKeyId, array("sandbox" => FALSE));
@@ -124,7 +124,7 @@ You can also instantiate a Turk50 object in "trace mode," whereby SOAP
 requests and responses will be logged so that you can examine them
 whilst debugging:
 
-[code,php]
+[source,php]
 ------------------------------------------------------------------------------------
 require_once("/path/to/Turk50.php");
 $turk50 = new Turk50(AWSAccessKeyId, AWSSecretAccessKeyId, array("trace" => TRACE));
@@ -138,7 +138,7 @@ and
 http://www.php.net/manual/en/soapclient.getlastresponse.php[__getLastResponse]
 of particular help if trying to chase down some bug:
 
-[code,php]
+[source,php]
 ------------------------------------------------------------------------------------
 require_once("/path/to/Turk50.php");
 $turk50 = new Turk50(AWSAccessKeyId, AWSSecretAccessKeyId, array("trace" => TRACE));
@@ -178,7 +178,7 @@ http://docs.amazonwebservices.com/AWSMturkAPI/2008-08-02/ApiReference_GetAccount
 operation. Notice that it supports only one parameter (`Operation`), the
 name of the operation itself. And so you can invoke it as follows:
 
-[code,php]
+[source,php]
 -----------------------------------------------------------
 require_once("/path/to/Turk50.php");
 $turk50 = new Turk50(AWSAccessKeyId, AWSSecretAccessKeyId);
@@ -194,7 +194,7 @@ http://www.php.net/manual/en/class.soapclient.php[SoapClient] class) as
 an actual method. Per `print_r`'s output, `$GetAccountBalanceResponse`
 is a `stdClass` object that represents the server's response:
 
-[code,php]
+[source,php]
 ---------------------------------------------------------------
 stdClass Object
 (
@@ -226,7 +226,7 @@ To confirm that the request was valid, you should check for `Errors` in
 both `OperationRequest` and `GetAccountBalanceResult`, as with code like
 the below:
 
-[code,php]
+[source,php]
 --------------------------------------------------------------------------------------------------------------------------------------
 if (isset($GetAccountBalanceResponse->OperationRequest->Errors) || isset($GetAccountBalanceResponse->GetAccountBalanceResult->Errors))
 {
@@ -237,7 +237,7 @@ if (isset($GetAccountBalanceResponse->OperationRequest->Errors) || isset($GetAcc
 What does an invalid request look like? Here's what's returned when you
 provide an invalid `AWSAccessKeyId` and/or `AWSSecretAccessKeyId`:
 
-[code,php]
+[source,php]
 --------------------------------------------------------------------------
 stdClass Object
 (
@@ -266,7 +266,7 @@ requests.
 How to get at your actual account's balance? Simply traverse the
 server's response as you would any PHP object:
 
-[code,php]
+[source,php]
 ----------------------------------------------------------------------------------------
 $Amount = $GetAccountBalanceResponse->GetAccountBalanceResult->AvailableBalance->Amount;
 ----------------------------------------------------------------------------------------
@@ -302,7 +302,7 @@ data structure or an
 http://docs.amazonwebservices.com/AWSMturkAPI/2008-08-02/ApiReference_ExternalQuestionArticle.html[ExternalQuestion]
 data structure), as in the below:
 
-[code,php]
+[source,php]
 --------------------------------------------------------------------------------------------------------------------------------
 require_once("/path/to/Turk50.php");
 
@@ -338,7 +338,7 @@ http://docs.amazonwebservices.com/AWSMturkAPI/2008-08-02/ApiReference_Qualificat
 structures, each of which should be an associative array, as in the
 below:
 
-[code,php]
+[source,php]
 --------------------------------------------------------------------------------------------------------------------------------
 require_once("/path/to/Turk50.php");
 
