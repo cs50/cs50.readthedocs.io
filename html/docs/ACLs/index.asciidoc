@@ -21,7 +21,7 @@ your MySQL password via https://cloud.cs50.net/phpMyAdmin/[phpMyAdmin].
 If you'd rather not share your MySQL password, email sysadmins@cs50.net
 to make other arrangements.
 
-[[]]
+
 How to Share a Directory
 ------------------------
 
@@ -98,7 +98,7 @@ so they should be able to `cd` with:
 
 `cd ~/public_html/project/`
 
-[[]]
+
 Troubleshooting
 ~~~~~~~~~~~~~~~
 
@@ -139,7 +139,7 @@ want to give to your files to ensure that they're properly shared:
 
 Email help@cs50.net if you need any help.
 
-[[]]
+
 How to Unshare a Directory
 --------------------------
 

@@ -3,7 +3,7 @@ tags: []
 title: Test2
 ---
 
-[[]]
+
 Author
 ------
 
@@ -12,7 +12,7 @@ To report bugs or request features, contact:
 mailto:malan@post.harvard.edu[David J. Malan '99] +
 http://www.cs.harvard.edu/malan/
 
-[[]]
+
 Overview
 --------
 
@@ -30,7 +30,7 @@ http://en.wikipedia.org/wiki/Representational_State_Transfer[RESTful]
 interface, which means that you can query it using simple HTTP GET
 requests.
 
-[[]]
+
 Usage
 -----
 
@@ -56,7 +56,7 @@ an empty response will be returned along with HTTP status code
 http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1[400 Bad
 Request].
 
-[[]]
+
 CSV
 ~~~
 
@@ -90,7 +90,7 @@ Fields' order may change over time, so do not hardcode indices into your
 own code. Use that first row to determine fields' indices dynamically,
 per this article on link:Neat_Tricks#Parsing_CSV[parsing CSV].
 
-[[]]
+
 JSON
 ~~~~
 
@@ -272,7 +272,7 @@ be an array of objects, per the below:
 ]
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-[[]]
+
 PHP
 ~~~
 
@@ -551,7 +551,7 @@ Array
 )
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-[[]]
+
 RSS
 ~~~
 
@@ -774,7 +774,7 @@ be an XML document, per the below:
 </rss>
 ------------------------------------------------------------------------------------------------
 
-[[]]
+
 Examples
 --------
 
@@ -798,7 +798,7 @@ http://food.cs50.net/apis/menus?date=2009-11-11&meal=Breakfast&output=json
 **
 http://food.cs50.net/apis/menus?date=2009-11-11&meal=Breakfast&output=php
 
-[[]]
+
 See Also
 --------
 
@@ -807,7 +807,7 @@ See Also
 * link:Screen Scraping[Screen Scraping]
 * link:Neat_Tricks#Unserializing_PHP[Unserializing PHP]
 
-[[]]
+
 External Links
 --------------
 

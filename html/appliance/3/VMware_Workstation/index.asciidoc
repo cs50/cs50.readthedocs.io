@@ -6,7 +6,7 @@ title: VMware Workstation
 Here's how to install the link:CS50_Appliance_3[CS50 Appliance] using
 VMware Workstation for link:#_installation[Windows].
 
-[[]]
+
 Installation
 ~~~~~~~~~~~~
 
@@ -60,7 +60,7 @@ highlight the *cs50-appliance-3* (or *cs50-appliance-3.vmx*) file
 within, and click *Open*. Then click VMware Fusion's ▶ button to start
 up the appliance.
 
-[[]]
+
 Troubleshooting
 ~~~~~~~~~~~~~~~
 

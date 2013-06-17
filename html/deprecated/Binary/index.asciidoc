@@ -3,7 +3,7 @@ tags: []
 title: Binary
 ---
 
-[[]]
+
 About
 ~~~~~
 
@@ -41,7 +41,7 @@ Computers can store other types of data by using encoding schemes. For
 example, a computer might use ASCII to encode letters and characters in
 binary.
 
-[[]]
+
 Conversion
 ~~~~~~~~~~
 
@@ -53,7 +53,7 @@ every increase in the power of 2 of a number, rather than an increase in
 a power of 10 as with decimal. Using this knowledge allows us to perform
 conversions both ways.
 
-[[]]
+
 Binary to Decimal
 ^^^^^^^^^^^^^^^^^
 
@@ -74,7 +74,7 @@ To do the conversion, we add up the decimal values:
 
 The binary number 10101, then, is equivalent to the decimal number 21.
 
-[[]]
+
 Decimal to Binary
 ^^^^^^^^^^^^^^^^^
 

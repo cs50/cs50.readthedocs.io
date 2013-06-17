@@ -23,7 +23,7 @@ gradebook as usual.
 ~cs50/staff/pdfs/username/5/Hacker/ on the cloud, where username is your
 username.*
 
-[[]]
+
 How to Fetch and Render
 ^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -36,7 +36,7 @@ render pset5 both5/*.pset5
 render hacker5 both5/*.hacker5
 ---------------------------------
 
-[[]]
+
 How to Run Grading Scripts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -55,7 +55,7 @@ contain `bmp` and `jpg` subdirectories and run:
  ~mtucker/personal/scripts/trunk/pset5-scripts/pset5.pl
 -------------------------------------------------------
 
-[[]]
+
 Details (or, How does this all work?)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

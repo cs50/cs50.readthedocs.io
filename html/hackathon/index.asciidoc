@@ -19,7 +19,7 @@ at this year's Hackathon, you should have heard from the CS50 Bot
 already as to whether you have a spot or were waitlisted. If not, email
 hackathon@cs50.net to inquire.*
 
-[[]]
+
 How to get there
 ~~~~~~~~~~~~~~~~
 
@@ -63,11 +63,11 @@ Bot |take a taxi to
 walk to 1 Memorial Drive]; check in with the guard in the lobby
 |=======================================================================
 
-[[]]
+
 What to bring
 ~~~~~~~~~~~~~
 
-[[]]
+
 You must bring...
 ^^^^^^^^^^^^^^^^^
 
@@ -78,7 +78,7 @@ of the CS50 Bot's confirmation of your spot)
 form] (we'll have blank copies on the shuttles)
 * Excitement
 
-[[]]
+
 You might also want to bring...
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -88,17 +88,17 @@ You might also want to bring...
 * Phone with charger
 * Sweater/sweatshirt
 
-[[]]
+
 You may not bring...
 ^^^^^^^^^^^^^^^^^^^^
 
 * Alcohol, etc.
 
-[[]]
+
 FAQs
 ~~~~
 
-[[]]
+
 Can I attend?
 ^^^^^^^^^^^^^
 
@@ -107,7 +107,7 @@ spot at this year's Hackathon, you should have heard from the CS50 Bot
 by Tue 12/4 as to whether you have a spot! If not, email
 hackathon@cs50.net to inquire.
 
-[[]]
+
 Can I arrive late?
 ^^^^^^^^^^^^^^^^^^
 
@@ -115,7 +115,7 @@ Yes, but only if you receive an email from the CS50 Bot confirming a
 "late arrival" for you. (Space is limited, so we try to give preference
 to those who can partake for the entire time.)
 
-[[]]
+
 Can I leave early?
 ^^^^^^^^^^^^^^^^^^
 
@@ -125,7 +125,7 @@ depart NERD at 5am for IHOP and will return to Harvard by 7am. If you
 need to return to Harvard before 5am, you'll need to take a taxi, as the
 T doesn't start running until after 5:15am.
 
-[[]]
+
 What if I can't attend after all?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -133,19 +133,19 @@ If the CS50 Bot confirmed your spot but you can no longer attend, please
 email hackathon@cs50.net right away so that we can give your spot to
 someone who's waitlisted.
 
-[[]]
+
 What if my partner was waitlisted but I wasn't?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Let hackathon@cs50.net know.
 
-[[]]
+
 Will there be food and drinks?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Yes. Lots. Often.
 
-[[]]
+
 Will there be office hours?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -156,7 +156,7 @@ their own! CS50 Queue won't be in use, but there will be a staff area
 for Q&A, and we'll keep an eye on
 http://cs50.net/discuss[cs50.net/discuss].
 
-[[]]
+
 Will there be Wi-Fi?
 ^^^^^^^^^^^^^^^^^^^^
 

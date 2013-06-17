@@ -18,7 +18,7 @@ is your own username).
 
 But you can authenticate users via other mechanisms as well.
 
-[[]]
+
 Authentication via CS50 ID
 --------------------------
 
@@ -39,7 +39,7 @@ passwords, HUIDs, XIDs, or PINs.
 
 To add CS50 ID to your website, consult its link:CS50 ID[HOWTO].
 
-[[]]
+
 Authentication via IP Address
 -----------------------------
 
@@ -161,7 +161,7 @@ to Harvard. Consider an easy, but by no means sure-fire, way of
 restricting content to Harvard affiliates with (reasonably) high
 probability.
 
-[[]]
+
 Authentication via Facebook
 ---------------------------
 
@@ -170,7 +170,7 @@ already signed up for your site in addition to a login button."
 
 See https://developers.facebook.com/docs/reference/plugins/login/.
 
-[[]]
+
 Authentication via Google
 -------------------------
 
@@ -180,7 +180,7 @@ certain types of activities."
 
 See http://code.google.com/apis/accounts/docs/GettingStarted.html.
 
-[[]]
+
 Authentication via Janrain
 --------------------------
 

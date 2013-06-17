@@ -21,11 +21,11 @@ In C, it is possible to define other and more complex types using the
 `[[typedef]]` keyword as well as link:struct[structs] and similar
 compound types.
 
-[[]]
+
 Detailed Description
 ~~~~~~~~~~~~~~~~~~~~
 
-[[]]
+
 Integer types: `char, int, long, ...`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -68,7 +68,7 @@ the values `true` and `false`. In C, a `bool` is technically a special
 kind of integer variable that can only hold the values `1` and `0`,
 which are equivalent to `true` and `false`.
 
-[[]]
+
 Floating points: `float, double`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -91,7 +91,7 @@ float pie = pi * e;
 printf("%f\n", pie);
 --------------------
 
-[[]]
+
 Pointers, arrays, and strings
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -115,7 +115,7 @@ string as `char *str = "Hello, world!"`, the value in the variable `str`
 is simply the memory address of the place in memory where the sequence
 of characters `"Hello, world!"` is stored.
 
-[[]]
+
 Other types
 ^^^^^^^^^^^
 
@@ -163,7 +163,7 @@ var2.type = string;
 var2.value.stringv = "This is CS50";
 ------------------------------------
 
-[[]]
+
 Type casting
 ^^^^^^^^^^^^
 
@@ -171,7 +171,7 @@ In C, you can use a cast to convert a variable from one type to another.
 For example, `(int) 2.0` will convert the `float` with value `2.0` into
 an integer value `2`.
 
-[[]]
+
 Other languages
 ^^^^^^^^^^^^^^^
 

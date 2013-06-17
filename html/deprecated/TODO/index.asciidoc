@@ -3,7 +3,7 @@ tags: []
 title: TODO
 ---
 
-[[]]
+
 Week 0
 ------
 
@@ -22,7 +22,7 @@ Week 0
 * Thread
 * Variable
 
-[[]]
+
 Week 1
 ------
 
@@ -67,7 +67,7 @@ Week 1
 * [line-through]*switch*
 * Type
 
-[[]]
+
 Week 2
 ------
 
@@ -87,7 +87,7 @@ Week 2
 * [line-through]*Stack*
 * [line-through]*link:Vigenère Cipher[Vigenère Cipher]*
 
-[[]]
+
 Week 3
 ------
 
@@ -105,7 +105,7 @@ Week 3
 * [line-through]*link:Selection Sort[Selection Sort]*
 * [line-through]*Θ*
 
-[[]]
+
 Week 4
 ------
 
@@ -121,7 +121,7 @@ Week 4
 * [line-through]*struct*
 * [line-through]*typedef*
 
-[[]]
+
 Week 5
 ------
 

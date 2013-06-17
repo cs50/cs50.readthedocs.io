@@ -11,7 +11,7 @@ practice good design and style. If your code is properly formatted,
 well-commented, and well-designed, you'll have a much easier time
 debugging it.
 
-[[]]
+
 `printf` Statements
 -------------------
 
@@ -53,7 +53,7 @@ When we execute these lines of code, we'll see the number 0 printed over
 and over again and it will be clear that we need to add a line within
 the loop that adds one to `i`.
 
-[[]]
+
 Isolating the Problem
 ---------------------
 
@@ -100,7 +100,7 @@ Now we see that the program executes just fine and the "We're done!"
 statement is printed. Clearly, then, the problem lies in the code of
 `BuggyFunction` which we now can investigate.
 
-[[]]
+
 GDB
 ---
 

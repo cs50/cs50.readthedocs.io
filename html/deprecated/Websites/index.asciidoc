@@ -3,7 +3,7 @@ tags: []
 title: Websites
 ---
 
-[[]]
+
 Contact Information
 ~~~~~~~~~~~~~~~~~~~
 
@@ -12,18 +12,18 @@ Lecturer on Computer Science +
 http://www.cs.harvard.edu/malan/ +
 dmalan@harvard.edu
 
-[[]]
+
 Requirements
 ~~~~~~~~~~~~
 
 * Curiosity
 * Wireless laptop (with power supply)
 
-[[]]
+
 Outline
 ~~~~~~~
 
-[[]]
+
 Resources
 ~~~~~~~~~
 
@@ -35,11 +35,11 @@ MathML, etc."
 ** http://www.w3schools.com/html/[HTML Tutorial]
 ** http://www.w3schools.com/xhtml/[XHTML Tutorial]
 
-[[]]
+
 Software
 ~~~~~~~~
 
-[[]]
+
 Mac OS
 ^^^^^^
 
@@ -58,7 +58,7 @@ Headers]. "View HTTP headers of a page and while browsing."
 * https://addons.mozilla.org/en-US/firefox/addon/60[Web Developer].
 "Adds a menu and a toolbar with various web developer tools."
 
-[[]]
+
 Windows
 ^^^^^^^
 

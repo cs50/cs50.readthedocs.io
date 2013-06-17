@@ -3,7 +3,7 @@ tags: []
 title: Life_After_50
 ---
 
-[[]]
+
 Appliance
 ---------
 
@@ -94,7 +94,7 @@ Daddy]
 ** http://www.slicehost.com/[Slicehost]
 ** http://vpsland.com/[VPSLAND]
 
-[[]]
+
 tl;dr
 ^^^^^
 
@@ -113,7 +113,7 @@ appliance and then importing it via phpMyAdmin's *Import* tab on the new
 host (assuming it offers phpMyAdmin).
 4.  Update your domain's DNS settings per the new host's instructions.
 
-[[]]
+
 Courses
 -------
 
@@ -352,10 +352,10 @@ function() \{ var row = charts["fall"].getSelection()[0].row; if
 
 // ]]>
 
-[[]]
+
 Spring courses you can take after CS50
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-[[]]
+
 Fall courses you can take after CS50
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

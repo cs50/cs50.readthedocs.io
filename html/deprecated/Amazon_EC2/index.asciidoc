@@ -3,7 +3,7 @@ tags: []
 title: Amazon_EC2
 ---
 
-[[]]
+
 Contact Information
 ~~~~~~~~~~~~~~~~~~~
 
@@ -11,7 +11,7 @@ Contact Information
 http://www.cs.harvard.edu/malan/ +
 malan@harvard.edu
 
-[[]]
+
 Requirements
 ~~~~~~~~~~~~
 
@@ -19,11 +19,11 @@ Requirements
 * Credit card (you won't be billed anything, but you'll need it to
 register with Amazon)
 
-[[]]
+
 Outline
 ~~~~~~~
 
-[[]]
+
 Overview
 ^^^^^^^^
 
@@ -36,7 +36,7 @@ http://cdn.cs50.net/2009/fall/seminars/EC2_seminar.mov?download[QuickTime]
 * What It Costs
 * Q&A
 
-[[]]
+
 The GUI
 ^^^^^^^
 
@@ -52,7 +52,7 @@ The GUI
 (http://docs.amazonwebservices.com/AWSEC2/latest/GettingStartedGuide.html?TerminateInstance.html[help])
 ** Attaching Volumes
 
-[[]]
+
 The Command Line
 ^^^^^^^^^^^^^^^^
 
@@ -74,7 +74,7 @@ The Command Line
 ** Tunneling Between Instances
 (http://malanrouge.com/usenix/Tunneling_Between_Instances[help])
 
-[[]]
+
 Resources
 ~~~~~~~~~
 
@@ -100,11 +100,11 @@ Web Services: Overview of Security Processes]
 Calculator]
 * http://www.cs.harvard.edu/malan/publications/sigcse10-ec2.pdf[Slides]
 
-[[]]
+
 Software
 ~~~~~~~~
 
-[[]]
+
 Linux
 ^^^^^
 
@@ -119,7 +119,7 @@ http://cds.sun.com/is-bin/INTERSHOP.enfinity/WFS/CDS-CDS_Developer-Site/en_US/-/
 SE 6]
 * http://www.rdesktop.org/[rdesktop]
 
-[[]]
+
 Mac OS
 ^^^^^^
 
@@ -135,7 +135,7 @@ http://developer.apple.com/java/download/[Java SE 6] (for Mac OS 10.5)
 http://www.microsoft.com/mac/products/remote-desktop/default.mspx[Remote
 Desktop Connection Client for Mac 2]
 
-[[]]
+
 Windows
 ^^^^^^^
 

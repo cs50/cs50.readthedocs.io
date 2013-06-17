@@ -13,7 +13,7 @@ JSON, RSS, etc.) first.
 If you must resort to screen scraping, read on for a tutorial that
 discusses the link:HarvardFood API[HarvardFood API]'s implementation.
 
-[[]]
+
 HarvardFood
 ~~~~~~~~~~~
 
@@ -622,7 +622,7 @@ API (annoyingly) requires that we prefix XHTML elements' names with,
 e.g., *xhtml:*. Now that we have all those *tr* elements of interest, we
 can extract those fields we want pretty easily.
 
-[[]]
+
 Source Code
 ^^^^^^^^^^^
 

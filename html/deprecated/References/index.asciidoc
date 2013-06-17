@@ -3,13 +3,13 @@ tags: []
 title: References
 ---
 
-[[]]
+
 Performance Best Practices for VMware vSphere 4.0
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 http://www.vmware.com/resources/techresources/10041
 
-[[]]
+
 SEAS Logos
 ^^^^^^^^^^
 

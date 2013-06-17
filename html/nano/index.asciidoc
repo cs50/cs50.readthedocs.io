@@ -10,7 +10,7 @@ does not have as many features as Vim or emacs (other text editors in
 Linux), but it is more beginner-friendly and less overwhelming than
 these other editors.
 
-[[]]
+
 Starting nano
 -------------
 
@@ -36,7 +36,7 @@ skittles.c contains the most recent version of the file. This is useful
 if we find out we have messed up the program and wish to revert to an
 original version.
 
-[[]]
+
 Using nano
 ----------
 
@@ -62,7 +62,7 @@ characters in the line (indicated by the `col` number; the `char` number
 to the right indicates total characters in the file) is greater than 80,
 which is why the view is shifted to the right.
 
-[[]]
+
 Syntax highlighting
 -------------------
 
@@ -79,7 +79,7 @@ highlighting relevant to the file type from the first thing you type, as
 opposed to only being able to apply the highlighting when you save your
 program for the first time.
 
-[[]]
+
 Commands
 --------
 
@@ -135,7 +135,7 @@ other lines will be lost.
 longer files than simply using the up and down arrow keys.
 |=======================================================================
 
-[[]]
+
 `.save` files
 -------------
 

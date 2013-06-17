@@ -3,7 +3,7 @@ tags: []
 title: Yuhki_personal
 ---
 
-[[]]
+
 Network layers
 ~~~~~~~~~~~~~~
 
@@ -18,7 +18,7 @@ TCP segment/UDP datagram/IP packet/Ethernet frame
 * TCP is connection oriented: each end knows status of other end
 * UDP is connection-less
 
-[[]]
+
 IP packet
 ~~~~~~~~~
 
@@ -28,14 +28,14 @@ TTL
 * Exists throughout the journey (IP address of destination needn't
 change)
 
-[[]]
+
 Switches and routers
 ~~~~~~~~~~~~~~~~~~~~
 
 Switches are link layer (they only do Ethernet addresses) Routers are
 network layer (they do IP addresses)
 
-[[]]
+
 Router
 ^^^^^^
 
@@ -45,13 +45,13 @@ next hop (2) Output NIC
 ** ARP (Address Resolution Protocol) table: Convert IP address of next
 hop -> MAC address of next hop
 
-[[]]
+
 Address Resolution Protocol
 +++++++++++++++++++++++++++
 
 * Broadcasts request for the MAC address corresponding to an IP address
 
-[[]]
+
 XXXX
 ~~~~
 
@@ -59,7 +59,7 @@ End-to-end principle: Network should not do anything but routing
 
 '''''
 
-[[]]
+
 Link layer (Layer 2)
 --------------------
 
@@ -70,7 +70,7 @@ Link layer (Layer 2)
 ** Reliable data transfer, flow control (don't want to overflow buffer
 at destination)
 
-[[]]
+
 Delay in packet-switched networks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -86,7 +86,7 @@ Delay in packet-switched networks
 
 R and s are very different!
 
-[[]]
+
 Nodal delay
 ^^^^^^^^^^^
 
@@ -102,7 +102,7 @@ transmission delay.
 
 Big pipes not necessarily good thing: creates congestion at other end.
 
-[[]]
+
 Queuing delay
 +++++++++++++
 
@@ -118,7 +118,7 @@ expo grow towards infinity at 1)
 * La/R > 1: more work arriving than can be serviced, average delay
 infinite
 
-[[]]
+
 Ethernet frame
 ~~~~~~~~~~~~~~
 
@@ -131,7 +131,7 @@ packet)
 * Therefore, 20 bytes in total overhead
 * Minimum payload size is 46 bytes
 
-[[]]
+
 Multiple Access Protocols
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -143,11 +143,11 @@ slots, frequency, code)
 ** Taking turns: Nodes take turns, but nodes with more to say can take
 longer turns (c.f. time slot partitioning)
 
-[[]]
+
 Channel Partitioning
 ^^^^^^^^^^^^^^^^^^^^
 
-[[]]
+
 Time Division Multiple Access (TDMA)
 ++++++++++++++++++++++++++++++++++++
 
@@ -156,7 +156,7 @@ Time Division Multiple Access (TDMA)
 * Everyone has to have the same clock!
 * Over time, everybody has an opportunity to send
 
-[[]]
+
 Frequency Division Multiple Access (FDMA)
 +++++++++++++++++++++++++++++++++++++++++
 
@@ -164,7 +164,7 @@ Frequency Division Multiple Access (FDMA)
 * Each station assigned fixed band
 * Unused transmission time in frequency bands go idle
 
-[[]]
+
 Random Access
 ^^^^^^^^^^^^^
 
@@ -175,7 +175,7 @@ Random Access
 * Examples:
 ** Slotted ALOHA, ALOHA, CSMA, CSMA/CD, CSMA/CA
 
-[[]]
+
 Slotted ALOHA
 +++++++++++++
 
@@ -189,14 +189,14 @@ Slotted ALOHA
 ** If collision, node retransmits frame in each subsequent slot with
 probability p until success
 
-[[]]
+
 Pros
 
 * Possibility for continuous transmission at full rate
 * Decentralized
 * Simple
 
-[[]]
+
 Cons
 
 * Collisions => wasted slots
@@ -205,7 +205,7 @@ Cons
 packet
 * Needs clock synchronization
 
-[[]]
+
 Efficiency
 
 * Many nodes (N nodes), with many frames to send. Probability of each
@@ -218,7 +218,7 @@ any node having success
 * Therefore, at best, channels used for useful transmissions only 37% of
 time!
 
-[[]]
+
 Pure (unslotted) ALOHA
 ++++++++++++++++++++++
 
@@ -226,7 +226,7 @@ Pure (unslotted) ALOHA
 * Probability of collision doubles (since a frame can span two "slots")
 * Maximum efficiency is .18 => Even worse than Slotted ALOHA
 
-[[]]
+
 Carrier Sense Multiple Access (CSMA)
 ++++++++++++++++++++++++++++++++++++
 
@@ -240,7 +240,7 @@ Collisions can still occur: *propagation delay* can mean two nodes may
 not hear each other's transmission. In that case, entire transmission is
 wasted.
 
-[[]]
+
 CSMA/CD (Collision Detection)
 +++++++++++++++++++++++++++++
 
@@ -259,7 +259,7 @@ retransmit (see diagram)
 * Channel wastage is reduced because of aborts.
 * Used in Ethernet 802.3
 
-[[]]
+
 CSMA/CA (Collision Avoidance)
 +++++++++++++++++++++++++++++
 
@@ -277,7 +277,7 @@ transmission_ (avoids Hidden Terminal Problem)
 ** Can't listen while sending
 ** Hidden Terminal Problem
 
-[[]]
+
 Taking Turns
 ^^^^^^^^^^^^
 
@@ -288,7 +288,7 @@ Taking Turns
 sequentially.
 ** Token overhead, latency, single point of failure (token).
 
-[[]]
+
 Switches
 ~~~~~~~~
 

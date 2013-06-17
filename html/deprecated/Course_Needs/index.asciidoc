@@ -5,13 +5,13 @@ title: Course_Needs
 
 *This list is subject to change.*
 
-[[]]
+
 Short Term
 ----------
 
 *Target Date: January 2012*
 
-[[]]
+
 LDAP Accounts
 ~~~~~~~~~~~~~
 
@@ -27,7 +27,7 @@ HUID.)
 * Courses must be able to authenticate users against LDAP so that they
 can run their own VMs but leverage SEAS LDAP for accounts.
 
-[[]]
+
 Home Directories
 ~~~~~~~~~~~~~~~~
 
@@ -43,7 +43,7 @@ NetApp in hardware (or equivalent) or rsnapshot in software, with
 snapshots accessible via a read-only volume (exported via NFS, WebDAV,
 and SFTP).
 
-[[]]
+
 After-Hours Support
 ~~~~~~~~~~~~~~~~~~~
 
@@ -52,7 +52,7 @@ carried 24/7 by SEAS technical staff in case problems arise at night or
 on weekends, instead of a voicemail box. Number should be a constant and
 simply forward to whoever's on call.
 
-[[]]
+
 VMs
 ~~~
 
@@ -62,13 +62,13 @@ students. VMs would live on SEAS hardware.
 10 LTS, et al. should be available, preconfigured to mount Home
 Directories and authenticate against LDAP.
 
-[[]]
+
 Long Term
 ---------
 
 *Target Date: Fall 2012*
 
-[[]]
+
 Appliance
 ~~~~~~~~~
 
@@ -80,7 +80,7 @@ well is already in progress:_
 
 https://manual.cs50.net/CS50_Appliance_2.0
 
-[[]]
+
 Git Repository
 ~~~~~~~~~~~~~~
 

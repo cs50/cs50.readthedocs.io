@@ -28,11 +28,11 @@ which will place the value 42 in `myvar`.
 A C program always starts execution in a special function called `main`.
 `main` can execute its own code and call other functions.
 
-[[]]
+
 Detailed Description
 ~~~~~~~~~~~~~~~~~~~~
 
-[[]]
+
 When to use functions
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -49,7 +49,7 @@ code in the complex function is also useful somewhere else in your
 program, it becomes easier to reuse the code if it's already in its own
 function.
 
-[[]]
+
 Prototypes
 ^^^^^^^^^^
 
@@ -95,7 +95,7 @@ files, you need to place the declaration in a link:header file[header
 file], which normally contains only prototypes and no function
 declarations.
 
-[[]]
+
 Miscellaneous
 ^^^^^^^^^^^^^
 
@@ -104,7 +104,7 @@ It is illegal in C to declare one function inside another, though
 functions unless you know what you're doing and have a very good reason
 for it.
 
-[[]]
+
 Other languages
 ^^^^^^^^^^^^^^^
 

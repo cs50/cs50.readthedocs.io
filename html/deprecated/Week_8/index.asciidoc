@@ -4,7 +4,7 @@ title: Week_8
 ---
 _HTTP. HTML. PHP_
 
-[[]]
+
 Agenda
 ------
 
@@ -42,7 +42,7 @@ tables.
 8's https://www.cs50.net/lectures/8/src/froshims/[source code]. We'll
 finish up the rest and introduce MySQL on Mon 11/1 in lecture.*
 
-[[]]
+
 References
 ----------
 
@@ -51,11 +51,11 @@ Fall 2009
 * http://cdn.cs50.net/2009/fall/sections/8/section8.flv?play[Video],
 Fall 2009
 
-[[]]
+
 Materials
 ---------
 
-[[]]
+
 Josh Bolduc
 ~~~~~~~~~~~
 

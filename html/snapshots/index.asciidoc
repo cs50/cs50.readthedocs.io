@@ -6,7 +6,7 @@ title: snapshots
 Every 10 minutes, we take "snapshots" of everything in `/home` on
 `cloud.cs50.net`, just in case you accidentally delete something.
 
-[[]]
+
 How to Recover a File
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -27,7 +27,7 @@ start with `hourly.0`, followed by `hourly.1`, `hourly.2`, and so on.
 Below are all of the intervals you can try. Realize that the times only
 estimates, since the intervals' definitions depend on the current time.
 
-[[]]
+
 Intervals
 ^^^^^^^^^
 

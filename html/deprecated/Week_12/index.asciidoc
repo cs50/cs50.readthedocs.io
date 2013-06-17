@@ -4,7 +4,7 @@ title: Week_12
 ---
 _TF's choice._
 
-[[]]
+
 Agenda
 ------
 
@@ -20,6 +20,6 @@ http://www.cs50.net/projects/project.pdf[spec]
 entire time block this year unless informed otherwise by David.
 * Exciting Conclusion
 
-[[]]
+
 Materials
 ---------

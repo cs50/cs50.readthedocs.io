@@ -5,7 +5,7 @@ title: Week_10
 
 _TF's choice._
 
-[[]]
+
 Agenda
 ------
 
@@ -17,6 +17,6 @@ http://www.cs50.net/quizzes/2010/fall/1/aboutquiz1.pdf[About Quiz 1] for
 details.
 ** Problem Set 7 has been returned.
 
-[[]]
+
 Materials
 ---------

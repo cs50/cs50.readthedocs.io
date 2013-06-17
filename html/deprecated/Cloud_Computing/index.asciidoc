@@ -3,7 +3,7 @@ tags: []
 title: Cloud_Computing
 ---
 
-[[]]
+
 Instructor
 ~~~~~~~~~~
 
@@ -12,7 +12,7 @@ Lecturer on Computer Science +
 http://www.cs.harvard.edu/malan/ +
 dmalan@harvard.edu
 
-[[]]
+
 Location
 ~~~~~~~~
 
@@ -21,7 +21,7 @@ Dworkin] G125 +
 33 Oxford Street +
 Cambridge MA 02138
 
-[[]]
+
 Requirements
 ~~~~~~~~~~~~
 
@@ -29,25 +29,25 @@ Requirements
 * Credit card (you won't be billed anything, but you'll need it to
 register with Amazon)
 
-[[]]
+
 Outline
 ~~~~~~~
 
 _subject to change_
 
-[[]]
+
 8:30
 ^^^^
 
 * Breakfast
 
-[[]]
+
 9:00
 ^^^^
 
 * Introductions
 
-[[]]
+
 9:15
 ^^^^
 
@@ -68,26 +68,26 @@ _subject to change_
 ** Amazon Virtual Private Cloud (Amazon VPC)
 ** ...
 
-[[]]
+
 10:30
 ^^^^^
 
 * Coffee Break
 
-[[]]
+
 11:00
 ^^^^^
 
 * VMware ESXi, Demos
 * Oracle VirtualBox, Hands-On
 
-[[]]
+
 12:30
 ^^^^^
 
 * Lunch Break
 
-[[]]
+
 13:30
 ^^^^^
 
@@ -113,13 +113,13 @@ _subject to change_
 *** Running an Instance
 (http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide.html?launching-an-instance.html[help])
 
-[[]]
+
 15:00
 ^^^^^
 
 * Coffee Break
 
-[[]]
+
 15:30
 ^^^^^
 
@@ -133,13 +133,13 @@ _subject to change_
 ** Tunneling Between Instances
 (http://malanrouge.com/usenix/Tunneling_Between_Instances[help])
 
-[[]]
+
 16:45
 ^^^^^
 
 * Farewells
 
-[[]]
+
 Resources
 ~~~~~~~~~
 
@@ -170,11 +170,11 @@ CS50 into the Cloud]
 http://www.nytimes.com/idg/IDG_002570DE00740E180025742400363509.html[What
 Cloud Computing Really Means]
 
-[[]]
+
 Software
 ~~~~~~~~
 
-[[]]
+
 Linux
 ^^^^^
 
@@ -190,7 +190,7 @@ SE 6]
 * http://www.rdesktop.org/[rdesktop]
 * http://www.virtualbox.org/wiki/Downloads[VirtualBox]
 
-[[]]
+
 Mac OS
 ^^^^^^
 
@@ -207,7 +207,7 @@ http://www.microsoft.com/mac/products/remote-desktop/default.mspx[Remote
 Desktop Connection Client for Mac 2]
 * http://www.virtualbox.org/wiki/Downloads[VirtualBox]
 
-[[]]
+
 Windows
 ^^^^^^^
 
@@ -227,7 +227,7 @@ http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html[PuTTYgen]
 * http://winscp.net/eng/download.php[WinSCP] (or another SFTP client)
 * http://www.virtualbox.org/wiki/Downloads[VirtualBox]
 
-[[]]
+
 ISOs
 ~~~~
 

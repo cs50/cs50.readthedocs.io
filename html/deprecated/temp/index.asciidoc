@@ -27,7 +27,7 @@ data.
 
 *Versions 1.3 and prior of this API are no longer operational.*
 
-[[]]
+
 Author
 ------
 
@@ -36,7 +36,7 @@ To report bugs or request features, contact:
 mailto:malan@post.harvard.edu[David J. Malan '99] +
 http://www.cs.harvard.edu/malan/
 
-[[]]
+
 License
 -------
 
@@ -48,11 +48,11 @@ your data to this API, as by including a link to
 http://food.cs50.net/[HarvardFood] in your own work. To discuss
 commercial purposes, contact the author.
 
-[[]]
+
 Methods
 -------
 
-[[]]
+
 facts
 ~~~~~
 
@@ -103,7 +103,7 @@ Facts are measured per the units below.
 |Vitamin C |_n/a_ |%
 |=============================
 
-[[]]
+
 CSV
 ^^^
 
@@ -137,7 +137,7 @@ Fields' order may change over time, so do not hardcode indices into your
 own code. Use that first row to determine fields' indices dynamically,
 per this article on link:Neat_Tricks#Parsing_CSV[parsing CSV].
 
-[[]]
+
 JSON
 ^^^^
 
@@ -223,7 +223,7 @@ the response will be an array of objects, per the below:
 ]
 ---------------------------------
 
-[[]]
+
 JSONP
 ^^^^^
 
@@ -236,7 +236,7 @@ the response will be a padded array of objects, per the below:
 parseResponse([{"fact":"Calcium","percent":4},{"fact":"Calories","amount":250,"percent":8},{"fact":"Calories from Fat","amount":135},{"fact":"Carbohydrate","percent":4},{"fact":"Cholesterol","amount":40,"percent":13},{"fact":"Dietary Fiber","amount":1,"percent":4},{"fact":"Iron","percent":10},{"fact":"Protein","amount":15,"percent":24},{"fact":"Saturated Fat","amount":3.5,"percent":18},{"fact":"Sodium","amount":570,"percent":24},{"fact":"Sugars","amount":8,"percent":0},{"fact":"Total Carbs","amount":13,"percent":4},{"fact":"Total Fat","percent":23},{"fact":"Trans Fat","percent":0},{"fact":"Vitamin A","percent":0},{"fact":"Vitamin C","percent":0}])
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-[[]]
+
 PHP
 ^^^
 
@@ -366,7 +366,7 @@ Array
 )
 ---------------------------------------
 
-[[]]
+
 menu
 ~~~~
 
@@ -404,7 +404,7 @@ code
 http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1[400 Bad
 Request].
 
-[[]]
+
 CSV
 ^^^
 
@@ -437,7 +437,7 @@ Fields' order may change over time, so do not hardcode indices into your
 own code. Use that first row to determine fields' indices dynamically,
 per this article on link:Neat_Tricks#Parsing_CSV[parsing CSV].
 
-[[]]
+
 JSON
 ^^^^
 
@@ -586,7 +586,7 @@ the response will be an array of objects, per the below:
 ]
 ------------------------------------------
 
-[[]]
+
 JSONP
 ^^^^^
 
@@ -599,7 +599,7 @@ the response will be a padded array of objects, per the below:
 parseResponse([{"date":"2010-11-10","meal":"BREAKFAST","category":"BREAKFAST BAKERY","recipe":"213012","name":"Aesops Bagels","portion":"1","unit":"each"},{"date":"2010-11-10","meal":"BREAKFAST","category":"BREAKFAST BAKERY","recipe":"213046","name":"Pistachio Muffin","portion":"1","unit":"each"},{"date":"2010-11-10","meal":"BREAKFAST","category":"BREAKFAST ENTREES","recipe":"036003","name":"Waffles","portion":"2","unit":"each"},{"date":"2010-11-10","meal":"BREAKFAST","category":"BREAKFAST ENTREES","recipe":"061003","name":"Scrambled Eggs","portion":"4","unit":"oz"},{"date":"2010-11-10","meal":"BREAKFAST","category":"BREAKFAST ENTREES","recipe":"061009","name":"Hard Cooked Eggs","portion":"1","unit":"each"},{"date":"2010-11-10","meal":"BREAKFAST","category":"BREAKFAST ENTREES","recipe":"061009","name":"Hard Cooked Eggs","portion":"1","unit":"each"},{"date":"2010-11-10","meal":"BREAKFAST","category":"BREAKFAST ENTREES","recipe":"061041","name":"Egg Beaters","portion":"4","unit":"oz"},{"date":"2010-11-10","meal":"BREAKFAST","category":"BREAKFAST ENTREES","recipe":"061042","name":"Egg Whites","portion":"4","unit":"oz"},{"date":"2010-11-10","meal":"BREAKFAST","category":"BREAKFAST ENTREES","recipe":"061056","name":"Eggs Cooked to Order","portion":"1","unit":"each"},{"date":"2010-11-10","meal":"BREAKFAST","category":"BREAKFAST ENTREES","recipe":"142539","name":"Hummus","portion":"2","unit":"oz"},{"date":"2010-11-10","meal":"BREAKFAST","category":"BREAKFAST ENTREES","recipe":"161049","name":"Hard Cooked Eggs","portion":"1","unit":"each"},{"date":"2010-11-10","meal":"BREAKFAST","category":"BREAKFAST MEATS","recipe":"089003","name":"Pork Sausage Pattie","portion":"2","unit":"each"},{"date":"2010-11-10","meal":"BREAKFAST","category":"BREAKFAST MISC","recipe":"191001","name":"Warmed Pancake Syrup","portion":"1","unit":"fl. oz"},{"date":"2010-11-10","meal":"BREAKFAST","category":"MAKE OR BUILD YOUR OWN","recipe":"031003","name":"Oatmeal Steel Cut","portion":"6","unit":"fl. oz"},{"date":"2010-11-10","meal":"BREAKFAST","category":"MAKE OR BUILD YOUR OWN","recipe":"031011","name":"Oatmeal (Rolled Oats)","portion":"6","unit":"fl. oz"}])
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-[[]]
+
 PHP
 ^^^
 
@@ -790,7 +790,7 @@ Array
 )
 ------------------------------------------------
 
-[[]]
+
 recipe
 ~~~~~~
 
@@ -815,7 +815,7 @@ Request].
 
 Among the fields returned will be a recipe's usual serving size.
 
-[[]]
+
 CSV
 ^^^
 
@@ -834,7 +834,7 @@ Fields' order may change over time, so do not hardcode indices into your
 own code. Use that first row to determine fields' indices dynamically,
 per this article on link:Neat_Tricks#Parsing_CSV[parsing CSV].
 
-[[]]
+
 JSON
 ^^^^
 
@@ -858,7 +858,7 @@ will be an array of objects, per the below:
 }
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-[[]]
+
 JSONP
 ^^^^^
 
@@ -871,7 +871,7 @@ the response will be an object, per the below:
 parseResponse({"id":"117003","name":"Chickwich","size":"1","unit":"each","ingredients":"Chicken Patty (* INGREDIENT STATEMENT * Chicken breast with rib meat, water, vegetable protein product (isolated soy protein, magnesium oxide, zinc oxide, niacinamide, ferrous sulfate, vitamin B12, copper gluconate, vitamin A palmitate, calcium pantothenate, pyridoxine hydrochloride, thiamine mononitrate, riboflavin), dried whole egg, seasoning (salt, onion powder, modified corn starch, natural flavor), and sodium phosphates. BREADED WITH: Enriched wheat flour (enriched with niacin, ferrous sulfate, thiamine mononitrate, riboflavin, folic acid), water, enriched bleached wheat flour (enriched with niacin, ferrous sulfate, thiamine mononitrate, riboflavin, folic acid), salt, modified corn starch, spices, dextrose, garlic powder, oleoresin paprika and annatto, xanthan gum, and natural flavors. Breading set in vegetable oil.)","VEGETARIAN":"FALSE","VEGAN":"FALSE","MOLLIE KATZEN":"FALSE","LOCAL":"FALSE","ORGANIC":"FALSE"})
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-[[]]
+
 PHP
 ^^^
 
@@ -906,7 +906,7 @@ Array
 )
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-[[]]
+
 Examples
 --------
 
@@ -949,7 +949,7 @@ http://food.cs50.net/api/1.3/facts?id=117003&portion=1&output=jsonp&callback=par
 http://food.cs50.net/api/1.3/recipe?id=117003&output=jsonp&callback=parseResponse
 ** http://food.cs50.net/api/1.3/recipe?id=117003&output=php
 
-[[]]
+
 See Also
 --------
 
@@ -960,7 +960,7 @@ See Also
 * link:Screen Scraping[Screen Scraping]
 * link:Neat_Tricks#Unserializing_PHP[Unserializing PHP]
 
-[[]]
+
 Related APIs
 ------------
 
@@ -972,7 +972,7 @@ Related APIs
 * link:HarvardTweets API[HarvardTweets API]
 * link:Shuttleboy API[Shuttleboy API]
 
-[[]]
+
 External Links
 --------------
 
@@ -984,7 +984,7 @@ values]
 * http://php.net/manual/en/function.unserialize.php[PHP: unserialize]
 * http://en.wikipedia.org/wiki/Web_scraping[Web scraping]
 
-[[]]
+
 Changelog
 ---------
 

@@ -8,7 +8,7 @@ await you when you use the Google Maps API! This tutorial is designed to
 empower you to use the Google Maps API for JavaScript to add this
 content to your website.
 
-[[]]
+
 Resources
 ---------
 
@@ -19,7 +19,7 @@ Maps API Reference]
 https://developers.google.com/maps/documentation/javascript/tutorial[Getting
 Started]
 
-[[]]
+
 First Things First
 ------------------
 
@@ -27,7 +27,7 @@ Before you are able to access Google's API, you'll need to
 https://developers.google.com/maps/documentation/javascript/tutorial#api_key[get
 an API key] from Google.
 
-[[]]
+
 An Example Map
 --------------
 
@@ -92,7 +92,7 @@ which is what those function arguments are for. Note that two arguments
 are passed to this function: the DOM element where the map will live,
 and then the options.
 
-[[]]
+
 Tasks
 ~~~~~
 
@@ -143,7 +143,7 @@ You should end up with source code that looks like this:
 </html>
 ----------------------------------------------------------------------------------
 
-[[]]
+
 Discussion
 ~~~~~~~~~~
 
@@ -163,7 +163,7 @@ inside of an function (remember, called `initialize`)? What happens if
 we don't? Think about the location of that code in the file and how
 JavaScript is evaluated on a webpage.
 
-[[]]
+
 Markers
 -------
 
@@ -243,7 +243,7 @@ Putting this together with the previous example:
 </html>
 ------------------------------------------------------------------------------------------------
 
-[[]]
+
 Tasks
 ~~~~~
 
@@ -310,7 +310,7 @@ less hints this time.
 </html>
 -----------------------------------------------------------------------------------------------------------------------
 
-[[]]
+
 Discussion
 ~~~~~~~~~~
 
@@ -323,7 +323,7 @@ arguments (one for each "option")?
 not need an explicit constructor, while the `Marker` does? Why do you
 think that the `Icon` doesn't use an explicit constructor?
 
-[[]]
+
 Events
 ------
 
@@ -345,7 +345,7 @@ of the API reference] that documents the event-related functions.
 The training wheels are slowly coming off, so much less example code
 this time before you dive in!
 
-[[]]
+
 Tasks
 ~~~~~
 
@@ -436,7 +436,7 @@ function attached to markers could you use to stop the bouncing?
 </html>
 -----------------------------------------------------------------------------------------------------------------------
 
-[[]]
+
 Discussion
 ~~~~~~~~~~
 

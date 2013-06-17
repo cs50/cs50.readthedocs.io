@@ -3,15 +3,15 @@ tags: []
 title: Sorting_algorithms
 ---
 
-[[]]
+
 Insertion Sort
 ~~~~~~~~~~~~~~
 
-[[]]
+
 Bubble Sort
 ~~~~~~~~~~~
 
-[[]]
+
 Merge Sort
 ~~~~~~~~~~
 

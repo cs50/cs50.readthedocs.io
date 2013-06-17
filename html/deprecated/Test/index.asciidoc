@@ -17,7 +17,7 @@ http://code.google.com/apis/maps/documentation/overlays.html#CustomMapTiles[Cust
 map tiles] for the http://code.google.com/apis/maps/[Google Maps API]
 can be found in http://maps.cs50.net/images/tiles/campus/.
 
-[[]]
+
 Author
 ------
 
@@ -26,7 +26,7 @@ To report bugs or request features, contact:
 mailto:malan@post.harvard.edu[David J. Malan '99] +
 http://www.cs.harvard.edu/malan/
 
-[[]]
+
 License
 -------
 
@@ -38,11 +38,11 @@ your data to this API, as by including a link to
 http://maps.cs50.net/[HarvardMaps] in your own work. To discuss
 commercial purposes, contact the author.
 
-[[]]
+
 Methods
 -------
 
-[[]]
+
 buildings
 ~~~~~~~~~
 
@@ -70,7 +70,7 @@ Request].
 
 Note that building IDs are not strictly numeric; some are alphanumeric.
 
-[[]]
+
 CSV
 ^^^
 
@@ -90,7 +90,7 @@ Fields' order may change over time, so do not hardcode indices into your
 own code. Use that first row to determine fields' indices dynamically,
 per this article on link:Neat_Tricks#Parsing_CSV[parsing CSV].
 
-[[]]
+
 JSON
 ^^^^
 
@@ -116,7 +116,7 @@ response wil be an array of objects, per the below:
 ]
 -----------------------------
 
-[[]]
+
 PHP
 ^^^
 
@@ -156,7 +156,7 @@ Array
 )
 -----------------------------------
 
-[[]]
+
 Examples
 --------
 
@@ -167,14 +167,14 @@ Examples
 * Returns Mather House:
 ** http://maps.cs50.net/api/1.0/buildings?bid=991&output=csv
 
-[[]]
+
 See Also
 --------
 
 * link:Neat_Tricks#Parsing_CSV[Parsing CSV]
 * link:Neat_Tricks#Unserializing_PHP[Unserializing PHP]
 
-[[]]
+
 Related APIs
 ------------
 
@@ -185,7 +185,7 @@ Related APIs
 * link:HarvardTweets API[HarvardTweets API]
 * link:Shuttleboy API[Shuttleboy API]
 
-[[]]
+
 External Links
 --------------
 

@@ -17,11 +17,11 @@ with hardware virtualization enabled, though, virtual machines might
 still feel slow if your computer is a few years old, has a CPU that's
 only 1GHz or so, or has only 1GB or so of RAM.*
 
-[[]]
+
 How to Check if Hardware Virtualization is Already Enabled
 ----------------------------------------------------------
 
-[[]]
+
 Windows
 ~~~~~~~
 
@@ -40,25 +40,25 @@ which case you can enable it per link:#_[the directions below].
 in which case hardware virtualization is indeed already enabled.
 7.  Select *No, I don't want to send data*, then click *OK*.
 
-[[]]
+
 Mac OS
 ~~~~~~
 
 Hardware virtualization should be enabled by default on any
 (Intel-based) Mac manufactured in the past few years!
 
-[[]]
+
 Linux
 ~~~~~
 
 It depends on your distribution of Linux. It's probably easiest to just
 try to enable it, per the link:#_windows.2c_linux[directions below].
 
-[[]]
+
 How to Enable Hardware Virtualization
 -------------------------------------
 
-[[]]
+
 Windows, Linux
 ~~~~~~~~~~~~~~
 
@@ -85,7 +85,7 @@ Just realize you might need to stray from these instructions on your own
 computer. And realize that your computer might not even support hardware
 virtualization!
 
-[[]]
+
 Dell
 ^^^^
 
@@ -100,7 +100,7 @@ Virtualization
 7.  Fully shut down (power off), wait a few seconds, and restart your
 computer
 
-[[]]
+
 HP
 ^^
 
@@ -114,7 +114,7 @@ HP
 8.  Fully shut down (power off), wait a few seconds, and restart your
 computer
 
-[[]]
+
 Lenovo
 ^^^^^^
 
@@ -130,7 +130,7 @@ Lenovo
 10. Fully shut down (power off), wait a few seconds, and restart your
 computer
 
-[[]]
+
 Panasonic
 ^^^^^^^^^
 
@@ -142,7 +142,7 @@ Panasonic
 5.  Select "Yes" in confirmation menu
 6.  Depress Enter to exit confirmation menu.
 
-[[]]
+
 Mac OS
 ~~~~~~
 

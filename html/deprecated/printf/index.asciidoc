@@ -55,7 +55,7 @@ printf("%s now has %d lives.\n", "David", i * j);
 will print to screen `David now has 30 lives.` using the hard-coded
 string and the product of `j` and `i`.
 
-[[]]
+
 Escape Characters
 ~~~~~~~~~~~~~~~~~
 

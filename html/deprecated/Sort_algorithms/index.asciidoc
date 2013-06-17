@@ -5,7 +5,7 @@ title: Sort_algorithms
 
 __FORCETOC__
 
-[[]]
+
 Bubble Sort
 -----------
 
@@ -56,7 +56,7 @@ we know the array is already sorted. Thus, if we keep track of the
 number of swaps that are made, bubble sort is in
 latexmath:[$\Omega(n^2)$].
 
-[[]]
+
 Insertion Sort
 --------------
 
@@ -89,7 +89,7 @@ to be swapped anymore.
 In the best case (the array is already sorted), this algorithm runs in
 linear time (latexmath:[$\Omega(n)$]).
 
-[[]]
+
 Selection Sort
 --------------
 
@@ -119,7 +119,7 @@ steps because the computer has no way of knowing on any iteration
 through the array that the smallest number is already in the correct
 position.
 
-[[]]
+
 Merge Sort
 ----------
 

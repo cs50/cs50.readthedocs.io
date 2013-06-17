@@ -63,7 +63,7 @@ score._ We want their focus to remain on the big picture.
 * Hang on to the PDFs too; we'll eventually upload them to the cloud for
 archival.
 
-[[]]
+
 Fetching Submissions and Making PDFs
 ------------------------------------
 
@@ -98,7 +98,7 @@ you can customize the set of source files to collect, and you can also
 fiddle with the information printed on the cover sheet. To read about
 all of the options, run `fetch` or `render` without any arguments.
 
-[[]]
+
 Grading Scripts
 ---------------
 
@@ -142,46 +142,46 @@ with the internals of the test system, you can look (but please don't
 change) the files in ~mtucker/personal/scripts/trunk/ps1-scripts or
 direct questions to mtucker@eecs.harvard.edu.
 
-[[]]
+
 standard edition
 ----------------
 
-[[]]
+
 hello.c
 ~~~~~~~
 
 It's okay if a student didn't actually submit `hello.c`, since it was
 just a warm-up exercise.
 
-[[]]
+
 Correctness
 ^^^^^^^^^^^
 
 Not scored.
 
-[[]]
+
 Design
 ^^^^^^
 
 Not scored.
 
-[[]]
+
 Style
 ^^^^^
 
 Not scored. Comment on PDF only if applicable.
 
-[[]]
+
 skittles.c
 ~~~~~~~~~~
 
-[[]]
+
 Correctness
 ^^^^^^^^^^^
 
 See Google Spreadsheet.
 
-[[]]
+
 Design
 ^^^^^^
 
@@ -189,24 +189,24 @@ Did they use a looping construct in the "right" way? Some students might
 have implemented a function besides main. That's fine but was it
 necessary? Perhaps pose the question.
 
-[[]]
+
 Style
 ^^^^^
 
 Program should have at least a few comments. Variables should be aptly
 named.
 
-[[]]
+
 greedy.c
 ~~~~~~~~
 
-[[]]
+
 Correctness
 ^^^^^^^^^^^
 
 See Google Spreadsheet.
 
-[[]]
+
 Design
 ^^^^^^
 
@@ -215,92 +215,92 @@ is okay, I think, for such a short program. Using a function or array in
 some fashion is probably fine too. Could the student have implemented
 the program more cleanly?
 
-[[]]
+
 Style
 ^^^^^
 
 Program should have at least a few comments. Variables should be aptly
 named.
 
-[[]]
+
 chart.c
 ~~~~~~~
 
-[[]]
+
 Correctness
 ^^^^^^^^^^^
 
 See Google Spreadsheet.
 
-[[]]
+
 Design
 ^^^^^^
 
 Is program's design pretty clean? Unnecessarily complicated?
 
-[[]]
+
 Style
 ^^^^^
 
-[[]]
+
 Hacker Edition
 --------------
 
-[[]]
+
 hello.c
 ~~~~~~~
 
 It's okay if a student didn't actually submit `hello.c`, since it was
 just a warm-up exercise.
 
-[[]]
+
 Correctness
 ^^^^^^^^^^^
 
 Not scored.
 
-[[]]
+
 Design
 ^^^^^^
 
 Not scored.
 
-[[]]
+
 Style
 ^^^^^
 
 Not scored. Comment on PDF only if applicable.
 
-[[]]
+
 skittles.c
 ~~~~~~~~~~
 
 See link:#_standard_edition[standard edition].
 
-[[]]
+
 credit.c
 ~~~~~~~~
 
-[[]]
+
 Correctness
 ^^^^^^^^^^^
 
 See Google Spreadsheet.
 
-[[]]
+
 Design
 ^^^^^^
 
 Clean? Overly complicated?
 
-[[]]
+
 Style
 ^^^^^
 
 Program should have at least a few comments. Variables should be aptly
 named.
 
-[[]]
+
 chart.c
 ~~~~~~~
 

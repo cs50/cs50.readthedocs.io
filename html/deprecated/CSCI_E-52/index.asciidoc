@@ -12,7 +12,7 @@ syllabus for both courses lives at https://www.cs50.net/syllabus/.
 However, below are exceptions to the syllabus for students enrolled in
 CSCI E-52.
 
-[[]]
+
 CS50 Fair
 ~~~~~~~~~
 
@@ -20,7 +20,7 @@ Students enrolled in CSCI E-52 are welcome to attend the
 http://fair.cs50.net/[CS50 Fair]. We will solicit RSVPs one or more
 weeks before the Fair itself so that we know whom to expect.
 
-[[]]
+
 CS50 Hackathon
 ~~~~~~~~~~~~~~
 
@@ -29,7 +29,7 @@ http://hackathon.cs50.net/[CS50 Hackathon]. However, attendance might be
 lotteried based on capacity. We will solicit RSVPs one or more weeks
 before the Hackathon itself so that we know whom to expect.
 
-[[]]
+
 Grades
 ~~~~~~
 
@@ -38,7 +38,7 @@ noncredit, or undergraduate credit from
 http://extension.harvard.edu/[Harvard Extension School]. *Pass/Fail is
 not an option through Harvard Extension School.*
 
-[[]]
+
 Lectures
 ~~~~~~~~
 
@@ -47,7 +47,7 @@ https://www.cs50.net/lectures/[lectures] in Sanders Theater in
 http://maps.cs50.net/#f=search&ll=42.37411257777324%2C-71.11905097961426&q=Memorial+Hall&z=16[Memorial
 Hall] or watch them on video.
 
-[[]]
+
 Problem Sets
 ~~~~~~~~~~~~
 
@@ -58,7 +58,7 @@ students enrolled in CSCI E-52 are thus always due on Fridays at noon
 ET. *Late days cannot be spent to extend deadlines beyond noon ET on
 Fridays.*
 
-[[]]
+
 Quizzes
 ~~~~~~~
 
@@ -90,7 +90,7 @@ each quiz. If taking the quizzes remotely, note that *your proctor will
 not be able to download the quizzes until 1:10pm ET on the quiz dates,
 even though the Extension School's website might indicate 12:00pm ET.*
 
-[[]]
+
 Sections
 ~~~~~~~~
 

@@ -8,11 +8,11 @@ some setup tips designed to help you configure the CS50 Appliance for a
 PHP/MySQL project. Also included is some guidance on how to work with
 the framework provided by Problem Set 7.
 
-[[]]
+
 Configuring the Appliance
 -------------------------
 
-[[]]
+
 PHP/Hosting
 ^^^^^^^^^^^
 
@@ -113,7 +113,7 @@ code, refer to Zamyla's Problem Set 7
 http://cs50.tv/2012/fall/psets/7/walkthrough7-720p.mp4[walkthrough], or
 review your own submission. Or see the section in this article.
 
-[[]]
+
 External Access
 ^^^^^^^^^^^^^^^
 
@@ -144,7 +144,7 @@ replacing `WWW.XXX.YYY.ZZZ` with the IP address you found earlier.
 \4. Save, and restart your browser (you may need to clear its DNS
 cache). See if you can visit your project at `http://project`!
 
-[[]]
+
 SQL
 ^^^
 
@@ -208,7 +208,7 @@ database. You can login to PHPMyAdmin (`http://project/phpmyadmin`) to
 configure and manage the database. Note that the database will be called
 `project`.
 
-[[]]
+
 JavaScript
 ^^^^^^^^^^
 
@@ -224,7 +224,7 @@ http://jquery.com/[jQuery], a JavaScript library. You can take advantage
 of jQuery to make some tasks in JavaScript, like DOM manipulation and
 making Ajax calls, easier.
 
-[[]]
+
 CSS
 ^^^
 
@@ -240,11 +240,11 @@ Note that the distribution code also includes Bootstrap, a CSS library.
 Find out more about Bootstrap
 http://twitter.github.com/bootstrap/[here].
 
-[[]]
+
 Working with Problem Set 7 Template Code
 ----------------------------------------
 
-[[]]
+
 Adding a Navigation Bar
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -281,7 +281,7 @@ you'd like; this is just a suggested model for getting started.
 
 To add a page, add another item to this unordered list!
 
-[[]]
+
 Adding a New Page
 ~~~~~~~~~~~~~~~~~
 
@@ -292,7 +292,7 @@ Suppose you want to add a new page to the website, available at
 To conform to the structure of the Problem Set 7's code (and to MVC in
 general), your best bet is to add a *controller* and a *view*.
 
-[[]]
+
 Setting Up the View
 ^^^^^^^^^^^^^^^^^^^
 
@@ -313,7 +313,7 @@ name is the name you previously chose.
 
 \4. For now, add some arbitrary text content, and save.
 
-[[]]
+
 Setting Up the Controller
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -375,7 +375,7 @@ displays when you visit `http://project/my_new_page.php`?
 
 \6. For a more complex example of a controller, see `login.php`.
 
-[[]]
+
 Design
 ^^^^^^
 
@@ -391,7 +391,7 @@ interested in displaying a static page. That's fine.
 You may need different views for different cases; that's okay. There are
 just certain times when this is more appropriate than others.
 
-[[]]
+
 Using the `query` Function
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -399,7 +399,7 @@ As part of Problem Set 7's distribution code, you get access to a
 wonderful `query` function, which allows you to retrieve information
 from your database and update the state of your database more easily!
 
-[[]]
+
 A Sample `SELECT` Query Operation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -435,7 +435,7 @@ else
 }
 -----------------------------------------------------------------------------------------------------------------
 
-[[]]
+
 Using Variables in a Query Function Call
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -466,7 +466,7 @@ Don't think that this is limited to variables you've declared; you can
 also use information from the superglobal arrays, like `$_POST` and
 `$_GET`!
 
-[[]]
+
 Errors
 ^^^^^^
 

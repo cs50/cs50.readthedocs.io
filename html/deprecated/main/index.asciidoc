@@ -12,7 +12,7 @@ combination of ".c" and ".h" files and then included (using `#include`)
 in the top of another ".c" file, which in turn must have a `main`
 function
 
-[[]]
+
 Parameters
 ----------
 
@@ -21,7 +21,7 @@ that are passed into the program. There are two different sets of
 parameters that one should use in C, "`int argc, char *argv[]`" and
 "`void`".
 
-[[]]
+
 int main(int argc, char *argv[])
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -54,7 +54,7 @@ actually need to know what those arguments are, you *can* use
 `int main(int argc)`. However, if you need to know *what* the arguments
 are, you *must* include both `int argc` and `char *argv[]`.
 
-[[]]
+
 int main(void)
 ~~~~~~~~~~~~~~
 
@@ -65,7 +65,7 @@ When you use `void` as the parameter for `main`, you are automatically
 ignoring any command line arguments passed in with the program; they are
 entirely inaccessible.
 
-[[]]
+
 Return value
 ------------
 

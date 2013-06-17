@@ -18,7 +18,7 @@ HarvardTweets knows about tweets from 2009-10-05 through the current
 date. New tweets may take up to five minutes to appear in
 HarvardTweets's database.
 
-[[]]
+
 Author
 ------
 
@@ -27,7 +27,7 @@ To report bugs or request features, contact:
 mailto:malan@post.harvard.edu[David J. Malan '99] +
 http://www.cs.harvard.edu/malan/
 
-[[]]
+
 License
 -------
 
@@ -39,14 +39,14 @@ your data to this API, as by including a link to
 http://tweets.cs50.net/[HarvardTweets] in your own work. For approval of
 commercial purposes, contact the author.
 
-[[]]
+
 Methods
 -------
 
 All methods support
 http://en.wikipedia.org/wiki/Cross-Origin_Resource_Sharing[CORS].
 
-[[]]
+
 tweeters
 ~~~~~~~~
 
@@ -76,7 +76,7 @@ code
 http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1[400 Bad
 Request].
 
-[[]]
+
 CSV
 ^^^
 
@@ -96,7 +96,7 @@ Fields' order may change over time, so do not hardcode indices into your
 own code. Use that first row to determine fields' indices dynamically,
 per this article on link:Neat_Tricks#Parsing_CSV[parsing CSV].
 
-[[]]
+
 JSON
 ^^^^
 
@@ -124,7 +124,7 @@ the response wil be an array of objects, per the below:
 ]
 ------------------------------------------------------------------------------------------------------------------------------
 
-[[]]
+
 JSONP
 ^^^^^
 
@@ -137,7 +137,7 @@ the response wil be an array of objects, per the below:
 parseResponse([{"screen_name":"asellerg","name":"Andrew Sellergren","url":"","description":"","profile_image_url":"http:\/\/a3.twimg.com\/profile_images\/604140089\/ls_5276_lance7_normal.jpg"},{"screen_name":"Harvard","name":"Harvard University","url":"http:\/\/harvard.edu","description":"Highlighting advances in teaching and research excellence across Harvard University","profile_image_url":"http:\/\/a1.twimg.com\/profile_images\/228702720\/Mod_Color_Harvard_Shield_small_bigger_normal.jpg"}])
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-[[]]
+
 PHP
 ^^^
 
@@ -179,7 +179,7 @@ Array
 )
 --------------------------------------------------------------------------------------------------------------------------------
 
-[[]]
+
 tweets
 ~~~~~~
 
@@ -229,7 +229,7 @@ Request].
 
 Responses include no more than 256 tweets.
 
-[[]]
+
 CSV
 ^^^
 
@@ -249,7 +249,7 @@ Fields' order may change over time, so do not hardcode indices into your
 own code. Use that first row to determine fields' indices dynamically,
 per this article on link:Neat_Tricks#Parsing_CSV[parsing CSV].
 
-[[]]
+
 JSON
 ^^^^
 
@@ -277,7 +277,7 @@ response wil be an array of objects, per the below:
 ]
 ----------------------------------------------------------------------------------------------------------------
 
-[[]]
+
 JSONP
 ^^^^^
 
@@ -290,7 +290,7 @@ the response wil be an array of objects, per the below:
 parseResponse([{"id":"4589094829","from_user":"asellerg","to_user":"coleironman","text":"@coleironman Yeah, man, she's a beaut!  You around this week (before Thursday) to go for a ride?","created_at":"2009-10-03T18:30:22"},{"id":"4572116596","from_user":"asellerg","to_user":"","text":"http:\/\/twitpic.com\/k1tcd - Race tomorrow.","created_at":"2009-10-03T00:24:40"}])
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-[[]]
+
 PHP
 ^^^
 
@@ -332,7 +332,7 @@ Array
 )
 ----------------------------------------------------------------------------------------------------------------------
 
-[[]]
+
 Examples
 --------
 
@@ -361,7 +361,7 @@ http://tweets.cs50.net/api/1.1/tweets?sdt=2009-11-11&edt=2009-11-11&output=php
 **
 http://tweets.cs50.net/api/1.1/tweets?sdt=2009-11-11&edt=2009-11-11&output=rss
 
-[[]]
+
 See Also
 --------
 
@@ -371,7 +371,7 @@ See Also
 * link:Neat_Tricks#Parsing_RSS[Parsing RSS]
 * link:Neat_Tricks#Unserializing_PHP[Unserializing PHP]
 
-[[]]
+
 Related APIs
 ------------
 
@@ -383,7 +383,7 @@ Related APIs
 * link:HarvardNews API[HarvardNews API]
 * link:Shuttleboy API[Shuttleboy API]
 
-[[]]
+
 External Links
 --------------
 
@@ -395,7 +395,7 @@ values]
 * http://php.net/manual/en/function.unserialize.php[PHP: unserialize]
 * http://en.wikipedia.org/wiki/RSS[RSS]
 
-[[]]
+
 Changelog
 ---------
 

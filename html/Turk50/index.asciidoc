@@ -23,14 +23,14 @@ service], it requires http://www.php.net/downloads.php[PHP 5.0.1] or
 higher as well as PHP's http://php.net/manual/en/book.soap.php[SOAP
 module].
 
-[[]]
+
 Author
 ------
 
 mailto:dmalan@harvard.edu[David J. Malan '99] +
 http://www.cs.harvard.edu/malan/
 
-[[]]
+
 License
 -------
 
@@ -41,7 +41,7 @@ use it for commercial and non-commercial purposes so long as you
 acknowledge this library, as by including a link to
 http://wiki.cs50.net/Turk50[Turk50] in your own work.
 
-[[]]
+
 Background
 ----------
 
@@ -58,7 +58,7 @@ Guide]
 3.  http://docs.amazonwebservices.com/AWSMturkAPI/2008-08-02/[API
 Reference]
 
-[[]]
+
 Installation
 ------------
 
@@ -78,7 +78,7 @@ Note that, for efficiency's sake, `turk50-1.0.zip` includes version
 2008-08-02 of `AWSMechanicalTurkRequester.wsdl`; if you delete that
 file, Turk50 will grab the latest version via HTTP.
 
-[[]]
+
 Usage
 -----
 
@@ -157,7 +157,7 @@ whose parameters and responses are documented in the
 http://docs.amazonwebservices.com/AWSMturkAPI/2008-08-02/[API
 reference].
 
-[[]]
+
 Examples
 ~~~~~~~~
 
@@ -165,7 +165,7 @@ Each of the examples below assume that `AWSAccessKeyId` and
 `AWSSecretAccessKeyId` are constants defined as strings (by you)
 elsewhere. And each uses, by default, AWS's sandbox.
 
-[[]]
+
 GetAccountBalance
 ^^^^^^^^^^^^^^^^^
 
@@ -277,7 +277,7 @@ Guide]'s discussion of
 http://docs.amazonwebservices.com/AWSMechanicalTurkRequester/2008-08-02/MakingRequests_UnderstandingResponsesArticle.html[Responses]
 for more details.
 
-[[]]
+
 CreateHIT
 ^^^^^^^^^
 
@@ -381,7 +381,7 @@ $Request = array(
 $CreateHITResponse = $turk50->CreateHIT($Request);
 --------------------------------------------------------------------------------------------------------------------------------
 
-[[]]
+
 Support
 -------
 

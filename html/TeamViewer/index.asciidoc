@@ -15,11 +15,11 @@ the old one no longer works.
 If you only wish to share your terminal window with CS50 staff, you
 should use tunnel50 instead.
 
-[[]]
+
 How to Use
 ----------
 
-[[]]
+
 Inside CS50 Appliance
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -36,7 +36,7 @@ session* should be an *ID* and *Password*. Provide CS50 staff with that
 ID and password (as via email, IM, or a private post to
 http://help.cs50.net/[help.cs50.net]).
 
-[[]]
+
 On Windows
 ~~~~~~~~~~
 
@@ -68,7 +68,7 @@ icon on your desktop. A window entitled *TeamViewer* should appear.
 Provide CS50 staff with that ID and password (as via email, IM, or a
 private post to http://help.cs50.net/[help.cs50.net]).
 
-[[]]
+
 On Mac OS
 ~~~~~~~~~
 
@@ -97,7 +97,7 @@ Remote Control* should be an *ID* and *Password*. Provide CS50 staff
 with that ID and password (as via email, IM, or a private post to
 http://help.cs50.net/[help.cs50.net]).
 
-[[]]
+
 On Linux
 ~~~~~~~~
 

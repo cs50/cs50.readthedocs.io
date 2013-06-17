@@ -3,7 +3,7 @@ tags: []
 title: ASCII
 ---
 
-[[]]
+
 About
 ~~~~~
 
@@ -25,7 +25,7 @@ The ASCII character set includes lower- and upper-case letters (a-z,
 A-Z), numbers (0-9), punctuation, and various other non-printable
 characters like a link:\n[new line].
 
-[[]]
+
 Table
 ~~~~~
 
@@ -41,7 +41,7 @@ non-printing characters on this table. If you accidentally try to print
 out a character with a value 7, for example, you might get unexpected or
 strange results.
 
-[[]]
+
 Usage
 ~~~~~
 

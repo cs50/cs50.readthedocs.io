@@ -7,7 +7,7 @@ The CS50 Library is a suite of C, Ruby, PHP, and Python code designed to
 simplify certain tasks, particularly user input (for C) and
 authentication (for PHP, Python, and Ruby).
 
-[[]]
+
 C
 -
 
@@ -21,11 +21,11 @@ link:CS50 Appliance[CS50 Appliance]*, as it comes preconfigured not only
 with the CS50 Library for C but also with everything else that you need
 to take (or "take") CS50, including `gcc`, `gdb`, and more.
 
-[[]]
+
 Installation
 ~~~~~~~~~~~~
 
-[[]]
+
 Linux
 ^^^^^
 
@@ -41,7 +41,7 @@ Note the use of angled brackets instead of quotes.
 
 But first you must install the library itself, per the below.
 
-[[]]
+
 CentOS, Fedora, RedHat
 ++++++++++++++++++++++
 
@@ -71,7 +71,7 @@ cd ..
 rm -rf library50-c-4
 ---------------------------------------------------------
 
-[[]]
+
 Debian, Ubuntu
 ++++++++++++++
 
@@ -101,7 +101,7 @@ cd ..
 rm -rf library50-c-4
 ---------------------------------------------------------
 
-[[]]
+
 Mac OS
 ^^^^^^
 
@@ -136,7 +136,7 @@ your own code with:
 
 Note the use of angled brackets instead of quotes.
 
-[[]]
+
 Windows
 ^^^^^^^
 
@@ -157,7 +157,7 @@ your own code with:
 
 Note the use of quotes instead of angled brackets.
 
-[[]]
+
 Changelog
 ~~~~~~~~~
 
@@ -169,7 +169,7 @@ http://www.opensource.org/licenses/BSD-3-Clause[BSD 3-Clause] license.
 * 4
 ** Transitioned to Fall 2012's style.
 
-[[]]
+
 PHP
 ---
 
@@ -181,11 +181,11 @@ You'll find that we've included Janrain's
 https://github.com/openid/php-openid[Janrain OpenID Library] for PHP5 in
 the CS50 Library's own `share` folder.
 
-[[]]
+
 Installation
 ~~~~~~~~~~~~
 
-[[]]
+
 Linux
 ^^^^^
 
@@ -200,7 +200,7 @@ require("CS50/CS50.php");
 
 See CS50 ID's link:CS50 ID[HOWTO] for usage.
 
-[[]]
+
 CentOS, RedHat
 ++++++++++++++
 
@@ -211,7 +211,7 @@ rpm -ivh library50-php-2-0.noarch.rpm
 rm -f library50-php-2-0.noarch.rpm
 ----------------------------------------------------------------------
 
-[[]]
+
 Fedora
 ++++++
 
@@ -220,7 +220,7 @@ Fedora
 yum install http://mirror.cs50.net/library50/php/library50-php-2-0.noarch.rpm
 -----------------------------------------------------------------------------
 
-[[]]
+
 Debian, Ubuntu
 ++++++++++++++
 
@@ -236,7 +236,7 @@ mv library50-php-3/CS50 /usr/share/php/
 rm -rf library50-php-3
 -------------------------------------------------------------
 
-[[]]
+
 Mac OS
 ^^^^^^
 
@@ -255,7 +255,7 @@ require("/path/to/CS50/CS50.php");
 
 See CS50 ID's link:CS50 ID[HOWTO] for usage.
 
-[[]]
+
 Windows
 ^^^^^^^
 
@@ -275,7 +275,7 @@ require("/path/to/CS50/CS50.php");
 
 See CS50 ID's link:CS50 ID[HOWTO] for usage.
 
-[[]]
+
 Changelog
 ~~~~~~~~~
 
@@ -297,13 +297,13 @@ http://www.opensource.org/licenses/BSD-3-Clause[BSD 3-Clause] license.
 ** Updated Janrain library to 11bd8e4277.
 ** Removed .git directory from Janrain library.
 
-[[]]
+
 Python
 ------
 
 _Coming Soon_
 
-[[]]
+
 Ruby
 ----
 

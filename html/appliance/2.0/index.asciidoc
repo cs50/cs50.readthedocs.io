@@ -38,7 +38,7 @@ below. Do turn to the course's http://cs50.tv/2009/fall/#r=group[Google
 Group] if you run into problems, and we'll do our best to improve the
 experience.
 
-[[]]
+
 Cheatsheet
 ----------
 
@@ -79,11 +79,11 @@ other OS
 
 |=======================================================================
 
-[[]]
+
 Instructions
 ------------
 
-[[]]
+
 How to Install Appliance
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -106,7 +106,7 @@ appliance's settings. Click *Done*. Within a few seconds or minutes, you
 should see *CS50 Appliance* in VirtualBox's left-hand menu. Click it to
 highlight it, then click *Start*.
 
-[[]]
+
 How to Update Appliance
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -137,7 +137,7 @@ Updates* if any updates are available.
 sudo yum -y update
 ------------------
 
-[[]]
+
 How to Use Appliance
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -156,7 +156,7 @@ you. However, we installed as few programs as possible to keep the
 appliance small. You're welcome to install additional programs via *Menu
 > Administration > Add/Remove Applications*.
 
-[[]]
+
 How to Change Name
 ^^^^^^^^^^^^^^^^^^
 
@@ -180,7 +180,7 @@ under your new identity (instead of John Harvard's), execute
 and change `jharvard` to your own username. Then hit *ctrl-x*, then *y*,
 then *Enter* to save and quit.
 
-[[]]
+
 How to Change Password
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -203,7 +203,7 @@ way that only someone with access to your computer (e.g., you) can
 access the appliance. Even though the appliance can connect to the
 Internet, the Internet cannot connect to the appliance.
 
-[[]]
+
 How to Change Language
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -218,7 +218,7 @@ prompted, click *Import key*. You may need to wait for a bit as the
 language is installed. Then link:#__how_to_restart_appliance[restart the
 appliance] and log back in.
 
-[[]]
+
 How to Change Keyboard Layout
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -227,7 +227,7 @@ need!) to change your keyboard's layout. Select *Menu > Administration >
 Keyboard*. (To be clear, select *Administration*, not *Preferences*.)
 Select your preferred keyboard, then click *OK*.
 
-[[]]
+
 How to Change Time Zone
 ^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -236,7 +236,7 @@ change the appliance's timezone. Select *Menu > Administration > Date &
 Time*. Click the *Time Zone* tab, select the nearest city in your time
 zone, then click *OK*, leaving *System clock uses UTC* checked.
 
-[[]]
+
 How to Open a Terminal
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -260,7 +260,7 @@ If you don't have an account on `nice.fas.harvard.edu` or
 open a terminal instead (or you can link:#__how_to_ssh_to_appliance[SSH to
 the appliance]).
 
-[[]]
+
 How to SSH to Appliance
 ^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -275,7 +275,7 @@ If you'd instead like to SSH _from_ the appliance _to_ your computer
 appliance to *192.168.56.1*, which is the static IP address that
 VirtualBox has secretly assigned to your computer.
 
-[[]]
+
 How to Release Keyboard and Mouse
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -287,7 +287,7 @@ other OS, VirtualBox's host key is your keyboard's right-Control key.
 Once you hit that key, should be able to move your mouse anywhere on
 your screen.
 
-[[]]
+
 How to Change Host Key
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -304,7 +304,7 @@ that VirtualBox's main window (where you can select the CS50 Appliance
 from a list) is in the foreground, not the appliance's own window, else
 the *Preferences...* and/or *File* menu might not appear.
 
-[[]]
+
 How to Install Guest Additions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -342,7 +342,7 @@ link:#__how_to_release_keyboard_and_mouse[release your keyboard and mouse]
 first.) Then link:#__how_to_restart_appliance[restart the appliance] and
 log back in.
 
-[[]]
+
 How to Change Resolution
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -354,7 +354,7 @@ link:#__how_to_install_guest_additions[install guest additions] if you
 haven't already. Then you'll be able to click and drag the appliance's
 bottom-right corner to resize it.
 
-[[]]
+
 How to Enter/Exit Fullscreen Mode
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -380,7 +380,7 @@ resembles two squares).
 host key is your keyboard's left-Command key; on any other OS,
 VirtualBox's host key is your keyboard's right-Control key.)
 
-[[]]
+
 How to Enter/Exit Seamless Mode
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -407,14 +407,14 @@ together. (On a Mac, VirtualBox's host key is your keyboard's
 left-Command key; on any other OS, VirtualBox's host key is your
 keyboard's right-Control key.)
 
-[[]]
+
 How to Use phpMyAdmin
 ^^^^^^^^^^^^^^^^^^^^^
 
 Visit http://192.168.56.50/phpMyAdmin/ within the appliance or using
 your own computer's browser. Log in as prompted.
 
-[[]]
+
 How to Transfer Files between Appliance and Your Computer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -500,7 +500,7 @@ the appliance is running.
 3.  Click the little folder icon with a minus (-) sign.
 4.  Click *OK*.
 
-[[]]
+
 How to Access Appliance from Another Computer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -571,7 +571,7 @@ Administration > Network*, highlight *eth2* in the window that appears,
 click *Edit*, select *Statically set IP addresses*, and configure the
 interface as you see fit.
 
-[[]]
+
 How to Share Your Screen with Someone
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -603,7 +603,7 @@ computer (rather than from your own appliance) or from a mobile device,
 you can download TeamViewer for free for Android, iOS, Linux, Mac OS, or
 Windows from http://www.teamviewer.com/en/download.aspx.
 
-[[]]
+
 How to Disable Automatic Login
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -616,7 +616,7 @@ execute:
 Then link:#__how_to_restart_appliance[restart the appliance]. You should
 now see a login prompt instead of John Harvard's desktop.
 
-[[]]
+
 How to Log Out of Appliance
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -624,7 +624,7 @@ To log out of the appliance, click
 image:Exit.png[Exit.png,title="image"] in the appliance's bottom-right
 corner, then click *Log Out*.
 
-[[]]
+
 How to Restart Appliance
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -639,7 +639,7 @@ inputting your password if prompted:
 sudo restart
 ------------
 
-[[]]
+
 How to Shut Down Appliance
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -654,7 +654,7 @@ inputting your password if prompted:
 sudo shutdown
 -------------
 
-[[]]
+
 How to Compile Source Code from Lectures
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -674,7 +674,7 @@ And you can then run the program with this command:
 
 `./a.out`
 
-[[]]
+
 Caveats
 ^^^^^^^
 
@@ -683,7 +683,7 @@ the appliance. If you run into a compilation error, simply turn to the
 course's http://cs50.net/2010/fall/#r=group[Google Group] for
 assistance!
 
-[[]]
+
 How to Do Problem Sets
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -719,7 +719,7 @@ And then "cd into" the unzipped directory with this command:
 
 Then proceed to follow the PDF's directions!
 
-[[]]
+
 Caveats
 ^^^^^^^
 
@@ -736,24 +736,24 @@ the appliance. If you run into a compilation error that's not discussed
 in the PDF, simply turn to the course's
 http://cs50.net/2010/fall/#r=group[Google Group] for assistance!
 
-[[]]
+
 Commercial Hypervisors
 ----------------------
 
 Although we recommend VirtualBox (because it's free and cross-platform),
 it's possible to use the CS50 Appliance with other hypervisors as well.
 
-[[]]
+
 How to Install Appliance
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-[[]]
+
 Parallels
 ^^^^^^^^^
 
 _Coming Soon_
 
-[[]]
+
 VMware Fusion
 ^^^^^^^^^^^^^
 
@@ -784,19 +784,19 @@ within, and click *Open*. Within a few seconds or minutes, you should
 see *CS50 Appliance* in VMware Fusion's left-hand menu; it should start
 automatically.
 
-[[]]
+
 VMware Server
 ^^^^^^^^^^^^^
 
 _Coming Soon_
 
-[[]]
+
 VMware Workstation
 ^^^^^^^^^^^^^^^^^^
 
 _Coming Soon_
 
-[[]]
+
 Implementation Details
 ----------------------
 
@@ -941,7 +941,7 @@ between that IDE Controller's ** and ** tags);
 *cs50-appliance-2.0.disk1.vmdk*, and the appliance is ready for
 distribution!
 
-[[]]
+
 Troubleshooting
 ---------------
 
@@ -949,11 +949,11 @@ If you are having problems that aren't addressed here or under
 link:#__known_issues[Known Issues], turn to the course's
 http://cs50.tv/2010/fall/#r=group[Google Group] for help.
 
-[[]]
+
 Forgotten Login Password
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-[[]]
+
 jharvard
 ^^^^^^^^
 
@@ -977,7 +977,7 @@ prompted.
 
 You should then be able to log in as John Harvard again.
 
-[[]]
+
 root
 ^^^^
 
@@ -1015,7 +1015,7 @@ reboot
 +
 to restart the appliance.
 
-[[]]
+
 Forgotten MySQL Password
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1030,7 +1030,7 @@ below:
 That command will restore the appliance to "factory defaults." It will
 not delete any code that you've written.
 
-[[]]
+
 Known Issues
 ------------
 
@@ -1071,7 +1071,7 @@ Appliance will soon be released.
 * 2.0
 ** Appliance intentionally lacks `/home/cs50/`. To be added back in 2.1.
 
-[[]]
+
 Changelog
 ---------
 
@@ -1125,14 +1125,14 @@ phpMyAdmin executes as www-data.
 ** Customized phpMyAdmin.
 ** Restricted mod_suphp to `/home/*/public_html/`.
 
-[[]]
+
 Resources
 ---------
 
 * http://www.virtualbox.org/manual/UserManual.html[User Manual] for
 VirtualBox
 
-[[]]
+
 Acknowledgements
 ----------------
 

@@ -41,7 +41,7 @@ For instance, to ask the user a yes/no question several times throughout
 a program, you might write a helper function called `ask_yes_no()` to
 handle the dialog.
 
-[[]]
+
 The Anatomy of Functions
 ------------------------
 

@@ -38,7 +38,7 @@ migrate your site to a commercial web host or to
 http://www.hcs.harvard.edu/[HCS], as per link:Life_after_50[life after
 50].
 
-[[]]
+
 How to Buy a Domain Name
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -56,7 +56,7 @@ upsell you. No need to pay for email accounts, for hosting, for privacy
 (unless you want it), or for anything other than the domain name itself.
 Fight your way to the checkout!
 
-[[]]
+
 How to Configure DNS
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -93,7 +93,7 @@ as in the screenshot below.
 
 image:Alias.png[Alias.png,title="image"]
 
-[[]]
+
 How to Inform CS50 of Your Domain Name
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -103,7 +103,7 @@ link:#_how_to_configure_dns[configured DNS].
 
 Loading...
 
-[[]]
+
 How to Start Implementing Your Website
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

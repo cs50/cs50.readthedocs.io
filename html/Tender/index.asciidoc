@@ -12,7 +12,7 @@ that only staff can see. Tender calls threads "discussions," but you can
 also think of them as "tickets." To close a ticket, you "resolve" it in
 Tenderspeak.
 
-[[]]
+
 Quickstart Guide
 ----------------
 
@@ -84,7 +84,7 @@ to click *EDIT* or, per the link:#_quickstart_guide[Quickstart Guide],
 clicking *REMOVE*, but even then, probably best to *MAKE PRIVATE* and
 escalate to mailto:heads@cs50.net[heads@] for review.
 
-[[]]
+
 Markdown
 --------
 
@@ -100,7 +100,7 @@ discussion. Know that, for multiple lines of code, it's probably
 simplest (and prettiest) to surround them with `&lt;pre&gt;` and
 `&lt;/pre&gt;`.
 
-[[]]
+
 Email Preferences
 -----------------
 
@@ -125,7 +125,7 @@ As the footer suggests, you can execute all sorts of commands via email;
 just take care that any command (even if preceded or followed by your
 reply to a student) is on a line of its own.
 
-[[]]
+
 Commands
 ~~~~~~~~
 

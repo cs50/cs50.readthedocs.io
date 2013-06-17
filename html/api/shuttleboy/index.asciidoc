@@ -17,7 +17,7 @@ requests.
 Shuttleboy knows about shuttles through the end of the current school
 year.
 
-[[]]
+
 Author
 ------
 
@@ -27,7 +27,7 @@ David J. Malan '99 +
 [mailto:dmalan@harvard[mailto:dmalan@harvard].edu dmalan@harvard.edu] +
 http://www.cs.harvard.edu/malan/
 
-[[]]
+
 License
 -------
 
@@ -39,14 +39,14 @@ your data to this API, as by including a link to
 http://shuttleboy.cs50.net/[Shuttleboy] in your own work. To discuss
 commercial purposes, contact the author.
 
-[[]]
+
 Methods
 -------
 
 All methods support
 http://en.wikipedia.org/wiki/Cross-Origin_Resource_Sharing[CORS].
 
-[[]]
+
 stops
 ~~~~~
 
@@ -77,7 +77,7 @@ http://www.uos.harvard.edu/transportation/passenger_transport_services/[Universi
 Operations Services] tends rename stops each year, so try not to
 hardcode them into your own code (for very long).
 
-[[]]
+
 CSV
 ^^^
 
@@ -112,7 +112,7 @@ Fields' order may change over time, so do not hardcode indices into your
 own code. Use that first row to determine fields' indices dynamically,
 per this article on link:Neat_Tricks#Parsing_CSV[parsing CSV].
 
-[[]]
+
 JSON
 ^^^^
 
@@ -211,7 +211,7 @@ be an array of objects, per the below:
 ]
 -----------------------------------
 
-[[]]
+
 JSONP
 ^^^^^
 
@@ -224,7 +224,7 @@ the response will be a padded array of objects, per the below:
 parseResponse([{"stop":"114 Western Ave","lat":null,"lng":null},{"stop":"Boylston Gate","lat":"42.373078","lng":"-71.117578"},{"stop":"Harvard Square","lat":"42.373226","lng":"-71.119527"},{"stop":"HBS Rotary","lat":"42.365290","lng":"-71.122905"},{"stop":"HKS","lat":"42.371515","lng":"-71.120910"},{"stop":"i-Lab","lat":"42.364618","lng":"-71.123360"},{"stop":"Lamont Library","lat":"42.372862","lng":"-71.115046"},{"stop":"Mass Ave Garden St","lat":"42.375186","lng":"-71.119394"},{"stop":"Mather House","lat":"42.368719","lng":"-71.115170"},{"stop":"Maxwell Dworkin","lat":"42.378795","lng":"-71.116738"},{"stop":"Memorial Hall","lat":"42.376273","lng":"-71.114441"},{"stop":"Peabody Terrace","lat":"42.367034","lng":"-71.114936"},{"stop":"Pound Hall","lat":"42.378184","lng":"-71.119992"},{"stop":"Quad","lat":"42.381820","lng":"-71.125369"},{"stop":"Soldiers Field Park","lat":"42.364965","lng":"-71.120287"},{"stop":"Stadium","lat":"42.367007","lng":"-71.124832"},{"stop":"Winthrop House","lat":"42.370570","lng":"-71.119220"}])
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-[[]]
+
 PHP
 ^^^
 
@@ -366,7 +366,7 @@ Array
 )
 -----------------------------------------
 
-[[]]
+
 XML
 ^^^
 
@@ -467,7 +467,7 @@ is an *stop*, per the below:
 </stops>
 --------------------------------------
 
-[[]]
+
 trips
 ~~~~~
 
@@ -510,7 +510,7 @@ code
 http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1[400 Bad
 Request].
 
-[[]]
+
 CSV
 ^^^
 
@@ -532,7 +532,7 @@ Fields' order may change over time, so do not hardcode indices into your
 own code. Use that first row to determine fields' indices dynamically,
 per this article on link:Neat_Tricks#Parsing_CSV[parsing CSV].
 
-[[]]
+
 JSON
 ^^^^
 
@@ -562,7 +562,7 @@ the response wil be an array of objects, per the below:
 ]
 --------------------------------------
 
-[[]]
+
 JSONP
 ^^^^^
 
@@ -575,7 +575,7 @@ the response will be a padded array of objects, per the below:
 parseResponse([{"departs":"2009-12-02T05:40:00","arrives":"2009-12-02T05:55:00"},{"departs":"2009-12-02T06:10:00","arrives":"2009-12-02T06:25:00"},{"departs":"2009-12-02T06:35:00","arrives":"2009-12-02T06:50:00"},{"departs":"2009-12-02T07:00:00","arrives":"2009-12-02T07:20:00"}])
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-[[]]
+
 PHP
 ^^^
 
@@ -623,7 +623,7 @@ Array
 )
 --------------------------------------------
 
-[[]]
+
 XML
 ^^^
 
@@ -655,7 +655,7 @@ of whose children is an *trip*, per the below:
 </trips>
 ----------------------------------------------
 
-[[]]
+
 Examples
 --------
 
@@ -709,7 +709,7 @@ http://shuttleboy.cs50.net/api/1.2/trips?a=Quad&b=Stadium&sdt=2009-12-02T12:00:0
 **
 http://shuttleboy.cs50.net/api/1.2/trips?a=Quad&b=Stadium&sdt=2009-12-02T12:00:00&edt=2009-12-04T12:00:00&output=xml
 
-[[]]
+
 See Also
 --------
 
@@ -719,7 +719,7 @@ See Also
 * link:Neat_Tricks#Parsing_RSS[Parsing RSS]
 * link:Neat_Tricks#Unserializing_PHP[Unserializing PHP]
 
-[[]]
+
 Related APIs
 ------------
 
@@ -731,7 +731,7 @@ Related APIs
 * link:HarvardNews API[HarvardNews API]
 * link:HarvardTweets API[HarvardTweets API]
 
-[[]]
+
 External Links
 --------------
 
@@ -744,7 +744,7 @@ values]
 * http://en.wikipedia.org/wiki/RSS[RSS]
 * http://en.wikipedia.org/wiki/XML[XML]
 
-[[]]
+
 Changelog
 ---------
 

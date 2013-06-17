@@ -15,7 +15,7 @@ server that supports SFTP.
 Note that to actually compile or execute programs, you'll still want to
 SSH to the cloud with PuTTY.
 
-[[]]
+
 Opening a File on the Cloud
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -43,7 +43,7 @@ double-click it. The file should open.
 6.  Edit the file however you'd like. Anytime you select *File → Save*
 or hit ctrl-s, the file will be saved directly to the cloud.
 
-[[]]
+
 Saving a New File to the Cloud
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

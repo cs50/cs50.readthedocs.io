@@ -3,13 +3,13 @@ tags: []
 title: Cloud
 ---
 
-[[]]
+
 Getting Started
 ~~~~~~~~~~~~~~~
 
 `yum install alpine emacs git nano rsync unzip zip`
 
-[[]]
+
 Apache
 ~~~~~~
 
@@ -20,13 +20,13 @@ Apache
 `openssl req -new -key cloud.cs75.net.key -out cloud.cs75.net.csr` +
 `openssl rsa -in cloud.cs75.net.key -out cloud.cs75.net.key`
 
-[[]]
+
 KDE
 ~~~
 
 `yum install kate konsole* kdebase`
 
-[[]]
+
 LDAP
 ~~~~
 
@@ -37,20 +37,20 @@ First ran:
 
 Then ran `setup` to configure *Authentication*.
 
-[[]]
+
 MySQL
 ~~~~~
 
 `yum install php-mysql `
 
-[[]]
+
 NFS
 ~~~
 
 In `/etc/sysconfig/selinux`, changed `SELINUX=enforcing` to
 `SELINUX=disabled`.
 
-[[]]
+
 PHP
 ~~~
 
@@ -61,13 +61,13 @@ And uncommented `suPHP_AddHandler php5-script` in
 `/etc/httpd/conf.d/mod_suphp.conf`. And edited `/etc/php.ini` to have
 `session.save_path = "/tmp"`.
 
-[[]]
+
 phpMyAdmin
 ~~~~~~~~~~
 
 `yum install phpmyadmin`
 
-[[]]
+
 Virtualmin
 ~~~~~~~~~~
 
@@ -77,7 +77,7 @@ System Settings -> Server Templates -> Default -> Apache Website, then
 make sure "Automatically add appropriate SuExec directive" is set to
 "No".
 
-[[]]
+
 Usermin
 ~~~~~~~
 
@@ -87,7 +87,7 @@ Usermin
 `cp -a /etc/pam.d/sshd /etc/pam.d/usermin` +
 `service usermin restart`
 
-[[]]
+
 Webmin
 ~~~~~~
 

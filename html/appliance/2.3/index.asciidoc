@@ -37,7 +37,7 @@ Incidentally, the appliance is always work in progress, so please
 forgive any bugs! We'll document link:#_known_issues[known issues] down
 below.
 
-[[]]
+
 Cheatsheet
 ----------
 
@@ -82,11 +82,11 @@ once you create `public_html`, etc. |[multiblock cell omitted]
 other OS
 |=======================================================================
 
-[[]]
+
 Instructions
 ------------
 
-[[]]
+
 How to Install Appliance
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -109,7 +109,7 @@ few years.) Even with hardware virtualization enabled, though, virtual
 machines might still feel slow if your computer is a few years old, has
 a CPU that's only 1GHz or so, or has only 1GB or so of RAM.*
 
-[[]]
+
 VirtualBox
 ^^^^^^^^^^
 
@@ -140,7 +140,7 @@ left-hand menu after a few seconds or minutes. Click *CS50 Appliance
 That's it! To learn how to use the appliance, see further
 link:#_how_to_use_appliance[instructions] down below!
 
-[[]]
+
 How to Update Appliance
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -175,7 +175,7 @@ Don't worry if you see
 or similar on the screen for a minute or more; it takes a while to
 restart each of the appliance's services.
 
-[[]]
+
 How to Use Appliance
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -194,7 +194,7 @@ you. However, we installed as few programs as possible to keep the
 appliance small. You're welcome to install additional programs via *Menu
 > Administration > Add/Remove Applications*.
 
-[[]]
+
 How to Change Name
 ^^^^^^^^^^^^^^^^^^
 
@@ -221,7 +221,7 @@ under your new identity (instead of John Harvard's), execute
 and change `jharvard` to your own username. Then hit *ctrl-x*, then *y*,
 then *Enter* to save and quit.
 
-[[]]
+
 How to Change Password
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -244,7 +244,7 @@ way that only someone with access to your computer (e.g., you) can
 access the appliance. Even though the appliance can connect to the
 Internet, the Internet cannot connect to the appliance.
 
-[[]]
+
 How to Change Language
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -259,7 +259,7 @@ prompted, click *Import key*. You may need to wait for a bit as the
 language is installed. Then link:#_how_to_restart_appliance[restart the
 appliance] and log back in.
 
-[[]]
+
 How to Change Keyboard Layout
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -268,7 +268,7 @@ need!) to change your keyboard's layout. Select *Menu > Administration >
 Keyboard*. (To be clear, select *Administration*, not *Preferences*.)
 Select your preferred keyboard, then click *OK*.
 
-[[]]
+
 How to Change Time Zone
 ^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -277,7 +277,7 @@ change the appliance's timezone. Select *Menu > Administration > Date &
 Time*. Click the *Time Zone* tab, select the nearest city in your time
 zone, then click *OK*, leaving *System clock uses UTC* checked.
 
-[[]]
+
 How to Open a Terminal
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -296,7 +296,7 @@ panel.
 No matter the approach you take, it's in the terminal window that you'll
 be able to type commands like *cd*, `gcc`, `ls`, etc.
 
-[[]]
+
 How to SSH to Appliance
 ^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -314,7 +314,7 @@ VirtualBox has secretly assigned to your computer.
 *Note that, for security's sake, you can SSH to the appliance as
 `jharvard` but not as `root`.*
 
-[[]]
+
 How to Release Keyboard and Mouse
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -328,7 +328,7 @@ other OS, VirtualBox's host key is your keyboard's right-Control key.
 Once you hit that key, should be able to move your mouse anywhere on
 your screen.
 
-[[]]
+
 How to Change Host Key
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -345,7 +345,7 @@ that VirtualBox's main window (where you can select the CS50 Appliance
 from a list) is in the foreground, not the appliance's own window, else
 the *Preferences...* and/or *File* menu might not appear.
 
-[[]]
+
 How to Install Guest Additions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -387,7 +387,7 @@ link:#_how_to_release_keyboard_and_mouse[release your keyboard and mouse]
 first.) Then link:#_how_to_restart_appliance[restart the appliance] and
 log back in.
 
-[[]]
+
 How to Change Resolution
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -403,7 +403,7 @@ the appliance's resolution), you'll need to install
 link:#_how_to_install_guest_additions[install guest additions], if you
 haven't already.
 
-[[]]
+
 How to Change Volume
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -416,7 +416,7 @@ next to *Sound card*.
 6.  Click *Quit*.
 7.  Visit http://webhamster.com/ in Firefox to test!
 
-[[]]
+
 How to Enter/Exit Fullscreen Mode
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -442,7 +442,7 @@ resembles two squares).
 host key is your keyboard's left-Command key; on any other OS,
 VirtualBox's host key is your keyboard's right-Control key.)
 
-[[]]
+
 How to Enter/Exit Seamless Mode
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -469,7 +469,7 @@ together. (On a Mac, VirtualBox's host key is your keyboard's
 left-Command key; on any other OS, VirtualBox's host key is your
 keyboard's right-Control key.)
 
-[[]]
+
 How to Use phpMyAdmin
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -483,7 +483,7 @@ browser.
 No matter the approach you take, log in as *jharvard* (or, if necessary,
 *root*) with a password of *crimson* if prompted.
 
-[[]]
+
 How to Restore Snapshots
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -536,7 +536,7 @@ To see which intervals are actually available to you, execute:
 
 `ls /.snapshots/`
 
-[[]]
+
 How to Synchronize Files with Dropbox
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -600,7 +600,7 @@ https://www.dropbox.com/login. You can even undelete files.
 *Only those files and folders that you save in `~/Dropbox/` will be
 synchronized with your Dropbox account.*
 
-[[]]
+
 How to Transfer Files between Appliance and Your Computer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -619,7 +619,7 @@ otherwise known as http://en.wikipedia.org/wiki/CIFS[CIFS]) in a window
 on your own desktop, to and from which you can drag and drop files.
 Here's how, whether you run Linux, Mac OS, or Windows.
 
-[[]]
+
 Windows
 +++++++
 
@@ -634,7 +634,7 @@ Windows
 
 John Harvard's home directory should then open in a new window.
 
-[[]]
+
 Mac OS
 ++++++
 
@@ -650,11 +650,11 @@ Then click *Connect*.
 
 John Harvard's home directory should then open in a new window.
 
-[[]]
+
 Linux
 +++++
 
-[[]]
+
 GNOME
 
 1.  Select *Connect to Server...* from the *Places* menu.
@@ -670,7 +670,7 @@ GNOME
 
 John Harvard's home directory should then open in a new window.
 
-[[]]
+
 KDE
 
 1.  Open Dolphin (as via *Computer > Network*).
@@ -689,7 +689,7 @@ KDE
 
 John Harvard's home directory should then open in a new window.
 
-[[]]
+
 Xfce
 
 1.  Install `gvfs-smb` as `root` (as via `sudo`) if not installed
@@ -717,7 +717,7 @@ Manager*).
 8.  Check *Remember forever* if you'd like.
 9.  Click *Connect*.
 
-[[]]
+
 How to Access Appliance from Another Computer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -803,7 +803,7 @@ Administration > Network*, highlight *eth2* in the window that appears,
 click *Edit*, select *Statically set IP addresses*, and configure the
 interface as you see fit.
 
-[[]]
+
 How to Take a Screenshot
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -829,7 +829,7 @@ sending it as an attachment.
 You can also link:#_how_to_share_control_of_your_screen[share control of
 your screen] if you need someone else to see more than a screenshot.
 
-[[]]
+
 How to Share Control of Your Screen
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -863,7 +863,7 @@ computer (rather than from your own appliance) or from a mobile device,
 you can download TeamViewer for free for Android, iOS, Linux, Mac OS, or
 Windows from http://www.teamviewer.com/en/download.aspx.
 
-[[]]
+
 How to Disable Automatic Login
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -876,7 +876,7 @@ execute:
 Then link:#_how_to_restart_appliance[restart the appliance]. You should
 now see a login prompt instead of John Harvard's desktop.
 
-[[]]
+
 How to Log Out of Appliance
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -884,7 +884,7 @@ To log out of the appliance, click
 image:Exit.png[Exit.png,title="image"] in the appliance's bottom-right
 corner, then click *Log Out*.
 
-[[]]
+
 How to Restart Appliance
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -899,7 +899,7 @@ inputting your password if prompted:
 sudo restart
 ------------
 
-[[]]
+
 How to Shut Down Appliance
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -914,7 +914,7 @@ inputting your password if prompted:
 sudo shutdown
 -------------
 
-[[]]
+
 How to Configure Appliance for a Proxy Server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -943,19 +943,19 @@ sudo chmod 644 /etc/profile.d/proxy.sh
 --------------------------------------
 5.  link:#_how_to_restart_appliance[Restart the appliance].
 
-[[]]
+
 How to Run Programs from Lectures
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 See link:Fall_2011#Lectures[Fall 2011's HOWTO].
 
-[[]]
+
 How to Do Problem Sets
 ~~~~~~~~~~~~~~~~~~~~~~
 
 See link:Fall_2011#Problem_Sets[Fall 2011's HOWTO].
 
-[[]]
+
 Accessibility
 -------------
 
@@ -988,7 +988,7 @@ John Harvard's home directory] on your own computer.
 *If you have suggestions on how to improve the appliance's
 accessibility, please let sysadmins@cs50.net know!*
 
-[[]]
+
 Implementation Details
 ----------------------
 
@@ -1150,7 +1150,7 @@ This use of `-n` tells `zip` not to compress
 `cs50-appliance-2.3-disk1.vmdk` (since it's already compressed).
 3.  Distribute `cs50-appliance-2.3-14-ovf.zip`!
 
-[[]]
+
 VMware
 ^^^^^^
 
@@ -1224,18 +1224,18 @@ itself compressed and thus should be by `zip`.
 
 You can then distribute `cs50-appliance-2.3-vmx.zip` as well!
 
-[[]]
+
 Troubleshooting
 ---------------
 
 If having trouble with VirtualBox or the CS50 Appliance, see VirtualBox
 and FAQs.
 
-[[]]
+
 Forget a password?
 ------------------
 
-[[]]
+
 I forgot John Harvard's password
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1259,7 +1259,7 @@ prompted.
 
 You should then be able to log in as John Harvard again.
 
-[[]]
+
 I forgot the root password
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1297,7 +1297,7 @@ reboot
 +
 to restart the appliance.
 
-[[]]
+
 I forgot John Harvard's (or root's) MySQL password
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1312,7 +1312,7 @@ below:
 That command will restore the appliance to "factory defaults." It will
 not delete any code that you've written.
 
-[[]]
+
 Known Issues
 ------------
 
@@ -1320,7 +1320,7 @@ Known Issues
 ** ncurses' `FG_YELLOW` and `BG_YELLOW` constants do not display as
 yellow.
 
-[[]]
+
 Changelog
 ---------
 
@@ -1433,7 +1433,7 @@ impedes kickstart.
 just `cs50.desktop`, which also restarts `xfce4-panel` (to avoid an
 apparent Xfce bug whereby panel is sometimes empty).
 
-[[]]
+
 Future Work
 -----------
 
@@ -1442,14 +1442,14 @@ appliance.
 
 * Configure `gdm` to boot at 800x600 resolution.
 
-[[]]
+
 References
 ----------
 
 * http://www.virtualbox.org/manual/UserManual.html[User Manual] for
 VirtualBox
 
-[[]]
+
 Acknowledgements
 ----------------
 

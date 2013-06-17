@@ -23,7 +23,7 @@ https://id.cs50.net/example/[example]. All the example does is tell you
 whether you're logged in (and what information about you was returned by
 CS50 ID).
 
-[[]]
+
 How CS50 ID Works
 -----------------
 
@@ -46,7 +46,7 @@ own]):
 ID
 * `getUser`, which verifies CS50 ID's response
 
-[[]]
+
 How to Add CS50 ID to Your Website
 ----------------------------------
 
@@ -87,7 +87,7 @@ http://mirror.cs50.net/library/python/[Python], or
 http://mirror.cs50.net/library/ruby/[Ruby] and integrate it into your
 website, per the link:#_examples[examples] below.
 
-[[]]
+
 Examples
 --------
 
@@ -99,14 +99,14 @@ https://id.cs50.net/example/.
 To add CS50 ID to your website using some other library or language,
 review link:#_how_cs50_id_works[How CS50 ID Works].
 
-[[]]
+
 PHP
 ~~~
 
 This example is available for download at
 http://mirror.cs50.net/id50/php/id-1.1.zip.
 
-[[]]
+
 config.php
 ^^^^^^^^^^
 
@@ -152,7 +152,7 @@ shorter path:
 require_once("CS50/CS50.php");
 ------------------------------
 
-[[]]
+
 index.php
 ^^^^^^^^^
 
@@ -199,7 +199,7 @@ link:#_return_to.php[return_to.php].
 </html>
 ------------------------------------------------------------------------------------------------------------------------
 
-[[]]
+
 login.php
 ^^^^^^^^^
 
@@ -231,7 +231,7 @@ Library].
 ?>
 ------------------------------------------------------------------------
 
-[[]]
+
 return_to.php
 ^^^^^^^^^^^^^
 
@@ -281,7 +281,7 @@ the associative array returned by `getUser` as the value of
 ?>
 ---------------------------------------------------------------
 
-[[]]
+
 logout.php
 ^^^^^^^^^^
 
@@ -312,7 +312,7 @@ redirect the user back to CS50 ID.
 ?>
 ---------------------------------------------------------------
 
-[[]]
+
 Python
 ~~~~~~
 
@@ -321,14 +321,14 @@ http://mirror.cs50.net/library/python/examples/id.zip.
 
 COMING SOON
 
-[[]]
+
 Ruby
 ~~~~
 
 This example is available for download at
 http://mirror.cs50.net/library/ruby/examples/id.zip.
 
-[[]]
+
 Setup
 ^^^^^
 
@@ -363,7 +363,7 @@ controller, called `Auth`, can be created to handle user authentication:
 $ rails generate controller Auth
 --------------------------------
 
-[[]]
+
 login
 ^^^^^
 
@@ -388,7 +388,7 @@ def login
 end
 -----------------------------------------------------------------------------------------------------------------------------------
 
-[[]]
+
 return
 ^^^^^^
 
@@ -415,7 +415,7 @@ def return
 end
 -----------------------------------------------------------------------------------------------------
 
-[[]]
+
 logout
 ^^^^^^
 
@@ -432,7 +432,7 @@ def logout
 end
 ---------------------------------------------------
 
-[[]]
+
 index
 ^^^^^
 
@@ -489,7 +489,7 @@ log in, at which point you'll be redirected to CS50 ID. After
 authenticating, you'll be brought back to your app, and you'll see your
 user information and a logout link!
 
-[[]]
+
 Implementation Details
 ----------------------
 
@@ -503,7 +503,7 @@ other than link:#_php[PHP], link:#Python[Python], and link:#Ruby[Ruby]
 (which the link:CS50 Library[CS50 Library] supports), below are
 implementation details for the technically curious.
 
-[[]]
+
 Overview
 ~~~~~~~~
 
@@ -543,7 +543,7 @@ name and/or email address).
 with a server-side session) that the user is now logged in, and then
 shows the user the page that required login.
 
-[[]]
+
 Compatibility
 ~~~~~~~~~~~~~
 
@@ -559,7 +559,7 @@ Attribute Exchange 1.0]
 
 but with some constraints.
 
-[[]]
+
 OpenID Authentication 2.0
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -595,7 +595,7 @@ identifier than it would if John Harvard authenticates as
 accounts (whereby the same identifier would be returned for a user, no
 matter the account with which the user authenticated).
 
-[[]]
+
 OpenID Simple Registration Extension 1.0
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -615,7 +615,7 @@ If requested, CS50 ID will return, if available, a value for
 
 where `email` is a user's email address.
 
-[[]]
+
 OpenID Attribute Exchange 1.0
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -637,11 +637,11 @@ If requested, CS50 ID will return, if available, a value for
 
 where `email` is a user's Harvard email address.
 
-[[]]
+
 FAQs
 ----
 
-[[]]
+
 How should I store users in my database?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -674,7 +674,7 @@ should store all 84, especially if you might decide to allow your users
 to log in via other means as well (e.g., via
 http://www.janrain.com/products/engage[Janrain Engage]).
 
-[[]]
+
 Why does CS50 ID uniquely identify users with 84-character URLs?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -685,7 +685,7 @@ OpenID providers (like CS50) return URLs based on domains that they own
 other providers' by accident. CS50 thus standardized on URLs that begin
 with `<nowiki>https://id.cs50.net/</nowiki>`.
 
-[[]]
+
 Why doesn't CS50 ID always return a user's full name and/or email
 address?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -721,7 +721,7 @@ via:
 
 * an `@post.harvard.edu` email address
 
-[[]]
+
 Can I develop my site on localhost (127.0.0.1)?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -744,7 +744,7 @@ for CS50 ID.*
 When ready to launch your website, just remember to change `TRUST_ROOT`
 and `RETURN_TO` to the URLs with which you applied for CS50 ID.
 
-[[]]
+
 Can I develop my site on a private network?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -768,11 +768,11 @@ apply for CS50 ID.*
 When ready to launch your website, just remember to change `TRUST_ROOT`
 and `RETURN_TO` to the URLs with which you applied for CS50 ID.
 
-[[]]
+
 Troubleshooting
 ---------------
 
-[[]]
+
 The site you tried to log into is not configured properly for CS50 ID
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -783,7 +783,7 @@ Best to double-check those values.
 If still unsure what's wrong (or if you don't recall which URLs we
 approved), email sysadmins@cs50.net to inquire.
 
-[[]]
+
 Invalid username and/or password
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -812,7 +812,7 @@ https://id.cs50.net/example/ via PIN. If the user *cannot*, refer the
 user to http://reference.pin.harvard.edu/login-help. If the user *can*,
 email sysadmins@cs50.net to inquire, CCing the user.
 
-[[]]
+
 CS50 Library requires bcmath or gmp extension module
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -822,7 +822,7 @@ dependencies. But if using the library on some other server, you may see
 this error if http://php.net/manual/en/book.bc.php[BC Math] and
 http://php.net/manual/en/book.gmp.php[GMP] are not already installed.
 
-[[]]
+
 CentOS, Fedora, RedHat
 ++++++++++++++++++++++
 
@@ -831,7 +831,7 @@ Try running the following commands as `root`:
 `yum install php-bcmath php-gmp` +
 `service httpd restart`
 
-[[]]
+
 Debian, Ubuntu
 ++++++++++++++
 
@@ -840,7 +840,7 @@ Try running the following commands as `root`:
 `apt-get install php5-gmp` +
 `service apache2 restart`
 
-[[]]
+
 Windows
 +++++++
 
@@ -854,7 +854,7 @@ if present to:
 
 Then restart your web server.
 
-[[]]
+
 CS50 Library requires dom or domxml extension module
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -865,7 +865,7 @@ this error if PHP's http://php.net/manual/en/book.dom.php[DOM] and
 http://php.net/manual/en/book.domxml.php[DOM XML] are not already
 installed.
 
-[[]]
+
 CentOS, Fedora, RedHat
 ++++++++++++++++++++++
 
@@ -874,7 +874,7 @@ Try running the following commands as `root`:
 `yum install php-xml` +
 `service httpd restart`
 
-[[]]
+
 CS50 Library requires openssl extension module
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -884,7 +884,7 @@ dependencies. But if using the library on some other server, you may see
 this error if http://php.net/manual/en/book.openssl.php[OpenSSL] is not
 already installed.
 
-[[]]
+
 Windows
 +++++++
 
@@ -898,7 +898,7 @@ if present to:
 
 Then restart your web server.
 
-[[]]
+
 Support
 -------
 

@@ -13,7 +13,7 @@ into executable form, but generally you don't need to worry about all
 that: a simple command like `make myprogram` will compile a C program
 called `myprogram.c`.
 
-[[]]
+
 Detailed Description
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -52,7 +52,7 @@ long-form commands for you. In the CS50 appliance, I can simply type
 `make myprogram` and it'll automatically create an executable called
 `myprogram`.
 
-[[]]
+
 Compiler options
 ^^^^^^^^^^^^^^^^
 
@@ -84,7 +84,7 @@ faster. There are different values for this option, ranging from `-O0`
 To find out about additional options (warning: there's a lot), type
 `gcc --help` or `man gcc`.
 
-[[]]
+
 Things that can go wrong
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -95,11 +95,11 @@ towards making all those errors disappear. Even if you don't understand
 the wording of the error, it's worthwhile to find the line the compiler
 is yelling about and looking whether you can find a problem.
 
-[[]]
+
 Examples
 ~~~~~~~~
 
-[[]]
+
 Compiling a program and troubleshooting
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -199,7 +199,7 @@ bool check_house(char *in)
 
 This compiles without errors.
 
-[[]]
+
 Compiling a simple program step by step
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

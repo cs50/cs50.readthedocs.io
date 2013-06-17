@@ -15,7 +15,7 @@ Below are instructions on how to migrate link:#_files[files] and
 link:#_databases[databases] from the link:CS50 Appliance[CS50 Appliance]
 to the CS50 Cloud.
 
-[[]]
+
 Files
 ^^^^^
 
@@ -62,7 +62,7 @@ uploaded files appropriately.
 10. Visit http://cloud.cs50.net/~username/, where *username* is your
 cloud account's username, to see your work on the Web!
 
-[[]]
+
 Databases
 ^^^^^^^^^
 

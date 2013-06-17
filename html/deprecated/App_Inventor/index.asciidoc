@@ -14,7 +14,7 @@ participating in the App Inventor alpha.
 Below are some apps made by the staff from whose source code you're
 welcome to learn.
 
-[[]]
+
 AndroidPharma
 ~~~~~~~~~~~~~
 
@@ -34,7 +34,7 @@ The application itself:
 http://people.fas.harvard.edu/~fzembow/Drugbase.apk The app engine
 backend: http://people.fas.harvard.edu/~fzembow/androindpharma.zip
 
-[[]]
+
 Chinese Flash Cards
 ~~~~~~~~~~~~~~~~~~~
 
@@ -52,7 +52,7 @@ Download from: http://209.190.22.48/app_inventor/ChineseFlashCards.zip
 Barcode for direct-to-phone download:
 http://www.hugiegames.com/android/welliechao.png
 
-[[]]
+
 Paintball
 ~~~~~~~~~
 
@@ -66,7 +66,7 @@ run in loops.
 
 Download: http://people.fas.harvard.edu/~krakip/cs50/Paintball.zip
 
-[[]]
+
 Screamer
 ~~~~~~~~
 
@@ -82,7 +82,7 @@ friend. Perfect for annoying your roommates!
 Download (from my personal website):
 http://www.hugiegames.com/Screamer.zip
 
-[[]]
+
 Spoon
 ~~~~~
 
@@ -96,7 +96,7 @@ accelerometer, colors, and vibrate.)
 
 Download here: http://hcs.harvard.edu/~nleiby/files/Spoon.apk
 
-[[]]
+
 Tickle Me Elmo
 ~~~~~~~~~~~~~~
 
@@ -112,7 +112,7 @@ new developers who are working with Android Blocks for the first time.
 Download (from my personal website):
 http://www.alexchang.me/TickleMeElmo.apk
 
-[[]]
+
 TO-DO List
 ~~~~~~~~~~
 
@@ -134,37 +134,37 @@ many apps, so knowing how to do will be a boon for many things.
 
 *STUDENT APPS:*
 
-[[]]
+
 Willie Yao:
 ~~~~~~~~~~~
 
 `Barcode for direct-to-phone download: `http://www.hugiegames.com/android/willieyao.jpg[`http://www.hugiegames.com/android/willieyao.jpg`]
 
-[[]]
+
 Tal Oppenheimer:
 ~~~~~~~~~~~~~~~~
 
 `Barcode for direct-to-phone download: `http://www.hugiegames.com/android/taloppenheimer.png[`http://www.hugiegames.com/android/taloppenheimer.png`]
 
-[[]]
+
 Jon Mizrahi:
 ~~~~~~~~~~~~
 
 `Barcode for direct-to-phone download: `http://www.hugiegames.com/android/jonmizrahi.jpg[`http://www.hugiegames.com/android/jonmizrahi.jpg`]
 
-[[]]
+
 Calvin McEachron:
 ~~~~~~~~~~~~~~~~~
 
 `Barcode for direct-to-phone download: `http://www.hugiegames.com/android/calvinmceachron.jpg[`http://www.hugiegames.com/android/calvinmceachron.jpg`]
 
-[[]]
+
 Kate Obst:
 ~~~~~~~~~~
 
 `Barcode for direct-to-phone download: `http://www.hugiegames.com/android/kateobst.jpg[`http://www.hugiegames.com/android/kateobst.jpg`]
 
-[[]]
+
 Shiyu Wei:
 ~~~~~~~~~~
 

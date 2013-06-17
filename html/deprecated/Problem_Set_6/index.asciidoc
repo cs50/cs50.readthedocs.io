@@ -22,7 +22,7 @@ gradebook as usual.
 ~cs50/staff/pdfs/username/6/Hacker/ on the cloud, where username is your
 username.*
 
-[[]]
+
 How to Fetch and Render
 ^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -35,7 +35,7 @@ render pset6 both6/*.pset6
 render hacker6 both6/*.hacker6
 ---------------------------------
 
-[[]]
+
 How to Run Grading Scripts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 

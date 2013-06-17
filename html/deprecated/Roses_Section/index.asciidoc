@@ -17,7 +17,7 @@ title: Roses_Section
 Tuesdays, 5:30pm - 7pm @ CGIS South-003, if you're curious. =) +
 (Or just want to steal candy, I guess)
 
-[[]]
+
 Week 1
 ++++++
 
@@ -25,7 +25,7 @@ Week 1
 
 :* Media:Flowcharts.zip["Do you understand flowcharts?"]
 
-[[]]
+
 Week 2
 ++++++
 
@@ -33,7 +33,7 @@ Week 2
 
 :* Media:2source.zip[Source Code]
 
-[[]]
+
 Week 3
 ++++++
 
@@ -48,7 +48,7 @@ few slides....)
   ;;
     It'll print the first `n` elements of `array[]`.
 
-[[]]
+
 Week 4
 ++++++
 
@@ -56,7 +56,7 @@ Week 4
 ** [http://cslibrary.stanford.edu/104/| Binky Pointer Fun] video
 ** Media:Src4.zip[Source Code]
 
-[[]]
+
 Week 5
 ++++++
 
@@ -64,7 +64,7 @@ Week 5
 ** Media:Section6.pdf[Practice Questions]
 ** Media:Sec6ans.pdf[Practice Answers]
 
-[[]]
+
 Week 6
 ++++++
 
@@ -75,7 +75,7 @@ Week 6
 *** *pkmn.c*: demonstrates linked list operations with Pokemon and
 Pokemon Battling =)
 
-[[]]
+
 Week 7
 ++++++
 

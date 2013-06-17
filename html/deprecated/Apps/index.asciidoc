@@ -6,7 +6,7 @@ title: Apps
 Below are apps created by CS50's students and staff, past and present.
 Report any broken links to sysadmins@cs50.net.
 
-[[]]
+
 Crimson Dining
 ~~~~~~~~~~~~~~
 
@@ -20,7 +20,7 @@ for each dish as well as trends in HUDS menus.
 * *Facebook App:* http://apps.facebook.com/myplate/
 * *Website:* http://crimsondining.org/
 
-[[]]
+
 HarvardEvents
 ~~~~~~~~~~~~~
 
@@ -34,7 +34,7 @@ find out what's happening on campus (and where) in one, central place.
 into your own app
 * *HarvardEvents Web:* http://events.college.harvard.edu/
 
-[[]]
+
 HarvardMaps
 ~~~~~~~~~~~
 
@@ -48,7 +48,7 @@ Harvard's official map with Google Maps.
 your own app
 * *HarvardMaps Web:* http://maps.cs50.net/
 
-[[]]
+
 HarvardNews
 ~~~~~~~~~~~
 
@@ -61,7 +61,7 @@ HarvardNews aggregates news feeds from all over campus.
 your own app
 * *HarvardNews Web:* http://news.cs50.net/
 
-[[]]
+
 HarvardTweets
 ~~~~~~~~~~~~~
 
@@ -75,7 +75,7 @@ campus.
 data into your own app
 * *HarvardTweets Web:* http://tweets.cs50.net/
 
-[[]]
+
 Rover
 ~~~~~
 
@@ -92,7 +92,7 @@ events, news and transportation.
 http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=312281600&mt=8
 * *Website:* http://www.hcs.harvard.edu/rover/
 
-[[]]
+
 Shuttleboy
 ~~~~~~~~~~
 

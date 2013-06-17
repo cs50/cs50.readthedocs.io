@@ -6,7 +6,7 @@ title: VMware Player
 Here's how to install the link:CS50_Appliance_17[CS50 Appliance] using
 VMware Player for link:#_installation[Windows].
 
-[[]]
+
 Installation
 ~~~~~~~~~~~~
 
@@ -45,11 +45,11 @@ highlight the *appliance50-17-vmx* (or *appliance50-17.vmx*) file
 within, and click *Open*. Then click VMware Player's ▶ button to start
 up the appliance.
 
-[[]]
+
 Troubleshooting
 ~~~~~~~~~~~~~~~
 
-[[]]
+
 Binary translation is incompatible with long mode on this platform
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

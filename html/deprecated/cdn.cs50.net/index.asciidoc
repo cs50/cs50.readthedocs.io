@@ -2,14 +2,14 @@
 tags: []
 title: cdn.cs50.net
 ---
-[[]]
+
 Overview
 ~~~~~~~~
 
 `cdn.cs50.net` currently resolves to 140.247.197.141 which is bound to a
 single VM on homer.
 
-[[]]
+
 Implementation Details
 ~~~~~~~~~~~~~~~~~~~~~~
 

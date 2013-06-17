@@ -42,7 +42,7 @@ Do turn to the course's http://cs50.tv/2009/fall/#r=group[Google Group]
 if you run into problems, and we'll do our best to improve the
 experience.
 
-[[]]
+
 Cheatsheet
 ----------
 
@@ -78,11 +78,11 @@ See link:#_instructions[instructions] for more detail.
 other OS
 |=======================================================================
 
-[[]]
+
 Instructions
 ------------
 
-[[]]
+
 How to Install Appliance
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -116,7 +116,7 @@ left-hand menu. Highlight it, then click *Start*.
 OMG, you just booted your own copy of
 http://en.wikipedia.org/wiki/Ubuntu_(operating_system)[Ubuntu Linux].
 
-[[]]
+
 How to Use Appliance
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -137,7 +137,7 @@ you. However, we installed as few programs as possible to keep the
 appliance small. You're welcome to install additional programs via
 *System → Administration → Add/Remove Applications*.
 
-[[]]
+
 How to Change Name
 ^^^^^^^^^^^^^^^^^^
 
@@ -145,7 +145,7 @@ As much as you might not like being called John, allow us to suggest
 that you not change your name (or username) yet. Life will be simpler as
 John.
 
-[[]]
+
 How to Change Password
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -159,7 +159,7 @@ configured in such a way that only someone with access to your computer
 (e.g., you) can access the appliance. Even though the appliance can
 connect to the Internet, the Internet cannot connect to the appliance.
 
-[[]]
+
 How to Change Language
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -175,7 +175,7 @@ close the window and select '''
 
 → Restart...''' from the appliance's top-right corner.
 
-[[]]
+
 How to Change Keyboard Layout
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -183,7 +183,7 @@ If you have a non-U.S. (or non-standard) keyboard, you may want (or
 need!) to change your keyboard's layout. Select *System → Preferences →
 Keyboard*. Then click the *Layouts* tab and configure as desired.
 
-[[]]
+
 How to Change Timezone
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -193,7 +193,7 @@ and Date*. To unlock the window that appears, you may need to click the
 keys next to *Click to make changes*. Enter your password if prompted.
 Then make any changes you'd like.
 
-[[]]
+
 How to Open a Terminal
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -214,7 +214,7 @@ Just realize that when you open a terminal by right-clicking your
 desktop, you'll start in your ~/Desktop/ directory instead of your home
 directory (i.e., ~).
 
-[[]]
+
 How to SSH to Appliance
 ^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -229,7 +229,7 @@ If you'd instead like to SSH _from_ the appliance _to_ your computer
 appliance to *192.168.56.1*, which is the static IP address that
 VirtualBox has secretly assigned to your computer.
 
-[[]]
+
 How to Release Keyboard and Mouse
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -241,7 +241,7 @@ key; on any other OS, VirtualBox's host key is your keyboard's
 right-Control key. Once you hit that key, should be able to move your
 mouse anywhere on your screen.
 
-[[]]
+
 How to Install Guest Additions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -279,7 +279,7 @@ first.) Then reboot the appliance by selecting '''
 
 → Restart...''' in the appliance's top-right corner.
 
-[[]]
+
 How to Change Resolution
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -290,7 +290,7 @@ first need to link:#_how_to_install_guest_additions[install guest
 additions] if you haven't already. Then you'll be able to click and drag
 the appliance's bottom-right corner to resize it.
 
-[[]]
+
 How to Enter/Exit Fullscreen Mode
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -308,7 +308,7 @@ your keyboard's right-Control key.
 To exit fullscreen mode, hit VirtualBox's "host key" and F together
 again.
 
-[[]]
+
 How to Enter/Exit Seamless Mode
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -332,7 +332,7 @@ keyboard's right-Control key.
 
 To exit seamless mode, hit VirtualBox's "host key" and L together again.
 
-[[]]
+
 How to Use phpMyAdmin
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -342,7 +342,7 @@ be logged in as John Harvard for whom we have created two databases
 (*jharvard_pset7* and *jharvard_pset8*) by default; you are welcome to
 create others.
 
-[[]]
+
 How to Transfer Files between Appliance and Your Computer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -436,7 +436,7 @@ at startup. Note that /home/jharvard/Desktop/sharename/ (aka
 ~/Desktop/sharename/) must exist; the shared folder's contents get
 mounted _inside of_ that directory.
 
-[[]]
+
 How to Shut Down
 ^^^^^^^^^^^^^^^^
 
@@ -444,7 +444,7 @@ Select '''
 
 → Shut Down...''' in the appliance's top-right corner.
 
-[[]]
+
 How to Compile Source Code from Lectures
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -464,7 +464,7 @@ And you can then run the program with this command:
 
 `a.out`
 
-[[]]
+
 Caveats
 ^^^^^^^
 
@@ -473,7 +473,7 @@ the appliance. If you run into a compilation error, simply turn to the
 course's http://cs50.net/2009/fall/#r=group[Google Group] for
 assistance!
 
-[[]]
+
 How to Do Problem Sets
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -509,7 +509,7 @@ And then "cd into" the unzipped directory with this command:
 
 Then proceed to follow the PDF's directions!
 
-[[]]
+
 Caveats
 ^^^^^^^
 
@@ -526,7 +526,7 @@ the appliance. If you run into a compilation error that's not discussed
 in the PDF, simply turn to the course's
 http://cs50.net/2009/fall/#r=group[Google Group] for assistance!
 
-[[]]
+
 Implementation Details
 ----------------------
 
@@ -555,7 +555,7 @@ http://en.wikipedia.org/wiki/VirtualBox[VirtualBox]. If you have
 questions, you may want to join CS50's Google Group at
 http://cs50.tv/2009/fall/#l=psets&r=group[cs50.tv].
 
-[[]]
+
 Install Ubuntu
 ^^^^^^^^^^^^^^
 
@@ -568,7 +568,7 @@ sure it's up-to-date:
 `sudo aptitude update` +
 `sudo aptitude full-upgrade`
 
-[[]]
+
 Install vmbuilder
 ^^^^^^^^^^^^^^^^^
 
@@ -584,7 +584,7 @@ Unfortunately, vmbuilder's *--firstboot* option is broken in Ubuntu
 `cd /usr/share/pyshared/` +
 `patch -p1 < ~/vm-builder.bug536942.patch`
 
-[[]]
+
 Configure vmbuilder
 ^^^^^^^^^^^^^^^^^^^
 
@@ -995,7 +995,7 @@ This file, *boot.sh*, is a bash script that will be run the very first
 time the appliance boots up. You're welcome to alter the file as you see
 fit, especially if you don't need or like our customizations.
 
-[[]]
+
 Create VMware Appliance
 ^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1012,7 +1012,7 @@ virtual disk (hard drive), and *appliance.vmx* is the appliance's
 configuration. You're welcome to delete *appliance.vmx*; we're only
 going to use *tmpm9biYE.vmdk* to create our VirtualBox appliance.
 
-[[]]
+
 Create VirtualBox Appliance
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -1068,7 +1068,7 @@ between that IDE Controller's ** and ** tags);
 17. Create a ZIP file containing, at least, *cs50-1.4.ovf* and
 *cs50-1.4.vmdk*, and the appliance is ready for distribution!
 
-[[]]
+
 Troubleshooting
 ---------------
 
@@ -1076,7 +1076,7 @@ If you are having problems that aren't addressed under
 link:#_known_issues[Known Issues], turn to the course's
 http://cs50.tv/2009/fall/#r=group[Google Group] for help.
 
-[[]]
+
 Known Issues
 ------------
 
@@ -1115,7 +1115,7 @@ http://www.virtualbox.org/wiki/Download_Old_Builds_3_2[VirtualBox 3.2.x]
 is a workaround if you encounter any trouble; a new version of the
 Appliance will soon be released.
 
-[[]]
+
 Changelog
 ---------
 
@@ -1156,7 +1156,7 @@ phpMyAdmin executes as www-data.
 ** Appliance is now pre-configured with CS50 Library.
 ** Installed /usr/share/dict/words.
 
-[[]]
+
 Future Work
 -----------
 
@@ -1166,14 +1166,14 @@ Future versions of the CS50 Appliance may include these features:
 apt-get, git, or svn.
 * Automatic updates to appliance via apt-get.
 
-[[]]
+
 Resources
 ---------
 
 * http://dlc.sun.com.edgesuite.net/virtualbox/3.2.6/UserManual.pdf[User
 Manual] for VirtualBox 3.2.6
 
-[[]]
+
 Acknowledgements
 ----------------
 

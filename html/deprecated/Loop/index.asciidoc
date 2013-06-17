@@ -9,7 +9,7 @@ loops. Usually (and with experience), you'll find that different types
 of loops will be better suited for different purposes, but the usage of
 each is very similar.
 
-[[]]
+
 while
 ~~~~~
 
@@ -72,7 +72,7 @@ iterate through five times and print five stars to the screen. (What
 would the output be if we started with `i = 1` instead? What if we
 removed the line `i++`?)
 
-[[]]
+
 do-while
 ~~~~~~~~
 
@@ -130,7 +130,7 @@ false, and the loop will stop running. If the user gives us an invalid
 integer, however, the condition will evaluate to true, so we'll continue
 to loop over and over until the user complies.
 
-[[]]
+
 for
 ~~~
 
@@ -192,7 +192,7 @@ for (int i = 0; i < 5; i++)
 In a nested loop, we usually use `j` (instead of `i`) as our loop
 counter; in a doubly-nested loop, we'll use `k`.
 
-[[]]
+
 break and continue
 ~~~~~~~~~~~~~~~~~~
 
@@ -202,7 +202,7 @@ particular iteration of the loop, but still continue running the loop.
 You can do both of these things with the `break` and `continue`
 keywords, respectively.
 
-[[]]
+
 break
 ^^^^^
 
@@ -244,7 +244,7 @@ decides they don't want any more stars (as by providing a negative
 integer or 0), the loop will terminate altogether--they won't be asked
 again.
 
-[[]]
+
 continue
 ^^^^^^^^
 

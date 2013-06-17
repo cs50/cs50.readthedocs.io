@@ -27,7 +27,7 @@ few years.) Even with hardware virtualization enabled, though, virtual
 machines might still feel slow if your computer is a few years old, has
 a CPU that's only 1GHz or so, or has only 1GB or so of RAM.*
 
-[[]]
+
 VirtualBox
 ^^^^^^^^^^
 
@@ -59,7 +59,7 @@ it, then click *Start*.
 That's it! To learn how to use the appliance, see further
 link:#_how_to_use_appliance[instructions] down below!
 
-[[]]
+
 VMware Fusion
 ^^^^^^^^^^^^^
 
@@ -79,7 +79,7 @@ VMware Fusion as needed.
 within, and click *Open*. Then click VMware Fusion's ▶ button to start
 up the appliance.
 
-[[]]
+
 VMware Workstation
 ^^^^^^^^^^^^^^^^^^
 
@@ -101,7 +101,7 @@ folder, select the `cs50-appliance-3.vmx` file therein, and click
 Workstation* window. To start the virtual machine, click *Power on this
 virtual machine* in that tab.
 
-[[]]
+
 Parallels
 ^^^^^^^^^
 
@@ -110,7 +110,7 @@ assume that Parallels is already installed.
 
 _Coming Soon_
 
-[[]]
+
 KVM
 ^^^
 

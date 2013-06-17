@@ -5,7 +5,7 @@ title: Week_11
 
 _Review for Quiz 1._
 
-[[]]
+
 Agenda
 ------
 
@@ -16,6 +16,6 @@ details.
 ** Problem Set 8 has been returned.
 * Quiz 1 Q&A
 
-[[]]
+
 Materials
 ---------

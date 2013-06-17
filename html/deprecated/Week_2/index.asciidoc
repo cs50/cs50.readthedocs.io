@@ -7,7 +7,7 @@ _Functions, continued. Global variables. Parameters. Return values.
 Stack. Frames. Scope. Arrays. Strings. Command-line arguments.
 Cryptography._
 
-[[]]
+
 Agenda
 ------
 
@@ -37,7 +37,7 @@ times.
 * Caesar Cipher
 * Vigenère cipher
 
-[[]]
+
 References
 ----------
 
@@ -46,11 +46,11 @@ Fall 2009
 * http://cdn.cs50.net/2009/fall/sections/2/section2.flv?play[Video],
 Fall 2009
 
-[[]]
+
 Materials
 ---------
 
-[[]]
+
 Matt Chartier
 ~~~~~~~~~~~~~
 
@@ -70,7 +70,7 @@ nicely.
 And here are the Media:Week 2.pptx[slides] I prepared in Fall 2010 for
 Week 2.
 
-[[]]
+
 link:Rose's Section[Rose Cao]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -86,7 +86,7 @@ slides) *Fall '09*:
 :* This was before I switched to PowerPoints, so it's probably
 underwhelming and/or sloppy.
 
-[[]]
+
 Mike Teodorescu
 ~~~~~~~~~~~~~~~
 
@@ -94,7 +94,7 @@ Media:section1.pdf[Here] my in-between section as prepared for Week 2 in
 Fall 2009. I also added my source code I used for that week. You can
 find source code examples Media:sect1_code.zip[here].
 
-[[]]
+
 Ashin Shah
 ~~~~~~~~~~
 
@@ -103,14 +103,14 @@ handouts for Section 0 and Section 1. Enjoy! If other TFs intend to use
 them, please keep the attribution to me, and just send me an email
 saying that you are.
 
-[[]]
+
 Tommy MacWilliam
 ~~~~~~~~~~~~~~~~
 
 Media:section1_tmm.pdf[Here] are my slides for Section 1. Zipped source
 code examples are Media:section1_tmm.zip[here].
 
-[[]]
+
 Doug Lloyd
 ~~~~~~~~~~
 

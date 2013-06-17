@@ -15,7 +15,7 @@ software).
 
 Like SSH'ing, you'll be SFTP'ing to cloud.cs50.net.
 
-[[]]
+
 Starting a Session
 ^^^^^^^^^^^^^^^^^^
 
@@ -48,7 +48,7 @@ enter it in a text field, like:
 image:WSCPun.jpg[WSCPun.jpg,title="image"]
 image:WSCPpwd.jpg[WSCPpwd.jpg,title="image"]
 
-[[]]
+
 Transferring Files
 ^^^^^^^^^^^^^^^^^^
 

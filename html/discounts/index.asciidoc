@@ -6,13 +6,13 @@ title: Discounts
 Below are some discounts available to Harvard affiliates. See
 http://harvie.harvard.edu/perks/ for more!
 
-[[]]
+
 B&H Photo and Video
 ~~~~~~~~~~~~~~~~~~~
 
 *http://www.procurement.harvard.edu/secure/goods/av_general.shtml*
 
-[[]]
+
 DriveSavers
 ~~~~~~~~~~~
 
@@ -24,7 +24,7 @@ available."
 
 Harvard's discount code is *DS19771*.
 
-[[]]
+
 ESPN3
 ~~~~~
 
@@ -39,7 +39,7 @@ So long as you're within (or https://vpn.fas.harvard.edu/[VPNed] into)
 harvard.edu (i.e., your IP address starts with 140.247.), you should
 have access to http://espn.go.com/espn3/[ESPN3].
 
-[[]]
+
 Harvard University Technology Services
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -70,7 +70,7 @@ shared by our million-member community."
 * http://www.techbargains.com/[Techbargains]. "Targeting the best deals
 in tech."
 
-[[]]
+
 Personal Cellular Services
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 

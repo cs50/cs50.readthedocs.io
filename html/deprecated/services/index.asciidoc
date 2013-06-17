@@ -3,7 +3,7 @@ tags: []
 title: services
 ---
 
-[[]]
+
 LDAP Server
 ~~~~~~~~~~~
 
@@ -66,7 +66,7 @@ Then ran:
 `chown `ldap:ldap[`ldap:ldap`]` /var/lib/ldap/DB_CONFIG` +
 `service ldap restart`
 
-[[]]
+
 LDAP Client
 ~~~~~~~~~~~
 
@@ -79,7 +79,7 @@ LDAP Client
 6.  Choose *Ok*.
 7.  Chose *Quit*.
 
-[[]]
+
 LVM
 ~~~
 
@@ -116,7 +116,7 @@ again. Inputted */.snapshots* next to *Mount LV on* then clicked latter.
 On subsequent screen, checked *No* next to *Allow device files*; left
 *No* next to *Use Quotas?*; clicked *Create*.
 
-[[]]
+
 NFS
 ~~~
 
@@ -129,7 +129,7 @@ to `/etc/exports`. Then did:
 
 `service nfs restart`
 
-[[]]
+
 SSH
 ~~~
 
@@ -142,13 +142,13 @@ Added
 
 to `/etc/ssh/ssd_config`.
 
-[[]]
+
 PHP
 ~~~
 
 `yum install php-cli php-xml php-mysql`
 
-[[]]
+
 rsnapshot
 ~~~~~~~~~
 
@@ -162,7 +162,7 @@ Created `/etc/cron.d/rsnapshot` with these contents:
 `0 * * * * root /usr/bin/rsnapshot hourly` +
 `10,20,30,40,50 * * * * root /usr/bin/rsnapshot minutely`
 
-[[]]
+
 Webmin
 ~~~~~~
 
@@ -172,11 +172,11 @@ Webmin
 
 Then opened 10000:tcp via `setup`.
 
-[[]]
+
 Yum
 ~~~
 
-[[]]
+
 cs50.repo
 ^^^^^^^^^
 
@@ -210,7 +210,7 @@ gpgkey = http://10.50.10.3/rpm-gpg/RPM-GPG-KEY.dag.txt
 priority = 2
 -----------------------------------------------------------------
 
-[[]]
+
 NTP
 ~~~
 

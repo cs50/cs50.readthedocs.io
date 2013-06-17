@@ -7,7 +7,7 @@ A *while* loop is a loop that keeps executing until its condition is
 false. While loops exist in all of C, JavaScript, and PHP, with very
 similar semantics.
 
-[[]]
+
 Detailed description
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -30,7 +30,7 @@ before leaving the loop. In that case, you can use `break`. It is also
 sometimes desirable to continue in the loop, but not to execute the rest
 of the loop body. There is another statement for that: `continue`.
 
-[[]]
+
 Examples
 ~~~~~~~~
 

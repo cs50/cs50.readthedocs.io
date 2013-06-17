@@ -3,7 +3,7 @@ tags: []
 title: director
 ---
 
-[[]]
+
 TEMP
 ~~~~
 
@@ -11,17 +11,17 @@ TEMP
 * Installed http://www.ubuntu.com/getubuntu/download-server[Ubuntu 9.04
 Server]
 
-[[]]
+
 MySQL
 ~~~~~
 
-[[]]
+
 Ubuntu
 ~~~~~~
 
 `% aptitude update; aptitude upgrade`
 
-[[]]
+
 Configured `/etc/network/interfaces` as follows
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -49,7 +49,7 @@ iface eth1 inet static
     dns-search cs50.net
 -------------------------------------------------------------------
 
-[[]]
+
 Per http://www.webmin.com/deb.html
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

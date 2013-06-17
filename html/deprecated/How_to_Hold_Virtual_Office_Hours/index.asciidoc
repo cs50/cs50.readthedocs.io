@@ -10,7 +10,7 @@ article explains how to hold virtual office hours (VOHs) in CS50's
 virtual terminal room (VTR). The VTR does offer features beyond those
 described herein; do feel free to play.
 
-[[]]
+
 Entering the Virtual Terminal Room
 ----------------------------------
 
@@ -36,7 +36,7 @@ in under a generic *CS50 Staff* pseudonym, let
 mailto:heads@cs50.net[heads@] know immediately so we can grant your
 actual identity moderator privileges.
 
-[[]]
+
 Responding to Raised Hands
 --------------------------
 
@@ -71,7 +71,7 @@ by the student(s) that you have pulled into it.
 Try not to background or minimize the VTR's window while holding VOHs,
 lest you not notice when a student's hand is up!
 
-[[]]
+
 Sharing Control of a Student's Computer
 ---------------------------------------
 
@@ -97,7 +97,7 @@ Note that the virtual terminal room's layout might change when you take
 control of the student's computer. To restore its original layout,
 select *View → Layouts → Default Layout*.
 
-[[]]
+
 Using the Whiteboard
 --------------------
 
@@ -111,7 +111,7 @@ whiteboard.
 
 image:Holdvohs6.png[Holdvohs6.png,title="image"]
 
-[[]]
+
 Talking to Students
 -------------------
 
@@ -136,7 +136,7 @@ By default, only one person can talk at a time, so be sure not to leave
 to say something embarrassing). You can allow multiple people to talk at
 once by selecting *Tools → Audio → Allow Simultaneous Talkers...*.
 
-[[]]
+
 Getting a Student's Attention
 -----------------------------
 
@@ -154,7 +154,7 @@ as in the below.
 
 image:Holdvohs10.png[Holdvohs10.png,title="image"]
 
-[[]]
+
 Stepping Away
 -------------
 
@@ -164,7 +164,7 @@ office hours, do indicate as much by clicking the door icon in the
 
 image:Holdvohs11.png[Holdvohs11.png,title="image"]
 
-[[]]
+
 Juggling Multiple Students at Once
 ----------------------------------
 
@@ -205,7 +205,7 @@ the course's website, though, open a brand-new browser window by
 clicking your browser's icon so that your browser passes a different
 cookie to the virtual terminal room.
 
-[[]]
+
 For More Information
 --------------------
 

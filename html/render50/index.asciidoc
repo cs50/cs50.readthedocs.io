@@ -32,7 +32,7 @@ seek from file to file.
 * Source files can be included or excluded via their names or even
 patterns (e.g., `*.c`).
 
-[[]]
+
 Author
 ------
 
@@ -42,7 +42,7 @@ http://www.cs.harvard.edu/malan/
 Thanks to Glenn Holloway and Keito Uchiyama '11 for this tool's
 predecessors.
 
-[[]]
+
 License
 -------
 
@@ -55,17 +55,17 @@ http://qbnz.com/highlighter/license.php[GeSHi] and
 http://mpdf.bpm1.com/licence[mPDF], which `render50` includes, are also
 governed by that same license.
 
-[[]]
+
 Installation
 ------------
 
-[[]]
+
 Linux
 ~~~~~
 
 No matter your OS, perform the steps as root (as via `sudo`).
 
-[[]]
+
 CentOS, RedHat
 ^^^^^^^^^^^^^^
 
@@ -76,7 +76,7 @@ rpm -ivh render50-1.5-1.noarch.rpm
 rm -f render50-1.5-1.noarch.rpm
 --------------------------------------------------------------
 
-[[]]
+
 Debian, Ubuntu
 ^^^^^^^^^^^^^^
 
@@ -90,7 +90,7 @@ rm -f render50-1.5.zip
 
 Then move `render50-1.5` wherever you'd like.
 
-[[]]
+
 Fedora
 ^^^^^^
 
@@ -99,7 +99,7 @@ Fedora
 yum install http://mirror.cs50.net/render50/render50-1.5-1.noarch.rpm
 ---------------------------------------------------------------------
 
-[[]]
+
 Mac OS
 ~~~~~~
 
@@ -108,7 +108,7 @@ higher, if not already installed.
 2.  Download http://mirror.cs50.net/render50/render50-1.5.zip, unzip it,
 and move `render50-1.5` wherever you'd like.
 
-[[]]
+
 Windows
 ~~~~~~~
 
@@ -117,7 +117,7 @@ higher, if not already installed.
 2.  Download http://mirror.cs50.net/render50/render50-1.5.zip, unzip it,
 and move `render50-1.5` wherever you'd like.
 
-[[]]
+
 Usage
 -----
 
@@ -153,11 +153,11 @@ Depending on your operating system, you may be able to execute
 `render50` in different ways. Note that `render50.bat`, `render50.php`,
 and `render50.php` all live in `render50-1.4/bin`.
 
-[[]]
+
 Linux
 ~~~~~
 
-[[]]
+
 CentOS, RedHat
 ^^^^^^^^^^^^^^
 
@@ -171,7 +171,7 @@ then execute:
 
 `php /path/to/render50-1.4/bin/render50.php`
 
-[[]]
+
 Debian, Ubuntu
 ^^^^^^^^^^^^^^
 
@@ -180,7 +180,7 @@ execute:
 
 `php /path/to/render50-1.4/bin/render50.php`
 
-[[]]
+
 Fedora
 ^^^^^^
 
@@ -194,7 +194,7 @@ then execute:
 
 `php /path/to/render50-1.4/bin/render50.php`
 
-[[]]
+
 Mac OS
 ^^^^^^
 
@@ -207,7 +207,7 @@ or just
 
 `/path/to/render50-1.4/bin/render50.sh`
 
-[[]]
+
 Windows
 ^^^^^^^
 
@@ -224,7 +224,7 @@ or just
 
 `php /path/to/render50-1.4/bin/render50.bat`
 
-[[]]
+
 Supported Languages
 -------------------
 
@@ -248,7 +248,7 @@ limited to:
 * XML
 * http://qbnz.com/highlighter/[more...]
 
-[[]]
+
 Examples
 --------
 
@@ -285,7 +285,7 @@ http://en.wikipedia.org/wiki/Glob_(programming)[globbing] them.
 * Render all CSS, HTML, and JavaScript files in `directory`
 ** `render50 output.pdf directory/ -i "*.css" "*.html" "*.js"`
 
-[[]]
+
 Implementation Details
 ----------------------
 
@@ -318,13 +318,13 @@ http://cdn.cs50.net/2010/fall/psets/3/pset3.pdf[Problem Set 3]), the
 result, presumably, of a memory leak in mPDF or a bug in `php.exe`
 itself. The gains on Linux and Mac OS were far less significant.
 
-[[]]
+
 How to Annotate PDFs
 --------------------
 
 CS50's TFs use the tools below to annotate PDFs.
 
-[[]]
+
 Linux
 ~~~~~
 
@@ -332,7 +332,7 @@ Linux
 *Free*. Download the _Non Commercial Release_. Install it under
 http://www.winehq.org/[WINE].
 
-[[]]
+
 Mac OS
 ~~~~~~
 
@@ -341,7 +341,7 @@ Mac OS
 * http://en.wikipedia.org/wiki/Preview_(software)[Preview]. *Free*.
 Comes with Mac OS.
 
-[[]]
+
 Windows
 ~~~~~~~
 
@@ -352,7 +352,7 @@ Revu]. *Commercial*.
 * http://www.tracker-software.com/product/pdf-xchange-lite[PDF-XChange].
 *Free*. Download the _Non Commercial Release_.
 
-[[]]
+
 Support
 -------
 
@@ -361,7 +361,7 @@ Harvard, join
 http://groups.google.com/group/cs50-discuss/topics[cs50-discuss], the
 course's Google Group!
 
-[[]]
+
 Changelog
 ---------
 
@@ -391,7 +391,7 @@ now rendered in the order in which they appear.
 ** Fixed bug whereby those directories' descendants weren't naturally
 sorted case-insensitively.
 
-[[]]
+
 Future Work
 -----------
 

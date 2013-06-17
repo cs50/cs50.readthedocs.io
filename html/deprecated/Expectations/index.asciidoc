@@ -9,7 +9,7 @@ learning experience. That said, it is a big commitment of your time and
 energy, so we want to be completely transparent about what's expected of
 each staff member.
 
-[[]]
+
 All staff
 ~~~~~~~~~
 
@@ -39,14 +39,14 @@ experience; we're here to help! It's far less embarrassing to admit to
 the staff that you don't get something than to have a student figure it
 out (bad-staff-member gossip spreads fast).
 
-[[]]
+
 Expectations by position
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 There are additional expectations that differ slightly by staff
 position, outlined below:
 
-[[]]
+
 CA
 ^^
 
@@ -55,7 +55,7 @@ _~4 hours per week_
 * *Office Hours.* CAs hold 3 hours of office hours each week, and prompt
 arrival and full participation are expected.
 
-[[]]
+
 TF
 ^^
 
@@ -85,7 +85,7 @@ _Appointments are not guaranteed until enrollment is known at the end of
 shopping period. SEAS ordinarily requires that TFs have an overall GPA
 of 3.33 or higher._
 
-[[]]
+
 Tutor
 ^^^^^
 

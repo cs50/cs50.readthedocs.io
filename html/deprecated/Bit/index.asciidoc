@@ -15,7 +15,7 @@ Since there are 8 positions of 2 possible values, a single byte is made
 up of 2^8^ discrete values and can therefore store 256 different numbers
 from 0 to 255.
 
-[[]]
+
 Prefixes
 ~~~~~~~~
 

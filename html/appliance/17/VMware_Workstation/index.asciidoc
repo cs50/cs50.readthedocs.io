@@ -7,11 +7,11 @@ Here's how to install the link:CS50_Appliance_17[CS50 Appliance] using
 VMware Workstation for link:#_installation[Windows] or
 link:#_installation_2[Linux].
 
-[[]]
+
 Windows
 -------
 
-[[]]
+
 Installation
 ~~~~~~~~~~~~
 
@@ -99,22 +99,22 @@ that_' appliance50-17_' folder (wherever you moved it for safe-keeping),
 highlight the *appliance50-17.vmx* file within, and click *Open*. Then
 click VMware Workstation's ▶ button to start up the appliance.
 
-[[]]
+
 Troubleshooting
 ~~~~~~~~~~~~~~~
 
-[[]]
+
 Binary translation is incompatible with long mode on this platform
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you see this message, you might need to enable
 link:Hardware_Virtualization[hardware virtualization] on your computer.
 
-[[]]
+
 Linux
 -----
 
-[[]]
+
 Installation
 ~~~~~~~~~~~~
 

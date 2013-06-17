@@ -3,14 +3,14 @@ tags: []
 title: Lloyd
 ---
 
-[[]]
+
 Resources (2012)
 ~~~~~~~~~~~~~~~~
 
 Any TF may use these resources, just please don't remove my name from
 the materials if you use them as-is!
 
-[[]]
+
 Practice Problems
 ^^^^^^^^^^^^^^^^^
 
@@ -46,7 +46,7 @@ Practice Problems
 ** Media:PracProb2Sols-2012.pdf[PDF version]
 ** Media:PracProb2Sols-2012.zip[LaTeX source (ZIP)]
 
-[[]]
+
 Cheat Sheets
 ^^^^^^^^^^^^
 
@@ -78,7 +78,7 @@ Cheat Sheets
 ** Media:CheatSheet1-2012.pdf[PDF version]
 ** Media:CheatSheet1-2012.zip[LaTeX source (ZIP)]
 
-[[]]
+
 Practice Quizzes
 ^^^^^^^^^^^^^^^^
 
@@ -106,14 +106,14 @@ Practice Quizzes
 ** Media:Quiz0StudyTips-2012.pdf[PDF version]
 ** Media:Quiz0StudyTips-2012.zip[LaTeX source (ZIP)]
 
-[[]]
+
 Resources (2011)
 ~~~~~~~~~~~~~~~~
 
 Any TF may use these resources, just please don't remove my name from
 the materials if you use them as-is!
 
-[[]]
+
 Practice Problems
 ^^^^^^^^^^^^^^^^^
 
@@ -133,7 +133,7 @@ Practice Problems
 ** Media:PracProb2-2011.pdf[PDF version]
 ** Media:PracProb2-2011.zip[LaTeX source (ZIP)]
 
-[[]]
+
 Cheat Sheets
 ^^^^^^^^^^^^
 
@@ -161,7 +161,7 @@ Cheat Sheets
 ** Media:CheatSheet1-2011.pdf[PDF version]
 ** Media:CheatSheet1-2011.zip[LaTeX source (ZIP)]
 
-[[]]
+
 Practice Quizzes
 ^^^^^^^^^^^^^^^^
 
@@ -185,11 +185,11 @@ Practice Quizzes
 ** Media:Quiz0StudyTips.pdf[PDF version]
 ** Media:Quiz0StudyTips.zip[LaTeX source (ZIP)]
 
-[[]]
+
 Resources (2010)
 ~~~~~~~~~~~~~~~~
 
-[[]]
+
 Cheat Sheets
 ^^^^^^^^^^^^
 
@@ -202,7 +202,7 @@ Cheat Sheets
 
 * Media:Quiz1Topics-Lloyd.pdf[CS50 Topical Review] (PDF)
 
-[[]]
+
 Practice Quizzes
 ^^^^^^^^^^^^^^^^
 
@@ -211,7 +211,7 @@ Practice Quizzes
 * Media:Quiz1-Lloyd.pdf[Practice Quiz 1] (PDF)
 ** Media:Quiz1Answers-Lloyd.pdf[Practice Quiz 1 - Answers] (PDF)
 
-[[]]
+
 LaTeX Source Files
 ^^^^^^^^^^^^^^^^^^
 

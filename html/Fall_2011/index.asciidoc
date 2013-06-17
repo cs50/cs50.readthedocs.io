@@ -7,7 +7,7 @@ To follow Fall 2011 of CS50, download and install *version 2.3* of the
 link:CS50 Appliance 2.3[CS50 Appliance]. Then follow the directions
 below.
 
-[[]]
+
 Lectures
 --------
 
@@ -15,7 +15,7 @@ Videos of Fall 2011's lectures are available at
 https://www.cs50.net/lectures/, as are PDFs of scribe notes, slides, and
 source code.
 
-[[]]
+
 Week 0
 ~~~~~~
 
@@ -23,7 +23,7 @@ Download and install Scratch from http://scratch.mit.edu/download, then
 download Week 0's Source Code (i.e., Scratch projects) from
 https://www.cs50.net/lectures/.
 
-[[]]
+
 Week 1 onward
 ~~~~~~~~~~~~~
 

@@ -2,7 +2,7 @@
 tags: []
 title: Programming_contests
 ---
-[[]]
+
 http://www.ecs.csus.edu/pc2/[PC^2^]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -15,7 +15,7 @@ really sure how geared it is toward the types of contests we might run,
 so I'd have to look more into how tweakable the stuff is if this is the
 best-looking option.
 
-[[]]
+
 http://spoj.pl[SPOJ]
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -29,7 +29,7 @@ it's nothing we'd have to worry about. To be honest, the site didn't
 seem that great, but it's possible that with access to the "create a
 contest" tools it could be really intuitive.
 
-[[]]
+
 `code.google.com` options
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -39,7 +39,7 @@ On the other hand, it's hard to tell exactly how real-world tested they
 are compared to the two above. Both of them seem fairly similar since
 they describe themselves in such abstract terms.
 
-[[]]
+
 http://code.google.com/p/codechecker/[codechecker]
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -47,7 +47,7 @@ This one seems somewhat better than the latter. It was updated only 3
 days ago, so they seem to be on top of working on it. They have a more
 thorough documentation and a relatively simple setup.
 
-[[]]
+
 http://code.google.com/p/hackzor/[Hackzor]
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -55,7 +55,7 @@ This one hasn't been updated in about a year, so I'm not really sure
 finished of a product it is. Either way, looking at the source code, it
 could be a good framework.
 
-[[]]
+
 http://topcoder.com[TopCoder] and http://codechef.com[CodeChef]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

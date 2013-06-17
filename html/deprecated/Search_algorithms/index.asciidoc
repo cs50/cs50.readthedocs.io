@@ -3,7 +3,7 @@ tags: []
 title: Search_algorithms
 ---
 
-[[]]
+
 Linear Search
 -------------
 
@@ -49,7 +49,7 @@ Because of its linear link:running time[running time], linear search is
 a clearly suboptimal algorithm, particularly when compared to binary
 search.
 
-[[]]
+
 Binary Search
 -------------
 

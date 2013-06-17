@@ -7,7 +7,7 @@ Below are CS-related mailing lists on campus to which you can subscribe.
 Best to subscribe using your harvard.edu email address so that you're
 approved.
 
-[[]]
+
 ABCD
 ~~~~
 
@@ -130,7 +130,7 @@ Windows."
 * http://www.abcd.harvard.edu/cgi/ABCDdb.pub?Op=Edit[abcd-www].
 "abcd-www List."
 
-[[]]
+
 Entrepreneurship
 ~~~~~~~~~~~~~~~~
 
@@ -153,7 +153,7 @@ maximize the chance of launching successful ventures. HCVP strives to be
 the prominent venture group on campus providing connections, resources
 and guidance to all students at Harvard College."
 
-[[]]
+
 FAS
 ~~~
 
@@ -161,7 +161,7 @@ FAS
 http://lists.fas.harvard.edu/mailman/listinfo/netcontacts-list[netcontacts-list].
 "Downtime Notification Mailing List."
 
-[[]]
+
 HCS
 ~~~
 
@@ -189,7 +189,7 @@ member belongs on this list. This list has about 35 members."
 * http://lists.hcs.harvard.edu/hcs-questions[hcs-questions]. "This list
 is a forum for people (particularly new members) to ask questions."
 
-[[]]
+
 Jobs
 ~~~~
 
@@ -211,7 +211,7 @@ maximize the chance of launching successful ventures. HCVP strives to be
 the prominent venture group on campus providing connections, resources
 and guidance to all students at Harvard College."
 
-[[]]
+
 SEAS
 ~~~~
 

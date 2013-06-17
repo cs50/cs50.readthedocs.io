@@ -6,7 +6,7 @@ title: Week_5
 _CS50 Library. Stack and heap, continued. Pointers, continued. File I/O.
 Forensics. Linked lists._
 
-[[]]
+
 Agenda
 ------
 
@@ -23,7 +23,7 @@ details.
 * Singly linked lists
 * Quiz 0 Q&A
 
-[[]]
+
 References
 ----------
 
@@ -31,11 +31,11 @@ References
 * http://cdn.cs50.net/2009/fall/sections/5/section5.pdf[Section Notes],
 Fall 2009
 
-[[]]
+
 Materials
 ---------
 
-[[]]
+
 User:lloyd[Doug Lloyd]
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -59,7 +59,7 @@ answer key corresponds to the current version of the practice quiz, not
 the earlier posted version that contained some errors. These were
 prepared using LaTeX.
 
-[[]]
+
 Errata in version distributed prior to 11:45am on October 10, 2010
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -76,7 +76,7 @@ In Question 24, the function's body should read: `
 Question 31 should precede Question 32. Students should be using the
 solution to `gcd()` to solve `lcm()`.
 
-[[]]
+
 link:Rose's Section[Rose Cao]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

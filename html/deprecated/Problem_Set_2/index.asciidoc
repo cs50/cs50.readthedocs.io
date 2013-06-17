@@ -20,7 +20,7 @@ eventually upload them to the cloud for archival.
 
 _No Wufoo forms this time._
 
-[[]]
+
 How to Fetch and Render
 ^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -33,7 +33,7 @@ render pset2 both2/*.pset2
 render hacker2 both2/*.hacker2
 ---------------------------------
 
-[[]]
+
 Grading Scripts
 ---------------
 
@@ -54,7 +54,7 @@ or
 ~mtucker/personal/scripts/trunk/pset2-scripts/hacker2.pl
 --------------------------------------------------------
 
-[[]]
+
 Notes
 ~~~~~
 

@@ -36,7 +36,7 @@ directions.
 your calendar can be exported (e.g.,via a script written by you) in
 iCalendar format, follow these directions.
 
-[[]]
+
 How to Add a Google Calendar
 ----------------------------
 
@@ -80,7 +80,7 @@ http://www.google.com/calendar/ical/.../public/basic.ics
 
 Loading...
 
-[[]]
+
 How to Add an Individual Event
 ------------------------------
 
@@ -111,7 +111,7 @@ ec658deerd6blkv8q6uhulo8io@group.calendar.google.com
 Within 24 hours, HarvardEvents should detect that it's been invited to
 your event, and your event should appear in HarvardEvents itself.
 
-[[]]
+
 How to Add a CSV Feed
 ---------------------
 
@@ -194,7 +194,7 @@ form below.
 
 Loading...
 
-[[]]
+
 How to Add a Google Spreadsheet
 -------------------------------
 
@@ -290,7 +290,7 @@ below *Get a link to the published data*; leave *All cells* as-is.
 
 Loading...
 
-[[]]
+
 How to Add an iCalendar File
 ----------------------------
 

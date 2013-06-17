@@ -12,7 +12,7 @@ those described herein; certainly feel free to play. Do bear in mind,
 however, the http://www.cs50.net/syllabus/[syllabus's] policy on
 academic honesty.
 
-[[]]
+
 Step 0
 ------
 
@@ -24,7 +24,7 @@ appears to have the required software installed; if it does not, you
 will be provided with directions on how to download and install the
 software (for free).
 
-[[]]
+
 Step 1
 ------
 
@@ -36,7 +36,7 @@ the below
 
 image:Holdvohs1.png[Holdvohs1.png,title="image"]
 
-[[]]
+
 Step 2
 ------
 
@@ -57,7 +57,7 @@ everyone (who’s not already in a private room) will see what you are
 doing. And try not to background or minimize the VTR’s window, lest you
 not notice when it’s your turn!
 
-[[]]
+
 Step 3
 ------
 
@@ -96,7 +96,7 @@ left-hand side of your screen.
 
 image:Attendvohs3.png[Attendvohs3.png,title="image"]
 
-[[]]
+
 The End
 -------
 

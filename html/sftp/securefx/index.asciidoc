@@ -27,7 +27,7 @@ home directory is accessible on both.
 
 __TOC__
 
-[[]]
+
 Launching SecureFX
 ^^^^^^^^^^^^^^^^^^
 
@@ -41,7 +41,7 @@ the image). If fas.harvard.edu does not appear in your Connect window,
 proceed to *Creating a Session* below. If fas.harvard.edu _does_ appear,
 skip to *Using SecureFX*.
 
-[[]]
+
 Creating a Session
 ^^^^^^^^^^^^^^^^^^
 
@@ -65,7 +65,7 @@ image:FXWiz3.jpg[FXWiz3.jpg,title="image"]
 Finally, click *Finish*. You should see the *Connect* window again, but
 with fas.harvard.edu as a session (as shown above).
 
-[[]]
+
 Using SecureFX
 ^^^^^^^^^^^^^^
 

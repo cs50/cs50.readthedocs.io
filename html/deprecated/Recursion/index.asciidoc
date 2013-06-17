@@ -21,7 +21,7 @@ Popular recursive functions include factorial and fibonacci. Recursion
 also applies to data structures which rely on long or infinite series of
 similar components such as binary trees and linked lists.
 
-[[]]
+
 Recursive Functions
 -------------------
 
@@ -33,7 +33,7 @@ function's argument must therefore approach the base case with each
 call. In this sense, recursive functions closely resemble proofs by
 induction in mathematics.
 
-[[]]
+
 The Recursive Case
 ~~~~~~~~~~~~~~~~~~
 
@@ -66,7 +66,7 @@ This recursive definition is not sufficient to solve the problem however
 because it causes an infinite loop. In order to complete the program,
 the function must include a base case.
 
-[[]]
+
 The Base Case
 ~~~~~~~~~~~~~
 
@@ -111,7 +111,7 @@ returns a result. This is important because recursive definitions that
 never reach the base case are a common source of errors in programs
 using recursion.
 
-[[]]
+
 Recursive Functions and the Stack
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -124,7 +124,7 @@ calls to the recursive function. As each call returns a result however
 each frame collapses until only the main frame remains. The diagram
 below illustrates the effect of calling factorial(5) on the stack.
 
-[[]]
+
 Popular Applications
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -133,7 +133,7 @@ visualize, recursive functions can only resolve a limited number of
 problems. Below a a few category of problems that often lend themselves
 to recursive solutions.
 
-[[]]
+
 Numbers in a Set
 ^^^^^^^^^^^^^^^^
 
@@ -142,7 +142,7 @@ definitions. Recursive functions can therefore easily check whether a
 number belongs to such a set or print out a series of numbers belonging
 to the set.
 
-[[]]
+
 Even and Odd
 ++++++++++++
 
@@ -167,7 +167,7 @@ bool odd(unsigned int n)
 }
 ------------------------------------------
 
-[[]]
+
 Finonacci
 +++++++++
 
@@ -191,7 +191,7 @@ unsigned int fibonacci(unsigned int n)
 }
 ------------------------------------------------
 
-[[]]
+
 Sorts
 ^^^^^
 
@@ -199,7 +199,7 @@ Because sorting functions often repeat a number of similar steps in
 order to order elements in a set, they can often be implemented using
 recursive functions.
 
-[[]]
+
 Recursive Data Structures
 -------------------------
 
@@ -210,7 +210,7 @@ and linked lists. The advantage of recursive data structures is that
 they can grow dynamically, meaning that size of the structure can change
 without having to declare a new structure.
 
-[[]]
+
 Linked Lists
 ~~~~~~~~~~~~
 

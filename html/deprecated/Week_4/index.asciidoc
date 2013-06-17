@@ -5,7 +5,7 @@ title: Week_4
 
 _Merge sort. Dynamic memory allocation. Stack and heap.  Pointers._
 
-[[]]
+
 Agenda
 ------
 
@@ -34,7 +34,7 @@ _Consider showing and explaining
 http://cslibrary.stanford.edu/104/[Binky Pointer Fun Video], which we
 saw in Week 4's last lecture, again._
 
-[[]]
+
 References
 ----------
 
@@ -43,11 +43,11 @@ Fall 2009
 * http://cdn.cs50.net/2009/fall/sections/4/section4.flv?play[Video],
 Fall 2009
 
-[[]]
+
 Materials
 ---------
 
-[[]]
+
 Mike Teodorescu
 ~~~~~~~~~~~~~~~
 
@@ -57,7 +57,7 @@ Mike Teodorescu
 use portions of these slides or the slides in full please keep the
 attribution to me and add a footer "prepared by Mike Teodorescu".
 
-[[]]
+
 link:Rose's Section[Rose Cao]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -104,13 +104,13 @@ address all the time
 :*** Prints each of the elements (chars) and its address; not as
 compelling as seeing the address increase by 4 bytes for ints
 
-[[]]
+
 Josh Bolduc
 ~~~~~~~~~~~
 
 Media:Jbolduc week4.zip[Source code] -- few examples with pointers
 
-[[]]
+
 Matthew Chartier
 ~~~~~~~~~~~~~~~~
 
@@ -140,7 +140,7 @@ then frees it.
 
 :** http://xkcd.com/138/[xkcd]
 
-[[]]
+
 User:lloyd[Doug Lloyd]
 ~~~~~~~~~~~~~~~~~~~~~~
 

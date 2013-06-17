@@ -7,11 +7,11 @@ Here's how to install the link:CS50_Appliance_17[CS50 Appliance] using
 VirtualBox for link:#_mac_os[Mac OS], link:#Windows[Windows], and
 link:#_linux[Linux].
 
-[[]]
+
 Mac OS
 ------
 
-[[]]
+
 Installation
 ~~~~~~~~~~~~
 
@@ -92,11 +92,11 @@ start the appliance. If you see a black-and-white screen entitled *GNU
 GRUB*, no need to do anything; the appliance will continue to boot after
 a few seconds!
 
-[[]]
+
 Troubleshooting
 ~~~~~~~~~~~~~~~
 
-[[]]
+
 Nonexistent host networking interface, name '' (VERR_INTERNAL_ERROR)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -131,7 +131,7 @@ yourself from the drop-down menu next to *Name* yourself if necessary.
 (e.g., the link:CS50_Appliance_17[CS50 Appliance]); it should now be
 gone.
 
-[[]]
+
 Failed to load VMMR0.r0 (VERR_SUPLIB_OWNER_NOT_ROOT)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -156,7 +156,7 @@ gone.
 
 Source: http://forums.virtualbox.org/viewtopic.php?f=7&t=38825
 
-[[]]
+
 Failed to load VMMR0.r0 (VERR_SUPLIB_WORLD_WRITABLE)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -180,11 +180,11 @@ gone.
 
 Source: http://forums.virtualbox.org/viewtopic.php?f=7&t=39179
 
-[[]]
+
 Windows
 -------
 
-[[]]
+
 Installation
 ~~~~~~~~~~~~
 
@@ -278,11 +278,11 @@ If you ultimately find that the link:CS50_Appliance_17[CS50 Appliance]
 runs unbearably slow within VirtualBox, you might need to enable
 link:Hardware Virtualization[hardware virtualization] on your PC.
 
-[[]]
+
 Troubleshooting
 ~~~~~~~~~~~~~~~
 
-[[]]
+
 Nonexistent host networking interface, name '' (VERR_INTERNAL_ERROR)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -318,7 +318,7 @@ yourself if necessary.
 (e.g., the link:CS50_Appliance_17[CS50 Appliance]); it should now be
 gone.
 
-[[]]
+
 Nonexistent host networking interface, name 'VirtualBox Host-Only
 Ethernet Adapter' (VERR_INTERNAL_ERROR)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -355,7 +355,7 @@ yourself if necessary.
 (e.g., the link:CS50_Appliance_17[CS50 Appliance]); it should now be
 gone.
 
-[[]]
+
 The installer has encountered an unexpected error installing this
 package.  This may indicate a problem with this package.  The error code
 is 2869.
@@ -390,7 +390,7 @@ above]. *Be sure to run the installer as an administrator.*
 Let sysadmins@cs50.net know if VirtualBox's installer still fails,
 despite these steps!
 
-[[]]
+
 The application "iphlpsvc.dll" needs to be closed for the installation
 to continue
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -403,7 +403,7 @@ See
 link:#_the_installer_has_encountered_an_unexpected_error_installing_this_package..c2.a0_this_may_indicate_a_problem_with_this_package..c2.a0_the_error_code_is_2869.[troubleshooting
 tips for that other error].
 
-[[]]
+
 The application "Install Queue" needs to be closed for the installation
 to continue
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -416,11 +416,11 @@ See
 link:#_the_installer_has_encountered_an_unexpected_error_installing_this_package..c2.a0_this_may_indicate_a_problem_with_this_package..c2.a0_the_error_code_is_2869.[troubleshooting
 tips for that other error].
 
-[[]]
+
 Linux
 -----
 
-[[]]
+
 Installation
 ~~~~~~~~~~~~
 
@@ -487,11 +487,11 @@ If you ultimately find that the link:CS50_Appliance_17[CS50 Appliance]
 runs unbearably slow within VirtualBox, you might need to enable
 link:Hardware Virtualization[hardware virtualization] on your PC.
 
-[[]]
+
 Troubleshooting
 ~~~~~~~~~~~~~~~
 
-[[]]
+
 Nonexistent host networking interface, name '' (VERR_INTERNAL_ERROR)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

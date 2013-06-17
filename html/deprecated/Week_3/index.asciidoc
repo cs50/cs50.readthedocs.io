@@ -7,7 +7,7 @@ _Linear search. Binary search. Asymptotic notation. Recursion.
 Pseudorandomness. Bubble sort. Selection sort. Insertion sort.
 Debugging._
 
-[[]]
+
 Agenda
 ------
 
@@ -36,7 +36,7 @@ like.
 * Bubble Sort
 * Selection Sort
 
-[[]]
+
 References
 ----------
 
@@ -45,17 +45,17 @@ Fall 2009
 * http://cdn.cs50.net/2009/fall/sections/3/section3.flv?play[Video],
 Fall 2009
 
-[[]]
+
 Materials
 ---------
 
-[[]]
+
 Josh Bolduc
 ~~~~~~~~~~~
 
 Media:Jbolduc_week3.zip[Source code] -- focus on gdb and recursion.
 
-[[]]
+
 Matt Chartier
 ~~~~~~~~~~~~~
 
@@ -63,7 +63,7 @@ Media:Week3Matt.pptx[Slides] -- GDB, Arrays, Call Stack*, Recursion*,
 Search, Asymptotic Notation, Sort. Note that these slides include topics
 not explicitly included in the week 3 agenda.
 
-[[]]
+
 link:Rose's Section[Rose Cao]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -90,7 +90,7 @@ Complexity)
 
 :** Animation's a bit choppy (esp with the exclamation points)....
 
-[[]]
+
 User:lloyd[Doug Lloyd]
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -107,7 +107,7 @@ them. These were prepared using LaTeX.
 I also wrote up some sample code of the game Media:Tictac.pdf[Tic Tac
 Toe] to show how a 2D array may be used in practice (and also for fun!)
 
-[[]]
+
 Mike Teodorescu
 ~~~~~~~~~~~~~~~
 

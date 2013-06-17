@@ -17,7 +17,7 @@ the steps below.
 *Because of these issues, it's fine if your implementation only works in
 one (1) browser instead of two (2).*
 
-[[]]
+
 PC Users
 ^^^^^^^^
 
@@ -47,7 +47,7 @@ code.
 if you can't get http://shuttle.cs50.net/[shuttle.cs50.net] to work on
 your own computer.*
 
-[[]]
+
 Mac Users
 ^^^^^^^^^
 

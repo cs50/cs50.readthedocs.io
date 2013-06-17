@@ -6,7 +6,7 @@ To "take" Fall 2010 of CS50, download and install *version 2.1* of the
 link:CS50 Appliance 2.1[CS50 Appliance]. Then follow the directions
 below.
 
-[[]]
+
 Lectures
 --------
 
@@ -14,7 +14,7 @@ Videos of Fall 2010's lectures are available at
 http://cs50.tv/2010/fall/#l=lectures, as are PDFs of scribe notes,
 slides, and source code.
 
-[[]]
+
 Week 0
 ~~~~~~
 
@@ -22,7 +22,7 @@ Download and install Scratch from http://scratch.mit.edu/download, then
 download Week 0's Scratch projects from
 http://cdn.cs50.net/2010/fall/lectures/0/src/.
 
-[[]]
+
 Week 1
 ~~~~~~
 
@@ -41,7 +41,7 @@ You can then compile and run, say, `hai1.c`, as follows:
 
 Similarly can you compile and run other programs in `~/lectures/1/`.
 
-[[]]
+
 Week 2
 ~~~~~~
 
@@ -60,7 +60,7 @@ You can then compile and run, say, `battleship.c`, as follows:
 
 Similarly can you compile and run other programs in `~/lectures/2/`.
 
-[[]]
+
 Week 3
 ~~~~~~
 
@@ -79,7 +79,7 @@ You can then compile and run, say, `sigma1.c`, as follows:
 
 Similarly can you compile and run other programs in `~/lectures/3/`.
 
-[[]]
+
 Week 4
 ~~~~~~
 
@@ -98,7 +98,7 @@ You can then compile and run, say, `swap.c`, as follows:
 
 Similarly can you compile and run other programs in `~/lectures/4/`.
 
-[[]]
+
 Week 5
 ~~~~~~
 
@@ -117,7 +117,7 @@ You can then compile and run, say, `list1.c`, as follows:
 
 Similarly can you compile and run other programs in `~/lectures/5/`.
 
-[[]]
+
 Week 7
 ~~~~~~
 
@@ -136,7 +136,7 @@ You can then compile and run, say, `binary.c`, as follows:
 
 Similarly can you compile and run other programs in `~/lectures/7/`.
 
-[[]]
+
 Week 8
 ~~~~~~
 
@@ -154,7 +154,7 @@ and execute:
 You can then access those files via a browser at
 http://192.168.56.50/~jharvard/lectures/8/.
 
-[[]]
+
 Week 9
 ~~~~~~
 
@@ -172,7 +172,7 @@ and execute:
 You can then access those files via a browser at
 http://192.168.56.50/~jharvard/lectures/9/.
 
-[[]]
+
 Week 10
 ~~~~~~~
 
@@ -190,7 +190,7 @@ and execute:
 You can then access those files via a browser at
 http://192.168.56.50/~jharvard/lectures/10/.
 
-[[]]
+
 Problem Sets
 ------------
 
@@ -204,7 +204,7 @@ that's what the CS50 Appliance is for! Having the CS50 Appliance is like
 having your very own copy of `cloud.cs50.net` on your own computer, with
 just a few caveats.
 
-[[]]
+
 Caveats
 ^^^^^^^
 
@@ -226,7 +226,7 @@ instead visit http://192.168.56.50/~jharvard/pset7/.
 `<nowiki>http://cloud.cs50.net/~username/pset8/</nowiki>`, you should
 instead visit http://192.168.56.50/~jharvard/pset8/.
 
-[[]]
+
 Support
 -------
 

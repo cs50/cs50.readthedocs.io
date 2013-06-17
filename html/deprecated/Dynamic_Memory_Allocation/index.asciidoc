@@ -11,7 +11,7 @@ once the function returns. In C, you can request dynamic memory using
 the *malloc* library function. After you allocate memory, you always
 have to return it to the operating system using the *free* function.
 
-[[]]
+
 Detailed Description
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -45,7 +45,7 @@ any memory that you `malloc`ed. (Analogously, you should `fclose` any
 file that you `fopen`.) A tool that can help you find memory leaks and
 similar issues is Valgrind.
 
-[[]]
+
 Other dynamic memory allocation functions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -69,11 +69,11 @@ it fails; thus, you should be careful with code like
 `realloc` fails, `ptr` is `NULL` and you have no way to `free` the
 previously `malloc`ed memory.
 
-[[]]
+
 Examples
 ~~~~~~~~
 
-[[]]
+
 Using dynamic memory allocation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -158,7 +158,7 @@ memory, and returns `NULL`. This program immediately exits in that case.
 Second, all memory that has been dynamically allocated also needs to be
 freed again using a call to `free()`, as is done here in `main()`.
 
-[[]]
+
 Some pitfalls
 ^^^^^^^^^^^^^
 

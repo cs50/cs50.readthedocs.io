@@ -21,7 +21,7 @@ extension if lives somewhere in `~/public_html/`, lest someone else be
 able to execute it via a browser; name it something like `script`, not
 `script.php`.
 
-[[]]
+
 How to Schedule a Cron Job
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 

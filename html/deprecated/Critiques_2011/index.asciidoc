@@ -18,7 +18,7 @@ would fix it._
 
 Below are 355 critiques that were about user interfaces at Harvard.
 
-[[]]
+
 Advising Portal
 ~~~~~~~~~~~~~~~
 
@@ -73,7 +73,7 @@ searching around and forgetting where you were in the process. I would
 also add some more thorough instructions on usage of the tool itself,
 rather than just guidelines about the task it is meant to accomplish.
 
-[[]]
+
 Athletics
 ~~~~~~~~~
 
@@ -99,7 +99,7 @@ streamlining facility information and making sure that only up to date
 online info was available for intramurals. Yahoo Sports or ESPN layouts
 could be imitated.
 
-[[]]
+
 courses.cs50.net
 ~~~~~~~~~~~~~~~~
 
@@ -114,7 +114,7 @@ had set previously are wiped (i.e. I'm browsing CS courses and select
 "spring", and have to start from scratch), but beyond that all of the
 website seems very well-built.
 
-[[]]
+
 Crimson
 ~~~~~~~
 
@@ -131,7 +131,7 @@ previous comments, complicating the hierarchy of the system, it'd be
 better to simply do @(insert previous comment's owner) so that you could
 read from top to bottom and get everything in order.
 
-[[]]
+
 CS50 Appliance
 ~~~~~~~~~~~~~~
 
@@ -213,7 +213,7 @@ minimizing time wasted on pointless reiterating through code.
 * Honestly, I don't really know anything that needs to be changed about
 the appliance.
 
-[[]]
+
 CS50 Cloud
 ~~~~~~~~~~
 
@@ -227,7 +227,7 @@ vastness of value of the network, I would be much happier if it was much
 more obvious how to change ones password, or at the very least allow one
 to set there original password, rather than be randomly assigned one.
 
-[[]]
+
 CS50 Queue
 ~~~~~~~~~~
 
@@ -277,7 +277,7 @@ of asking minor problems on the website (like syntax and such) and one
 TF should be in charge of answering those things. Other students should
 also be able to answer those questions.
 
-[[]]
+
 CS50 Submit
 ~~~~~~~~~~~
 
@@ -285,7 +285,7 @@ CS50 Submit
 run into a different logistical problem. Apparently it wasn't this
 complicated last year?
 
-[[]]
+
 Crimson Careers
 ~~~~~~~~~~~~~~~
 
@@ -468,7 +468,7 @@ one is brought back to the job information page and is forced to go back
 and navigate again. Essentially, I would change all of these small
 annoying parts of the page to facilitate usability.
 
-[[]]
+
 Crimson Cash
 ~~~~~~~~~~~~
 
@@ -567,7 +567,7 @@ steps and 2 log ins. For security reasons with money I can see why they
 want to be careful with the accounts but adding value should be a simple
 step just like buying something online.
 
-[[]]
+
 Harvard.edu
 ~~~~~~~~~~~
 
@@ -586,7 +586,7 @@ gcal (after I subscribe).
 how I would fix it, but nothing is where you'd expect, and the best way
 to find anything is to Google it.
 
-[[]]
+
 HBS Learning Hub
 ~~~~~~~~~~~~~~~~
 
@@ -673,7 +673,7 @@ alphabetical). Also whereas in the old system tomorrows classes are
 listed in upcoming events immediately after todays class end, this now
 does not update until the beginning of the next day.
 
-[[]]
+
 HCS
 ~~~
 
@@ -707,7 +707,7 @@ of the email, instead of giving us the link to manage our subscription
 to a particular list, it should provide the link to login and manage all
 our subscriptions.
 
-[[]]
+
 HOLLIS
 ~~~~~~
 
@@ -888,7 +888,7 @@ library websites I've used. It is difficult to find what I want to find
 links. I would reorganize how the links are titled, how they are
 displayed, and add shortcuts to popular research journal search tools.
 
-[[]]
+
 HUDS
 ~~~~
 
@@ -1091,7 +1091,7 @@ serving a certain dish or a way to include the nutritional information
 for all the items at once. Overall, it is just a very poorly designed
 website that could use some serious renovation.
 
-[[]]
+
 HUIT
 ~~~~
 
@@ -1133,7 +1133,7 @@ know how I would fix it. All I know is that videos are ready for upload
 right after they are taped, but for some reason uploading to the course
 website takes FOREVER.
 
-[[]]
+
 iSites
 ~~~~~~
 
@@ -1286,7 +1286,7 @@ takes "eight steps just to get on a train". I would fix this logic and
 make it more efficient and practical, like being more explicit as to
 where the "Assignment" tab falls under.
 
-[[]]
+
 Laundry
 ~~~~~~~
 
@@ -1317,7 +1317,7 @@ between the two devices used can be optimized to only one. I would fix
 the system by having the device on the wall track the progress of the
 laundry rather than texting a complete new system.
 
-[[]]
+
 my.harvard
 ~~~~~~~~~~
 
@@ -2735,7 +2735,7 @@ link on Campus Resources, but similarly make it obvious.
 
 * myharvard difficult to navigate courses and syllabi
 
-[[]]
+
 OCS
 ~~~
 
@@ -2754,7 +2754,7 @@ entries, so that they are easier to read.
 not user friendly and I can never find anything. Haven't even figured
 out how to make an appointment.
 
-[[]]
+
 PIN
 ~~~
 
@@ -2834,7 +2834,7 @@ know how that works). (I feel like they used to have a checkbox that
 promised it would save your information for you, but it didn't. At least
 they got rid of that empty promise).
 
-[[]]
+
 PeopleSoft
 ~~~~~~~~~~
 
@@ -2949,7 +2949,7 @@ sections have confusing and not very accurate titles. I do not know much
 about the system, but I would suggest making it clearer where the
 important sections the the average user are.
 
-[[]]
+
 Plan-of-Study Tool
 ~~~~~~~~~~~~~~~~~~
 
@@ -3355,7 +3355,7 @@ instead of the other way around. There are several other design features
 that I'd be happy to complain about, but those are the major ones, and
 unfortunately I'm running out of time to submit this form.
 
-[[]]
+
 Pre-Term Planning Tool
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -3881,7 +3881,7 @@ massively complicated but SERIOUSLY I don't mind doing PTP (its a good
 idea) except for the website. The course catalog has improved lately, so
 I was surprised when PTP turned out to be so subpar.
 
-[[]]
+
 Q Guide
 ~~~~~~~
 
@@ -3977,7 +3977,7 @@ past websites. I would fix it by allowing students to see the ranks of
 the courses across departments based on different q scores and have
 links to all past websites readily accessible.
 
-[[]]
+
 Sectioning Tool
 ~~~~~~~~~~~~~~~
 
@@ -4057,7 +4057,7 @@ if selected. It would be better to simply have a "check" system " with
 bullet points". This would make the process easier and fewer errors
 would occur.
 
-[[]]
+
 SEO
 ~~~
 
@@ -4090,7 +4090,7 @@ position on the database may require going through several pages.
 Instead, we could have the database redirect the user after re-logging
 in to the exact page they were on.
 
-[[]]
+
 Shuttle Tracker
 ~~~~~~~~~~~~~~~
 
@@ -4144,7 +4144,7 @@ addition to the above user interface changes, it would also incorporate
 the GPS data in responses to text, to provide a "live update" on how the
 shuttles are running, it would be very much improved and worth using.
 
-[[]]
+
 UHS
 ~~~
 
@@ -4205,7 +4205,7 @@ updates such as these I think the site could be drastically streamlined
 and made functional, such that new users wouldn't have to spend such a
 long time trying to figure out how to use the site to no avail.
 
-[[]]
+
 Other...
 ~~~~~~~~
 

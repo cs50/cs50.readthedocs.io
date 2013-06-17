@@ -5,7 +5,7 @@ title: Week_6
 
 _Quiz 0._
 
-[[]]
+
 Agenda
 ------
 
@@ -15,7 +15,7 @@ Agenda
 * Quiz 0 Q&A
 * TF's Choice
 
-[[]]
+
 User:lloyd[Doug Lloyd]
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -32,7 +32,7 @@ saying that you are using them. These were prepared using LaTeX.
 And here's some Media:Week6Lloyd.pdf[sample code] that illustrates the
 concepts covered in that (and Week 4's) cheat sheet.
 
-[[]]
+
 References
 ----------
 

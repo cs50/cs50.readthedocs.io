@@ -7,7 +7,7 @@ title: CDN
 
 `yum install java-1.6.0-openjdk java-1.6.0-openjdk-devel php-dom pcre-devel openssl-devel make dos2unix javamail vim wget`
 
-[[]]
+
 nginx
 ~~~~~
 

@@ -17,11 +17,11 @@ work.
 menus and icons) or your personal computer's desktop. To share either,
 you should use TeamViewer instead.
 
-[[]]
+
 How to Use
 ~~~~~~~~~~
 
-[[]]
+
 Student
 ^^^^^^^
 
@@ -44,7 +44,7 @@ itself and your prompt will return. Thereafter, the staff will see
 anything you type and vice versa. To quit (and disconnect the staff),
 hit *ctl-d*.
 
-[[]]
+
 Staff
 ^^^^^
 

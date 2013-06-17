@@ -38,7 +38,7 @@ name, email address, and the URL of their project.
 ** Amazingest
 ** make-your-own-category
 
-[[]]
+
 standard edition
 ----------------
 
@@ -56,17 +56,17 @@ concepts (i.e., which _types_ of blocks they used).
 Be sure to download each student's `.sb` file and run it locally; do not
 rely on the Web-based plugin at `scratch.mit.edu`.
 
-[[]]
+
 username.sb
 ~~~~~~~~~~~
 
-[[]]
+
 Correctness
 ^^^^^^^^^^^
 
 See Google Spreadsheet.
 
-[[]]
+
 Design
 ^^^^^^
 
@@ -77,13 +77,13 @@ decisions that could have been better. Take care to explain why your
 proposed design decisions are arguably better, so that they learn from
 your insights.
 
-[[]]
+
 Style
 ^^^^^
 
 No need to comment on the notion of Style for this problem set.
 
-[[]]
+
 Hacker Edition
 --------------
 
@@ -111,17 +111,17 @@ concepts (i.e., which _types_ of blocks they used).
 Be sure to download each student's `.sb` file and run it locally; do not
 rely on the Web-based plugin at `scratch.mit.edu`.
 
-[[]]
+
 username.sb
 ~~~~~~~~~~~
 
-[[]]
+
 Correctness
 ^^^^^^^^^^^
 
 See Google Spreadsheet (the same as for standard edition).
 
-[[]]
+
 Design
 ^^^^^^
 
@@ -132,7 +132,7 @@ decisions that could have been better. Take care to explain why your
 proposed design decisions are arguably better, so that they learn from
 your insights.
 
-[[]]
+
 Style
 ^^^^^
 

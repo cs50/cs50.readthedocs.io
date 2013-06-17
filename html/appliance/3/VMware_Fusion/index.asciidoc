@@ -5,7 +5,7 @@ title: VMware Fusion
 Here's how to install the link:CS50_Appliance_3[CS50 Appliance] using
 VMware Fusion for link:#_installation[Mac OS].
 
-[[]]
+
 Installation
 ~~~~~~~~~~~~
 
@@ -45,7 +45,7 @@ VMware Fusion as needed.
 highlight the *cs50-appliance-3.vmx* file within, and click *Open*. Then
 click VMware Fusion's ▶ button to start up the appliance.
 
-[[]]
+
 Troubleshooting
 ~~~~~~~~~~~~~~~
 

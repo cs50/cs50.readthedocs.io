@@ -5,7 +5,7 @@ title: Week_9
 
 _CSS. Inheritance. JavaScript. Events, continued. Ajax._
 
-[[]]
+
 Agenda
 ------
 
@@ -27,7 +27,7 @@ with http://code.google.com/apis/charttools/[Google Chart Tools]
 http://code.google.com/apis/visualization/interactive_charts.html[interactive
 charts] with http://code.google.com/apis/charttools/[Google Chart Tools]
 
-[[]]
+
 References
 ----------
 
@@ -36,6 +36,6 @@ Fall 2009
 * http://cdn.cs50.net/2009/fall/sections/9/section9.flv?play[Video],
 Fall 2009
 
-[[]]
+
 Materials
 ---------

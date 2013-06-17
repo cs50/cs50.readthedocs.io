@@ -6,7 +6,7 @@ title: Week_7
 _Stacks. Queues. Valgrind. Bitwise operators. Hash tables. Trees. Binary
 search trees. Tries._
 
-[[]]
+
 Agenda
 ------
 
@@ -29,7 +29,7 @@ program with:
 * Binary Search Trees
 * Tries
 
-[[]]
+
 References
 ----------
 
@@ -38,11 +38,11 @@ Fall 2009
 * http://cdn.cs50.net/2009/fall/sections/7/section7.flv?play[Video],
 Fall 2009
 
-[[]]
+
 Materials
 ---------
 
-[[]]
+
 link:Rose's Section[Rose Cao]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -61,7 +61,7 @@ link:Rose's Section[Rose Cao]
 :** Note that topics are a bit different this year (as if you haven't
 noticed it already).
 
-[[]]
+
 User:lloyd[Doug Lloyd]
 ~~~~~~~~~~~~~~~~~~~~~~
 

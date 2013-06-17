@@ -7,14 +7,14 @@ useful from time to time. We've tried to keep the code below simple at
 the expense of rigorous error-checking; we leave it to you to check
 return values more rigorously than we do!
 
-[[]]
+
 Authenticating Users
 ~~~~~~~~~~~~~~~~~~~~
 
 This topic warrants some discussion, so here's a whole article on
 link:Authenticating Users[authenticating users].
 
-[[]]
+
 Parsing CSV
 ~~~~~~~~~~~
 
@@ -52,7 +52,7 @@ while ($row = fgetcsv($handle))
 fclose($handle);
 ----------------------------------------------------------------------
 
-[[]]
+
 Parsing Dates/Times
 ~~~~~~~~~~~~~~~~~~~
 
@@ -78,7 +78,7 @@ $t1 = strtotime("2009-11-11T12:00:00");
 You can then use PHP's http://php.net/manual/en/function.date.php[date]
 function to massage `$t0` and `$t1` into any format you'd like.
 
-[[]]
+
 Parsing JSON
 ~~~~~~~~~~~~
 
@@ -106,7 +106,7 @@ foreach ($items as $item)
 }
 --------------------------------------------------------------------------------
 
-[[]]
+
 Parsing RSS
 ~~~~~~~~~~~
 
@@ -131,28 +131,28 @@ foreach ($dom->channel->item as $item)
 }
 ----------------------------------------------------------------------------
 
-[[]]
+
 Screen Scraping
 ~~~~~~~~~~~~~~~
 
 This topic warrants some discussion, so here's a whole article on
 link:Screen Scraping[screen scraping].
 
-[[]]
+
 Sending Mail
 ~~~~~~~~~~~~
 
 This topic warrants some discussion, so here's a whole article on
 link:Sending Mail[sending mail].
 
-[[]]
+
 Sending Text Messages via Email
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This topic warrants some discussion, so here's a whole article on
 link:Sending Texts[sending texts].
 
-[[]]
+
 Unserializing PHP
 ~~~~~~~~~~~~~~~~~
 

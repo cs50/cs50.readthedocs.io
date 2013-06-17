@@ -39,7 +39,7 @@ version of) Linux, Mac OS, Solaris, or Windows!
 Incidentally, the appliance is always work in progress, so please
 forgive any bugs!
 
-[[]]
+
 Cheatsheet
 ----------
 
@@ -68,11 +68,11 @@ http://w.x.y.z/phpMyAdmin/ from your own computer
 http://w.x.y.z:10000/ from your own computer
 |=============================================================
 
-[[]]
+
 Instructions
 ------------
 
-[[]]
+
 How to Install Appliance
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -103,7 +103,7 @@ few years.) Even with hardware virtualization enabled, though, virtual
 machines might still feel slow if your computer is a few years old, has
 a CPU that's only 1GHz or so, or has only 1GB or so of RAM.
 
-[[]]
+
 How to Update Appliance
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -140,7 +140,7 @@ appliance to version 3. You must instead download 3-15, per the
 link:#_how_to_install_appliance[instructions] above. Thereafter, you'll
 be able to update from 3-15 to future releases, per the two ways above.*
 
-[[]]
+
 How to Use Appliance
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -159,7 +159,7 @@ you. However, we installed as few programs as possible to keep the
 appliance small. You're welcome to install additional programs via *Menu
 > Administration > Add/Remove Applications*.
 
-[[]]
+
 How to Change Name
 ^^^^^^^^^^^^^^^^^^
 
@@ -186,7 +186,7 @@ under your new identity (instead of John Harvard's), execute
 and change `jharvard` to your own username. Then hit *ctrl-x*, then *y*,
 then *Enter* to save and quit.
 
-[[]]
+
 How to Change Password
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -207,7 +207,7 @@ way that only someone with access to your computer (e.g., you) can
 access the appliance. Even though the appliance can connect to the
 Internet, the Internet cannot connect to the appliance.
 
-[[]]
+
 How to Change Language
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -222,7 +222,7 @@ prompted, click *Import key*. You may need to wait for a bit as the
 language is installed. Then link:#_how_to_restart_appliance[restart the
 appliance] and log back in.
 
-[[]]
+
 How to Change Keyboard Layout
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -240,7 +240,7 @@ listed.
 8.  Ensure that your selection is now highlighted instead of *English
 (US)*, then click *Close*.
 
-[[]]
+
 How to Change Time Zone
 ^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -249,7 +249,7 @@ change the appliance's timezone. Select *Menu > Administration > Date &
 Time*. Click the *Time Zone* tab, select the nearest city in your time
 zone, then click *OK*, leaving *System clock uses UTC* checked.
 
-[[]]
+
 How to Open a Terminal
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -268,7 +268,7 @@ panel.
 No matter the approach you take, it's in the terminal window that you'll
 be able to type commands like `cd`, `gcc`, `ls`, etc.
 
-[[]]
+
 How to SSH to Appliance
 ^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -280,13 +280,13 @@ appliance's bottom-right corner).
 *Note that, for security's sake, you can SSH to the appliance as
 `jharvard` but not as `root`.*
 
-[[]]
+
 How to Assign Appliance a Static IP Address
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 _Coming Soon_
 
-[[]]
+
 How to Change Resolution
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -297,7 +297,7 @@ either of these ways:
 new value to the right of *Resolution*, then click *Close*.
 * Click and drag the appliance's bottom-right corner.
 
-[[]]
+
 How to Change Volume
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -310,29 +310,29 @@ next to *Sound card*.
 6.  Click *Quit*.
 7.  Visit http://www.youtube.com/ in Chrome to test with a video!
 
-[[]]
+
 How to Enter/Exit Fullscreen Mode
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-[[]]
+
 VMware Fusion
 +++++++++++++
 
 _Coming Soon_
 
-[[]]
+
 VMware Player
 +++++++++++++
 
 _Coming Soon_
 
-[[]]
+
 VMware Workstation
 ++++++++++++++++++
 
 _Coming Soon_
 
-[[]]
+
 VirtualBox
 ++++++++++
 
@@ -344,7 +344,7 @@ To exit fullscreen mode, move your cursor to the middle of the bottom of
 your screen, at which point a menu should appear. Click the second icon
 from the right (which resembles two squares).
 
-[[]]
+
 How to Use phpMyAdmin
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -360,7 +360,7 @@ using your own computer's browser.
 No matter the approach you take, log in as *jharvard* (or, if necessary,
 *root*) with a password of *crimson* if prompted.
 
-[[]]
+
 How to Restore Snapshots
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -413,7 +413,7 @@ To see which intervals are actually available to you, execute:
 
 `ls /.snapshots/`
 
-[[]]
+
 How to Enable Dropbox
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -477,7 +477,7 @@ even undelete files.
 *Only those files and folders that you save in `~/Dropbox/` will be
 synchronized with your Dropbox account.*
 
-[[]]
+
 How to Transfer Files between Appliance and Your Computer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -495,7 +495,7 @@ otherwise known as http://en.wikipedia.org/wiki/CIFS[CIFS]) in a window
 on your own desktop, to and from which you can drag and drop files.
 Here's how, whether you run Linux, Mac OS, or Windows.
 
-[[]]
+
 Windows
 +++++++
 
@@ -512,7 +512,7 @@ which can be found in the appliance's bottom-right corner), then click
 
 John Harvard's home directory should then open in a new window.
 
-[[]]
+
 Mac OS
 ++++++
 
@@ -529,11 +529,11 @@ appliance to your *Favorite Servers*.) Then click *Connect*.
 
 John Harvard's home directory should then open in a new window.
 
-[[]]
+
 Linux
 +++++
 
-[[]]
+
 GNOME
 
 1.  Select *Connect to Server...* from the *Places* menu.
@@ -550,7 +550,7 @@ address, which can be found in the appliance's bottom-right corner).
 
 John Harvard's home directory should then open in a new window.
 
-[[]]
+
 KDE
 
 1.  Open Dolphin (as via *Computer > Network*).
@@ -570,7 +570,7 @@ address, which can be found in the appliance's bottom-right corner).
 
 John Harvard's home directory should then open in a new window.
 
-[[]]
+
 Xfce
 
 1.  Install `gvfs-smb` as `root` (as via `sudo`) if not installed
@@ -599,7 +599,7 @@ for *Location* then click *Open*.
 8.  Check *Remember forever* if you'd like.
 9.  Click *Connect*.
 
-[[]]
+
 How to Access Appliance from Another Computer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -685,7 +685,7 @@ Administration > Network*, highlight *eth2* in the window that appears,
 click *Edit*, select *Statically set IP addresses*, and configure the
 interface as you see fit.
 
-[[]]
+
 How to Take a Screenshot
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -711,7 +711,7 @@ sending it as an attachment.
 You can also link:#_how_to_share_control_of_your_screen[share control of
 your screen] if you need someone else to see more than a screenshot.
 
-[[]]
+
 How to Share Control of Your Screen
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -745,7 +745,7 @@ computer (rather than from your own appliance) or from a mobile device,
 you can download TeamViewer for free for Android, iOS, Linux, Mac OS, or
 Windows from http://www.teamviewer.com/en/download.aspx.
 
-[[]]
+
 How to Disable Automatic Login
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -758,7 +758,7 @@ execute:
 Then link:#_how_to_restart_appliance[restart the appliance]. You should
 now see a login prompt instead of John Harvard's desktop.
 
-[[]]
+
 How to Log Out of Appliance
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -766,7 +766,7 @@ To log out of the appliance, click
 image:Exit.png[Exit.png,title="image"] in the appliance's bottom-right
 corner, then click *Log Out*.
 
-[[]]
+
 How to Restart Appliance
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -781,7 +781,7 @@ inputting your password if prompted:
 sudo restart
 ------------
 
-[[]]
+
 How to Shut Down Appliance
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -796,7 +796,7 @@ inputting your password if prompted:
 sudo shutdown
 -------------
 
-[[]]
+
 How to Configure Appliance for a Proxy Server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -825,19 +825,19 @@ sudo chmod 644 /etc/profile.d/proxy.sh
 --------------------------------------
 5.  link:#_how_to_restart_appliance[Restart the appliance].
 
-[[]]
+
 How to Run Programs from Lectures
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 See link:Fall_2011#Lectures[Fall 2011's HOWTO].
 
-[[]]
+
 How to Do Problem Sets
 ~~~~~~~~~~~~~~~~~~~~~~
 
 See link:Fall_2011#Problem_Sets[Fall 2011's HOWTO].
 
-[[]]
+
 Accessibility
 -------------
 
@@ -870,7 +870,7 @@ John Harvard's home directory] on your own computer.
 *If you have suggestions on how to improve the appliance's
 accessibility, please let sysadmins@cs50.net know!*
 
-[[]]
+
 Implementation Details
 ----------------------
 
@@ -1114,18 +1114,18 @@ zip -r cs50-appliance-3-15-vmx.zip cs50-appliance-3/
 ----------------------------------------------------
 21. Distribute `cs50-appliance-3-15-vmx.zip`!
 
-[[]]
+
 Troubleshooting
 ---------------
 
 If having trouble with VirtualBox or the CS50 Appliance, see VirtualBox
 and FAQs.
 
-[[]]
+
 Forget a password?
 ------------------
 
-[[]]
+
 I forgot John Harvard's password
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1149,7 +1149,7 @@ prompted.
 
 You should then be able to log in as John Harvard again.
 
-[[]]
+
 I forgot the root password
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1187,7 +1187,7 @@ reboot
 +
 to restart the appliance.
 
-[[]]
+
 I forgot John Harvard's (or root's) MySQL password
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1202,7 +1202,7 @@ below:
 That command will restore the appliance to "factory defaults." It will
 not delete any code that you've written.
 
-[[]]
+
 Changelog
 ---------
 
@@ -1280,14 +1280,14 @@ Keyboard* works fine.
 ** Fixed phpMyAdmin's `hide_db` setting to use a regex.
 ** Added `AllowOverride All` to `httpd.conf` for `/home/*/public_html/`.
 
-[[]]
+
 Known Issues
 ------------
 
 * 3-15
 ** Orca is not pre-configured.
 
-[[]]
+
 Future Work
 -----------
 
@@ -1309,14 +1309,14 @@ doesn't detect generic-release as "Generic" because of its 3.x kernel.)
 consistency with eth\{1,2}?
 * Move proftpd dir out of /etc/webmin/ (seems to be there by accident?)?
 
-[[]]
+
 References
 ----------
 
 * http://www.virtualbox.org/manual/UserManual.html[User Manual] for
 VirtualBox
 
-[[]]
+
 Acknowledgements
 ----------------
 

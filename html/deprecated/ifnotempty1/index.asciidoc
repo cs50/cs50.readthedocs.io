@@ -14,7 +14,7 @@ amount.
 Spaces and newlines are ignored for the condition, but preserved in the
 result.
 
-[[]]
+
 Usage
 ~~~~~
 

@@ -18,7 +18,7 @@ cells that have orange triangles to see comments.
 6.  Email your students their PDFs. Hang on to the PDFs too; we'll
 eventually upload them to the cloud for archival.
 
-[[]]
+
 How to Fetch and Render
 ^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -31,7 +31,7 @@ render pset4 both4/*.pset4
 render hacker4 both4/*.hacker4
 ---------------------------------
 
-[[]]
+
 How to Run Grading Scripts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 

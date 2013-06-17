@@ -3,7 +3,7 @@ tags: []
 title: Short_Course
 ---
 
-[[]]
+
 Instructor
 ----------
 
@@ -12,23 +12,23 @@ Senior Lecturer on Computer Science, Harvard University +
 http://www.cs.harvard.edu/malan/ +
 malan@harvard.edu
 
-[[]]
+
 Requirements
 ------------
 
 Computer with Internet access.
 
-[[]]
+
 Outline
 -------
 
 _subject to change_
 
-[[]]
+
 Day 1
 ~~~~~
 
-[[]]
+
 9:00 – 10:30
 ^^^^^^^^^^^^
 
@@ -40,13 +40,13 @@ addresses. Routers: moving data from point A to point B.
 * http://www.youtube.com/watch?v=c3YjrtILbik[Trailer Warriors of the
 net]
 
-[[]]
+
 10:30 – 11:00
 ^^^^^^^^^^^^^
 
 _Break._
 
-[[]]
+
 11:00 – 12:30
 ^^^^^^^^^^^^^
 
@@ -56,13 +56,13 @@ forging email.
 * http://www.mozilla.com/en-US/firefox/[Firefox]
 ** http://getfirebug.com/[Firebug]
 
-[[]]
+
 12:30 – 13:30
 ^^^^^^^^^^^^^
 
 _Lunch._
 
-[[]]
+
 13:30 – 15:00
 ^^^^^^^^^^^^^
 
@@ -74,13 +74,13 @@ encrypting wireless laptops.
 * http://www.godaddy.com/[Go Daddy]
 * http://www.youtube.com/watch?v=LGnJw9rtjas[Warriors of the Net]
 
-[[]]
+
 15:00 – 15:30
 ^^^^^^^^^^^^^
 
 _Break._
 
-[[]]
+
 15:30 – 17:00
 ^^^^^^^^^^^^^
 
@@ -92,24 +92,24 @@ privacy risks.
 * http://www.w3schools.com/css/[CSS Tutorial]
 * http://www.w3schools.com/html/[HTML Tutorial]
 
-[[]]
+
 Day 2
 ~~~~~
 
-[[]]
+
 9:00 – 10:30
 ^^^^^^^^^^^^
 
 Google Analytics. Doubleclick et al. OpenDNS, Google DNS. Instant
 search. Auto-suggest.
 
-[[]]
+
 10:30 – 11:00
 ^^^^^^^^^^^^^
 
 _Break._
 
-[[]]
+
 11:00 – 12:30
 ^^^^^^^^^^^^^
 
@@ -117,13 +117,13 @@ Hands-on activities, continued. Cookies: tracking users. Programming.
 
 * http://panopticlick.eff.org/[Panopticlick]
 
-[[]]
+
 12:30 – 13:30
 ^^^^^^^^^^^^^
 
 _Lunch._
 
-[[]]
+
 13:30 – 15:00
 ^^^^^^^^^^^^^
 
@@ -135,13 +135,13 @@ liking, commenting.
 * http://www.w3schools.com/js/[JavaScript Tutorial]
 * http://en.wikipedia.org/wiki/PageRank[PageRank]
 
-[[]]
+
 15:00 – 15:30
 ^^^^^^^^^^^^^
 
 _Break._
 
-[[]]
+
 15:30 – 17:00
 ^^^^^^^^^^^^^
 
@@ -162,11 +162,11 @@ Engine Optimization Starter Guide]
 * http://www.nytimes.com/2011/02/13/business/13search.html?_r=1[The
 Dirty Little Secrets of Search]
 
-[[]]
+
 References
 ----------
 
-[[]]
+
 Like Button
 ^^^^^^^^^^^
 
@@ -186,7 +186,7 @@ Like Button
 </html>
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-[[]]
+
 Resources
 ---------
 
@@ -194,7 +194,7 @@ Resources
 ** Media:Short Course Slides.pdf[New York]
 ** Media:Short Course PHX Slides.pdf[Phoenix]
 
-[[]]
+
 Glossary
 --------
 
