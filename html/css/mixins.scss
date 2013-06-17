@@ -49,6 +49,12 @@
     -moz-user-select: $value;
 }
 
+@mixin box-sizing($value) {
+    -webkit-box-sizing: $value;
+    -moz-box-sizing: $value;
+    box-sizing: $value;
+}
+
 @mixin backface-visibility($value) {
     -webkit-backface-visibility: $value;
     -moz-backface-visibility:    $value;

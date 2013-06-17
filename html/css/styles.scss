@@ -31,6 +31,10 @@ p {
     margin-bottom: 1em;
 }
 
+.listingblock {
+    font-size: .75em;
+}
+
 #background {
     width: 100%;
     height: 100%;
@@ -70,19 +74,79 @@ p {
         @include opacity(.3);
         z-index: 1;
     }
-
+    
     #search-wrapper {
-        z-index: 3;
         float: right;
         margin-top: 10px;
         margin-right: 10px;
+        width: 350px;
+        z-index: 4;
 
-        &:after {
-            content: "";
-        }
+        .gsc-control-cse { 
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+            background-color: transparent;
 
-        input {
-            @include box-shadow("0px 1px 1px white, inset 0px 1px 3px #DDD"); 
+            .gsc-table-result {
+                @include box-sizing(content-box);
+            }
+
+            .gsc-search-box-tools {
+                td, tr, table {
+                    border: 0px;
+                    margin: 0px;
+                    padding: 0px;
+                    background-color: transparent;
+               
+                    * {
+                        border: 0px;
+                        background-color: transparent;
+                    }
+                }
+            }
+
+            td, tr, table {
+                border: 0px;
+                @include box-sizing(content-box);
+            }
+
+            .gsc-input-box-hover, .gsc-input-box-focus {
+                @include box-shadow(none !important);
+            }
+
+            td.gsc-search-button {
+                background-color: #D84260;
+                @include border-radius(3px);
+                @include opacity(.8);
+                padding: 4px 8px;
+
+                &:hover {
+                    @include opacity(1);
+                }
+
+                * {
+                    margin: 0px;
+                    padding: 0px;
+                }
+            }
+
+            .gsc-input {
+                padding-right: 5px !important;
+            }
+
+            .gsib_b {
+                min-width: 28px;
+            }
+
+            .gsc-input input {
+                @include border-radius(3px);
+                @include box-shadow("0px 1px 1px #F6F6F6, inset 0px 1px 3px #DDD !important"); 
+                height: 1.75em !important;
+                padding: 2px 20px 0px 8px !important;
+                background-position: 3% 55% !important;    
+                margin-right: 5px !important;
+            }
         }
     }
 
@@ -154,7 +218,7 @@ p {
         list-style-type: none;
     }
 
-    > .ulist > ul {
+    > #content > .ulist > ul {
         margin: 0px;
         font-family: "league-gothic";
 

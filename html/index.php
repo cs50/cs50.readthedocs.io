@@ -53,7 +53,19 @@
         <div id="container">
             <div id="container-background"></div>
             <div id="search-wrapper">
-                <input type="search" placeholder="Search the CS50 Manual..."/>
+                <script>
+                    (function() {
+                        var cx = '017253632348184728259:-z318fz0ofk';
+                        var gcse = document.createElement('script');
+                        gcse.type = 'text/javascript';
+                        gcse.async = true;
+                        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                            '//www.google.com/cse/cse.js?cx=' + cx;
+                        var s = document.getElementsByTagName('script')[0];
+                        s.parentNode.insertBefore(gcse, s);
+                    })();
+                </script>
+                <gcse:search></gcse:search>  
             </div>
             <?php if (isset($yaml["title"])): ?>
                 <h1><?= htmlspecialchars($yaml["title"]) ?></h1>
