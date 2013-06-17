@@ -40,6 +40,14 @@
             // parse post's AsciiDoc
             if ($html === true) {
 
+                // inject document's header, possibly with TOC
+                if (!isset($yaml["toc"]) || $yaml["toc"] !== "false") {
+                    $asciidoc = "= {$yaml["title"]}\n:toc:\n:toc-placement: manual\n\ntoc::[]\n\n{$matches[2]}";
+                }
+                else {
+                    $asciidoc = "= {$yaml["title"]}\n\n{$matches[2]}";
+                }
+
                 // pipe post's AsciiDoc into asciidoctor
                 $process = proc_open(
                     join(" ", [
@@ -49,7 +57,7 @@
                         "-b",
                         "html5",
                         "--trace",
-                        //"-s",
+                        "-s",
                         "-"
                     ]),
                     [
@@ -62,7 +70,7 @@
                     ["LC_ALL" => "en_US.UTF-8"] // http://stackoverflow.com/a/10360300
                 );
                 if (is_resource($process)) {
-                    fwrite($pipes[0], $matches[2]);
+                    fwrite($pipes[0], $asciidoc);
                     fclose($pipes[0]);
                     $html = stream_get_contents($pipes[1]);
                     fclose($pipes[1]);
