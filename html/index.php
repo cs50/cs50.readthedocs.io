@@ -23,9 +23,6 @@
         <!-- https://github.com/pie4dan/CodeRay-GitHub-Theme/blob/master/coderay.css -->
         <link href="/css/coderay.css" rel="stylesheet"/>
 
-        <!-- http://twitter.github.io/bootstrap/ -->
-        <link href="/lib/bootstrap-2.3.1/css/bootstrap.min.css" rel="stylesheet"/>
-
         <!-- https://github.com/asciidoctor/asciidoctor/blob/master/stylesheets/asciidoctor.css -->
         <link href="/css/asciidoctor.css" rel="stylesheet"/>
 
