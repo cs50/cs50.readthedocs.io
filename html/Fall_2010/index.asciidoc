@@ -213,16 +213,16 @@ just a few caveats.
 should instead link:Appliance#How_to_Open_a_Terminal[open a terminal] or
 link:Appliance#How_to_SSH_to_Appliance[SSH to the appliance].
 * When advised by Problem Set 7 to visit
-`<nowiki>http://cloud.cs50.net/~username/</nowiki>`, you should instead
+`http://cloud.cs50.net/~username/`, you should instead
 visit http://192.168.56.50/~jharvard/.
 * When advised by Problem Set 7 to visit
-`<nowiki>http://cloud.cs50.net/phpMyAdmin/</nowiki>`, you should instead
+`http://cloud.cs50.net/phpMyAdmin/`, you should instead
 visit http://192.168.56.50/phpMyAdmin/.
 * When advised by Problem Set 7 to visit
-`<nowiki>http://cloud.cs50.net/~username/pset7/</nowiki>`, you should
+`http://cloud.cs50.net/~username/pset7/`, you should
 instead visit http://192.168.56.50/~jharvard/pset7/.
 * When advised by Problem Set 8 to visit
-`<nowiki>http://cloud.cs50.net/~username/pset8/</nowiki>`, you should
+`http://cloud.cs50.net/~username/pset8/`, you should
 instead visit http://192.168.56.50/~jharvard/pset8/.
 
 

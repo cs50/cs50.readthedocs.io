@@ -13,7 +13,7 @@ transmitted in the clear. Unfortunately, SSL requires a unique IP
 address, for which web-hosting companies usually charge extra. Note that
 `cloud.cs50.net` does support SSL, but not for custom domain names
 (i.e., your website must live at
-`<nowiki>https://cloud.cs50.net/~jharvard/</nowiki>`, where `jharvard`
+`https://cloud.cs50.net/~jharvard/`, where `jharvard`
 is your own username).
 
 But you can authenticate users via other mechanisms as well.

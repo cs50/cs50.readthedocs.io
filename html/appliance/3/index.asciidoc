@@ -961,7 +961,7 @@ disappears). As soon as you see the screen entitled *Fedora 16*, hit
 24. At the *boot:* prompt, type
 +
 ---------------------------------------------------------------------------------------------------------------------------
-linux text biosdevname=0 ks=<nowiki>http://mirror.cs50.net/appliance/3/appliance50-3-15.ks</nowiki> ksdevice=eth0 selinux=0
+linux text biosdevname=0 ks=http://mirror.cs50.net/appliance/3/appliance50-3-15.ks ksdevice=eth0 selinux=0
 ---------------------------------------------------------------------------------------------------------------------------
 +
 then hit *Enter*. If you see *Error downloading kickstart file* after a

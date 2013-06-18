@@ -26,7 +26,7 @@ already have an FAS username and password with which you can SSH or SFTP
 to `nice.fas.harvard.edu`. Installed on this cluster are `gcc`, `gdb`,
 and other familiar tools. With this account can you host an HTML- and
 CSS-based website at
-`<nowiki>http://www.people.fas.harvard.edu/~username/</nowiki>`, where
+`http://www.people.fas.harvard.edu/~username/`, where
 `username` is your own username; simply create a `public_html` directory
 inside of your home directory and `chmod` both `711`. Note that PHP and
 MySQL are not available. And link:Virtual Host[vhosts] are not

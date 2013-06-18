@@ -66,15 +66,15 @@ can allow:
 * Anyone with an `@seas.harvard.edu` email address
 2.  Decide on:
 * The URL at which your website will live (e.g.,
-`<nowiki>https://cloud.cs50.net/~jharvard/</nowiki>`,
-`<nowiki>http://isawyouharvard.com/</nowiki>`, etc.), otherwise known as
+`https://cloud.cs50.net/~jharvard/`,
+`http://isawyouharvard.com/`, etc.), otherwise known as
 your `trust_root` (or `realm`) address. This must be a prefix of your
 `return_to` address. *If you later need to change this address, you'll
 need to contact sysadmins@cs50.net.*
 * The URL to which CS50 ID should return users after authentication
 (e.g.,
-`<nowiki>https://cloud.cs50.net/~jharvard/return_to.php</nowiki>`,
-`<nowiki>http://isawyouharvard.com/return_to.php</nowiki>`, etc.),
+`https://cloud.cs50.net/~jharvard/return_to.php`,
+`http://isawyouharvard.com/return_to.php`, etc.),
 otherwise known as your `return_to` address. *If you later need to
 change this address, you'll need to contact sysadmins@cs50.net.*
 3.  Fill out the
@@ -393,7 +393,7 @@ return
 ^^^^^^
 
 Once the user authenticates via CS50 ID, they'll be brought back to
-`<nowiki>http://localhost:3000/auth/return</nowiki>`. At this point, we
+`http://localhost:3000/auth/return`. At this point, we
 can retrieve information associated with the user that successfully
 logged in. To do so, we must again specify our temporary directory and
 RETURN_TO, as well as the current session and params objects (where the
@@ -514,7 +514,7 @@ http://openid.net/specs/openid-authentication-2_0.html#terminology[OpenID
 terminology], CS50 is an _OpenID Provider_, and a website that uses CS50
 ID (e.g., yours!) is a _Relying Party_. CS50's _OP Identifier_ (i.e.,
 the address on which discovery should be performed) is
-`<nowiki>https://id.cs50.net/</nowiki>`. (Note the `https`.)
+`https://id.cs50.net/`. (Note the `https`.)
 
 As per link:#_how_cs50_id_works[how CS50 ID works], whether you use the
 link:CS50 Library[CS50 Library] or some other library to add CS50 ID to
@@ -580,11 +580,11 @@ Resolution] is not supported.
 authentication.
 * Claimed Identifiers are not supported for `checkid_setup`. A Relying
 Party MUST provide a value of
-`<nowiki>http://specs.openid.net/auth/2.0/identifier_select</nowiki>`
+`http://specs.openid.net/auth/2.0/identifier_select`
 for both `openid.claimed_id` and `openid.identity`.
 * CS50 ID responds to `check_setup` requests with a unique identifier of
 the form +
-`<nowiki>https://id.cs50.net/################################################################</nowiki>` +
+`https://id.cs50.net/################################################################` +
  for both `openid.claimed_id` and `openid.identity`, where +
 `################################################################` +
 represents 64 hexadecimal digits. That identifier is dependent on the
@@ -622,18 +622,18 @@ OpenID Attribute Exchange 1.0
 CS50 ID supports
 http://openid.net/specs/openid-attribute-exchange-1_0.html[OpenID
 Attribute Exchange 1.0] but only for
-`<nowiki>http://axschema.org/namePerson</nowiki>` and
-`<nowiki>http://axschema.org/contact/email</nowiki>`.
+`http://axschema.org/namePerson` and
+`http://axschema.org/contact/email`.
 
 If requested, CS50 ID will return, if available, a value for
 
-* `<nowiki>http://axschema.org/namePerson</nowiki>`
+* `http://axschema.org/namePerson`
 
 where `namePerson` is a user's full name.
 
 If requested, CS50 ID will return, if available, a value for
 
-* `<nowiki>http://axschema.org/contact/email</nowiki>`
+* `http://axschema.org/contact/email`
 
 where `email` is a user's Harvard email address.
 
@@ -646,7 +646,7 @@ FAQs
 
 When a user authenticates, CS50 ID returns an 84-character URL that
 uniquely identifies that user; the URL begins with
-`<nowiki>https://id.cs50.net/</nowiki>` (which is 20 characters in
+`https://id.cs50.net/` (which is 20 characters in
 length) and ends with 64 hexadecimal digits. In a MySQL database, you
 can thus store that identifier in a `CHAR( 84 )` field. For efficiency,
 though, it's best to associate a unique, auto-incrementing `INT` with
@@ -681,7 +681,7 @@ dictates that users be uniquely identified with URLs. By convention,
 OpenID providers (like CS50) return URLs based on domains that they own
 (e.g., `id.cs50.net`) so that their identifiers won't be identical to
 other providers' by accident. CS50 thus standardized on URLs that begin
-with `<nowiki>https://id.cs50.net/</nowiki>`.
+with `https://id.cs50.net/`.
 
 
 Why doesn't CS50 ID always return a user's full name and/or email
@@ -723,8 +723,8 @@ via:
 === Can I develop my site on localhost (127.0.0.1)?
 
 Yes, even though you must register your own website's URLs, CS50 ID also
-trusts URLs that begin with `<nowiki>http://localhost/</nowiki>` and
-`<nowiki>http://127.0.0.1/</nowiki>` automatically so that you can
+trusts URLs that begin with `http://localhost/` and
+`http://127.0.0.1/` automatically so that you can
 develop your website locally and still interact with CS50 ID, provided
 you're running a web server that's listening for requests on `localhost`
 or `127.0.0.1` (on any TCP port). During development, simply change

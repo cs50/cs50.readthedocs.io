@@ -1104,7 +1104,7 @@ disappears). As soon as you see the screen entitled *Welcome to Fedora
 24. At the *boot:* prompt, type
 +
 ----------------------------------------------------------------------------------------------------------------------------
-linux biosdevname=0 ks=<nowiki>http://mirror.cs50.net/appliance/2.1/cs50-appliance-2.1-5.ks</nowiki> ksdevice=eth0 selinux=0
+linux biosdevname=0 ks=http://mirror.cs50.net/appliance/2.1/cs50-appliance-2.1-5.ks ksdevice=eth0 selinux=0
 ----------------------------------------------------------------------------------------------------------------------------
 +
 then hit *Enter*. Kickstart will proceed to install Fedora 15 and CS50's
