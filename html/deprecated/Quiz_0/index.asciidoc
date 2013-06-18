@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Quiz_0
+title: Quiz 0
 ---
 
 Before Arrival

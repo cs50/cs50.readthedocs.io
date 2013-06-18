@@ -1,6 +1,6 @@
 ---
 tags: []
-title: HarvardTweets_API
+title: HarvardTweets API
 ---
 
 The HarvardTweets API allows you to request data programmatically from

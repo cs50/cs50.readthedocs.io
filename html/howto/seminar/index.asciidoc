@@ -1,6 +1,6 @@
 ---
 tags: []
-title: How_to_Lead_a_Seminar
+title: How to Lead a Seminar
 ---
 
 Each fall, CS50 offers a series of link:Seminars[seminars]. Led by the

@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Binary_Search
+title: Binary Search
 ---
 
 1.  redirect link:Search algorithms#Binary_Search[Search

@@ -1,6 +1,6 @@
 ---
 tags: []
-title: App_Inventor
+title: App Inventor
 ---
 
 http://sites.google.com/site/appinventorhelp/[App Inventor for Android]

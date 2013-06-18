@@ -1,6 +1,6 @@
 ---
 tags: []
-title: CS50_Appliance_1.4
+title: CS50 Appliance 1.4
 ---
 
 *This HOWTO is for version 1.4 of the CS50 Appliance. You should only

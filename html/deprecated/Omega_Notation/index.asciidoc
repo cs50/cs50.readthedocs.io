@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Omega_Notation
+title: Omega Notation
 ---
 
 1.  redirect link:Running Time#Asymptotic_or_Big_O_Notation[Running

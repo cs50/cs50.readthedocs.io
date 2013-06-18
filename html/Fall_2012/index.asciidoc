@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Fall_2012
+title: Fall 2012
 ---
 
 To follow Fall 2012 of CS50, download and install *version 17* of the

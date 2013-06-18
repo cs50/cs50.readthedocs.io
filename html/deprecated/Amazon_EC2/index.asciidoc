@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Amazon_EC2
+title: Amazon EC2
 ---
 
 

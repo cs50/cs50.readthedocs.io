@@ -1,6 +1,6 @@
 ---
 tags: []
-title: HarvardEvents_API
+title: HarvardEvents API
 ---
 
 The HarvardEvents API allows you to request data programmatically

@@ -1,6 +1,6 @@
 ---
 tags: []
-title: CSCI_E-52
+title: CSCI E-52
 ---
 
 CS50 is offered through http://extension.harvard.edu/[Harvard Extension

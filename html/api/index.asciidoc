@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Third-Party_APIs
+title: Third-Party APIs
 ---
 
 Below are
@@ -15,16 +15,14 @@ But surely you can parse either using, e.g., PHP! Check out these
 link:Neat Tricks[Neat Tricks] to learn how.
 
 [[]]
-Calendars
-~~~~~~~~~
+== Calendars
 
 * http://code.google.com/apis/calendar/[Google Calendar]. "Google
 Calendar Data API allows client applications to view and update calendar
 events in the form of Google Data API feeds."
 
 [[]]
-E-commerce
-~~~~~~~~~~
+== E-commerce
 
 * http://code.google.com/apis/checkout/[Google Checkout]. "Google
 Checkout allows buyers in over 140 countries to purchase goods and
@@ -36,8 +34,7 @@ https://cms.paypal.com/cgi-bin/?cmd=_render-content&content_ID=developer/home_US
 find information on integrating PayPal right here."
 
 [[]]
-Finance
-~~~~~~~
+== Finance
 
 * http://code.google.com/apis/finance/[Google Finance API]. "Google
 Finance offers a variety of ways to access data programmatically,
@@ -53,8 +50,7 @@ you can construct the URL you'll need to subscribe to news about your
 favorite companies."
 
 [[]]
-Government
-~~~~~~~~~~
+== Government
 
 *
 http://wiki.sunlightlabs.com/Main_Page#Public_APIs_for_government_data[Public
@@ -63,12 +59,10 @@ finding organizations with open source projects and problems that need
 to be solved to make government more transparent and accountable."
 
 [[]]
-Graphics
-~~~~~~~~
+== Graphics
 
 [[]]
-ActionScript
-^^^^^^^^^^^^
+=== ActionScript
 
 * http://flare.prefuse.org/[Flare]. "Flare is an ActionScript library
 for creating visualizations that run in the Adobe Flash Player."
@@ -76,8 +70,7 @@ for creating visualizations that run in the Adobe Flash Player."
 Chart Tools enable adding live charts to any web page."
 
 [[]]
-Java
-^^^^
+=== Java
 
 * http://prefuse.org/[Prefuse]. "Prefuse is a set of software tools for
 creating rich interactive data visualizations. The original prefuse
@@ -89,8 +82,7 @@ programming language and environment for people who want to create
 images, animations, and interactions."
 
 [[]]
-JavaScript
-^^^^^^^^^^
+=== JavaScript
 
 * http://ejohn.org/blog/processingjs/[Processing.js]. "I've ported the
 Processing visualization language to JavaScript, using the Canvas
@@ -101,16 +93,14 @@ want to create your own specific chart or image crop and rotate widget,
 for example, you can achieve it simply and easily with this library."
 
 [[]]
-XML
-^^^
+=== XML
 
 * http://www.maani.us/xml_charts/[XML/SWF Charts]. "XML/SWF Charts is a
 simple, yet powerful tool to create attractive charts and graphs from
 XML data."
 
 [[]]
-Harvard
-~~~~~~~
+== Harvard
 
 * http://www.pin.harvard.edu/dev-resource-menu.shtml[Harvard University
 PIN System]. "The Harvard University PIN System provides centralized
@@ -129,8 +119,7 @@ to sort by various rankings."
 And don't forget CS50's own APIs.
 
 [[]]
-JavaScript
-~~~~~~~~~~
+== JavaScript
 
 * http://dojotoolkit.org/[Dojo Toolkit]. "The Dojo Toolkit is an
 open-source JavaScript toolkit useful for building great web
@@ -172,8 +161,7 @@ including low-level DOM utiltiies and high-level user-interface
 widgets."
 
 [[]]
-Maps
-~~~~
+== Maps
 
 * http://www.microsoft.com/maps/developers/[Bing Maps]. "Developers
 using Bing Maps for Enterprise have access to rich tool sets, user
@@ -196,8 +184,7 @@ and desktop applications using your choice of platform: we provide
 Flash, Ajax and Map Image APIs."
 
 [[]]
-Mobile
-~~~~~~
+== Mobile
 
 * Android SDK
 ** http://beta.appinventor.mit.edu/about/[App Inventor]. "App Inventor
@@ -236,8 +223,7 @@ simple ad-supported SMS API that any web app can use to communicate with
 its users via SMS—for FREE!"
 
 [[]]
-News
-~~~~
+== News
 
 * http://www.google.com/support/news/bin/answer.py?answer=40796[Google
 News]. "Aggregated headlines and a search engine of many of the world's
@@ -256,15 +242,13 @@ http://www.nytimes.com/packages/pdf/nycbabynamesethnicity1990-2008.csv[New
 York City Baby Names]. From Department of Health and Mental Hygiene.
 
 [[]]
-Photos
-~~~~~~
+== Photos
 
 * http://www.flickr.com/services/api/[Flickr API]. "The Flickr API is
 available for non-commercial use by outside developers."
 
 [[]]
-Profanity
-~~~~~~~~~
+== Profanity
 
 * http://wiki.cdyne.com/wiki.php?title=Profanity_Filter[CDYNE
 Profanity Filter Web Service]. "CDYNE's FREE Profanity Filter API is a
@@ -279,8 +263,7 @@ sysadmins@cs50.net a nice note from your harvard.edu address for the
 key.
 
 [[]]
-Search
-~~~~~~
+== Search
 
 * http://code.google.com/apis/ajaxsearch/[Google AJAX Search API]. "The
 Google AJAX Search API lets you put Google Search in your web pages with
@@ -300,8 +283,7 @@ http://en.wikipedia.org/wiki/Main_Page[Wikipedia]]."
 platform."
 
 [[]]
-Social Networking
-~~~~~~~~~~~~~~~~~
+== Social Networking
 
 * http://disqus.com/comments/[DISQUS Comments]. "DISQUS Comments is a
 better comment system for your site."
@@ -318,8 +300,7 @@ The Search API methods give developers methods to interact with Twitter
 Search and trends data."
 
 [[]]
-Streaming Media
-~~~~~~~~~~~~~~~
+== Streaming Media
 
 * http://www.red5.org/[Red5]. "Red5 is an Open Source Flash Server
 written in Java that supports Streaming Audio/Video..."
@@ -327,8 +308,7 @@ written in Java that supports Streaming Audio/Video..."
 Media Server. Any Platform. Any Screen."
 
 [[]]
-Videos
-~~~~~~
+== Videos
 
 * http://code.google.com/apis/youtube/code.html#client_libraries[YouTube
 APIs and Tools]. "The YouTube APIs and Tools let you bring the YouTube

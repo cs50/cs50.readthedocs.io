@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Sending_Mail
+title: Sending Mail
 ---
 
 Below is some code with which you can send email using a library called

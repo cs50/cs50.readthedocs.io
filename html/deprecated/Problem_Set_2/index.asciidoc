@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Problem_Set_2
+title: Problem Set 2
 ---
 
 *Deadline: Mon 10/4, 5:00am* (we'll want to get back onto a Friday

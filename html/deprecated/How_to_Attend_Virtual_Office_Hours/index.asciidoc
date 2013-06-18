@@ -1,6 +1,6 @@
 ---
 tags: []
-title: How_to_Attend_Virtual_Office_Hours
+title: How to Attend Virtual Office Hours
 ---
 
 Thanks to technology, the staff can now help you troubleshoot bugs by

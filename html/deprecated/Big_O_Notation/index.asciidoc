@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Big_O_Notation
+title: Big O Notation
 ---
 
 1.  redirect link:Running Time#Asymptotic_or_Big_O_Notation[Running

@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Week_3
+title: Week 3
 ---
 
 _Linear search. Binary search. Asymptotic notation. Recursion.

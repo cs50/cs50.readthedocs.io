@@ -1,6 +1,6 @@
 ---
 tags: []
-title: CS50_Cloud
+title: CS50 Cloud
 ---
 
 The CS50 Cloud is a cluster of servers configured much like the

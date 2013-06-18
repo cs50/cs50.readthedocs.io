@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Sort_algorithms
+title: Sort algorithms
 ---
 
 __FORCETOC__

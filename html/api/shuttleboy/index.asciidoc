@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Shuttleboy_API
+title: Shuttleboy API
 ---
 
 The Shuttleboy API allows you to request data programmatically from

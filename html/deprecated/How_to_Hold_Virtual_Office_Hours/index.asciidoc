@@ -1,6 +1,6 @@
 ---
 tags: []
-title: How_to_Hold_Virtual_Office_Hours
+title: How to Hold Virtual Office Hours
 ---
 
 Thanks to technology, you can now help students troubleshoot bugs by

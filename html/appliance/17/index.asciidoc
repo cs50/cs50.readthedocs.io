@@ -1,6 +1,6 @@
 ---
 tags: []
-title: CS50_Appliance_17
+title: CS50 Appliance 17
 ---
 
 *This HOWTO is for version 17 of the CS50 Appliance.*

@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Week_6
+title: Week 6
 ---
 
 _Quiz 0._

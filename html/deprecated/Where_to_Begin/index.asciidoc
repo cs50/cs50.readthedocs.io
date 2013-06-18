@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Where_to_Begin
+title: Where to Begin
 ---
 
 Beginning to implement a final project can be overwhelming! Here are

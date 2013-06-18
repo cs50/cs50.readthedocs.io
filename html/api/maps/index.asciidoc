@@ -1,6 +1,6 @@
 ---
 tags: []
-title: HarvardMaps_API
+title: HarvardMaps API
 ---
 
 The HarvardMaps API allows you to request data programmatically from

@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Dynamic_Memory_Allocation
+title: Dynamic Memory Allocation
 ---
 
 *Dynamic memory allocation* is the allocation of memory on the heap

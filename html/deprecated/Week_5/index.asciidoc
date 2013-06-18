@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Week_5
+title: Week 5
 ---
 
 _CS50 Library. Stack and heap, continued. Pointers, continued. File I/O.

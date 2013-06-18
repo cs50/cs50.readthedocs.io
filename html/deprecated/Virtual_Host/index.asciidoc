@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Virtual_Host
+title: Virtual Host
 ---
 
 Because modern browsers include a `Host:` header in their HTTP requests,

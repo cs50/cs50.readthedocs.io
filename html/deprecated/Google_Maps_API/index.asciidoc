@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Google_Maps_API
+title: Google Maps API
 ---
 
 Traffic data. Directions. Satellite imagery. Placemarks. These and more

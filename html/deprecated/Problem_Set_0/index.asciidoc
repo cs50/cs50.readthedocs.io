@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Problem_Set_0
+title: Problem Set 0
 ---
 
 *FOR TFs' EYES ONLY*

@@ -1,6 +1,6 @@
 ---
 tags: []
-title: CS50_APIs
+title: CS50 APIs
 ---
 
 Below are the

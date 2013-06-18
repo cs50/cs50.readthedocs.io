@@ -1,6 +1,6 @@
 ---
 tags: []
-title: CS50_Submit
+title: CS50 Submit
 ---
 
 _Coming Soon_

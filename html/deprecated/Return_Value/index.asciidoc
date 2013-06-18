@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Return_Value
+title: Return Value
 ---
 
 A return value is a value that is passed by a callee function back to

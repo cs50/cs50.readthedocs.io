@@ -1,6 +1,6 @@
 ---
 tags: []
-title: HarvardCourses_API
+title: HarvardCourses API
 ---
 
 Overview

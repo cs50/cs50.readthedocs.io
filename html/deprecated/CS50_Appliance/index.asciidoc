@@ -1,6 +1,6 @@
 ---
 tags: []
-title: CS50_Appliance
+title: CS50 Appliance
 ---
 
 1.  REDIRECT link:CS50 Appliance 3[CS50 Appliance 3]

@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Week_2
+title: Week 2
 ---
 
 _Functions, continued. Global variables. Parameters. Return values.

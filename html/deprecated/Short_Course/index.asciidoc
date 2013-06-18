@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Short_Course
+title: Short Course
 ---
 
 

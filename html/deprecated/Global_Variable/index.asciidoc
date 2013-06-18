@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Global_Variable
+title: Global Variable
 ---
 
 A global variable is a variable whose scope is global, meaning it can be

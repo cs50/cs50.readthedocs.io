@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Screen_Scraping
+title: Screen Scraping
 ---
 
 http://en.wikipedia.org/wiki/Web_scraping[Screen scraping] (the

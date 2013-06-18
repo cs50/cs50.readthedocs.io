@@ -1,6 +1,6 @@
 ---
 tags: []
-title: SSH_Keys
+title: SSH Keys
 ---
 
 Alice and Bob would both like to work on a project on cloud.cs50.net.

@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Problem_Set_3
+title: Problem Set 3
 ---
 
 *Deadline: Fri 10/8, 5:00am*

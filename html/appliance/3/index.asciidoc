@@ -1,6 +1,6 @@
 ---
 tags: []
-title: CS50_Appliance_3
+title: CS50 Appliance 3
 ---
 
 *This HOWTO is for version 3 of the CS50 Appliance.*

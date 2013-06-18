@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Authenticating_Users
+title: Authenticating Users
 ---
 
 1.  REDIRECT Authentication

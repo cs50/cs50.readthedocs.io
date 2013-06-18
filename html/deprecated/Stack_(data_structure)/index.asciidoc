@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Stack_(data_structure)
+title: Stack (data structure)
 ---
 
 1.  REDIRECT Stack

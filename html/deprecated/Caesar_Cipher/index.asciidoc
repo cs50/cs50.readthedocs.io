@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Caesar_Cipher
+title: Caesar Cipher
 ---
 
 Caesar cipher is an implementation of symmetric-key cryptography which

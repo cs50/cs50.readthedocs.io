@@ -1,6 +1,6 @@
 ---
 tags: []
-title: CS50_Library
+title: CS50 Library
 ---
 
 The CS50 Library is a suite of C, Ruby, PHP, and Python code designed to

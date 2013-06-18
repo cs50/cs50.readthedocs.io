@@ -1,6 +1,6 @@
 ---
 tags: []
-title: HarvardFood_API
+title: HarvardFood API
 ---
 
 The HarvardFood API allows you to retrieve

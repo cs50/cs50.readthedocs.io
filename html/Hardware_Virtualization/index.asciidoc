@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Hardware_Virtualization
+title: Hardware Virtualization
 ---
 
 Many computers today come with support for "hardware virtualization"

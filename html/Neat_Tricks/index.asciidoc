@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Neat_Tricks
+title: Neat Tricks
 ---
 
 Below are neat tricks that the http://www.cs50.net/staff/[staff] find

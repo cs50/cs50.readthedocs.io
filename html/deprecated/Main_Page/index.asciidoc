@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Main_Page
+title: Main Page
 ---
 
 This is CS50's manual. CS50's own website is at https://www.cs50.net/.

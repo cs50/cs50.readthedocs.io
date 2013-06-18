@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Command-Line_Argument
+title: Command-Line Argument
 ---
 
 A command-line argument is an argument that is passed to a program when

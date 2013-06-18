@@ -1,6 +1,6 @@
 ---
 tags: []
-title: CS50_Appliance_2.0
+title: CS50 Appliance 2.0
 ---
 
 *This HOWTO is for version 2.0 of the CS50 Appliance. A

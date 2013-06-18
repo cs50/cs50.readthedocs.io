@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Boolean_Expression
+title: Boolean Expression
 ---
 
 1.  REDIRECT Condition#Boolean_Expression

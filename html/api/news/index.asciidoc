@@ -1,6 +1,6 @@
 ---
 tags: []
-title: HarvardNews_API
+title: HarvardNews API
 ---
 
 The HarvardNews API allows you to retrieve channels (i.e., publications)

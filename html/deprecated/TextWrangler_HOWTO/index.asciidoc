@@ -1,6 +1,6 @@
 ---
 tags: []
-title: TextWrangler_HOWTO
+title: TextWrangler HOWTO
 ---
 
 placeholder for Punit Shah

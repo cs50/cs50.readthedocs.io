@@ -1,6 +1,6 @@
 ---
 tags: []
-title: CS50_Appliance_2.1
+title: CS50 Appliance 2.1
 ---
 
 *This HOWTO is for version 2.1 of the CS50 Appliance. If "taking"

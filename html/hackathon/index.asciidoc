@@ -1,6 +1,6 @@
 ---
 tags: []
-title: CS50_Hackathon
+title: CS50 Hackathon
 ---
 
 The CS50 Hackathon is an epic all-nighter at

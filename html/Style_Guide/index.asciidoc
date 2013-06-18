@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Style_Guide
+title: Style Guide
 ---
 
 There's no one, right way to stylize code. But there are definitely a

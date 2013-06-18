@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Search_algorithms
+title: Search algorithms
 ---
 
 

@@ -1,6 +1,6 @@
 ---
 tags: []
-title: HarvardEnergy_API
+title: HarvardEnergy API
 ---
 
 The HarvardEnergy API allows you to request data programmatically from

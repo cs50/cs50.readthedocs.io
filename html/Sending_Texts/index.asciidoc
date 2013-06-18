@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Sending_Texts
+title: Sending Texts
 ---
 
 Most cellular carriers have email-to-SMS gateways, which means you can

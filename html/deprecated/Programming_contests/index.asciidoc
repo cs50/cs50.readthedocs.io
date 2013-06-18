@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Programming_contests
+title: Programming contests
 ---
 
 http://www.ecs.csus.edu/pc2/[PC^2^]

@@ -1,6 +1,6 @@
 ---
 tags: []
-title: CS50_ID
+title: CS50 ID
 ---
 
 CS50 ID is an http://en.wikipedia.org/wiki/OpenID[OpenID]-based service

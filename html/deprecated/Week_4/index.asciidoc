@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Week_4
+title: Week 4
 ---
 
 _Merge sort. Dynamic memory allocation. Stack and heap.  Pointers._

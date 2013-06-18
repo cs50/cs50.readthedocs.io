@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Vigenère_Cipher
+title: Vigenère Cipher
 ---
 
 Vigenère's cipher is rotational cryptographic algorithm which is

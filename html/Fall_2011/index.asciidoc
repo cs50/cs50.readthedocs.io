@@ -1,6 +1,6 @@
 ---
 tags: []
-title: Fall_2011
+title: Fall 2011
 ---
 
 To follow Fall 2011 of CS50, download and install *version 2.3* of the
