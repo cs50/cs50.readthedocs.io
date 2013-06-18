@@ -1,5 +1,5 @@
 ---
-tags: []
+tags: [HOWTO]
 title: Notepad++
 ---
 
@@ -68,5 +68,3 @@ directory in your cloud account in which you'd like to create the file.
 file you just created and double-click it to open it.
 8.  Edit the file however you'd like. Anytime you select *File → Save*
 or hit ctrl-s, the file will be saved directly to the cloud.
-
-Category:HOWTO

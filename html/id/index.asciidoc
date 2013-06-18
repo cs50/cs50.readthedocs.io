@@ -24,8 +24,8 @@ whether you're logged in (and what information about you was returned by
 CS50 ID).
 
 
-How CS50 ID Works
------------------
+[[how_cs50_id_works]]
+== How CS50 ID Works
 
 Per CS50 ID's link:#_implementation_details[implementation details], the
 diagram below (inspired by
@@ -36,9 +36,9 @@ image:CS50_ID.png[CS50_ID.png,title="image"]
 
 Thanks to the link:CS50 Library[CS50 Library], though, you don't need to
 implement (or even understand!) all of these steps in order to
-link:#_how_to_add_cs50_id_to_your_website[add CS50 ID to your website].
-Per the link:#_examples[examples] for link:#PHP[PHP],
-link:#_python[Python], and link:#Ruby[Ruby], all you need do is call two
+link:#how_to_add_cs50_id_to_your_website[add CS50 ID to your website].
+Per the link:#examples[examples] for link:#PHP[PHP],
+link:#python[Python], and link:#Ruby[Ruby], all you need do is call two
 methods (inspired by https://github.com/facebook/php-sdk[Facebook's
 own]):
 
@@ -47,8 +47,8 @@ ID
 * `getUser`, which verifies CS50 ID's response
 
 
-How to Add CS50 ID to Your Website
-----------------------------------
+[[how_to_add_cs50_id_to_your_website]]
+== How to Add CS50 ID to Your Website
 
 1.  Decide who should be allowed to log into your website. Even though
 CS50 ID supports multiple options, it's best to choose just one so that
@@ -85,23 +85,23 @@ sysadmins@cs50.net to inquire.
 for http://mirror.cs50.net/library/php/[PHP],
 http://mirror.cs50.net/library/python/[Python], or
 http://mirror.cs50.net/library/ruby/[Ruby] and integrate it into your
-website, per the link:#_examples[examples] below.
+website, per the link:#examples[examples] below.
 
 
-Examples
---------
+[[examples]]
+== Examples
 
 Below are examples of how to add CS50 ID to your website in
-link:#_php[PHP], link:#Python[Python], and link:#Ruby[Ruby] using the
+link:#php[PHP], link:#Python[Python], and link:#Ruby[Ruby] using the
 link:CS50 Library[CS50 Library]. Each example implements the behavior at
 https://id.cs50.net/example/.
 
 To add CS50 ID to your website using some other library or language,
-review link:#_how_cs50_id_works[How CS50 ID Works].
+review link:#how_cs50_id_works[How CS50 ID Works].
 
 
-PHP
-~~~
+[[php]]
+=== PHP
 
 This example is available for download at
 http://mirror.cs50.net/id50/php/id-1.1.zip.
@@ -313,6 +313,7 @@ redirect the user back to CS50 ID.
 ---------------------------------------------------------------
 
 
+[[python]]
 Python
 ~~~~~~
 
@@ -322,6 +323,7 @@ http://mirror.cs50.net/library/python/examples/id.zip.
 COMING SOON
 
 
+[[ruby]]
 Ruby
 ~~~~
 
@@ -490,11 +492,10 @@ authenticating, you'll be brought back to your app, and you'll see your
 user information and a logout link!
 
 
-Implementation Details
-----------------------
+== Implementation Details
 
 *If you would like to add CS50 ID to your own site, you probably only
-need to follow the link:#_how_to_add_cs50_id_to_your_website[directions
+need to follow the link:#how_to_add_cs50_id_to_your_website[directions
 above].*
 
 If, though, you would like to add CS50 ID to your website using some
@@ -504,8 +505,7 @@ other than link:#_php[PHP], link:#Python[Python], and link:#Ruby[Ruby]
 implementation details for the technically curious.
 
 
-Overview
-~~~~~~~~
+=== Overview
 
 CS50 ID is based on
 http://openid.net/get-an-openid/what-is-openid/[OpenID], which "allows
@@ -516,7 +516,7 @@ ID (e.g., yours!) is a _Relying Party_. CS50's _OP Identifier_ (i.e.,
 the address on which discovery should be performed) is
 `https://id.cs50.net/`. (Note the `https`.)
 
-As per link:#_how_cs50_id_works[how CS50 ID works], whether you use the
+As per link:#how_cs50_id_works[how CS50 ID works], whether you use the
 link:CS50 Library[CS50 Library] or some other library to add CS50 ID to
 your website, here's how authentication must flow:
 
@@ -544,8 +544,7 @@ with a server-side session) that the user is now logged in, and then
 shows the user the page that required login.
 
 
-Compatibility
-~~~~~~~~~~~~~
+=== Compatibility
 
 CS50 ID supports
 
@@ -560,15 +559,14 @@ Attribute Exchange 1.0]
 but with some constraints.
 
 
-OpenID Authentication 2.0
-^^^^^^^^^^^^^^^^^^^^^^^^^
+==== OpenID Authentication 2.0
 
 CS50 ID supports
 http://openid.net/specs/openid-authentication-2_0.html[OpenID
 Authentication 2.0] but with these constraints:
 
 * A Relying Party must be approved to use CS50 ID. Review
-link:#_how_to_add_cs50_id_to_your_website[How to Add CS50 ID to Your
+link:#how_to_add_cs50_id_to_your_website[How to Add CS50 ID to Your
 Website] to apply for approval.
 * Discovery must be performed via
 http://yadis.org/papers/yadis-v1.0.pdf[Yadis] or
@@ -596,8 +594,7 @@ accounts (whereby the same identifier would be returned for a user, no
 matter the account with which the user authenticated).
 
 
-OpenID Simple Registration Extension 1.0
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== OpenID Simple Registration Extension 1.0
 
 CS50 ID supports
 http://openid.net/specs/openid-simple-registration-extension-1_0.html[OpenID
@@ -616,8 +613,7 @@ If requested, CS50 ID will return, if available, a value for
 where `email` is a user's email address.
 
 
-OpenID Attribute Exchange 1.0
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== OpenID Attribute Exchange 1.0
 
 CS50 ID supports
 http://openid.net/specs/openid-attribute-exchange-1_0.html[OpenID
@@ -638,8 +634,7 @@ If requested, CS50 ID will return, if available, a value for
 where `email` is a user's Harvard email address.
 
 
-FAQs
-----
+== FAQs
 
 
 === How should I store users in my database?
@@ -655,7 +650,7 @@ instead of 84), as with the schema below (which assumes that `email` and
 `fullname` will be no more than 128 characters each):
 
 [source,sql]
-----------------------------------------------------
+----
 CREATE TABLE  `users` (
 `id` INT( 11 ) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
 `identity` CHAR( 84 ) NOT NULL ,
@@ -665,7 +660,7 @@ UNIQUE (
 `identity`
 )
 ) ENGINE = MYISAM ;
-----------------------------------------------------
+----
 
 In theory, you could probably get away with storing only the URL's
 trailing 64 hexadecimal digits, but, to be consistent with OpenID, you
@@ -684,9 +679,8 @@ other providers' by accident. CS50 thus standardized on URLs that begin
 with `https://id.cs50.net/`.
 
 
-Why doesn't CS50 ID always return a user's full name and/or email
+=== Why doesn't CS50 ID always return a user's full name and/or email
 address?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When a user authenticates, CS50 ID will always return an 84-character
 URL that uniquely identifies that user. Depending on how a user
@@ -728,7 +722,7 @@ trusts URLs that begin with `http://localhost/` and
 develop your website locally and still interact with CS50 ID, provided
 you're running a web server that's listening for requests on `localhost`
 or `127.0.0.1` (on any TCP port). During development, simply change
-`TRUST_ROOT` and `RETURN_TO`, per the link:#_examples[examples], to refer
+`TRUST_ROOT` and `RETURN_TO`, per the link:#examples[examples], to refer
 to `localhost` or `127.0.0.1`; just be sure that `RETURN_TO` is still a
 prefix of `TRUST_ROOT`. Note that, when using `localhost` or
 `127.0.0.1`, you'll be able to log into CS50 ID using any supported
@@ -765,8 +759,7 @@ When ready to launch your website, just remember to change `TRUST_ROOT`
 and `RETURN_TO` to the URLs with which you applied for CS50 ID.
 
 
-Troubleshooting
----------------
+== Troubleshooting
 
 
 === The site you tried to log into is not configured properly for CS50 ID
@@ -845,18 +838,17 @@ if present to:
 Then restart your web server.
 
 
-==== CS50 Library requires dom or domxml extension module
+=== CS50 Library requires dom or domxml extension module
 
-The link:Library#PHP[CS50 Library for PHP] is pre-installed in the
-link:Appliance[CS50 Appliance] and on `cloud.cs50.net`, as are all
+The link:../CS50_Library#PHP[CS50 Library for PHP] is pre-installed in the
+link:../Appliance[CS50 Appliance] and on `cloud.cs50.net`, as are all
 dependencies. But if using the library on some other server, you may see
 this error if PHP's http://php.net/manual/en/book.dom.php[DOM] and
 http://php.net/manual/en/book.domxml.php[DOM XML] are not already
 installed.
 
 
-CentOS, Fedora, RedHat
-++++++++++++++++++++++
+==== CentOS, Fedora, RedHat
 
 Try running the following commands as `root`:
 
@@ -864,8 +856,7 @@ Try running the following commands as `root`:
 `service httpd restart`
 
 
-CS50 Library requires openssl extension module
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+=== CS50 Library requires openssl extension module
 
 The link:Library#PHP[CS50 Library for PHP] is pre-installed in the
 link:Appliance[CS50 Appliance] and on `cloud.cs50.net`, as are all
@@ -874,8 +865,7 @@ this error if http://php.net/manual/en/book.openssl.php[OpenSSL] is not
 already installed.
 
 
-Windows
-+++++++
+==== Windows
 
 Open `php.ini` with a text editor and change:
 
@@ -888,7 +878,6 @@ if present to:
 Then restart your web server.
 
 
-Support
--------
+== Support
 
 Email sysadmins@cs50.net with questions.

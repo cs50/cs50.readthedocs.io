@@ -1,5 +1,5 @@
 ---
-tags: []
+tags: [HOWTOs]
 title: Terminal
 ---
 
@@ -36,5 +36,3 @@ whether you're sure you want to continue connecting, type *yes*, then
 the below!
 
 image:Terminal.jpg[Terminal.jpg,title="image"]
-
-Category:HOWTOs

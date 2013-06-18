@@ -1,9 +1,9 @@
 ---
-tags: []
+tags: [HOWTO]
 title: How to Lead a Seminar
 ---
 
-Each fall, CS50 offers a series of link:Seminars[seminars]. Led by the
+Each fall, CS50 offers a series of link:../Seminars[seminars]. Led by the
 course's own https://www.cs50.net/staff[staff] as well as by
 http://huit.harvard.edu/[HUIT staff] and
 http://www.abcd.harvard.edu/[ABCD members], CS50 seminars are designed
@@ -41,5 +41,3 @@ camera as much as possible (connect with the viewers!).
 us know!
 
 Email production@cs50.net with any questions!
-
-Category:HOWTO

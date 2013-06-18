@@ -1,5 +1,5 @@
 ---
-tags: []
+tags: [HOWTO]
 title: Sending Texts
 ---
 
@@ -10,7 +10,7 @@ addresses of the forms below, where *##########* is a user's 10-digit
 phone number, sans punctuation (e.g., *6175551212*). If you want to be
 able to _receive_ text messages, you probably want to use a (free)
 service like http://www.textmarks.com/dev/docs/recv/[TextMarks] after
-watching link:Seminars#How_to_Write_SMS-Based_Programs[How to Write
+watching link:../Seminars#How_to_Write_SMS-Based_Programs[How to Write
 SMS-Based Programs].
 
 * Alltell: `##########@message.alltel.com`
@@ -24,5 +24,3 @@ SMS-Based Programs].
 * US Cellular: `##########@email.uscc.net`
 * Verizon: `##########@vtext.com`
 * Virgin Mobile: `##########@vmobl.com`
-
-Category:HOWTO

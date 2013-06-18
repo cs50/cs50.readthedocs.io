@@ -1,5 +1,5 @@
 ---
-tags: []
+tags: [Software]
 title: CS50 Library
 ---
 
@@ -8,42 +8,38 @@ simplify certain tasks, particularly user input (for C) and
 authentication (for PHP, Python, and Ruby).
 
 
-C
--
+== C
 
 The CS50 Library for C provides the functionality documented in
 http://mirror.cs50.net/library50/c/cs50-library-c-3.0/cs50.h[cs50.h].
 
 The CS50 Library for C comes pre-installed in the
-link:CS50 Appliance[CS50 Appliance], but it's also possible to install
+link:../CS50_Appliance[CS50 Appliance], but it's also possible to install
 it on your own machine. However, *we strongly recommend that you use the
-link:CS50 Appliance[CS50 Appliance]*, as it comes preconfigured not only
+link:../CS50_Appliance[CS50 Appliance]*, as it comes preconfigured not only
 with the CS50 Library for C but also with everything else that you need
 to take (or "take") CS50, including `gcc`, `gdb`, and more.
 
 
-Installation
-~~~~~~~~~~~~
+=== Installation
 
 
-Linux
-^^^^^
+==== Linux
 
 If running Linux, you should include the CS50 Library's header file atop
 your own as follows:
 
 [source,c]
------------------
+----
 #include <cs50.h>
------------------
+----
 
 Note the use of angled brackets instead of quotes.
 
 But first you must install the library itself, per the below.
 
 
-CentOS, Fedora, RedHat
-++++++++++++++++++++++
+===== CentOS, Fedora, RedHat
 
 First become `root`, as with:
 
@@ -52,7 +48,7 @@ First become `root`, as with:
 Then install the CS50 Library as follows:
 
 [source,bash]
----------------------------------------------------------
+----
 yum -y install gcc
 wget http://mirror.cs50.net/library50/c/library50-c-4.zip
 unzip library50-c-4.zip
@@ -69,11 +65,10 @@ chmod 0755 /usr/local/lib
 mv -f libcs50.a /usr/local/lib
 cd ..
 rm -rf library50-c-4
----------------------------------------------------------
+----
 
 
-Debian, Ubuntu
-++++++++++++++
+===== Debian, Ubuntu
 
 First become `root`, as with:
 
@@ -82,7 +77,7 @@ First become `root`, as with:
 Then install the CS50 Library as follows:
 
 [source,bash]
----------------------------------------------------------
+----
 apt-get install gcc
 wget http://mirror.cs50.net/library50/c/library50-c-4.zip
 unzip library50-c-4.zip
@@ -99,11 +94,10 @@ chmod 0755 /usr/local/lib
 mv -f libcs50.a /usr/local/lib
 cd ..
 rm -rf library50-c-4
----------------------------------------------------------
+----
 
 
-Mac OS
-^^^^^^
+=== Mac OS
 
 1.  Download and install http://developer.apple.com/xcode/[Xcode].
 2.  Download and unzip
@@ -113,7 +107,7 @@ the CS50 Library's directory, as with `cd`.
 4.  Execute the commands below, entering your password if prompted:
 
 [source,bash]
---------------------------------------
+----
 gcc -c -ggdb -std=c99 cs50.c -o cs50.o
 ar rcs libcs50.a cs50.o
 rm -f cs50.o
@@ -124,21 +118,20 @@ sudo mkdir -p /usr/local/lib
 sudo mv -f libcs50.a /usr/local/lib
 cd ..
 rm -rf library50-c-4
---------------------------------------
+----
 
 After installing the CS50 Library, you can include its header file atop
 your own code with:
 
 [source,c]
------------------
+----
 #include <cs50.h>
------------------
+----
 
 Note the use of angled brackets instead of quotes.
 
 
-Windows
-^^^^^^^
+=== Windows
 
 It depends on your compiler, but odds are the simplest method of
 installation is to:
@@ -151,15 +144,14 @@ After installing the CS50 Library, you can include its header file atop
 your own code with:
 
 [source,c]
------------------
+----
 #include "cs50.h"
------------------
+----
 
 Note the use of quotes instead of angled brackets.
 
 
-Changelog
-~~~~~~~~~
+=== Changelog
 
 * 3.1
 ** Changed from a
@@ -170,11 +162,10 @@ http://www.opensource.org/licenses/BSD-3-Clause[BSD 3-Clause] license.
 ** Transitioned to Fall 2012's style.
 
 
-PHP
----
+== PHP
 
-The CS50 Library for PHP simplifies use of link:CS50 ID[CS50 ID]. It
-comes pre-installed in the link:CS50 Appliance[CS50 Appliance], but it's
+The CS50 Library for PHP simplifies use of link:../id[CS50 ID]. It
+comes pre-installed in the link:../CS50_Appliance[CS50 Appliance], but it's
 also possible to install it on your own machine.
 
 You'll find that we've included Janrain's
@@ -182,50 +173,45 @@ https://github.com/openid/php-openid[Janrain OpenID Library] for PHP5 in
 the CS50 Library's own `share` folder.
 
 
-Installation
-~~~~~~~~~~~~
+=== Installation
 
 
-Linux
-^^^^^
+==== Linux
 
 Be sure to install the CS50 Library as root (as via `sudo`). After
 installing the CS50 Library, you can include its header file atop your
 own code with:
 
 [source,php]
--------------------------
+----
 require("CS50/CS50.php");
--------------------------
+----
 
-See CS50 ID's link:CS50 ID[HOWTO] for usage.
+See CS50 ID's link:../id[HOWTO] for usage.
 
 
-CentOS, RedHat
-++++++++++++++
+===== CentOS, RedHat
 
 [source,bash]
-----------------------------------------------------------------------
+----
 wget http://mirror.cs50.net/library50/php/library50-php-2-0.noarch.rpm
 rpm -ivh library50-php-2-0.noarch.rpm
 rm -f library50-php-2-0.noarch.rpm
-----------------------------------------------------------------------
+----
 
 
-Fedora
-++++++
+==== Fedora
 
 [source,bash]
------------------------------------------------------------------------------
+----
 yum install http://mirror.cs50.net/library50/php/library50-php-2-0.noarch.rpm
------------------------------------------------------------------------------
+----
 
 
-Debian, Ubuntu
-++++++++++++++
+==== Debian, Ubuntu
 
 [source,bash]
--------------------------------------------------------------
+----
 apt-get install php5 php5-curl php5-gmp php5-xml
 wget http://mirror.cs50.net/library50/php/library50-php-3.zip
 unzip library50-php-3.zip
@@ -234,11 +220,10 @@ chmod -R a+rX library50-php-3
 mkdir -p /usr/share/php
 mv library50-php-3/CS50 /usr/share/php/
 rm -rf library50-php-3
--------------------------------------------------------------
+----
 
 
-Mac OS
-^^^^^^
+==== Mac OS
 
 1.  Download and unzip
 http://mirror.cs50.net/library50/php/library50-php-2.zip[library50-php-2.zip].
@@ -249,15 +234,14 @@ After installing the CS50 Library, you can include its header file atop
 your own code with:
 
 [source,php]
-----------------------------------
+----
 require("/path/to/CS50/CS50.php");
-----------------------------------
+----
 
-See CS50 ID's link:CS50 ID[HOWTO] for usage.
+See CS50 ID's link:../id[HOWTO] for usage.
 
 
-Windows
-^^^^^^^
+==== Windows
 
 1.  Download and unzip
 http://mirror.cs50.net/library50/php/library50-php-3.zip[library50-php-3.zip].
@@ -269,15 +253,14 @@ After installing the CS50 Library, you can include its header file atop
 your own code with:
 
 [source,php]
-----------------------------------
+----
 require("/path/to/CS50/CS50.php");
-----------------------------------
+----
 
-See CS50 ID's link:CS50 ID[HOWTO] for usage.
+See CS50 ID's link:../id[HOWTO] for usage.
 
 
-Changelog
-~~~~~~~~~
+=== Changelog
 
 * 1.6
 ** Fixed bugs whereby `E_DEPRECATED` was not, in fact, disabled.
@@ -316,5 +299,3 @@ gem install cs50
 
 in a terminal window. You may need `sudo` privileges to complete the
 installation.
-
-Category:Software

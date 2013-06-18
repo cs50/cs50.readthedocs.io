@@ -3,10 +3,9 @@ tags: []
 title: Life After 50
 ---
 
-Appliance
----------
+== Appliance
 
-You're welcome to continue using the link:Appliance[CS50 Appliance]
+You're welcome to continue using the link:../Appliance[CS50 Appliance]
 beyond term's end to write C code, develop websites, and the like. But
 if you'd like to put a website (e.g., your final project) on the
 Internet, you'll need more than just the appliance. Even though the
@@ -28,7 +27,7 @@ CSS-based website at
 `http://www.people.fas.harvard.edu/~username/`, where
 `username` is your own username; simply create a `public_html` directory
 inside of your home directory and `chmod` both `711`. Note that PHP and
-MySQL are not available. And link:Virtual Host[vhosts] are not
+MySQL are not available. And link:../Virtual_Host[vhosts] are not
 supported, so you can't map a domain name to your FAS account.
 * *hcs.harvard.edu*. Managed by the http://www.hcs.harvard.edu/[Harvard
 Computer Society] (HCS), `hcs.harvard.edu` is a cluster of Linux servers
@@ -37,7 +36,7 @@ for an account of your own, fill out the form at
 http://www.hcs.harvard.edu/acctrequest, selecting *CS50 Final Project*
 under *Harvard Affiliation* and checking the box under *MySQL* if you'd
 also like a MySQL account. PHP, Python, Perl, and Ruby on Rails are all
-supported, as are link:Virtual Host[vhosts], so you can map a domain
+supported, as are link:../Virtual_Host[vhosts], so you can map a domain
 name to your HCS account. See HCS's
 http://www.hcs.harvard.edu/tutorials[tutorials] for more details.
 * *http://www.google.com/apps/intl/en/group.html[Google Apps]*.
@@ -84,8 +83,7 @@ using a VPS. Many providers exist, and their quality varies, so be sure
 to Google around for reviews or ask friends for advice. But here are
 some popular choices:
 ** http://www.dreamhost.com/hosting-vps.html[DreamHost]
-**
-http://www.godaddy.com/hosting/virtual-dedicated-servers.aspx?ci=9013[Go
+**http://www.godaddy.com/hosting/virtual-dedicated-servers.aspx?ci=9013[Go
 Daddy]
 ** http://www.hostgator.com/vps-hosting/[Host Gator]
 ** http://www.linode.com/[Linode]
@@ -112,12 +110,11 @@ host (assuming it offers phpMyAdmin).
 4.  Update your domain's DNS settings per the new host's instructions.
 
 
-Courses
--------
+=== Courses
 
 Below are courses that you can take in the
-link:#_spring_courses_you_can_take_after_cs50[spring] and
-link:#_fall_courses_you_can_take_after_cs50[fall] after CS50. Hover over
+link:#spring_courses_you_can_take_after_cs50[spring] and
+link:#fall_courses_you_can_take_after_cs50[fall] after CS50. Hover over
 nodes for courses' descriptions; click nodes for courses' websites.
 
 We used Google's
@@ -351,9 +348,9 @@ function() \{ var row = charts["fall"].getSelection()[0].row; if
 // ]]>
 
 
-Spring courses you can take after CS50
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[[spring_courses_you_can_take_after_cs50]]
+=== Spring courses you can take after CS50
 
 
-Fall courses you can take after CS50
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[[fall_courses_you_can_take_after_cs50]]
+=== Fall courses you can take after CS50

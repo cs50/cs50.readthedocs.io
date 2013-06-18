@@ -1,5 +1,5 @@
 ---
-tags: []
+tags: [Data]
 title: Concentrators
 ---
 
@@ -29,4 +29,3 @@ more details.
 
 //
 
-Category:Data

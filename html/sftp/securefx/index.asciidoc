@@ -25,9 +25,6 @@ Although you can't SSH to fas.harvard.edu (and must use
 nice.fas.harvard), you can SFTP to the both former and latter, as your
 home directory is accessible on both.
 
-__TOC__
-
-
 == Launching SecureFX
 
 Launch SecureFX via its icon. You should see a window like:

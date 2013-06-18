@@ -4,47 +4,49 @@ title: Fall 2010
 ---
 
 To "take" Fall 2010 of CS50, download and install *version 2.1* of the
-link:CS50 Appliance 2.1[CS50 Appliance]. Then follow the directions
+link:../appliance/2.1[CS50 Appliance]. Then follow the directions
 below.
 
 
-Lectures
---------
+== Lectures
 
 Videos of Fall 2010's lectures are available at
 http://cs50.tv/2010/fall/#l=lectures, as are PDFs of scribe notes,
 slides, and source code.
 
 
-Week 0
-~~~~~~
+=== Week 0
 
 Download and install Scratch from http://scratch.mit.edu/download, then
 download Week 0's Scratch projects from
 http://cdn.cs50.net/2010/fall/lectures/0/src/.
 
 
-Week 1
-~~~~~~
+=== Week 1
 
 To copy Week 1's source code into John Harvard's home directory in the
-CS50 Appliance, link:Appliance#How_to_Open_a_Terminal[open a terminal]
+CS50 Appliance, link:../appliance/2.1#how_to_open_a_terminal[open a terminal]
 and execute:
 
-`mkdir -p ~/lectures/` +
-`cp -r ~cs50/pub/src/lectures/1/ ~/lectures/`
+[source,bash]
+----
+mkdir -p ~/lectures/
+cp -r ~cs50/pub/src/lectures/1/ ~/lectures/
+----
 
 You can then compile and run, say, `hai1.c`, as follows:
 
-`cd ~/lectures/1/` +
-`make hai1` +
-`./hai1`
+[source,bash]
+----
+cd ~/lectures/1/
+make hai1
+./hai1
+----
 
 Similarly can you compile and run other programs in `~/lectures/1/`.
 
 
-Week 2
-~~~~~~
+=== Week 2
 
 To copy Week 2's source code into John Harvard's home directory in the
 CS50 Appliance, link:Appliance#How_to_Open_a_Terminal[open a terminal]

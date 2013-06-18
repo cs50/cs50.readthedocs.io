@@ -21,8 +21,7 @@ institutions in the Boston area."
 Subgroup."
 * http://www.abcd.harvard.edu/cgi/ABCDdb.pub?Op=Edit[abcd-cluster].
 "Cluster Computing."
-*
-http://www.abcd.harvard.edu/cgi/ABCDdb.pub?Op=Edit[abcd-communications].
+* http://www.abcd.harvard.edu/cgi/ABCDdb.pub?Op=Edit[abcd-communications].
 "Realtime Communications."
 * http://www.abcd.harvard.edu/cgi/ABCDdb.pub?Op=Edit[abcd-dec]. "ABCD
 Compaq/Digital/HP List."
@@ -132,9 +131,7 @@ Windows."
 
 == Entrepreneurship
 
-*
-http://lists.hcs.harvard.edu/mailman/listinfo/entrepreneurs[entrepreneurs].
-"Harvard College Entrepreneurship Forum's open e-mail list for
+* http://lists.hcs.harvard.edu/mailman/listinfo/entrepreneurs[entrepreneurs]. "Harvard College Entrepreneurship Forum's open e-mail list for
 networking and events promotion."
 * http://groups.google.com/group/hack-harvard[HackHarvard]. "Hack
 Harvard promotes tech innovation and entrepreneurship on campus through
@@ -154,8 +151,7 @@ and guidance to all students at Harvard College."
 
 == FAS
 
-*
-http://lists.fas.harvard.edu/mailman/listinfo/netcontacts-list[netcontacts-list].
+* http://lists.fas.harvard.edu/mailman/listinfo/netcontacts-list[netcontacts-list].
 "Downtime Notification Mailing List."
 
 
@@ -165,8 +161,7 @@ http://www.hcs.harvard.edu/[Harvard Computer Society] maintains a number
 of http://www.hcs.harvard.edu/wiki/HCS_Mailing_Lists[mailing lists] for
 its members and people interested in HCS.
 
-*
-http://lists.hcs.harvard.edu/mailman/listinfo/hcs-announce[hcs-announce].
+* http://lists.hcs.harvard.edu/mailman/listinfo/hcs-announce[hcs-announce].
 "This is our largest list and also our lowest traffic. Here's where we
 push notifications about our meetings and events. The list has nearly
 1000 subscribers."
@@ -188,8 +183,7 @@ is a forum for people (particularly new members) to ask questions."
 
 == Jobs
 
-*
-http://lists.hcs.harvard.edu/mailman/listinfo/entrepreneurs[entrepreneurs].
+* http://lists.hcs.harvard.edu/mailman/listinfo/entrepreneurs[entrepreneurs].
 "Harvard College Entrepreneurship Forum's open e-mail list for
 networking and events promotion."
 * http://groups.yahoo.com/group/HarvardJobs/[HarvardJobs]. "This group's
@@ -229,4 +223,3 @@ served.
 * http://www.eecs.harvard.edu/mailman/listinfo/md-open[md-open]. "This
 is a general-purpose mailing list for people who operate in the
 Maxwell-Dworkin building. It is a 'talk' list, not an 'announce' list."
-

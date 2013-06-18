@@ -29,8 +29,7 @@ probably an APP for that. Oops, I mean an API. All familiarity levels
 welcome, and those in search of ideas for a cool final project are
 particularly encouraged to attend.
 
-*
-http://cs50.tv/2012/fall/seminars/programmer_intro/programmer_intro-720p.mp4[Video]
+* http://cs50.tv/2012/fall/seminars/programmer_intro/programmer_intro-720p.mp4[Video]
 
 
 Android Apps (Now with Jelly Beans!)
@@ -1276,17 +1275,12 @@ fundamentals, including loading data, drawing complex shapes from
 primitives, physics, and handling user interaction. These programs can
 then be run online or through downloadable executables.
 
-*
-http://cdn.cs50.net/2009/fall/seminars/VisualizingData_DataArtWithProcessing.flv?play[Flash]
-*
-http://cdn.cs50.net/2009/fall/seminars/VisualizingData_DataArtWithProcessing.mp3?download[MP3]
-*
-http://cdn.cs50.net/2009/fall/seminars/VisualizingData_DataArtWithProcessing.mov?download[QuickTime]
+* http://cdn.cs50.net/2009/fall/seminars/VisualizingData_DataArtWithProcessing.flv?play[Flash]
+* http://cdn.cs50.net/2009/fall/seminars/VisualizingData_DataArtWithProcessing.mp3?download[MP3]
+* http://cdn.cs50.net/2009/fall/seminars/VisualizingData_DataArtWithProcessing.mov?download[QuickTime]
 
 
-Visualizing Data Interactively: A Primer on Actionscript, Flex, and the
-Flare Visualization Library
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Visualizing Data Interactively: A Primer on Actionscript, Flex, and the Flare Visualization Library
 
 by Filip Zembowicz '11
 
@@ -1563,6 +1557,7 @@ by Kelly Heffner
 http://cdn.cs50.net/2007/fall/seminars/seminar_EDP.mov?download[QuickTime]
 
 
+[[How_to_Write_SMS-Based_Programs]]
 How to Write SMS-Based Programs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

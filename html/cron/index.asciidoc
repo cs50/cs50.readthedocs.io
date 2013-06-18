@@ -1,5 +1,5 @@
 ---
-tags: []
+tags: [HOWTO]
 title: cron
 ---
 
@@ -44,5 +44,3 @@ For instance, if John Harvard `jharvard` wants to schedule
 schedule a cron job per the below.
 
 image:Cron.png[Cron.png,title="image"]
-
-Category:HOWTO

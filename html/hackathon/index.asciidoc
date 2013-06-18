@@ -60,12 +60,10 @@ http://maps.google.com/maps?saddr=Kendall%2FMIT+Station,+Main+Street,+Cambridge,
 |=======================================================================
 
 
-What to bring
-~~~~~~~~~~~~~
+=== What to bring
 
 
-You must bring...
-^^^^^^^^^^^^^^^^^
+==== You must bring...
 
 * Harvard ID (unless you don't have one, in which case bring a printout
 of the CS50 Bot's confirmation of your spot)
@@ -75,8 +73,7 @@ form] (we'll have blank copies on the shuttles)
 * Excitement
 
 
-You might also want to bring...
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== You might also want to bring...
 
 * Camera
 * Contact lens case/solution; eyeglasses
@@ -85,8 +82,7 @@ You might also want to bring...
 * Sweater/sweatshirt
 
 
-You may not bring...
-^^^^^^^^^^^^^^^^^^^^
+==== You may not bring...
 
 * Alcohol, etc.
 

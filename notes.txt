@@ -1,14 +1,41 @@
 Current issues:
-    Loading logic:
-        trailing slashes break the path finding (/appliance/17 will render /html/appliance/17.asciidoc, but /appliance/17/ will render a blank page)
-    Mediawiki files:
-        YAML is not added by pandoc, a small wrapper can make this work (FIXED - file name is temporary title)
-        Category at the bottom is left in
-        internal anchors are broken
-        asciidoc warnings are printed out at the top of the page (see appliance/17)
-        some things unsupported
-            multicell tables in appliance/17
-            code/text rendering in api/courses
-            ...
+    ctrl symbols in nano/#_commands
+    links to /Appliance break - make redirect to 17?
+    Virtual_Host is deprecated, but its linked to by Life After 50
+    Screen_Scraping is deprecated, but its linked to by Neat Tricks
+    CS50 Cloud is deprecated, but its linked to by Authentication
+    Forms in Harvard Events
+    Google charts organization in Life After 50
+    Google charts in Enrollment
+    Google charts in Concentrators
+    Research is blank
+    code snippet at beginning of /cron looks wrong
+    Redirects:
+        Appliance
+        Authenticating Users
+        CS50_Appliance
+        Omega
+        Theta
+        XID
+        Library
+        iOS University Program
+        Virtualization -??
+        VirtualBox -??
+    See also:
+        Food API
+        Shuttleboy API
+        Maps API
+        Tweets API
+        Energy API
+        News API
+        Courses API
 
+Skipped for now:
+    Seminars
+    All appliance articles
+    Fall 2010
+    Fall 2012
 
+Things to update:
+    Hackathon instructions
+    how to lead a seminar (chris thayer)

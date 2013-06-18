@@ -1,5 +1,5 @@
 ---
-tags: []
+tags: [HOWTO]
 title: snapshots
 ---
 
@@ -49,5 +49,3 @@ estimates, since the intervals' definitions depend on the current time.
 |... |...
 |`weekly.51` |51 weeks ago
 |====================================================
-
-Category:HOWTO

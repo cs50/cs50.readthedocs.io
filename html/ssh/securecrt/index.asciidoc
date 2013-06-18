@@ -1,11 +1,11 @@
 ---
-tags: []
+tags: [HOWTO]
 title: SecureCRT
 ---
 
 SecureCRT is a commercial SSH client for Windows for which Harvard has a
 site license. It's installed on most PCs in labs on campus, but, on your
-own PC, best to install link:PuTTY HOWTO[ PuTTY] instead (since you can
+own PC, best to install link:../PuTTY[PuTTY] instead (since you can
 continue using it after you leave Harvard). To run SecureCRT, simply
 double-click its icon. You should see a window like the below.
 
@@ -60,5 +60,3 @@ image:Crt8.jpg[Crt8.jpg,title="image"]
 You should then find yourself at the server's prompt, as in the below!
 
 image:Crt9.jpg[Crt9.jpg,title="image"]
-
-Category:HOWTO

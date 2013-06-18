@@ -1,5 +1,5 @@
 ---
-tags: []
+tags: [HOWTO]
 title: Cyberduck
 ---
 
@@ -26,5 +26,3 @@ Then close the smaller of the two windows and double-click
 prompted. You should then see the contents of your home directory. You
 can then proceed to drag and drop files to and from your own desktop.
 Explore the program's menus for additional features.
-
-Category:HOWTO

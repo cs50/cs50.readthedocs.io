@@ -1,5 +1,5 @@
 ---
-tags: []
+tags: [HOWTO]
 title: ACLs
 ---
 
@@ -22,8 +22,7 @@ If you'd rather not share your MySQL password, email sysadmins@cs50.net
 to make other arrangements.
 
 
-How to Share a Directory
-------------------------
+== How to Share a Directory
 
 Suppose that you (`alice`) want to share `~/public_html/project/` with
 `bob` and `charlie` in such a way that, even though the project lives in
@@ -63,21 +62,24 @@ Finally, review the ACL you just configured:
 `getfacl ~/public_html/project/`
 
 You should see output like the below. If you don't, best to
-link:#_how_to_unshare_a_directory[unshare the directory] and try these
+link:#how_to_unshare_a_directory[unshare the directory] and try these
 steps again.
 
-`# file: home/alice/public_html/project` +
-`# owner: alice` +
-`# group: student` +
-`user::rwx` +
-`user:bob:rwx` +
-`user:charlie:rwx` +
-`group::---` +
-`mask::rwx` +
-`other::---` +
-`default:user::rwx` +
-`default:group::rwx` +
-`default:other::---`
+[source, bash]
+----
+# file: home/alice/public_html/project
+# owner: alice
+# group: student
+user::rwx
+user:bob:rwx
+user:charlie:rwx
+group::---
+mask::rwx
+other::---
+default:user::rwx
+default:group::rwx
+default:other::---
+----
 
 Thereafter, both `bob` and `charlie` should be able to `cd` into the
 shared directory, as with:
@@ -99,8 +101,7 @@ so they should be able to `cd` with:
 `cd ~/public_html/project/`
 
 
-Troubleshooting
-~~~~~~~~~~~~~~~
+=== Troubleshooting
 
 Note that any files and directories that you create in
 `~/public_html/project/` must remain readable (`r`), writable (`w`),
@@ -140,8 +141,8 @@ want to give to your files to ensure that they're properly shared:
 Email help@cs50.net if you need any help.
 
 
-How to Unshare a Directory
---------------------------
+[[how_to_unshare_a_directory]]
+== How to Unshare a Directory
 
 Suppose that you want to unshare `~/public_html/project/` or goofed when
 trying to link:#_how_to_share_a_directory[share a directory] and want to
@@ -161,5 +162,3 @@ You should see output like the below:
 `user::rwx` +
 `group::---` +
 `other::---`
-
-Category:HOWTO

@@ -1,5 +1,5 @@
 ---
-tags: []
+tags: [HOWTO]
 title: TextWrangler
 ---
 
@@ -13,7 +13,7 @@ that appears on your desktop. In the window that appears, drag
 launch the text editor.
 
 Because TextWrangler comes with built-in support for SFTP, you can use
-it to edit files that actually live in the link:CS50 Appliance[CS50
+it to edit files that actually live in the link:../CS50_Appliance[CS50
 Appliance] (or any other server that supports SFTP).
 
 Note that to actually compile or execute programs, you'll still want to
@@ -55,5 +55,3 @@ appears in the appliance's bottom-right corner), check the box next to
 home directory in the window that appears.
 6.  Navigate your way to the directory in which you'd like to save the
 new file, then click *Save*.
-
-Category:HOWTO

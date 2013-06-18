@@ -1,5 +1,5 @@
 ---
-tags: []
+tags: [HOWTO]
 title: TeamViewer
 ---
 
@@ -16,14 +16,12 @@ If you only wish to share your terminal window with CS50 staff, you
 should use tunnel50 instead.
 
 
-How to Use
-----------
+== How to Use
 
 
-Inside CS50 Appliance
-~~~~~~~~~~~~~~~~~~~~~
+=== Inside CS50 Appliance
 
-If asked by CS50 staff to connect to your link:CS50 Appliance[appliance]
+If asked by CS50 staff to connect to your link:../CS50_Appliance[appliance]
 (and not to your actual PC or Mac):
 
 1.  Start the appliance.
@@ -37,11 +35,10 @@ ID and password (as via email, IM, or a private post to
 http://help.cs50.net/[help.cs50.net]).
 
 
-On Windows
-~~~~~~~~~~
+=== On Windows
 
 If asked by CS50 staff to connect to your PC (and not to the
-link:CS50 Appliance[CS50 Appliance] itself):
+link:../CS50_Appliance[CS50 Appliance] itself):
 
 1.  If you haven't already installed TeamViewer:
 .  Download TeamViewer from http://www.teamviewer.com/en/download/, if
@@ -69,11 +66,10 @@ Provide CS50 staff with that ID and password (as via email, IM, or a
 private post to http://help.cs50.net/[help.cs50.net]).
 
 
-On Mac OS
-~~~~~~~~~
+=== On Mac OS
 
 If asked by CS50 staff to connect to your Mac (and not to the
-link:CS50 Appliance[CS50 Appliance] itself):
+link:../CS50_Appliance[CS50 Appliance] itself):
 
 1.  If you haven't already installed TeamViewer:
 .  Download TeamViewer from http://www.teamviewer.com/en/download/, if
@@ -98,11 +94,10 @@ with that ID and password (as via email, IM, or a private post to
 http://help.cs50.net/[help.cs50.net]).
 
 
-On Linux
-~~~~~~~~
+=== On Linux
 
 If asked by CS50 staff to connect to your PC (and not to the
-link:CS50 Appliance[CS50 Appliance] itself):
+link:../CS50_Appliance[CS50 Appliance] itself):
 
 1.  If you haven't already installed TeamViewer:
 .  Download TeamViewer from http://www.teamviewer.com/en/download/, if
@@ -116,5 +111,3 @@ License Agreement*.
 session* should be an *ID* and *Password*. Provide CS50 staff with that
 ID and password (as via email, IM, or a private post to
 http://help.cs50.net/[help.cs50.net]).
-
-Category:HOWTO

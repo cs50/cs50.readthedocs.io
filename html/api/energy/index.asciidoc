@@ -1,5 +1,5 @@
 ---
-tags: []
+tags: [API]
 title: HarvardEnergy API
 ---
 
@@ -15,8 +15,7 @@ interface, which means that you can query it using simple HTTP GET
 requests.
 
 
-Author
-------
+== Author
 
 To report bugs or request features, contact:
 
@@ -24,8 +23,7 @@ mailto:malan@post.harvard.edu[David J. Malan '99] +
 http://www.cs.harvard.edu/malan/
 
 
-License
--------
+== License
 
 Use of this API is governed by a
 http://creativecommons.org/licenses/by-nc/3.0/[Creative Commons
@@ -36,15 +34,13 @@ http://energy.cs50.net/[HarvardEnergy] in your own work. To discuss
 commercial purposes, contact the author.
 
 
-Methods
--------
+== Methods
 
 All methods support
 http://en.wikipedia.org/wiki/Cross-Origin_Resource_Sharing[CORS].
 
 
-buildings
-~~~~~~~~~
+=== buildings
 
 To query the HarvardEnergy API for buildings, contact the server via
 URLs in this format:
@@ -81,35 +77,33 @@ http://www.answers.com/topic/gross-square-foot[gross square footage]
 
 *Because the HarvardEnergy API and the link:HarvardMaps API[HarvardMaps
 API] rely on data from different sources on campus, this method's output
-may not be identical to the link:HarvardMaps API[HarvardMaps API]'s
-link:HarvardMaps_API#buildings[buildings] method.*
+may not be identical to the link:../api/maps[HarvardMaps API]'s
+link:../api/maps#buildings[buildings] method.*
 
 
-CSV
-^^^
+==== CSV
 
 If you request buildings in CSV format (e.g.,
 http://energy.cs50.net/api/1.0/buildings?id=952,991&output=csv), the
 response will be a series of comma-delimited rows, per the below:
 
 [source,text]
--------------------------
+----
 id,name,gsf
 991,"Mather House",209979
 952,"Matthews Hall",59075
--------------------------
+----
 
 Note that the response's first row defines the CSV file's fields.
 Fields' order may change over time, so do not hardcode indices into your
 own code. Use that first row to determine fields' indices dynamically,
-per this article on link:Neat_Tricks#Parsing_CSV[parsing CSV].
+per this article on link:../Neat_Tricks#Parsing_CSV[parsing CSV].
 
 *Beware opening the CSV file in Excel, as some buildings' IDs have
 leading 0s that Excel likes to remove.*
 
 
-JSON
-^^^^
+==== JSON
 
 If you request buildings in JSON format (e.g.,
 http://energy.cs50.net/api/1.0/buildings?id=952,991&output=json), the
@@ -117,7 +111,7 @@ response wil be an associative array (whose keys are buildings' IDs) of
 objects, per the below:
 
 [source,javascript]
------------------------------
+----
 {
    "991":{
       "name":"Mather House",
@@ -128,11 +122,10 @@ objects, per the below:
       "gsf":"59075"
    }
 }
------------------------------
+----
 
 
-JSONP
-^^^^^
+==== JSONP
 
 If you request buildings in JSON format (e.g.,
 http://energy.cs50.net/api/1.0/buildings?id=952,991&output=jsonp&callback=parseResponse),
@@ -140,13 +133,12 @@ the response will be a padded associative array (whose keys are
 buildings' IDs) of objects, per the below:
 
 [source,javascript]
-----------------------------------------------------------------------------------------------------------
+----
 parseResponse({"991":{"name":"Mather House","gsf":"209979"},"952":{"name":"Matthews Hall","gsf":"59075"}})
-----------------------------------------------------------------------------------------------------------
+----
 
 
-PHP
-^^^
+==== PHP
 
 If you request buildings in serialized PHP format (e.g.,
 http://energy.cs50.net/api/1.0/buildings?id=952,991&output=php), the
@@ -154,15 +146,15 @@ response will be a serialized associative array (whose keys are
 buildings' IDs) of associative arrays, per the below:
 
 [source,php]
-------------------------------------------------------------------------------------------------------------------------------------------
+----
 a:2:{i:991;a:2:{s:4:"name";s:12:"Mather House";s:3:"gsf";s:6:"209979";}i:952;a:2:{s:4:"name";s:13:"Matthews Hall";s:3:"gsf";s:5:"59075";}}
-------------------------------------------------------------------------------------------------------------------------------------------
+----
 
 Once you http://php.net/manual/en/function.unserialize.php[unserialize]
 that response, you'll have the below in memory:
 
 [source,php]
------------------------------------
+----
 Array
 (
     [991] => Array
@@ -178,11 +170,10 @@ Array
         )
 
 )
------------------------------------
+----
 
 
-utilities
-~~~~~~~~~
+=== utilities
 
 To query the HarvardEnergy API for utilities, contact the server via
 URLs in this format:
@@ -213,28 +204,26 @@ http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1[400 Bad
 Request].
 
 
-CSV
-^^^
+==== CSV
 
 If you request utilities in CSV format (e.g.,
 http://energy.cs50.net/api/1.0/utilities?id=991&month=2010-01&output=csv),
 the response will be a series of comma-delimited rows, per the below:
 
 [source,text]
-------------------------------
+----
 month,utility,cost,use
 2010-01,Electric,5440.37,51373
 2010-01,Steam,29332.96,1528
-------------------------------
+----
 
 Note that the response's first row defines the CSV file's fields.
 Fields' order may change over time, so do not hardcode indices into your
 own code. Use that first row to determine fields' indices dynamically,
-per this article on link:Neat_Tricks#Parsing_CSV[parsing CSV].
+per this article on link:../Neat_Tricks#Parsing_CSV[parsing CSV].
 
 
-JSON
-^^^^
+==== JSON
 
 If you request utilities in JSON format (e.g.,
 http://energy.cs50.net/api/1.0/utilities?id=991&month=2010-01&output=json),
@@ -242,7 +231,7 @@ the response will be an associative array (whose keys are months) of
 objects, per the below:
 
 [source,javascript]
----------------------------
+----
 {
    "2010-01":{
       "Electric":{
@@ -255,11 +244,10 @@ objects, per the below:
       }
    }
 }
----------------------------
+----
 
 
-JSONP
-^^^^^
+==== JSONP
 
 If you request utilities in JSON format (e.g.,
 http://energy.cs50.net/api/1.0/utilities?id=991&month=2010-01&output=jsonp&callback=parseResponse),
@@ -267,13 +255,12 @@ the response will be a padded associative array (whose keys are months)
 of objects, per the below:
 
 [source,javascript]
------------------------------------------------------------------------------------------------------------------
+----
 parseResponse({"2010-01":{"Electric":{"cost":"5440.37","use":"51373"},"Steam":{"cost":"29332.96","use":"1528"}}})
------------------------------------------------------------------------------------------------------------------
+----
 
 
-PHP
-^^^
+==== PHP
 
 If you request utilities in serialized PHP format (e.g.,
 http://energy.cs50.net/api/1.0/utilities?id=991&month=2010-01&output=php),
@@ -281,15 +268,15 @@ the response will be a serialized associative array (whose keys are
 months) of associative arrays, per the below:
 
 [source,php]
----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----
 a:1:{s:7:"2010-01";a:2:{s:8:"Electric";a:2:{s:4:"cost";s:7:"5440.37";s:3:"use";s:5:"51373";}s:5:"Steam";a:2:{s:4:"cost";s:8:"29332.96";s:3:"use";s:4:"1528";}}}
----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----
 
 Once you http://php.net/manual/en/function.unserialize.php[unserialize]
 that response, you'll have the below in memory:
 
 [source,php]
---------------------------------------
+----
 Array
 (
     [2010-01] => Array
@@ -309,11 +296,10 @@ Array
         )
 
 )
---------------------------------------
+----
 
 
-Examples
---------
+== Examples
 
 * Returns all buildings:
 ** http://energy.cs50.net/api/1.0/buildings?output=csv
@@ -331,14 +317,10 @@ Examples
 ** http://energy.cs50.net/api/1.0/utilities?id=991&output=jsonp
 ** http://energy.cs50.net/api/1.0/utilities?id=991&output=php
 * Return's Mather Houses's utilities for January 2010:
-**
-http://energy.cs50.net/api/1.0/utilities?id=991&month=2010-01&output=csv
-**
-http://energy.cs50.net/api/1.0/utilities?id=991&month=2010-01&output=json
-**
-http://energy.cs50.net/api/1.0/utilities?id=991&month=2010-01&output=jsonp
-**
-http://energy.cs50.net/api/1.0/utilities?id=991&month=2010-01&output=php
+** http://energy.cs50.net/api/1.0/utilities?id=991&month=2010-01&output=csv
+** http://energy.cs50.net/api/1.0/utilities?id=991&month=2010-01&output=json
+** http://energy.cs50.net/api/1.0/utilities?id=991&month=2010-01&output=jsonp
+** http://energy.cs50.net/api/1.0/utilities?id=991&month=2010-01&output=php
 
 
 See Also
@@ -371,5 +353,3 @@ values]
 * http://en.wikipedia.org/wiki/JSON#JSONP[JSONP]
 * http://php.net/manual/en/function.serialize.php[PHP: serialize]
 * http://php.net/manual/en/function.unserialize.php[PHP: unserialize]
-
-Category:API

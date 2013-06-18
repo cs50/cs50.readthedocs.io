@@ -1,5 +1,5 @@
 ---
-tags: []
+tags: [APIs]
 title: Third-Party APIs
 ---
 
@@ -14,26 +14,22 @@ http://en.wikipedia.org/wiki/RSS[RSS] format more than they are APIs.
 But surely you can parse either using, e.g., PHP! Check out these
 link:Neat Tricks[Neat Tricks] to learn how.
 
-[[]]
 == Calendars
 
 * http://code.google.com/apis/calendar/[Google Calendar]. "Google
 Calendar Data API allows client applications to view and update calendar
 events in the form of Google Data API feeds."
 
-[[]]
 == E-commerce
 
 * http://code.google.com/apis/checkout/[Google Checkout]. "Google
 Checkout allows buyers in over 140 countries to purchase goods and
 services using a credit or debit card through our fast, secure checkout
 process."
-*
-https://cms.paypal.com/cgi-bin/?cmd=_render-content&content_ID=developer/home_US[PayPal].
+* https://cms.paypal.com/cgi-bin/?cmd=_render-content&content_ID=developer/home_US[PayPal].
 "If you want to accept payments on a website or web application, you can
 find information on integrating PayPal right here."
 
-[[]]
 == Finance
 
 * http://code.google.com/apis/finance/[Google Finance API]. "Google
@@ -49,19 +45,15 @@ company news feeds in the RSS format. Using the RSS URL Generator below,
 you can construct the URL you'll need to subscribe to news about your
 favorite companies."
 
-[[]]
 == Government
 
-*
-http://wiki.sunlightlabs.com/Main_Page#Public_APIs_for_government_data[Public
+* http://wiki.sunlightlabs.com/Main_Page#Public_APIs_for_government_data[Public
 APIs for government data]. "This wiki serves as a central place for
 finding organizations with open source projects and problems that need
 to be solved to make government more transparent and accountable."
 
-[[]]
 == Graphics
 
-[[]]
 === ActionScript
 
 * http://flare.prefuse.org/[Flare]. "Flare is an ActionScript library
@@ -69,7 +61,6 @@ for creating visualizations that run in the Adobe Flash Player."
 * http://code.google.com/apis/chart/[Google Charts Tools]. "The Google
 Chart Tools enable adding live charts to any web page."
 
-[[]]
 === Java
 
 * http://prefuse.org/[Prefuse]. "Prefuse is a set of software tools for
@@ -81,7 +72,6 @@ tools for ActionScript and the Adobe Flash Player."
 programming language and environment for people who want to create
 images, animations, and interactions."
 
-[[]]
 === JavaScript
 
 * http://ejohn.org/blog/processingjs/[Processing.js]. "I've ported the
@@ -92,14 +82,12 @@ that should simplify your work with vector graphics on the web. If you
 want to create your own specific chart or image crop and rotate widget,
 for example, you can achieve it simply and easily with this library."
 
-[[]]
 === XML
 
 * http://www.maani.us/xml_charts/[XML/SWF Charts]. "XML/SWF Charts is a
 simple, yet powerful tool to create attractive charts and graphs from
 XML data."
 
-[[]]
 == Harvard
 
 * http://www.pin.harvard.edu/dev-resource-menu.shtml[Harvard University
@@ -118,7 +106,6 @@ to sort by various rankings."
 
 And don't forget CS50's own APIs.
 
-[[]]
 == JavaScript
 
 * http://dojotoolkit.org/[Dojo Toolkit]. "The Dojo Toolkit is an
@@ -160,7 +147,6 @@ to make your web sites and web applications fly."
 including low-level DOM utiltiies and high-level user-interface
 widgets."
 
-[[]]
 == Maps
 
 * http://www.microsoft.com/maps/developers/[Bing Maps]. "Developers
@@ -183,7 +169,6 @@ Maps APIs let you easily embed rich and interactive maps into your web
 and desktop applications using your choice of platform: we provide
 Flash, Ajax and Map Image APIs."
 
-[[]]
 == Mobile
 
 * Android SDK
@@ -222,7 +207,6 @@ not receive your texts.*
 simple ad-supported SMS API that any web app can use to communicate with
 its users via SMS—for FREE!"
 
-[[]]
 == News
 
 * http://www.google.com/support/news/bin/answer.py?answer=40796[Google
@@ -235,19 +219,16 @@ of the platform are the Content API and the Data Store. The Content API
 is a mechanism for selecting and collecting Guardian content. The Data
 Store is a directory of important and useful data sets curated by
 Guardian journalists."
-* link:HarvardNews API[HarvardNews API]. "HarvardNews aggregates RSS
+* link:../api/news[HarvardNews API]. "HarvardNews aggregates RSS
 channels from all over campus."
-*
-http://www.nytimes.com/packages/pdf/nycbabynamesethnicity1990-2008.csv[New
+* http://www.nytimes.com/packages/pdf/nycbabynamesethnicity1990-2008.csv[New
 York City Baby Names]. From Department of Health and Mental Hygiene.
 
-[[]]
 == Photos
 
 * http://www.flickr.com/services/api/[Flickr API]. "The Flickr API is
 available for non-commercial use by outside developers."
 
-[[]]
 == Profanity
 
 * http://wiki.cdyne.com/wiki.php?title=Profanity_Filter[CDYNE
@@ -262,7 +243,6 @@ to pay $100.* CS50 has an API key that you can use. Drop
 sysadmins@cs50.net a nice note from your harvard.edu address for the
 key.
 
-[[]]
 == Search
 
 * http://code.google.com/apis/ajaxsearch/[Google AJAX Search API]. "The
@@ -282,7 +262,6 @@ http://en.wikipedia.org/wiki/Main_Page[Wikipedia]]."
 (Build your Own Search Service) is Yahoo!'s open search web services
 platform."
 
-[[]]
 == Social Networking
 
 * http://disqus.com/comments/[DISQUS Comments]. "DISQUS Comments is a
@@ -299,7 +278,6 @@ data. This includes update timelines, status data, and user information.
 The Search API methods give developers methods to interact with Twitter
 Search and trends data."
 
-[[]]
 == Streaming Media
 
 * http://www.red5.org/[Red5]. "Red5 is an Open Source Flash Server
@@ -307,11 +285,8 @@ written in Java that supports Streaming Audio/Video..."
 * http://www.wowzamedia.com/products.html[Wowza Media Server 2]. "One
 Media Server. Any Platform. Any Screen."
 
-[[]]
 == Videos
 
 * http://code.google.com/apis/youtube/code.html#client_libraries[YouTube
 APIs and Tools]. "The YouTube APIs and Tools let you bring the YouTube
 experience to your webpage, application, or device."
-
-Category:APIs

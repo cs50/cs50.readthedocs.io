@@ -1,5 +1,5 @@
 ---
-tags: []
+tags: [HOWTO]
 title: Authentication
 ---
 
@@ -19,8 +19,7 @@ is your own username).
 But you can authenticate users via other mechanisms as well.
 
 
-Authentication via CS50 ID
---------------------------
+== Authentication via CS50 ID
 
 CS50 ID is an http://en.wikipedia.org/wiki/OpenID[OpenID]-based service
 that allows you to authenticate Harvard affiliates. It lives at
@@ -40,8 +39,7 @@ passwords, HUIDs, XIDs, or PINs.
 To add CS50 ID to your website, consult its link:CS50 ID[HOWTO].
 
 
-Authentication via IP Address
------------------------------
+== Authentication via IP Address
 
 If you would like to restrict a website to users within `harvard.edu`
 (whether physically present on campus or VPNed in), you can check a
@@ -110,7 +108,7 @@ http://www.webcheatsheet.com/php/regular_expressions.php[regular
 expression], as in:
 
 [source,php]
-----------------------------------------------------------------------------------
+----
 if (preg_match("/^(140\.247|128\.103|10\.249|10\.250)/", $_SERVER["REMOTE_ADDR"]))
 {
     // show restricted content
@@ -119,7 +117,7 @@ else
 {
    // don't show restricted content
 }
-----------------------------------------------------------------------------------
+----
 
 Note that `^` means "start matching at the start of the string," `\.`
 means a literal period (as opposed to `.`, which represents any
@@ -128,7 +126,7 @@ thorough, you could OR together even more of Harvard's IPs, but the four
 prefixes above (140.247, 128.103, 10.249, and 10.250) are the most
 common.
 
-On the link:CS50 Cloud[CS50 Cloud], though, `$_SERVER["REMOTE_ADDR"]`
+On the link:../deprecated/cloud[CS50 Cloud], though, `$_SERVER["REMOTE_ADDR"]`
 usually contains the IP address of CS50's
 http://en.wikipedia.org/wiki/Load_balancing_(computing)[load balancer],
 which is always on campus and whose IP address is always of the form
@@ -139,7 +137,7 @@ then, you'll want to check `$_SERVER["HTTP_X_FORWARDED_FOR"]`, as in the
 below:
 
 [source,php]
--------------------------------------------------------------------------------------------
+----
 if (preg_match("/^(140\.247|128\.103|10\.249|10\.250)/", $_SERVER["HTTP_X_FORWARDED_FOR"]))
 {
     // show restricted content
@@ -148,7 +146,7 @@ else
 {
     // don't show restricted content
 }
--------------------------------------------------------------------------------------------
+----
 
 Note that `$_SERVER["HTTP_X_FORWARDED_FOR"]` is only available if the
 user has visited your website via a URL that starts with `http://`; this
@@ -162,8 +160,7 @@ restricting content to Harvard affiliates with (reasonably) high
 probability.
 
 
-Authentication via Facebook
----------------------------
+== Authentication via Facebook
 
 "The Login Button shows profile pictures of the user's friends who have
 already signed up for your site in addition to a login button."
@@ -171,8 +168,7 @@ already signed up for your site in addition to a login button."
 See https://developers.facebook.com/docs/reference/plugins/login/.
 
 
-Authentication via Google
--------------------------
+== Authentication via Google
 
 "Authentication and authorization for Google APIs allow third-party
 applications to get limited access to a user's Google accounts for
@@ -181,8 +177,7 @@ certain types of activities."
 See http://code.google.com/apis/accounts/docs/GettingStarted.html.
 
 
-Authentication via Janrain
---------------------------
+== Authentication via Janrain
 
 "Allow your users to sign in with one of their accounts at Facebook,
 Google, Twitter and LinkedIn. 18 social networks and email providers
@@ -190,5 +185,3 @@ supported." Note that the
 http://www.janrain.com/products/engage/pricing[Basic] plan is free.
 
 See http://www.janrain.com/products/engage/social-login.
-
-Category:HOWTO

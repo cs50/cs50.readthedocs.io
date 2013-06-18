@@ -15,6 +15,7 @@ This topic warrants some discussion, so here's a whole article on
 link:Authenticating Users[authenticating users].
 
 
+[[Parsing_CSV]]
 == Parsing CSV
 
 Below is some PHP code with which you can parse a CSV feed (e.g.,
@@ -26,7 +27,7 @@ file changes, our code won't break (assuming the first row still
 contains fields' names).
 
 [source,php]
-----------------------------------------------------------------------
+----
 // open CSV file
 $handle = fopen("http://news.cs50.net/api/1.1/items?output=csv", "r");
 
@@ -49,9 +50,10 @@ while ($row = fgetcsv($handle))
 
 // close CSV file
 fclose($handle);
-----------------------------------------------------------------------
+----
 
 
+[[parsing_dates_times]]
 == Parsing Dates/Times
 
 CS50's APIs format dates and times in a certain way, namely *YYYY-MM-DD*
@@ -65,25 +67,26 @@ downside is that they're not as human-friendly. Fortunately, it's easy
 to parse them. Below is some PHP code that does exactly that:
 
 [source,php]
----------------------------------------
+----
 // convert date to a UNIX timestamp
 $t0 = strtotime("2009-11-11");
 
 // date/time to a UNIX timestamp
 $t1 = strtotime("2009-11-11T12:00:00");
----------------------------------------
+----
 
 You can then use PHP's http://php.net/manual/en/function.date.php[date]
 function to massage `$t0` and `$t1` into any format you'd like.
 
 
+[[parsing_json]]
 == Parsing JSON
 
 Below is some PHP code with which you can parse JSON (e.g.,
 http://news.cs50.net/api/1.1/items?output=json).
 
 [source,php]
---------------------------------------------------------------------------------
+----
 // load URL
 $contents = file_get_contents("http://news.cs50.net/api/1.1/items?output=json");
 
@@ -101,16 +104,17 @@ foreach ($items as $item)
 
     // do something with fields
 }
---------------------------------------------------------------------------------
+----
 
 
+[[parsing_rss]]
 == Parsing RSS
 
 Below is some PHP code with which you can parse an RSS feed (e.g.,
 http://news.cs50.net/api/1.1/items?output=rss).
 
 [source,php]
-----------------------------------------------------------------------------
+----
 // load URL, parse RSS, and build a DOM in memory
 $dom = simplexml_load_file("http://news.cs50.net/api/1.1/items?output=rss");
 
@@ -125,27 +129,31 @@ foreach ($dom->channel->item as $item)
 
     // do something with fields
 }
-----------------------------------------------------------------------------
+----
 
 
+[[screen_scraping]]
 == Screen Scraping
 
 This topic warrants some discussion, so here's a whole article on
-link:Screen Scraping[screen scraping].
+link:../Screen_Scraping[screen scraping].
 
 
+[[sending_mail]]
 == Sending Mail
 
 This topic warrants some discussion, so here's a whole article on
-link:Sending Mail[sending mail].
+link:../Sending_Mail[sending mail].
 
 
+[[sending_text_messages]]
 == Sending Text Messages via Email
 
 This topic warrants some discussion, so here's a whole article on
-link:Sending Texts[sending texts].
+link:../Sending_Texts[sending texts].
 
 
+[[unserializing_php]]
 == Unserializing PHP
 
 Below is some PHP code with which you can
@@ -155,7 +163,7 @@ http://php.net/manual/en/function.serialize.php[serialize] (e.g.,
 http://news.cs50.net/api/1.1/items?output=php).
 
 [source,php]
--------------------------------------------------------------------------------
+----
 // load URL
 $contents = file_get_contents("http://news.cs50.net/api/1.1/items?output=php");
 
@@ -173,4 +181,4 @@ foreach ($items as $item)
 
     // do something with fields
 }
--------------------------------------------------------------------------------
+----

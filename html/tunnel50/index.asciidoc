@@ -1,10 +1,10 @@
 ---
-tags: []
+tags: [HOWTO]
 title: tunnel50
 ---
 
 `tunnel50` is a command-line tool with which CS50 staff can connect to
-your link:CS50 Appliance[CS50 Appliance] so as to see and even control
+your link:../CS50_Appliance[CS50 Appliance] so as to see and even control
 your terminal window in order to troubleshoot problems you're having.
 CS50 staff can only connect to your appliance if you actually run
 `tunnel50` _and_ provide us with the unique ID and temporary password
@@ -21,9 +21,10 @@ you should use TeamViewer instead.
 == How to Use
 
 
+[[student]]
 === Student
 
-1.  Open a terminal window in the link:CS50 Appliance[CS50 Appliance],
+1.  Open a terminal window in the link:../CS50_Appliance[CS50 Appliance],
 as via *Menu > Accessories > Terminal*.
 2.  Execute:
 +
@@ -45,10 +46,10 @@ hit *ctl-d*.
 
 === Staff
 
-1.  Ask student to run `tunnel50`, per the link:#_student[instructions
+1.  Ask student to run `tunnel50`, per the link:#student[instructions
 above], and provide you with his or her 9-digit *ID* and 4-digit
 *Password*.
-2.  Open a terminal window in the link:CS50 Appliance[CS50 Appliance],
+2.  Open a terminal window in the link:../CS50_Appliance[CS50 Appliance],
 as via *Menu > Accessories > Terminal*.
 3.  Execute:
 +
@@ -65,5 +66,3 @@ As soon as you're connected to the student, the terminal window will
 clear itself and your prompt will return. Thereafter, the student will
 see anything you type and vice versa. To quit (and disconnect the
 student), hit *ctl-d*.
-
-Category:HOWTO

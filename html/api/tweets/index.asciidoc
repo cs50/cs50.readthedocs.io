@@ -19,8 +19,7 @@ date. New tweets may take up to five minutes to appear in
 HarvardTweets's database.
 
 
-Author
-------
+== Author
 
 To report bugs or request features, contact:
 
@@ -28,8 +27,7 @@ mailto:malan@post.harvard.edu[David J. Malan '99] +
 http://www.cs.harvard.edu/malan/
 
 
-License
--------
+== License
 
 Use of this API is governed by a
 http://creativecommons.org/licenses/by-nc/3.0/[Creative Commons
@@ -40,15 +38,13 @@ http://tweets.cs50.net/[HarvardTweets] in your own work. For approval of
 commercial purposes, contact the author.
 
 
-Methods
--------
+== Methods
 
 All methods support
 http://en.wikipedia.org/wiki/Cross-Origin_Resource_Sharing[CORS].
 
 
-tweeters
-~~~~~~~~
+=== tweeters
 
 To query the HarvardTweets API for tweeters, contact the server via URLs
 in this format:
@@ -77,19 +73,18 @@ http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1[400 Bad
 Request].
 
 
-CSV
-^^^
+==== CSV
 
 If you request tweeters in CSV format (e.g.,
 http://tweets.cs50.net/api/1.1/tweeters?screen_name=asellerg,harvard&output=csv),
 the response will be a series of comma-delimited rows, per the below:
 
 [source,text]
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----
 screen_name,name,url,description,profile_image_url
 asellerg,"Andrew Sellergren",,,http://s.twimg.com/a/1258674567/images/default_profile_6_normal.png
 Harvard,"Harvard University",http://harvard.edu,"Highlighting advances in teaching and research excellence across Harvard University",http://a1.twimg.com/profile_images/228702720/Mod_Color_Harvard_Shield_small_bigger_normal.jpg
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----
 
 Note that the response's first row defines the CSV file's fields.
 Fields' order may change over time, so do not hardcode indices into your
@@ -97,15 +92,14 @@ own code. Use that first row to determine fields' indices dynamically,
 per this article on link:Neat_Tricks#Parsing_CSV[parsing CSV].
 
 
-JSON
-^^^^
+==== JSON
 
 If you request tweeters in JSON format (e.g.,
 http://tweets.cs50.net/api/1.1/tweeters?screen_name=asellerg,harvard&output=json),
 the response wil be an array of objects, per the below:
 
 [source,javascript]
-------------------------------------------------------------------------------------------------------------------------------
+----
 [
    {
       "screen_name":"asellerg",
@@ -122,24 +116,22 @@ the response wil be an array of objects, per the below:
       "profile_image_url":"http:\/\/a1.twimg.com\/profile_images\/228702720\/Mod_Color_Harvard_Shield_small_bigger_normal.jpg"
    }
 ]
-------------------------------------------------------------------------------------------------------------------------------
+----
 
 
-JSONP
-^^^^^
+==== JSONP
 
 If you request tweeters in JSONP format (e.g.,
 http://tweets.cs50.net/api/1.1/tweeters?screen_name=asellerg,harvard&output=jsonp&callback=parseResponse),
 the response wil be an array of objects, per the below:
 
 [source,javascript]
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----
 parseResponse([{"screen_name":"asellerg","name":"Andrew Sellergren","url":"","description":"","profile_image_url":"http:\/\/a3.twimg.com\/profile_images\/604140089\/ls_5276_lance7_normal.jpg"},{"screen_name":"Harvard","name":"Harvard University","url":"http:\/\/harvard.edu","description":"Highlighting advances in teaching and research excellence across Harvard University","profile_image_url":"http:\/\/a1.twimg.com\/profile_images\/228702720\/Mod_Color_Harvard_Shield_small_bigger_normal.jpg"}])
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----
 
 
-PHP
-^^^
+==== PHP
 
 If you request tweeters in serialized PHP format (e.g.,
 http://tweets.cs50.net/api/1.1/tweeters?screen_name=asellerg,harvard&output=php),
@@ -147,15 +139,15 @@ the response will be a serialized array of associative arrays, per the
 below:
 
 [source,php]
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----
 a:2:{i:0;a:5:{s:11:"screen_name";s:8:"asellerg";s:4:"name";s:17:"Andrew Sellergren";s:3:"url";s:0:"";s:11:"description";s:0:"";s:17:"profile_image_url";s:67:"http://s.twimg.com/a/1258674567/images/default_profile_6_normal.png";}i:1;a:5:{s:11:"screen_name";s:7:"Harvard";s:4:"name";s:18:"Harvard University";s:3:"url";s:18:"http://harvard.edu";s:11:"description";s:83:"Highlighting advances in teaching and research excellence across Harvard University";s:17:"profile_image_url";s:93:"http://a1.twimg.com/profile_images/228702720/Mod_Color_Harvard_Shield_small_bigger_normal.jpg";}}
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----
 
 Once you http://php.net/manual/en/function.unserialize.php[unserialize]
 that response, you'll have the below in memory:
 
 [source,php]
---------------------------------------------------------------------------------------------------------------------------------
+----
 Array
 (
     [0] => Array
@@ -177,11 +169,10 @@ Array
         )
 
 )
---------------------------------------------------------------------------------------------------------------------------------
+----
 
 
-tweets
-~~~~~~
+=== tweets
 
 To query the HarvardTweets API for tweets, contact the server via URLs
 in this format:
@@ -230,19 +221,18 @@ Request].
 Responses include no more than 256 tweets.
 
 
-CSV
-^^^
+==== CSV
 
 If you request tweets in CSV format (e.g.,
 http://tweets.cs50.net/api/1.1/tweets?from=asellerg&output=csv), the
 response will be a series of comma-delimited rows, per the below:
 
 [source,text]
-------------------------------------------------------------------------------------------------------------------------------------------------------
+----
 id,from_user,to_user,text,created_at
 4589094829,asellerg,coleironman,"@coleironman Yeah, man, she's a beaut!  You around this week (before Thursday) to go for a ride?",2009-10-03T18:30:22
 4572116596,asellerg,,"http://twitpic.com/k1tcd - Race tomorrow.",2009-10-03T00:24:40
-------------------------------------------------------------------------------------------------------------------------------------------------------
+----
 
 Note that the response's first row defines the CSV file's fields.
 Fields' order may change over time, so do not hardcode indices into your
@@ -250,15 +240,14 @@ own code. Use that first row to determine fields' indices dynamically,
 per this article on link:Neat_Tricks#Parsing_CSV[parsing CSV].
 
 
-JSON
-^^^^
+==== JSON
 
 If you request tweets in JSON format (e.g.,
 http://tweets.cs50.net/api/1.1/tweets?from=asellerg&output=json), the
 response wil be an array of objects, per the below:
 
 [source,javascript]
-----------------------------------------------------------------------------------------------------------------
+----
 [
    {
       "id":"4589094829",
@@ -275,24 +264,22 @@ response wil be an array of objects, per the below:
       "created_at":"2009-10-03T00:24:40"
    }
 ]
-----------------------------------------------------------------------------------------------------------------
+----
 
 
-JSONP
-^^^^^
+==== JSONP
 
 If you request tweets in JSONP format (e.g.,
 http://tweets.cs50.net/api/1.1/tweets?from=asellerg&output=jsonp&callback=parseResponse),
 the response wil be an array of objects, per the below:
 
 [source,javascript]
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----
 parseResponse([{"id":"4589094829","from_user":"asellerg","to_user":"coleironman","text":"@coleironman Yeah, man, she's a beaut!  You around this week (before Thursday) to go for a ride?","created_at":"2009-10-03T18:30:22"},{"id":"4572116596","from_user":"asellerg","to_user":"","text":"http:\/\/twitpic.com\/k1tcd - Race tomorrow.","created_at":"2009-10-03T00:24:40"}])
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----
 
 
-PHP
-^^^
+==== PHP
 
 If you request tweets in serialized PHP format (e.g.,
 http://tweets.cs50.net/api/1.1/tweets?from=asellerg&output=php), the
@@ -300,15 +287,15 @@ response will be a serialized array of associative arrays, per the
 below:
 
 [source,php]
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----
 a:2:{i:0;a:5:{s:2:"id";s:10:"4589094829";s:9:"from_user";s:8:"asellerg";s:7:"to_user";s:11:"coleironman";s:4:"text";s:96:"@coleironman Yeah, man, she's a beaut!  You around this week (before Thursday) to go for a ride?";s:10:"created_at";s:19:"2009-10-03T18:30:22";}i:1;a:5:{s:2:"id";s:10:"4572116596";s:9:"from_user";s:8:"asellerg";s:7:"to_user";s:0:"";s:4:"text";s:41:"http://twitpic.com/k1tcd - Race tomorrow.";s:10:"created_at";s:19:"2009-10-03T00:24:40";}}
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----
 
 Once you http://php.net/manual/en/function.unserialize.php[unserialize]
 that response, you'll have the below in memory:
 
 [source,text]
-----------------------------------------------------------------------------------------------------------------------
+----
 Array
 (
     [0] => Array
@@ -330,36 +317,28 @@ Array
         )
 
 )
-----------------------------------------------------------------------------------------------------------------------
+----
 
 
-Examples
---------
+== Examples
 
 * Returns all tweeters:
 ** http://tweets.cs50.net/api/1.1/tweeters?output=csv
 ** http://tweets.cs50.net/api/1.1/tweeters?output=json
-**
-http://tweets.cs50.net/api/1.1/tweeters?output=json&callback=parseResponse
+** http://tweets.cs50.net/api/1.1/tweeters?output=json&callback=parseResponse
 ** http://tweets.cs50.net/api/1.1/tweeters?output=php
 * Returns Andrew Sellergren's tweets:
 ** http://tweets.cs50.net/api/1.1/tweets?from=asellerg&output=csv
 ** http://tweets.cs50.net/api/1.1/tweets?from=asellerg&output=json
-**
-http://tweets.cs50.net/api/1.1/tweets?from=asellerg&output=json&callback=parseResponse
+** http://tweets.cs50.net/api/1.1/tweets?from=asellerg&output=json&callback=parseResponse
 ** http://tweets.cs50.net/api/1.1/tweets?from=asellerg&output=php
 ** http://tweets.cs50.net/api/1.1/tweets?from=asellerg&output=rss
 * Returns all tweets sent on 11 November 2009:
-**
-http://tweets.cs50.net/api/1.1/tweets?sdt=2009-11-11&edt=2009-11-11&output=csv
-**
-http://tweets.cs50.net/api/1.1/tweets?sdt=2009-11-11&edt=2009-11-11&output=json
-**
-http://tweets.cs50.net/api/1.1/tweets?sdt=2009-11-11&edt=2009-11-11&output=jsonp&callback=parseResponse
-**
-http://tweets.cs50.net/api/1.1/tweets?sdt=2009-11-11&edt=2009-11-11&output=php
-**
-http://tweets.cs50.net/api/1.1/tweets?sdt=2009-11-11&edt=2009-11-11&output=rss
+** http://tweets.cs50.net/api/1.1/tweets?sdt=2009-11-11&edt=2009-11-11&output=csv
+** http://tweets.cs50.net/api/1.1/tweets?sdt=2009-11-11&edt=2009-11-11&output=json
+** http://tweets.cs50.net/api/1.1/tweets?sdt=2009-11-11&edt=2009-11-11&output=jsonp&callback=parseResponse
+** http://tweets.cs50.net/api/1.1/tweets?sdt=2009-11-11&edt=2009-11-11&output=php
+** http://tweets.cs50.net/api/1.1/tweets?sdt=2009-11-11&edt=2009-11-11&output=rss
 
 
 See Also

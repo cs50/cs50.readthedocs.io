@@ -1,5 +1,5 @@
 ---
-tags: []
+tags: [HOWTO]
 title: PuTTY
 ---
 
@@ -31,5 +31,3 @@ then *Enter*. You should then find yourself at the server's prompt, as
 in the below!
 
 image:Putty2.jpg[Putty2.jpg,title="image"]
-
-Category:HOWTO

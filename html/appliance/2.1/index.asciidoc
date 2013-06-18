@@ -343,6 +343,7 @@ Time*. Click the *Time Zone* tab, select the nearest city in your time
 zone, then click *OK*, leaving *System clock uses UTC* checked.
 
 
+[[how_to_open_a_terminal]]
 How to Open a Terminal
 ^^^^^^^^^^^^^^^^^^^^^^
 

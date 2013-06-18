@@ -5,7 +5,7 @@ title: Software
 
 == iOS University Program
 
-See link:iOS University Program[iOS University Program].
+See link:../iOS_University_Program[iOS University Program].
 
 
 == DreamSpark

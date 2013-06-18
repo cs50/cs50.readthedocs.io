@@ -1,5 +1,5 @@
 ---
-tags: []
+tags: [API]
 title: HarvardMaps API
 ---
 
@@ -15,8 +15,7 @@ interface, which means that you can query it using simple HTTP GET
 requests.
 
 
-Author
-------
+== Author
 
 To report bugs or request features, contact:
 
@@ -24,8 +23,7 @@ mailto:malan@harvard.edu[David J. Malan '99] +
 http://www.cs.harvard.edu/malan/
 
 
-License
--------
+== License
 
 Use of this API is governed by a
 http://creativecommons.org/licenses/by-nc/3.0/[Creative Commons
@@ -36,15 +34,14 @@ http://maps.cs50.net/[HarvardMaps] in your own work. To discuss
 commercial purposes, contact the author.
 
 
-Methods
--------
+== Methods
 
 All methods support
 http://en.wikipedia.org/wiki/Cross-Origin_Resource_Sharing[CORS].
 
 
-buildings
-~~~~~~~~~
+[[buildings]]
+=== buildings
 
 To query the HarvardMaps API for buildings, contact the server via URLs
 in this format:
@@ -90,19 +87,18 @@ link:HarvardEnergy API[HarvardEnergy API]'s
 link:HarvardEnergy_API#buildings[buildings] method.*
 
 
-CSV
-^^^
+==== CSV
 
 If you request buildings in CSV format (e.g.,
 http://maps.cs50.net/api/1.3/buildings?root=03364,03365&output=csv), the
 response will be a series of comma-delimited rows, per the below:
 
 [source,text]
-----------------------------------------------
+----
 root,id,name,lat,lng
 03364,991,"Mather House",42.368270,-71.115270
 03365,952,"Matthews Hall",42.374070,-71.118150
-----------------------------------------------
+----
 
 Note that the response's first row defines the CSV file's fields.
 Fields' order may change over time, so do not hardcode indices into your
@@ -113,15 +109,14 @@ per this article on link:Neat_Tricks#Parsing_CSV[parsing CSV].
 leading 0s that Excel likes to remove.*
 
 
-JSON
-^^^^
+==== JSON
 
 If you request channels in JSON format (e.g.,
 http://maps.cs50.net/api/1.3/buildings?root=03364,03365&output=json),
 the response wil be an array of objects, per the below:
 
 [source,javascript]
------------------------------
+----
 [
    {
       "root":"03364",
@@ -138,24 +133,22 @@ the response wil be an array of objects, per the below:
       "lng":"-71.118150"
    }
 ]
------------------------------
+----
 
 
-JSONP
-^^^^^
+==== JSONP
 
 If you request channels in JSONP format (e.g.,
 http://maps.cs50.net/api/1.3/buildings?root=03364,03365&output=jsonp&callback=parseResponse),
 the response will be a padded array of objects, per the below:
 
 [source,javascript]
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----
 parseResponse([{"root":"03364","id":"991","name":"Mather House","lat":"42.368270","lng":"-71.115270"},{"root":"03365","id":"952","name":"Matthews Hall","lat":"42.374070","lng":"-71.118150"}])
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----
 
 
-PHP
-^^^
+==== PHP
 
 If you request channels in serialized PHP format (e.g.,
 http://maps.cs50.net/api/1.3/buildings?root=03364,03365&output=php), the
@@ -163,15 +156,15 @@ response will be a serialized array of associative arrays, per the
 below:
 
 [source,php]
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----
 a:2:{i:0;a:5:{s:4:"root";s:5:"03364";s:2:"id";s:3:"991";s:4:"name";s:12:"Mather House";s:3:"lat";s:15:"42.368153055571";s:3:"lng";s:16:"-71.115234108143";}i:1;a:5:{s:4:"root";s:5:"03365";s:2:"id";s:3:"952";s:4:"name";s:13:"Matthews Hall";s:3:"lat";s:15:"42.374068817179";s:3:"lng";s:16:"-71.118154165321";}}
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----
 
 Once you http://php.net/manual/en/function.unserialize.php[unserialize]
 that response, you'll have the below in memory:
 
 [source,php]
------------------------------------
+----
 Array
 (
     [0] => Array
@@ -193,11 +186,10 @@ Array
         )
 
 )
------------------------------------
+----
 
 
-XML
-^^^
+==== XML
 
 If you request data in XML format (e.g.,
 http://maps.cs50.net/api/1.3/buildings?root=03364,03365&output=xml), the
@@ -205,7 +197,7 @@ response will be an XML document whose root element is *buildings*, each
 of whose children is a *building*, per the below:
 
 [source,xml]
---------------------------------------
+----
 <?xml version="1.0" encoding="utf-8"?>
 <buildings>
   <building>
@@ -223,30 +215,25 @@ of whose children is a *building*, per the below:
     <lng>-71.118154165321</lng>
   </building>
 </buildings>
---------------------------------------
+----
 
 
-Examples
---------
+==== Examples
 
 * Returns all buildings:
 ** http://maps.cs50.net/api/1.3/buildings?output=csv
 ** http://maps.cs50.net/api/1.3/buildings?output=json
-**
-http://maps.cs50.net/api/1.3/buildings?output=jsonp&callback=parseResponse
+** http://maps.cs50.net/api/1.3/buildings?output=jsonp&callback=parseResponse
 ** http://maps.cs50.net/api/1.3/buildings?output=php
 ** http://maps.cs50.net/api/1.3/buildings?output=xml
 * Returns Mather House:
 ** http://maps.cs50.net/api/1.3/buildings?id=991&output=csv
 ** http://maps.cs50.net/api/1.3/buildings?id=991&output=json
-**
-http://maps.cs50.net/api/1.3/buildings?id=991&output=jsonp&callback=parseResponse
+** http://maps.cs50.net/api/1.3/buildings?id=991&output=jsonp&callback=parseResponse
 ** http://maps.cs50.net/api/1.3/buildings?id=991&output=php
 ** http://maps.cs50.net/api/1.3/buildings?id=991&output=xml
 
-
-See Also
---------
+== See Also
 
 * link:Neat_Tricks#Parsing_CSV[Parsing CSV]
 * link:Neat_Tricks#Parsing_JSON[Parsing JSON]
@@ -288,5 +275,3 @@ https://manual.cs50.net.php?title=HarvardMaps_API&oldid=4364[1.2]
 ** Added support for XML
 * 1.3
 ** Fixed bug in CSV format whereby `address` header was omitted.
-
-Category:API

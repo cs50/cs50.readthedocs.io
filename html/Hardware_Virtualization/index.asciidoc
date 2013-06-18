@@ -1,5 +1,5 @@
 ---
-tags: []
+tags: [HOWTO]
 title: Hardware Virtualization
 ---
 
@@ -18,12 +18,10 @@ still feel slow if your computer is a few years old, has a CPU that's
 only 1GHz or so, or has only 1GB or so of RAM.*
 
 
-How to Check if Hardware Virtualization is Already Enabled
-----------------------------------------------------------
+== How to Check if Hardware Virtualization is Already Enabled
 
 
-Windows
-~~~~~~~
+=== Windows
 
 1.  Download *havdetectiontool.exe* from
 http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=592.
@@ -35,32 +33,28 @@ changes to this computer*, click *Yes*.
 then click *Next*.
 6.  A window should then report:
 * *Hardware-assisted virtualization is not enabled on this computer*, in
-which case you can enable it per link:#_[the directions below].
+which case you can enable it per link:#hardware_virtualization_windows_linux[the directions below].
 * *This computer is configured with hardware-assisted virtualization*,
 in which case hardware virtualization is indeed already enabled.
 7.  Select *No, I don't want to send data*, then click *OK*.
 
 
-Mac OS
-~~~~~~
+=== Mac OS
 
 Hardware virtualization should be enabled by default on any
 (Intel-based) Mac manufactured in the past few years!
 
 
-Linux
-~~~~~
+=== Linux
 
 It depends on your distribution of Linux. It's probably easiest to just
-try to enable it, per the link:#_windows.2c_linux[directions below].
+try to enable it, per the link:#hardware_virtualization_windows_linux[directions below].
 
 
-How to Enable Hardware Virtualization
--------------------------------------
+== How to Enable Hardware Virtualization
 
-
-Windows, Linux
-~~~~~~~~~~~~~~
+[[hardware_virtualization_windows_linux]]
+=== Windows, Linux
 
 If your computer supports hardware virtualization, but it's not enabled,
 you can likely enable it by changing your computer's
@@ -86,8 +80,7 @@ computer. And realize that your computer might not even support hardware
 virtualization!
 
 
-Dell
-^^^^
+==== Dell
 
 1.  Depress the F12 key when boot menu text appears at startup
 2.  Select BIOS setup and depress the Enter key
@@ -101,8 +94,7 @@ Virtualization
 computer
 
 
-HP
-^^
+==== HP
 
 1.  Depress Esc key when prompted at startup
 2.  Depress the F10 key to Configure BIOS
@@ -115,8 +107,7 @@ HP
 computer
 
 
-Lenovo
-^^^^^^
+==== Lenovo
 
 1.  Depress the blue ThinkVantage key when prompted at startup
 2.  Depress the F1 key to enter the BIOS setup utility
@@ -131,8 +122,7 @@ Lenovo
 computer
 
 
-Panasonic
-^^^^^^^^^
+==== Panasonic
 
 1.  Depress the F2 key when boot menu text appears at startup
 2.  Select "Advanced" menu in Setup Utility
@@ -143,10 +133,7 @@ Panasonic
 6.  Depress Enter to exit confirmation menu.
 
 
-Mac OS
-~~~~~~
+=== Mac OS
 
 Hardware virtualization should be enabled by default on any
 (Intel-based) Mac manufactured in the past few years!
-
-Category:HOWTO

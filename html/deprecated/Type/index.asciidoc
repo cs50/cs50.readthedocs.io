@@ -18,7 +18,7 @@ variable, and they allow variables to change type during the execution
 of a program; such languages are considered _weakly typed_.
 
 In C, it is possible to define other and more complex types using the
-`[[typedef]]` keyword as well as link:struct[structs] and similar
+`[[typedef]]` keyword as well as link:../struct[structs] and similar
 compound types.
 
 

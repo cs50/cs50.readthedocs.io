@@ -1,18 +1,18 @@
 ---
-tags: []
+tags: [HOWTOs]
 title: nano
 ---
 
-image:Nano.png[The interface of the nano editor.,title="image"]`nano`is
-a keyboard-based editor in Linux (similar to Notepad in Windows and
+image:Nano.png[The interface of the nano editor.,title="image"]
+
+`nano`is a keyboard-based editor in Linux (similar to Notepad in Windows and
 TextEdit on a Mac) that can be used to create and edit text files. It
 does not have as many features as Vim or emacs (other text editors in
 Linux), but it is more beginner-friendly and less overwhelming than
 these other editors.
 
 
-Starting nano
--------------
+== Starting nano
 
 At the command line interface, typing "`nano`" brings up a blank file.
 If instead you type "`nano filename`", first the system will search the
@@ -37,11 +37,11 @@ if we find out we have messed up the program and wish to revert to an
 original version.
 
 
-Using nano
-----------
+== Using nano
 
-image:Nano2.png[Nano2.png,title="image"]Because nano is a keyboard-based
-editor, one thing that beginners must get used to is that one cannot
+image:Nano2.png[Nano2.png,title="image"]
+
+Because nano is a keyboard-based editor, one thing that beginners must get used to is that one cannot
 click on the screen in order to place the cursor (the green square in
 the images) at the desired location. Instead, the arrow keys must
 generally be used to move the cursor around.
@@ -62,9 +62,7 @@ characters in the line (indicated by the `col` number; the `char` number
 to the right indicates total characters in the file) is greater than 80,
 which is why the view is shifted to the right.
 
-
-Syntax highlighting
--------------------
+== Syntax highlighting
 
 Nano has http://en.wikipedia.org/wiki/Syntax_highlighting[syntax
 highlighting] for various different file types, such as .php, .java,
@@ -80,8 +78,7 @@ opposed to only being able to apply the highlighting when you save your
 program for the first time.
 
 
-Commands
---------
+== Commands
 
 When you open nano, you can see various commands that nano allows along
 the bottom of the screen (click image above to zoom in).
@@ -136,8 +133,7 @@ longer files than simply using the up and down arrow keys.
 |=======================================================================
 
 
-`.save` files
--------------
+== .save files
 
 If you have been using nano, you may see files with the ".save" file
 extension appearing in directories in which you are working. If you are
@@ -163,5 +159,3 @@ and lose your connection, the file will automatically be saved with the
 name "nano.save".
 
 If you don't need the ".save" files, feel free to remove them.
-
-Category:HOWTOs

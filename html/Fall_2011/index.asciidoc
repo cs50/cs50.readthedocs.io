@@ -1,43 +1,43 @@
 ---
-tags: []
+tags: [HOWTO]
 title: Fall 2011
 ---
 
 To follow Fall 2011 of CS50, download and install *version 2.3* of the
-link:CS50 Appliance 2.3[CS50 Appliance]. Then follow the directions
+link:../appliance/2.3[CS50 Appliance]. Then follow the directions
 below.
 
 
-Lectures
---------
+== Lectures
 
 Videos of Fall 2011's lectures are available at
 https://www.cs50.net/lectures/, as are PDFs of scribe notes, slides, and
 source code.
 
 
-Week 0
-~~~~~~
+=== Week 0
 
 Download and install Scratch from http://scratch.mit.edu/download, then
 download Week 0's Source Code (i.e., Scratch projects) from
 https://www.cs50.net/lectures/.
 
 
-Week 1 onward
-~~~~~~~~~~~~~
+=== Week 1 onward
 
 To copy Week 1's source code into John Harvard's home directory in the
-CS50 Appliance, link:Appliance#How_to_Open_a_Terminal[open a terminal]
+CS50 Appliance, link:../appliance/2.3#how_to_open_a_terminal[open a terminal]
 and execute:
 
 `git clone `http://cdn.cs50.net/2011/fall/lectures/1/src1.git[`http://cdn.cs50.net/2011/fall/lectures/1/src1.git`]
 
 You can then compile and run, say, `hai1.c`, as follows:
 
-`cd ~/src1/` +
-`make hai1` +
-`./hai1`
+[source,bash]
+----
+cd ~/src1/
+make hai1
+./hai1
+----
 
 Similarly can you compile and run other programs in `~/src1/`.
 
@@ -49,5 +49,3 @@ follow this same naming pattern.)
 
 Alternatively, you can launch Firefox within the Appliance and download
 source code as ZIP files from https://www.cs50.net/lectures/.
-
-Category:HOWTO
