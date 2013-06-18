@@ -556,8 +556,7 @@ questions, you may want to join CS50's Google Group at
 http://cs50.tv/2009/fall/#l=psets&r=group[cs50.tv].
 
 
-Install Ubuntu
-^^^^^^^^^^^^^^
+=== Install Ubuntu
 
 First, you'll need a running instance of Ubuntu 10.04 with which to
 build the appliance. If you don't have such, download Ubuntu 10.04 from
@@ -569,8 +568,7 @@ sure it's up-to-date:
 `sudo aptitude full-upgrade`
 
 
-Install vmbuilder
-^^^^^^^^^^^^^^^^^
+=== Install vmbuilder
 
 Installing vmbuilder is easy:
 
@@ -585,8 +583,7 @@ Unfortunately, vmbuilder's *--firstboot* option is broken in Ubuntu
 `patch -p1 < ~/vm-builder.bug536942.patch`
 
 
-Configure vmbuilder
-^^^^^^^^^^^^^^^^^^^
+=== Configure vmbuilder
 
 If you're not (still) already, you might as well become root for
 simplicity:
@@ -1058,14 +1055,14 @@ in the folder you created: *cs50-1.4.mf* (which contains SHA1 hashes for
 *cs50-1.4.ovf* and *cs50-1.4.vmdk*), *cs50-1.4.ovf* (which contain's the
 VM's configuration), and *cs50-1.4.vmdk* (which is the VM's hard disk).
 15. Open *cs50-1.4.ovf* with a text editor and delete:
-1.  the *xmlns:vbox* attribute in the *Envelope* element's start tag;
-2.  the *vbox:uuid* attribute in the *Disk* element's tag;
-3.  the entire *Item* element for *ideController1* (i.e., everything
+a.  the *xmlns:vbox* attribute in the *Envelope* element's start tag;
+b.  the *vbox:uuid* attribute in the *Disk* element's tag;
+c.  the entire *Item* element for *ideController1* (i.e., everything
 between that IDE Controller's ** and ** tags);
-4.  the entire *vbox:Machine* element (i.e., everything between ** and
+d.  the entire *vbox:Machine* element (i.e., everything between ** and
 **).
-16. Delete *cs50-1.4.mf* (or update the hash within for *cs50-1.4.ovf*).
-17. Create a ZIP file containing, at least, *cs50-1.4.ovf* and
+e. Delete *cs50-1.4.mf* (or update the hash within for *cs50-1.4.ovf*).
+f. Create a ZIP file containing, at least, *cs50-1.4.ovf* and
 *cs50-1.4.vmdk*, and the appliance is ready for distribution!
 
 

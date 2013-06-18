@@ -7,8 +7,7 @@ Every 10 minutes, we take "snapshots" of everything in `/home` on
 `cloud.cs50.net`, just in case you accidentally delete something.
 
 
-How to Recover a File
-~~~~~~~~~~~~~~~~~~~~~
+== How to Recover a File
 
 Suppose that you just deleted `~/pset1/hello.c`. Odds are you'll find it
 in the `minutely.0` or `minutely.1` snapshot, depending on the current
@@ -28,8 +27,7 @@ Below are all of the intervals you can try. Realize that the times only
 estimates, since the intervals' definitions depend on the current time.
 
 
-Intervals
-^^^^^^^^^
+=== Intervals
 
 [cols=",",]
 |====================================================

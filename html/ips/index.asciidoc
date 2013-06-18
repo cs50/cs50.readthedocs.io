@@ -4,8 +4,7 @@ title: IPs
 ---
 
 
-33 Oxford Street
-~~~~~~~~~~~~~~~~
+== 33 Oxford Street
 
 * 140.247.63.235
 * 140.247.63.236

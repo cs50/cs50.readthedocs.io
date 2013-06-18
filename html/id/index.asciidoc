@@ -642,8 +642,7 @@ FAQs
 ----
 
 
-How should I store users in my database?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+=== How should I store users in my database?
 
 When a user authenticates, CS50 ID returns an 84-character URL that
 uniquely identifies that user; the URL begins with
@@ -675,8 +674,7 @@ to log in via other means as well (e.g., via
 http://www.janrain.com/products/engage[Janrain Engage]).
 
 
-Why does CS50 ID uniquely identify users with 84-character URLs?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+=== Why does CS50 ID uniquely identify users with 84-character URLs?
 
 CS50 ID is based on http://en.wikipedia.org/wiki/OpenID[OpenID], which
 dictates that users be uniquely identified with URLs. By convention,
@@ -722,8 +720,7 @@ via:
 * an `@post.harvard.edu` email address
 
 
-Can I develop my site on localhost (127.0.0.1)?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+=== Can I develop my site on localhost (127.0.0.1)?
 
 Yes, even though you must register your own website's URLs, CS50 ID also
 trusts URLs that begin with `<nowiki>http://localhost/</nowiki>` and
@@ -745,8 +742,7 @@ When ready to launch your website, just remember to change `TRUST_ROOT`
 and `RETURN_TO` to the URLs with which you applied for CS50 ID.
 
 
-Can I develop my site on a private network?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+=== Can I develop my site on a private network?
 
 Yes, even though you must register your own website's URLs, CS50 ID also
 trusts URLs that refer to
@@ -773,8 +769,7 @@ Troubleshooting
 ---------------
 
 
-The site you tried to log into is not configured properly for CS50 ID
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+=== The site you tried to log into is not configured properly for CS50 ID
 
 If a user reports seeing this message, odds are you're using incorrect
 (or unapproved) values for `TRUST_ROOT` and/or `RETURN_TO` in your code.
@@ -784,8 +779,7 @@ If still unsure what's wrong (or if you don't recall which URLs we
 approved), email sysadmins@cs50.net to inquire.
 
 
-Invalid username and/or password
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+=== Invalid username and/or password
 
 If a user reports seeing this message, odds are the user is using the
 wrong account, username, and/or password. Encourage the user to try
@@ -813,8 +807,7 @@ user to http://reference.pin.harvard.edu/login-help. If the user *can*,
 email sysadmins@cs50.net to inquire, CCing the user.
 
 
-CS50 Library requires bcmath or gmp extension module
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+=== CS50 Library requires bcmath or gmp extension module
 
 The link:Library#PHP[CS50 Library for PHP] is pre-installed in the
 link:Appliance[CS50 Appliance] and on `cloud.cs50.net`, as are all
@@ -823,8 +816,7 @@ this error if http://php.net/manual/en/book.bc.php[BC Math] and
 http://php.net/manual/en/book.gmp.php[GMP] are not already installed.
 
 
-CentOS, Fedora, RedHat
-++++++++++++++++++++++
+==== CentOS, Fedora, RedHat
 
 Try running the following commands as `root`:
 
@@ -832,8 +824,7 @@ Try running the following commands as `root`:
 `service httpd restart`
 
 
-Debian, Ubuntu
-++++++++++++++
+==== Debian, Ubuntu
 
 Try running the following commands as `root`:
 
@@ -841,8 +832,7 @@ Try running the following commands as `root`:
 `service apache2 restart`
 
 
-Windows
-+++++++
+==== Windows
 
 Open `php.ini` with a text editor and change:
 
@@ -855,8 +845,7 @@ if present to:
 Then restart your web server.
 
 
-CS50 Library requires dom or domxml extension module
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== CS50 Library requires dom or domxml extension module
 
 The link:Library#PHP[CS50 Library for PHP] is pre-installed in the
 link:Appliance[CS50 Appliance] and on `cloud.cs50.net`, as are all
@@ -903,5 +892,3 @@ Support
 -------
 
 Email sysadmins@cs50.net with questions.
-
-Category:HOWTO

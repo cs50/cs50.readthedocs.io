@@ -205,8 +205,7 @@ having your very own copy of `cloud.cs50.net` on your own computer, with
 just a few caveats.
 
 
-Caveats
-^^^^^^^
+=== Caveats
 
 * The appliance does not support `submit` for problem sets' submission.
 * The appliance does not support `challenge` for Problem Set 6.

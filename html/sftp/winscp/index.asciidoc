@@ -16,8 +16,7 @@ software).
 Like SSH'ing, you'll be SFTP'ing to cloud.cs50.net.
 
 
-Starting a Session
-^^^^^^^^^^^^^^^^^^
+== Starting a Session
 
 After launching the program by double-clicking its icon, you should see
 a window like the following:
@@ -49,8 +48,7 @@ image:WSCPun.jpg[WSCPun.jpg,title="image"]
 image:WSCPpwd.jpg[WSCPpwd.jpg,title="image"]
 
 
-Transferring Files
-^^^^^^^^^^^^^^^^^^
+== Transferring Files
 
 After logging in, you should be at the main screen, something like:
 

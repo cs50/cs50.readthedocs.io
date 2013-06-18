@@ -95,8 +95,7 @@ Daddy]
 ** http://vpsland.com/[VPSLAND]
 
 
-tl;dr
-^^^^^
+=== tl;dr
 
 If overwhelmed by so many options, know that HCS and DreamHost are
 probably the most popular choices for hosting websites, and Google Apps

@@ -7,8 +7,7 @@ Here's how to install the link:CS50_Appliance_3[CS50 Appliance] using
 VMware Player for link:#_installation[Windows].
 
 
-Installation
-~~~~~~~~~~~~
+== Installation
 
 1.  Download VMware Player for free from
 http://www.vmware.com/products/player/.
@@ -46,9 +45,7 @@ within, and click *Open*. Then click VMware Fusion's ▶ button to start
 up the appliance.
 
 
-Troubleshooting
-~~~~~~~~~~~~~~~
+== Troubleshooting
 
 Email sysadmins@cs50.net to report any issues.
 
-Category:HOWTO

@@ -28,8 +28,7 @@ home directory is accessible on both.
 __TOC__
 
 
-Launching SecureFX
-^^^^^^^^^^^^^^^^^^
+== Launching SecureFX
 
 Launch SecureFX via its icon. You should see a window like:
 
@@ -42,8 +41,7 @@ proceed to *Creating a Session* below. If fas.harvard.edu _does_ appear,
 skip to *Using SecureFX*.
 
 
-Creating a Session
-^^^^^^^^^^^^^^^^^^
+== Creating a Session
 
 In the *Connect* window, click the "*New Session*" icon (third from the
 top-left) in the toolbar, shown below.
@@ -66,8 +64,7 @@ Finally, click *Finish*. You should see the *Connect* window again, but
 with fas.harvard.edu as a session (as shown above).
 
 
-Using SecureFX
-^^^^^^^^^^^^^^
+== Using SecureFX
 
 Launch it. It should look something like:
 

@@ -3,7 +3,7 @@ tags: []
 title: Installation
 ---
 
-In order to install the link:CS50_Appliance_3[CS50|Appliance], you first
+In order to install the link:..[CS50 Appliance], you first
 need to install a http://en.wikipedia.org/wiki/Hypervisor[hypervisor],
 which is a program that will let you run
 http://en.wikipedia.org/wiki/Virtual_machine[virtual machines] on your
@@ -28,8 +28,7 @@ machines might still feel slow if your computer is a few years old, has
 a CPU that's only 1GHz or so, or has only 1GB or so of RAM.*
 
 
-VirtualBox
-^^^^^^^^^^
+== VirtualBox
 
 Here's how to install the link:CS50_Appliance_3[CS50|Appliance] using
 VirtualBox.
@@ -60,8 +59,7 @@ That's it! To learn how to use the appliance, see further
 link:#_how_to_use_appliance[instructions] down below!
 
 
-VMware Fusion
-^^^^^^^^^^^^^
+== VMware Fusion
 
 Here's how to install the appliance using VMware Fusion. These
 instructions assume that VMware Fusion is already installed.
@@ -80,8 +78,7 @@ within, and click *Open*. Then click VMware Fusion's ▶ button to start
 up the appliance.
 
 
-VMware Workstation
-^^^^^^^^^^^^^^^^^^
+== VMware Workstation
 
 Here's how to install the appliance using VMware Workstation. These
 instructions assume that VMware Workstation is already installed.
@@ -102,8 +99,7 @@ Workstation* window. To start the virtual machine, click *Power on this
 virtual machine* in that tab.
 
 
-Parallels
-^^^^^^^^^
+== Parallels
 
 Here's how to install the appliance using Parallels. These instructions
 assume that Parallels is already installed.
@@ -111,8 +107,7 @@ assume that Parallels is already installed.
 _Coming Soon_
 
 
-KVM
-^^^
+== KVM
 
 Here's how to install the appliance using KVM. These instructions assume
 that KVM is already installed.

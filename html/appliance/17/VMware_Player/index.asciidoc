@@ -7,8 +7,7 @@ Here's how to install the link:CS50_Appliance_17[CS50 Appliance] using
 VMware Player for link:#_installation[Windows].
 
 
-Installation
-~~~~~~~~~~~~
+== Installation
 
 1.  Download VMware Player for free from
 http://www.vmware.com/go/downloadplayer/.
@@ -46,12 +45,10 @@ within, and click *Open*. Then click VMware Player's ▶ button to start
 up the appliance.
 
 
-Troubleshooting
-~~~~~~~~~~~~~~~
+== Troubleshooting
 
 
-Binary translation is incompatible with long mode on this platform
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+=== Binary translation is incompatible with long mode on this platform
 
 If you see this message, you might need to enable
 link:Hardware_Virtualization[hardware virtualization] on your computer.

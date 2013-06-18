@@ -3,17 +3,13 @@ tags: []
 title: Software
 ---
 
-__TOC__
 
-
-iOS University Program
-~~~~~~~~~~~~~~~~~~~~~~
+== iOS University Program
 
 See link:iOS University Program[iOS University Program].
 
 
-DreamSpark
-~~~~~~~~~~
+== DreamSpark
 
 Microsoft has donated a https://www.dreamspark.com/[DreamSpark]
 membership to Harvard. All Harvard undergraduates are eligible, as are

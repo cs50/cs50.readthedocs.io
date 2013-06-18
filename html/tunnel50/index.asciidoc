@@ -18,12 +18,10 @@ menus and icons) or your personal computer's desktop. To share either,
 you should use TeamViewer instead.
 
 
-How to Use
-~~~~~~~~~~
+== How to Use
 
 
-Student
-^^^^^^^
+=== Student
 
 1.  Open a terminal window in the link:CS50 Appliance[CS50 Appliance],
 as via *Menu > Accessories > Terminal*.
@@ -45,8 +43,7 @@ anything you type and vice versa. To quit (and disconnect the staff),
 hit *ctl-d*.
 
 
-Staff
-^^^^^
+=== Staff
 
 1.  Ask student to run `tunnel50`, per the link:#_student[instructions
 above], and provide you with his or her 9-digit *ID* and 4-digit

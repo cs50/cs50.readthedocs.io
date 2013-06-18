@@ -505,10 +505,10 @@ Windows
 which can be found in the appliance's bottom-right corner), then click
 *Enter*.
 3.  If prompted for your name and password:
-1.  Input *jharvard* for *User name*.
-2.  Input *crimson* for *Password*.
-3.  Check *Remember my credentials* if you'd like.
-4.  Click *Connect*.
+a.  Input *jharvard* for *User name*.
+b.  Input *crimson* for *Password*.
+c.  Check *Remember my credentials* if you'd like.
+d.  Click *Connect*.
 
 John Harvard's home directory should then open in a new window.
 
@@ -522,10 +522,10 @@ the appliance's IP address, which can be found in the appliance's
 bottom-right corner). (Click the *+* icon if you'd like to add the
 appliance to your *Favorite Servers*.) Then click *Connect*.
 3.  If prompted for your name and password:
-1.  Select *Registered User*.
-2.  Input *jharvard* for *Name*.
-3.  Input *crimson* for *Password*.
-4.  Click *Connect*.
+a.  Select *Registered User*.
+b.  Input *jharvard* for *Name*.
+c.  Input *crimson* for *Password*.
+d.  Click *Connect*.
 
 John Harvard's home directory should then open in a new window.
 
@@ -978,6 +978,8 @@ if not highlighted already, then click *Settings*.
 highlight it. Then click the CD icon to the right of *CD/DVD Drive* and
 select *Remove disk from virtual drive*. Then click *OK*.
 28. Package the appliance for VirtualBox or VMware products as follows:
+
+[start=1]
 * *VirtualBox*
 1.  With *CS50 Appliance 3* highlighted in VirtualBox's lefthand list of
 VMs, select *Machine > Clone...*.
@@ -1043,6 +1045,8 @@ zip -r -n .vmdk  cs50-appliance-3-15-ovf.zip cs50-appliance-3/
 This use of `-n` tells `zip` not to compress
 `cs50-appliance-3-disk1.vmdk` (since it's already compressed).
 19. Distribute `cs50-appliance-3-15-ovf.zip`!
+
+[start=1]
 * *VMware*
 1.  With *CS50 Appliance 3* highlighted in VirtualBox's lefthand list of
 VMs, select *Devices > Export Appliance...*.

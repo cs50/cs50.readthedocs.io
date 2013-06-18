@@ -7,12 +7,11 @@ Here's how to install the link:..[CS50 Appliance] using
 VMware Fusion for link:#_installation[Mac OS].
 
 
-Installation
-~~~~~~~~~~~~
+== Installation
 
 1.  Download a term-long trial of VMware Fusion as follows, courtesy of
-our friends at http://www.vmware.com/[VMware]:
-1.  Visit https://x.cs50.net/2013/software
+our friends at http://www.vmware.com/[VMware]: +
+Visit https://x.cs50.net/2013/software
 and click the link for *VMware Fusion*.
 2.  You should find yourself at VMware's site. Click the *Create an
 Account* tab, complete the form that appears (using the same email
@@ -35,38 +34,36 @@ somewhere safe. (It will be an alphanumeric string of the form
 #####-#####-#####-#####-#####.)
 7.  Click the *Download* button on the page that appears to download
 VMware Fusion. (It may take a few minutes or hours.)
-2.  Double-click the file you just downloaded (which is likely in your
+8.  Double-click the file you just downloaded (which is likely in your
 *Downloads* folder) in order to "mount" VMware Fusion's icon on your
 desktop.
-3.  A window should open. Drag the *VMware Fusion* (or *VMware
+9.  A window should open. Drag the *VMware Fusion* (or *VMware
 Fusion.app*) icon in that window to your *Applications* folder.
-4.  Download a ZIP file of the link:..[CS50 Appliance] at
+10.  Download a ZIP file of the link:..[CS50 Appliance] at
 http://mirror.cs50.net/appliance50/17/i386/appliance50-17-9-vmx.zip
 (http://mirror.cs50.net.s3.amazonaws.com/appliance50/17/i386/appliance50-17-9-vmx.zip?torrent[torrent]).
 That ZIP file is over 1GB in size, so it might take a while to download.
-5.  Once downloaded, unzip the ZIP file, and you should have a folder
+11.  Once downloaded, unzip the ZIP file, and you should have a folder
 named *appliance50-17* with two files within (*appliance50-17.vmdk* and
 *appliance50-17.vmx*). Odds are that folder's in your *Downloads*
 folder, unless you saved it elsewhere. Do not double-click
 *appliance50-17.vmdk* or *appliance50-17.vmx*.
-6.  Drag that *appliance50-17* folder somewhere safe, where you won't
+12.  Drag that *appliance50-17* folder somewhere safe, where you won't
 accidentally delete it. Do not leave it in your *Downloads* folder.
-7.  Launch VMware Fusion, as by double-clicking its icon, which should
+13.  Launch VMware Fusion, as by double-clicking its icon, which should
 be in your *Applications* folder. If prompted with a *Software License
 Agreement*, click *Agree*. If prompted for *Licensing*, paste in your
 license key, then click *OK*. If prompted to *Create New*, *Convert VM*,
 or *Migrate PC*, simply click *Skip*.
-8.  Ensure that you have version 5.0.1 or later of VMware Fusion, as by
+14.  Ensure that you have version 5.0.1 or later of VMware Fusion, as by
 selecting *VMware Fusion > Check for Updates...*. Update and relaunch
 VMware Fusion as needed.
-9.  Select *File > Open...*. Navigate your way to that *appliance50-17*
+15.  Select *File > Open...*. Navigate your way to that *appliance50-17*
 folder (wherever you moved it for safe-keeping), highlight the
 *appliance50-17.vmx* file within, and click *Open*.
-10. Click VMware Fusion's ▶ button to start up the appliance. If
+16. Click VMware Fusion's ▶ button to start up the appliance. If
 prompted to "upgrade this virtual machine," click *Upgrade*.
 
 The appliance should then boot! If you see a black-and-white screen
 entitled *GNU GRUB*, no need to do anything; the appliance will continue
 to boot after a few seconds!
-
-Category:HOWTO

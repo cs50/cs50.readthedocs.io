@@ -8,8 +8,7 @@ Best to subscribe using your harvard.edu email address so that you're
 approved.
 
 
-ABCD
-~~~~
+== ABCD
 
 "The http://www.abcd.harvard.edu/[ABCD] Committee is an informal
 association of system managers, programmers, researchers, students,
@@ -131,8 +130,7 @@ Windows."
 "abcd-www List."
 
 
-Entrepreneurship
-~~~~~~~~~~~~~~~~
+== Entrepreneurship
 
 *
 http://lists.hcs.harvard.edu/mailman/listinfo/entrepreneurs[entrepreneurs].
@@ -154,16 +152,14 @@ the prominent venture group on campus providing connections, resources
 and guidance to all students at Harvard College."
 
 
-FAS
-~~~
+== FAS
 
 *
 http://lists.fas.harvard.edu/mailman/listinfo/netcontacts-list[netcontacts-list].
 "Downtime Notification Mailing List."
 
 
-HCS
-~~~
+== HCS
 
 http://www.hcs.harvard.edu/[Harvard Computer Society] maintains a number
 of http://www.hcs.harvard.edu/wiki/HCS_Mailing_Lists[mailing lists] for
@@ -190,8 +186,7 @@ member belongs on this list. This list has about 35 members."
 is a forum for people (particularly new members) to ask questions."
 
 
-Jobs
-~~~~
+== Jobs
 
 *
 http://lists.hcs.harvard.edu/mailman/listinfo/entrepreneurs[entrepreneurs].
@@ -212,8 +207,7 @@ the prominent venture group on campus providing connections, resources
 and guidance to all students at Harvard College."
 
 
-SEAS
-~~~~
+== SEAS
 
 * http://lists.deas.harvard.edu/mailman/listinfo/cs-undergrads[CS
 Undergrads]. Announcements meant for undergraduates whose primary or

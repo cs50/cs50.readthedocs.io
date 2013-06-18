@@ -10,8 +10,7 @@ your code's style. Similarly do companies typically adopt their own,
 company-wide conventions for style.
 
 
-Comments
-^^^^^^^^
+== Comments
 
 Comments make code more readable, not only for others (e.g., your TF)
 but also for you, especially when hours, days, weeks, months, or years
@@ -92,8 +91,7 @@ void chorus(int b)
 --------------------------------------------------------
 
 
-Conditions
-^^^^^^^^^^
+== Conditions
 
 If a branch involves just one statement, you don't need curly braces:
 
@@ -157,8 +155,7 @@ if(x < 0)
 ------------------------------
 
 
-Functions
-^^^^^^^^^
+== Functions
 
 Declare functions as follows, with curly braces on lines of their own:
 
@@ -170,8 +167,7 @@ int main(void)
 --------------
 
 
-Indentation
-^^^^^^^^^^^
+== Indentation
 
 Indent your code four spaces at a time to make clear which blocks of
 code are inside of others. If you use your keyboard's Tab key to do so,
@@ -192,8 +188,7 @@ for (int i = 0; i < argc; i++)
 ----------------------------------------------------
 
 
-Loops
-^^^^^
+== Loops
 
 Whenever you need temporary variables for iteration, use `i`, then `j`,
 then `k`, unless more specific names would make your code more readable:
@@ -215,11 +210,10 @@ If you need more than three variables for iteration, it might be time to
 rethink your approach.
 
 
-main
-^^^^
+== main
 
 Because CS50 uses http://en.wikipedia.org/wiki/C99[C99], `main` should
-be declare in either of two ways, namely:
+be declared in either of two ways, namely:
 
 --------------
 int main(void)
@@ -274,8 +268,7 @@ main()
 ------
 
 
-Pointers
-^^^^^^^^
+== Pointers
 
 When declaring a pointer, write the `*` next to the type, as in:
 
@@ -293,8 +286,7 @@ This convention can lead to ambiguity in some contexts, but we think,
 overall, it's clearer when first learning pointers.
 
 
-Variables
-^^^^^^^^^
+== Variables
 
 Because CS50 uses http://en.wikipedia.org/wiki/C99[C99], do not define
 all of your variables at the very top of your functions but, rather,

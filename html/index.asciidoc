@@ -27,7 +27,7 @@ title: CS50 Manual
 *** link:appliance/17/VMware_Fusion/[VMware_Fusion]
 *** link:appliance/17/VMware_Player/[VMware_Player]
 *** link:appliance/17/VMware_Workstation/[VMware_Workstation]
-** link:appliance/17/VirtualBox/[VirtualBox]
+*** link:appliance/17/VirtualBox/[VirtualBox]
 * Other
 ** link:Fall_2010/[Fall_2010]
 ** link:Fall_2011/[Fall_2011]
@@ -61,7 +61,7 @@ title: CS50 Manual
 ** link:library/Library/[Library]
 ** link:library/[CS50 Library]
 ** link:nano/[nano]
-** link:notepad++/[Notepad++]
+** link:notepad_pp[Notepad++]
 ** link:render50/[render50]
 ** link:research/[research]
 * SFTP

@@ -8,15 +8,13 @@ the expense of rigorous error-checking; we leave it to you to check
 return values more rigorously than we do!
 
 
-Authenticating Users
-~~~~~~~~~~~~~~~~~~~~
+== Authenticating Users
 
 This topic warrants some discussion, so here's a whole article on
 link:Authenticating Users[authenticating users].
 
 
-Parsing CSV
-~~~~~~~~~~~
+== Parsing CSV
 
 Below is some PHP code with which you can parse a CSV feed (e.g.,
 http://news.cs50.net/api/1.1/items?output=csv). It assumes that the CSV
@@ -30,7 +28,7 @@ contains fields' names).
 ----------------------------------------------------------------------
 // open CSV file
 $handle = fopen("http://news.cs50.net/api/1.1/items?output=csv", "r");
- 
+
 // determine fields' indices
 $row = fgetcsv($handle);
 for ($i = 0, $n = count($row); $i < $n; $i++)
@@ -53,8 +51,7 @@ fclose($handle);
 ----------------------------------------------------------------------
 
 
-Parsing Dates/Times
-~~~~~~~~~~~~~~~~~~~
+== Parsing Dates/Times
 
 CS50's APIs format dates and times in a certain way, namely *YYYY-MM-DD*
 and *YYYY-MM-DDTHH:MM:SS*, where *HH* is in 24-hour format. (Don't
@@ -79,8 +76,7 @@ You can then use PHP's http://php.net/manual/en/function.date.php[date]
 function to massage `$t0` and `$t1` into any format you'd like.
 
 
-Parsing JSON
-~~~~~~~~~~~~
+== Parsing JSON
 
 Below is some PHP code with which you can parse JSON (e.g.,
 http://news.cs50.net/api/1.1/items?output=json).
@@ -107,8 +103,7 @@ foreach ($items as $item)
 --------------------------------------------------------------------------------
 
 
-Parsing RSS
-~~~~~~~~~~~
+== Parsing RSS
 
 Below is some PHP code with which you can parse an RSS feed (e.g.,
 http://news.cs50.net/api/1.1/items?output=rss).
@@ -132,29 +127,25 @@ foreach ($dom->channel->item as $item)
 ----------------------------------------------------------------------------
 
 
-Screen Scraping
-~~~~~~~~~~~~~~~
+== Screen Scraping
 
 This topic warrants some discussion, so here's a whole article on
 link:Screen Scraping[screen scraping].
 
 
-Sending Mail
-~~~~~~~~~~~~
+== Sending Mail
 
 This topic warrants some discussion, so here's a whole article on
 link:Sending Mail[sending mail].
 
 
-Sending Text Messages via Email
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+== Sending Text Messages via Email
 
 This topic warrants some discussion, so here's a whole article on
 link:Sending Texts[sending texts].
 
 
-Unserializing PHP
-~~~~~~~~~~~~~~~~~
+== Unserializing PHP
 
 Below is some PHP code with which you can
 http://php.net/manual/en/function.unserialize.php[unserialize] a PHP

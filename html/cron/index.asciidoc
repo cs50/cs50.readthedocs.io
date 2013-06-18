@@ -22,8 +22,7 @@ able to execute it via a browser; name it something like `script`, not
 `script.php`.
 
 
-How to Schedule a Cron Job
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+== How to Schedule a Cron Job
 
 1.  Visit https://cloud.cs50.net/usermin.
 2.  Log in with your cloud username and password if prompted.

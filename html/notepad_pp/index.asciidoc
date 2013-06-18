@@ -16,8 +16,7 @@ Note that to actually compile or execute programs, you'll still want to
 SSH to the cloud with PuTTY.
 
 
-Opening a File on the Cloud
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+== Opening a File on the Cloud
 
 1.  Launch Notepad++ by double-clicking its icon in your Start Menu.
 2.  Select *Plugins → NppFTP*, and check *Show NppFTP Window* if not
@@ -44,8 +43,7 @@ double-click it. The file should open.
 or hit ctrl-s, the file will be saved directly to the cloud.
 
 
-Saving a New File to the Cloud
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+== Saving a New File to the Cloud
 
 1.  Launch Notepad++ by double-clicking its icon in your Start Menu.
 *Don't start coding yet.*
