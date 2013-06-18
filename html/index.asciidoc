@@ -1,6 +1,7 @@
 ---
 tags: []
 title: CS50 Manual
+toc: false
 ---
 
 * APIs

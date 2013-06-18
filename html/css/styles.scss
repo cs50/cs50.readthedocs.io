@@ -42,6 +42,20 @@ p {
     @include opacity(.8);
 }
 
+#toc {
+    display: inline-block;
+    margin-left: 30px;
+    padding: 10px 30px;
+    width: 300px;
+    border: 0px;
+    font-family: "league-gothic";
+    @include box-shadow(0px 1px 3px #BBB);
+
+    #toctitle {
+        font-size: 12px;
+    }
+}
+
 #container {
     position: absolute;
     top: 0px;
@@ -56,6 +70,7 @@ p {
     @include background-linear-gradient(top, #FFF, #F3F3F3);
     text-shadow: 0px 1px 0px white;
     color: #444;
+    margin: 0 auto;
 
     > * {
         position: relative;
@@ -73,6 +88,7 @@ p {
         background-image: url(/img/grey.png);
         @include opacity(.3);
         z-index: 1;
+        margin: 0 auto;
     }
     
     #search-wrapper {
@@ -218,7 +234,7 @@ p {
         list-style-type: none;
     }
 
-    > #content > .ulist > ul {
+    > #content > .ulist > ul, > #preamble > .sectionbody > .ulist > ul {
         margin: 0px;
         font-family: "league-gothic";
 
