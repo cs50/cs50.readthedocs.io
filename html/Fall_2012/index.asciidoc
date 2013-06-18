@@ -2,6 +2,7 @@
 tags: []
 title: Fall_2012
 ---
+
 To follow Fall 2012 of CS50, download and install *version 17* of the
 link:CS50 Appliance 17[CS50 Appliance]. Then follow the directions
 below.

@@ -3,8 +3,6 @@ tags: []
 title: HarvardCourses_API
 ---
 
-
-
 Overview
 --------
 The HarvardCourses API allows you to request data programmatically from

@@ -2,6 +2,7 @@
 tags: []
 title: Neat_Tricks
 ---
+
 Below are neat tricks that the http://www.cs50.net/staff/[staff] find
 useful from time to time. We've tried to keep the code below simple at
 the expense of rigorous error-checking; we leave it to you to check

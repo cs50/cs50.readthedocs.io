@@ -2,6 +2,7 @@
 tags: []
 title: Cyberduck
 ---
+
 Cyberduck is a free SFTP client for Mac OS that you can download from
 http://cyberduck.ch/[http://cyberduck.ch/]. Once downloaded, drag
 *Cyberduck.app* from your *Downloads* folder (or wherever you saved it)

@@ -3,7 +3,7 @@ tags: []
 title: HarvardEvents
 ---
 
-__NOTOC__ http://events.cs50.net/[HarvardEvents] is a university-wide
+http://events.cs50.net/[HarvardEvents] is a university-wide
 events directory that synchronizes each night with calendars all over
 campus. As of Fall 2010, most calendars belong to departments and
 student groups from the College, GSAS, HMS, and SEAS, although others

@@ -2,6 +2,7 @@
 tags: []
 title: Fall_2010
 ---
+
 To "take" Fall 2010 of CS50, download and install *version 2.1* of the
 link:CS50 Appliance 2.1[CS50 Appliance]. Then follow the directions
 below.
