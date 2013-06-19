@@ -1,11 +1,24 @@
+TODOS:
+D    remove links to deprecated articles
+    move deprecated articles
+    embed raw html
+D    backslash for nano
+D    undeprecate screen scrapting
+D    undeprecate ACLs to /acl
+    gcal in research
+D    deprecate Omega
+D    deprecate Theta
+D    deprecate cron
+D    deprecate how to lead a seminar
+D    nix see also
 Current issues:
-    ctrl symbols in nano/#_commands
+D    ctrl symbols in nano/#_commands
     links to /Appliance break - make redirect to 17?
-    Virtual_Host is deprecated, but its linked to by Life After 50
-    Screen_Scraping is deprecated, but its linked to by Neat Tricks
-    CS50 Cloud is deprecated, but its linked to by Authentication
-    Forms in Harvard Events
-    Google charts organization in Life After 50
+D    Virtual_Host is deprecated, but its linked to by Life After 50
+D    Screen_Scraping is deprecated, but its linked to by Neat Tricks
+D    CS50 Cloud is deprecated, but its linked to by Authentication
+D    Forms in Harvard Events
+D    Google charts organization in Life After 50
     Google charts in Enrollment
     Google charts in Concentrators
     Research is blank
