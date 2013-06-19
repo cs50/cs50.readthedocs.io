@@ -17,6 +17,6 @@ RewriteRule .* index.php [L]
 
 Redirect /iOS_University_Program /ios
 Redirect /CS50_Appliance /Appliance
-Redirect /Appliance /appliance/17
-
+Redirect /Appliance /appliance
+RedirectMatch /appliance/$ /appliance/17/
 
