@@ -6,6 +6,9 @@ title: Enrollment
 Below is a visualization of CS50's enrollments since the course's
 introduction in 1989. Click bars for more details.
 
+++++
+<div id="enrollment" style="width: 98%;"></div>
+++++
 We used Google's
 http://code.google.com/apis/visualization/documentation/gallery/columnchart.html[Column
 Chart] API to make this visualization. (You can too!)
@@ -13,8 +16,90 @@ Chart] API to make this visualization. (You can too!)
 Below is a visualization of CS50's female enrollments since the course's
 introduction in 1989. Click bars for more details.
 
+++++
+<div id="women" style="width: 98%;"></div>
+++++
+
 We used Google's
 http://code.google.com/apis/visualization/documentation/gallery/columnchart.html[Column
 Chart] API to make this visualization. (You can too!)
 
-//
+++++
+<html>
+
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+// <![CDATA[
+
+// year, males, females
+var rows = [
+     ["1989", 107, 40],
+     ["1990", 139, 37],
+     ["1991", 117, 36],
+     ["1992", 114, 40],
+     ["1993", 195, 57],
+     ["1994", 201, 80],
+     ["1995", 227, 66],
+     ["1996", 271, 115],
+     ["1997", 183, 66],
+     ["1998", 165, 77],
+     ["1999", 214, 55],
+     ["2000", 190, 73],
+     ["2001", 121, 43],
+     ["2002", 67, 27],
+     ["2003", 83, 28],
+     ["2004", 86, 26],
+     ["2005", 84, 37],
+     ["2006", 87, 45],
+     ["2007", 201, 81],
+     ["2008", 210, 120],
+     ["2009", 223, 114],
+     ["2010", 309, 185],
+     ["2011", 392, 215],
+     ["2012", 479, 269]
+];
+
+google.load("visualization", "1", {packages:["columnchart"]});
+google.setOnLoadCallback(function() {
+
+    var charts = {};
+    var data = {women: [], enrollment: []};
+    var tables = {};
+
+    for (var i = 0; i < rows.length; i++)
+    {
+        var students = rows[i][1] + rows[i][2];
+        data["enrollment"][i] = [rows[i][0], {v: students, f: students + " students"}];
+
+        /*
+        // skip gender for 2012 for now
+        if (i == rows.length - 1)
+            continue;
+        */
+
+        var percent =  Math.round(rows[i][2] / (rows[i][1] + rows[i][2]) * 100);
+        data ["women"][i] = [rows[i][0], {v: percent, f: percent + "% (" + rows[i][2] + "/" + (rows[i][1] + rows[i][2]) + ")"}];
+    }
+
+    tables["enrollment"] = new google.visualization.DataTable();
+    tables["enrollment"].addColumn("string", "Year");
+    tables["enrollment"].addColumn("number", "Enrollment");
+    tables["enrollment"].addRows(data["enrollment"]);
+    charts["enrollment"] = new google.visualization.ColumnChart(document.getElementById("enrollment"));
+    charts["enrollment"].draw(tables["enrollment"], {axisFontSize: 12, height: 480, is3D: false, legend: "none", min: 0, title: "Enrollment in CS50", titleY: "students"});
+
+    tables["women"] = new google.visualization.DataTable();
+    tables["women"].addColumn("string", "Year");
+    tables["women"].addColumn("number", "Women");
+    tables["women"].addRows(data["women"]);
+    charts["women"] = new google.visualization.ColumnChart(document.getElementById("women"));
+    charts["women"].draw(tables["women"], {axisFontSize: 12, height: 480, is3D: false, legend: "none", max: 50, min: 0, title: "Women in CS50 (%)", titleY: "percent"});
+
+});
+
+// ]]>
+</script>
+
+</html>
+++++
