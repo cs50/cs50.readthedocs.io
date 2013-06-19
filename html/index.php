@@ -6,7 +6,6 @@
     if (false === (list($yaml, $html) = getArticle($_SERVER["SCRIPT_URL"], true))) {
         http_response_code(404);
     }
-
 ?>
 
 <!DOCTYPE html>
@@ -66,12 +65,12 @@
                 <gcse:search></gcse:search>  
             </div>
             <h1 class="manual"><a href="/">CS50 Manual</a></h1>
-            <?php 
-            
+            <?php
                 if (isset($yaml["title"])) {
                     if ($_SERVER["SCRIPT_URL"] != "/") {
                         print("<h1 class=\"page-title\">" . htmlspecialchars($yaml["title"]) . "</h1>");
                     }
+                    print($html);
                 }
                 else {
                     print("<div>404 Not Found</div>");
