@@ -13,4 +13,4 @@ find $SCRIPTPATH/../html -type d -exec chmod 711 {} \;
 # chmod files
 find $SCRIPTPATH/.. -type f -exec chmod 600 {} \;
 find $SCRIPTPATH/../bin -type f -exec chmod 700 {} \;
-find $SCRIPTPATH/../html -type f \( -name .htaccess -o -name "*.css" -o -name "*.gif" -o -name "*.html" -o -name "*.jpg" -o -name "*.js" -o -name "*.pdf" -o -name "*.png" \) -exec chmod 644 {} \;
+find $SCRIPTPATH/../html -type f \( -name .htaccess -o -name "*.css" -o -name "*.gif" -o -name "*.html" -o -name "*.jpg" -o -name "*.js" -o -name "*.pdf" -o -name "*.png" -o -name "*.woff" -o -name "*.ttf" -o -name "*.svg" -o -name "*.eot" \) -exec chmod 644 {} \;
