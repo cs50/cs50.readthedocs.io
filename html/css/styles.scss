@@ -1,5 +1,11 @@
 @import "mixins";
 
+@font-face {
+    font-family: "bariol";
+    src: url("/css/fonts/Bariol_Regular.otf");
+    font-weight: 400;
+}
+
 body, html {
     height: 100%;
     width: 100%;
