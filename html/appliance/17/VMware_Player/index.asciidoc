@@ -3,7 +3,7 @@ tags: []
 title: VMware Player
 ---
 
-Here's how to install the link:CS50_Appliance_17[CS50 Appliance] using
+Here's how to install the link:..[CS50 Appliance] using
 VMware Player for link:#_installation[Windows].
 
 

@@ -113,7 +113,7 @@ cat_num,term,bracketed,field,number,title,faculty,description,prerequisites,note
 Note that the response's first row defines the CSV file's fields.
 Fields' order may change over time, so do not hardcode indices into your
 own code. Use that first row to determine fields' indices dynamically,
-per this article on link:../Neat_Tricks#Parsing_CSV[parsing CSV].
+per this article on link:../../Neat_Tricks#Parsing_CSV[parsing CSV].
 
 
 ==== JSON
@@ -283,7 +283,7 @@ id,first,middle,last,suffix
 Note that the response's first row defines the CSV file's fields.
 Fields' order may change over time, so do not hardcode indices into your
 own code. Use that first row to determine fields' indices dynamically,
-per this article on link:Neat_Tricks#Parsing_CSV[parsing CSV].
+per this article on link:../../Neat_Tricks#Parsing_CSV[parsing CSV].
 
 
 ==== JSON
@@ -413,7 +413,7 @@ COMPSCI,"Computer Science"
 Note that the response's first row defines the CSV file's fields.
 Fields' order may change over time, so do not hardcode indices into your
 own code. Use that first row to determine fields' indices dynamically,
-per this article on link:Neat_Tricks#Parsing_CSV[parsing CSV].
+per this article on link:../../Neat_Tricks#Parsing_CSV[parsing CSV].
 
 
 ==== JSON
@@ -539,25 +539,6 @@ of whose children is an `course`, per the below:
 ** http://api.cs50.net/courses/1.0/fields?id=COMPSCI&output=jsonp&callback=parseResponse
 ** http://api.cs50.net/courses/1.0/fields?id=COMPSCI&output=php
 ** http://api.cs50.net/courses/1.0/fields?id=COMPSCI&output=xml
-
-
-See Also
---------
-
-* link:Neat_Tricks#Parsing_CSV[Parsing CSV]
-* link:Neat_Tricks#Parsing_JSON[Parsing JSON]
-
-
-Related APIs
-------------
-
-* link:HarvardEnergy API[HarvardEnergy API]
-* link:HarvardEvents API[HarvardEvents API]
-* link:HarvardFood API[HarvardFood API]
-* link:HarvardMaps API[HarvardMaps API]
-* link:HarvardNews API[HarvardNews API]
-* link:HarvardTweets API[HarvardTweets API]
-* link:Shuttleboy API[Shuttleboy API]
 
 
 External Links

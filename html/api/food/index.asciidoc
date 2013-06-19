@@ -863,29 +863,6 @@ convenient since you don't have to look through the web site, and it's
 just a tiny icon right next to your address bar."
 
 
-See Also
---------
-
-* link:Neat_Tricks#Parsing_CSV[Parsing CSV]
-* link:Neat_Tricks#Parsing_Dates.2FTimes[Parsing Dates/Times]
-* link:Neat_Tricks#Parsing_JSON[Parsing JSON]
-* link:Neat_Tricks#Parsing_RSS[Parsing RSS]
-* link:Screen Scraping[Screen Scraping]
-* link:Neat_Tricks#Unserializing_PHP[Unserializing PHP]
-
-
-Related APIs
-------------
-
-* link:HarvardCourses API[HarvardCourses API]
-* link:HarvardEnergy API[HarvardEnergy API]
-* link:HarvardEvents API[HarvardEvents API]
-* link:HarvardMaps API[HarvardMaps API]
-* link:HarvardNews API[HarvardNews API]
-* link:HarvardTweets API[HarvardTweets API]
-* link:Shuttleboy API[Shuttleboy API]
-
-
 == External Links
 
 * http://en.wikipedia.org/wiki/Comma-separated_values[Comma-separated

@@ -11,8 +11,13 @@ interpreted language be sure that the file's first line is a
 http://en.wikipedia.org/wiki/Shebang_(Unix)[shebang]. For instance, if
 your script is written in PHP, its first two lines should be:
 
-`#!/usr/bin/php` +
-`u``), as by executing:`
+[source,bash]
+----
+#!/usr/bin/php
+<?php
+---
+as by executing:
+
 
 `chmod u+x script`
 

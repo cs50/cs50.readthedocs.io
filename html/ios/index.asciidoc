@@ -1,11 +1,10 @@
 ---
-tags: []
+tags: [HOWTO]
 title: iOS
 ---
 
 
-Overview
-~~~~~~~~
+== Overview
 
 In order to install apps that you've written (or for which you have
 source code, as from a book, class, or website) on to your own iPad,
@@ -57,8 +56,7 @@ higher, you can download Xcode 4.3.1 for free from the
 http://itunes.apple.com/us/app/xcode/id448457090?mt=12[Mac App Store].)
 
 
-How to Join CS50's Team
-~~~~~~~~~~~~~~~~~~~~~~~
+== How to Join CS50's Team
 
 *To join CS50's team, you must have (access to) an Intel-based Mac
 running Mac OS 10.7.3 (Lion) or higher (which the latest version of
@@ -79,16 +77,13 @@ an existing one (which you might have because you already use iTunes).
 2.  Download Xcode 4 for free from the
 http://itunes.apple.com/us/app/xcode/id448457090?mt=12[Mac App Store].
 3.  Locate your iOS device's Unique Device ID (UDID):
-1.  Connect your iOS device to your Mac and launch Xcode.
-2.  Select *Organizer* under Xcode's *Window* menu.
-3.  Highlight and copy the 40-character hexadecimal string to the right
+a.  Connect your iOS device to your Mac and launch Xcode.
+b.  Select *Organizer* under Xcode's *Window* menu.
+c.  Highlight and copy the 40-character hexadecimal string to the right
 of *Identifier*. That's your UDID.
-4. 
-https://spreadsheets.google.com/viewform?hl=en&formkey=dDdtZHNEbGhESHgtVF92YXNGS3dRUFE6MQ[Apply
+4.  https://spreadsheets.google.com/viewform?hl=en&formkey=dDdtZHNEbGhESHgtVF92YXNGS3dRUFE6MQ[Apply
 to join CS50's team].
 5.  Check your email. Within 72 hours of applying to join CS50's team,
 you should receive an invitation containing a hyperlinked invitation
 code. (If not, email sysadmins@cs50.net to inquire.) Click that link to
 join CS50's team.
-
-Category:HOWTO

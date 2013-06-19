@@ -1,5 +1,5 @@
 ---
-tags: []
+tags: [HOWTO]
 title: CS50 Appliance 17
 ---
 
@@ -11,13 +11,13 @@ version of the appliance.*
 * *If following Summer 2012 of CSCI S-75, you should also use this
 version of the appliance.*
 * *If following Spring 2012 of CS1, CS51, or CS164, you should use
-link:CS50 Appliance 3[version 3] of the appliance.*
+link:../3[version 3] of the appliance.*
 * *If following https://www.cs50.net/[Fall 2011] of CS50, you should use
 link:CS50 Appliance 2.3[version 2.3] of the appliance.*
 * *If following http://cs50.tv/2010/fall/[Fall 2010] of CS50, you should
-use link:CS50 Appliance 2.1[version 2.1] of the appliance.*
+use link:../2.1[version 2.1] of the appliance.*
 * *If following http://cs50.tv/2009/fall/[Fall 2009] of CS50, you should
-use link:CS50 Appliance 1.4[version 1.4] instead.*
+use link:../1.4[version 1.4] instead.*
 
 The CS50 Appliance is a
 http://en.wikipedia.org/wiki/Virtual_machine[virtual machine] (VM) that
@@ -44,10 +44,9 @@ Incidentally, the appliance is always work in progress, so please
 forgive any bugs!
 
 
-Cheatsheet
-----------
+== Cheatsheet
 
-See link:#_instructions[instructions] for much more detail.
+See link:#instructions[instructions] for much more detail.
 
 [cols=",",]
 |====================================================
@@ -66,19 +65,19 @@ http://w.x.y.z/phpMyAdmin/ from your own computer
 * * Once you link:#__how_to_enable_mysql[enable MySQL]. +
 
 * ** Once you link:#__how_to_enable_apache[enable Apache] and
-link:#__how_to_enable_mysql[enable MySQL].
+link:#how_to_enable_mysql[enable MySQL].
 
 '''In version 17 of the appliance, the superuser account (i.e., root) is
 locked (i.e., disabled). But John Harvard has "sudo" (i.e.,
 administrative) privileges.
 
 
-Instructions
-------------
+[[instructions]]
+== Instructions
 
 
-How to Install Appliance
-~~~~~~~~~~~~~~~~~~~~~~~~
+[[how_to_install_appliance]]
+=== How to Install Appliance
 
 In order to install the CS50 Appliance, you first need to install a
 http://en.wikipedia.org/wiki/Hypervisor[hypervisor], which is a program
@@ -89,23 +88,23 @@ own computer, whether you run Mac OS, Windows, or Linux.
 * If you have a *Mac*, we recommend that you follow:
 ** link:VMware_Fusion[these instructions for VMware
 Fusion]
-** link:CS50_Appliance_17/VirtualBox[these instructions for VirtualBox]
+** link:VirtualBox[these instructions for VirtualBox]
 if you end have trouble with VMware Fusion
-** link:CS50_Appliance_17/Parallels[these instructions for Parallels] if
+** link:Parallels[these instructions for Parallels] if
 you already own Parallels
 * If you have a *PC running Windows*, we recommend that you follow:
-** link:CS50_Appliance_17/VMware_Player[these instructions for VMware
+** link:VMware_Player[these instructions for VMware
 Player]
-** link:CS50_Appliance_17/VMware_Workstation[these instructions for
+** link:VMware_Workstation[these instructions for
 VMware Workstation] if you have trouble with VMware Player
-** link:CS50_Appliance_17/VirtualBox[these instructions for VirtualBox]
+** link:VirtualBox[these instructions for VirtualBox]
 if you have trouble with VMware Workstation
 * If you have a *PC running Linux*, we recommend that you follow:
-** link:CS50_Appliance_17/VMware_Player[these instructions for VMware
+** link:VMware_Player[these instructions for VMware
 Player]
-** link:CS50_Appliance_17/VirtualBox[these instructions for VirtualBox]
+** link:VirtualBox[these instructions for VirtualBox]
 if you have trouble with VMware Player
-** link:CS50_Appliance_17/VMware_Workstation[these instructions for
+** link:VMware_Workstation[these instructions for
 VMware Workstation] if you have trouble with VirtualBox
 
 Once installed, it's not uncommon for the appliance to take a minute or
@@ -119,21 +118,21 @@ machines might still feel slow if your computer is a few years old, has
 a CPU that's only 1GHz or so, or has only 1GB or so of RAM.
 
 
-How to Update Appliance
-~~~~~~~~~~~~~~~~~~~~~~~
+[[how_to_update_appliance]]
+=== How to Update Appliance
 
 The latest version of the CS50 Appliance is *17-12*. More precisely, the
 "latest release of version 17 of the appliance is 17-12." To confirm
 that you have 17-12, look in the appliance's bottom-right corner, where
 you should see *17-12* in boldface. Alternatively, you can
-link:#_how_to_open_a_terminal[open a terminal] and execute
+link:#how_to_open_a_terminal[open a terminal] and execute
 
 `version50`
 
 which should report `17-12` as well.
 
 If you do not have the latest version, you can update your appliance by
-link:#_how_to_open_a_terminal[opening a terminal] and executing:
+link:#how_to_open_a_terminal[opening a terminal] and executing:
 
 `update50`
 
@@ -146,12 +145,12 @@ restart each of the appliance's services.
 
 *Note that you cannot update from version 1.4, 2.1, 2.3, 3, or 17a of
 the appliance to version 17. You must instead download 17, per the
-link:#_how_to_install_appliance[instructions] above. Thereafter, you'll
+link:#how_to_install_appliance[instructions] above. Thereafter, you'll
 be able to update from 17-12 to future releases, per the above.*
 
 
-How to Use Appliance
-~~~~~~~~~~~~~~~~~~~~
+[[how_to_use_appliance]]
+=== How to Use Appliance
 
 The first thing you should see when the appliance boots up is John
 Harvard's desktop. (Oh, henceforth, you are
@@ -169,15 +168,14 @@ appliance small. You're welcome to install additional programs via *Menu
 > Administration > Add/Remove Applications*.
 
 
-How to Change Name
-^^^^^^^^^^^^^^^^^^
+==== How to Change Name
 
 As much as you might not like being called John, *do not try to change
 John Harvard's name or username*. Life will be simpler as John.
 
 With that said, if you'd _really_ like to be yourself (or someone else
 altogether), you're welcome to create a new account.
-link:#_how_to_open_a_terminal[Open a terminal] and execute
+link:#how_to_open_a_terminal[Open a terminal] and execute
 
 `sudo adduser --comment "Jane Harvard" --gid students --groups wheel janeh` +
 `echo crimson | sudo passwd --stdin janeh` +
@@ -196,13 +194,13 @@ and change `jharvard` to your own username. Then hit *ctrl-x*, then *y*,
 then *Enter* to save and quit.
 
 
-How to Change Password
-^^^^^^^^^^^^^^^^^^^^^^
+[[how_to_change_password]]
+==== How to Change Password
 
 You can change your password in any of these ways:
 
 * Select *Menu > Settings > Password* and follow the on-screen prompts.
-* link:#_how_to_open_a_terminal[Open a terminal] and execute: +
+* link:#how_to_open_a_terminal[Open a terminal] and execute: +
 +
 ------
 passwd
@@ -216,8 +214,7 @@ access the appliance. Even though the appliance can connect to the
 Internet, the Internet cannot connect to the appliance.
 
 
-How to Change Language
-^^^^^^^^^^^^^^^^^^^^^^
+==== How to Change Language
 
 *This feature may require Internet access.*
 
@@ -227,12 +224,11 @@ you might find yourself more at home nonetheless. Select *Menu >
 Administration > Language*, inputting your password if prompted. Select
 your preferred language from the list that appears, then click *OK*. If
 prompted, click *Import key*. You may need to wait for a bit as the
-language is installed. Then link:#_how_to_restart_appliance[restart the
+language is installed. Then link:#how_to_restart_appliance[restart the
 appliance] and log back in.
 
 
-How to Change Keyboard Layout
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== How to Change Keyboard Layout
 
 If you have a non-U.S. (or non-standard) keyboard, you may want (or
 need!) to change your keyboard's layout as follows.
@@ -249,8 +245,7 @@ listed.
 (US)*, then click *Close*.
 
 
-How to Change Time Zone
-^^^^^^^^^^^^^^^^^^^^^^^
+==== How to Change Time Zone
 
 If you don't live in Cambridge, Massachusetts, USA, you may want to
 change the appliance's timezone. Select *Menu > Administration > Date &
@@ -258,8 +253,8 @@ Time*. Click the *Time Zone* tab, select the nearest city in your time
 zone, then click *OK*, leaving *System clock uses UTC* checked.
 
 
-How to Open a Terminal
-^^^^^^^^^^^^^^^^^^^^^^
+[[how_to_open_a_terminal]]
+==== How to Open a Terminal
 
 You can open a terminal in any of these ways:
 
@@ -277,8 +272,8 @@ No matter the approach you take, it's in the terminal window that you'll
 be able to type commands like `cd`, `gcc`, `ls`, etc.
 
 
-How to SSH to Appliance
-^^^^^^^^^^^^^^^^^^^^^^^
+[[how_to_ssh_to_appliance]]
+==== How to SSH to Appliance
 
 If you'd like to SSH to the appliance from your own computer (as with
 Terminal on Mac OS or with PuTTY on Windows), you can SSH from your
@@ -289,14 +284,12 @@ appliance's bottom-right corner).
 `jharvard` but not as `root`.*
 
 
-How to Assign Appliance a Static IP Address
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== How to Assign Appliance a Static IP Address
 
 _Coming Soon_
 
 
-How to Change Resolution
-^^^^^^^^^^^^^^^^^^^^^^^^
+==== How to Change Resolution
 
 You can change the appliance's resolution (i.e., width and height) in
 either of these ways:
@@ -306,8 +299,7 @@ value to the right of *Resolution*, then click *Close*.
 * Click and drag the appliance's bottom-right corner.
 
 
-How to Change Volume
-^^^^^^^^^^^^^^^^^^^^
+==== How to Change Volume
 
 1.  Select *Menu > Sound & Video > Mixer*.
 2.  Select *Playback: ES1371 [AudioPCO-97] Analog Stereo (PulseAudio
@@ -319,12 +311,10 @@ Mixer)* next to *Sound card*.
 7.  Visit http://www.youtube.com/ in Chrome to test with a video!
 
 
-How to Enter/Exit Fullscreen Mode
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===== How to Enter/Exit Fullscreen Mode
 
 
-VMware Fusion
-+++++++++++++
+====== VMware Fusion
 
 To enter fullscreen mode, select *Full Screen* from VMware Fusion's
 *View* menu while the appliance is running. (This menu is outside of the
@@ -335,8 +325,7 @@ your screen, at which point a menubar should appear. Select *Single
 Window* from the *View* menu.
 
 
-VMware Player
-+++++++++++++
+====== VMware Player
 
 To enter fullscreen mode, select *Full Screen* from VMware Player's
 *Player* menu while the appliance is running. (This menu is outside of
@@ -348,8 +337,7 @@ already), and again select *Full Screen* from VMware Player's *Player*
 menu.
 
 
-VMware Workstation
-++++++++++++++++++
+====== VMware Workstation
 
 To enter fullscreen mode, select *Full Screen* from VMware Workstation's
 *View* menu while the appliance is running. (This menu is outside of the
@@ -361,8 +349,7 @@ already), and again select *Full Screen* from VMware Workstation's
 *View* menu.
 
 
-VirtualBox
-++++++++++
+====== VirtualBox
 
 To enter fullscreen mode, select *Switch to Fullscreen* from
 VirtualBox's *Machine* menu while the appliance is running. (This menu
@@ -373,28 +360,30 @@ your screen, at which point a menu should appear. Click the second icon
 from the right (which resembles two squares).
 
 
-How to Enable Apache
-^^^^^^^^^^^^^^^^^^^^
+==== How to Enable Apache
 
 By default, Apache (httpd) is disabled by default. To enable it,
-link:#_how_to_open_a_terminal[open a terminal] and execute:
+link:#how_to_open_a_terminal[open a terminal] and execute:
 
-`sudo chkconfig httpd on` +
-`sudo service httpd start`
+[source,bash]
+----
+sudo chkconfig httpd on
+sudo service httpd start
+----
 
-
-How to Enable MySQL
-^^^^^^^^^^^^^^^^^^^
+==== How to Enable MySQL
 
 By default, MySQL (mysqld) is disabled by default. To enable it,
-link:#_how_to_open_a_terminal[open a terminal] and execute:
+link:#how_to_open_a_terminal[open a terminal] and execute:
 
-`sudo chkconfig mysqld on` +
-`sudo service mysqld start`
+[source,bash]
+----
+sudo chkconfig mysqld on
+sudo service mysqld start
+----
 
 
-How to Use phpMyAdmin
-^^^^^^^^^^^^^^^^^^^^^
+==== How to Use phpMyAdmin
 
 You can access phpMyAdmin in either of these ways:
 
@@ -409,13 +398,12 @@ No matter the approach you take, log in as *jharvard* with a password of
 *crimson* if prompted.
 
 
-How to Restore Snapshots
-^^^^^^^^^^^^^^^^^^^^^^^^
+==== How to Restore Snapshots
 
 Every 10 minutes, the appliance take "snapshots" of source code in
 `/home` just in case you accidentally delete something. You can also
 mitigate accidental deletions by
-link:#_how_to_synchronize_files_with_dropbox[synchronizing with Dropbox]
+link:#how_to_synchronize_files_with_dropbox[synchronizing with Dropbox]
 so that you can restore files at https://www.dropbox.com/[dropbox.com].
 
 Suppose that you just deleted `~/hello.c`. Odds are you'll find it in
@@ -428,7 +416,7 @@ or with
 
 `cp /.snapshots/minutely.1/home/jharvard/hello.c ~`
 
-in a link:#_how_to_open_a_terminal[terminal]. If you need to recover an
+in a link:#how_to_open_a_terminal[terminal]. If you need to recover an
 earlier version, you can go further back in time via `minutely.2`,
 `minutely.3`, or `minutely.4`. If you'd instead like to go back an hour
 or so, you can start with `hourly.0`, followed by `hourly.1`,
@@ -511,6 +499,7 @@ corner and select *Preferences...*.
 5.  Click *Update*.
 
 
+[[how_transfer_files_between_appliance_and_your_computer]]
 How to Transfer Files between Appliance and Your Computer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -660,7 +649,7 @@ besides your own, on which the appliance is running) to:
 
 * access phpMyAdmin
 * access Webmin
-* link:#_how_to_transfer_files_between_appliance_and_your_computer[mount
+* link:#how_to_transfer_files_between_appliance_and_your_computer[mount
 John Harvard's home directory] in a window on your desktop
 
 You will be able to:
@@ -672,7 +661,7 @@ Unfortunately, odds are `eth2` will not work on Harvard's campus because
 of Harvard's firewall.
 
 *Before activating `eth2`, you should first
-link:#_how_to_change_password[change John Harvard's password] to
+link:#how_to_change_password[change John Harvard's password] to
 something only you know for security's sake.*
 
 To enable `eth2` temporarily, link:#_how_to_open_a_terminal[open a
@@ -806,6 +795,7 @@ image:Exit.png[Exit.png,title="image"] in the appliance's bottom-right
 corner, then click *Log Out*.
 
 
+[[how_to_restart_appliance]]
 How to Restart Appliance
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -813,7 +803,7 @@ You can restart the appliance in either of these ways:
 
 * Click image:Exit.png[Exit.png,title="image"] in the appliance's
 bottom-right corner, then click *Restart*.
-* link:#_how_to_open_a_terminal[Open a terminal] and execute the below,
+* link:#how_to_open_a_terminal[Open a terminal] and execute the below,
 inputting your password if prompted:
 +
 ------
@@ -828,7 +818,7 @@ You can shut down the appliance in either of these ways:
 
 * Click image:Exit.png[Exit.png,title="image"] in the appliance's
 bottom-right corner, then click *Shut Down*.
-* link:#_how_to_open_a_terminal[Open a terminal] and execute the below,
+* link:#how_to_open_a_terminal[Open a terminal] and execute the below,
 inputting your password if prompted:
 +
 -------------
@@ -843,7 +833,7 @@ If your own computer sits behind an HTTP proxy server, you might need to
 configure the appliance to route HTTP traffic through that proxy as
 well. Here's how.
 
-1.  link:#_how_to_open_a_terminal[Open a terminal] and execute the below:
+1.  link:#how_to_open_a_terminal[Open a terminal] and execute the below:
 +
 ----------------------------------
 sudo gedit /etc/profile.d/proxy.sh
@@ -863,19 +853,19 @@ sudo chmod 644 /etc/profile.d/proxy.sh
 --------------------------------------
 +
 in the terminal.
-5.  link:#_how_to_restart_appliance[Restart the appliance].
+5.  link:#how_to_restart_appliance[Restart the appliance].
 
 
 How to Run Programs from Lectures
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-See link:Fall_2012#Lectures[Fall 2012's HOWTO].
+See link:../Fall_2012[Fall 2012's HOWTO].
 
 
 How to Do Problem Sets
 ~~~~~~~~~~~~~~~~~~~~~~
 
-See link:Fall_2012#Problem_Sets[Fall 2012's HOWTO].
+See link:../Fall_2012[Fall 2012's HOWTO].
 
 
 Accessibility
@@ -902,9 +892,9 @@ But Orca does not work with:
 
 However, if you have a screen reader installed on your own computer, you
 needn't rely on Orca alone. Instead, you can leverage your own screen
-reader for navigation by link:#_how_to_ssh_to_appliance[SSHing to the
+reader for navigation by link:#how_to_ssh_to_appliance[SSHing to the
 appliance] from your computer and by
-link:#_how_to_transfer_files_between_appliance_and_your_computer[mounting
+link:#how_to_transfer_files_between_appliance_and_your_computer[mounting
 John Harvard's home directory] on your own computer.
 
 *If you have suggestions on how to improve the appliance's
@@ -918,7 +908,7 @@ Forget a password?
 I changed and forgot John Harvard's password
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1.  Start (or link:#_how_to_restart_appliance[restart]) the appliance.
+1.  Start (or link:#how_to_restart_appliance[restart]) the appliance.
 2.  As soon as the appliance starts to boot, click inside of its window
 (again and again, if need be), until your cursor is "captured" (i.e.,
 disappears).
@@ -951,7 +941,7 @@ I forgot John Harvard's MySQL password
 
 John Harvard's password for MySQL is *crimson* by default. But if you
 changed either to something you do not remember, you can change both
-back to *crimson* by link:#_how_to_open_a_terminal[opening a terminal]
+back to *crimson* by link:#how_to_open_a_terminal[opening a terminal]
 and executing the below:
 
 `sudo yum -y reinstall appliance50`
@@ -960,15 +950,16 @@ That command will restore the appliance to "factory defaults." It will
 not delete any code that you've written.
 
 
+[[Changelog]]
 Changelog
 ---------
 
-* link:CS50 Appliance 1.4#Changelog[1.4]
-* link:CS50 Appliance 2.0#Changelog[2.0]
-* link:CS50 Appliance 2.1#Changelog[2.1]
-* link:CS50 Appliance 2.2#Changelog[2.2]
-* link:CS50 Appliance 2.3#Changelog[2.3]
-* link:CS50 Appliance 3#Changelog[3]
+* link:../1.4#Changelog[1.4]
+* link:../2.0#Changelog[2.0]
+* link:../2.1#Changelog[2.1]
+* link:../2.2#Changelog[2.2]
+* link:../2.3#Changelog[2.3]
+* link:../3#Changelog[3]
 * 17-0
 ** Upgraded to Fedora 17.
 ** Removed proftpd as unnecessary.
@@ -1055,5 +1046,3 @@ including, but not limited to:
 * Rory O'Reilly
 * Sergio Prado
 * Shaun Gibson
-
-Category:HOWTO

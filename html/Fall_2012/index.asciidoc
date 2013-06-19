@@ -1,5 +1,5 @@
 ---
-tags: []
+tags: [HOWTO]
 title: Fall 2012
 ---
 
@@ -9,31 +9,38 @@ below.
 
 To copy, say, Monday's source code from Week 1 into John Harvard's home
 directory in the CS50 Appliance,
-link:Appliance#How_to_Open_a_Terminal[open a terminal] and execute:
+link:../appliance/17#how_to_open_a_terminal[open a terminal] and execute:
 
-`wget `http://cdn.cs50.net/2012/fall/lectures/1/src1m.zip[`http://cdn.cs50.net/2012/fall/lectures/1/src1m.zip`] +
-`unzip src1m.zip`
+[source,bash]
+----
+wget `http://cdn.cs50.net/2012/fall/lectures/1/src1m.zip[`http://cdn.cs50.net/2012/fall/lectures/1/src1m.zip`]
+unzip src1m.zip
+----
 
 Notice how `1m` denotes the week and day, respectively. You can then
 compile and run, say, `hello1.c`, as follows:
 
-`cd ~/src1/` +
-`make math1` +
-`./math1`
+[source,bash]
+----
+cd ~/src1/
+make math1
+./math1
+----
 
 Similarly can you compile and run other programs in `~/src1m`.
 
 To copy, say, Wednesday's source code from Week 1 into John Harvard's
 home directory in the CS50 Appliance,
-link:Appliance#How_to_Open_a_Terminal[open a terminal] and execute:
+link:../appliance/17#how_to_open_a_terminal[open a terminal] and execute:
 
-`wget `http://cdn.cs50.net/2012/fall/lectures/1/src1w.zip[`http://cdn.cs50.net/2012/fall/lectures/1/src1w.zip`] +
-`unzip src1w.zip`
+[source,bash]
+----
+wget `http://cdn.cs50.net/2012/fall/lectures/1/src1w.zip[`http://cdn.cs50.net/2012/fall/lectures/1/src1w.zip`]
+unzip src1w.zip
+----
 
 Notice again how `1w` denotes the week and day, respectively.
 
 To copy future weeks' source code into John Harvard's home directory,
 simply download (via `wget`) those weeks' URLs similarly. They all
 follow this same naming pattern.
-
-Category:HOWTO

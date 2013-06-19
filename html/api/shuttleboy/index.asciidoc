@@ -677,30 +677,7 @@ or later on 2 December 2009:
 ** http://shuttleboy.cs50.net/api/1.2/trips?a=Quad&b=Stadium&sdt=2009-12-02T12:00:00&edt=2009-12-04T12:00:00&output=xml
 
 
-See Also
---------
-
-* link:Neat_Tricks#Parsing_CSV[Parsing CSV]
-* link:Neat_Tricks#Parsing_Dates.2FTimes[Parsing Dates/Times]
-* link:Neat_Tricks#Parsing_JSON[Parsing JSON]
-* link:Neat_Tricks#Parsing_RSS[Parsing RSS]
-* link:Neat_Tricks#Unserializing_PHP[Unserializing PHP]
-
-
-Related APIs
-------------
-
-* link:HarvardCourses API[HarvardCourses API]
-* link:HarvardEnergy API[HarvardEnergy API]
-* link:HarvardEvents API[HarvardEvents API]
-* link:HarvardFood API[HarvardFood API]
-* link:HarvardMaps API[HarvardMaps API]
-* link:HarvardNews API[HarvardNews API]
-* link:HarvardTweets API[HarvardTweets API]
-
-
-External Links
---------------
+== External Links
 
 * http://en.wikipedia.org/wiki/Comma-separated_values[Comma-separated
 values]
@@ -712,8 +689,7 @@ values]
 * http://en.wikipedia.org/wiki/XML[XML]
 
 
-Changelog
----------
+== Changelog
 
 * http://wiki.cs50.net.php?title=Shuttleboy_API&oldid=1006[1.0]
 * http://wiki.cs50.net.php?title=Shuttleboy_API&oldid=1915[1.1]

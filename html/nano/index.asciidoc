@@ -83,10 +83,10 @@ program for the first time.
 When you open nano, you can see various commands that nano allows along
 the bottom of the screen (click image above to zoom in).
 
-For example, as we can see at the bottom of the screen, typing ^X exits
+For example, as we can see at the bottom of the screen, typing \^X exits
 nano (^ means the control key, and thus to exit you type Ctrl+X). Nano
 is *not* case-sensitive with respect to the control commands. Therefore,
-typing ^x or ^X both have the same effect - exiting the program. If
+typing \^x or ^X both have the same effect - exiting the program. If
 changes have been made to the file, you will then be asked whether you
 want to save the modified buffer, which is simply asking whether you
 wish to save the changes. Typing "n" results in quitting the program
@@ -105,12 +105,12 @@ Other useful commands include:
 |^W |Search for an inputted string in your program. To search for the
 next occurrence of the string, press ^W and enter again.
 
-|^W^T |(Press Ctrl+W then Ctrl+T) Goes to the entered line number. This
+|\^W^T |(Press Ctrl+W then Ctrl+T) Goes to the entered line number. This
 is useful when the compiler tells you that there is an error on, say,
 line 654. You can simply skip to line 654 instead of having to scroll
 down.
 
-|^W^R |Replaces instances of the first string inputted with the second.
+|\^W^R |Replaces instances of the first string inputted with the second.
 For example, if you choose a bad variable name such as "x", you can
 easily replace them with this function with a better name such as
 "dollars". Be careful when using replace all, however: if you have a
@@ -121,14 +121,14 @@ well). Since all "extra_coins" variables would be renamed this, the
 program would still work, but it certainly isn't a variable name one
 should use.
 
-|^K and ^U |^K cuts a full line of text, whereas ^U pastes the line
-back. You can cut multiple lines in a row by continuously pressing ^K
-and paste them all with ^U multiple times, but if you hit ^K multiple
+|\^K and ^U |\^K cuts a full line of text, whereas ^U pastes the line
+back. You can cut multiple lines in a row by continuously pressing \^K
+and paste them all with ^U multiple times, but if you hit \^K multiple
 times, then press any other key (even moving the cursor), then use ^K
 again and try to paste, only that last cut line will be pasted, and the
 other lines will be lost.
 
-|^Y and ^V |Scroll up and down the page, respectively. Much faster for
+|\^Y and ^V |Scroll up and down the page, respectively. Much faster for
 longer files than simply using the up and down arrow keys.
 |=======================================================================
 

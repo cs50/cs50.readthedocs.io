@@ -1,13 +1,14 @@
 ---
-tags: []
+tags: [HOWTO]
 title: VirtualBox
 ---
 
-Here's how to install the link:CS50_Appliance_17[CS50 Appliance] using
-VirtualBox for link:#_mac_os[Mac OS], link:#Windows[Windows], and
-link:#_linux[Linux].
+Here's how to install the link:..[CS50 Appliance] using
+VirtualBox for link:#mac_os[Mac OS], link:#windows[Windows], and
+link:#linux[Linux].
 
 
+[[mac_os]]
 Mac OS
 ------
 
@@ -181,6 +182,7 @@ gone.
 Source: http://forums.virtualbox.org/viewtopic.php?f=7&t=39179
 
 
+[[windows]]
 Windows
 -------
 
@@ -276,7 +278,7 @@ a few seconds!
 
 If you ultimately find that the link:CS50_Appliance_17[CS50 Appliance]
 runs unbearably slow within VirtualBox, you might need to enable
-link:Hardware Virtualization[hardware virtualization] on your PC.
+link:../Hardware_Virtualization[hardware virtualization] on your PC.
 
 
 Troubleshooting
@@ -356,10 +358,8 @@ yourself if necessary.
 gone.
 
 
-The installer has encountered an unexpected error installing this
-package.  This may indicate a problem with this package.  The error code
-is 2869.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[the_installer_has_encountered_an_unexpected_error_installing_this_package..c2.a0_this_may_indicate_a_problem_with_this_package..c2.a0_the_error_code_is_2869.]]
+==== The installer has encountered an unexpected error installing this package.  This may indicate a problem with this package.  The error code is 2869.
 
 This problem generally indicates that VirtualBox's installer wasn't run
 as an "administrator." To resolve this problem:
@@ -384,7 +384,7 @@ which are checked. If *VirtualBox Bridged Networking Driver* appears in
 the list, single-click it to highlight it, then click *Uninstall*.
 5.  If prompted if you are *sure you want to uninstall*, click *Yes*.
 6.  Click *Close*.
-7.  Proceed to reinstall VirtualBox per link:#_windows[the directions
+7.  Proceed to reinstall VirtualBox per link:#windows[the directions
 above]. *Be sure to run the installer as an administrator.*
 
 Let sysadmins@cs50.net know if VirtualBox's installer still fails,
@@ -400,7 +400,7 @@ encountered an unexpected error installing this package.  This may
 indicate a problem with this package.  The error code is 2869.*
 
 See
-link:#_the_installer_has_encountered_an_unexpected_error_installing_this_package..c2.a0_this_may_indicate_a_problem_with_this_package..c2.a0_the_error_code_is_2869.[troubleshooting
+link:#the_installer_has_encountered_an_unexpected_error_installing_this_package..c2.a0_this_may_indicate_a_problem_with_this_package..c2.a0_the_error_code_is_2869.[troubleshooting
 tips for that other error].
 
 
@@ -413,10 +413,11 @@ encountered an unexpected error installing this package.  This may
 indicate a problem with this package.  The error code is 2869.*
 
 See
-link:#_the_installer_has_encountered_an_unexpected_error_installing_this_package..c2.a0_this_may_indicate_a_problem_with_this_package..c2.a0_the_error_code_is_2869.[troubleshooting
+link:#the_installer_has_encountered_an_unexpected_error_installing_this_package..c2.a0_this_may_indicate_a_problem_with_this_package..c2.a0_the_error_code_is_2869.[troubleshooting
 tips for that other error].
 
 
+[[linux]]
 Linux
 -----
 
@@ -459,7 +460,7 @@ the window contains precisely these values:
 * *Upper Address Bound:* 192.168.56.254
 11. Click *OK*.
 12. Click *OK*.
-13. Download a ZIP file of the link:CS50_Appliance_17[CS50 Appliance] at
+13. Download a ZIP file of the link:..[CS50 Appliance] at
 http://mirror.cs50.net/appliance50/17/i386/appliance50-17-9-ovf.zip
 (http://mirror.cs50.net.s3.amazonaws.com/appliance50/17/i386/appliance50-17-9-ovf.zip?torrent[torrent]).
 That ZIP file is over 1GB in size, so it might take a while to download.
@@ -483,9 +484,9 @@ start the appliance. If you see a black-and-white screen entitled *GNU
 GRUB*, no need to do anything; the appliance will continue to boot after
 a few seconds!
 
-If you ultimately find that the link:CS50_Appliance_17[CS50 Appliance]
+If you ultimately find that the link:..[CS50 Appliance]
 runs unbearably slow within VirtualBox, you might need to enable
-link:Hardware Virtualization[hardware virtualization] on your PC.
+link:Hardware_Virtualization[hardware virtualization] on your PC.
 
 
 Troubleshooting
@@ -497,7 +498,7 @@ Nonexistent host networking interface, name '' (VERR_INTERNAL_ERROR)
 
 For some reason, VirtualBox doesn't always come with a "host-only
 adapter" configured. (A "host-only adapter" lets you connect to the
-link:CS50_Appliance_17[CS50 Appliance] via HTTP, SSH, and the like.) To
+link:..[CS50 Appliance] via HTTP, SSH, and the like.) To
 resolve this problem:
 
 1.  Launch VirtualBox. (If VirtualBox is already running, shut down any
@@ -512,19 +513,17 @@ right of that box, and *VirtualBox Host-Only Ethernet Adapter* should
 then appear in the box.
 5.  Click *OK*.
 6.  Single-click whichever virtual machine originally triggered the
-error (e.g., the link:CS50_Appliance_17[CS50 Appliance]), then click
+error (e.g., the link:..[CS50 Appliance]), then click
 *Settings*.
 7.  Click *Network*.
 8.  Click each of *Adapter 1*, *Adapter 2*, *Adapter 3*, and *Adapter
 4*. If any of them has both *Enable Network Adapter* checked and a value
 of *Host-only Adapter* for *Attached to* (as should the
-link:CS50_Appliance_17[CS50 Appliance] for *Adapter 2*), ensure that the
+link:..[CS50 Appliance] for *Adapter 2*), ensure that the
 adapter also has a value of *VirtualBox Host-Only Ethernet Adapter* now
 for *Name*, selecting it yourself from the drop-down menu next to *Name*
 yourself if necessary.
 9.  Click *OK*.
 10. Start whichever virtual machine originally triggered the problem
-(e.g., the link:CS50_Appliance_17[CS50 Appliance]); it should now be
+(e.g., the link:..[CS50 Appliance]); it should now be
 gone.
-
-Category:HOWTO

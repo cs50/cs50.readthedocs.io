@@ -156,9 +156,12 @@ Review the changes you've made:
 
 You should see output like the below:
 
-`# file: home/alice/public_html/project` +
-`# owner: alice` +
-`# group: student` +
-`user::rwx` +
-`group::---` +
-`other::---`
+[source,bash]
+----
+# file: home/alice/public_html/project
+# owner: alice
+# group: student
+user::rwx
+group::---
+other::---
+----

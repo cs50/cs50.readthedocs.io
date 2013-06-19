@@ -27,8 +27,7 @@ CSS-based website at
 `http://www.people.fas.harvard.edu/~username/`, where
 `username` is your own username; simply create a `public_html` directory
 inside of your home directory and `chmod` both `711`. Note that PHP and
-MySQL are not available. And link:../Virtual_Host[vhosts] are not
-supported, so you can't map a domain name to your FAS account.
+MySQL are not available.
 * *hcs.harvard.edu*. Managed by the http://www.hcs.harvard.edu/[Harvard
 Computer Society] (HCS), `hcs.harvard.edu` is a cluster of Linux servers
 on campus on which many student groups' websites are hosted. To sign up
@@ -121,236 +120,145 @@ We used Google's
 http://code.google.com/apis/visualization/documentation/gallery/orgchart.html[Organizational
 Chart] API to make these visualizations. (You can too!)
 
-// CS50
+++++
+<html>
 
-Introduction to Computer Science I
+<style type="text/css">
+<!--
 
-"}, "", "Introduction to the intellectual enterprises of computer
-science and the art of programming. This course teaches students how to
-think algorithmically and solve problems efficiently. Topics include
-abstraction, encapsulation, data structures, databases, memory
-management, software development, virtualization, and websites.
-Languages include C, PHP, and JavaScript plus SQL, CSS, and XHTML.
-Problem sets inspired by real-world domains of biology, cryptography,
-finance, forensics, and gaming. Designed for concentrators and
-non-concentrators alike, with or without prior programming
-experience."], [\{v: "CS20", f: "
+td.google-visualization-orgchart-node
+{
+    cursor: pointer;
+    cursor: hand;
+}
 
-CS20
+tr.google-visualization-orgchart-noderow-large td.google-visualization-orgchart-linenode
+{
+    border-top: 2px #fff solid;
+}
 
-Discrete Mathematics for Computer Science
+-->
+</style>
 
-"}, "CS50", "Widely applicable mathematical tools for computer science,
-including topics from logic, set theory, combinatorics, number theory,
-probability theory, and graph theory. Practice in reasoning formally and
-proving theorems."], [\{v: "CS51", f: "
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+// <![CDATA[
 
-CS51
+google.load("visualization", "1", {packages:["orgchart"]});
+google.setOnLoadCallback(function() {
 
-Introduction to Computer Science II"}, "CS50", "Abstraction and design
-in computation. Topics include: Functional and object-oriented styles of
-programming; software engineering in the small; models of computation.
-Goal: understanding how to design large programs to make them readable,
-maintainable, efficient, and elegant. Exercises in ML and Java."], [\{v:
-"CS105", f: "CS105
+var charts = {};
+var rows = {fall: [], spring: []};
+var tables = {};
+var urls = {};
 
-Privacy and Technology"}, "CS50", "What is privacy, and how is it
-affected by recent developments in computer technology? Course
-critically examines popular concepts of privacy and uses a rigorous
-analysis of technologies to understand the policy and ethical issues at
-play. Case studies: RFID, database anonymity, research ethics,
-wiretapping. Course relies on some technical material, but is open and
-accessible to all students, especially those with interest in economics,
-engineering, political science, computer science, sociology, biology,
-law, government, philosophy."], [\{v: "CS124", f: "
-
-CS124
-
-Data Structures and Algorithms
-
-"}, "CS50", "Design and analysis of efficient algorithms and data
-structures. Algorithm design methods, graph algorithms, approximation
-algorithms, and randomized algorithms are covered."], [\{v: "CS164", f:
-"
-
-CS164
-
-Mobile Software Engineering
-
-"}, "CS50", "Introduction to principles of software engineering for
-mobile devices and best practices, including code reviews, source
-control, and unit tests. Topics include Ajax, encapsulation, event
-handling, HTTP, memory management, MVC, object-oriented design, and user
-experience. Languages include HTML5, JavaScript, and Objective-C.
-Projects include mobile web apps and native iOS apps."], [\{v: "CS171",
-f: "
-
-CS171
-
-Visualization
-
-"}, "CS50", "Introduction to key design principles and techniques for
-visualizing data. Covers design practices, data and image models, visual
-perception, interaction principles, tools from various fields, and
-applications. Introduces programming of interactive visualizations."],
-[\{v: "CS179", f: "
-
-CS179
-
-Design of Usable Interactive Systems
-
-"}, "CS50", "Usability and design as keys to successful technology.
-Covers user observation techniques, needs assessment, low and high
-fidelity prototyping, usability testing methods, as well as theory of
-human perception and performance, anddesign best practices. Focuses on
-understanding and applying the lessons of human interaction to the
-design of usable systems; will also look at lessons to be learned from
-less usable systems. The course includes several small and one large
-project."], [\{v: "CS201", f: "
-
-CS201
-
-Cyberlaw and Intellectual Property: Advanced Problem Solving Workshop
-
-"}, "CS50", "Students in this experimental capstone course will work in
-teams to solve a series of hard problems-based cases related to cyberlaw
-and intellectual property."] ];
+rows["spring"] = [
+ [{v: "CS50", f: "<div>CS50</div><div style='font-size: smaller;'>Introduction&nbsp;to&nbsp;Computer&nbsp;Science&nbsp;I</div>"}, "", "Introduction to the intellectual enterprises of computer science and the art of programming. This course teaches students how to think algorithmically and solve problems efficiently. Topics include abstraction, encapsulation, data structures, databases, memory management, software development, virtualization, and websites. Languages include C, PHP, and JavaScript plus SQL, CSS, and XHTML. Problem sets inspired by real-world domains of biology, cryptography, finance, forensics, and gaming. Designed for concentrators and non-concentrators alike, with or without prior programming experience."],
+ [{v: "CS20", f: "<div>CS20</div><div style='font-size: smaller;' >Discrete Mathematics for Computer Science</div>"}, "CS50", "Widely applicable mathematical tools for computer science, including topics from logic, set theory, combinatorics, number theory, probability theory, and graph theory. Practice in reasoning formally and proving theorems."],
+ [{v: "CS51", f: "<div>CS51</div><div style='font-size: smaller;' >Introduction to Computer Science II"}, "CS50", "Abstraction and design in computation. Topics include: Functional and object-oriented styles of programming; software engineering in the small; models of computation. Goal: understanding how to design large programs to make them readable, maintainable, efficient, and elegant. Exercises in ML and Java."],
+ [{v: "CS105", f: "CS105<div style='font-size: smaller;' > Privacy and Technology"}, "CS50", "What is privacy, and how is it affected by recent developments in computer technology? Course critically examines popular concepts of privacy and uses a rigorous analysis of technologies to understand the policy and ethical issues at play. Case studies: RFID, database anonymity, research ethics, wiretapping. Course relies on some technical material, but is open and accessible to all students, especially those with interest in economics, engineering, political science, computer science, sociology, biology, law, government, philosophy."],
+ [{v: "CS124", f: "<div>CS124</div><div style='font-size: smaller;' >Data Structures and Algorithms</div>"}, "CS50", "Design and analysis of efficient algorithms and data structures. Algorithm design methods, graph algorithms, approximation algorithms, and randomized algorithms are covered."],
+ [{v: "CS164", f: "<div>CS164</div><div style='font-size: smaller;' >Mobile Software Engineering</div>"}, "CS50", "Introduction to principles of software engineering for mobile devices and best practices, including code reviews, source control, and unit tests.  Topics include Ajax, encapsulation, event handling, HTTP, memory management, MVC, object-oriented design, and user experience.  Languages include HTML5, JavaScript, and Objective-C.  Projects include mobile web apps and native iOS apps."],
+ [{v: "CS171", f: "<div>CS171</div><div style='font-size: smaller;' >Visualization</div>"}, "CS50", "Introduction to key design principles and techniques for visualizing data. Covers design practices, data and image models, visual perception, interaction principles, tools from various fields, and applications. Introduces programming of interactive visualizations."],
+ [{v: "CS179", f: "<div>CS179</div><div style='font-size: smaller;' >Design of Usable Interactive Systems</div>"}, "CS50", "Usability and design as keys to successful technology. Covers user observation techniques, needs assessment, low and high fidelity prototyping, usability testing methods, as well as theory of human perception and performance, anddesign best practices. Focuses on understanding and applying the lessons of human interaction to the design of usable systems; will also look at lessons to be learned from less usable systems. The course includes several small and one large project."],
+ [{v: "CS201", f: "<div>CS201</div><div style='font-size: smaller;' >Cyberlaw and Intellectual Property: Advanced Problem Solving Workshop</div>"}, "CS50", "Students in this experimental capstone course will work in teams to solve a series of hard problems-based cases related to cyberlaw and intellectual property."]
+];
 
 urls["spring"] = [
-"http://courses.cs50.net/?school=FAS%26number=COMPSCI+50",
-"http://courses.cs50.net/?school=FAS%26number=COMPSCI+20",
-"http://courses.cs50.net/?school=FAS%26number=COMPSCI+51",
-"http://courses.cs50.net/?school=FAS%26number=COMPSCI+105",
-"http://courses.cs50.net/?school=FAS%26number=COMPSCI+124",
-"http://courses.cs50.net/?school=FAS%26number=COMPSCI+164",
-"http://courses.cs50.net/?school=FAS%26number=COMPSCI+171",
-"http://courses.cs50.net/?school=FAS%26number=COMPSCI+179",
-"http://courses.cs50.net/?school=FAS%26number=COMPSCI+201" ];
+ "http://courses.cs50.net/?school=FAS%26number=COMPSCI+50",
+ "http://courses.cs50.net/?school=FAS%26number=COMPSCI+20",
+ "http://courses.cs50.net/?school=FAS%26number=COMPSCI+51",
+ "http://courses.cs50.net/?school=FAS%26number=COMPSCI+105",
+ "http://courses.cs50.net/?school=FAS%26number=COMPSCI+124",
+ "http://courses.cs50.net/?school=FAS%26number=COMPSCI+164",
+ "http://courses.cs50.net/?school=FAS%26number=COMPSCI+171",
+ "http://courses.cs50.net/?school=FAS%26number=COMPSCI+179",
+ "http://courses.cs50.net/?school=FAS%26number=COMPSCI+201"
+];
 
-rows["fall"] = [ [\{v: "CS50", f: "
 
-CS50
-
-Introduction to Computer Science I
-
-"}, "", "Introduction to the intellectual enterprises of computer
-science and the art of programming. This course teaches students how to
-think algorithmically and solve problems efficiently. Topics include
-abstraction, encapsulation, data structures, databases, memory
-management, software development, virtualization, and websites.
-Languages include C, PHP, and JavaScript plus SQL, CSS, and XHTML.
-Problem sets inspired by real-world domains of biology, cryptography,
-finance, forensics, and gaming. Designed for concentrators and
-non-concentrators alike, with or without prior programming
-experience."], [\{v: "CS61", f: "
-
-CS61
-
-Systems Programming and Machine Organization"}, "CS50", "Fundamentals of
-computer systems programming, machine organization, and performance
-tuning. This course provides a solid background in systems programming
-and a deep understanding of low-level machine organization and design.
-Topics include C and assembly language programming, program
-optimization, memory hierarchy and caching, virtual memory and dynamic
-memory management, concurrency, threads, and synchronization."], [\{v:
-"CS121", f: "
-
-CS121
-
-Introduction to Formal Systems and Computation
-
-"}, "CS50", "General introduction to formal systems and the theory of
-computation, teaching how to reason precisely about computation and
-prove mathematical theorems about its capabilities and limitations.
-Finite automata, Turing machines, formal languages, computability,
-uncomputability, computational complexity, and the P vs. NP question."],
-[\{v: "CS141", f: "
-
-CS141
-
-Computing Hardware
-
-"}, "CS50", "Introduction to the design, structure, and operation of
-digital computers; logic circuits and digital electronics; computer
-arithmetic; computer architecture; and machine language programming.
-Consideration of the design interactions between hardware and software
-systems."], [\{v: "CS203hf", f: "
-
-CS203hf
-
-A Better Internet: Policy and Practice
-
-"}, "CS50", "Students will propose ideas for a better Internet, test
-them with stakeholders, prototype them for industries and organizations,
-and attack difficult implementation problems in a problem-solving
-capstone. Half course through the year, meeting in January at Stanford
-University."], [\{v: "CS205", f: "
-
-CS205
-
-Computing Foundations for Computational Science
-
-"}, "CS50", "An applications course highlighting the use of computers in
-solving scientific problems. Students will be exposed to fundamental
-computer science concepts such as computer architectures, data
-structures, algorithms, and parallel computing. Fundamentals of
-scientific computing including abstract thinking, algorithmic
-development, and assessment of computational approaches. Students will
-learn to use open source tools and libraries and apply them to data
-analysis, modeling, and visualization of real scientific problems.
-Emphasizes parallel programming and \"parallel thinking.\""] ];
+rows["fall"] = [
+ [{v: "CS50", f: "<div>CS50</div><div style='font-size: smaller;'>Introduction&nbsp;to&nbsp;Computer&nbsp;Science&nbsp;I</div>"}, "", "Introduction to the intellectual enterprises of computer science and the art of programming. This course teaches students how to think algorithmically and solve problems efficiently. Topics include abstraction, encapsulation, data structures, databases, memory management, software development, virtualization, and websites. Languages include C, PHP, and JavaScript plus SQL, CSS, and XHTML. Problem sets inspired by real-world domains of biology, cryptography, finance, forensics, and gaming. Designed for concentrators and non-concentrators alike, with or without prior programming experience."],
+ [{v: "CS61", f: "<div>CS61</div><div style='font-size: smaller;' >Systems Programming and Machine Organization"}, "CS50", "Fundamentals of computer systems programming, machine organization, and performance tuning. This course provides a solid background in systems programming and a deep understanding of low-level machine organization and design. Topics include C and assembly language programming, program optimization, memory hierarchy and caching, virtual memory and dynamic memory management, concurrency, threads, and synchronization."],
+ [{v: "CS121", f: "<div>CS121</div><div style='font-size: smaller;' >Introduction to Formal Systems and Computation</div>"}, "CS50", "General introduction to formal systems and the theory of computation, teaching how to reason precisely about computation and prove mathematical theorems about its capabilities and limitations. Finite automata, Turing machines, formal languages, computability, uncomputability, computational complexity, and the P vs. NP question."],
+ [{v: "CS141", f: "<div>CS141</div><div style='font-size: smaller;' >Computing Hardware</div>"}, "CS50", "Introduction to the design, structure, and operation of digital computers; logic circuits and digital electronics; computer arithmetic; computer architecture; and machine language programming. Consideration of the design interactions between hardware and software systems."],
+ [{v: "CS203hf", f: "<div>CS203hf</div><div style='font-size: smaller;' >A Better Internet: Policy and Practice</div>"}, "CS50", "Students will propose ideas for a better Internet, test them with stakeholders, prototype them for industries and organizations, and attack difficult implementation problems in a problem-solving capstone. Half course through the year, meeting in January at Stanford University."],
+ [{v: "CS205", f: "<div>CS205</div><div style='font-size: smaller;' >Computing Foundations for Computational Science</div>"}, "CS50", "An applications course highlighting the use of computers in solving scientific problems. Students will be exposed to fundamental computer science concepts such as computer architectures, data structures, algorithms, and parallel computing. Fundamentals of scientific computing including abstract thinking, algorithmic development, and assessment of computational approaches. Students will learn to use open source tools and libraries and apply them to data analysis, modeling, and visualization of real scientific problems. Emphasizes parallel programming and \"parallel thinking.\""]
+];
 
 urls["fall"] = [
-"http://courses.cs50.net/?school=FAS%26number=COMPSCI+50",
-"http://courses.cs50.net/?school=FAS%26number=COMPSCI+61",
-"http://courses.cs50.net/?school=FAS%26number=COMPSCI+121",
-"http://courses.cs50.net/?school=FAS%26number=COMPSCI+141",
-"http://courses.cs50.net/?school=FAS%26number=COMPSCI+203hf",
-"http://courses.cs50.net/?school=FAS%26number=COMPSCI+205" ];
+ "http://courses.cs50.net/?school=FAS%26number=COMPSCI+50",
+ "http://courses.cs50.net/?school=FAS%26number=COMPSCI+61",
+ "http://courses.cs50.net/?school=FAS%26number=COMPSCI+121",
+ "http://courses.cs50.net/?school=FAS%26number=COMPSCI+141",
+ "http://courses.cs50.net/?school=FAS%26number=COMPSCI+203hf",
+ "http://courses.cs50.net/?school=FAS%26number=COMPSCI+205"
+];
+
 
 tables["spring"] = new google.visualization.DataTable();
 tables["spring"].addColumn("string", "Course");
 tables["spring"].addColumn("string", "Prerequisite");
 tables["spring"].addColumn("string", "Tooltip");
 tables["spring"].addRows(rows["spring"]);
-tables["spring"].setRowProperty(0, "style", "background: #fff7ae;
-border: 2px solid #e3ca4b;");
+tables["spring"].setRowProperty(0, "style", "background: #fff7ae; border: 2px solid #e3ca4b;");
 
 tables["fall"] = new google.visualization.DataTable();
 tables["fall"].addColumn("string", "Course");
 tables["fall"].addColumn("string", "Prerequisite");
 tables["fall"].addColumn("string", "Tooltip");
-tables["fall"].addRows(rows["fall"]); tables["fall"].setRowProperty(0,
-"style", "background: #fff7ae; border: 2px solid #e3ca4b;");
+tables["fall"].addRows(rows["fall"]);
+tables["fall"].setRowProperty(0, "style", "background: #fff7ae; border: 2px solid #e3ca4b;");
 
-charts["spring"] = new
-google.visualization.OrgChart(document.getElementById("spring"));
-charts["spring"].draw(tables["spring"], \{allowHtml: true,
-selectedNodeClass: " ", size: "large"});
 
-google.visualization.events.addListener(charts["spring"], "select",
-function() \{ var row = charts["spring"].getSelection()[0].row; if
-(urls["spring"][row]) \{ window.open(unescape(urls["spring"][row]),
-"_blank"); } else \{ alert("No website yet!"); } });
+charts["spring"] = new google.visualization.OrgChart(document.getElementById("spring"));
+charts["spring"].draw(tables["spring"], {allowHtml: true, selectedNodeClass: " ", size: "large"});
 
-charts["fall"] = new
-google.visualization.OrgChart(document.getElementById("fall"));
-charts["fall"].draw(tables["fall"], \{allowHtml: true,
-selectedNodeClass: " ", size: "large"});
+google.visualization.events.addListener(charts["spring"], "select", function() {
+    var row = charts["spring"].getSelection()[0].row;
+    if (urls["spring"][row])
+    {
+        window.open(unescape(urls["spring"][row]), "_blank");
+    }
+    else
+    {
+        alert("No website yet!");
+    }
+});
 
-google.visualization.events.addListener(charts["fall"], "select",
-function() \{ var row = charts["fall"].getSelection()[0].row; if
-(urls["fall"][row]) \{ window.open(unescape(urls["fall"][row]),
-"_blank"); } else \{ alert("No website yet!"); } });
+
+charts["fall"] = new google.visualization.OrgChart(document.getElementById("fall"));
+charts["fall"].draw(tables["fall"], {allowHtml: true, selectedNodeClass: " ", size: "large"});
+
+google.visualization.events.addListener(charts["fall"], "select", function() {
+    var row = charts["fall"].getSelection()[0].row;
+    if (urls["fall"][row])
+    {
+        window.open(unescape(urls["fall"][row]), "_blank");
+    }
+    else
+    {
+        alert("No website yet!");
+    }
+});
+
 
 });
 
 // ]]>
+</script>
 
+</html>
+++++
 
 [[spring_courses_you_can_take_after_cs50]]
 === Spring courses you can take after CS50
-
+++++
+<div id="spring"></div>
+++++
 
 [[fall_courses_you_can_take_after_cs50]]
 === Fall courses you can take after CS50
+++++
+<div id="fall"></div>
+++++

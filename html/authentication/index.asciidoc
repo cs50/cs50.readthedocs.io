@@ -126,8 +126,8 @@ thorough, you could OR together even more of Harvard's IPs, but the four
 prefixes above (140.247, 128.103, 10.249, and 10.250) are the most
 common.
 
-On the link:../deprecated/cloud[CS50 Cloud], though, `$_SERVER["REMOTE_ADDR"]`
-usually contains the IP address of CS50's
+On some servers, though, `$_SERVER["REMOTE_ADDR"]`
+usually contains the IP address of the server's
 http://en.wikipedia.org/wiki/Load_balancing_(computing)[load balancer],
 which is always on campus and whose IP address is always of the form
 10.50.*.* (which is CS50's own private

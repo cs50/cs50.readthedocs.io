@@ -1,5 +1,5 @@
 ---
-tags: []
+tags: [HOWTO]
 title: Screen Scraping
 ---
 
@@ -11,11 +11,10 @@ for you. Always look for data in some machine-readable format (CSV,
 JSON, RSS, etc.) first.
 
 If you must resort to screen scraping, read on for a tutorial that
-discusses the link:HarvardFood API[HarvardFood API]'s implementation.
+discusses the link:../api/food[HarvardFood API]'s implementation.
 
 
-HarvardFood
-~~~~~~~~~~~
+=== HarvardFood
 
 As you probably know, you can find out what's for breakfast, lunch (or
 brunch), or dinner by checking
@@ -47,11 +46,11 @@ lunch, or *2* for dinner. Patterns like these are good because we can
 generate them programmatically.
 
 Now let's take a look at the source code for, say, that last URL (i.e.,
-`<nowiki>http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date=12-2-2009&type=30&meal=2</nowiki>`):
+`http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date=12-2-2009&type=30&meal=2`):
 
 [source,html4strict]
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+----
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -76,37 +75,37 @@ Now let's take a look at the source code for, say, that last URL (i.e.,
             <li><a href="crimson_cash.html" title="" id="cash">Crimson Cash</a></li>
         </ul>
         <div class="clear"></div>
-    </div>  
+    </div>
     <div class="clear"></div>
 <div id="navigation">
     <a href="http://www.dining.harvard.edu/residential_dining/menus.html">
         <img src="images/menus_nutrition/back_to_menu.gif" alt="Back to menus" class="no_hover"  /></a>
     <ul id="nutrition_nav">
-    
+
         <li><a href="http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date=11-26-2009&amp;type=05">
         Thursday, November 26</a></li>
-    
+
         <li><a href="http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date=11-27-2009&amp;type=05">
         Friday, November 27</a></li>
-    
+
         <li><a href="http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date=11-28-2009&amp;type=05">
         Saturday, November 28</a></li>
-    
+
         <li><a href="http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date=11-29-2009&amp;type=05">
         Sunday, November 29</a></li>
-    
+
         <li><a href="http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date=11-30-2009&amp;type=05">
         Monday, November 30</a></li>
-    
+
         <li><a href="http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date=12-1-2009&amp;type=05">
         Tuesday, December 1</a></li>
-    
+
         <li><a href="http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date=12-2-2009&amp;type=05">
         Wednesday, December 2</a></li>
-    
-    </ul>   
+
+    </ul>
     <div id="legend">
-        <img src="images/menus_nutrition/legend.gif" alt="" />  
+        <img src="images/menus_nutrition/legend.gif" alt="" />
     </div>
 </div>
 
@@ -116,32 +115,32 @@ Now let's take a look at the source code for, say, that last URL (i.e.,
             <div class="clear"></div>
             <img src="images/menus_nutrition/title_this_weeks_menu.gif" alt="Daily Offerings" />
         </div>
-        
+
         <div class="item dynamic_content">
-        
+
             <div class="sub_head">
                 <p>
                     Hot Entrees, Starches, Bean/Grain and Vegetables<br />
                     <span class="sub_title">Wednesday, December 2, 2009</span>
                 </p>
             </div>
-            
+
             <p>Select the menu items from below to create an interactive nutritional analysis report. To view the detailed nutritional information or ingredients of an item, click on the item name.</p>
-            <!-- 
+            <!--
                 Count: 3
                     Title: Breakfast Entrees <br><br>
                     Title: Breakfast Entrees <br><br>
                     Title: Lunch Entrees, <br>Starches & Veggies<br>
             -->
-            
+
             <script type="text/javascript">
-                
+
                 function submitForm()
                 {
                     var form = document.getElementById("report_form");
                     form.submit();
                 }
-                
+
                 function clearForm()
                 {
                     var inputs = document.getElementsByTagName("input");
@@ -153,7 +152,7 @@ Now let's take a look at the source code for, say, that last URL (i.e.,
                             inputs[i].checked = false;
                     }
                 }
-                
+
                 function checkChanged(id)
                 {
                     var input = document.getElementById("qty_" + id);
@@ -166,7 +165,7 @@ Now let's take a look at the source code for, say, that last URL (i.e.,
                             input.value = "";
                     }
                 }
-                
+
                 function quantityChanged(id)
                 {
                     var input = document.getElementById("qty_" + id);
@@ -186,29 +185,29 @@ Now let's take a look at the source code for, say, that last URL (i.e.,
                         }
                     }
                 }
-                
+
             </script>
-            <form id="report_form" method="post" 
+            <form id="report_form" method="post"
                 action="http://www.foodpro.huds.harvard.edu/foodpro/report.asp?date=12-2-2009&amp;type=05&amp;meal=2">
                 <div class="table_nav">
                     <span class="left">
-                    
-                        <a 
+
+                        <a
                             href="http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date=12-2-2009&amp;type=05&amp;meal=0">
                             Breakfast</a>
-                        
-                             &nbsp;|&nbsp;  
-                        
-                        <a 
+
+                             &nbsp;|&nbsp;
+
+                        <a
                             href="http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date=12-2-2009&amp;type=05&amp;meal=1">
                             Lunch</a>
-                        
-                             &nbsp;|&nbsp;  
-                        
+
+                             &nbsp;|&nbsp;
+
                         <a class="active"
                             href="http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date=12-2-2009&amp;type=05&amp;meal=2">
                             Dinner</a>
-                        
+
                     </span>
                     <a href="javascript:submitForm();">
                         <img src="images/menus_nutrition/btn_create_report.gif" alt="Create Nutrition Report" class="right borderless" /></a>
@@ -220,7 +219,7 @@ Now let's take a look at the source code for, say, that last URL (i.e.,
                         <th>Portion</th>
                         <th class="last">Qty</th>
                     </tr>
-                    
+
                         <tr class="category">
                             <td colspan="3">TODAY'S SOUP</td>
                         </tr>
@@ -512,7 +511,7 @@ Now let's take a look at the source code for, say, that last URL (i.e.,
 </div>
 </body>
 </html>
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----
 
 Wow, what a mess, eh? Go ahead and view that same source code in
 http://getfirebug.com/[Firebug]'s HTML tab so that everything is
@@ -524,7 +523,7 @@ but so be it.) For clarity, I've indented everything nicely, even though
 the original source code is messier:
 
 [source,html4strict]
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----
 <tr>
   <td class="menu_item">
     <input id="check_508006" name="recipe" value="508006*4" class="check" type="checkbox" onclick="checkChanged('508006')" />
@@ -537,7 +536,7 @@ the original source code is messier:
   <td><span class="portion">4&nbsp;oz</span></td>
   <td class="last"><input id="qty_508006" onblur="quantityChanged('508006');" name="QTY" class="text quantity_box" type="text" /></td>
 </tr>
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----
 
 Okay, interesting. It looks as though *Maple Roasted Butternut Squash*
 is inside of an *a* element, which is inside of a *span*, which is
@@ -575,11 +574,11 @@ Damn it! Despite the page's DOCTYPE, it is not, in fact, valid XHTML.
 (Why do they lie!) You can confirm as much with a PHP program like:
 
 [source,php]
---------------------------------------------------------------------------------------------------------------------
+----
 <?
     simplexml_load_file("http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date=12-2-2009&type=30&meal=2");
 ?>
---------------------------------------------------------------------------------------------------------------------
+----
 
 You should see a whole bunch of warnings. Fortunately, libraries exist
 that can (try to) fix such problems, among them PHP's
@@ -589,33 +588,33 @@ For instance, we can clean up HUDS's "XHTML" with code like the below
 (assuming the library is installed):
 
 [source,php]
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----
 <?
     $tidy = tidy_parse_file("http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp?date=12-2-2009&type=30&meal=2", array("numeric-entities" => true, "output-xhtml" => true));
     $tidy->cleanRepair();
     $xhtml = (string) $tidy;
 ?>
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----
 
 We can then build a DOM, as with:
 
 [source,php]
------------------------------------------
+----
 <?
     $dom = simplexml_load_string($xhtml);
 ?>
------------------------------------------
+----
 
 And we can then query the DOM for an array of all those *tr* elements we
 identified earlier:
 
 [source,php]
--------------------------------------------------------------------------------
+----
 <?
     $dom->registerXPathNamespace("xhtml", "http://www.w3.org/1999/xhtml");
     $trs = $dom->xpath("//xhtml:form[@id='report_form']/xhtml:table/xhtml:tr");
 ?>
--------------------------------------------------------------------------------
+----
 
 Note that PHP's http://php.net/manual/en/book.simplexml.php[SimpleXML]
 API (annoyingly) requires that we prefix XHTML elements' names with,
@@ -623,16 +622,15 @@ e.g., *xhtml:*. Now that we have all those *tr* elements of interest, we
 can extract those fields we want pretty easily.
 
 
-Source Code
-^^^^^^^^^^^
+=== Source Code
 
 Below is (a simplified version of) the screen scraper used by the
-link:HarvardFood API[HarvardFood API]; it assumes that *DB_HOST*,
+link:../food/api[HarvardFood API]; it assumes that *DB_HOST*,
 *DB_NAME*, *DB_USER*, and *DB_PASS* are constants defined in a file
 called *constants.php*.
 
 [source,php]
--------------------------------------------------------------------------------------------------------------------------------------
+----
 #!/usr/bin/env php
 <?
     // constants
@@ -744,12 +742,12 @@ called *constants.php*.
     }
 
 ?>
--------------------------------------------------------------------------------------------------------------------------------------
+----
 
 This code assumes that three tables exist in *DB_NAME*:
 
 [source,sql]
-------------------------------------------------------------------------------
+----
 CREATE TABLE IF NOT EXISTS `items` (
   `recipe` char(6) NOT NULL,
   `item` varchar(255) NOT NULL,
@@ -771,6 +769,4 @@ CREATE TABLE IF NOT EXISTS `menu` (
   UNIQUE KEY `date_2` (`date`,`meal`,`category`,`recipe`),
   KEY `date` (`date`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-------------------------------------------------------------------------------
-
-Category:HOWTO
+----

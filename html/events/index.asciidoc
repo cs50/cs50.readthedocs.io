@@ -1,0 +1,354 @@
+---
+tags: []
+title: HarvardEvents
+---
+
+http://events.cs50.net/[HarvardEvents] is a university-wide
+events directory that synchronizes each night with calendars all over
+campus. As of Fall 2010, most calendars belong to departments and
+student groups from the College, GSAS, HMS, and SEAS, although others
+have begun to contribute their calendars as well. HarvardEvents isn't
+really a site into which you input events manually, although that option
+does now exist. Rather, it's a directory to which you can submit entire
+"feeds" of events (i.e., calendars) that are already hosted elsewhere.
+
+To add your event(s) to HarvardEvents, follow the appropriate set of
+directions below. *Be sure your calendar is not already listed under All
+Calendars at http://events.cs50.net/[HarvardEvents].*
+
+* link:#how_to_add_a_google_calendar[How to Add a Google Calendar]. If
+your calendar lives at http://calendar.google.com/[Google Calendar],
+follow these directions.
+* link:#how_to_add_an_individual_event[How to Add an Individual Event].
+If you would like to add an event that's not already on a calendar in
+some other format or would like to add a one-time event for which it
+doesn't really make sense to create a Google Calendar or Google
+Spreadsheet for just that event, follow these directions.
+* link:#how_to_add_a_csv_feed[How to Add a CSV Feed]. If your calendar
+can be exported (e.g., via a template or script written by you) in
+http://en.wikipedia.org/wiki/Comma-separated_values[CSV] format, follow
+these directions.
+* link:#how_to_add_a_google_spreadsheet[How to Add a Google
+Spreadsheet]. If, for some reason, it makes the most sense to store your
+events in a Google Spreadsheet, one event per row, follow these
+directions.
+* link:#how_to_add_an_icalendar_file[How to Add an iCalendar File]. If
+your calendar can be exported (e.g.,via a script written by you) in
+iCalendar format, follow these directions.
+
+
+[[how_to_add_a_google_calendar]]
+== How to Add a Google Calendar
+
+To add a Google Calendar to HarvardEvents, follow the directions below.
+You only need to submit your calendar to HarvardEvents once; thereafter,
+everything is automated. Each night around midnight, HarvardEvents will
+synchronize itself with your Google Calendar automatically so that any
+changes you make are, within 24 hours, reflected at HarvardEvents.
+
+1.  Sign in to http://calendar.google.com/[Google Calendar].
+2.  Select *Calendar settings* under the *Settings* menu in the page's
+top-right corner.
+3.  Click the *Calendars* tab below *Calendar Settings* in the page's
+top-left corner.
+4.  Click the name of the calendar that you want to add to
+HarvardEvents.
+5.  Click the *Share this calendar* tab to the right of the *Calendar
+Details* tab.
+6.  Check the box next to *Make this calendar public*, if not checked
+already. Do not check the box next to *Share only my free/busy
+information*.
+7.  Click *Save*.
+8.  Again select *Calendar settings* under the *Settings* menu in the
+page's top-right corner.
+9.  Again click the *Calendars* tab below *Calendar Settings* in the
+page's top-left corner.
+10. Again click the name of the calendar that you want to add to
+HarvardEvents.
+11. Don't click *Share this calendar this time*. Instead, scroll down to
+*Calendar Address*.
+12. Click the green *ICAL* icon.
+13. Highlight and copy the address that appears. This is the URL of your
+calendar. Odds are it will resemble
++
++
+http://www.google.com/calendar/ical/.../public/basic.ics
++
++
+, where *...* is identical to your *Calendar ID*.
+14. Submit the form below.
+
+++++
+<html>
+<iframe src="https://spreadsheets.google.com/embeddedform?formkey=dG9jZC1IajB1QTBzdW1YZV9uX0Z3VlE6MQ" width="480" height="360" frameborder="0" marginheight="0" marginwidth="0" style="border: 1px #ccc solid; padding: 1em;">Loading...</iframe>
+</html>
+++++
+
+
+[[how_to_add_an_individual_event]]
+== How to Add an Individual Event
+
+If you would like to add an event that's not already on a calendar in
+some other format or would like to add a one-time event for which it
+doesn't really make sense to create a dedicated Google Calendar or
+Google Spreadsheet for just that event, follow the directions below:
+
+1.  Sign into http://calendar.google.com/[Google Calendar]. You'll need
+to
+http://www.google.com/support/calendar/bin/answer.py?hl=en&answer=37005[create
+an account] if you don't already have one.
+2.  Once signed in, click *Create event* toward Google Calendar's
+top-left corner and
+http://www.google.com/support/calendar/bin/answer.py?hl=en&answer=72143[create
+your event] in the window that appears. (It doesn't matter which of your
+own calendars you put the event on.) If your event repeats, take care to
+http://www.google.com/support/calendar/bin/answer.py?hl=en&answer=37115[create
+a repeating event].
+3.  Into the text box under *Add guests*, paste the email address below.
+It's a special email address for HarvardEvents. +
++
+----------------------------------------------------
+ec658deerd6blkv8q6uhulo8io@group.calendar.google.com
+----------------------------------------------------
+4.  Then click *Save*.
+
+Within 24 hours, HarvardEvents should detect that it's been invited to
+your event, and your event should appear in HarvardEvents itself.
+
+
+[[how_to_add_a_csv_feed]]
+How to Add a CSV Feed
+
+If your calendar can be exported as a CSV file (e.g., via a script or
+template written by you), it can be added to HarvardEvents so long as
+that file lives at a URL on the Web and is formatted in a certain way.
+You only need to submit your calendar to HarvardEvents once; thereafter,
+everything is automated. Each night around midnight, HarvardEvents will
+synchronize itself with your CSV feed automatically so that any changes
+you make are, within 24 hours, reflected at HarvardEvents.
+
+The first (i.e., header) row of your CSV file must contain these values
+(i.e., columns), in any order:
+
+[cols=",,,,,,,,",options="header",]
+|=======================================================================
+|Subject |Start Date |Start Time |End Date |End Time |All day event
+|Description |Location |CATEGORIES
+|=======================================================================
+
+Below that first row should be each of your events, one per row, with
+each field formatted per the definitions below. Each row, meanwhile,
+should be terminated by *\n* (i.e., *0x0A*).
+
+* *Subject*: Your event's name. This field should be surrounded by
+double quotes, and any double quotes in the name itself should be
+escaped with a backslash (i.e., *\"*).
+* *Start Date*: The date on which your event starts. This field should
+be formatted as *MM/DD/YYYY*, where *MM* and *DD* are 1- or 2-digit
+values and *YYYY* is a 4-digit value.
+* *Start Time*: The time at which your event starts. This field should
+be formatted in 24-hour (i.e., military) time as *HH:MM*, where *HH* is
+a 1- or 2-digit value and *MM* is a 2-digit value. If your event is an
+all-day event (or doesn't start at a particular time), assign this field
+(and *End Date*) a value of *0:00* and assign *All day event* a value of
+*True*.
+* *End Date*: The date on which your event ends. This field should be
+formatted as *MM/DD/YYYY*, where *MM* and *DD* are 1- or 2-digit values
+and *YYYY* is a 4-digit value. If your event is an all-day event (or
+doesn't start at a particular time), assign this field a date that's one
+day after *Start Date*. (Counter-intuitive, we know, but that's how
+Outlook and Yahoo do it!) Otherwise, this field's value should be
+identical to *Start Date*; implicit recurrences are not supported.
+* *End Time*: The time at which your event ends. This field should be
+formatted in 24-hour (i.e., military) time as *HH:MM*, where *HH* is a
+1- or 2-digit value and *MM* is a 2-digit value. If your event is an
+all-day event (or doesn't start at a particular time), assign this field
+(and *Start Date*) a value of *0:00* and assign *All day event* a value
+of *True*.
+* *All day event*: If is an all-day event (or doesn't start at a
+particular time), assign this field a value of True and assign both
+Start Time and End Time a value of 0:00. Else assign this field a value
+of False.
+* *Description*: Your event's description. This field should be
+surrounded by double quotes, and any double quotes in the name itself
+should be escaped with a backslash (i.e., *\"*). Any newlines should be
+encoded as *\n* (i.e., *0x0A*). Do not include CSS or HTML; email
+addresses and URLs will automatically be hyperlinked by HarvardEvents.
+* *Location*: Your event's location. This field should be surrounded by
+double quotes, and any double quotes in the name itself should be
+escaped with a backslash (i.e., *\"*). Any newlines should be encoded as
+*\n* (i.e., *0x0A*). If your event doesn't have a location, you can
+leave this field blank. Do not include CSS or HTML; URLs will
+automatically be hyperlinked by HarvardEvents.
+* *CATEGORIES*: Your event's categories (otherwise known as tags),
+separated by unescaped commas. This field should be surrounded by double
+quotes, and any double quotes in the name itself should be escaped with
+a backslash (i.e., *\"*). Because this field is already a
+comma-separated list, any comma in an actual category must be escaped
+with a backslash (i.e., *\,*). Any newlines should be encoded as *\n*
+(i.e., *0x0A*). If your event doesn't have any categories, you can leave
+this field blank.
+
+This format is identical, incidentally, to that used by
+http://www.microsoft.com/outlook/[Microsoft Outlook] and
+http://calendar.yahoo.com/[Yahoo Calendar].
+
+When ready to add your feed to HarvardEvents, submit its URL via the
+form below.
+
+++++
+<html>
+<iframe src="https://spreadsheets.google.com/embeddedform?formkey=dG9jZC1IajB1QTBzdW1YZV9uX0Z3VlE6MQ" width="480" height="360" frameborder="0" marginheight="0" marginwidth="0" style="border: 1px #ccc solid; padding: 1em;">Loading...</iframe>
+</html>
+++++
+
+[[how_to_add_a_google_spreadsheet]]
+== How to Add a Google Spreadsheet
+
+If, for some reason, you decide that it's easiest to store your calendar
+in a spreadsheet (with one event per row) at Google Docs, it can be
+added to HarvardEvents so long as it's formatted in a certain way. You
+only need to submit your calendar to HarvardEvents once; thereafter,
+everything is automated. Each night around midnight, HarvardEvents will
+synchronize itself with your CSV feed automatically so that any changes
+you make are, within 24 hours, reflected at HarvardEvents.
+
+Your spreadsheet should have only one sheet (i.e., Sheet1). The first
+(i.e., header) row of your Google Spreadsheet must contain these values
+(i.e., columns), in any order:
+
+[cols=",,,,,,,,",options="header",]
+|=======================================================================
+|Subject |Start Date |Start Time |End Date |End Time |All day event
+|Description |Location |CATEGORIES
+|=======================================================================
+
+Below that first row should be each of your events, one per row, with
+each field formatted per the definitions below. Each row, meanwhile,
+should be terminated by *\n* (i.e., *0x0A*).
+
+* *Subject*: Your event's name. This field should be surrounded by
+double quotes, and any double quotes in the name itself should be
+escaped with a backslash (i.e., *\"*).
+* *Start Date*: The date on which your event starts. This field should
+be formatted as *MM/DD/YYYY*, where *MM* and *DD* are 1- or 2-digit
+values and *YYYY* is a 4-digit value.
+* *Start Time*: The time at which your event starts. This field should
+be formatted in 24-hour (i.e., military) time as *HH:MM*, where *HH* is
+a 1- or 2-digit value and *MM* is a 2-digit value. If your event is an
+all-day event (or doesn't start at a particular time), assign this field
+(and *End Date*) a value of *0:00* and assign *All day event* a value of
+*True*.
+* *End Date*: The date on which your event ends. This field should be
+formatted as *MM/DD/YYYY*, where *MM* and *DD* are 1- or 2-digit values
+and *YYYY* is a 4-digit value. If your event is an all-day event (or
+doesn't start at a particular time), assign this field a date that's one
+day after *Start Date*. (Counter-intuitive, we know, but that's how
+Outlook and Yahoo do it!) Otherwise, this field's value should be
+identical to *Start Date*; implicit recurrences are not supported.
+* *End Time*: The time at which your event ends. This field should be
+formatted in 24-hour (i.e., military) time as *HH:MM*, where *HH* is a
+1- or 2-digit value and *MM* is a 2-digit value. If your event is an
+all-day event (or doesn't start at a particular time), assign this field
+(and *Start Date*) a value of *0:00* and assign *All day event* a value
+of *True*.
+* *All day event*: If is an all-day event (or doesn't start at a
+particular time), assign this field a value of True and assign both
+Start Time and End Time a value of 0:00. Else assign this field a value
+of False.
+* *Description*: Your event's description. This field should be
+surrounded by double quotes, and any double quotes in the name itself
+should be escaped with a backslash (i.e., *\"*). Any newlines should be
+encoded as *\n* (i.e., *0x0A*). Do not include CSS or HTML; email
+addresses and URLs will automatically be hyperlinked by HarvardEvents.
+* *Location*: Your event's location. This field should be surrounded by
+double quotes, and any double quotes in the name itself should be
+escaped with a backslash (i.e., *\"*). Any newlines should be encoded as
+*\n* (i.e., *0x0A*). If your event doesn't have a location, you can
+leave this field blank. Do not include CSS or HTML; URLs will
+automatically be hyperlinked by HarvardEvents.
+* *CATEGORIES*: Your event's categories (otherwise known as tags),
+separated by unescaped commas. This field should be surrounded by double
+quotes, and any double quotes in the name itself should be escaped with
+a backslash (i.e., *\"*). Because this field is already a
+comma-separated list, any comma in an actual category must be escaped
+with a backslash (i.e., *\,*). Any newlines should be encoded as *\n*
+(i.e., *0x0A*). If your event doesn't have any categories, you can leave
+this field blank.
+
+This format is identical, incidentally, to that used by
+http://www.microsoft.com/outlook/[Microsoft Outlook] and
+http://calendar.yahoo.com/[Yahoo Calendar].
+
+When ready to add your Google Spreadsheet to HarvardEvents, follow these
+steps:
+
+1.  Sign in to http://docs.google.com/[Google Docs] and open your
+spreadsheet.
+2.  Click *Share* in the page's top-right corner.
+3.  Select *Publish as a web page* in the menu that appears.
+4.  Check the box next to *Automatically republish when changes are
+made*, if not checked already, in the window that appears.
+5.  Click *Start publishing*.
+6.  Select *CSV (comma-separated values)* and *Sheet1* in the menus
+below *Get a link to the published data*; leave *All cells* as-is.
+7.  Highlight and copy the URL that appears in the text area.
+8.  Submit the form below.
+
+++++
+<html>
+<iframe src="https://spreadsheets.google.com/embeddedform?formkey=dG9jZC1IajB1QTBzdW1YZV9uX0Z3VlE6MQ" width="480" height="360" frameborder="0" marginheight="0" marginwidth="0" style="border: 1px #ccc solid; padding: 1em;">Loading...</iframe>
+</html>
+++++
+
+[[how_to_add_an_icalendar_file]]
+How to Add an iCalendar File
+
+If your calendar can be exported as an
+http://en.wikipedia.org/wiki/ICalendar[iCalendar] file (e.g., via a
+script written by you), the file extension for which is usually *.ics*,
+it can be added to HarvardEvents so long as that file lives at a URL on
+the Web and is formatted in accordance with
+http://tools.ietf.org/html/rfc2445[RFC 2445]. You only need to submit
+your calendar to HarvardEvents once; thereafter, everything is
+automated. Each night around midnight, HarvardEvents will synchronize
+itself with your CSV feed automatically so that any changes you make
+are, within 24 hours, reflected at HarvardEvents.
+
+Each of your iCalendar file's VEVENTs includes these fields:
+
+* *UID*: A unique ID for your event.
+* *SUMMARY*: Your event's name.
+* *DTSTART*: The date (and time) on which your event starts.
+* *DTEND*: The date (and time) on which your event ends.
+* *DESCRIPTION*: Your event's description.
+* *LOCATION*: Your event's location.
+* *CATEGORIES*: A comma-separated list of categories (otherwise known as
+tags), if any, for your event.
+
+With regard to recurring events, HarvardEvents supports recurrence
+rules, but you're welcome to generate one VEVENT per event if you'd
+prefer.
+
+Odds are, if writing a script, you won't want to implement RFC 2445 from
+scratch; best to utilize an off-the-shelf library:
+
+* Java: http://ical4j.sourceforge.net/introduction.html[iCal4j]
+* .NET: http://sourceforge.net/projects/dday-ical/[DDay.iCal]
+* Perl:
+http://search.cpan.org/~srl/Net-ICal-0.15/lib/Net/ICal.pm[Net::ICal]
+* PHP: http://www.kigkonsult.se/iCalcreator/[iCalcreator]
+* Python: http://codespeak.net/icalendar/[iCalendar]
+* Ruby: http://icalendar.rubyforge.org/[iCalendar]
+
+To be clear, HarvardEvents supports
+http://en.wikipedia.org/wiki/ICalendar[iCalendar] (i.e., vCalendar 2.0),
+not http://www.imc.org/pdi/vcal-10.txt[vCalendar 1.0].
+
+When ready to add your calendar to HarvardEvents, submit the form below.
+
+++++
+<html>
+<iframe src="https://spreadsheets.google.com/embeddedform?formkey=dG9jZC1IajB1QTBzdW1YZV9uX0Z3VlE6MQ" width="480" height="360" frameborder="0" marginheight="0" marginwidth="0" style="border: 1px #ccc solid; padding: 1em;">Loading...</iframe>
+</html>
+++++
