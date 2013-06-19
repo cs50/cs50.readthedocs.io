@@ -62,9 +62,9 @@ See link:#instructions[instructions] for much more detail.
 http://w.x.y.z/phpMyAdmin/ from your own computer
 |====================================================
 
-* * Once you link:#__how_to_enable_mysql[enable MySQL]. +
+* * Once you link:#how_to_enable_mysql[enable MySQL]. +
 
-* ** Once you link:#__how_to_enable_apache[enable Apache] and
+* ** Once you link:#how_to_enable_apache[enable Apache] and
 link:#how_to_enable_mysql[enable MySQL].
 
 '''In version 17 of the appliance, the superuser account (i.e., root) is
@@ -360,6 +360,7 @@ your screen, at which point a menu should appear. Click the second icon
 from the right (which resembles two squares).
 
 
+[[how_to_enable_apache]]
 ==== How to Enable Apache
 
 By default, Apache (httpd) is disabled by default. To enable it,
@@ -371,6 +372,7 @@ sudo chkconfig httpd on
 sudo service httpd start
 ----
 
+[[how_to_enable_mysql]]
 ==== How to Enable MySQL
 
 By default, MySQL (mysqld) is disabled by default. To enable it,
