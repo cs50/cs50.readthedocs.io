@@ -24,6 +24,11 @@ h2 {
     font-size: 1.8em;
 }
 
+h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
 p {
     margin-bottom: 1em;
 }
@@ -39,6 +44,18 @@ a {
     &:hover {
         color: #888;
     }
+}
+
+div[class^="sect"] {
+    margin-left: 10px;
+}
+
+div.sectionbody {
+    margin-left: 0px;    
+}
+
+code {
+    white-space: pre-wrap;
 }
 
 #background {
@@ -225,7 +242,7 @@ a {
         margin: 10px 0px 0px 0px;    
 
         .sectionbody {
-            padding: 10px 20px 0px 22px;   
+            padding: 10px 30px 0px 22px;   
         
             > .ulist > ul {
                 margin-bottom: 0px;    
