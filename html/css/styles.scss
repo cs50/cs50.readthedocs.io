@@ -1,9 +1,14 @@
 @import "mixins";
 
 @font-face {
-    font-family: "bariol";
-    src: url("/css/fonts/Bariol_Regular.otf");
-    font-weight: 400;
+    font-family: 'bariol';
+    src: url('fonts/bariol_regular-webfont.eot');
+    src: url('fonts/bariol_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/bariol_regular-webfont.woff') format('woff'),
+         url('fonts/bariol_regular-webfont.ttf') format('truetype'),
+         url('fonts/bariol_regular-webfont.svg#bariol_regularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body, html {
@@ -159,11 +164,13 @@ code {
         left: 50px;
         right: 50px;
         bottom: 0px;
+        height: 100%;
         min-width: 700px;
         max-width: 1200px;
         z-index: 1;
         margin: 0 auto;
         @include background-linear-gradient(top, #FFF, #F3F3F3);
+        @include ie-gradient(top, #FFF, #F3F3F3);
         @include box-shadow(0px 0px 3px #333);
     }
     
@@ -263,37 +270,37 @@ code {
             padding: 0px 15px;
         }
 
-        &:nth-child(6n+1) {
+        &:nth-child(6n+1), &.label-1 {
             > h2 {
                 border-left: 5px solid pink;
             }
         }
         
-        &:nth-child(6n+2) {
+        &:nth-child(6n+2), &.label-2 {
             > h2 {
                 border-left: 5px solid #17B0BD;
             }
         }
         
-        &:nth-child(6n+3) {
+        &:nth-child(6n+3), &.label-3 {
             > h2 {
                 border-left: 5px solid #C69DD6;
             }
         }
         
-        &:nth-child(6n+4) {
+        &:nth-child(6n+4), &.label-4 {
             > h2 {
                 border-left: 5px solid #E4C182;
             }
         }
         
-        &:nth-child(6n+5) {
+        &:nth-child(6n+5), &.label-5 {
             > h2 {
                 border-left: 5px solid #82B5E4;
             }
         }
         
-        &:nth-child(6n+6) {
+        &:nth-child(6n+6), &.label-6 {
             > h2 {
                 border-left: 5px solid #82E4A1;
             }
@@ -308,6 +315,7 @@ code {
         @include box-shadow(0px 0px 3px #EEE);
         background-color: white;
         @include background-linear-gradient(top, #FFF, #F5F5F5);
+        @include ie-gradient(top, #FFF, #F5F5F5);
         
         a {
             color: #333;
@@ -326,6 +334,7 @@ code {
         padding-right: 40px;
         background-color: #08c;
         @include background-linear-gradient(top, #0195DF, #08c);
+        @include ie-gradient(top, #0195DF, #08c);
         color: white;
         text-shadow: 0px 1px #444;
         display: inline-block;
@@ -392,37 +401,37 @@ code {
                 }
             }
               
-            &:nth-child(6n+1) {
+            &:nth-child(6n+1), &.label-1 {
                 > p {
                     border-left: 5px solid pink;
                 }
             }
             
-            &:nth-child(6n+2) {
+            &:nth-child(6n+2), &.label-2 {
                 > p {
                     border-left: 5px solid #17B0BD;
                 }
             }
             
-            &:nth-child(6n+3) {
+            &:nth-child(6n+3), &.label-3 {
                 > p {
                     border-left: 5px solid #C69DD6;
                 }
             }
             
-            &:nth-child(6n+4) {
+            &:nth-child(6n+4), &.label-4 {
                 > p {
                     border-left: 5px solid #E4C182;
                 }
             }
             
-            &:nth-child(6n+5) {
+            &:nth-child(6n+5), &.label-5 {
                 > p {
                     border-left: 5px solid #82B5E4;
                 }
             }
             
-            &:nth-child(6n+6) {
+            &:nth-child(6n+6), &.label-6 {
                 > p {
                     border-left: 5px solid #82E4A1;
                 }
