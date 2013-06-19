@@ -47,7 +47,7 @@
 
     <body>
         <div id="background"></div>
-        <div id="container">
+        <div id="container" <?php if ($_SERVER["SCRIPT_URL"] != "/") { echo 'class="not-main"'; } else { echo 'class="main"'; } ?>>
             <div id="container-background"></div>
             <div id="search-wrapper">
                 <script>
@@ -65,7 +65,10 @@
                 <gcse:search></gcse:search>  
             </div>
             <?php if (isset($yaml["title"])): ?>
-                <h1><?= htmlspecialchars($yaml["title"]) ?></h1>
+                <h1 class="manual"><a href="/">CS50 Manual</a></h1>
+                <?php if ($_SERVER["SCRIPT_URL"] != "/"): ?>
+                    <h1 class="page-title"><?= htmlspecialchars($yaml["title"]) ?></h1>
+                <? endif; ?>
                 <?= $html ?>
             <?php endif ?>
         </div>
