@@ -1,6 +1,7 @@
 ---
 tags: [Data]
 title: Enrollment
+toc: false
 ---
 
 Below is a visualization of CS50's enrollments since the course's

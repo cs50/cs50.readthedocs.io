@@ -1,6 +1,7 @@
 ---
 tags: [Data]
 title: Concentrators
+toc: false
 ---
 
 Below is a visualization of the number of concentrators in Computer
