@@ -2,8 +2,10 @@
 
     require(__DIR__ . "/../includes/config.php");
 
-    // get requested article's YAML and HTML
-    list($yaml, $html) = getArticle($_SERVER["SCRIPT_URL"], true);
+    // get requested article's YAML and HTML, else 404
+    if (false === (list($yaml, $html) = getArticle($_SERVER["SCRIPT_URL"], true))) {
+        http_response_code(404);
+    }
 
 ?>
 
@@ -35,6 +37,7 @@
 
         <title>
             <?php
+
                 if (http_response_code() !== 403 && isset($data["yaml"]["title"])) {
                     print(htmlspecialchars($data["yaml"]["title"]) . " / ");
                 }
@@ -53,7 +56,6 @@
                     (function() {
                         var cx = '017253632348184728259:-z318fz0ofk';
                         var gcse = document.createElement('script');
-                        gcse.type = 'text/javascript';
                         gcse.async = true;
                         gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
                             '//www.google.com/cse/cse.js?cx=' + cx;
@@ -63,13 +65,19 @@
                 </script>
                 <gcse:search></gcse:search>  
             </div>
-            <?php if (isset($yaml["title"])): ?>
-                <h1 class="manual"><a href="/">CS50 Manual</a></h1>
-                <?php if ($_SERVER["SCRIPT_URL"] != "/"): ?>
-                    <h1 class="page-title"><?= htmlspecialchars($yaml["title"]) ?></h1>
-                <?php endif; ?>
-                <?= $html ?>
-            <?php endif ?>
+            <h1 class="manual"><a href="/">CS50 Manual</a></h1>
+            <?php 
+            
+                if (isset($yaml["title"])) {
+                    if ($_SERVER["SCRIPT_URL"] != "/") {
+                        print("<h1 class=\"page-title\">" . htmlspecialchars($yaml["title"]) . "</h1>");
+                    }
+                }
+                else {
+                    print("<div>404 Not Found</div>");
+                }
+
+            ?>
         </div>
 
         <script>
