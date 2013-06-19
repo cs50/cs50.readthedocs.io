@@ -641,7 +641,7 @@ of whose children is an *trip*, per the below:
 ----
 
 
-= Examples
+== Examples
 
 * Returns all stops:
 ** http://shuttleboy.cs50.net/api/1.2/stops?output=csv

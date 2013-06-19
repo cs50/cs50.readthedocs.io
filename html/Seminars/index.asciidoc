@@ -44,10 +44,8 @@ differences between iOS and Android? How has Android changed with the
 release of ICS and Jelly Bean? And, most importantly, how can you get
 started developing for Android using Java and Eclipse?
 
-*
-http://cdn.cs50.net/2012/fall/seminars/android_apps/android_apps.pdf[Slides]
-*
-http://cs50.tv/2012/fall/seminars/android_apps/android_apps-720p.mp4[Video]
+* http://cdn.cs50.net/2012/fall/seminars/android_apps/android_apps.pdf[Slides]
+* http://cs50.tv/2012/fall/seminars/android_apps/android_apps-720p.mp4[Video]
 
 
 Defending Behind The Device: Mobile Application Security
@@ -65,10 +63,8 @@ those with malicious intent. This presentation will discuss the threat
 landscape and how developers and enterprise IT can tackle mobile app
 risk.
 
-*
-http://cdn.cs50.net/2012/fall/seminars/mobile_application_security/mobile_application_security.pdf[Slides]
-*
-http://cs50.tv/2012/fall/seminars/mobile_application_security/mobile_application_security-720p.mp4[Video]
+* http://cdn.cs50.net/2012/fall/seminars/mobile_application_security/mobile_application_security.pdf[Slides]
+* http://cs50.tv/2012/fall/seminars/mobile_application_security/mobile_application_security-720p.mp4[Video]
 
 
 ICT4D: Technology for Good
@@ -135,11 +131,9 @@ aspects of some frameworks, and discuss what kind of design challenges
 they address. Some knowledge of JavaScript, such as events and objects,
 is ideal, but not necessary.
 
-*
-http://cdn.cs50.net/2012/fall/seminars/javascript_frameworks/javascript_frameworks.zip[Source
+* http://cdn.cs50.net/2012/fall/seminars/javascript_frameworks/javascript_frameworks.zip[Source
 Code]
-*
-http://cs50.tv/2012/fall/seminars/javascript_frameworks/javascript_frameworks-720p.mp4[Video]
+* http://cs50.tv/2012/fall/seminars/javascript_frameworks/javascript_frameworks-720p.mp4[Video]
 
 
 Kohana: A Lightweight PHP Framework
@@ -192,10 +186,8 @@ using the Python re library to solve puzzles; and background to use the
 many implementations of regular expressions in command-line tools and
 languages including Python, Perl, Ruby, Java, C#, PHP, and MYSQL.
 
-*
-http://cdn.cs50.net/2012/fall/seminars/pattern_matching/pattern_matching.pdf[Slides]
-*
-http://cs50.tv/2012/fall/seminars/pattern_matching/pattern_matching-720p.mp4[Video]
+* http://cdn.cs50.net/2012/fall/seminars/pattern_matching/pattern_matching.pdf[Slides]
+* http://cs50.tv/2012/fall/seminars/pattern_matching/pattern_matching-720p.mp4[Video]
 
 
 Preparing Your Site for the Web
@@ -211,10 +203,8 @@ can you be certain that your site will thrive under all conditions?
 Topics to be discussed include cross-browser/platform compatibility, web
 security, error handling, and performance optimization.
 
-*
-http://cdn.cs50.net/2012/fall/seminars/preparing_your_site/preparing_your_site.pdf[Slides]
-*
-http://cs50.tv/2012/fall/seminars/preparing_your_site/preparing_your_site-720p.mp4[Video]
+* http://cdn.cs50.net/2012/fall/seminars/preparing_your_site/preparing_your_site.pdf[Slides]
+* http://cs50.tv/2012/fall/seminars/preparing_your_site/preparing_your_site-720p.mp4[Video]
 
 
 Surviving the Internet
@@ -245,10 +235,8 @@ encryption program, for example, FileVault or BitLocker 10. Back up your
 hard disk; make a local backup AND make an online backup of important
 data.
 
-*
-http://cdn.cs50.net/2012/fall/seminars/surviving_the_internet/surviving_the_internet.pdf[Slides]
-*
-http://cs50.tv/2012/fall/seminars/surviving_the_internet/surviving_the_internet-720p.mp4[Video]
+* http://cdn.cs50.net/2012/fall/seminars/surviving_the_internet/surviving_the_internet.pdf[Slides]
+* http://cs50.tv/2012/fall/seminars/surviving_the_internet/surviving_the_internet-720p.mp4[Video]
 
 
 Technical Interviews
@@ -262,13 +250,10 @@ roles at many tech companies. I'll be presenting tips and resources on
 getting through the interview, as well as walking through hands-on
 examples of representative problems you might see in interviews.
 
-*
-http://cdn.cs50.net/2012/fall/seminars/technical_interviews/technical_interviews.pdf[Slides]
-*
-http://cdn.cs50.net/2012/fall/seminars/technical_interviews/technical_interviews.zip[Source
+* http://cdn.cs50.net/2012/fall/seminars/technical_interviews/technical_interviews.pdf[Slides]
+* http://cdn.cs50.net/2012/fall/seminars/technical_interviews/technical_interviews.zip[Source
 Code]
-*
-http://cs50.tv/2012/fall/seminars/technical_interviews/technical_interviews-720p.mp4[Video]
+* http://cs50.tv/2012/fall/seminars/technical_interviews/technical_interviews-720p.mp4[Video]
 
 
 Unix Shells, Environments
@@ -291,10 +276,8 @@ isn't really theoretical and the broader historical implications have
 more to do with the irregular, idiosyncratic origins of Unix rather than
 principles of computer science.
 
-*
-http://cdn.cs50.net/2012/fall/seminars/unix_shells_environments/unix_shells_environments.pdf[Text]
-*
-http://cs50.tv/2012/fall/seminars/unix_shells_environments/unix_shells_environments-720p.mp4[Video]
+* http://cdn.cs50.net/2012/fall/seminars/unix_shells_environments/unix_shells_environments.pdf[Text]
+* http://cs50.tv/2012/fall/seminars/unix_shells_environments/unix_shells_environments-720p.mp4[Video]
 
 
 Vim: Speed and Power at your Fingertips
@@ -329,10 +312,8 @@ iterating over designs, and an overview of useful libraries and
 frameworks. We'll move quickly, but all familiarity levels are welcome.
 We'll be happy to field questions during and after the seminar.
 
-*
-http://cdn.cs50.net/2012/fall/seminars/web_development/web_development.pdf[Slides]
-*
-http://cs50.tv/2012/fall/seminars/web_development/web_development-720p.mp4[Video]
+* http://cdn.cs50.net/2012/fall/seminars/web_development/web_development.pdf[Slides]
+* http://cs50.tv/2012/fall/seminars/web_development/web_development-720p.mp4[Video]
 
 
 Windows 8 App/Game Development with HTML5
@@ -380,10 +361,8 @@ http://en.wikipedia.org/wiki/Distributed_computing[distributed
 computing] and http://en.wikipedia.org/wiki/Data_processing_system[data
 processing system].
 
-*
-http://cdn.cs50.net/2011/fall/seminars/acceleratingScience/acceleratingScience.pdf[Slides]
-*
-http://cs50.tv/2011/fall/seminars/acceleratingScience/acceleratingScience.mp4[Video]
+* http://cdn.cs50.net/2011/fall/seminars/acceleratingScience/acceleratingScience.pdf[Slides]
+* http://cs50.tv/2011/fall/seminars/acceleratingScience/acceleratingScience.mp4[Video]
 
 
 Acing Your Technical Interviews
@@ -407,13 +386,10 @@ Finally, I will end with a hands-on period where we will try some
 problems and go over some problems that I have personally seen and find
 very interesting.
 
-*
-http://cdn.cs50.net/2011/fall/seminars/acing_technical_interviews/acing_technical_interviews.pdf[Slides]
-*
-http://cdn.cs50.net/2011/fall/seminars/acing_technical_interviews/acing_technical_interviews_src.zip[Source
+* http://cdn.cs50.net/2011/fall/seminars/acing_technical_interviews/acing_technical_interviews.pdf[Slides]
+* http://cdn.cs50.net/2011/fall/seminars/acing_technical_interviews/acing_technical_interviews_src.zip[Source
 Code]
-*
-http://cs50.tv/2011/fall/seminars/acing_technical_interviews/acing_technical_interviews.mp4[Video]
+* http://cs50.tv/2011/fall/seminars/acing_technical_interviews/acing_technical_interviews.mp4[Video]
 
 
 Android Application Development
@@ -427,10 +403,8 @@ http://en.wikipedia.org/wiki/Java_%28software_platform%29[Java]
 applications using
 http://en.wikipedia.org/wiki/Eclipse_%28software%29[Eclipse].
 
-*
-http://cdn.cs50.net/2011/fall/seminars/Android_applicationDevelopment/Android_applicationDevelopment.pdf[Slides]
-*
-http://cs50.tv/2011/fall/seminars/Android_applicationDevelopment/Android_applicationDevelopment.mp4[Video]
+* http://cdn.cs50.net/2011/fall/seminars/Android_applicationDevelopment/Android_applicationDevelopment.pdf[Slides]
+* http://cs50.tv/2011/fall/seminars/Android_applicationDevelopment/Android_applicationDevelopment.mp4[Video]
 
 
 appLab.Phone(Mango) Session One
@@ -450,23 +424,17 @@ http://bit.ly/r2dqFr. This will give you the ability to publish your
 phone apps and monetize for free.
 
 * Resources
-**
-http://cdn.cs50.net/2011/fall/seminars/appLab_Phone_Mango/Jump_Start_Windows_Phone_Mango.zip[Jump
+** http://cdn.cs50.net/2011/fall/seminars/appLab_Phone_Mango/Jump_Start_Windows_Phone_Mango.zip[Jump
 Start Windows Phone Mango]
-**
-http://cdn.cs50.net/2011/fall/seminars/appLab_Phone_Mango/Windows_Phone_7_Silverlight_Toolkit_Refresh_Aug_2011.zip[Windows
+** http://cdn.cs50.net/2011/fall/seminars/appLab_Phone_Mango/Windows_Phone_7_Silverlight_Toolkit_Refresh_Aug_2011.zip[Windows
 Phone 7 Silverlight Toolkit Refresh Aug 2011]
-**
-http://cdn.cs50.net/2011/fall/seminars/appLab_Phone_Mango/Windows_Phone_7_Training_Course.zip[Windows
+** http://cdn.cs50.net/2011/fall/seminars/appLab_Phone_Mango/Windows_Phone_7_Training_Course.zip[Windows
 Phone 7 Training Course]
-**
-http://cdn.cs50.net/2011/fall/seminars/appLab_Phone_Mango/Windows_Phone_Training_Labs.zip[Windows
+** http://cdn.cs50.net/2011/fall/seminars/appLab_Phone_Mango/Windows_Phone_Training_Labs.zip[Windows
 Phone Training Labs]
-**
-http://cdn.cs50.net/2011/fall/seminars/appLab_Phone_Mango/Windows_Phone_Training_Presentations.zip[Windows
+** http://cdn.cs50.net/2011/fall/seminars/appLab_Phone_Mango/Windows_Phone_Training_Presentations.zip[Windows
 Phone Training Presentations]
-*
-http://cs50.tv/2011/fall/seminars/appLab_Phone_Mango/appLab_Phone_Mango.mp4[Video]
+* http://cs50.tv/2011/fall/seminars/appLab_Phone_Mango/appLab_Phone_Mango.mp4[Video]
 
 
 Beyond Google Maps: Spatial is Special
@@ -491,8 +459,7 @@ looking to design new
 http://en.wikipedia.org/wiki/Mobile_computing[mobile computing]
 software.
 
-*
-http://cs50.tv/2011/fall/seminars/beyond_GoogleMaps/beyond_GoogleMaps.mp4[Video]
+* http://cs50.tv/2011/fall/seminars/beyond_GoogleMaps/beyond_GoogleMaps.mp4[Video]
 
 
 Building Applications in C#
@@ -550,10 +517,8 @@ platform into your application or coding the next
 http://en.wikipedia.org/wiki/Brick_Breaker[Brick Breaker]. The
 possibilities are endless!
 
-*
-http://cdn.cs50.net/2011/fall/seminars/develop_for_the_BlackBerry/develop_for_the_BlackBerry.pdf[Slides]
-*
-http://cs50.tv/2011/fall/seminars/develop_for_the_BlackBerry/develop_for_the_BlackBerry.mp4[Video]
+* http://cdn.cs50.net/2011/fall/seminars/develop_for_the_BlackBerry/develop_for_the_BlackBerry.pdf[Slides]
+* http://cs50.tv/2011/fall/seminars/develop_for_the_BlackBerry/develop_for_the_BlackBerry.mp4[Video]
 
 
 Educational Software
@@ -567,10 +532,8 @@ including how to do requirements gathering, how to choose development
 platforms, and how to assess your project. The instructor has over 20
 years' experience in designing and producing educational software.
 
-*
-http://cdn.cs50.net/2011/fall/seminars/educationalSoftware/educationalSoftware.pdf[Slides]
-*
-http://cs50.tv/2011/fall/seminars/educationalSoftware/educationalSoftware.mp4[Video]
+* http://cdn.cs50.net/2011/fall/seminars/educationalSoftware/educationalSoftware.pdf[Slides]
+* http://cs50.tv/2011/fall/seminars/educationalSoftware/educationalSoftware.mp4[Video]
 
 
 Emacs
@@ -606,10 +569,8 @@ an arduous process. But until something delivers real value in a
 real-world environment, it's just a novelty. Here are some things to
 consider.
 
-*
-http://cdn.cs50.net/2011/fall/seminars/innovation_to_production/innovation_to_production.pdf[Slides]
-*
-http://cs50.tv/2011/fall/seminars/innovation_to_production/innovation_to_production.mp4[Video]
+* http://cdn.cs50.net/2011/fall/seminars/innovation_to_production/innovation_to_production.pdf[Slides]
+* http://cs50.tv/2011/fall/seminars/innovation_to_production/innovation_to_production.mp4[Video]
 
 
 Getting a Job in the Tech Industry
@@ -623,8 +584,7 @@ consist of a presentation and Q&A session with a panel of students with
 prior experience interviewing for and working in positions in the tech
 industry.
 
-*
-http://cdn.cs50.net/2011/fall/seminars/techIndustry/techIndustry.pdf[Slides]
+* http://cdn.cs50.net/2011/fall/seminars/techIndustry/techIndustry.pdf[Slides]
 * http://cs50.tv/2011/fall/seminars/techIndustry/techIndustry.mp4[Video]
 
 
@@ -715,14 +675,9 @@ learning basic Ruby syntax as well as the tools you need to get started
 building a Rails app. Bonus: Ruby is insanely fun to code in!
 
 * http://cdn.cs50.net/2011/fall/seminars/Ruby_on_Rails/ROR.pdf[Slides]
-*
-http://cdn.cs50.net/2011/fall/seminars/Ruby_on_Rails/ROR_depot_src.zip[ROR
-depot Source Code]
-*
-http://cdn.cs50.net/2011/fall/seminars/Ruby_on_Rails/ROR_finance_skeleton_src.zip[ROR
-finance skeleton Source Code]
-*
-http://cs50.tv/2011/fall/seminars/Ruby_on_Rails/Ruby_on_Rails.mp4[Video]
+* http://cdn.cs50.net/2011/fall/seminars/Ruby_on_Rails/ROR_depot_src.zip[ROR depot Source Code]
+* http://cdn.cs50.net/2011/fall/seminars/Ruby_on_Rails/ROR_finance_skeleton_src.zip[ROR finance skeleton Source Code]
+* http://cs50.tv/2011/fall/seminars/Ruby_on_Rails/Ruby_on_Rails.mp4[Video]
 
 
 Search and Browse Superpowers: an Introduction to Solr
@@ -740,13 +695,9 @@ http://en.wikipedia.org/wiki/Search_engine[search engines], to see how
 one can incorporate advanced search and browse capabilities into an
 application.
 
-*
-http://cdn.cs50.net/2011/fall/seminars/intro_to_Solr/intro_to_Solr.pdf[Slides]
-*
-http://cs50.tv/2011/fall/seminars/intro_to_Solr/intro_to_Solr.mp4[Video]
-*
-http://cdn.cs50.net/2011/fall/seminars/intro_to_Solr/intro_to_Solr.ova[Virtual
-Machine]
+* http://cdn.cs50.net/2011/fall/seminars/intro_to_Solr/intro_to_Solr.pdf[Slides]
+* http://cs50.tv/2011/fall/seminars/intro_to_Solr/intro_to_Solr.mp4[Video]
+* http://cdn.cs50.net/2011/fall/seminars/intro_to_Solr/intro_to_Solr.ova[Virtual Machine]
 
 
 User Experience (UX) Design
@@ -761,10 +712,8 @@ CS179, this seminar teaches you what you need to keep in mind when
 making products so you can create a great best user experience—because
 it's always the designer's fault!
 
-*
-http://cdn.cs50.net/2011/fall/seminars/user_UX_design/user_UX_design.pdf[Slides]
-*
-http://cs50.tv/2011/fall/seminars/user_UX_design/user_UX_design.mp4[Video]
+* http://cdn.cs50.net/2011/fall/seminars/user_UX_design/user_UX_design.pdf[Slides]
+* http://cs50.tv/2011/fall/seminars/user_UX_design/user_UX_design.mp4[Video]
 
 
 Web Security
@@ -776,11 +725,8 @@ You know how to build websites, but do you know how to make them secure?
 We'll teach you about some of the most common Web Security
 vulnerabilities and how to fix them.
 
-*
-http://cdn.cs50.net/2011/fall/seminars/Web_security/Web_security.pdf[Slides]
-*
-http://cdn.cs50.net/2011/fall/seminars/Web_security/Web_security.zip[Source
-Code]
+* http://cdn.cs50.net/2011/fall/seminars/Web_security/Web_security.pdf[Slides]
+* http://cdn.cs50.net/2011/fall/seminars/Web_security/Web_security.zip[Source Code]
 * http://cs50.tv/2011/fall/seminars/Web_security/Web_security.mp4[Video]
 
 
@@ -802,10 +748,8 @@ a 6-year software development hosted portal for academia _et al._ in
 Harvard. The Harvard ABCD Forge is available at
 https://forge.abcd.harvard.edu/[forge.abcd.harvard.edu].
 
-*
-http://cdn.cs50.net/2010/fall/seminars/BeyondGit_ForgingSDLC/BeyondGit_ForgingSDLC.pdf[Slides]
-*
-http://cs50.tv/2010/fall/seminars/BeyondGit_ForgingSDLC/BeyondGit_ForgingSDLC.mp4[Video]
+* http://cdn.cs50.net/2010/fall/seminars/BeyondGit_ForgingSDLC/BeyondGit_ForgingSDLC.pdf[Slides]
+* http://cs50.tv/2010/fall/seminars/BeyondGit_ForgingSDLC/BeyondGit_ForgingSDLC.mp4[Video]
 
 
 BlackBerry Application Development
@@ -813,16 +757,12 @@ BlackBerry Application Development
 
 by Tian Feng '11
 
-Learn the basics of the
-http://en.wikipedia.org/wiki/BlackBerry[BlackBerry] Application
-Interface and developing
-http://en.wikipedia.org/wiki/Java_(programming_language)[Java]
+Learn the basics of the http://en.wikipedia.org/wiki/BlackBerry[BlackBerry] Application
+Interface and developing http://en.wikipedia.org/wiki/Java_(programming_language)[Java]
 applications.
 
-*
-http://cdn.cs50.net/2010/fall/seminars/BlackBerryApplicationDevelopment/BlackBerryApplicationDevelopment.pdf[Slides]
-*
-http://cs50.tv/2010/fall/seminars/BlackBerryApplicationDevelopment/BlackBerryApplicationDevelopment.mp4[Video]
+* http://cdn.cs50.net/2010/fall/seminars/BlackBerryApplicationDevelopment/BlackBerryApplicationDevelopment.pdf[Slides]
+* http://cs50.tv/2010/fall/seminars/BlackBerryApplicationDevelopment/BlackBerryApplicationDevelopment.mp4[Video]
 
 
 Crash Course in Java
@@ -830,22 +770,15 @@ Crash Course in Java
 
 by Matthew Chartier '12
 
-Comprehensive introduction to the syntax, features, advantages, and
-limitations of the
+Comprehensive introduction to the syntax, features, advantages, and limitations of the
 http://en.wikipedia.org/wiki/Java_(programming_language)[Java]
 programming language, relating back to
 http://en.wikipedia.org/wiki/C_(programming_language)[C]. Introducing
-basic topics in
-http://en.wikipedia.org/wiki/Object-oriented_programming[object-oriented
-programming].
+basic topics in http://en.wikipedia.org/wiki/Object-oriented_programming[object-oriented programming].
 
-*
-http://cdn.cs50.net/2010/fall/seminars/CrashCourseInJava/CrashCourseInJava.pdf[Slides]
-*
-http://cdn.cs50.net/2010/fall/seminars/CrashCourseInJava/CrashCourseInJava.zip[Source
-Code]
-*
-http://cs50.tv/2010/fall/seminars/CrashCourseInJava/CrashCourseInJava.mp4[Video]
+* http://cdn.cs50.net/2010/fall/seminars/CrashCourseInJava/CrashCourseInJava.pdf[Slides]
+* http://cdn.cs50.net/2010/fall/seminars/CrashCourseInJava/CrashCourseInJava.zip[Source Code]
+* http://cs50.tv/2010/fall/seminars/CrashCourseInJava/CrashCourseInJava.mp4[Video]
 
 
 Creating Awesome Websites with Ruby on Rails
@@ -865,10 +798,8 @@ http://en.wikipedia.org/wiki/Model–View–Controller[MVC] design pattern,
 and how to create and deploy a killer Rails website in minutes (that's
 right, minutes).
 
-*
-http://cdn.cs50.net/2010/fall/seminars/CreatingAwesomeWebsitesWithRubyOnRails/CreatingAwesomeWebsitesWithRubyOnRails.pdf[Slides]
-*
-http://cs50.tv/2010/fall/seminars/CreatingAwesomeWebsitesWithRubyOnRails/CreatingAwesomeWebsitesWithRubyOnRails.mp4[Video]
+* http://cdn.cs50.net/2010/fall/seminars/CreatingAwesomeWebsitesWithRubyOnRails/CreatingAwesomeWebsitesWithRubyOnRails.pdf[Slides]
+* http://cs50.tv/2010/fall/seminars/CreatingAwesomeWebsitesWithRubyOnRails/CreatingAwesomeWebsitesWithRubyOnRails.mp4[Video]
 
 
 Data Visualization and Graphics with Processing
@@ -887,13 +818,9 @@ Processing and off to a final project! A survey of visual applications
 using Processing will be made to give you more implementation ideas for
 your project.
 
-*
-http://cdn.cs50.net/2010/fall/seminars/DataVisualizationAndGraphicsWithProcessing/DataVisualizationAndGraphicsWithProcessing.pdf[Slides]
-*
-http://cdn.cs50.net/2010/fall/seminars/DataVisualizationAndGraphicsWithProcessing/DataVisualizationAndGraphicsWithProcessing.zip[Source
-Code]
-*
-http://cs50.tv/2010/fall/seminars/DataVisualizationAndGraphicsWithProcessing/DataVisualizationAndGraphicsWithProcessing.mp4[Video]
+* http://cdn.cs50.net/2010/fall/seminars/DataVisualizationAndGraphicsWithProcessing/DataVisualizationAndGraphicsWithProcessing.pdf[Slides]
+* http://cdn.cs50.net/2010/fall/seminars/DataVisualizationAndGraphicsWithProcessing/DataVisualizationAndGraphicsWithProcessing.zip[Source Code]
+* http://cs50.tv/2010/fall/seminars/DataVisualizationAndGraphicsWithProcessing/DataVisualizationAndGraphicsWithProcessing.mp4[Video]
 
 
 Developing Apps for iOS: iPhone, iPad, and iPod Touch
@@ -911,13 +838,9 @@ paradigm, basic syntax, memory management, Core Data, and UI elements.
 Students will learn the basics of creating simple, table, tab bar and
 split view controller applications.
 
-*
-http://cdn.cs50.net/2010/fall/seminars/DevelopingAppsFor_iOS_iPhone_iPad_And_iPodTouch/DevelopingAppsFor_iOS_iPhone_iPad_And_iPodTouch.pdf[Slides]
-*
-http://cdn.cs50.net/2010/fall/seminars/DevelopingAppsFor_iOS_iPhone_iPad_And_iPodTouch/CS50_Practice_iOS_App.zip[Source
-Code], _should be run on Simulator 4.2 Debug with LLVM Compiler 1.6_
-*
-http://cs50.tv/2010/fall/seminars/DevelopingAppsFor_iOS_iPhone_iPad_And_iPodTouch/DevelopingAppsFor_iOS_iPhone_iPad_And_iPodTouch.mp4[Video]
+* http://cdn.cs50.net/2010/fall/seminars/DevelopingAppsFor_iOS_iPhone_iPad_And_iPodTouch/DevelopingAppsFor_iOS_iPhone_iPad_And_iPodTouch.pdf[Slides]
+* http://cdn.cs50.net/2010/fall/seminars/DevelopingAppsFor_iOS_iPhone_iPad_And_iPodTouch/CS50_Practice_iOS_App.zip[Source Code], _should be run on Simulator 4.2 Debug with LLVM Compiler 1.6_
+* http://cs50.tv/2010/fall/seminars/DevelopingAppsFor_iOS_iPhone_iPad_And_iPodTouch/DevelopingAppsFor_iOS_iPhone_iPad_And_iPodTouch.mp4[Video]
 
 
 Educational Software Development
@@ -931,8 +854,7 @@ including how to do requirements gathering, how to choose development
 platforms, and how to assess your project. The instructor has over 20
 years experience in designing and producing educational software.
 
-*
-http://cs50.tv/2010/fall/seminars/EducationalSoftwareDevelopment/EducationalSoftwareDevelopment.mp4[Video]
+* http://cs50.tv/2010/fall/seminars/EducationalSoftwareDevelopment/EducationalSoftwareDevelopment.mp4[Video]
 
 
 Linux Demystified
@@ -944,10 +866,8 @@ Come learn about arguably the most successful collective action effort
 in the history of the world. Dive into the tool used by the pros and
 learn what it takes. Bring along your laptop so you can play along.
 
-*
-http://cdn.cs50.net/2010/fall/seminars/LinuxDemystified/LinuxDemystified.pdf[Slides]
-*
-http://cs50.tv/2010/fall/seminars/LinuxDemystified/LinuxDemystified.mp4[Video]
+* http://cdn.cs50.net/2010/fall/seminars/LinuxDemystified/LinuxDemystified.pdf[Slides]
+* http://cs50.tv/2010/fall/seminars/LinuxDemystified/LinuxDemystified.mp4[Video]
 
 
 Modern Client-Side Web Programming
@@ -965,8 +885,7 @@ embedding video directly, using a canvas to draw arbitrary objects,
 dynamically storing data in the browser using localStorage, and
 animating and transforming your webpages to your heart's content.
 
-*
-http://cs50.tv/2010/fall/seminars/ModernClient-SideWebProgramming/ModernClient-SideWebProgramming.mp4[Video]
+* http://cs50.tv/2010/fall/seminars/ModernClient-SideWebProgramming/ModernClient-SideWebProgramming.mp4[Video]
 
 
 Search Engine Optimization (SEO)
@@ -981,10 +900,8 @@ optimize your website to make it more search-engine-friendly and boost
 your search engine ranking. We'll cover everything from html tags, to
 URLs, links, keyword strategy, and overall content.
 
-*
-http://cdn.cs50.net/2010/fall/seminars/SearchEngineOptimization_SEO/SearchEngineOptimization_SEO.pdf[Slides]
-*
-http://cs50.tv/2010/fall/seminars/SearchEngineOptimization_SEO/SearchEngineOptimization_SEO.mp4[Video]
+* http://cdn.cs50.net/2010/fall/seminars/SearchEngineOptimization_SEO/SearchEngineOptimization_SEO.pdf[Slides]
+* http://cs50.tv/2010/fall/seminars/SearchEngineOptimization_SEO/SearchEngineOptimization_SEO.mp4[Video]
 
 
 SMS 101: Mobile Applications for ALL Types of Phones
@@ -1012,10 +929,8 @@ Whether you're interested in updating
 http://shuttleboy.cs50.net/[Shuttleboy] or solving world peace, this
 seminar will be a good starting point.
 
-*
-http://cdn.cs50.net/2010/fall/seminars/SMS101_MobileApplicationsForAllTypesOfPhones/SMS101_MobileApplicationsForAllTypesOfPhones.pdf[Slides]
-*
-http://cs50.tv/2010/fall/seminars/SMS101_MobileApplicationsForAllTypesOfPhones/SMS101_MobileApplicationsForAllTypesOfPhones.mp4[Video]
+* http://cdn.cs50.net/2010/fall/seminars/SMS101_MobileApplicationsForAllTypesOfPhones/SMS101_MobileApplicationsForAllTypesOfPhones.pdf[Slides]
+* http://cs50.tv/2010/fall/seminars/SMS101_MobileApplicationsForAllTypesOfPhones/SMS101_MobileApplicationsForAllTypesOfPhones.mp4[Video]
 
 
 Socialize Your Apps with Facebook Platform
@@ -1029,13 +944,9 @@ http://developers.facebook.com/docs/api[Graph API] and how to use the
 http://github.com/facebook/php-sdk/[SDKs in PHP]. An overview of the
 features in the API and examples of possible integrations.
 
-*
-http://cdn.cs50.net/2010/fall/seminars/SocializeYourAppsWithFacebookPlatform/SocializeYourAppsWithFacebookPlatform.pdf[Slides]
-*
-http://cdn.cs50.net/2010/fall/seminars/SocializeYourAppsWithFacebookPlatform/SocializeYourAppsWithFacebookPlatform.zip[Source
-Code]
-*
-http://cs50.tv/2010/fall/seminars/SocializeYourAppsWithFacebookPlatform/SocializeYourAppsWithFacebookPlatform.mp4[Video]
+* http://cdn.cs50.net/2010/fall/seminars/SocializeYourAppsWithFacebookPlatform/SocializeYourAppsWithFacebookPlatform.pdf[Slides]
+* http://cdn.cs50.net/2010/fall/seminars/SocializeYourAppsWithFacebookPlatform/SocializeYourAppsWithFacebookPlatform.zip[Source Code]
+* http://cs50.tv/2010/fall/seminars/SocializeYourAppsWithFacebookPlatform/SocializeYourAppsWithFacebookPlatform.mp4[Video]
 
 
 Vim
@@ -1065,8 +976,7 @@ What It Costs. Q&A.
 * Video
 ** http://cdn.cs50.net/2009/fall/seminars/EC2_seminar.flv?play[Flash]
 ** http://cdn.cs50.net/2009/fall/seminars/EC2_seminar.mp3?download[MP3]
-**
-http://cdn.cs50.net/2009/fall/seminars/EC2_seminar.mov?download[QuickTime]
+** http://cdn.cs50.net/2009/fall/seminars/EC2_seminar.mov?download[QuickTime]
 
 
 Android Apps with App Inventor
@@ -1082,12 +992,9 @@ collections. This is a great way to try out mobile apps, and to
 collaborate with a community of developers at Google and other colleges
 participating in the App Inventor alpha.
 
-*
-http://cdn.cs50.net/2009/fall/seminars/AndroidAppsWithAppInventor.flv?play[Flash]
-*
-http://cdn.cs50.net/2009/fall/seminars/AndroidAppsWithAppInventor.mp3?download[MP3]
-*
-http://cdn.cs50.net/2009/fall/seminars/AndroidAppsWithAppInventor.mov?download[QuickTime]
+* http://cdn.cs50.net/2009/fall/seminars/AndroidAppsWithAppInventor.flv?play[Flash]
+* http://cdn.cs50.net/2009/fall/seminars/AndroidAppsWithAppInventor.mp3?download[MP3]
+* http://cdn.cs50.net/2009/fall/seminars/AndroidAppsWithAppInventor.mov?download[QuickTime]
 
 
 Android Apps with Java
@@ -1102,12 +1009,9 @@ begin developing applications that run on Android-powered devices.
 
 * http://cdn.cs50.net/2009/fall/seminars/AndroidAppswithJava.pdf[Slides]
 * Video
-**
-http://cdn.cs50.net/2009/fall/seminars/AndroidAppsWithJava.flv?play[Flash]
-**
-http://cdn.cs50.net/2009/fall/seminars/AndroidAppsWithJava.mp3?download[MP3]
-**
-http://cdn.cs50.net/2009/fall/seminars/AndroidAppsWithJava.mov?download[QuickTime]
+** http://cdn.cs50.net/2009/fall/seminars/AndroidAppsWithJava.flv?play[Flash]
+** http://cdn.cs50.net/2009/fall/seminars/AndroidAppsWithJava.mp3?download[MP3]
+** http://cdn.cs50.net/2009/fall/seminars/AndroidAppsWithJava.mov?download[QuickTime]
 
 
 Beginning iPhone Development: Resources, Tips & Tricks
@@ -1123,12 +1027,9 @@ tips, tricks, and customizations that we've learned through trial and
 error. Hopefully from our experience, we can make your life a lot
 easier!
 
-*
-http://cdn.cs50.net/2009/fall/seminars/Beginning_iPhoneDevelopment.flv?play[Flash]
-*
-http://cdn.cs50.net/2009/fall/seminars/Beginning_iPhoneDevelopment.mp3?download[MP3]
-*
-http://cdn.cs50.net/2009/fall/seminars/Beginning_iPhoneDevelopment.mov?download[QuickTime]
+* http://cdn.cs50.net/2009/fall/seminars/Beginning_iPhoneDevelopment.flv?play[Flash]
+* http://cdn.cs50.net/2009/fall/seminars/Beginning_iPhoneDevelopment.mp3?download[MP3]
+* http://cdn.cs50.net/2009/fall/seminars/Beginning_iPhoneDevelopment.mov?download[QuickTime]
 
 
 Building Social Applications with the Facebook Platform
@@ -1147,12 +1048,9 @@ to add the social element to their websites and other applications.
 Learn how to create such an application yourself and join the social
 web.
 
-*
-http://cdn.cs50.net/2009/fall/seminars/BuildingSocialApplicationsWithFacebookPlatform.flv?play[Flash]
-*
-http://cdn.cs50.net/2009/fall/seminars/BuildingSocialApplicationsWithFacebookPlatform.mp3?download[MP3]
-*
-http://cdn.cs50.net/2009/fall/seminars/BuildingSocialApplicationsWithFacebookPlatform.mov?download[QuickTime]
+* http://cdn.cs50.net/2009/fall/seminars/BuildingSocialApplicationsWithFacebookPlatform.flv?play[Flash]
+* http://cdn.cs50.net/2009/fall/seminars/BuildingSocialApplicationsWithFacebookPlatform.mp3?download[MP3]
+* http://cdn.cs50.net/2009/fall/seminars/BuildingSocialApplicationsWithFacebookPlatform.mov?download[QuickTime]
 
 
 Dynamic Websites on Rails
@@ -1169,12 +1067,9 @@ Rails, ultimately building a dynamic application in mere minutes. Give
 in to peer pressure and join sites like Hulu, Twitter, and Jobster in
 riding the Rails.
 
-*
-http://cdn.cs50.net/2009/fall/seminars/DynamicWebsitesOnRails.flv?play[Flash]
-*
-http://cdn.cs50.net/2009/fall/seminars/DynamicWebsitesOnRails.mp3?download[MP3]
-*
-http://cdn.cs50.net/2009/fall/seminars/DynamicWebsitesOnRails.mov?download[QuickTime]
+* http://cdn.cs50.net/2009/fall/seminars/DynamicWebsitesOnRails.flv?play[Flash]
+* http://cdn.cs50.net/2009/fall/seminars/DynamicWebsitesOnRails.mp3?download[MP3]
+* http://cdn.cs50.net/2009/fall/seminars/DynamicWebsitesOnRails.mov?download[QuickTime]
 
 
 Hadoop for Large-Scale Computation
@@ -1222,12 +1117,9 @@ they can be invoked from your
 http://en.wikipedia.org/wiki/Ajax_(programming)[Ajax] or
 http://www.adobe.com/products/flex/[Flex]-based User Interface.
 
-*
-http://cdn.cs50.net/2009/fall/seminars/InteractiveDataApplications.flv?play[Flash]
-*
-http://cdn.cs50.net/2009/fall/seminars/InteractiveDataApplications.mp3?download[MP3]
-*
-http://cdn.cs50.net/2009/fall/seminars/InteractiveDataApplications.mov?download[QuickTime]
+* http://cdn.cs50.net/2009/fall/seminars/InteractiveDataApplications.flv?play[Flash]
+* http://cdn.cs50.net/2009/fall/seminars/InteractiveDataApplications.mp3?download[MP3]
+* http://cdn.cs50.net/2009/fall/seminars/InteractiveDataApplications.mov?download[QuickTime]
 
 
 Scraping Data from the Internet
@@ -1248,16 +1140,11 @@ http://CrimsonDining.org/[CrimsonDining.org], which uses robust scraping
 to retrieve menu data from Dining Services. The techniques covered in
 this seminar will apply to any programming language or framework.
 
-*
-http://cdn.cs50.net/2009/fall/seminars/ScrapingDataFromInternet.zip[Source
-Code]
+* http://cdn.cs50.net/2009/fall/seminars/ScrapingDataFromInternet.zip[Source Code]
 * Video
-**
-http://cdn.cs50.net/2009/fall/seminars/ScrapingDataFromInternet.flv?play[Flash]
-**
-http://cdn.cs50.net/2009/fall/seminars/ScrapingDataFromInternet.mp3?download[MP3]
-**
-http://cdn.cs50.net/2009/fall/seminars/ScrapingDataFromInternet.mov?download[QuickTime]
+** http://cdn.cs50.net/2009/fall/seminars/ScrapingDataFromInternet.flv?play[Flash]
+** http://cdn.cs50.net/2009/fall/seminars/ScrapingDataFromInternet.mp3?download[MP3]
+** http://cdn.cs50.net/2009/fall/seminars/ScrapingDataFromInternet.mov?download[QuickTime]
 
 
 Visualizing Data and Data Art with Processing
@@ -1304,12 +1191,9 @@ Adobe has recently announced that the forthcoming Flash CS5 will be able
 to run on iPhone -- this represents a tremendous opportunity for getting
 into the mobile wave.
 
-*
-http://cdn.cs50.net/2009/fall/seminars/VisualizingDataInteractively.flv?play[Flash]
-*
-http://cdn.cs50.net/2009/fall/seminars/VisualizingDataInteractively.mp3?download[MP3]
-*
-http://cdn.cs50.net/2009/fall/seminars/VisualizingDataInteractively.mov?download[QuickTime]
+* http://cdn.cs50.net/2009/fall/seminars/VisualizingDataInteractively.flv?play[Flash]
+* http://cdn.cs50.net/2009/fall/seminars/VisualizingDataInteractively.mp3?download[MP3]
+* http://cdn.cs50.net/2009/fall/seminars/VisualizingDataInteractively.mov?download[QuickTime]
 
 
 Voice Application Development
@@ -1348,12 +1232,9 @@ http://www.google.com/talk/[Google Talk], mixing of audio streams from
 multiple sources such as other phone lines for conferencing or local
 files/shoutcast.
 
-*
-http://cdn.cs50.net/2009/fall/seminars/VoiceApplicationDevelopment.flv?play[Flash]
-*
-http://cdn.cs50.net/2009/fall/seminars/VoiceApplicationDevelopment.mp3?download[MP3]
-*
-http://cdn.cs50.net/2009/fall/seminars/VoiceApplicationDevelopment.mov?download[QuickTime]
+* http://cdn.cs50.net/2009/fall/seminars/VoiceApplicationDevelopment.flv?play[Flash]
+* http://cdn.cs50.net/2009/fall/seminars/VoiceApplicationDevelopment.mp3?download[MP3]
+* http://cdn.cs50.net/2009/fall/seminars/VoiceApplicationDevelopment.mov?download[QuickTime]
 
 
 Fall 2008
@@ -1366,10 +1247,8 @@ Accepting Payments with Google Checkout
 by Mike Tucker '03
 
 * http://cdn.cs50.net/2008/fall/seminars/GoogleCheckout.flv?play[Flash]
-*
-http://cdn.cs50.net/2008/fall/seminars/GoogleCheckout.mp3?download[MP3]
-*
-http://cdn.cs50.net/2008/fall/seminars/GoogleCheckout.mov?download[QuickTime]
+* http://cdn.cs50.net/2008/fall/seminars/GoogleCheckout.mp3?download[MP3]
+* http://cdn.cs50.net/2008/fall/seminars/GoogleCheckout.mov?download[QuickTime]
 
 
 Advanced Ajax and JavaScript
@@ -1382,8 +1261,7 @@ by Josh Bolduc '11
 * Video
 ** http://cdn.cs50.net/2008/fall/seminars/AdvAjax_JS.flv?play[Flash]
 ** http://cdn.cs50.net/2008/fall/seminars/AdvAjax_JS.mp3?download[MP3]
-**
-http://cdn.cs50.net/2008/fall/seminars/AdvAjax_JS.mov?download[QuickTime]
+** http://cdn.cs50.net/2008/fall/seminars/AdvAjax_JS.mov?download[QuickTime]
 
 
 Android
@@ -1421,10 +1299,8 @@ Django
 
 by Andy Lei '09
 
-*
-http://cdn.cs50.net/2008/fall/seminars/Django/django.code.tar.bz2[Code]
-*
-http://cdn.cs50.net/2008/fall/seminars/Django/django.outline.pdf[Outline]
+* http://cdn.cs50.net/2008/fall/seminars/Django/django.code.tar.bz2[Code]
+* http://cdn.cs50.net/2008/fall/seminars/Django/django.outline.pdf[Outline]
 * Video
 ** http://cdn.cs50.net/2008/fall/seminars/Django.flv?play[Flash]
 ** http://cdn.cs50.net/2008/fall/seminars/Django.mp3?download[MP3]
@@ -1436,13 +1312,11 @@ Facebook Apps
 
 by Linfeng Yang '11
 
-*
-http://cdn.cs50.net/2008/fall/seminars/FacebookApps/Facebook%20App%20Seminar.pdf[Slides]
+* http://cdn.cs50.net/2008/fall/seminars/FacebookApps/Facebook%20App%20Seminar.pdf[Slides]
 * Video
 ** http://cdn.cs50.net/2008/fall/seminars/FacebookApps.flv?play[Flash]
 ** http://cdn.cs50.net/2008/fall/seminars/FacebookApps.mp3?download[MP3]
-**
-http://cdn.cs50.net/2008/fall/seminars/FacebookApps.mov?download[QuickTime]
+** http://cdn.cs50.net/2008/fall/seminars/FacebookApps.mov?download[QuickTime]
 
 
 Firefox Add-Ons
@@ -1452,8 +1326,7 @@ by Brett Thomas '10
 
 * http://cdn.cs50.net/2008/fall/seminars/FirefoxAddOns.flv?play[Flash]
 * http://cdn.cs50.net/2008/fall/seminars/FirefoxAddOns.mp3?download[MP3]
-*
-http://cdn.cs50.net/2008/fall/seminars/FirefoxAddOns.mov?download[QuickTime]
+* http://cdn.cs50.net/2008/fall/seminars/FirefoxAddOns.mov?download[QuickTime]
 
 
 iPhone Apps
@@ -1461,17 +1334,13 @@ iPhone Apps
 
 by Vivek Sant '11
 
-* http://cdn.cs50.net/2008/fall/seminars/iPhoneApps/HelloWorld.zip[Hello
-World]
-*
-http://cdn.cs50.net/2008/fall/seminars/iPhoneApps/iCalculator.zip[iCalculator]
-*
-http://cdn.cs50.net/2008/fall/seminars/iPhoneApps/iPhone_Dev_Seminar_Slides.pdf[Slides]
+* http://cdn.cs50.net/2008/fall/seminars/iPhoneApps/HelloWorld.zip[Hello World]
+* http://cdn.cs50.net/2008/fall/seminars/iPhoneApps/iCalculator.zip[iCalculator]
+* http://cdn.cs50.net/2008/fall/seminars/iPhoneApps/iPhone_Dev_Seminar_Slides.pdf[Slides]
 * Video
 ** http://cdn.cs50.net/2008/fall/seminars/iPhoneApps.flv?play[Flash]
 ** http://cdn.cs50.net/2008/fall/seminars/iPhoneApps.mp3?download[MP3]
-**
-http://cdn.cs50.net/2008/fall/seminars/iPhoneApps.mov?download[QuickTime]
+** http://cdn.cs50.net/2008/fall/seminars/iPhoneApps.mov?download[QuickTime]
 
 
 Java 3D
@@ -1491,8 +1360,7 @@ by David Wu '11
 
 * http://cdn.cs50.net/2008/fall/seminars/JavaSwingAWT.flv?play[Flash]
 * http://cdn.cs50.net/2008/fall/seminars/JavaSwingAWT.mp3?download[MP3]
-*
-http://cdn.cs50.net/2008/fall/seminars/JavaSwingAWT.mov?download[QuickTime]
+* http://cdn.cs50.net/2008/fall/seminars/JavaSwingAWT.mov?download[QuickTime]
 
 
 Real-world PHP
@@ -1500,13 +1368,11 @@ Real-world PHP
 
 by Keito Uchiyama '11
 
-*
-http://cdn.cs50.net/2008/fall/seminars/RealWorldPHP/RealWorldPHP.pdf[Slides]
+* http://cdn.cs50.net/2008/fall/seminars/RealWorldPHP/RealWorldPHP.pdf[Slides]
 * Video
 ** http://cdn.cs50.net/2008/fall/seminars/RealWorldPHP.flv?play[Flash]
 ** http://cdn.cs50.net/2008/fall/seminars/RealWorldPHP.mp3?download[MP3]
-**
-http://cdn.cs50.net/2008/fall/seminars/RealWorldPHP.mov?download[QuickTime]
+** http://cdn.cs50.net/2008/fall/seminars/RealWorldPHP.mov?download[QuickTime]
 
 
 Ruby on Rails
@@ -1516,8 +1382,7 @@ by Aaron Oehlschlaeger '11 and Linfeng Yang '11
 
 * http://cdn.cs50.net/2008/fall/seminars/RubyOnRails.flv?play[Flash]
 * http://cdn.cs50.net/2008/fall/seminars/RubyOnRails.mp3?download[MP3]
-*
-http://cdn.cs50.net/2008/fall/seminars/RubyOnRails.mov?download[QuickTime]
+* http://cdn.cs50.net/2008/fall/seminars/RubyOnRails.mov?download[QuickTime]
 
 
 Fall 2007
@@ -1531,8 +1396,7 @@ by Thomas Carriero '08
 
 * http://cdn.cs50.net/2007/fall/seminars/seminar_OOP.flv?play[Flash]
 * http://cdn.cs50.net/2007/fall/seminars/seminar_OOP.mp3?download[MP3]
-*
-http://cdn.cs50.net/2007/fall/seminars/seminar_OOP.mov?download[QuickTime]
+* http://cdn.cs50.net/2007/fall/seminars/seminar_OOP.mov?download[QuickTime]
 
 
 Choosing the Right Languages/Libraries
@@ -1542,8 +1406,7 @@ by Kelly Heffner and Paul Govereau
 
 * http://cdn.cs50.net/2007/fall/seminars/seminar_LL.flv?play[Flash]
 * http://cdn.cs50.net/2007/fall/seminars/seminar_LL.mp3?download[MP3]
-*
-http://cdn.cs50.net/2007/fall/seminars/seminar_LL.mov?download[QuickTime]
+* http://cdn.cs50.net/2007/fall/seminars/seminar_LL.mov?download[QuickTime]
 
 
 Event-Driven Programming
@@ -1553,8 +1416,7 @@ by Kelly Heffner
 
 * http://cdn.cs50.net/2007/fall/seminars/seminar_EDP.flv?play[Flash]
 * http://cdn.cs50.net/2007/fall/seminars/seminar_EDP.mp3?download[MP3]
-*
-http://cdn.cs50.net/2007/fall/seminars/seminar_EDP.mov?download[QuickTime]
+* http://cdn.cs50.net/2007/fall/seminars/seminar_EDP.mov?download[QuickTime]
 
 
 [[How_to_Write_SMS-Based_Programs]]
@@ -1565,8 +1427,7 @@ by Chris Power
 
 * http://cdn.cs50.net/2007/fall/seminars/seminar_SMS.flv?play[Flash]
 * http://cdn.cs50.net/2007/fall/seminars/seminar_SMS.mp3?download[MP3]
-*
-http://cdn.cs50.net/2007/fall/seminars/seminar_SMS.mov?download[QuickTime]
+* http://cdn.cs50.net/2007/fall/seminars/seminar_SMS.mov?download[QuickTime]
 
 
 Intro to Ruby on Rails
@@ -1578,8 +1439,7 @@ _Warning: Rails has changed significantly since this seminar._
 
 * http://cdn.cs50.net/2007/fall/seminars/seminar_ROR.flv?play[Flash]
 * http://cdn.cs50.net/2007/fall/seminars/seminar_ROR.mp3?download[MP3]
-*
-http://cdn.cs50.net/2007/fall/seminars/seminar_ROR.mov?download[QuickTime]
+* http://cdn.cs50.net/2007/fall/seminars/seminar_ROR.mov?download[QuickTime]
 
 
 Network Programming
@@ -1589,8 +1449,7 @@ by Paul Govereau
 
 * http://cdn.cs50.net/2007/fall/seminars/seminar_NP.flv?play[Flash]
 * http://cdn.cs50.net/2007/fall/seminars/seminar_NP.mp3?download[MP3]
-*
-http://cdn.cs50.net/2007/fall/seminars/seminar_NP.mov?download[QuickTime]
+* http://cdn.cs50.net/2007/fall/seminars/seminar_NP.mov?download[QuickTime]
 
 
 OpenGL (Graphics Library)
@@ -1599,10 +1458,8 @@ OpenGL (Graphics Library)
 by Paul Govereau
 
 * http://cdn.cs50.net/2007/fall/seminars/seminar_OpenGL.flv?play[Flash]
-*
-http://cdn.cs50.net/2007/fall/seminars/seminar_OpenGL.mp3?download[MP3]
-*
-http://cdn.cs50.net/2007/fall/seminars/seminar_OpenGL.mov?download[QuickTime]
+* http://cdn.cs50.net/2007/fall/seminars/seminar_OpenGL.mp3?download[MP3]
+* http://cdn.cs50.net/2007/fall/seminars/seminar_OpenGL.mov?download[QuickTime]
 
 
 SDL (Graphics Library)
@@ -1612,6 +1469,5 @@ by Thomas Carriero
 
 * http://cdn.cs50.net/2007/fall/seminars/seminar_SDL.flv?play[Flash]
 * http://cdn.cs50.net/2007/fall/seminars/seminar_SDL.mp3?download[MP3]
-*
-http://cdn.cs50.net/2007/fall/seminars/seminar_SDL.mov?download[QuickTime]
+* http://cdn.cs50.net/2007/fall/seminars/seminar_SDL.mov?download[QuickTime]
 

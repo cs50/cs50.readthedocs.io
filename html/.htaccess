@@ -14,3 +14,8 @@ RewriteRule .* scss.php [L]
 # route /* to index.php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule .* index.php [L]
+
+Redirect /iOS_University_Program /ios
+Redirect /Appliance /appliance/17
+
+

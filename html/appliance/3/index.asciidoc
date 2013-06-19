@@ -8,11 +8,11 @@ title: CS50 Appliance 3
 * *If following Spring 2012 of CS1, CS51, or CS164, you should use this
 version of the appliance.*
 * *If following https://www.cs50.net/[Fall 2011] of CS50, you should use
-link:CS50 Appliance 2.3[version 2.3] of the appliance.*
+link:../2.3[version 2.3] of the appliance.*
 * *If following http://cs50.tv/2010/fall/[Fall 2010] of CS50, you should
-use link:CS50 Appliance 2.1[version 2.1] of the appliance.*
+use link:../2.1[version 2.1] of the appliance.*
 * *If following http://cs50.tv/2009/fall/[Fall 2009] of CS50, you should
-use link:CS50 Appliance 1.4[version 1.4] instead.*
+use link:../1.4[version 1.4] instead.*
 
 The CS50 Appliance is a
 http://en.wikipedia.org/wiki/Virtual_machine[virtual machine] (VM) that
@@ -73,6 +73,7 @@ Instructions
 ------------
 
 
+[[how_to_install_appliance]]
 How to Install Appliance
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -83,20 +84,20 @@ http://en.wikipedia.org/wiki/Virtual_machine[virtual machines] on your
 own computer, whether you run Mac OS, Windows, or Linux.
 
 * If you have a *Mac*, we recommend that you follow:
-** link:CS50_Appliance_3/VMware_Fusion[these instructions for VMware
+** link:VMware_Fusion[these instructions for VMware
 Fusion] if you are a student at Harvard
-** link:CS50_Appliance_3/VirtualBox[these instructions for VirtualBox]
+** link:VirtualBox[these instructions for VirtualBox]
 if you are not a student at Harvard
 * If you have a *PC running Windows*, we recommend that you follow:
-** link:CS50_Appliance_3/VMware_Player[these instructions for VMware
+** link:VMware_Player[these instructions for VMware
 Player]
 * If you have a *PC running Linux*, we recommend that you follow:
-** link:CS50_Appliance_3/VirtualBox[these instructions for VirtualBox]
+** link:VirtualBox[these instructions for VirtualBox]
 
 Once installed, it's not uncommon for the appliance to take a minute or
 so to boot. But if, once at John Harvard's desktop, the appliance still
 feels unbearably slow, you might need to enable
-link:Hardware Virtualization[hardware virtualization] on your computer
+link:../../Hardware_Virtualization[hardware virtualization] on your computer
 if it's a PC running Windows or Linux. (Hardware virtualization should
 be enabled by default on any Intel-based Mac manufactured in the past
 few years.) Even with hardware virtualization enabled, though, virtual
@@ -137,7 +138,7 @@ restart each of the appliance's services.
 
 *Note that you cannot update from version 1.4, 2.1, or 2.3 of the
 appliance to version 3. You must instead download 3-15, per the
-link:#_how_to_install_appliance[instructions] above. Thereafter, you'll
+link:#how_to_install_appliance[instructions] above. Thereafter, you'll
 be able to update from 3-15 to future releases, per the two ways above.*
 
 
@@ -1210,11 +1211,11 @@ not delete any code that you've written.
 Changelog
 ---------
 
-* link:CS50 Appliance 1.4#Changelog[1.4]
-* link:CS50 Appliance 2.0#Changelog[2.0]
-* link:CS50 Appliance 2.1#Changelog[2.1]
-* link:CS50 Appliance 2.2#Changelog[2.2]
-* link:CS50 Appliance 2.3#Changelog[2.3]
+* link:../1.4#Changelog[1.4]
+* link:../2.0#Changelog[2.0]
+* link:../2.1#Changelog[2.1]
+* link:../2.2#Changelog[2.2]
+* link:../2.3#Changelog[2.3]
 * 3-1
 ** Upgraded from Fedora 15 to Fedora 16.
 ** Faster boot time.

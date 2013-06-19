@@ -9,7 +9,7 @@ http://en.wikipedia.org/wiki/Comma-separated_values[CSV],
 http://en.wikipedia.org/wiki/JSON[JSON],
 http://en.wikipedia.org/wiki/JSON#JSONP[JSONP], or
 http://php.net/manual/en/function.serialize.php[serialized PHP]. Each
-night, CS50 link:Screen Scraping[screen-scrapes] nutritional facts,
+night, CS50 link:../../scraping[screen-scrapes] nutritional facts,
 menus, and recipes from
 http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp[This Week's
 Menu] and caches them in a local database that you can query. The API
@@ -23,7 +23,7 @@ http://food.cs50.net/[food.cs50.net] redirects to this API
 documentation. HarvardFood's database contains menus from 2009-10-28
 through the present date plus 6 days into the future; only for menus
 from 2011-03-21 onward are nutritional facts, portions, and recipes
-available. This wiki's article on link:Screen Scraping[Screen Scraping]
+available. This wiki's article on link:../../scraping[Screen Scraping]
 discusses how this API gets its data.
 
 *Version 1.3 of this API is operational. Versions 1.2 and prior of this
@@ -137,7 +137,7 @@ Sugars,0,0
 Note that the response's first row defines the CSV file's fields.
 Fields' order may change over time, so do not hardcode indices into your
 own code. Use that first row to determine fields' indices dynamically,
-per this article on link:Neat_Tricks#Parsing_CSV[parsing CSV].
+per this article on link:../../Neat_Tricks#Parsing_CSV[parsing CSV].
 
 
 ==== JSON
@@ -430,7 +430,7 @@ date,meal,category,recipe,name,portion,unit
 Note that the response's first row defines the CSV file's fields.
 Fields' order may change over time, so do not hardcode indices into your
 own code. Use that first row to determine fields' indices dynamically,
-per this article on link:Neat_Tricks#Parsing_CSV[parsing CSV].
+per this article on link:../../Neat_Tricks#Parsing_CSV[parsing CSV].
 
 
 ==== JSON
@@ -746,7 +746,7 @@ id,name,size,unit,ingredients,VEGETARIAN,VEGAN,"MOLLIE KATZEN",LOCAL,ORGANIC
 Note that the response's first row defines the CSV file's fields.
 Fields' order may change over time, so do not hardcode indices into your
 own code. Use that first row to determine fields' indices dynamically,
-per this article on link:../Neat_Tricks#Parsing_CSV[parsing CSV].
+per this article on link:../../Neat_Tricks#Parsing_CSV[parsing CSV].
 
 
 ==== JSON
@@ -854,7 +854,7 @@ Array
 ** http://food.cs50.net/api/1.3/recipes?id=117003&output=php
 
 
-= Implementations
+== Implementations
 
 * http://chrome.google.com/extensions/detail/kolkghlafoledmpdmpgjahlcehclkbpa[HUDS
 Daily Menu], by Filip Zembowicz. "This chrome extension allows easy

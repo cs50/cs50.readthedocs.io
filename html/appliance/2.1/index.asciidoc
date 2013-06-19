@@ -6,7 +6,7 @@ title: CS50 Appliance 2.1
 *This HOWTO is for version 2.1 of the CS50 Appliance. If "taking"
 http://cs50.tv/2010/fall/[Fall 2010] of CS50, you should use this
 version of the appliance. If "taking" http://cs50.tv/2009/fall/[Fall
-2009] of CS50, you should use link:CS50 Appliance 1.4[version 1.4]
+2009] of CS50, you should use link:../1.4[version 1.4]
 instead.*
 
 The CS50 Appliance is a
@@ -1365,12 +1365,12 @@ started.
 Changelog
 ---------
 
-* link:CS50 Appliance 1.4#Changelog[1.4]
-* link:CS50 Appliance 2.0#Changelog[2.0]
+* link:../1.4#Changelog[1.4]
+* link:../2.0#Changelog[2.0]
 * 2.1-1
 ** Enabled Samba for file sharing.
 * 2.1-3
-** Updated link:CS50 Library[CS50 Library] to 3.0 (eliminating garbage
+** Updated link:../../CS50_Library[CS50 Library] to 3.0 (eliminating garbage
 collection).
 ** Removed `-lgc` from `$LDLIBS`.
 ** Updated Firefox (and plugins) to 6.0; eliminated appliance's

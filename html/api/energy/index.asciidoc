@@ -75,7 +75,7 @@ Included in this method's output is each building's
 http://www.answers.com/topic/gross-square-foot[gross square footage]
 (GSF), if known.
 
-*Because the HarvardEnergy API and the link:HarvardMaps API[HarvardMaps
+*Because the HarvardEnergy API and the link:../maps[HarvardMaps
 API] rely on data from different sources on campus, this method's output
 may not be identical to the link:../api/maps[HarvardMaps API]'s
 link:../api/maps#buildings[buildings] method.*
@@ -97,7 +97,7 @@ id,name,gsf
 Note that the response's first row defines the CSV file's fields.
 Fields' order may change over time, so do not hardcode indices into your
 own code. Use that first row to determine fields' indices dynamically,
-per this article on link:../Neat_Tricks#Parsing_CSV[parsing CSV].
+per this article on link:../../Neat_Tricks#Parsing_CSV[parsing CSV].
 
 *Beware opening the CSV file in Excel, as some buildings' IDs have
 leading 0s that Excel likes to remove.*
@@ -220,7 +220,7 @@ month,utility,cost,use
 Note that the response's first row defines the CSV file's fields.
 Fields' order may change over time, so do not hardcode indices into your
 own code. Use that first row to determine fields' indices dynamically,
-per this article on link:../Neat_Tricks#Parsing_CSV[parsing CSV].
+per this article on link:../../Neat_Tricks#Parsing_CSV[parsing CSV].
 
 
 ==== JSON

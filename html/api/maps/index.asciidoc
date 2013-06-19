@@ -81,10 +81,10 @@ not strictly numeric; some are alphanumeric. All roots should be 5-digit
 values. Some building IDs and some roots include leading zeroes.
 
 *Because the HarvardMaps API and the
-link:HarvardEnergy API[HarvardEnergy API] rely on data from different
+link:../energy[HarvardEnergy API] rely on data from different
 sources on campus, this method's output may not be identical to the
-link:HarvardEnergy API[HarvardEnergy API]'s
-link:HarvardEnergy_API#buildings[buildings] method.*
+link:../energy[HarvardEnergy API]'s
+link:../energy#buildings[buildings] method.*
 
 
 ==== CSV
@@ -103,7 +103,7 @@ root,id,name,lat,lng
 Note that the response's first row defines the CSV file's fields.
 Fields' order may change over time, so do not hardcode indices into your
 own code. Use that first row to determine fields' indices dynamically,
-per this article on link:Neat_Tricks#Parsing_CSV[parsing CSV].
+per this article on link:../../Neat_Tricks#Parsing_CSV[parsing CSV].
 
 *Beware opening the CSV file in Excel, as some roots and IDs have
 leading 0s that Excel likes to remove.*

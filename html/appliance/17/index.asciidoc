@@ -13,7 +13,7 @@ version of the appliance.*
 * *If following Spring 2012 of CS1, CS51, or CS164, you should use
 link:../3[version 3] of the appliance.*
 * *If following https://www.cs50.net/[Fall 2011] of CS50, you should use
-link:CS50 Appliance 2.3[version 2.3] of the appliance.*
+link:../2.3[version 2.3] of the appliance.*
 * *If following http://cs50.tv/2010/fall/[Fall 2010] of CS50, you should
 use link:../2.1[version 2.1] of the appliance.*
 * *If following http://cs50.tv/2009/fall/[Fall 2009] of CS50, you should
@@ -110,7 +110,7 @@ VMware Workstation] if you have trouble with VirtualBox
 Once installed, it's not uncommon for the appliance to take a minute or
 so to boot. But if, once at John Harvard's desktop, the appliance still
 feels unbearably slow, you might need to enable
-link:Hardware Virtualization[hardware virtualization] on your computer
+link:../../Hardware_Virtualization[hardware virtualization] on your computer
 if it's a PC running Windows or Linux. (Hardware virtualization should
 be enabled by default on any Intel-based Mac manufactured in the past
 few years.) Even with hardware virtualization enabled, though, virtual

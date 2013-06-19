@@ -136,7 +136,7 @@ foreach ($dom->channel->item as $item)
 == Screen Scraping
 
 This topic warrants some discussion, so here's a whole article on
-link:../Screen_Scraping[screen scraping].
+link:../scraping[screen scraping].
 
 
 [[sending_mail]]

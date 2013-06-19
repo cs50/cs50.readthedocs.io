@@ -1,5 +1,4 @@
 <?php
-
     require(__DIR__ . "/../includes/config.php");
 
     // get requested article's YAML and HTML
@@ -35,7 +34,6 @@
 
         <title>
             <?php
-            
                 if (http_response_code() !== 403 && isset($data["yaml"]["title"])) {
                     print(htmlspecialchars($data["yaml"]["title"]) . " / ");
                 }

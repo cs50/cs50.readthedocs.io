@@ -8,9 +8,9 @@ title: CS50 Appliance 2.3
 * *If following https://www.cs50.net/[Fall 2011] of CS50, you should use
 this version of the appliance.*
 * *If following http://cs50.tv/2010/fall/[Fall 2010] of CS50, you should
-use link:CS50 Appliance 2.1[version 2.1] of the appliance.*
+use link:../2.1[version 2.1] of the appliance.*
 * *If following http://cs50.tv/2009/fall/[Fall 2009] of CS50, you should
-use link:CS50 Appliance 1.4[version 1.4] instead.*
+use link:../1.4[version 1.4] instead.*
 
 The CS50 Appliance is a
 http://en.wikipedia.org/wiki/Virtual_machine[virtual machine] (VM) that
@@ -102,7 +102,7 @@ cross-platform.*
 *Once installed, it's not uncommon for the appliance to take 1 – 2
 minutes to boot. But if, once at John Harvard's desktop, the appliance
 still feels unbearably slow, you might need to enable
-link:Hardware Virtualization[hardware virtualization] on your computer
+link:../../Hardware_Virtualization[hardware virtualization] on your computer
 if it's a PC running Windows or Linux. (Hardware virtualization should
 be enabled by default on any Intel-based Mac manufactured in the past
 few years.) Even with hardware virtualization enabled, though, virtual
@@ -1324,10 +1324,10 @@ yellow.
 Changelog
 ---------
 
-* link:CS50 Appliance 1.4#Changelog[1.4]
-* link:CS50 Appliance 2.0#Changelog[2.0]
-* link:CS50 Appliance 2.0#Changelog[2.1]
-* link:CS50 Appliance 2.0#Changelog[2.2]
+* link:../1.4#Changelog[1.4]
+* link:../2.0#Changelog[2.0]
+* link:../2.0#Changelog[2.1]
+* link:../2.0#Changelog[2.2]
 * 2.3-1
 ** Corrected `cs50.repo` to point to 2.3's repository instead of 2.1's.
 ** Fixed NFS-mounting of snapshots.
@@ -1404,7 +1404,7 @@ http://developer.gnome.org/integration-guide/stable/startup-notification.html.en
 ** Updated Firebug, Live HTTP Headers, and Web Developer plugins for
 Firefox 7.
 ** Enabled persistent cookies for `lynx`.
-** Added link:CS50 Check[CS50 Check].
+** Added CS50 Check.
 * 2.3-13
 ** Changed hostname from `appliance` to `appliance.localdomain`.
 ** Imposed 4GB filesize limit on John Harvard.
