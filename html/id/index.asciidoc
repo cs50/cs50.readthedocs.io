@@ -34,11 +34,11 @@ own]) depicts how CS50 ID works (in 8 steps, from top to bottom).
 
 image:CS50_ID.png[CS50_ID.png,title="image"]
 
-Thanks to the link:CS50 Library[CS50 Library], though, you don't need to
+Thanks to the link:../CS50_Library[CS50 Library], though, you don't need to
 implement (or even understand!) all of these steps in order to
 link:#how_to_add_cs50_id_to_your_website[add CS50 ID to your website].
-Per the link:#examples[examples] for link:#PHP[PHP],
-link:#python[Python], and link:#Ruby[Ruby], all you need do is call two
+Per the link:#examples[examples] for link:#php[PHP],
+link:#python[Python], and link:#ruby[Ruby], all you need do is call two
 methods (inspired by https://github.com/facebook/php-sdk[Facebook's
 own]):
 
@@ -81,7 +81,7 @@ change this address, you'll need to contact sysadmins@cs50.net.*
 https://spreadsheets1.google.com/spreadsheet/viewform?hl=en&hl=en&formkey=dFkxWmJHSkd3N1haM1pRN3JabnFaRkE6MQ[CS50
 ID Application]. If you don't hear back within 72 hours, email
 sysadmins@cs50.net to inquire.
-4.  Download the latest version of the link:CS50 Library[CS50 Library]
+4.  Download the latest version of the link:../CS50_Library[CS50 Library]
 for http://mirror.cs50.net/library/php/[PHP],
 http://mirror.cs50.net/library/python/[Python], or
 http://mirror.cs50.net/library/ruby/[Ruby] and integrate it into your
@@ -92,8 +92,8 @@ website, per the link:#examples[examples] below.
 == Examples
 
 Below are examples of how to add CS50 ID to your website in
-link:#php[PHP], link:#Python[Python], and link:#Ruby[Ruby] using the
-link:CS50 Library[CS50 Library]. Each example implements the behavior at
+link:#php[PHP], link:#python[Python], and link:#ruby[Ruby] using the
+link:../CS50_Library[CS50 Library]. Each example implements the behavior at
 https://id.cs50.net/example/.
 
 To add CS50 ID to your website using some other library or language,
@@ -119,7 +119,7 @@ ID Application].
 https://spreadsheets1.google.com/spreadsheet/viewform?hl=en&hl=en&formkey=dFkxWmJHSkd3N1haM1pRN3JabnFaRkE6MQ[CS50
 ID Application].
 
-And we also `require` the link:CS50 Library[CS50 Library].
+And we also `require` the link:../CS50_Library[CS50 Library].
 
 [source,php]
 -------------------------------------------------------------------------------------
@@ -142,7 +142,7 @@ And we also `require` the link:CS50 Library[CS50 Library].
 ?>
 -------------------------------------------------------------------------------------
 
-Note that, on `cloud.cs50.net` and in the link:CS50 Appliance[CS50
+Note that, on `cloud.cs50.net` and in the link:../CS50_Appliance[CS50
 Appliance], the CS50 Library is installed in `/usr/share/php/`, which is
 in PHP's `include_path`, which means you can `require` it with a much
 shorter path:
@@ -205,7 +205,7 @@ login.php
 
 Rather than display a login form to the user, notice how this file
 simply redirects the user to CS50 ID, specifically to the URL returned
-by `getLoginUrl`, a static method defined in the link:CS50 Library[CS50
+by `getLoginUrl`, a static method defined in the link:../CS50_Library[CS50
 Library].
 
 [source,php]
@@ -237,7 +237,7 @@ return_to.php
 
 This is the page to which the user will be returned by CS50 ID (per the
 definition of `RETURN_TO` in link:#_config.php[config.php]). Note that
-`getUser`, a static method defined in the link:CS50 Library[CS50
+`getUser`, a static method defined in the link:../CS50_Library[CS50
 Library], will return an associative array that represents the user who
 logged in via CS50 ID. Included in that associative array will be at
 least one key:
@@ -499,9 +499,9 @@ need to follow the link:#how_to_add_cs50_id_to_your_website[directions
 above].*
 
 If, though, you would like to add CS50 ID to your website using some
-library other than the link:CS50 Library[CS50 Library] or some language
-other than link:#_php[PHP], link:#Python[Python], and link:#Ruby[Ruby]
-(which the link:CS50 Library[CS50 Library] supports), below are
+library other than the link:../CS50_Library[CS50 Library] or some language
+other than link:#php[PHP], link:#python[Python], and link:#ruby[Ruby]
+(which the link:../CS50_Library[CS50 Library] supports), below are
 implementation details for the technically curious.
 
 
@@ -517,7 +517,7 @@ the address on which discovery should be performed) is
 `https://id.cs50.net/`. (Note the `https`.)
 
 As per link:#how_cs50_id_works[how CS50 ID works], whether you use the
-link:CS50 Library[CS50 Library] or some other library to add CS50 ID to
+link:../CS50_Library[CS50 Library] or some other library to add CS50 ID to
 your website, here's how authentication must flow:
 
 1.  User tries to access a page on your website that requires login.
@@ -802,7 +802,7 @@ email sysadmins@cs50.net to inquire, CCing the user.
 
 === CS50 Library requires bcmath or gmp extension module
 
-The link:Library#PHP[CS50 Library for PHP] is pre-installed in the
+The link:../Library#PHP[CS50 Library for PHP] is pre-installed in the
 link:Appliance[CS50 Appliance] and on `cloud.cs50.net`, as are all
 dependencies. But if using the library on some other server, you may see
 this error if http://php.net/manual/en/book.bc.php[BC Math] and
@@ -858,8 +858,8 @@ Try running the following commands as `root`:
 
 === CS50 Library requires openssl extension module
 
-The link:Library#PHP[CS50 Library for PHP] is pre-installed in the
-link:Appliance[CS50 Appliance] and on `cloud.cs50.net`, as are all
+The link:../Library#PHP[CS50 Library for PHP] is pre-installed in the
+link:../Appliance[CS50 Appliance] and on `cloud.cs50.net`, as are all
 dependencies. But if using the library on some other server, you may see
 this error if http://php.net/manual/en/book.openssl.php[OpenSSL] is not
 already installed.
