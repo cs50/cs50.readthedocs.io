@@ -12,6 +12,16 @@
     -webkit-box-shadow: #{$value};
 }
 
+@mixin background-cover($value) {
+    background: url($value) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.#{$value}', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$value}', sizingMethod='scale')";
+}
+
 @mixin background-color($value) {
     background-color: ie-hex-str($value);
     background-color: $value;

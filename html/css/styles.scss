@@ -76,8 +76,7 @@ code {
 #background {
     width: 100%;
     height: 100%;
-    background: url(/img/wood_background.jpg); 
-    background-position: 50% 0%;
+    @include background-cover('http://photos.cs50.net/Events/Advising-Fortnight-2011-Hsieh/i-7TjbnLh/0/X3/IMG_0852-X3.jpg');
 }
 
 .not-main #preamble {
@@ -172,6 +171,7 @@ code {
         @include background-linear-gradient(top, #FFF, #F3F3F3);
         @include ie-gradient(top, #FFF, #F3F3F3);
         @include box-shadow(0px 0px 3px #333);
+        @include opacity(.98);
     }
     
     #search-wrapper {
