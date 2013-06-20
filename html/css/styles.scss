@@ -478,3 +478,31 @@ code {
 .error404 {
     text-align: center;
 }
+
+#copyright {
+    text-align: right;
+    line-height: 1em;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: -10px;
+    padding: 5px 30px;
+    background-color: #08c;
+    @include background-linear-gradient(top, #0195DF, #08c);
+    @include ie-gradient(top, #0195DF, #08c);
+    color: white;
+    text-shadow: 0px -1px #444;
+    display: inline-block;
+    position: relative;
+    @include box-shadow(1px 1px 2px #BBB);
+    z-index: 1;
+
+    &:before {
+        position: absolute;
+        content: '';
+        left: 0px;
+        bottom: -10px;
+        border: 5px solid transparent;
+        border-top: 5px solid #51BEF5;
+        border-right: 5px solid #51BEF5;
+    }
+}

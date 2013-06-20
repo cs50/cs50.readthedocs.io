@@ -76,6 +76,7 @@
                     print('<div class="circle-outer"><div class="circle-inner"></div></div><h1 class="error404">Woof, this page doesn\'t exist!</h1>');
                 }
             ?>
+            <div id="copyright">Copyright &copy; 2013, CS50</div>
         </div>
 
         <script>
