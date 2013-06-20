@@ -16,6 +16,14 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule .* index.php [L]
 
 # backwards compatibility with former Manual
+Redirect /iOS_University_Program /ios
+Redirect /CS50_Appliance /Appliance
+Redirect /CS50_Appliance_1.4 /appliance/1.4
+Redirect /CS50_Appliance_2.0 /appliance/2.0
+Redirect /CS50_Appliance_2.1 /appliance/2.1
+Redirect /CS50_Appliance_2.3 /appliance/2.3
+Redirect /CS50_Appliance_3 /appliance/3
+Redirect /CS50_Appliance_17 /appliance/17
 Redirect /Appliance /appliance
 Redirect /CS50_Appliance /Appliance
 Redirect /iOS_University_Program /ios
