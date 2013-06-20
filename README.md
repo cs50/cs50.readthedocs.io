@@ -54,17 +54,17 @@ See http://powerman.name/doc/asciidoc for an AsciiDoc cheatsheet.
 
 For headers use this format:
 
- == Level 1
- Text.
+    == Level 1
+    Text.
 
- === Level 2
- Text.
+    === Level 2
+    Text.
 
- ==== Level 3
- Text.
+    ==== Level 3
+    Text.
 
- ===== Level 4
- Text.
+    ===== Level 4
+    Text.
 
 # Deployment
 
