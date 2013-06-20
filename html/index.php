@@ -73,9 +73,8 @@
                     print($html);
                 }
                 else {
-                    print("<div>404 Not Found</div>");
+                    print('<div class="circle-outer"><div class="circle-inner"></div></div><h1 class="error404">Woof, this page doesn\'t exist!</h1>');
                 }
-
             ?>
         </div>
 
