@@ -31,7 +31,7 @@ Outside appliance (assuming Mac):
 
 # Usage
 
-To create a new post using, e.g., `vim`:
+To create a new article using, e.g., `vim`:
 
     cd ~/vhosts/manual.cs50.net/html
     vim foo.asciidoc
@@ -39,13 +39,32 @@ To create a new post using, e.g., `vim`:
 The contents of `foo.asciidoc` should be, e.g.:
 
     ---
-    tags: [quizzes]
-    title: How to Proctor
+    title: Foo
     ---
 
-    Once upon a time...
+    Foo is a...
 
-where `tags` and `title` constitute "YAML front matter" (i.e., metadata).
+where `title` constitutes "YAML front matter" (i.e., metadata), and everything below ---\n is AsciiDoc.
+
+See http://powerman.name/doc/asciidoc for an AsciiDoc cheatsheet.
+
+# Style
+
+## Headers
+
+For headers use this format:
+
+ == Level 1
+ Text.
+
+ === Level 2
+ Text.
+
+ ==== Level 3
+ Text.
+
+ ===== Level 4
+ Text.
 
 # Deployment
 
