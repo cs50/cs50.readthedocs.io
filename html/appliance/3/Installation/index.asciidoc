@@ -30,7 +30,7 @@ a CPU that's only 1GHz or so, or has only 1GB or so of RAM.*
 
 == VirtualBox
 
-Here's how to install the link:CS50_Appliance_3[CS50|Appliance] using
+Here's how to install the link:../[CS50|Appliance] using
 VirtualBox.
 
 1.  Install VirtualBox per

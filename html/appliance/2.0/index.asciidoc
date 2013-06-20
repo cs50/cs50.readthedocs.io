@@ -4,7 +4,7 @@ title: CS50 Appliance 2.0
 ---
 
 *This HOWTO is for version 2.0 of the CS50 Appliance. A
-link:Appliance[newer version] of the appliance is now available.*
+link:../../Appliance[newer version] of the appliance is now available.*
 
 The CS50 Appliance is a
 http://en.wikipedia.org/wiki/Virtual_machine[virtual machine] (VM) that
@@ -112,7 +112,7 @@ How to Update Appliance
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 The latest release of the CS50 Appliance is *2.0-10*. To check which
-version you have, link:#__how_to_open_a_terminal[open a terminal] and look
+version you have, link:#how_to_open_a_terminal[open a terminal] and look
 to the right of the
 http://www.network-science.de/ascii/ascii.php?TEXT=cs50+appliance&x=34&y=10&FONT=ogre&RICH=no&FORM=left&STRE=no&WIDT=80[ASCII
 art], as in the below.

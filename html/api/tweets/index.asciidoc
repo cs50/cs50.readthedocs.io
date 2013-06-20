@@ -89,7 +89,7 @@ Harvard,"Harvard University",http://harvard.edu,"Highlighting advances in teachi
 Note that the response's first row defines the CSV file's fields.
 Fields' order may change over time, so do not hardcode indices into your
 own code. Use that first row to determine fields' indices dynamically,
-per this article on link:Neat_Tricks#Parsing_CSV[parsing CSV].
+per this article on link:../../Neat_Tricks#Parsing_CSV[parsing CSV].
 
 
 ==== JSON
@@ -237,7 +237,7 @@ id,from_user,to_user,text,created_at
 Note that the response's first row defines the CSV file's fields.
 Fields' order may change over time, so do not hardcode indices into your
 own code. Use that first row to determine fields' indices dynamically,
-per this article on link:Neat_Tricks#Parsing_CSV[parsing CSV].
+per this article on link:../../Neat_Tricks#Parsing_CSV[parsing CSV].
 
 
 ==== JSON

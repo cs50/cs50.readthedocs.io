@@ -625,7 +625,7 @@ can extract those fields we want pretty easily.
 === Source Code
 
 Below is (a simplified version of) the screen scraper used by the
-link:../food/api[HarvardFood API]; it assumes that *DB_HOST*,
+link:../api/food[HarvardFood API]; it assumes that *DB_HOST*,
 *DB_NAME*, *DB_USER*, and *DB_PASS* are constants defined in a file
 called *constants.php*.
 

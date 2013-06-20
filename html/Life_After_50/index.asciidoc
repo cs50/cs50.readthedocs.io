@@ -35,7 +35,7 @@ for an account of your own, fill out the form at
 http://www.hcs.harvard.edu/acctrequest, selecting *CS50 Final Project*
 under *Harvard Affiliation* and checking the box under *MySQL* if you'd
 also like a MySQL account. PHP, Python, Perl, and Ruby on Rails are all
-supported, as are link:../Virtual_Host[vhosts], so you can map a domain
+supported, as are vhosts, so you can map a domain
 name to your HCS account. See HCS's
 http://www.hcs.harvard.edu/tutorials[tutorials] for more details.
 * *http://www.google.com/apps/intl/en/group.html[Google Apps]*.
@@ -54,7 +54,7 @@ Host]*. If you'd rather not host your website with HCS (e.g., because
 you're graduating soon), you can sign up for a commercial web host,
 which tend to cost a few dollars per month. Most support MySQL, PHP,
 Python, Ruby, and more, but not C. And almost all support
-link:Virtual Host[vhosts]; some even let you host multiple domains
+vhosts; some even let you host multiple domains
 inside of one account. Odds are you'll prefer, for flexibility's sake, a
 web host that offers SSH and SFTP access and not just a Web-based
 http://en.wikipedia.org/wiki/Control_panel_(web_hosting)[control panel].

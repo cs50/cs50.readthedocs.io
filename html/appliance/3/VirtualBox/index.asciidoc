@@ -3,7 +3,7 @@ tags: []
 title: VirtualBox
 ---
 
-Here's how to install the link:CS50_Appliance_3[CS50 Appliance] using
+Here's how to install the link:../../CS50_Appliance_3[CS50 Appliance] using
 VirtualBox for link:#_mac_os[Mac OS], link:#Windows[Windows], and
 link:#_linux[Linux].
 
@@ -67,7 +67,7 @@ the window contains precisely these values:
 * *Upper Address Bound:* 192.168.56.254
 17. Click *OK*.
 18. Click *OK*.
-19. Download a ZIP file of the link:CS50_Appliance_3[CS50 Appliance] at
+19. Download a ZIP file of the link:../../CS50_Appliance_3[CS50 Appliance] at
 http://mirror.cs50.net/appliance/3/cs50-appliance-3-15-ovf.zip. That ZIP
 file is over 1GB in size, so it might take a while to download.
 20. Once downloaded, unzip the ZIP file, and you should have a folder

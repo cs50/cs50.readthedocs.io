@@ -1,5 +1,5 @@
 ---
-tags: []
+tags: [HOWTO]
 title: CS50 Appliance 3
 ---
 
@@ -830,13 +830,13 @@ sudo chmod 644 /etc/profile.d/proxy.sh
 How to Run Programs from Lectures
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-See link:Fall_2011#Lectures[Fall 2011's HOWTO].
+See link:../../Fall_2011#Lectures[Fall 2011's HOWTO].
 
 
 How to Do Problem Sets
 ~~~~~~~~~~~~~~~~~~~~~~
 
-See link:Fall_2011#Problem_Sets[Fall 2011's HOWTO].
+See link:../../Fall_2011#Problem_Sets[Fall 2011's HOWTO].
 
 
 Accessibility
@@ -1214,7 +1214,7 @@ Changelog
 * link:../1.4#Changelog[1.4]
 * link:../2.0#Changelog[2.0]
 * link:../2.1#Changelog[2.1]
-* link:../2.2#Changelog[2.2]
+* 2.2
 * link:../2.3#Changelog[2.3]
 * 3-1
 ** Upgraded from Fedora 15 to Fedora 16.
@@ -1348,5 +1348,3 @@ including, but not limited to:
 * Rory O'Reilly
 * Sergio Prado
 * Shaun Gibson
-
-Category:HOWTO

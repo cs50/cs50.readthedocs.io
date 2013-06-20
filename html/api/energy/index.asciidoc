@@ -77,8 +77,8 @@ http://www.answers.com/topic/gross-square-foot[gross square footage]
 
 *Because the HarvardEnergy API and the link:../maps[HarvardMaps
 API] rely on data from different sources on campus, this method's output
-may not be identical to the link:../api/maps[HarvardMaps API]'s
-link:../api/maps#buildings[buildings] method.*
+may not be identical to the link:../maps[HarvardMaps API]'s
+link:../maps#buildings[buildings] method.*
 
 
 ==== CSV

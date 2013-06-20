@@ -5,7 +5,7 @@ title: CS50 Appliance 1.4
 
 *This HOWTO is for version 1.4 of the CS50 Appliance. You should only
 use this version if you are "taking" http://cs50.tv/2009/fall/[Fall
-2009] of CS50. Otherwise, a link:Appliance[newer version] is available.*
+2009] of CS50. Otherwise, a link:../../Appliance[newer version] is available.*
 
 The CS50 Appliance (aka "CS50 in a Box") is a virtual machine (VM) that
 lets anyone on the Internet (like you!) tackle the

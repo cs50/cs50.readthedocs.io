@@ -1,5 +1,5 @@
 ---
-tags: []
+tags: [HOWTO]
 title: CS50 Appliance 2.1
 ---
 
@@ -1007,13 +1007,13 @@ sudo chmod 644 /etc/profile.d/proxy.sh
 How to Run Programs from Lectures
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-See link:Fall_2010#Lectures[Fall 2010's HOWTO].
+See link:../../Fall_2010#Lectures[Fall 2010's HOWTO].
 
 
 How to Do Problem Sets
 ~~~~~~~~~~~~~~~~~~~~~~
 
-See link:Fall_2010#Problem_Sets[Fall 2010's HOWTO].
+See link:../../Fall_2010#Problem_Sets[Fall 2010's HOWTO].
 
 
 Implementation Details
@@ -1428,5 +1428,3 @@ including, but not limited to:
 * Rory O'Reilly
 * Sergio Prado
 * Shaun Gibson
-
-Category:HOWTO

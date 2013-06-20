@@ -90,8 +90,6 @@ own computer, whether you run Mac OS, Windows, or Linux.
 Fusion]
 ** link:VirtualBox[these instructions for VirtualBox]
 if you end have trouble with VMware Fusion
-** link:Parallels[these instructions for Parallels] if
-you already own Parallels
 * If you have a *PC running Windows*, we recommend that you follow:
 ** link:VMware_Player[these instructions for VMware
 Player]
@@ -861,13 +859,13 @@ in the terminal.
 How to Run Programs from Lectures
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-See link:../Fall_2012[Fall 2012's HOWTO].
+See link:../../Fall_2012[Fall 2012's HOWTO].
 
 
 How to Do Problem Sets
 ~~~~~~~~~~~~~~~~~~~~~~
 
-See link:../Fall_2012[Fall 2012's HOWTO].
+See link:../../Fall_2012[Fall 2012's HOWTO].
 
 
 Accessibility
@@ -959,7 +957,7 @@ Changelog
 * link:../1.4#Changelog[1.4]
 * link:../2.0#Changelog[2.0]
 * link:../2.1#Changelog[2.1]
-* link:../2.2#Changelog[2.2]
+* 2.2
 * link:../2.3#Changelog[2.3]
 * link:../3#Changelog[3]
 * 17-0

@@ -3,7 +3,7 @@ tags: []
 title: VMware Workstation
 ---
 
-Here's how to install the link:CS50_Appliance_3[CS50 Appliance] using
+Here's how to install the link:../../CS50_Appliance_3[CS50 Appliance] using
 VMware Workstation for link:#_installation[Windows].
 
 
@@ -37,7 +37,7 @@ and/or *Start Menu Programs folder* if you'd like.)
 *Continue*.
 11. Once the *setup wizard has successfully completed*, click *Restart
 Now* if prompted, else *Finish*.
-12. Download a ZIP file of the link:CS50_Appliance_3[CS50 Appliance] at
+12. Download a ZIP file of the link:../../CS50_Appliance_3[CS50 Appliance] at
 http://mirror.cs50.net/appliance/3/cs50-appliance-3-vmx.zip. That ZIP
 file is over 1GB in size, so it might take a while to download.
 13. Once downloaded, unzip the ZIP file, and you should have a folder

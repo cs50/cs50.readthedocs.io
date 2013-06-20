@@ -68,7 +68,7 @@ the window contains precisely these values:
 * *Upper Address Bound:* 192.168.56.254
 17. Click *OK*.
 18. Click *OK*.
-19. Download a ZIP file of the link:CS50_Appliance_17[CS50 Appliance] at
+19. Download a ZIP file of the link:../../CS50_Appliance_17[CS50 Appliance] at
 http://mirror.cs50.net/appliance50/17/i386/appliance50-17-9-ovf.zip
 (http://mirror.cs50.net.s3.amazonaws.com/appliance50/17/i386/appliance50-17-9-ovf.zip?torrent[torrent]).
 That ZIP file is over 1GB in size, so it might take a while to download.
@@ -103,7 +103,7 @@ Nonexistent host networking interface, name '' (VERR_INTERNAL_ERROR)
 
 For some reason, VirtualBox doesn't always come with a "host-only
 adapter" configured. (A "host-only adapter" lets you connect to the
-link:CS50_Appliance_17[CS50 Appliance] via HTTP, SSH, and the like.) To
+link:../../CS50_Appliance_17[CS50 Appliance] via HTTP, SSH, and the like.) To
 resolve this problem:
 
 1.  Launch VirtualBox. (If VirtualBox is already running, shut down any
@@ -118,18 +118,18 @@ image:Virtualbox-plus.png[Virtualbox-plus.png,title="image"] icon to the
 right of that box, and *vboxnet0* should then appear in the box.
 5.  Click *OK*.
 6.  Single-click whichever virtual machine originally triggered the
-error (e.g., the link:CS50_Appliance_17[CS50 Appliance]), then click
+error (e.g., the link:../../CS50_Appliance_17[CS50 Appliance]), then click
 *Settings*.
 7.  Click *Network*.
 8.  Click each of *Adapter 1*, *Adapter 2*, *Adapter 3*, and *Adapter
 4*. If any of them has both *Enable Network Adapter* checked and a value
 of *Host-only Adapter* for *Attached to* (as should the
-link:CS50_Appliance_17[CS50 Appliance] for *Adapter 2*), ensure that the
+link:../../CS50_Appliance_17[CS50 Appliance] for *Adapter 2*), ensure that the
 adapter also has a value of *vboxnet0* now for *Name*, selecting it
 yourself from the drop-down menu next to *Name* yourself if necessary.
 9.  Click *OK*.
 10. Start whichever virtual machine originally triggered the problem
-(e.g., the link:CS50_Appliance_17[CS50 Appliance]); it should now be
+(e.g., the link:../../CS50_Appliance_17[CS50 Appliance]); it should now be
 gone.
 
 
@@ -152,7 +152,7 @@ followed by Enter, inputting your password if prompted.
 3.  Quit Terminal via *File > Quit Terminal*.
 4.  Launch VirtualBox, if not already running.
 5.  Start whichever virtual machine originally triggered the problem
-(e.g., the link:CS50_Appliance_17[CS50 Appliance]); it should now be
+(e.g., the link:../../CS50_Appliance_17[CS50 Appliance]); it should now be
 gone.
 
 Source: http://forums.virtualbox.org/viewtopic.php?f=7&t=38825
@@ -176,7 +176,7 @@ followed by Enter, inputting your password if prompted.
 3.  Quit Terminal via *File > Quit Terminal*.
 4.  Launch VirtualBox, if not already running.
 5.  Start whichever virtual machine originally triggered the problem
-(e.g., the link:CS50_Appliance_17[CS50 Appliance]); it should now be
+(e.g., the link:../../CS50_Appliance_17[CS50 Appliance]); it should now be
 gone.
 
 Source: http://forums.virtualbox.org/viewtopic.php?f=7&t=39179
@@ -252,7 +252,7 @@ the window contains precisely these values:
 * *Upper Address Bound:* 192.168.56.254
 17. Click *OK*.
 18. Click *OK*.
-19. Download a ZIP file of the link:CS50_Appliance_17[CS50 Appliance] at
+19. Download a ZIP file of the link:../../CS50_Appliance_17[CS50 Appliance] at
 http://mirror.cs50.net/appliance50/17/i386/appliance50-17-9-ovf.zip
 (http://mirror.cs50.net.s3.amazonaws.com/appliance50/17/i386/appliance50-17-9-ovf.zip?torrent[torrent]).
 That ZIP file is over 1GB in size, so it might take a while to download.
@@ -276,9 +276,9 @@ start the appliance. If you see a black-and-white screen entitled *GNU
 GRUB*, no need to do anything; the appliance will continue to boot after
 a few seconds!
 
-If you ultimately find that the link:CS50_Appliance_17[CS50 Appliance]
+If you ultimately find that the link:../../CS50_Appliance_17[CS50 Appliance]
 runs unbearably slow within VirtualBox, you might need to enable
-link:../Hardware_Virtualization[hardware virtualization] on your PC.
+link:../../Hardware_Virtualization[hardware virtualization] on your PC.
 
 
 Troubleshooting
@@ -290,7 +290,7 @@ Nonexistent host networking interface, name '' (VERR_INTERNAL_ERROR)
 
 For some reason, VirtualBox doesn't always come with a "host-only
 adapter" configured. (A "host-only adapter" lets you connect to the
-link:CS50_Appliance_17[CS50 Appliance] via HTTP, SSH, and the like.) To
+link:../../CS50_Appliance_17[CS50 Appliance] via HTTP, SSH, and the like.) To
 resolve this problem:
 
 1.  Launch VirtualBox. (If VirtualBox is already running, shut down any
@@ -305,19 +305,19 @@ right of that box, and *VirtualBox Host-Only Ethernet Adapter* should
 then appear in the box.
 5.  Click *OK*.
 6.  Single-click whichever virtual machine originally triggered the
-error (e.g., the link:CS50_Appliance_17[CS50 Appliance]), then click
+error (e.g., the link:../../CS50_Appliance_17[CS50 Appliance]), then click
 *Settings*.
 7.  Click *Network*.
 8.  Click each of *Adapter 1*, *Adapter 2*, *Adapter 3*, and *Adapter
 4*. If any of them has both *Enable Network Adapter* checked and a value
 of *Host-only Adapter* for *Attached to* (as should the
-link:CS50_Appliance_17[CS50 Appliance] for *Adapter 2*), ensure that the
+link:../../CS50_Appliance_17[CS50 Appliance] for *Adapter 2*), ensure that the
 adapter also has a value of *VirtualBox Host-Only Ethernet Adapter* now
 for *Name*, selecting it yourself from the drop-down menu next to *Name*
 yourself if necessary.
 9.  Click *OK*.
 10. Start whichever virtual machine originally triggered the problem
-(e.g., the link:CS50_Appliance_17[CS50 Appliance]); it should now be
+(e.g., the link:../../CS50_Appliance_17[CS50 Appliance]); it should now be
 gone.
 
 
@@ -327,7 +327,7 @@ Ethernet Adapter' (VERR_INTERNAL_ERROR)
 
 Sometimes (e.g., after an update), VirtualBox forgets about its
 "host-only adapter." (A "host-only adapter" lets you connect to the
-link:CS50_Appliance_17[CS50 Appliance] via HTTP, SSH, and the like.) To
+link:../../CS50_Appliance_17[CS50 Appliance] via HTTP, SSH, and the like.) To
 resolve this problem:
 
 1.  Launch VirtualBox. (If VirtualBox is already running, shut down any
@@ -342,19 +342,19 @@ right of that box, and *VirtualBox Host-Only Ethernet Adapter* should
 then appear in the box.
 5.  Click *OK*.
 6.  Single-click whichever virtual machine originally triggered the
-error (e.g., the link:CS50_Appliance_17[CS50 Appliance]), then click
+error (e.g., the link:../../CS50_Appliance_17[CS50 Appliance]), then click
 *Settings*.
 7.  Click *Network*.
 8.  Click each of *Adapter 1*, *Adapter 2*, *Adapter 3*, and *Adapter
 4*. If any of them has both *Enable Network Adapter* checked and a value
 of *Host-only Adapter* for *Attached to* (as should the
-link:CS50_Appliance_17[CS50 Appliance] for *Adapter 2*), ensure that the
+link:../../CS50_Appliance_17[CS50 Appliance] for *Adapter 2*), ensure that the
 adapter also has a value of *VirtualBox Host-Only Ethernet Adapter* now
 for *Name*, selecting it yourself from the drop-down menu next to *Name*
 yourself if necessary.
 9.  Click *OK*.
 10. Start whichever virtual machine originally triggered the problem
-(e.g., the link:CS50_Appliance_17[CS50 Appliance]); it should now be
+(e.g., the link:../../CS50_Appliance_17[CS50 Appliance]); it should now be
 gone.
 
 
@@ -486,7 +486,7 @@ a few seconds!
 
 If you ultimately find that the link:..[CS50 Appliance]
 runs unbearably slow within VirtualBox, you might need to enable
-link:Hardware_Virtualization[hardware virtualization] on your PC.
+link:../../Hardware_Virtualization[hardware virtualization] on your PC.
 
 
 Troubleshooting

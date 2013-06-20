@@ -1,5 +1,5 @@
 ---
-tags: []
+tags: [HOWTO]
 title: VMware Player
 ---
 
@@ -22,7 +22,7 @@ and/or *Start Menu Programs folder* if you'd like.)
 *Continue*.
 8.  Once you see *Setup Wizard Complete*, click *Restart Now* if
 prompted, else *Continue*.
-9.  Download a ZIP file of the link:CS50_Appliance_17[CS50 Appliance] at
+9.  Download a ZIP file of the link:../../CS50_Appliance_17[CS50 Appliance] at
 http://mirror.cs50.net/appliance50/17/i386/appliance50-17-9-vmx.zip
 (http://mirror.cs50.net.s3.amazonaws.com/appliance50/17/i386/appliance50-17-9-vmx.zip?torrent[torrent]).
 That ZIP file is over 1GB in size, so it might take a while to download.
@@ -51,6 +51,4 @@ up the appliance.
 === Binary translation is incompatible with long mode on this platform
 
 If you see this message, you might need to enable
-link:Hardware_Virtualization[hardware virtualization] on your computer.
-
-Category:HOWTO
+link:../../Hardware_Virtualization[hardware virtualization] on your computer.

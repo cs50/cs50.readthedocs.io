@@ -1,11 +1,11 @@
 TODOS:
 D    remove links to deprecated articles
-    move deprecated articles
-    embed raw html
+D    move deprecated articles
+D    embed raw html
 D    backslash for nano
 D    undeprecate screen scrapting
 D    undeprecate ACLs to /acl
-    gcal in research
+D    gcal in research
 D    deprecate Omega
 D    deprecate Theta
 D    deprecate cron
@@ -13,42 +13,42 @@ D    deprecate how to lead a seminar
 D    nix see also
 Current issues:
 D    ctrl symbols in nano/#_commands
-    links to /Appliance break - make redirect to 17?
+D    links to /Appliance break - make redirect to 17?
 D    Virtual_Host is deprecated, but its linked to by Life After 50
 D    Screen_Scraping is deprecated, but its linked to by Neat Tricks
 D    CS50 Cloud is deprecated, but its linked to by Authentication
 D    Forms in Harvard Events
 D    Google charts organization in Life After 50
-    Google charts in Enrollment
-    Google charts in Concentrators
+D    Google charts in Enrollment
+D    Google charts in Concentrators
     Research is blank
-    code snippet at beginning of /cron looks wrong
+D    code snippet at beginning of /cron looks wrong
     Redirects:
-        Appliance
-        Authenticating Users
-        CS50_Appliance
-        Omega
-        Theta
-        XID
-        Library
-        iOS University Program
-        Virtualization -??
-        VirtualBox -??
-    See also:
-        Food API
-        Shuttleboy API
-        Maps API
-        Tweets API
-        Energy API
-        News API
-        Courses API
+D        Appliance
+D        Authenticating Users
+D        CS50_Appliance
+D        Omega
+D        Theta
+D        XID
+D        Library
+D        iOS University Program
+D        Virtualization -??
+D        VirtualBox -??
+D    See also:
+D        Food API
+D        Shuttleboy API
+D        Maps API
+D        Tweets API
+D        Energy API
+D        News API
+D        Courses API
 
 Skipped for now:
-    Seminars
-    All appliance articles
-    Fall 2010
-    Fall 2012
+D    Seminars
+D    All appliance articles
+D    Fall 2010
+D    Fall 2012
 
 Things to update:
     Hackathon instructions
-    how to lead a seminar (chris thayer)
+D    how to lead a seminar (chris thayer)

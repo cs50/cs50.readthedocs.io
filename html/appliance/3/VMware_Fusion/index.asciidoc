@@ -3,7 +3,7 @@ tags: []
 title: VMware Fusion
 ---
 
-Here's how to install the link:CS50_Appliance_3[CS50 Appliance] using
+Here's how to install the link:../../CS50_Appliance_3[CS50 Appliance] using
 VMware Fusion for link:#_installation[Mac OS].
 
 
@@ -24,7 +24,7 @@ http://www.vmware.com/a/buylink/10[purchase a license] for $49.99.
 desktop.
 3.  A window should open. Drag the *VMware Fusion* (or *VMware
 Fusion.app*) icon in that window to your *Applications* folder.
-4.  Download a ZIP file of the link:CS50_Appliance_3[CS50 Appliance] at
+4.  Download a ZIP file of the link:../../CS50_Appliance_3[CS50 Appliance] at
 http://mirror.cs50.net/appliance/3/cs50-appliance-3-15-vmx.zip. That ZIP
 file is over 1GB in size, so it might take a while to download.
 5.  Once downloaded, unzip the ZIP file, and you should have a folder
