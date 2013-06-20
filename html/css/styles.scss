@@ -171,7 +171,7 @@ code {
         @include background-linear-gradient(top, #FFF, #F3F3F3);
         @include ie-gradient(top, #FFF, #F3F3F3);
         @include box-shadow(0px 0px 3px #333);
-        @include opacity(.98);
+        @include opacity(.97);
     }
     
     #search-wrapper {
