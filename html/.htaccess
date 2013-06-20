@@ -15,8 +15,10 @@ RewriteRule .* scss.php [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule .* index.php [L]
 
-Redirect /iOS_University_Program /ios
-Redirect /CS50_Appliance /Appliance
+# backwards compatibility with former Manual
 Redirect /Appliance /appliance
-RedirectMatch /appliance/$ /appliance/17/
+Redirect /CS50_Appliance /Appliance
+Redirect /iOS_University_Program /ios
 
+# redirects to latest versions of pages
+RedirectMatch /appliance/$ /appliance/17/
