@@ -1,5 +1,5 @@
 ---
-tags: []
+tags: [HOWTO]
 title: CS50 Appliance 2.3
 ---
 
@@ -38,8 +38,7 @@ forgive any bugs! We'll document link:#_known_issues[known issues] down
 below.
 
 
-Cheatsheet
-----------
+== Cheatsheet
 
 See link:#_instructions[instructions] for much more detail.
 
@@ -83,12 +82,10 @@ other OS
 |=======================================================================
 
 
-Instructions
-------------
+== Instructions
 
 
-How to Install Appliance
-~~~~~~~~~~~~~~~~~~~~~~~~
+=== How to Install Appliance
 
 In order to install the appliance, you first need to install a program
 called a http://en.wikipedia.org/wiki/Hypervisor[hypervisor] that will
@@ -110,8 +107,7 @@ machines might still feel slow if your computer is a few years old, has
 a CPU that's only 1GHz or so, or has only 1GB or so of RAM.*
 
 
-VirtualBox
-^^^^^^^^^^
+==== VirtualBox
 
 Here's how to install the appliance using VirtualBox.
 
@@ -141,8 +137,7 @@ That's it! To learn how to use the appliance, see further
 link:#_how_to_use_appliance[instructions] down below!
 
 
-How to Update Appliance
-~~~~~~~~~~~~~~~~~~~~~~~
+=== How to Update Appliance
 
 The latest release of version 2.3 of the CS50 Appliance is *2.3-14*. To
 check which version you have, link:#_how_to_open_a_terminal[open a
@@ -176,8 +171,7 @@ or similar on the screen for a minute or more; it takes a while to
 restart each of the appliance's services.
 
 
-How to Use Appliance
-~~~~~~~~~~~~~~~~~~~~
+=== How to Use Appliance
 
 The first thing you should see when the appliance boots up is John
 Harvard's desktop. (Oh, henceforth, you are
@@ -195,8 +189,7 @@ appliance small. You're welcome to install additional programs via *Menu
 > Administration > Add/Remove Applications*.
 
 
-How to Change Name
-^^^^^^^^^^^^^^^^^^
+==== How to Change Name
 
 As much as you might not like being called John, *do not try to change
 John Harvard's name or username*. Life will be simpler as John.
@@ -222,8 +215,7 @@ and change `jharvard` to your own username. Then hit *ctrl-x*, then *y*,
 then *Enter* to save and quit.
 
 
-How to Change Password
-^^^^^^^^^^^^^^^^^^^^^^
+==== How to Change Password
 
 You can change your password in any of these ways:
 
@@ -245,8 +237,7 @@ access the appliance. Even though the appliance can connect to the
 Internet, the Internet cannot connect to the appliance.
 
 
-How to Change Language
-^^^^^^^^^^^^^^^^^^^^^^
+==== How to Change Language
 
 *This feature may require Internet access.*
 
@@ -260,8 +251,7 @@ language is installed. Then link:#_how_to_restart_appliance[restart the
 appliance] and log back in.
 
 
-How to Change Keyboard Layout
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== How to Change Keyboard Layout
 
 If you have a non-U.S. (or non-standard) keyboard, you may want (or
 need!) to change your keyboard's layout. Select *Menu > Administration >
@@ -269,8 +259,7 @@ Keyboard*. (To be clear, select *Administration*, not *Preferences*.)
 Select your preferred keyboard, then click *OK*.
 
 
-How to Change Time Zone
-^^^^^^^^^^^^^^^^^^^^^^^
+==== How to Change Time Zone
 
 If you don't live in Cambridge, Massachusetts, USA, you may want to
 change the appliance's timezone. Select *Menu > Administration > Date &
@@ -279,8 +268,7 @@ zone, then click *OK*, leaving *System clock uses UTC* checked.
 
 
 [[how_to_open_a_terminal]]
-How to Open a Terminal
-^^^^^^^^^^^^^^^^^^^^^^
+==== How to Open a Terminal
 
 You can open a terminal in any of these ways:
 
@@ -298,8 +286,7 @@ No matter the approach you take, it's in the terminal window that you'll
 be able to type commands like *cd*, `gcc`, `ls`, etc.
 
 
-How to SSH to Appliance
-^^^^^^^^^^^^^^^^^^^^^^^
+==== How to SSH to Appliance
 
 If you'd like to SSH to the appliance from your own computer (as with
 Terminal on Mac OS or with PuTTY on Windows), you can SSH from your
@@ -316,8 +303,7 @@ VirtualBox has secretly assigned to your computer.
 `jharvard` but not as `root`.*
 
 
-How to Release Keyboard and Mouse
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== How to Release Keyboard and Mouse
 
 Once you click inside of the appliance, it "captures" your keyboard's
 keystrokes and your mouse's movements (unless you've installed
@@ -330,8 +316,7 @@ Once you hit that key, should be able to move your mouse anywhere on
 your screen.
 
 
-How to Change Host Key
-^^^^^^^^^^^^^^^^^^^^^^
+==== How to Change Host Key
 
 VirtualBox's "host key" allows you to release your keyboard and mouse
 from the appliance if they've been "captured," which happens when you
@@ -347,8 +332,7 @@ from a list) is in the foreground, not the appliance's own window, else
 the *Preferences...* and/or *File* menu might not appear.
 
 
-How to Install Guest Additions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== How to Install Guest Additions
 
 *These instructions assume that you're using VirtualBox as your
 hypervisor. For VMware Fusion and VMware Workstation, you'll instead
@@ -389,8 +373,7 @@ first.) Then link:#_how_to_restart_appliance[restart the appliance] and
 log back in.
 
 
-How to Change Resolution
-^^^^^^^^^^^^^^^^^^^^^^^^
+==== How to Change Resolution
 
 By default, the appliance's resolution for John Harvard is 800x600 (so
 that his desktop fits on most any computer's screen). To lower the
@@ -405,8 +388,7 @@ link:#_how_to_install_guest_additions[install guest additions], if you
 haven't already.
 
 
-How to Change Volume
-^^^^^^^^^^^^^^^^^^^^
+==== How to Change Volume
 
 1.  Select *Menu > Sound & Video > Mixer*.
 2.  Select *Playback: Internal Audio Analog Stereo (PulseAudio Mixer)*
@@ -418,8 +400,7 @@ next to *Sound card*.
 7.  Visit http://webhamster.com/ in Firefox to test!
 
 
-How to Enter/Exit Fullscreen Mode
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== How to Enter/Exit Fullscreen Mode
 
 For fullscreen mode to work, you'll first need to
 link:#_how_to_install_guest_additions[install guest additions] if you
@@ -444,8 +425,7 @@ host key is your keyboard's left-Command key; on any other OS,
 VirtualBox's host key is your keyboard's right-Control key.)
 
 
-How to Enter/Exit Seamless Mode
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== How to Enter/Exit Seamless Mode
 
 Seamless mode lets you "extract" windows (e.g., a Terminal window) from
 the CS50 Appliance and position them right alongside your computer's own
@@ -471,8 +451,7 @@ left-Command key; on any other OS, VirtualBox's host key is your
 keyboard's right-Control key.)
 
 
-How to Use phpMyAdmin
-^^^^^^^^^^^^^^^^^^^^^
+==== How to Use phpMyAdmin
 
 You can access phpMyAdmin in either of these ways:
 
@@ -485,8 +464,7 @@ No matter the approach you take, log in as *jharvard* (or, if necessary,
 *root*) with a password of *crimson* if prompted.
 
 
-How to Restore Snapshots
-^^^^^^^^^^^^^^^^^^^^^^^^
+==== How to Restore Snapshots
 
 Every 10 minutes, the appliance take "snapshots" of source code in
 `/home` just in case you accidentally delete something. (You can also
@@ -538,8 +516,7 @@ To see which intervals are actually available to you, execute:
 `ls /.snapshots/`
 
 
-How to Synchronize Files with Dropbox
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== How to Synchronize Files with Dropbox
 
 *This feature requires Internet access.*
 
@@ -602,8 +579,7 @@ https://www.dropbox.com/login. You can even undelete files.
 synchronized with your Dropbox account.*
 
 
-How to Transfer Files between Appliance and Your Computer
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== How to Transfer Files between Appliance and Your Computer
 
 If you'd like to
 http://en.wikipedia.org/wiki/SSH_file_transfer_protocol[SFTP] to the
@@ -719,8 +695,7 @@ Manager*).
 9.  Click *Connect*.
 
 
-How to Access Appliance from Another Computer
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== How to Access Appliance from Another Computer
 
 By default, you can access the appliance from your own computer via the
 appliance's static IP address, which is *192.168.56.50*, because
@@ -805,8 +780,7 @@ click *Edit*, select *Statically set IP addresses*, and configure the
 interface as you see fit.
 
 
-How to Take a Screenshot
-^^^^^^^^^^^^^^^^^^^^^^^^
+==== How to Take a Screenshot
 
 It's sometimes helpful to take a screenshot of the appliance so that you
 can remember or share something you see on your screen. *If officially
@@ -831,8 +805,7 @@ You can also link:#_how_to_share_control_of_your_screen[share control of
 your screen] if you need someone else to see more than a screenshot.
 
 
-How to Share Control of Your Screen
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== How to Share Control of Your Screen
 
 *This feature requires Internet access.*
 
@@ -865,8 +838,7 @@ you can download TeamViewer for free for Android, iOS, Linux, Mac OS, or
 Windows from http://www.teamviewer.com/en/download.aspx.
 
 
-How to Disable Automatic Login
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== How to Disable Automatic Login
 
 By default, the appliance logs you in as John Harvard. To disable
 automatic login, link:#_how_to_open_a_terminal[open a terminal] and
@@ -878,16 +850,14 @@ Then link:#_how_to_restart_appliance[restart the appliance]. You should
 now see a login prompt instead of John Harvard's desktop.
 
 
-How to Log Out of Appliance
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== How to Log Out of Appliance
 
 To log out of the appliance, click
 image:Exit.png[Exit.png,title="image"] in the appliance's bottom-right
 corner, then click *Log Out*.
 
 
-How to Restart Appliance
-^^^^^^^^^^^^^^^^^^^^^^^^
+==== How to Restart Appliance
 
 You can restart the appliance in either of these ways:
 
@@ -901,8 +871,7 @@ sudo restart
 ------------
 
 
-How to Shut Down Appliance
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== How to Shut Down Appliance
 
 You can shut down the appliance in either of these ways:
 
@@ -916,8 +885,7 @@ sudo shutdown
 -------------
 
 
-How to Configure Appliance for a Proxy Server
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== How to Configure Appliance for a Proxy Server
 
 If your own computer sits behind an HTTP proxy server, you might need to
 configure the appliance to route HTTP traffic through that proxy as
@@ -945,20 +913,17 @@ sudo chmod 644 /etc/profile.d/proxy.sh
 5.  link:#_how_to_restart_appliance[Restart the appliance].
 
 
-How to Run Programs from Lectures
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== How to Run Programs from Lectures
 
 See link:Fall_2011#Lectures[Fall 2011's HOWTO].
 
 
-How to Do Problem Sets
-~~~~~~~~~~~~~~~~~~~~~~
+=== How to Do Problem Sets
 
 See link:Fall_2011#Problem_Sets[Fall 2011's HOWTO].
 
 
-Accessibility
--------------
+== Accessibility
 
 The CS50 Appliance comes pre-configured with
 http://live.gnome.org/Orca[Orca], a screen reader. To enable Orca,
@@ -990,8 +955,7 @@ John Harvard's home directory] on your own computer.
 accessibility, please let sysadmins@cs50.net know!*
 
 
-Implementation Details
-----------------------
+== Implementation Details
 
 Below are details on how we implemented the CS50 Appliance in case
 you're curious or would like to reproduce these steps yourself. *You do
@@ -1225,19 +1189,16 @@ itself compressed and thus should be by `zip`.
 You can then distribute `cs50-appliance-2.3-vmx.zip` as well!
 
 
-Troubleshooting
----------------
+== Troubleshooting
 
 If having trouble with VirtualBox or the CS50 Appliance, see VirtualBox
 and FAQs.
 
 
-Forget a password?
-------------------
+== Forget a password?
 
 
-I forgot John Harvard's password
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== I forgot John Harvard's password
 
 John Harvard's password is *crimson* by default. But if you changed it
 to something you do not remember, you can change it to something you
@@ -1260,8 +1221,7 @@ prompted.
 You should then be able to log in as John Harvard again.
 
 
-I forgot the root password
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== I forgot the root password
 
 The superuser's password is *crimson* by default. But if you changed it
 to something you do not remember, you can change it to something you
@@ -1298,8 +1258,7 @@ reboot
 to restart the appliance.
 
 
-I forgot John Harvard's (or root's) MySQL password
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== I forgot John Harvard's (or root's) MySQL password
 
 John Harvard's password for MySQL is *crimson* by default, as is the
 superuser's. But if you changed either to something you do not remember,
@@ -1313,16 +1272,14 @@ That command will restore the appliance to "factory defaults." It will
 not delete any code that you've written.
 
 
-Known Issues
-------------
+== Known Issues
 
 * 2.3-11
 ** ncurses' `FG_YELLOW` and `BG_YELLOW` constants do not display as
 yellow.
 
 
-Changelog
----------
+== Changelog
 
 * link:../1.4#Changelog[1.4]
 * link:../2.0#Changelog[2.0]
@@ -1434,8 +1391,7 @@ just `cs50.desktop`, which also restarts `xfce4-panel` (to avoid an
 apparent Xfce bug whereby panel is sometimes empty).
 
 
-Future Work
------------
+== Future Work
 
 Below are features that may be included in some future version of the
 appliance.
@@ -1443,15 +1399,13 @@ appliance.
 * Configure `gdm` to boot at 800x600 resolution.
 
 
-References
-----------
+== References
 
 * http://www.virtualbox.org/manual/UserManual.html[User Manual] for
 VirtualBox
 
 
-Acknowledgements
-----------------
+== Acknowledgements
 
 Many thanks to everyone who's helped us improve the CS50 Appliance,
 including, but not limited to:
@@ -1472,5 +1426,3 @@ including, but not limited to:
 * Rory O'Reilly
 * Sergio Prado
 * Shaun Gibson
-
-Category:HOWTO

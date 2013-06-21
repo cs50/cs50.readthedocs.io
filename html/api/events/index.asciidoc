@@ -21,8 +21,7 @@ changes to old events) may take up to 24 hours to appear in
 HarvardEvents's database.
 
 
-Author
-------
+== Author
 
 To report bugs or request features, contact:
 
@@ -30,8 +29,7 @@ mailto:malan@post.harvard.edu[David J. Malan '99] +
 http://www.cs.harvard.edu/malan/
 
 
-License
--------
+== License
 
 Use of this API is governed by a
 http://creativecommons.org/licenses/by-nc/3.0/[Creative Commons
@@ -42,15 +40,13 @@ http://events.cs50.net/[HarvardEvents] in your own work. For approval of
 commercial purposes, contact the author.
 
 
-Methods
--------
+== Methods
 
 All methods support
 http://en.wikipedia.org/wiki/Cross-Origin_Resource_Sharing[CORS].
 
 
-calendars
-~~~~~~~~~
+=== calendars
 
 To query the HarvardEvents API for calendars, contact the server via
 URLs in this format:
@@ -82,8 +78,7 @@ In a future version of this API, campuses' IDs may be returned in a
 different manner.
 
 
-CSV
-^^^
+==== CSV
 
 If you request data in CSV format (e.g.,
 http://events.cs50.net/api/1.0/calendars?id=128&output=csv), the
@@ -101,8 +96,7 @@ own code. Use that first row to determine fields' indices dynamically,
 per this article on link:../../Neat_Tricks#Parsing_CSV[parsing CSV].
 
 
-JSON
-^^^^
+==== JSON
 
 If you request data in JSON format (e.g.,
 http://events.cs50.net/api/1.0/calendars?id=128&output=json), the
@@ -120,8 +114,7 @@ response will be an array of objects, per the below:
 ----------------------------------------------------------------
 
 
-JSONP
-^^^^^
+==== JSONP
 
 If you request data in JSONP format (e.g.,
 http://events.cs50.net/api/1.0/calendars?id=128&output=jsonp&callback=parseResponse),
@@ -133,8 +126,7 @@ parseResponse([{"id":"128","calname":"CS50 Events","campus":"COL,DCE,GSAS,GSE,HB
 ----------------------------------------------------------------------------------------------------------------
 
 
-PHP
-^^^
+==== PHP
 
 If you request data in
 (http://www.php.net/manual/en/language.oop5.serialization.php[serialized])
@@ -166,8 +158,7 @@ Array
 -----------------------------------------------------------------------
 
 
-XML
-^^^
+==== XML
 
 If you request data in XML format (e.g.,
 http://events.cs50.net/api/1.0/calendars?id=128&output=xml), the
@@ -187,8 +178,7 @@ of whose children is an `calendar`, per the below:
 --------------------------------------------------------------------
 
 
-campuses
-~~~~~~~~
+=== campuses
 
 To query the HarvardEvents API for campuses, contact the server via URLs
 in this format:
@@ -211,8 +201,7 @@ http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1[400 Bad
 Request].
 
 
-CSV
-^^^
+==== CSV
 
 If you request data in CSV format (e.g.,
 http://events.cs50.net/api/1.0/campuses?output=csv), the response will
@@ -242,8 +231,7 @@ own code. Use that first row to determine fields' indices dynamically,
 per this article on link:../../Neat_Tricks#Parsing_CSV[parsing CSV].
 
 
-JSON
-^^^^
+==== JSON
 
 If you request data in JSON format (e.g.,
 http://events.cs50.net/api/1.0/campuses?output=json), the response will
@@ -295,8 +283,7 @@ be an array of objects, per the below:
 -----------------
 
 
-JSONP
-^^^^^
+==== JSONP
 
 If you request data in JSONP format (e.g.,
 http://events.cs50.net/api/1.0/campuses?output=jsonp&callback=parseResponse),
@@ -308,8 +295,7 @@ parseResponse([{"id":"COL"},{"id":"DCE"},{"id":"GSAS"},{"id":"GSD"},{"id":"GSE"}
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-PHP
-^^^
+==== PHP
 
 If you request data in
 (http://www.php.net/manual/en/language.oop5.serialization.php[serialized])
@@ -398,8 +384,7 @@ Array
 ------------------------
 
 
-XML
-^^^
+==== XML
 
 If you request data in XML format (e.g.,
 http://events.cs50.net/api/1.0/campuses?output=xml), the response will
@@ -453,8 +438,7 @@ children is a `campus`, per the below:
 --------------------------------------
 
 
-events
-~~~~~~
+=== events
 
 To query the HarvardEvents API for events, contact the server via URLs
 in this format:
@@ -509,8 +493,7 @@ http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1[400 Bad
 Request].
 
 
-CSV
-^^^
+==== CSV
 
 If you request events in CSV format (e.g.,
 http://events.cs50.net/api/1.0/events?calendar=128&dtstart=2010-12-10&output=csv),
@@ -550,8 +533,7 @@ Because *Description* contain *\n*, be sure to parse the CSV properly,
 as with PHP's http://php.net/manual/en/function.fgetcsv.php[fgetcsv].
 
 
-iCalendar
-^^^^^^^^^
+==== iCalendar
 
 If you request tweeters in iCalendar format (e.g.,
 http://events.cs50.net/api/1.0/events?calendar=128&dtstart=2010-12-10&output=ics),
@@ -584,8 +566,7 @@ END:VCALENDAR
 ---------------------------------------------------------------------------
 
 
-JSON
-^^^^
+==== JSON
 
 If you request data in JSON format (e.g.,
 http://events.cs50.net/api/1.0/events?calendar=128&dtstart=2010-12-10&output=json),
@@ -610,8 +591,7 @@ the response will be an array of objects, per the below:
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-JSONP
-^^^^^
+==== JSONP
 
 If you request data in JSONP format (e.g.,
 http://events.cs50.net/api/1.0/events?calendar=128&dtstart=2010-12-10&output=jsonp&callback=parseResponse),
@@ -623,8 +603,7 @@ parseResponse([{"summary":"CS50 Fair","dtstart":"2010-12-10T11:00:00","dtend":"2
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-RSS
-^^^
+==== RSS
 
 If you request events in RSS format (e.g.,
 http://events.cs50.net/api/1.0/events?calendar=128&dtstart=2010-12-10&output=rss),
@@ -673,8 +652,7 @@ This is CS50.<br />
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-XML
-^^^
+==== XML
 
 If you request data in XML format (e.g.,
 http://events.cs50.net/api/1.0/events?calendar=128&dtstart=2010-12-10&output=xml),

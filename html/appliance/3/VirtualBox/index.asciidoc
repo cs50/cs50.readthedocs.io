@@ -1,5 +1,5 @@
 ---
-tags: []
+tags: [HOWTO]
 title: VirtualBox
 ---
 
@@ -8,12 +8,10 @@ VirtualBox for link:#_mac_os[Mac OS], link:#Windows[Windows], and
 link:#_linux[Linux].
 
 
-Mac OS
-------
+== Mac OS
 
 
-Installation
-~~~~~~~~~~~~
+=== Installation
 
 In the instructions below, *4.x.y* represents whatever version of
 VirtualBox is available on the day that you download it.
@@ -93,12 +91,10 @@ after a few seconds or minutes.
 start the appliance.
 
 
-Troubleshooting
-~~~~~~~~~~~~~~~
+=== Troubleshooting
 
 
-Nonexistent host networking interface, name '' (VERR_INTERNAL_ERROR)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Nonexistent host networking interface, name '' (VERR_INTERNAL_ERROR)
 
 For some reason, VirtualBox doesn't always come with a "host-only
 adapter" configured. (A "host-only adapter" lets you connect to the
@@ -132,8 +128,7 @@ yourself from the drop-down menu next to *Name* yourself if necessary.
 gone.
 
 
-Failed to load VMMR0.r0 (VERR_SUPLIB_OWNER_NOT_ROOT)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Failed to load VMMR0.r0 (VERR_SUPLIB_OWNER_NOT_ROOT)
 
 This message usually indicates that `/Applications` is not owned by
 `root` but, rather, by a user account (e.g., your own). To resolve this
@@ -157,8 +152,7 @@ gone.
 Source: http://forums.virtualbox.org/viewtopic.php?f=7&t=38825
 
 
-Failed to load VMMR0.r0 (VERR_SUPLIB_WORLD_WRITABLE)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Failed to load VMMR0.r0 (VERR_SUPLIB_WORLD_WRITABLE)
 
 This message usually indicates that that `/Applications` is
 world-writable for some reason. To resolve this problem:
@@ -181,12 +175,10 @@ gone.
 Source: http://forums.virtualbox.org/viewtopic.php?f=7&t=39179
 
 
-Windows
--------
+== Windows
 
 
-Installation
-~~~~~~~~~~~~
+=== Installation
 
 In the instructions below, *4.x.y* represents whatever version of
 VirtualBox is available on the day that you download it.
@@ -279,12 +271,10 @@ runs unbearably slow within VirtualBox, you might need to enable
 link:Hardware Virtualization[hardware virtualization] on your PC.
 
 
-Troubleshooting
-~~~~~~~~~~~~~~~
+=== Troubleshooting
 
 
-Nonexistent host networking interface, name '' (VERR_INTERNAL_ERROR)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Nonexistent host networking interface, name '' (VERR_INTERNAL_ERROR)
 
 For some reason, VirtualBox doesn't always come with a "host-only
 adapter" configured. (A "host-only adapter" lets you connect to the
@@ -320,8 +310,7 @@ gone.
 
 
 Nonexistent host networking interface, name 'VirtualBox Host-Only
-Ethernet Adapter' (VERR_INTERNAL_ERROR)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Ethernet Adapter' (VERR_INTERNAL_ERROR)
 
 Sometimes (e.g., after an update), VirtualBox forgets about its
 "host-only adapter." (A "host-only adapter" lets you connect to the
@@ -358,8 +347,7 @@ gone.
 
 The installer has encountered an unexpected error installing this
 package.  This may indicate a problem with this package.  The error code
-is 2869.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== is 2869.
 
 This problem generally indicates that VirtualBox's installer wasn't run
 as an "administrator." To resolve this problem:
@@ -392,8 +380,7 @@ despite these steps!
 
 
 The application "iphlpsvc.dll" needs to be closed for the installation
-to continue
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== to continue
 
 This error generally precedes another error: *The installer has
 encountered an unexpected error installing this package.  This may
@@ -405,8 +392,7 @@ tips for that other error].
 
 
 The application "Install Queue" needs to be closed for the installation
-to continue
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== to continue
 
 This error generally precedes another error: *The installer has
 encountered an unexpected error installing this package.  This may
@@ -417,12 +403,10 @@ link:#_the_installer_has_encountered_an_unexpected_error_installing_this_package
 tips for that other error].
 
 
-Linux
------
+== Linux
 
 
-Installation
-~~~~~~~~~~~~
+=== Installation
 
 1.  Download the latest version of VirtualBox from
 http://www.virtualbox.org/wiki/Linux_Downloads by clicking *i386* (if
@@ -489,12 +473,10 @@ enable link:Hardware Virtualization[hardware virtualization] on your
 computer.
 
 
-Troubleshooting
-~~~~~~~~~~~~~~~
+=== Troubleshooting
 
 
-Nonexistent host networking interface, name '' (VERR_INTERNAL_ERROR)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Nonexistent host networking interface, name '' (VERR_INTERNAL_ERROR)
 
 For some reason, VirtualBox doesn't always come with a "host-only
 adapter" configured. (A "host-only adapter" lets you connect to the
@@ -527,5 +509,3 @@ yourself if necessary.
 10. Start whichever virtual machine originally triggered the problem
 (e.g., the link:CS50_Appliance_3[CS50 Appliance]); it should now be
 gone.
-
-Category:HOWTO

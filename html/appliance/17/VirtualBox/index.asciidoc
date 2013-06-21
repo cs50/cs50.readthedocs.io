@@ -9,12 +9,10 @@ link:#linux[Linux].
 
 
 [[mac_os]]
-Mac OS
-------
+== Mac OS
 
 
-Installation
-~~~~~~~~~~~~
+=== Installation
 
 In the instructions below, *4.x.y* represents whatever version of
 VirtualBox is available on the day that you download it.
@@ -94,12 +92,10 @@ GRUB*, no need to do anything; the appliance will continue to boot after
 a few seconds!
 
 
-Troubleshooting
-~~~~~~~~~~~~~~~
+=== Troubleshooting
 
 
-Nonexistent host networking interface, name '' (VERR_INTERNAL_ERROR)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Nonexistent host networking interface, name '' (VERR_INTERNAL_ERROR)
 
 For some reason, VirtualBox doesn't always come with a "host-only
 adapter" configured. (A "host-only adapter" lets you connect to the
@@ -133,8 +129,7 @@ yourself from the drop-down menu next to *Name* yourself if necessary.
 gone.
 
 
-Failed to load VMMR0.r0 (VERR_SUPLIB_OWNER_NOT_ROOT)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Failed to load VMMR0.r0 (VERR_SUPLIB_OWNER_NOT_ROOT)
 
 This message usually indicates that `/Applications` is not owned by
 `root` but, rather, by a user account (e.g., your own). To resolve this
@@ -158,8 +153,7 @@ gone.
 Source: http://forums.virtualbox.org/viewtopic.php?f=7&t=38825
 
 
-Failed to load VMMR0.r0 (VERR_SUPLIB_WORLD_WRITABLE)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Failed to load VMMR0.r0 (VERR_SUPLIB_WORLD_WRITABLE)
 
 This message usually indicates that that `/Applications` is
 world-writable for some reason. To resolve this problem:
@@ -183,12 +177,10 @@ Source: http://forums.virtualbox.org/viewtopic.php?f=7&t=39179
 
 
 [[windows]]
-Windows
--------
+== Windows
 
 
-Installation
-~~~~~~~~~~~~
+=== Installation
 
 In the instructions below, *4.x.y* represents whatever version of
 VirtualBox is available on the day that you download it.
@@ -281,12 +273,10 @@ runs unbearably slow within VirtualBox, you might need to enable
 link:../../Hardware_Virtualization[hardware virtualization] on your PC.
 
 
-Troubleshooting
-~~~~~~~~~~~~~~~
+=== Troubleshooting
 
 
-Nonexistent host networking interface, name '' (VERR_INTERNAL_ERROR)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Nonexistent host networking interface, name '' (VERR_INTERNAL_ERROR)
 
 For some reason, VirtualBox doesn't always come with a "host-only
 adapter" configured. (A "host-only adapter" lets you connect to the
@@ -322,8 +312,7 @@ gone.
 
 
 Nonexistent host networking interface, name 'VirtualBox Host-Only
-Ethernet Adapter' (VERR_INTERNAL_ERROR)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Ethernet Adapter' (VERR_INTERNAL_ERROR)
 
 Sometimes (e.g., after an update), VirtualBox forgets about its
 "host-only adapter." (A "host-only adapter" lets you connect to the
@@ -392,8 +381,7 @@ despite these steps!
 
 
 The application "iphlpsvc.dll" needs to be closed for the installation
-to continue
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== to continue
 
 This error generally precedes another error: *The installer has
 encountered an unexpected error installing this package.  This may
@@ -405,8 +393,7 @@ tips for that other error].
 
 
 The application "Install Queue" needs to be closed for the installation
-to continue
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== to continue
 
 This error generally precedes another error: *The installer has
 encountered an unexpected error installing this package.  This may
@@ -418,12 +405,10 @@ tips for that other error].
 
 
 [[linux]]
-Linux
------
+== Linux
 
 
-Installation
-~~~~~~~~~~~~
+=== Installation
 
 1.  Download the latest version of VirtualBox from
 http://www.virtualbox.org/wiki/Linux_Downloads by clicking *i386* (if
@@ -493,8 +478,7 @@ Troubleshooting
 ~~~~~~~~~~~~~~~
 
 
-Nonexistent host networking interface, name '' (VERR_INTERNAL_ERROR)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Nonexistent host networking interface, name '' (VERR_INTERNAL_ERROR)
 
 For some reason, VirtualBox doesn't always come with a "host-only
 adapter" configured. (A "host-only adapter" lets you connect to the

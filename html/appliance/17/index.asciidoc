@@ -450,8 +450,7 @@ To see which intervals are actually available to you, execute:
 `ls /.snapshots/`
 
 
-How to Enable Dropbox
-^^^^^^^^^^^^^^^^^^^^^
+==== How to Enable Dropbox
 
 *This feature requires Internet access.*
 
@@ -500,8 +499,7 @@ corner and select *Preferences...*.
 
 
 [[how_transfer_files_between_appliance_and_your_computer]]
-How to Transfer Files between Appliance and Your Computer
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== How to Transfer Files between Appliance and Your Computer
 
 If you'd like to
 http://en.wikipedia.org/wiki/SSH_file_transfer_protocol[SFTP] to the
@@ -623,8 +621,7 @@ for *Location* then click *Open*.
 9.  Click *Connect*.
 
 
-How to Access Appliance from Another Computer
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== How to Access Appliance from Another Computer
 
 *This feature is not supported on Harvard's campus on the "Harvard
 University" SSID.* It does work on the "CS50" SSID in Annenberg and
@@ -711,8 +708,7 @@ click *Edit*, select *Statically set IP addresses*, and configure the
 interface as you see fit.
 
 
-How to Take a Screenshot
-^^^^^^^^^^^^^^^^^^^^^^^^
+==== How to Take a Screenshot
 
 It's sometimes helpful to take a screenshot of the appliance so that you
 can remember or share something you see on your screen. *If taking a
@@ -737,8 +733,7 @@ You can also link:#_how_to_share_control_of_your_screen[share control of
 your screen] if you need someone else to see more than a screenshot.
 
 
-How to Share Control of Your Screen
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== How to Share Control of Your Screen
 
 *This feature requires Internet access.*
 
@@ -774,8 +769,7 @@ you can download TeamViewer for free for Android, iOS, Linux, Mac OS, or
 Windows from http://www.teamviewer.com/en/download/.
 
 
-How to Disable Automatic Login
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== How to Disable Automatic Login
 
 By default, the appliance logs you in as John Harvard. To disable
 automatic login, link:#_how_to_open_a_terminal[open a terminal] and
@@ -787,8 +781,7 @@ Then link:#_how_to_restart_appliance[restart the appliance]. You should
 now see a login prompt instead of John Harvard's desktop.
 
 
-How to Log Out of Appliance
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== How to Log Out of Appliance
 
 To log out of the appliance, click
 image:Exit.png[Exit.png,title="image"] in the appliance's bottom-right
@@ -796,8 +789,7 @@ corner, then click *Log Out*.
 
 
 [[how_to_restart_appliance]]
-How to Restart Appliance
-^^^^^^^^^^^^^^^^^^^^^^^^
+==== How to Restart Appliance
 
 You can restart the appliance in either of these ways:
 
@@ -811,8 +803,7 @@ reboot
 ------
 
 
-How to Shut Down Appliance
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== How to Shut Down Appliance
 
 You can shut down the appliance in either of these ways:
 
@@ -826,8 +817,7 @@ sudo shutdown
 -------------
 
 
-How to Configure Appliance for a Proxy Server
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== How to Configure Appliance for a Proxy Server
 
 If your own computer sits behind an HTTP proxy server, you might need to
 configure the appliance to route HTTP traffic through that proxy as
@@ -856,14 +846,12 @@ in the terminal.
 5.  link:#how_to_restart_appliance[Restart the appliance].
 
 
-How to Run Programs from Lectures
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== How to Run Programs from Lectures
 
 See link:../../Fall_2012[Fall 2012's HOWTO].
 
 
-How to Do Problem Sets
-~~~~~~~~~~~~~~~~~~~~~~
+=== How to Do Problem Sets
 
 See link:../../Fall_2012[Fall 2012's HOWTO].
 
@@ -905,8 +893,7 @@ Forget a password?
 ------------------
 
 
-I changed and forgot John Harvard's password
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== I changed and forgot John Harvard's password
 
 1.  Start (or link:#how_to_restart_appliance[restart]) the appliance.
 2.  As soon as the appliance starts to boot, click inside of its window
@@ -936,8 +923,7 @@ to restart the appliance.
 You should then be able to log in as John Harvard again.
 
 
-I forgot John Harvard's MySQL password
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== I forgot John Harvard's MySQL password
 
 John Harvard's password for MySQL is *crimson* by default. But if you
 changed either to something you do not remember, you can change both

@@ -70,8 +70,7 @@ make battleship
 Similarly can you compile and run other programs in `~/lectures/2/`.
 
 
-Week 3
-~~~~~~
+=== Week 3
 
 To copy Week 3's source code into John Harvard's home directory in the
 CS50 Appliance, link:../Appliance#how_to_open_a_terminal[open a terminal]
@@ -95,8 +94,7 @@ make sigma1
 Similarly can you compile and run other programs in `~/lectures/3/`.
 
 
-Week 4
-~~~~~~
+=== Week 4
 
 To copy Week 4's source code into John Harvard's home directory in the
 CS50 Appliance, link:../Appliance#how_to_open_a_terminal[open a terminal]
@@ -120,8 +118,7 @@ make swap
 Similarly can you compile and run other programs in `~/lectures/4/`.
 
 
-Week 5
-~~~~~~
+=== Week 5
 
 To copy Week 5's source code into John Harvard's home directory in the
 CS50 Appliance, link:../Appliance#how_to_open_a_terminal[open a terminal]
@@ -145,8 +142,7 @@ make list1
 Similarly can you compile and run other programs in `~/lectures/5/`.
 
 
-Week 7
-~~~~~~
+=== Week 7
 
 To copy Week 7's source code into John Harvard's home directory in the
 CS50 Appliance, link:../Appliance#how_to_open_a_terminal[open a terminal]
@@ -170,8 +166,7 @@ make binary
 Similarly can you compile and run other programs in `~/lectures/7/`.
 
 
-Week 8
-~~~~~~
+=== Week 8
 
 To copy Week 8's source code into John Harvard's home directory in the
 CS50 Appliance, link:../Appliance#how_to_open_a_terminal[open a terminal]
@@ -191,8 +186,7 @@ You can then access those files via a browser at
 http://192.168.56.50/~jharvard/lectures/8/.
 
 
-Week 9
-~~~~~~
+=== Week 9
 
 To copy Week 9's source code into John Harvard's home directory in the
 CS50 Appliance, link:../Appliance#how_to_open_a_terminal[open a terminal]
@@ -212,8 +206,7 @@ You can then access those files via a browser at
 http://192.168.56.50/~jharvard/lectures/9/.
 
 
-Week 10
-~~~~~~~
+=== Week 10
 
 To copy Week 10's source code into John Harvard's home directory in the
 CS50 Appliance, link:../Appliance#how_to_open_a_terminal[open a terminal]

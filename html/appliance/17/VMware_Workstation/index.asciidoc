@@ -9,12 +9,10 @@ link:#linux[Linux].
 
 
 [[windows]]
-Windows
--------
+== Windows
 
 
-Installation
-~~~~~~~~~~~~
+=== Installation
 
 1.  Download a term-long trial of VMware Workstation as follows,
 courtesy of our friends at http://www.vmware.com/[VMware]: +
@@ -102,24 +100,20 @@ highlight the *appliance50-17.vmx* file within, and click *Open*. Then
 click VMware Workstation's ▶ button to start up the appliance.
 
 
-Troubleshooting
-~~~~~~~~~~~~~~~
+=== Troubleshooting
 
 
-Binary translation is incompatible with long mode on this platform
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Binary translation is incompatible with long mode on this platform
 
 If you see this message, you might need to enable
-link:../Hardware_Virtualization[hardware virtualization] on your computer.
+link:../../../Hardware_Virtualization[hardware virtualization] on your computer.
 
 
 [[linux]]
-Linux
------
+== Linux
 
 
-Installation
-~~~~~~~~~~~~
+=== Installation
 
 1.  Download a 210-day trial of VMware Workstation as follows, courtesy
 of our friends at http://www.vmware.com/[VMware]: +
