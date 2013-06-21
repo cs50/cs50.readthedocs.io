@@ -716,24 +716,46 @@ via:
 
 === Can I develop my site on localhost (127.0.0.1)?
 
-Yes, even though you must register your own website's URLs, CS50 ID also
-trusts URLs that begin with `http://localhost/` and
-`http://127.0.0.1/` automatically so that you can
-develop your website locally and still interact with CS50 ID, provided
-you're running a web server that's listening for requests on `localhost`
+Yes, CS50 ID automatically trusts URLs that begin with `http://localhost/`,
+`http://*.local/` (where `*` is any hostname of your choice), or
+`http://127.0.0.1/` so that you can develop your website locally and
+still interact with CS50 ID, provided you're running a web server 
+that's listening for requests on `localhost`, `*.local`,
 or `127.0.0.1` (on any TCP port). During development, simply change
 `TRUST_ROOT` and `RETURN_TO`, per the link:#examples[examples], to refer
-to `localhost` or `127.0.0.1`; just be sure that `RETURN_TO` is still a
-prefix of `TRUST_ROOT`. Note that, when using `localhost` or
+to `localhost`, `*.local` (where `*` is any hostname of your choice),
+or `127.0.0.1`; just be sure that `RETURN_TO` is a
+prefix of `TRUST_ROOT`.
+
+Note that, when using `localhost`, `*.local`, or
 `127.0.0.1`, you'll be able to log into CS50 ID using any supported
 account (email, PIN, etc.), not just those that you chose to enable when
 you registered for CS50 ID.
 
-*You do not need to register `localhost` or `127.0.0.1` when you apply
+*You do not need to register `localhost`, `*.local`, or `127.0.0.1` when you apply
 for CS50 ID.*
 
 When ready to launch your website, just remember to change `TRUST_ROOT`
-and `RETURN_TO` to the URLs with which you applied for CS50 ID.
+and `RETURN_TO` to the URLs with which you apply for CS50 ID.
+
+
+=== Can I develop my site on the CS50 Appliance?
+
+Yes, provided you develop it using a "virtual host" (aka "vhost") 
+called `*.local` (where `*` is any hostname of your choice) in 
+John Harvard's `~/vhosts` directory.  Simply edit `/etc/hosts` (inside
+of the appliance or on your own Mac or PC) so that `*.local` 
+(where, again, `*` is any hostname of your choice) resolves
+to the appliance's IP address.
+
+ Note that, when using `*.local`, you'll be able to log into CS50 ID using any supported
+account (email, PIN, etc.), not just those that you chose to enable when
+you registered for CS50 ID.
+
+*You do not need to register `*.local` when you apply for CS50 ID.*
+
+When ready to launch your website, just remember to change `TRUST_ROOT`
+and `RETURN_TO` to the URLs with which you apply for CS50 ID.
 
 
 === Can I develop my site on a private network?
@@ -756,7 +778,7 @@ registered for CS50 ID.
 apply for CS50 ID.*
 
 When ready to launch your website, just remember to change `TRUST_ROOT`
-and `RETURN_TO` to the URLs with which you applied for CS50 ID.
+and `RETURN_TO` to the URLs with which you apply for CS50 ID.
 
 
 == Troubleshooting
