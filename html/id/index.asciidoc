@@ -748,7 +748,7 @@ of the appliance or on your own Mac or PC) so that `*.local`
 (where, again, `*` is any hostname of your choice) resolves
 to the appliance's IP address.
 
- Note that, when using `*.local`, you'll be able to log into CS50 ID using any supported
+Note that, when using `*.local`, you'll be able to log into CS50 ID using any supported
 account (email, PIN, etc.), not just those that you chose to enable when
 you registered for CS50 ID.
 
