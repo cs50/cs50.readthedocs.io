@@ -19,6 +19,10 @@ body, html {
     font-family: "futura-pt";
 }
 
+code, tt {
+    color: #AA1E2E;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: "bariol";
     color: inherit;
@@ -109,7 +113,8 @@ code {
     display: inline-block;
     margin: 15px 30px 25px 30px;
     padding: 0px 25px;
-    width: 300px;
+    min-width: 300px;
+    max-width: 600px;
     border: 0px;
     font-family: "bariol";
     background-color: #FEFEFE;
@@ -355,8 +360,11 @@ code {
         }
     }
 
-    .ulist ul {
+    &.main .ulist ul {
         list-style-type: none;
+    }
+
+    .ulist ul {
         margin-top: 4px;
 
         li {
