@@ -53,7 +53,7 @@
             <div id="search-wrapper">
                 <script>
                     (function() {
-                        var cx = '017253632348184728259:-z318fz0ofk';
+                        var cx = '017253632348184728259:xgoc3uuwm2s';
                         var gcse = document.createElement('script');
                         gcse.async = true;
                         gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
