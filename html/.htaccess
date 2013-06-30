@@ -45,6 +45,7 @@ Redirect /HarvardFood_API /api/food
 Redirect /HarvardMaps_API /api/maps
 Redirect /HarvardNews_API /api/news
 Redirect /HarvardTweets_API /api/tweets
+Redirect /ID /id
 Redirect /IPs /ips
 Redirect /Notepad++ /notepadpp
 Redirect /PuTTY /ssh/putty
