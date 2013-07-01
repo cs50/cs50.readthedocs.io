@@ -1,6 +1,7 @@
 ---
 tags: [HOWTO]
 title: PuTTY
+toc: false
 ---
 
 PuTTY is a free SSH client for Windows that you can download from

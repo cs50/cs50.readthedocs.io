@@ -1,6 +1,7 @@
 ---
 tags: [HOWTO]
 title: SecureCRT
+toc: false
 ---
 
 SecureCRT is a commercial SSH client for Windows for which Harvard has a

@@ -1,6 +1,7 @@
 ---
 tags: [HOWTOs]
 title: Terminal
+toc: false
 ---
 
 Terminal is an SSH client that comes with Mac OS, so you don't need to

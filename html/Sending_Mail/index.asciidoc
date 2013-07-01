@@ -1,6 +1,7 @@
 ---
 tags: []
 title: Sending Mail
+toc: false
 ---
 
 Below is some code with which you can send email using a library called
