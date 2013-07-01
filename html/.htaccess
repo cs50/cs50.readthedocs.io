@@ -35,9 +35,6 @@ Redirect /Concentrators /concentrators
 Redirect /Cyberduck /sftp/cyberduck
 Redirect /Discounts /discounts
 Redirect /Enrollment /enrollment
-Redirect /Fall_2010 /Fall_2010
-Redirect /Fall_2011 /Fall_2011
-Redirect /Fall_2012 /Fall_2012
 Redirect /HarvardCourses_API /api/courses
 Redirect /HarvardEnergy_API /api/energy
 Redirect /HarvardEvents /api/events
