@@ -23,7 +23,7 @@ year.
 To report bugs or request features, contact:
 
 David J. Malan '99 +
-[mailto:dmalan@harvard[mailto:dmalan@harvard].edu dmalan@harvard.edu] +
+mailto:dmalan@harvard[dmalan@harvard.edu] +
 http://www.cs.harvard.edu/malan/
 
 
