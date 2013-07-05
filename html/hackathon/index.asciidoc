@@ -1,4 +1,5 @@
 ---
+draft: true
 tags: []
 title: CS50 Hackathon
 ---
