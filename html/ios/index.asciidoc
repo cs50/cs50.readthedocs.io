@@ -41,7 +41,7 @@ have source code, as from a book, class, or website).
 * You are not a Harvard affiliate.
 * You do not own an iPad, iPhone, or iPod touch. (There'd be no upside
 of joining CS50's team.)
-* You do not have (access) to an Intel-based Mac running Mac OS 10.7.3
+* You do not have (access) to an Intel-based Mac running Mac OS 10.7.4
 (Lion) or higher (which the latest version of Xcode requires).
 * You simply want to write code and test it in the iOS Simulator (that
 comes with Xcode).
@@ -51,9 +51,8 @@ the iOS Simulator (that comes with Xcode).
 * You want to submit apps to Apple's App Store. (To submit apps, you
 need to join the http://developer.apple.com/programs/ios/[Standard
 Program] yourself for $99/year.)
-* You simply want to download Xcode 4.3.1. (If running Mac OS 10.7.3 or
-higher, you can download Xcode 4.3.1 for free from the
-http://itunes.apple.com/us/app/xcode/id448457090?mt=12[Mac App Store].)
+* You simply want to download Xcode. (You can download Xcode for free from the
+http://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12[Mac App Store].)
 
 
 == How to Join CS50's Team
@@ -75,7 +74,7 @@ http://developer.apple.com/ios/my/certificates/howto.action[instructions].
 Developer] for free. You'll be prompted to create an _Apple ID_ or use
 an existing one (which you might have because you already use iTunes).
 2.  Download Xcode 4 for free from the
-http://itunes.apple.com/us/app/xcode/id448457090?mt=12[Mac App Store].
+http://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12[Mac App Store].
 3.  Locate your iOS device's Unique Device ID (UDID):
 a.  Connect your iOS device to your Mac and launch Xcode.
 b.  Select *Organizer* under Xcode's *Window* menu.
