@@ -29,7 +29,7 @@ CS50 is enrolled in the University Program.
 * You are a Harvard affiliate. *Unfortunately, CS50x students aren't
 eligible.*
 * You own an iPad, iPhone, or iPod touch.
-* You have (access to) an Intel-based Mac running Mac OS 10.7.3 (Lion)
+* You have (access to) an Intel-based Mac running Mac OS 10.7.4 (Lion)
 or higher (which the latest version of Xcode requires).
 * You want to install *and are ready to install* apps on to your own
 iPad, iPhone, or iPod touch (that you already wrote or for which you
