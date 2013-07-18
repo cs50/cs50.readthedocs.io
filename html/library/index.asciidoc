@@ -284,7 +284,23 @@ http://www.opensource.org/licenses/BSD-3-Clause[BSD 3-Clause] license.
 Python
 ------
 
-_Coming Soon_
+First, install the latest version of Python, which should come with
+easy_install. We will use pip to install the CS50 Library. To install
+pip, simply type
+
+-----
+easy_install pip
+-----
+
+in a terminal window. You may need `sudo` privileges to complete the
+installation. To then install the CS50 Library, simply type
+
+-----
+pip install cs50
+-----
+
+in a terminal window. You may need `sudo` privileges to complete the
+installation.
 
 
 Ruby
