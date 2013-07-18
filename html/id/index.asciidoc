@@ -320,7 +320,244 @@ Python
 This example is available for download at
 http://mirror.cs50.net/library/python/examples/id.zip.
 
-COMING SOON
+Setup
+^^^^^
+
+Once you've installed Python, Django, and pip, download a copy of the
+CS50 library using pip via:
+
+[source,bash]
+------------------
+$ pip install cs50
+------------------
+
+Now, create a new project, like `cs50id`:
+
+[source,bash]
+-------------------------------------
+$ django-admin.py startproject cs50id
+-------------------------------------
+
+Next, create an app within your project, like `sample`, from within the
+project root (same level as manage.py):
+
+[source,bash]
+---------------------------------
+$ python manage.py startapp sample
+---------------------------------
+
+The first thing we must do with our app is configure our settings so we
+can index dictionaries within our templates. Insert the following into the
+settings.py file located within your project's similarly named subfolder:
+
+[source,python]
+-----
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.core.context_processors.request',
+    'django.contrib.auth.context_processors.auth',
+)
+-----
+
+Next, you must set up your project to use a database of some kind, be it
+SQLite, MySQL, PostgreSQL, Oracle, or other extended databases supported by
+Django. The choice and pathname of this database can be found in settings.py,
+within the DATABASES tuple. Finalize this process with the following command
+from the document root:
+
+[source,bash]
+-------------------------
+$ python manage.py syncdb
+-------------------------
+
+We are almost done preparing the project for use with our library; however, we
+may establish our URL configuration file. To do so, create a file named urls.py
+if it does not already exist within the app folder of the project (in this case,
+sample) and fill it with the following information:
+
+[source,python]
+-----
+from django.conf.urls import url, patterns
+
+from sample import views
+
+urlpatterns = patterns('',
+    url(r'^$', views.index, name='index'),
+    url(r'^login/$', views.login, name='login'),
+    url(r'^logout/$', views.logout, name='logout'),
+    url(r'^return_page/$', views.return_page, name='return_page'),
+)
+-----
+
+These are the "routes" of our application, as other frameworks traditionally call
+them, and Django refers to them as URL configurations (or URL confs). We will also
+want to place the following into the urls.py file located within the subfolder of
+our document root that is named after the project itself (i.e., `cs50id/cs50id` in
+this case):
+
+[source,python]
+-----
+from django.conf.urls import patterns, include, url
+
+# Uncomment the next two lines to enable the admin:
+# from django.contrib import admin
+# admin.autodiscover()
+
+urlpatterns = patterns('',
+    # Examples:
+    # url(r'^$', 'testproj.views.home', name='home'),
+    # url(r'^testproj/', include('testproj.foo.urls')),
+
+    # Uncomment the admin/doc line below to enable admin documentation:
+    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+
+    # Uncomment the next line to enable the admin:
+    # url(r'^admin/', include(admin.site.urls)),
+    url(r'^sample/', include('sample.urls', namespace='sample')),
+)
+-----
+
+With this, setup is complete, and we can proceed to taking a look at the views
+our sample application will need.
+
+
+index
+^^^^^
+
+[source,python]
+-----
+from django.http import HttpResponseRedirect
+from django.shortcuts import render
+from django.core.urlresolvers import reverse
+from cs50.cs50 import CS50
+import sys
+
+# index url; generic just for testing purposes
+def index(request):
+    return render(request, 'sample/index.html')
+...
+-----
+
+The index view works by simply rendering a template we will define
+as the following, which should exist within a directory like the
+following, assuming our project is titled cs50id:
+
+`cs50id/sample/templates/sample/index.html`
+
+(As an aside and can be read by browsing the Django documentation,
+packaging our templates within a subfolder of our project named the
+same as our project results in a more modular design and the ability
+to repackage apps for future use, so we have written this example
+with this philosophy in mind.)
+
+[source,html]
+-----
+{% if request.session.user %}
+
+    You are logged in. <a href="/sample/logout/">Log out.</a><br />
+
+    Your unique ID for this site is <strong>{{ request.session.user.identity }}</strong><br />
+
+    {% if request.session.user.fullname %}
+    
+        Your full name is <strong>{{ request.session.user.fullname }}</strong><br />
+    
+    {% endif %}
+    
+    {% if request.session.user.email %}
+    
+        Your email address is <strong>{{ request.session.user.email }}</strong><br />
+    
+    {% endif %}
+
+{% else %}
+
+    You are not logged in. <a href="/sample/login/">Log in.</a>
+
+{% endif %}
+-----
+
+As we can see, the template logic is fairly simple; if our request possesses a session
+variable named 'user' (normally indexed as request.session['user'], but using dot syntax
+for Django template syntax, hence the template settings code we had to change earlier),
+we are shown a login message. If we do not have this session variable, we are instead
+told we are not logged in and given a login link.
+
+
+login
+^^^^^
+
+The login view is our second view, which actually contains the first call to the CS50
+library:
+
+[source,python]
+-----
+...
+# login test using CS50 library
+def login(request):
+    if 'user' in request.session:
+        return HttpResponseRedirect(reverse('sample:index'))
+    else:
+        return HttpResponseRedirect(CS50.getLoginUrl('tmp', 'http://127.0.0.1:8000', 
+            'http://127.0.0.1:8000/sample/return_page/', request.session))
+...
+-----
+
+This does some more checking for 'user' in our session; should it exist, we are 
+redirected back to our index, else we get directed to CS50 ID's login screen by
+passing in the root of our server and the view to which it will be directed back,
+in this case a view we have titled return_page and will see soon. Also note the 
+request.session variable passed in as the final argument.
+
+
+return_page
+^^^^^
+
+In this case, "return_page" is chosen as the name of this view in favor of "return"
+because of issues with Python treating the word "return" as a keyword. This view is
+where our login view will return once we have been verified by OpenID and is the
+following:
+
+[source,python]
+-----
+...
+# return test using CS50 library
+def return_page(request):
+    user = CS50.getUser('tmp', 'http://127.0.0.1:8000/sample/return_page/', request, 'sample:return_page')
+    
+    if (user):
+        request.session['user'] = user
+        
+    return HttpResponseRedirect(reverse('sample:index'))
+...
+-----
+
+As can be seen, we obtain `user`, which is a dictionary consisting of session keys that are important
+to us (in this case, a full name and email), and get redirected to our index, which should now display
+an updated message about us being logged in with an ID, as well as our credentials.
+
+
+logout
+^^^^^
+
+Our last view is a very simple one and is used to log out once we have obtained an active session. It
+is the following:
+
+[source,python]
+-----
+...
+# logout function
+def logout(request):
+    del request.session['user']
+    
+    return HttpResponseRedirect(reverse('sample:index'))
+...
+-----
+
+As can be seen, the only thing logout does is delete the `user` dictionary from our request object,
+assuming it exists, and then redirects us to index, where we will then be told we are not logged in.
+
+With this simple example, you are now ready to begin utilizing the CS50 Library!
+
 
 
 [[ruby]]
