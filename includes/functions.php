@@ -24,16 +24,22 @@
             $contents = file_get_contents($file);
             if (preg_match("/^---\s*\n(.*?)\n---\s*\n(.*)$/ms", $contents, $matches)) {
 
-                // ensure content exists before trying to convert it
+                // ensure content exists before trying to parse it
                 if (count($matches) !== 3) {
                     trigger_error("malformed asciidoc file.");
                     return false;
                 }
 
+                // parse
                 $yaml = yaml_parse($matches[1]);
             }
             else {
                 trigger_error("malformed asciidoc file.");
+                return false;
+            }
+
+            // ignore drafts
+            if (isset($yaml["draft"]) && $yaml["draft"] === true) {
                 return false;
             }
 
