@@ -56,6 +56,7 @@ Redirect /Shuttleboy_API /api/shuttleboy/
 Redirect /Terminal /ssh/terminal/
 Redirect /Third-Party_APIs /api/
 Redirect /WinSCP /sftp/winscp/
+Redirect /VirtualBox /virtualbox
 
 # redirects to latest versions of pages
 RedirectMatch /appliance/$ /appliance/17/
