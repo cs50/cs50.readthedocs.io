@@ -323,23 +323,23 @@ http://mirror.cs50.net/library/python/examples/id.zip.
 Setup
 ^^^^^
 
-Once you've installed Python, Django, and pip, download a copy of the
-CS50 library using pip via:
+Once you've installed Python, Django, and `pip`, download a copy of the
+CS50 library using `pip` via:
 
 [source,bash]
 ------------------
 $ pip install cs50
 ------------------
 
-Now, create a new project, like `cs50id`:
+Now, create a new project, like `id50`:
 
 [source,bash]
 -------------------------------------
-$ django-admin.py startproject cs50id
+$ django-admin.py startproject id50
 -------------------------------------
 
 Next, create an app within your project, like `sample`, from within the
-project root (same level as manage.py):
+project' root (same level as `manage.py`):
 
 [source,bash]
 ---------------------------------
@@ -348,7 +348,7 @@ $ python manage.py startapp sample
 
 The first thing we must do with our app is configure our settings so we
 can index dictionaries within our templates. Insert the following into the
-settings.py file located within your project's similarly named subfolder:
+`settings.py` file located within your project's similarly named subfolder:
 
 [source,python]
 -----
@@ -360,9 +360,9 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
 Next, you must set up your project to use a database of some kind, be it
 SQLite, MySQL, PostgreSQL, Oracle, or other extended databases supported by
-Django. The choice and pathname of this database can be found in settings.py,
-within the DATABASES tuple. Finalize this process with the following command
-from the document root:
+Django. The choice and pathname of this database can be found in `settings.py`,
+within the `DATABASES` tuple. Finalize this process with the following command
+from the project's root:
 
 [source,bash]
 -------------------------
@@ -370,9 +370,9 @@ $ python manage.py syncdb
 -------------------------
 
 We are almost done preparing the project for use with our library; however, we
-may establish our URL configuration file. To do so, create a file named urls.py
+may establish our URL configuration file. To do so, create a file named `urls.py`
 if it does not already exist within the app folder of the project (in this case,
-sample) and fill it with the following information:
+`sample`) and fill it with the following information:
 
 [source,python]
 -----
@@ -384,14 +384,14 @@ urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),
     url(r'^login/$', views.login, name='login'),
     url(r'^logout/$', views.logout, name='logout'),
-    url(r'^return_page/$', views.return_page, name='return_page'),
+    url(r'^return_to/$', views.return_to, name='return_to'),
 )
 -----
 
 These are the "routes" of our application, as other frameworks traditionally call
 them, and Django refers to them as URL configurations (or URL confs). We will also
-want to place the following into the urls.py file located within the subfolder of
-our document root that is named after the project itself (i.e., `cs50id/cs50id` in
+want to place the following into the `urls.py` file located within the subfolder of
+our project's root that is named after the project itself (i.e., `id50/id50` in
 this case):
 
 [source,python]
@@ -439,9 +439,9 @@ def index(request):
 
 The index view works by simply rendering a template we will define
 as the following, which should exist within a directory like the
-following, assuming our project is titled cs50id:
+following, assuming our project is titled id50:
 
-`cs50id/sample/templates/sample/index.html`
+`id50/sample/templates/sample/index.html`
 
 (As an aside and can be read by browsing the Django documentation,
 packaging our templates within a subfolder of our project named the
@@ -498,21 +498,21 @@ def login(request):
         return HttpResponseRedirect(reverse('sample:index'))
     else:
         return HttpResponseRedirect(CS50.getLoginUrl('tmp', 'http://127.0.0.1:8000', 
-            'http://127.0.0.1:8000/sample/return_page/', request.session))
+            'http://127.0.0.1:8000/sample/return_to/', request.session))
 ...
 -----
 
 This does some more checking for 'user' in our session; should it exist, we are 
 redirected back to our index, else we get directed to CS50 ID's login screen by
 passing in the root of our server and the view to which it will be directed back,
-in this case a view we have titled return_page and will see soon. Also note the 
+in this case a view we have titled return_to and will see soon. Also note the 
 request.session variable passed in as the final argument.
 
 
-return_page
+return_to
 ^^^^^^^^^^^
 
-In this case, "return_page" is chosen as the name of this view in favor of "return"
+In this case, "return_to" is chosen as the name of this view in favor of "return"
 because of issues with Python treating the word "return" as a keyword. This view is
 where our login view will return once we have been verified by OpenID and is the
 following:
@@ -521,8 +521,8 @@ following:
 -----
 ...
 # return test using CS50 library
-def return_page(request):
-    user = CS50.getUser('tmp', 'http://127.0.0.1:8000/sample/return_page/', request, 'sample:return_page')
+def return_to(request):
+    user = CS50.getUser('tmp', 'http://127.0.0.1:8000/sample/return_to/', request, 'sample:return_to')
     
     if (user):
         request.session['user'] = user
@@ -579,12 +579,12 @@ of the CS50 Library from RubyGems via:
 $ gem install cs50
 ------------------
 
-Now, create a new project, like `cs50id`:
+Now, create a new project, like `id50`:
 
 [source,bash]
-------------------
-$ rails new cs50id
-------------------
+----------------
+$ rails new id50
+----------------
 
 Now, add the CS50 library to the project by adding the following to
 `/Gemfile`:
