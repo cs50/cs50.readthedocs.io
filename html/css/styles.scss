@@ -80,7 +80,6 @@ code {
 #background {
     width: 100%;
     height: 100%;
-    @include background-cover('/img/table-bg.jpg');
 }
 
 .not-main #preamble {
@@ -368,7 +367,7 @@ code {
         margin-top: 4px;
 
         li {
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
     }
 
@@ -459,7 +458,12 @@ code {
     
     code {
         font-size: .8em;
+        line-height: 1.2;
     }
+}
+
+.literalblock > .content > pre, .listingblock > .content > pre {
+    line-height: 1.2;
 }
 
 .circle-outer {

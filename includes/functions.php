@@ -48,7 +48,7 @@
 
                 // inject document's header, possibly with TOC
                 if (!isset($yaml["toc"]) || $yaml["toc"] !== false) {
-                    $asciidoc = "= {$yaml["title"]}\n:toc:\n:toc-placement: manual\n\ntoc::[]\n\n{$matches[2]}";
+                    $asciidoc = "= {$yaml["title"]}\n:toc:\n:toc-placement: manual\n\ntoc::[levels=5]\n\n{$matches[2]}";
                 }
                 else {
                     $asciidoc = "= {$yaml["title"]}\n\n{$matches[2]}";
