@@ -318,7 +318,7 @@ Python
 ~~~~~~
 
 This example is available for download at
-http://mirror.cs50.net/library/python/examples/id.zip.
+http://mirror.cs50.net/id50/python/id50-1.zip.
 
 Setup
 ^^^^^
