@@ -323,13 +323,23 @@ http://mirror.cs50.net/library/python/examples/id.zip.
 Setup
 ^^^^^
 
-Once you've installed Python, Django, and `pip`, download a copy of the
-CS50 library using `pip` via:
+Once you've installed Python and pip, download a copy of the CS50
+library, which also comes with OpenID and Django, by typing in the
+following:
 
 [source,bash]
 ------------------
 $ pip install cs50
 ------------------
+
+Note: On Linux machines, namely the CS50 Appliance, you may need to type
+the following instead to ensure the Python modules are sufficiently
+accessible:
+
+[source,bash]
+-----------------------
+$ sudo su - -c "pip install cs50"
+-----------------------
 
 Now, create a new project, like `id50`:
 
@@ -338,17 +348,33 @@ Now, create a new project, like `id50`:
 $ django-admin.py startproject id50
 -------------------------------------
 
-Next, create an app within your project, like `sample`, from within the
-project' root (same level as `manage.py`):
+Next, create an app within your project, like `app`, from within the
+project's root (same level as `manage.py`):
 
 [source,bash]
 ---------------------------------
-$ python manage.py startapp sample
+$ python manage.py startapp app
 ---------------------------------
 
-The first thing we must do with our app is configure our settings so we
-can index dictionaries within our templates. Insert the following into the
-`settings.py` file located within your project's similarly named subfolder:
+The first thing we must do with our app is add two constants we will use
+within our views file later so refer to our trusted root and return url.
+Add the following to the `settings.py` file located within your project's
+similarly named subfolder:
+
+[source,python]
+-----
+# URL that CS50 ID should ask users to trust; must be registered with CS50,
+# per the HOWTO at https://manual.cs50.net/ID; must be a prefix of RETURN_TO
+TRUST_ROOT = 'http://127.0.0.1:8000'
+
+# URL to which CS50 ID should return users; must be registered with CS50,
+# per the HOWTO at https://manual.cs50.net/ID
+RETURN_TO = 'http://127.0.0.1:8000/app/return_to'
+-----
+
+Next, we will configure out settings in a way such that we can index
+dictionaries within our templates, which is not enabled by default. Insert
+the following code into `settings.py`:
 
 [source,python]
 -----
@@ -358,33 +384,56 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 -----
 
-Next, you must set up your project to use a database of some kind, be it
-SQLite, MySQL, PostgreSQL, Oracle, or other extended databases supported by
-Django. The choice and pathname of this database can be found in `settings.py`,
-within the `DATABASES` tuple. Finalize this process with the following command
-from the project's root:
+Django has support for database-driven web applications, but ours will only use
+caching to store session and OpenID association information; type in the following
+to your settings file to enable these features, and leave the DATABASES tuple in your
+settings file blank:
 
-[source,bash]
--------------------------
-$ python manage.py syncdb
--------------------------
+[source,python]
+-----
+...
+# cache settings so we can enable session saving via cache and remove database dependency
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': tempfile.gettempdir(),
+    }
+}
+
+# setting enabled to make sure our sessions are saved via cache instead of database
+SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
+...
+-----
+
+Configuring your project to use a database is very easy and even commented in the settings
+file itself, but for further information, please consult the Django documentation.
+
+We will need one more line to ensure our next bit of code works, and it is the following:
+
+[source,python]
+-----
+...
+# setting enabled so that urlConfs (routes) need not have a trailing slash to be effective
+APPEND_SLASH = False
+...
+-----
 
 We are almost done preparing the project for use with our library; however, we
 may establish our URL configuration file. To do so, create a file named `urls.py`
 if it does not already exist within the app folder of the project (in this case,
-`sample`) and fill it with the following information:
+`app`) and fill it with the following information:
 
 [source,python]
 -----
 from django.conf.urls import url, patterns
 
-from sample import views
+from app import views
 
 urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),
-    url(r'^login/$', views.login, name='login'),
-    url(r'^logout/$', views.logout, name='logout'),
-    url(r'^return_to/$', views.return_to, name='return_to'),
+    url(r'^login$', views.login, name='login'),
+    url(r'^logout$', views.logout, name='logout'),
+    url(r'^return_to$', views.return_to, name='return_to'),
 )
 -----
 
@@ -398,21 +447,8 @@ this case):
 -----
 from django.conf.urls import patterns, include, url
 
-# Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
-
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'testproj.views.home', name='home'),
-    # url(r'^testproj/', include('testproj.foo.urls')),
-
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
-    # Uncomment the next line to enable the admin:
-    # url(r'^admin/', include(admin.site.urls)),
-    url(r'^sample/', include('sample.urls', namespace='sample')),
+    url(r'^app/', include('app.urls', namespace='app')),
 )
 -----
 
@@ -428,12 +464,14 @@ index
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.core.urlresolvers import reverse
+from django.conf import settings
 from cs50.cs50 import CS50
 import sys
+import tempfile
 
 # index url; generic just for testing purposes
 def index(request):
-    return render(request, 'sample/index.html')
+    return render(request, 'app/index.html')
 ...
 -----
 
@@ -441,19 +479,13 @@ The index view works by simply rendering a template we will define
 as the following, which should exist within a directory like the
 following, assuming our project is titled id50:
 
-`id50/sample/templates/sample/index.html`
-
-(As an aside and can be read by browsing the Django documentation,
-packaging our templates within a subfolder of our project named the
-same as our project results in a more modular design and the ability
-to repackage apps for future use, so we have written this example
-with this philosophy in mind.)
+`id50/app/templates/app/index.html`
 
 [source,html]
 -----
 {% if request.session.user %}
 
-    You are logged in. <a href="/sample/logout/">Log out.</a><br />
+    You are logged in. <a href="/app/logout">Log out.</a><br />
 
     Your unique ID for this site is <strong>{{ request.session.user.identity }}</strong><br />
 
@@ -471,7 +503,7 @@ with this philosophy in mind.)
 
 {% else %}
 
-    You are not logged in. <a href="/sample/login/">Log in.</a>
+    You are not logged in. <a href="/app/login">Log in.</a>
 
 {% endif %}
 -----
@@ -495,10 +527,9 @@ library:
 # login test using CS50 library
 def login(request):
     if 'user' in request.session:
-        return HttpResponseRedirect(reverse('sample:index'))
+        return HttpResponseRedirect(reverse('app:index'))
     else:
-        return HttpResponseRedirect(CS50.getLoginUrl('tmp', 'http://127.0.0.1:8000', 
-            'http://127.0.0.1:8000/sample/return_to/', request.session))
+        return HttpResponseRedirect(CS50.getLoginUrl(settings.TRUST_ROOT, settings.RETURN_TO, request.session))
 ...
 -----
 
@@ -522,18 +553,21 @@ following:
 ...
 # return test using CS50 library
 def return_to(request):
-    user = CS50.getUser('tmp', 'http://127.0.0.1:8000/sample/return_to/', request, 'sample:return_to')
+    user = CS50.getUser(settings.RETURN_TO, request.session, request.GET, request.POST)
     
     if (user):
         request.session['user'] = user
         
-    return HttpResponseRedirect(reverse('sample:index'))
+    return HttpResponseRedirect(reverse('app:index'))
 ...
 -----
 
 As can be seen, we obtain `user`, which is a dictionary consisting of session keys that are important
 to us (in this case, a full name and email), and get redirected to our index, which should now display
-an updated message about us being logged in with an ID, as well as our credentials.
+an updated message about us being logged in with an ID, as well as our credentials. Our library
+ultimately needs the GET parameters of our request, but we pass in the POST as well in the event we
+receive any parameters from OpenID via that means, and in the event OpenID ever changes their internal
+workings.
 
 
 logout
@@ -549,8 +583,7 @@ is the following:
 def logout(request):
     del request.session['user']
     
-    return HttpResponseRedirect(reverse('sample:index'))
-...
+    return HttpResponseRedirect(reverse('app:index'))
 -----
 
 As can be seen, the only thing logout does is delete the `user` dictionary from our request object,
