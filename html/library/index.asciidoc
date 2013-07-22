@@ -293,14 +293,13 @@ easy_install pip
 -----
 
 in a terminal window. You may need `sudo` privileges to complete the
-installation. To then install the CS50 Library, simply type
+installation. To then install the CS50 Library, type
 
 -----
-pip install cs50
+sudo su - -c "pip install cs50"
 -----
 
-in a terminal window. You may need `sudo` privileges to complete the
-installation.
+in a terminal window.
 
 
 Ruby
