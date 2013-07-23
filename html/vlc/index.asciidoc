@@ -1,0 +1,48 @@
+---
+tags: [vlc, subtitles, cs50, video, srt, download]
+title: VLC
+---
+
+You can view CS50's video content with http://www.videolan.org/vlc[VLC media player],
+a powerful media player that works on Windows, Mac OS X, and Linux operating systems.  You can download VLC media player http://www.videolan.org/vlc/index.html#download[here].
+
+All of CS50's past video content is available at http://cs50.tv[CS50.tv].  You
+can download lectures, shorts, sections, quiz review sessions, subtitles, and
+more.  For slower connections, best to steer towards 360p videos.
+
+
+== Subtitles
+
+VLC media player can display subtitles for a given video, given a SubRip text
+(`.srt`) file.  Starting in Fall 2012, CS50 offers `.srt` files in multiple
+languages for all videos.  You can download a video's corresponding `.srt` file
+from the menu on http://cs50.tv[CS50.tv].  If your language is not listed in 
+the menu, you can see a full list of languages.  See 
+http://www.loc.gov/standards/iso639-2/php/English_list.php[here] for a full list
+of languages. 
+
+=== Loading Subtitles
+
+. Download a video and its corresponding `.srt` file from http://cs50.tv[CS50.tv].
+. Open the video in VLC media player.
+. While viewing the video, select *Subtitles Tracks* from the *Video* menu, and click *Open File...*
++
+|====
+| image:win1.png[] | image:mac1.png[]
+|====
++
+. Select the corresponding `.srt` file, and enjoy!
++
+|====
+| image:win2.png[] | image:mac2.png[]
+|====
++
+
+
+== Playback Speed
+
+VLC also allows users to adjust playback speed.  Useful to quickly review a lecture, or to
+hone in on a concept that's difficult to grasp!
+|====
+| image:win3.png[] | image:mac3.png[]
+|====
