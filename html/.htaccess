@@ -53,6 +53,7 @@ Redirect /Research /research/
 Redirect /SecureCRT /ssh/securecrt/
 Redirect /SecureFX /sftp/securefx/
 Redirect /Shuttleboy_API /api/shuttleboy/
+Redirect /Software /software/
 Redirect /Style_Guide /style/
 Redirect /Terminal /ssh/terminal/
 Redirect /Third-Party_APIs /api/
