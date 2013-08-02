@@ -70,11 +70,7 @@ HarvardEvents.
 12. Click the green *ICAL* icon.
 13. Highlight and copy the address that appears. This is the URL of your
 calendar. Odds are it will resemble
-+
-+
 http://www.google.com/calendar/ical/.../public/basic.ics
-+
-+
 , where *...* is identical to your *Calendar ID*.
 14. Submit the form below.
 
@@ -117,7 +113,7 @@ your event, and your event should appear in HarvardEvents itself.
 
 
 [[how_to_add_a_csv_feed]]
-How to Add a CSV Feed
+== How to Add a CSV Feed
 
 If your calendar can be exported as a CSV file (e.g., via a script or
 template written by you), it can be added to HarvardEvents so long as
@@ -302,7 +298,7 @@ below *Get a link to the published data*; leave *All cells* as-is.
 ++++
 
 [[how_to_add_an_icalendar_file]]
-How to Add an iCalendar File
+== How to Add an iCalendar File
 
 If your calendar can be exported as an
 http://en.wikipedia.org/wiki/ICalendar[iCalendar] file (e.g., via a

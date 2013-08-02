@@ -40,6 +40,7 @@ toc: false
 * link:2011/fall/[Fall 2011]
 * link:2012/fall/[Fall 2012]
 * link:Hardware_Virtualization/[Hardware Virtualization]
+* link:events/[Harvard Events]
 * link:ios/[iOS University Program]
 * link:ips/[IPs]
 * link:Life_After_50/[Life After 50]
