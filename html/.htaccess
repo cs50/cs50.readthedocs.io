@@ -40,7 +40,8 @@ Redirect /Discounts /discounts/
 Redirect /Enrollment /enrollment/
 Redirect /HarvardCourses_API /api/courses/
 Redirect /HarvardEnergy_API /api/energy/
-Redirect /HarvardEvents /api/events/
+Redirect /HarvardEvents /events/
+Redirect /HarvardEvents_API /api/events/
 Redirect /HarvardFood_API /api/food/
 Redirect /HarvardMaps_API /api/maps/
 Redirect /HarvardNews_API /api/news/
