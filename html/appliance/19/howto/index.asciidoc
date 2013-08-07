@@ -29,15 +29,18 @@ image:ec2secgroup.png[ec2secgroup.png,"EC2 Security Group"]
 
 7. Launch the AMI.
 
-8.  Click https://console.aws.amazon.com/ec2/home?region=us-east-1#s=Instances[*View your instances on the Instance page*] and select the region of the image you selected from the drop-down in the upper-right of the screen, if it isn't already selected. You should see your booting instance. You may wish to give it a name by clicking the pencil icon next to the name field. Once it has booted, select it, and find its hostname. The address should look something like: + `ec2-12-34-567-890.compute-1.amazonaws.com`
+8.  Click https://console.aws.amazon.com/ec2/home?region=us-east-1#s=Instances[*View your instances on the Instance page*] and select the region of the image you selected from the drop-down in the upper-right of the screen, if it isn't already selected. You should see your booting instance. You may wish to give it a name by clicking the pencil icon next to the name field. Once it has booted, select it, and find its hostname. The address should look something like: +
+`ec2-12-34-567-890.compute-1.amazonaws.com`
 
 9. SSH to the image using the keypair you selected while configuring the instance. This will typically look like, e.g.: +
 `ssh -i ~/.ssh/appliance50.pem fedora@ec2-12-34-567-890.compute-1.amazonaws.com` +
 Be sure the address after the `@` sign is the same as the address you found in the previous step.
 
-10. Once logged in, begin the CS50 Appliance installation script with the following: +
-`sudo su` +
-`curl -L http://mirror.cs50.net/appliance50/19/source/install50 | /bin/bash`
+10. Once logged in, begin the CS50 Appliance installation script with the following: [source,bash]
+----
+sudo su
+curl -L http://mirror.cs50.net/appliance50/19/source/install50 | /bin/bash
+----
 
 11. After some time (maybe 30 minutes) it will complete, and your image will be ready to deploy! Don't restart the machine, as that will assign it an ID that will then propagate to everyone that starts the AMI, thereby rendering the ID not unique. Instead, while it's still running, create a new appliance AMI by selecting your image on the same Instance page as above, select *Actions*, and click *Create Image (EBS AMI)*. Fill out the necessary details to create the AMI. This process will automatically shut down the image to create the AMI.
 
@@ -45,14 +48,12 @@ Be sure the address after the `@` sign is the same as the address you found in t
 
 The `install50` script forces the EC2 instances to create a unique identifier in `/etc/id50` on the first boot after it is run. If you reboot the machine, this file will be created automatically. If you create an AMI after that point, everyone that starts the AMI will have the same ID! If you do need to reboot the machine, you may fix this by performing the following steps:
 
-1. First, remove the ID file: +
-[source,bash]
+1. First, remove the ID file: [source,bash]
 ----
 sudo rm -f /etc/id50
 ----
 
-2. Second, add the ID creation script to `/etc/rc.d/rc.local` with the following commands: +
-[source,bash]
+2. Second, add the ID creation script to `/etc/rc.d/rc.local` with the following commands: [source,bash]
 ----
 sudo cat >>/etc/rc.d/rc.local <<EOF
 #rm{
@@ -103,9 +104,9 @@ Follow these instructions to create a new appliance virtual machine image. These
 8. In the Settings window, do the following:
 
 * Select *Processors & Memory* and give it 1 processor core and 512MB of RAM. Click *Show All* to return to the main screen.
-* Select *Hard Disk (SCSI)* and change the size to 16.00 GB. Click the triangle to show the Advanced options, and uncheck both *Pre-allocate disk space* and *Split into 2GB files*. Click *Apply*, and then *Show All*.
+* Select *Hard Disk (SCSI)* and change the size to 16.00 GB. Click the triangle to show the advanced options, and uncheck both *Pre-allocate disk space* and *Split into 2GB files*. Click *Apply*, and then *Show All*.
 * Click *Add Device*, select *Network Adapter*, and click *Private to My Mac*.
-* Again, click *Add Device*, select *Network Adapter*, and click *Autodetect*. There needs to be a total of 3 network adapters.
+* Again, click *Add Device*, select *Network Adapter*, and click *Autodetect*. There should be a total of 3 network adapters.
 
 9. Close the settings window and double-click your virtual machine in the Virtual Machine Library to run it.
 
@@ -130,12 +131,12 @@ Follow these instructions to create a new appliance virtual machine image. These
 
 The kickstart installation method should be used to install the appliance on any machine (physical or virtual), except for EC2. Be sure to configure the virtual or physical machine via one of the instructions above before following these instructions.
 
-1. On the Fedora 19 installation menu, hit the "escape" key on your keyboard. The menu appears like this:
+1. On the Fedora 19 installation menu, hit the *Escape* key on your keyboard. The menu appears like this:
 image:installmenu.png[installmenu.png,title="EBS Storage Device Configuration"]
 
 2. If you hit the escape button properly, you should see a prompt that says:
-`boot: _` + +
-Type the following into this prompt:
+`boot: _` +
+Type the following into this prompt: +
 `linux ks=http://mirror.cs50.net/appliance50/19/source/appliance50.ks`
 
 3. Hit he *Enter* key. The kickstart installation file will be downloaded and automatically run the install and update scripts. When it's finished, the installer will tell you it's completed and ask you to reboot the machine. If you are building a virtual disk image, do not reboot the machine and instead shut it down directly.
