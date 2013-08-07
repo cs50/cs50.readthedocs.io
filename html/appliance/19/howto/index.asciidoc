@@ -1,0 +1,134 @@
+---
+tags: [HOWTO]
+title: CS50 Appliance 19
+---
+
+*This build HOWTO is for version 19 of the CS50 Appliance.*
+
+== Build Instructions
+
+The instructions for building version 19 of the appliance depends on the type of machine onto which it is being installed. There are essentially two major installation types: virtual and physical machines (except EC2) which follow a kickstart script that installs Fedora from scratch with the appropriate packages, and configures it to the appliance specification during installation. Amazon EC2 instance installations, however, use a pre-existing image with an install script that alters the existing installation to match that of the appliance.
+
+=== Amazon Web Services EC2
+
+Follow these steps to build version 19 of the CS50 Appliance on AWS EC2. The basic steps, covered in more detail below, are to start an EBS-based 32-bit Fedora 19 image and run the `install50` script.
+
+1. The appliance must be built upon an already-existing EBS-based Fedora image. Visit http://fedoraproject.org/en/get-fedora-options#cloud[Fedora's Cloud options] and launch a 32-bit version of Fedora 19 in your region of choice. We started   https://console.aws.amazon.com/ec2/home?region=us-east-1#launchAmi=ami-182f5d71[ami-182f5d71], 32-bit Fedora 19 in US East, which you can also https://console.aws.amazon.com/ec2/home?region=us-east-1#launchAmi=ami-182f5d71[launch here yourself].
+
+2. Amazon Web Service's Request Instance Wizard will load. Verify the AMI and instance details, and click Continue until you reach the "Advanced Instance Options" page. There, you will be provided the option to enter User Data. Be sure that "as text" is selected, and enter a password into the "User Data" field. This password will be used by the installer script as the password for the jharvard user. Be sure only your selected password exists in this field. Accept the default Kernel and RAM Disk IDs and continue.
+
+3. On the next screen, modify the root volume to be 15GB large (be sure to hit "Save" after making the change). Click on the "EBS Volumes" tab and add another EBS volume as /dev/sdb of 1GB in size. The storage device configuration should appear like this: image:ebsvol.png[ebsvol.png,title="EBS Storage Device Configuration"]
+
+4. Continue to the next screen and apply tags if you wish, then again click Continue.
+
+5. Provide a key pair that you will use to log in to the machine for the first time.
+
+6. In the Security Group selection, choose the appliance50 security group. If you do not have an appliance50 security group, click "Create a new Security Group", give it a name "appliance50", and add Custom TCP rules for port 22 and 8080 from 0.0.0.0/0. Your configuration should appear as: image:ec2secgroup.png[ec2secgroup.png,"EC2 Security Group"]
+
+7. Launch the AMI.
+
+8.  Select https://console.aws.amazon.com/ec2/home?region=us-east-1#s=Instances[View your instances on the Instance page] and select the region of the image you selected from the drop-down in the upper-right of the screen. You should see your booting instance. You may wish to give it a name by clicking the pencil icon next to the name field. Once it has booted, select it, and find its hostname. The address should look something like: `ec2-12-34-567-890.compute-1.amazonaws.com`
+
+9. SSH to the image using the keypair you selected while configuring the instance. This will typically look like, e.g.:
+`ssh -i ~/.ssh/appliance50.pem fedora@ec2-12-34-567-890.compute-1.amazonaws.com`
+Be sure the address after the @ sign is the same as the address you found in the previous step.
+
+10. Once logged in, begin the appliance 50 installation script with the following:
+`sudo su`
+`curl -L http://mirror.cs50.net/appliance50/19/source/install50 | /bin/bash`
+
+11. After some time (maybe 30 minutes) it will complete, and your image will be ready to deploy! Don't restart the machine, as that will give it a unique ID. Instead, while it's still running, create a new appliance AMI by selecting your image on the same Instance page as above, select "Actions", and click "Create Image (EBS AMI)". This will automatically shut it down to create the AMI.
+
+*Special note: you will probably use this instance as a master. If you reboot it, you must perform an additional step before preparing it as an AMI again.*
+
+The `install50` script forces the EC2 instances to create a unique identifier in `/etc/id50` on the first boot after it is run. If you reboot the machine, thereby creating this file, and then create an AMI after that point, everyone that starts the instance will have the same ID. To fix this problem, perform these steps:
+
+1. First, remove the ID file:
+`sudo rm -f /etc/id50`
+
+2. Second, add the ID creation script to rc.local:
+`sudo cat >>/etc/rc.d/rc.local <<EOF
+#rm{
+/usr/bin/uuid -v 4 >/etc/id50; /bin/chmod 444 /etc/id50;
+/bin/sed -i '/#rm{/,/$/d' /etc/rc.d/rc.local
+EOF
+sudo chmod +x /etc/rc.d/rc.local`
+
+The initial `#rm{` is vitally important, as is the fact that this script exist at the end of the rc.local file. The `sed` line removes all lines from `#rm{` to the end of the document when it's run.
+
+=== Physical and Virtual Machines
+
+All non-EC2 virtual machines and bare-metal installations will install the appliance via an Anaconda Kickstart script.
+
+==== Bare metal
+
+The following basic instructions are intended to install the CS50 Appliance on bare metal. This method is untested, and is therefore just an outline of steps.
+
+1. Download a 32-bit Fedora 19 install DVD from the http://fedoraproject.org/en/get-fedora-options#formats[Fedora website].
+
+2. Burn the downloaded file onto a bootable DVD.
+
+3. Boot the machine with the DVD inserted.
+
+4. Follow the steps under link:#kickstart_installation[kickstart installation].
+
+5. Once the machine boots for the first time, it will ask you for jharvard's password. Reboot once more to finalize all installation. It is only on the second boot that the jharvard directories are cleaned and the appliance ID file is created.
+
+==== Virtual Machines
+
+Follow these instructions to create a new appliance virtual machine image. These steps should be performed on VMware Fusion, but the disk image created with these steps will then be prepared for both VMware and VirtualBox.
+
+1. Download a 32-bit Fedora 19 install DVD from the http://fedoraproject.org/en/get-fedora-options#formats[Fedora website].
+
+2. Open VMware Fusion, click the "File" menu and select "New".
+
+3. On the "Create New Virtual Machine" window, click the button that says "Continue without disc". On the subsequent window, select "Use operating system installation disc or image" and choose the disc image that you just downloaded in step 1. Click Continue.
+
+4. In "Choose Operating System", select "Linux" as the Operating System and "Fedora" as the version. Click Continue.
+
+5. On the "Linux Easy Install" dialog, uncheck the box for "Use Easy Install". You do not want to do it, since it will be done automatically later. Click Continue.
+
+6. On the final screen, click "Customize Settings" and save the virtual machine wherever you'd like.
+
+7. The Settings window should appear. If it does not, select your new image in the Virtual Machine library (Window menu and then Virtual Machine Library) and select "Settings" from the "Virtual Machine" menu.
+
+8. In the Settings window, do the following:
+
+* Select "Processors & Memory" and give it 1 processor core and 512MB of RAM. Click "Show All" to return to the main screen.
+* Select "Hard Disk (SCSI)" and change the size to 16.00 GB. Click the triangle to show the Advanced options, and uncheck both "Pre-allocate disk space" and "Split into 2GB files". Click Apply, and then Show All.
+* Click "Add Device", select "Network Adapter", and click "Private to My Mac" under "Custom".
+* Again, click "Add Device", select "Network Adapter", and click "Autodetect" under "Bridged Networking". There needs to be a total of 3 network adapters.
+
+9. Close the settings window and double-click your virtual machine in the Virtual Machine Library to run it.
+
+10. Follow the steps under link:#kickstart_installation[kickstart installation].
+
+11. After installation, be sure to shut the machine down without rebooting it. If you allowed the machine to boot, you must perform these steps again, or VMware-specific software will be installed for any releases you make with this appliance.
+
+12. In the VMware Virtual Machine Library, right-click the image you just created and select "Show in Finder". 
+
+13. Right-click the icon that is selected in the Finder and select "Show Package Contents."
+
+14. The "Virtual Disk.vmdk" file is the file that contains the fresh, pluripotent, image. In another directory, create two new folders: "appliance50-19-vmware" and "appliance50-19-vbox", and copy this "Virtual Disk.vmdk" file into both directories. Rename this file "appliance50.vmdk" in both directories.
+
+15. Into the "appliance50-19-vmware" directory, place a fresh copy of the http://mirror.cs50.net/appliance50/19/source/appliance50.vmx[appliance50.vmx] file. Into the "appliance50-19-vbox" directory, place a fresh copy of the http://mirror.cs50.net/appliance50/19/source/appliance50.ovf[appliance50.ovf] file. Each of the two directories should then have an `appliance50.vmdk` file and the definition file for their respective software.
+
+16. Double-click the definition files and boot - only once - both versions in their respective virtual machine. This initial boot will take a few moments as the software tools are downloaded and installed. Once you type jharvard's password once and see the desktop, shutdown the machine by clicking on the Menu button, select "Log Out", and then "Shut Down".
+
+17. Finally, we are ready to package the machine! Make sure it is properly shut down and then find the virtual machine in the Finder (VMware: right-click the virtual machine in the Virtual Machine Library and select "Show in Finder". VirtualBox: right-click the virtual machine in the Oracle VM VirtualBox Manager window and select "Show in Finder"). Take *only* the `appliance50.vmdk` file from each, and package it with a fresh version of the VMX or OVF file (as appropriate). This fresh version should be newly downloaded, as in step 15. You might move the VMDK file to a fresh directory that houses just the VMDK and the VMX or OVF, as appropriate. Finally, zip up the machine (`zip -r` in terminal), and it is ready to go!
+
+[[kickstart_installation]]
+==== Kickstart Installation
+
+The kickstart installation method should be used to install the appliance on any machine (physical or virtual), except for EC2. Be sure to configure the virtual or physical machine via one of the instructions above before following these instructions.
+
+1. On the Fedora 19 installation menu, hit the "escape" key on your keyboard. The menu appears like this:
+image:installmenu.png[installmenu.png,title="EBS Storage Device Configuration"]
+
+2. If you hit the escape button properly, you should see a prompt that says:
+`boot: _`
+
+Type the following into this prompt:
+`linux ks=http://mirror.cs50.net/appliance50/19/source/appliance50.ks`
+
+3. Hit the enter key. The kickstart installation file will be downloaded and automatically run the install and update scripts. When it's finished, the installer will tell you it's completed and ask you to reboot the machine. If you are building a virtual disk image, do not reboot the machine and instead shut it down directly.
