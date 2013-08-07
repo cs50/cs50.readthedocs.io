@@ -130,7 +130,12 @@ Follow these instructions to create a new appliance virtual machine image. These
 
 16. Double-click the definition files and boot - only once - both versions in their respective virtual machine. This initial boot will take a few moments as the software tools are downloaded and installed. Once you type `jharvard`'s password once and see the desktop, shutdown the machine by clicking on the Menu button in the VM, select *Log Out*, and then *Shut Down*.
 
-17. Finally, you are ready to package the machine! Make sure it is properly shut down and then find the virtual machine in the Finder (VMware: right-click the virtual machine in the Virtual Machine Library and select *Show in Finder*. VirtualBox: right-click the virtual machine in the Oracle VM VirtualBox Manager window and select *Show in Finder*). Take *only* the `appliance50.vmdk` file from each, and package it with a fresh version of the VMX or OVF file (as appropriate). This fresh version should be newly downloaded, as in step 15. You might move the VMDK file to a fresh directory that houses just the VMDK and the VMX or OVF, as appropriate. Finally, zip up the machine (`zip -r` in terminal), and it is ready to go!
+17. Finally, you are ready to package the machine! Make sure it is properly shut down before the following steps.
+
+*VMware*: Find the virtual machine in the Finder by right-clicking the virtual machine in the Virtual Machine Library and selecting *Show in Finder*. 
+*VirtualBox*: Export the virtual machine by selecting it in the Oracle VM VirtualBox Manager then selecting *File > Export Appliance..*. Click *Continue*. Choose a location for the export, and be sure to select *Open Virtualization Format (.ovf)* when selecting a file name and location. Click *Continue* and then *Export*. Find the exported virtual machine.
+
+*Both*: Take *only* the `appliance50.vmdk` file from each, and package it with a fresh version of the VMX or OVF file (as appropriate). This fresh version should be newly downloaded, as in step 15. You should move each VMDK file to a fresh directory that houses just the VMDK and the VMX or OVF, as appropriate. Finally, zip up the machine (`zip -r` in Terminal), and it is ready to go!
 
 [[kickstart_installation]]
 ==== Kickstart Installation
