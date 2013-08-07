@@ -51,7 +51,7 @@ The `install50` script forces the EC2 instances to create a unique identifier in
 sudo rm -f /etc/id50
 ----
 
-2. Second, add the ID creation script to rc.local with the following commands: +
+2. Second, add the ID creation script to `/etc/rc.d/rc.local` with the following commands: +
 [source,bash]
 ----
 sudo cat >>/etc/rc.d/rc.local <<EOF
@@ -62,7 +62,7 @@ EOF
 sudo chmod +x /etc/rc.d/rc.local
 ----
 
-The initial `#rm{` is vitally important, as is the fact that this script exist at the end of the rc.local file. The `sed` line removes all lines from `#rm{` to the end of the document when it's run.
+The initial `#rm{` is vitally important, as is the fact that this script exist at the end of the `rc.local` file. The `sed` line removes all lines from `#rm{` to the end of the document when it's run.
 
 === Physical and Virtual Machines
 
