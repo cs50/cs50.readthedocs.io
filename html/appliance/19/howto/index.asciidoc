@@ -36,7 +36,9 @@ image:ec2secgroup.png[ec2secgroup.png,"EC2 Security Group"]
 `ssh -i ~/.ssh/appliance50.pem fedora@ec2-12-34-567-890.compute-1.amazonaws.com` +
 Be sure the address after the `@` sign is the same as the address you found in the previous step.
 
-10. Once logged in, begin the CS50 Appliance installation script with the following: [source,bash]
+10. Once logged in, begin the CS50 Appliance installation script with the following:
++
+[source,bash]
 ----
 sudo su
 curl -L http://mirror.cs50.net/appliance50/19/source/install50 | /bin/bash
@@ -48,12 +50,16 @@ curl -L http://mirror.cs50.net/appliance50/19/source/install50 | /bin/bash
 
 The `install50` script forces the EC2 instances to create a unique identifier in `/etc/id50` on the first boot after it is run. If you reboot the machine, this file will be created automatically. If you create an AMI after that point, everyone that starts the AMI will have the same ID! If you do need to reboot the machine, you may fix this by performing the following steps:
 
-1. First, remove the ID file: [source,bash]
+1. First, remove the ID file:
++
+[source,bash]
 ----
 sudo rm -f /etc/id50
 ----
 
-2. Second, add the ID creation script to `/etc/rc.d/rc.local` with the following commands: [source,bash]
+2. Second, add the ID creation script to `/etc/rc.d/rc.local` with the following commands:
++
+[source,bash]
 ----
 sudo cat >>/etc/rc.d/rc.local <<EOF
 #rm{
@@ -134,9 +140,8 @@ The kickstart installation method should be used to install the appliance on any
 1. On the Fedora 19 installation menu, hit the *Escape* key on your keyboard. The menu appears like this:
 image:installmenu.png[installmenu.png,title="EBS Storage Device Configuration"]
 
-2. If you hit the escape button properly, you should see a prompt that says:
-`boot: _` +
-Type the following into this prompt: +
+2. If you hit the escape button properly, you should see a prompt that says
+`boot:`. Type the following into this prompt: +
 `linux ks=http://mirror.cs50.net/appliance50/19/source/appliance50.ks`
 
 3. Hit he *Enter* key. The kickstart installation file will be downloaded and automatically run the install and update scripts. When it's finished, the installer will tell you it's completed and ask you to reboot the machine. If you are building a virtual disk image, do not reboot the machine and instead shut it down directly.
