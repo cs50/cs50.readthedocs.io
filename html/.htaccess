@@ -51,6 +51,7 @@ Redirect /IPs /ips/
 Redirect /Notepad++ /notepad++/
 Redirect /PuTTY /ssh/putty/
 Redirect /Research /research/
+Redirect /Seminars /seminars/
 Redirect /SecureCRT /ssh/securecrt/
 Redirect /SecureFX /sftp/securefx/
 Redirect /Shuttleboy_API /api/shuttleboy/
