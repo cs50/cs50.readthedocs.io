@@ -57,6 +57,7 @@ Redirect /SecureFX /sftp/securefx/
 Redirect /Shuttleboy_API /api/shuttleboy/
 Redirect /Software /software/
 Redirect /Style_Guide /style/
+Redirect /Style /style/
 Redirect /Terminal /ssh/terminal/
 Redirect /Third-Party_APIs /api/
 Redirect /WinSCP /sftp/winscp/
