@@ -293,7 +293,7 @@ Mixer)* next to *Sound card*.
 7.  Visit http://www.youtube.com/ in Chrome to test with a video!
 
 
-===== How to Enter/Exit Fullscreen Mode
+==== How to Enter/Exit Fullscreen Mode
 
 To enter fullscreen mode, select *Switch to Fullscreen* from
 VirtualBox's *Machine* menu while the appliance is running. (This menu
