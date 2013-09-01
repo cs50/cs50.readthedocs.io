@@ -85,25 +85,9 @@ that will let you run
 http://en.wikipedia.org/wiki/Virtual_machine[virtual machines] on your
 own computer, whether you run Mac OS, Windows, or Linux.
 
-* If you have a *Mac*, we recommend that you follow:
-** link:VMware_Fusion[these instructions for VMware
-Fusion]
-** link:VirtualBox[these instructions for VirtualBox]
-if you end have trouble with VMware Fusion
-* If you have a *PC running Windows*, we recommend that you follow:
-** link:VMware_Player[these instructions for VMware
-Player]
-** link:VMware_Workstation[these instructions for
-VMware Workstation] if you have trouble with VMware Player
-** link:VirtualBox[these instructions for VirtualBox]
-if you have trouble with VMware Workstation
-* If you have a *PC running Linux*, we recommend that you follow:
-** link:VMware_Player[these instructions for VMware
-Player]
-** link:VirtualBox[these instructions for VirtualBox]
-if you have trouble with VMware Player
-** link:VMware_Workstation[these instructions for
-VMware Workstation] if you have trouble with VirtualBox
+* If you have a *Mac*, we recommend that you follow  link:VirtualBox[these instructions for VirtualBox].
+* If you have a *PC running Windows*, we recommend that you follow link:VirtualBox[these instructions for VirtualBox].
+* If you have a *PC running Linux*, we recommend that you follow link:VirtualBox[these instructions for VirtualBox].
 
 Once installed, it's not uncommon for the appliance to take a minute or
 so to boot. But if, once at John Harvard's desktop, the appliance still
