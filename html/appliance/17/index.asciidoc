@@ -295,44 +295,6 @@ Mixer)* next to *Sound card*.
 
 ===== How to Enter/Exit Fullscreen Mode
 
-
-====== VMware Fusion
-
-To enter fullscreen mode, select *Full Screen* from VMware Fusion's
-*View* menu while the appliance is running. (This menu is outside of the
-appliance, not inside of it.)
-
-To exit fullscreen mode, move your cursor to the middle of the top of
-your screen, at which point a menubar should appear. Select *Single
-Window* from the *View* menu.
-
-
-====== VMware Player
-
-To enter fullscreen mode, select *Full Screen* from VMware Player's
-*Player* menu while the appliance is running. (This menu is outside of
-the appliance, not inside of it.)
-
-To exit fullscreen mode, move your cursor to the middle of the top of
-your screen, at which point a menubar should appear (if not there
-already), and again select *Full Screen* from VMware Player's *Player*
-menu.
-
-
-====== VMware Workstation
-
-To enter fullscreen mode, select *Full Screen* from VMware Workstation's
-*View* menu while the appliance is running. (This menu is outside of the
-appliance, not inside of it.)
-
-To exit fullscreen mode, move your cursor to the middle of the top of
-your screen, at which point a menubar should appear (if not there
-already), and again select *Full Screen* from VMware Workstation's
-*View* menu.
-
-
-====== VirtualBox
-
 To enter fullscreen mode, select *Switch to Fullscreen* from
 VirtualBox's *Machine* menu while the appliance is running. (This menu
 is outside of the appliance, not inside of it.)
