@@ -62,10 +62,8 @@ toc: false
 ** link:ssh/putty/[PuTTy]
 ** link:ssh/securecrt/[SecureCRT]
 ** link:ssh/terminal/[Terminal]
-** link:tunnel50/[tunnel50]
 * link:Style_Guide/[Style Guide]
 * link:TeamViewer/[TeamViewer]
-* link:Tender/[Tender]
 * link:TextWrangler/[TextWrangler]
 * link:Turk50/[Turk50]
 ////
