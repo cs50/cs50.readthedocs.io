@@ -296,32 +296,6 @@ To exit fullscreen mode, move your cursor to the middle of the bottom of
 your screen, at which point a menu should appear. Click the second icon
 from the right (which resembles two squares).
 
-
-[[how_to_enable_apache]]
-==== How to Enable Apache
-
-By default, Apache (httpd) is disabled by default. To enable it,
-link:#how_to_open_a_terminal[open a terminal] and execute:
-
-[source,bash]
-----
-sudo chkconfig httpd on
-sudo service httpd start
-----
-
-[[how_to_enable_mysql]]
-==== How to Enable MySQL
-
-By default, MySQL (mysqld) is disabled by default. To enable it,
-link:#how_to_open_a_terminal[open a terminal] and execute:
-
-[source,bash]
-----
-sudo chkconfig mysqld on
-sudo service mysqld start
-----
-
-
 ==== How to Use phpMyAdmin
 
 You can access phpMyAdmin in either of these ways:
@@ -349,7 +323,7 @@ Suppose that you just deleted `~/hello.c`. Odds are you'll find it in
 the `minutely.0` or `minutely.1` snapshot, depending on the current
 time, in which case you can recover it with
 
-`cp /.snapshots/minutely.0/home/jharvard/hello.c ~`
+`cp /.snapshots/minutely.0/home/jharvard/hello.c ~`
 
 or with
 
