@@ -9,6 +9,7 @@ VMware Fusion for link:#_installation[Mac OS].
 
 == Installation
 
+////
 1.  Download VMware Fusion as follows:
 * If you're a student or course staff member at Harvard,
 https://docs.google.com/spreadsheet/viewform?hl=en_US&formkey=dHoyMG5LNTgxeGFhakNaaE9CdTlkbWc6MQ[apply
@@ -19,6 +20,9 @@ http://vmap.cs50.net/, along with a serial number.
 VMware Fusion from http://www.vmware.com/products/fusion/overview.html.
 After 30 days, you'll need to
 http://www.vmware.com/a/buylink/10[purchase a license] for $49.99.
+////
+1. Download VMware Fusion as follows:
+* Download the 30-day trial of VMWare Fusion 6 at http://www.vmware.com/go/tryfusion. We'll distribute license codes to Harvard students soon. If not a Harvard student, you'll need to purchase a license after the trial expires.
 2.  Double-click the file you just downloaded (which is likely in your
 *Downloads* folder) in order to "mount" VMware Fusion's icon on your
 desktop.
