@@ -64,7 +64,7 @@ See link:#instructions[instructions] for much more detail.
 http://w.x.y.z/phpMyAdmin/ from your own computer
 |====================================================
 
-'''In version 17 of the appliance, the superuser account (i.e., root) is
+'''In version 19 of the appliance, the superuser account (i.e., root) is
 locked (i.e., disabled). But John Harvard has "sudo" (i.e.,
 administrative) privileges.
 
@@ -82,9 +82,10 @@ that will let you run
 http://en.wikipedia.org/wiki/Virtual_machine[virtual machines] on your
 own computer, whether you run Mac OS, Windows, or Linux.
 
-* If you have a *Mac*, we recommend that you follow  link:VirtualBox[these instructions for VirtualBox].
-* If you have a *PC running Windows*, we recommend that you follow link:VirtualBox[these instructions for VirtualBox].
-* If you have a *PC running Linux*, we recommend that you follow link:VirtualBox[these instructions for VirtualBox].
+* If you have a *Mac*, we recommend that you follow  link:VMWare/Fusion[these instructions for VMVare Fusion].
+* If you have a *PC running Windows*, we recommend that you follow link:VMWare/Workstation[these instructions for VMWare Workstation].
+* If you have a *PC running Linux*, we recommend that you follow link:VMWare/Workstation[these instructions for VMWare Workstation].
+* If not a student at Harvard, we reccomend that follow:VirtualBox[these instructions for VirtualBox].
 
 Once installed, it's not uncommon for the appliance to take a minute or
 so to boot. But if, once at John Harvard's desktop, the appliance still
