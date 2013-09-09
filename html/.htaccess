@@ -64,4 +64,4 @@ Redirect /WinSCP /sftp/winscp/
 Redirect /VirtualBox /virtualbox
 
 # redirects to latest versions of pages
-RedirectMatch /appliance/$ /appliance/17/
+RedirectMatch /appliance/$ /appliance/19/
