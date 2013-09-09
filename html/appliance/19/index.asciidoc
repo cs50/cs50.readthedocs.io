@@ -82,9 +82,9 @@ that will let you run
 http://en.wikipedia.org/wiki/Virtual_machine[virtual machines] on your
 own computer, whether you run Mac OS, Windows, or Linux.
 
-* If you have a *Mac*, we recommend that you follow  link:VMWare/Fusion[these instructions for VMVare Fusion].
-* If you have a *PC running Windows*, we recommend that you follow link:VMWare/Workstation[these instructions for VMWare Workstation].
-* If you have a *PC running Linux*, we recommend that you follow link:VMWare/Workstation[these instructions for VMWare Workstation].
+* If you have a *Mac*, we recommend that you follow  link:VMWare/VMware_Fusion[these instructions for VMWare Fusion].
+* If you have a *PC running Windows*, we recommend that you follow link:VMWare/VMware_Workstation[these instructions for VMWare Workstation].
+* If you have a *PC running Linux*, we recommend that you follow link:VMWare/VMware_Workstation[these instructions for VMWare Workstation].
 * If not a student at Harvard, we reccomend that follow:VirtualBox[these instructions for VirtualBox].
 
 Once installed, it's not uncommon for the appliance to take a minute or
