@@ -85,7 +85,7 @@ own computer, whether you run Mac OS, Windows, or Linux.
 * If you have a *Mac*, we recommend that you follow  link:VMWare/VMware_Fusion[these instructions for VMWare Fusion].
 * If you have a *PC running Windows*, we recommend that you follow link:VMWare/VMware_Player[these instructions for VMWare Player].
 * If you have a *PC running Linux*, we recommend that you follow link:VMWare/VMware_Player[these instructions for VMWare Player].
-* If not a student at Harvard, we recommend that follow:VirtualBox[these instructions for VirtualBox].
+* If not a student at Harvard, we recommend that follow link:VirtualBox[these instructions for VirtualBox].
 
 Once installed, it's not uncommon for the appliance to take a minute or
 so to boot. But if, once at John Harvard's desktop, the appliance still
