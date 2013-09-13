@@ -38,6 +38,7 @@ Redirect /Concentrators /concentrators/
 Redirect /Cyberduck /sftp/cyberduck/
 Redirect /Discounts /discounts/
 Redirect /Enrollment /enrollment/
+Redirect /Hardware_Virtualization /virtualization
 Redirect /HarvardCourses_API /api/courses/
 Redirect /HarvardEnergy_API /api/energy/
 Redirect /HarvardEvents /events/
@@ -62,6 +63,7 @@ Redirect /Terminal /ssh/terminal/
 Redirect /Third-Party_APIs /api/
 Redirect /WinSCP /sftp/winscp/
 Redirect /VirtualBox /virtualbox
+Redirect /Virtualization /virtualization
 
 # redirects to latest versions of pages
 RedirectMatch /appliance/$ /appliance/19/
