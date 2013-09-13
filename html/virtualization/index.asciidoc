@@ -12,7 +12,7 @@ by AMD]), which improves performance of virtual machines. On Macs, it's
 enabled by default, in which case there's no need to read further! But
 on PCs (whether running Windows or Linux), it's not always enabled by
 default, in which case virtual machines (like the
-link:CS50 Appliance[CS50 Appliance]) might run unbearably slow. *Even
+link:/appliance[CS50 Appliance]) might run unbearably slow. *Even
 with hardware virtualization enabled, though, virtual machines might
 still feel slow if your computer is a few years old, has a CPU that's
 only 1GHz or so, or has only 1GB or so of RAM.*
