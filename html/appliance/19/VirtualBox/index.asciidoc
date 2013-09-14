@@ -66,27 +66,22 @@ the window contains precisely these values:
 * *Upper Address Bound:* 192.168.56.254
 17. Click *OK*.
 18. Click *OK*.
-19. Download a ZIP file of the link:../../CS50_Appliance_17[CS50 Appliance] at
-http://mirror.cs50.net/appliance50/17/i386/appliance50-17-9-ovf.zip
-(http://mirror.cs50.net.s3.amazonaws.com/appliance50/17/i386/appliance50-17-9-ovf.zip?torrent[torrent]).
-That ZIP file is over 1GB in size, so it might take a while to download.
-20. Once downloaded, unzip the ZIP file, and you should have a folder
-named *appliance50-17* with two files within (*appliance50-17.ovf* and
-*appliance50-17.vmdk*). Odds are that folder's in your *Downloads*
-folder, unless you saved it elsewhere. Do not double-click
-*appliance50-17.ovf* or *appliance50-17.vmdk*.
+19.  Download the Appliance's OVA file at
+http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vbox.ova
+(http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vmware.ova?torrent[torrent]).
+That OVA file is over 1GB in size, so it might take a while to download.
+20. Drag that cs50-appliance-19 file somewhere safe, where you won't accidentally delete it. Do not leave it in your Downloads folder.
 21. Launch VirtualBox, if not running already, as by single- or
 double-clicking its icon, wherever you installed it. (Odds are it's in
 *Applications*.)
 22. Select *Import Appliance...* from VirtualBox's *File* menu.
 23. Click *Open Appliance*.
-24. Navigate your way to the *appliance50-17* folder that you unzipped,
-highlight the *appliance50-17.ovf* file within, and click *Open*. Then
+24. Navigate your way to the *appliance50-19-vbox.ova* file that you downloaded, and click *Open*. Then
 click *Continue*.
 25. You should see a summary of the appliance's settings. Click
-*Import*, and you'll see *CS50 Appliance 17* in VirtualBox's left-hand
+*Import*, and you'll see *CS50 Appliance 19* in VirtualBox's left-hand
 menu after a few seconds or minutes.
-26. Click *CS50 Appliance 17* to highlight it, then click *Start* to
+26. Click *CS50 Appliance 19* to highlight it, then click *Start* to
 start the appliance. If you see a black-and-white screen entitled *GNU
 GRUB*, no need to do anything; the appliance will continue to boot after
 a few seconds!
