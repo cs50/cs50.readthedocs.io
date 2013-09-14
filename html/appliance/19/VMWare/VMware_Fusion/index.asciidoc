@@ -43,8 +43,7 @@ trial. You may need to input an email address to proceed.
 selecting *VMware Fusion > Check for Updates...*. Update and relaunch
 VMware Fusion as needed.
 8.  Select *File > Import...*. Navigate your way to that *appliance50-19-vmware.ova*
-file (wherever you moved it for safe-keeping), highlight the
-*appliance50-17.vmx* file within, and click *Open*.
+file (wherever you moved it for safe-keeping) and select it.
 9. Click VMware Fusion's ▶ button to start up the appliance. If
 prompted to "upgrade this virtual machine," click *Upgrade*.
 
