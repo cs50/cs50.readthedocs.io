@@ -101,17 +101,16 @@ a CPU that's only 1GHz or so, or has only 1GB or so of RAM.
 [[how_to_update_appliance]]
 === How to Update Appliance
 
-The latest version of the CS50 Appliance is *19-0*. More precisely, the
-"latest release of version 19 of the appliance is 19-0." To confirm
-that you have 19-0, look in the appliance's bottom-right corner, where
-you should see *19-0* in boldface. Alternatively, you can
+To determine which version of the appliance you have, simply 
+look in the appliance's bottom-right corner, where
+you should see *19-#* in boldface, where *#* is a number. Alternatively, you can
 link:#how_to_open_a_terminal[open a terminal] and execute
 
 `appliance50 -v`
 
-which should report `19-0` as well.
+which should report `19-#` as well.
 
-If you do not have the latest version, you can update your appliance by
+To ensure you have the latest version of the appliance, you can update yourse by 
 link:#how_to_open_a_terminal[opening a terminal] and executing:
 
 `update50`
@@ -120,8 +119,7 @@ An update may take several minutes.
 
 *Note that you cannot update from version 1.4, 2.1, 2.3, 3, 17a, or 17 of
 the appliance to version 19. You must instead download 19, per the
-link:#how_to_install_appliance[instructions] above. Thereafter, you'll
-be able to update from 19-0 to future releases, per the above.*
+link:#how_to_install_appliance[instructions] above.*
 
 
 [[how_to_use_appliance]]
