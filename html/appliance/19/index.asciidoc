@@ -82,10 +82,10 @@ that will let you run
 http://en.wikipedia.org/wiki/Virtual_machine[virtual machines] on your
 own computer, whether you run Mac OS, Windows, or Linux.
 
-* If you have a *Mac*, we recommend that you follow  link:VMWare/VMware_Fusion/[these instructions for VMWare Fusion].
-* If you have a *PC running Windows*, we recommend that you follow link:VMWare/VMware_Player/[these instructions for VMWare Player].
-* If you have a *PC running Linux*, we recommend that you follow link:VMWare/VMware_Player/[these instructions for VMWare Player].
-* If not a student at Harvard, we recommend that you follow link:VirtualBox/[these instructions for VirtualBox].
+* If you have a *Mac*, we recommend that you follow  link:fusion/[these instructions for VMWare Fusion].
+* If you have a *PC running Windows*, we recommend that you follow link:player/[these instructions for VMWare Player].
+* If you have a *PC running Linux*, we recommend that you follow link:player/[these instructions for VMWare Player].
+* If not a student at Harvard, we recommend that you follow link:virtualbox/[these instructions for VirtualBox].
 
 Once installed, it's not uncommon for the appliance to take a minute or
 so to boot. But if, once at John Harvard's desktop, the appliance still

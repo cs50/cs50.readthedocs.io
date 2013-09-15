@@ -66,11 +66,15 @@ the window contains precisely these values:
 * *Upper Address Bound:* 192.168.56.254
 17. Click *OK*.
 18. Click *OK*.
-19.  Download the Appliance's OVA file at
+19.  Download CS50 Appliance itself at
 http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vbox.ova
-(http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vmware.ova?torrent[torrent]).
-That OVA file is over 1GB in size, so it might take a while to download.
-20. Drag that cs50-appliance-19 file somewhere safe, where you won't accidentally delete it. Do not leave it in your Downloads folder.
+(http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vbox.ova?torrent[torrent]).
+That file is over 1GB in size, so it might take a while to download.
+. If using a Mac, check, once the file has finished downloading, whether its name ends in *.ova* or *.ovf*.  There appears to be a bug in Chrome whereby *.ova* is incorrectly changed to *.ovf*, so if the file's name does now end in *.ovf*, change it back as follows:
+* Single-click the file.
+* Hit Enter.
+* Change *.ovf* to *.ova*.
+* Hit Enter.
 21. Launch VirtualBox, if not running already, as by single- or
 double-clicking its icon, wherever you installed it. (Odds are it's in
 *Applications*.)

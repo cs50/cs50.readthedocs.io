@@ -17,6 +17,10 @@ RewriteRule .* index.php [L]
 
 # backwards compatibility with former Manual
 Redirect /Appliance /appliance/
+Redirect /appliance/19/VirtualBox /appliance/19/virtualbox/
+Redirect /appliance/19/VMWare/VMware_Fusion /appliance/19/fusion/
+Redirect /appliance/19/VMWare/VMware_Player /appliance/19/player/
+Redirect /appliance/19/VMWare/VMware_Workstation /appliance/19/workstation/
 Redirect /CS50_Appliance /appliance/
 Redirect /CS50_Appliance_1.4 /appliance/1.4/
 Redirect /CS50_Appliance_2.0 /appliance/2.0/
