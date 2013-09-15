@@ -368,7 +368,7 @@ a loop, declare `i` within the loop itself:
 ----
 for (int i = 0; i < LIMIT; i++)
 {
-    printf("%d\n", i);
+    printf("%i\n", i);
 }
 ----
 
