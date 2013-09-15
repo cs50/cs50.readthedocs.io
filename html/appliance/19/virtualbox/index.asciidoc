@@ -17,56 +17,56 @@ link:#linux[Linux].
 In the instructions below, *4.x.y* represents whatever version of
 VirtualBox is available on the day that you download it.
 
-1.  Download the latest version of VirtualBox from
+. Download the latest version of VirtualBox from
 http://www.virtualbox.org/wiki/Downloads by clicking *x86/amd64* to the
 right of *VirtualBox 4.x.y for OS X Hosts*.
-2.  Double-click the file you just downloaded. You may see a window that
+. Double-click the file you just downloaded. You may see a window that
 says *Verifying...* after which a *VirtualBox* icon should appear on
 your desktop (or on the lefthand side of a Finder window).
-3.  Double-click the *VirtualBox* icon on your desktop (or single-click
+. Double-click the *VirtualBox* icon on your desktop (or single-click
 the icon on the lefthand side of a Finder window). A window containing
 *VirtualBox.mpkg* should then appear.
-4.  Double-click *VirtualBox.mpkg*.
-5.  A window entitled *Oracle VM VirtualBox for Mac OS X* should then
+. Double-click *VirtualBox.mpkg*.
+. A window entitled *Oracle VM VirtualBox for Mac OS X* should then
 appear, in front of which should appear a smaller window that prompts
 you to *determine if the software can be installed*. Click *Continue* on
 both.
-6.  A window entitled *Standard Install...* should then appear. Click
+. A window entitled *Standard Install...* should then appear. Click
 *Install*.
-7.  If prompted for your username and password, provide both, then click
+. If prompted for your username and password, provide both, then click
 *Install Software*.
-8.  A few seconds or minutes later, a window entitled *The installation
+. A few seconds or minutes later, a window entitled *The installation
 was completed successfully* should appear. Click *Close*.
-9.  Launch VirtualBox, as by single- or double-clicking its icon,
+. Launch VirtualBox, as by single- or double-clicking its icon,
 wherever you installed it. (Odds are it's in *Applications*.)
-10. Select *Preferences...* under VirtualBox's *VirtualBox* menu in your
+. Select *Preferences...* under VirtualBox's *VirtualBox* menu in your
 display's top-left corner.
-11. Click *Network*.
-12. If *vboxnet0* does not already appear in the white box under
+. Click *Network*.
+. If *vboxnet0* does not already appear in the white box under
 *Host-only Networks*, click the
 image:Virtualbox-plus.png[Virtualbox-plus.png,title="image"] icon to the
 right of that box, and *vboxnet0* should then appear in the box.
-13. With *vboxnet0* highlighted in the white box under *Host-only
+. With *vboxnet0* highlighted in the white box under *Host-only
 Networks*, click the
 image:Virtualbox-screwdriver.png[Virtualbox-screwdriver.png,title="image"]
 icon to the right of that box.
-14. A window with two tabs should then appear. Click *Adapter*, if not
+. A window with two tabs should then appear. Click *Adapter*, if not
 selected already. Ensure that the window contains precisely these
 values:
 * *IPv4 Address:* 192.168.56.1
 * *IPv4 Network Mask:* 255.255.255.0
 * *IPv6 Address:*
 * *IPv6 Network Mask Length:* 0
-15. Click *OK*.
-16. Click *DHCP Server*. Ensure that *Enable Server* is checked and that
+. Click *OK*.
+. Click *DHCP Server*. Ensure that *Enable Server* is checked and that
 the window contains precisely these values:
 * *Server Address:* 192.168.56.100
 * *Server Mask:* 255.255.255.0
 * *Lower Address Bound:* 192.168.56.101
 * *Upper Address Bound:* 192.168.56.254
-17. Click *OK*.
-18. Click *OK*.
-19.  Download CS50 Appliance itself at
+. Click *OK*.
+. Click *OK*.
+.  Download CS50 Appliance itself at
 http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vbox.ova
 (http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vbox.ova?torrent[torrent]).
 That file is over 1GB in size, so it might take a while to download.
@@ -75,17 +75,17 @@ That file is over 1GB in size, so it might take a while to download.
 * Hit Enter.
 * Change *.ovf* to *.ova*.
 * Hit Enter.
-21. Launch VirtualBox, if not running already, as by single- or
+. Launch VirtualBox, if not running already, as by single- or
 double-clicking its icon, wherever you installed it. (Odds are it's in
 *Applications*.)
-22. Select *Import Appliance...* from VirtualBox's *File* menu.
-23. Click *Open Appliance*.
-24. Navigate your way to the *appliance50-19-vbox.ova* file that you downloaded, and click *Open*. Then
+. Select *Import Appliance...* from VirtualBox's *File* menu.
+. Click *Open Appliance*.
+. Navigate your way to the *appliance50-19-vbox.ova* file that you downloaded, and click *Open*. Then
 click *Continue*.
-25. You should see a summary of the appliance's settings. Click
+. You should see a summary of the appliance's settings. Click
 *Import*, and you'll see *CS50 Appliance 19* in VirtualBox's left-hand
 menu after a few seconds or minutes.
-26. Click *CS50 Appliance 19* to highlight it, then click *Start* to
+. Click *CS50 Appliance 19* to highlight it, then click *Start* to
 start the appliance. If you see a black-and-white screen entitled *GNU
 GRUB*, no need to do anything; the appliance will continue to boot after
 a few seconds!

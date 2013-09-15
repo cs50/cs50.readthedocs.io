@@ -14,7 +14,7 @@ link:#linux[Linux].
 
 === Installation
 
-1.  Download VMware Workstation as follows:
+. Download VMware Workstation as follows:
 * If you're a student at Harvard,
 https://docs.google.com/spreadsheet/viewform?hl=en_US&formkey=dHoyMG5LNTgxeGFhakNaaE9CdTlkbWc6MQ[apply
 for the VMware Academic Program] (VMAP) in order to obtain a username
@@ -24,10 +24,10 @@ from http://vmap.cs50.net/, along with a serial number.
 VMware Workstation from http://www.vmware.com/products/workstation/.
 After 30 days, you'll need to http://www.vmware.com/a/buylink/9[purchase
 a license].
-2.  Double-click the file you just downloaded (which is likely in your
+. Double-click the file you just downloaded (which is likely in your
 *Downloads* folder) in order launch VMware Workstation's installer.
-3.  If a window entitled *User Account Control* appears, click *Yes*.
-4.  A window entitled *VMware Workstation Setup* should appear. Click
+. If a window entitled *User Account Control* appears, click *Yes*.
+. A window entitled *VMware Workstation Setup* should appear. Click
 *Next*. _If you have already installed VMware Player (another product)
 on your computer before, the Setup Wizard will ask that you uninstall
 VMware Player before installing Workstation. To do so, click
@@ -35,17 +35,17 @@ VMware Player before installing Workstation. To do so, click
 Once the restart finishes, log into your Desktop and wait. The VMware
 Software Installer should automatically open a window entitled *User
 Account Control*, at which point you should click *Yes*._
-5.  When prompted to select a *Setup Type*, click *Typical*, then click
+. When prompted to select a *Setup Type*, click *Typical*, then click
 *Next*.
-6.  When prompted about *Software Updates*, leave *Check for product
+. When prompted about *Software Updates*, leave *Check for product
 updates on startup* checked and click *Next*.
-7.  When prompted about the *User Experience Improvement Program*,
+. When prompted about the *User Experience Improvement Program*,
 decide whether to check or uncheck the box, then click *Next*.
-8.  When prompted about *Shortcuts*, click Next. (Uncheck *Desktop*
+. When prompted about *Shortcuts*, click Next. (Uncheck *Desktop*
 and/or *Start Menu Programs folder* if you'd like.)
-9.  When prompted to *Perform the Requested Operations*, click
+. When prompted to *Perform the Requested Operations*, click
 *Continue*.
-10. When the installation completes, you will see *Enter License Key*.
+. When the installation completes, you will see *Enter License Key*.
 At this point in the process, you will want to enter the license key you
 were given on the page from which you downloaded VMware Workstation.
 Recall that it's an alphanumeric string of the form
@@ -53,25 +53,25 @@ Recall that it's an alphanumeric string of the form
 as they'll be added automatically for you. Should you ever lose the key,
 you can always return to VMware's site to retrieve it. Once you've
 inputted the key, click *Enter >*.
-11. Once you see *Setup Wizard Complete*, click *Restart Now* if
+. Once you see *Setup Wizard Complete*, click *Restart Now* if
 prompted, else *Finish*.
-12.  Download the Appliance's OVA file at
+. Download the Appliance's OVA file at
 http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vmware.ova
 (http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vmware.ova?torrent[torrent]).
 That OVA file is over 1GB in size, so it might take a while to download.
-13. Drag that cs50-appliance-19 file somewhere safe, where you won't accidentally delete it. Do not leave it in your Downloads folder.
-14. Launch VMware Workstation, as by single- or double-clicking its
+. Drag that cs50-appliance-19 file somewhere safe, where you won't accidentally delete it. Do not leave it in your Downloads folder.
+. Launch VMware Workstation, as by single- or double-clicking its
 icon, wherever it was installed. The first time you open the program,
 you will be asked to accept the terms to the license agreement. Do so by
 selecting the appropriate radio button and click *Ok*.
-15. If presented with a *Thank you for evaluating VMware Workstation*
+. If presented with a *Thank you for evaluating VMware Workstation*
 dialog, simply press *Close* at bottom-right.
-16. If prompted with *Software Updates*, click *Download and Install*.
+. If prompted with *Software Updates*, click *Download and Install*.
 Else select *Help > Software Updates*, then click *Check for Updates*.
 Update and relaunch VMware Workstation as needed.
-17. Select *Preferences > Display* and check the box labeled *Autofit
+. Select *Preferences > Display* and check the box labeled *Autofit
 guest*, then click *OK*.
-18. Select *File > Open a Virtual Machine...*. Navigate your way to
+. Select *File > Open a Virtual Machine...*. Navigate your way to
 that_' appliance50-19_' file (wherever you moved it for safe-keeping),
 highlight the *appliance50-19.ova* file within, and click *Open*. Then
 click VMware Workstation's ▶ button to start up the appliance.
