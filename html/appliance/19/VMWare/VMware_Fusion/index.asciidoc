@@ -21,30 +21,33 @@ VMware Fusion from http://www.vmware.com/products/fusion/overview.html.
 After 30 days, you'll need to
 http://www.vmware.com/a/buylink/10[purchase a license] for $49.99.
 ////
-1. Download VMware Fusion as follows:
-* Download the 30-day trial of VMware Fusion 6 at http://www.vmware.com/go/tryfusion. (If a Harvard student, we'll provide you with a longer-lasting license within 30 days.)  
-2.  Double-click the file you just downloaded (which is likely in your
+. Download VMware Fusion as follows:
+* If you're running Mac OS 10.7 (Lion) or higher (which you can determine by selecting *About This Mac* under the Apple menu in your screen's top-left corner), download the 30-day trial of VMware Fusion 6 at http://www.vmware.com/go/tryfusion. If you're a student at Harvard, we can provide you with a longer-lasting license within 30 days.
+* If you're running Mac OS 10.6 (Snow Leopard), download VMware Fusion 5.0.3 at https://my.vmware.com/group/vmware/details?productId=294&downloadGroup=FUS-503.  You may need to register for an account.  *If you run into trouble with VMware Fusion 5.0.3 using these instructions, please let us know at https://www.cs50.net/discuss/[CS50 Discuss] so that we can assist. We have another hypervisor you can use if need be.*
+.  Double-click the file you just downloaded (which is likely in your
 *Downloads* folder) in order to "mount" VMware Fusion's icon on your
 desktop.
-3.  A window should open. Drag the *VMware Fusion* (or *VMware
+.  A window should open. Drag the *VMware Fusion* (or *VMware
 Fusion.app*) icon in that window to your *Applications* folder.
-4.  Download the Appliance's OVA file at
+.  Download the CS50 Appliance itself at
 http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vmware.ova
 (http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vmware.ova?torrent[torrent]).
-That OVA file is over 1GB in size, so it might take a while to download.
-5. Drag that *appliance50-19-vmware.ova file somewhere safe, where you won't accidentally delete it. Do not leave it in your *Downloads* folder.
-6.  Launch VMware Fusion, as by double-clicking its icon, which should
+That file is over 1GB in size, so it might take a while to download.
+. Once the file has finished downloading, check whether its name ends in *.ova* or *.ovf*.  There appears to be a bug in Chrome whereby *.ova* is incorrectly changed to *.ovf*, so if the file's name does now end in *.ovf*, change it back as follows:
+* Single-click the file.
+* Hit Enter.
+* Change *.ovf* to *.ova*.
+* Hit Enter.
+. Next, launch VMware Fusion, as by double-clicking its icon, which should
 be in your *Applications* folder. If prompted with a *Software License
-Agreement*, click *Agree*. If prompted for *Licensing*, paste in your
-license key, then click *OK*. If prompted to *Create New*, *Convert VM*,
-or *Migrate PC*, simply click *Skip*. If you do not yet have a license key, begin the
-trial. You may need to input an email address to proceed.
-7.  Ensure that you have version 6 or later of VMware Fusion, as by
+Agreement*, click *Agree*. If prompted to provide a license, select the 30-day trial instead.
+If prompted to *Create New*, *Convert VM*, or *Migrate PC*, simply click *Skip*. 
+7.  Ensure that you have the latest version of VMware Fusion, as by
 selecting *VMware Fusion > Check for Updates...*. Update and relaunch
 VMware Fusion as needed.
 8.  Select *File > Import...*. Navigate your way to that *appliance50-19-vmware.ova*
-file (wherever you moved it for safe-keeping) and select it.
-9. Click VMware Fusion's ▶ button to start up the appliance. If
+file (which is probably still in *Downloads*) and select it.
+9. Click VMware Fusion's &#9654; button to start the appliance. If
 prompted to "upgrade this virtual machine," click *Upgrade*.
 
 The appliance should then boot! If you see a black-and-white screen
