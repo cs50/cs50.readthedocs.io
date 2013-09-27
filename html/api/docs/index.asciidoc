@@ -1,0 +1,170 @@
+---
+tags: [API]
+title: CS50 Docs API
+---
+
+== Overview
+
+The CS50 Docs API allows you to request data programmatically from https://annotate.cs50.net/[CS50 Annotate] and https://submit.cs50.net/[CS50 Submit].  The API provides a http://en.wikipedia.org/wiki/Representational_State_Transfer[RESTful] interface, which means that you can query it using simple HTTP requests.
+
+All methods support http://en.wikipedia.org/wiki/Cross-Origin_Resource_Sharing[CORS], whereby these headers will be included with each reply:
+
+[source]
+----
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: DELETE, GET, POST, PUT
+----
+
+If the client includes, e.g.,
+
+[source]
+----
+Origin: example.com
+----
+
+with its requests, the replies will also include:
+
+[source]
+----
+Access-Control-Allow-Origin: example.com
+----
+
+== Dropboxes
+
+=== DELETE /dropboxes/:uuid
+
+Delete a dropbox.
+
+==== request
+
+[source]
+----
+DELETE /dropboxes/:uuid
+Host: docs.cs50.net
+----
+
+==== response
+
+[source]
+----
+HTTP/1.1 204 No Content
+----
+=== GET /dropboxes/:uuid
+
+Read a dropbox's metadata.
+
+==== request
+
+[source]
+----
+GET /dropboxes/f47ac10b-58cc-4372-a567-0e02b2c3d479
+Host: docs.cs50.net
+----
+
+==== response
+
+[source]
+----
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+    "uuid": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+    "id": 1,
+    "user_id": 1,
+    "name": "Problem Set 0",
+    "grant": "", /* TODO */
+    "created_at": "1970-01-01 00:00:00",
+    "updated_at": "1970-01-01 00:00:00",
+}
+----
+
+=== PUT /dropboxes/:uuid
+
+Update a dropbox's metadata.
+
+==== request
+
+[source]
+----
+PUT /dropboxes/:uuid
+Content-Type: application/json
+Host: docs.cs50.net
+
+{
+    "name": "New Name"
+}
+----
+
+==== response
+
+[source]
+----
+HTTP/1.1 204 No Content
+----
+
+== Submissions
+
+=== GET /dropboxes/:uuid/submissions
+
+Read a dropbox's submissions.
+
+==== request
+
+[source]
+----
+GET /dropboxes/:uuid/submissions
+Host: docs.cs50.net
+----
+
+==== response
+
+[source]
+----
+HTTP/1.1 200 OK
+
+[
+    {
+        "id": 1,
+        "user_id": 1,
+        "dropbox_id": 1,
+        "uuid": "110ec58a-a0f2-4ac4-8393-c866d813b8d1",
+        "name": "my first pset",
+        "created_at": "1970-01-01 00:00:00",
+        "updated_at": "1970-01-01 00:00:00",
+        "user": {
+            "id": 1,
+            "registered": 1,
+            "email": "alice@example.com",
+            "fullname": "Alice",
+            "created_at": "1970-01-01 00:00:00",
+            "updated_at": "1970-01-01 00:00:00"
+        }
+    }
+]
+----
+
+=== POST /dropboxes/:uuid/submissions
+
+Create a submission in a dropbox.
+
+==== request
+
+[source]
+----
+POST /user/submissions HTTP/1.1
+Host: docs.cs50.net
+
+------WebKitFormBoundaryXAAIIRNuzQpMxEO7
+Content-Disposition: form-data; name="name"
+
+hello
+------WebKitFormBoundaryXAAIIRNuzQpMxEO7
+Content-Disposition: form-data; name="/"; filename="hello.c"
+Content-Type: application/octet-stream
+
+
+------WebKitFormBoundaryXAAIIRNuzQpMxEO7--
+----
+
+==== response
