@@ -66,7 +66,7 @@ the window contains precisely these values:
 * *Upper Address Bound:* 192.168.56.254
 . Click *OK*.
 . Click *OK*.
-.  Download CS50 Appliance itself at
+.  Download the Appliance's OVA file at
 http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vbox.ova
 (http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vbox.ova?torrent[torrent]).
 That file is over 1GB in size, so it might take a while to download.
@@ -80,7 +80,7 @@ double-clicking its icon, wherever you installed it. (Odds are it's in
 *Applications*.)
 . Select *Import Appliance...* from VirtualBox's *File* menu.
 . Click *Open Appliance*.
-. Navigate your way to the *appliance50-19-vbox.ova* file that you downloaded, and click *Open*. Then
+. Navigate your way to the OVA file that you downloaded, highlight it, and click *Open*. Then
 click *Continue*.
 . You should see a summary of the appliance's settings. Click
 *Import*, and you'll see *CS50 Appliance 19* in VirtualBox's left-hand
@@ -101,29 +101,29 @@ adapter" configured. (A "host-only adapter" lets you connect to the
 link:../../[CS50 Appliance] via HTTP, SSH, and the like.) To
 resolve this problem:
 
-1.  Launch VirtualBox. (If VirtualBox is already running, shut down any
+.  Launch VirtualBox. (If VirtualBox is already running, shut down any
 virtual machines that are running, as by clicking the red circle in the
 top-left corner of each's window.)
-2.  Select *Preferences...* under VirtualBox's *VirtualBox* menu in your
+.  Select *Preferences...* under VirtualBox's *VirtualBox* menu in your
 display's top-left corner.
-3.  Click *Network*.
-4.  If *vboxnet0* does not already appear in the white box under
+.  Click *Network*.
+.  If *vboxnet0* does not already appear in the white box under
 *Host-only Networks*, click the
 image:Virtualbox-plus.png[Virtualbox-plus.png,title="image"] icon to the
 right of that box, and *vboxnet0* should then appear in the box.
-5.  Click *OK*.
-6.  Single-click whichever virtual machine originally triggered the
+.  Click *OK*.
+.  Single-click whichever virtual machine originally triggered the
 error (e.g., the link:../../[CS50 Appliance]), then click
 *Settings*.
-7.  Click *Network*.
-8.  Click each of *Adapter 1*, *Adapter 2*, *Adapter 3*, and *Adapter
+.  Click *Network*.
+.  Click each of *Adapter 1*, *Adapter 2*, *Adapter 3*, and *Adapter
 4*. If any of them has both *Enable Network Adapter* checked and a value
 of *Host-only Adapter* for *Attached to* (as should the
 link:../../[CS50 Appliance] for *Adapter 2*), ensure that the
 adapter also has a value of *vboxnet0* now for *Name*, selecting it
 yourself from the drop-down menu next to *Name* yourself if necessary.
-9.  Click *OK*.
-10. Start whichever virtual machine originally triggered the problem
+.  Click *OK*.
+. Start whichever virtual machine originally triggered the problem
 (e.g., the link:../../[CS50 Appliance]); it should now be
 gone.
 
@@ -134,18 +134,18 @@ This message usually indicates that `/Applications` is not owned by
 `root` but, rather, by a user account (e.g., your own). To resolve this
 problem:
 
-1.  Launch *Applications > Utilities > Terminal*, which will provide you
+.  Launch *Applications > Utilities > Terminal*, which will provide you
 with a command-line environment on your own Mac.
-2.  Type
+.  Type
 +
 -----------------------------
 sudo chown root /Applications
 -----------------------------
 +
 followed by Enter, inputting your password if prompted.
-3.  Quit Terminal via *File > Quit Terminal*.
-4.  Launch VirtualBox, if not already running.
-5.  Start whichever virtual machine originally triggered the problem
+.  Quit Terminal via *File > Quit Terminal*.
+.  Launch VirtualBox, if not already running.
+.  Start whichever virtual machine originally triggered the problem
 (e.g., the link:../[CS50 Appliance]); it should now be
 gone.
 
@@ -157,18 +157,18 @@ Source: http://forums.virtualbox.org/viewtopic.php?f=7&t=38825
 This message usually indicates that that `/Applications` is
 world-writable for some reason. To resolve this problem:
 
-1.  Launch *Applications > Utilities > Terminal*, which will provide you
+.  Launch *Applications > Utilities > Terminal*, which will provide you
 with a command-line environment on your own Mac.
-2.  Type
+.  Type
 +
 ----------------------------
 sudo chmod o-w /Applications
 ----------------------------
 +
 followed by Enter, inputting your password if prompted.
-3.  Quit Terminal via *File > Quit Terminal*.
-4.  Launch VirtualBox, if not already running.
-5.  Start whichever virtual machine originally triggered the problem
+.  Quit Terminal via *File > Quit Terminal*.
+.  Launch VirtualBox, if not already running.
+.  Start whichever virtual machine originally triggered the problem
 (e.g., the link:../[CS50 Appliance]); it should now be
 gone.
 
@@ -184,80 +184,78 @@ Source: http://forums.virtualbox.org/viewtopic.php?f=7&t=39179
 In the instructions below, *4.x.y* represents whatever version of
 VirtualBox is available on the day that you download it.
 
-1.  Download the latest version of VirtualBox from
+.  Download the latest version of VirtualBox from
 http://www.virtualbox.org/wiki/Downloads by clicking *x86/amd64* to the
 right of *VirtualBox 4.x.y for Windows Hosts*.
-2.  Right-click the file you just downloaded and select Run as
+.  Right-click the file you just downloaded and select Run as
 administrator from the menu that appears.
 +
 +
 (That sentence was in red because it's important!) If asked whether you
 *want to allow the following program to make changes to this computer*,
 click *Yes*.
-3.  A window entitled *Welcome to the Oracle VM VirtualBox 4.x.y Setup
+.  A window entitled *Welcome to the Oracle VM VirtualBox 4.x.y Setup
 Wizard* should then appear. Click *Next*.
-4.  A window entitled *Custom Setup* should then appear. Odds are you
+.  A window entitled *Custom Setup* should then appear. Odds are you
 won't need to change anything on this window, but do be sure that all of
 the features in the "tree" are checked (whereby a gray disk icon appears
 to the left of each). You might need to click one or more plus (+) icons
 to see the whole tree. There should not be a red X to the left of any
 feature. Once certain that all features will be installed, click *Next*.
-5.  Another window entitled *Custom Setup* should then ask you whether
+.  Another window entitled *Custom Setup* should then ask you whether
 you'd like to create a shortcut on the desktop and/or in the Quick
 Launch Bar. We recommend that you leave at least the first box checked.
 Decide which to check, then click *Next*.
-6.  A window entitled *Warning: Network Interfaces* might then try to
+.  A window entitled *Warning: Network Interfaces* might then try to
 scare you. Not to worry, click *Yes*.
-7.  A window entitled *Ready to Install* should then appear. Click
+.  A window entitled *Ready to Install* should then appear. Click
 *Install*.
-8.  If prompted one or more times whether you would *like to install
+.  If prompted one or more times whether you would *like to install
 this device software*, click *Install* each time.
-9.  A few seconds or minutes later, a window entitled *Oracle VM
+.  A few seconds or minutes later, a window entitled *Oracle VM
 VirtualBox 4.x.y installation is complete* should appear. Leave *Start
 Oracle VM VirtualBox 4.x.y after installation* checked, then click
 *Finish*. VirtualBox should launch.
-10. Select *Preferences...* under VirtualBox's *File* menu.
-11. Click *Network*.
-12. If *VirtualBox Host-Only Ethernet Adapter* does not already appear
+. Select *Preferences...* under VirtualBox's *File* menu.
+. Click *Network*.
+. If *VirtualBox Host-Only Ethernet Adapter* does not already appear
 in the white box under *Host-only Networks*, click the
 image:Virtualbox-plus.png[Virtualbox-plus.png,title="image"] icon to the
 right of that box, and *VirtualBox Host-Only Ethernet Adapter* should
 then appear in the box.
-13. Click *VirtualBox Host-Only Ethernet Adapter* in the white box under
+. Click *VirtualBox Host-Only Ethernet Adapter* in the white box under
 *Host-only Networks* in order to highlight it, if not highlighted
 already, then click the
 image:Virtualbox-screwdriver.png[Virtualbox-screwdriver.png,title="image"]
 icon at right.
-14. Click *Adapter*, if not highlighted already, and ensure that the
+. Click *Adapter*, if not highlighted already, and ensure that the
 four text fields below are as follows:
 * *IPv4 Address:* 192.168.56.1
 * *IPv4 Network Mask:* 255.255.255.0
 * *IPv6 Address:*
 * *IPv6 Network Mask:* 0
-15. Click *OK*.
-16. Click *DHCP Server*. Ensure that *Enable Server* is checked and that
+. Click *OK*.
+. Click *DHCP Server*. Ensure that *Enable Server* is checked and that
 the window contains precisely these values:
 * *Server Address:* 192.168.56.100
 * *Server Mask:* 255.255.255.0
 * *Lower Address Bound:* 192.168.56.101
 * *Upper Address Bound:* 192.168.56.254
-17. Click *OK*.
-18. Click *OK*.
-19.  Download the Appliance's OVA file at
+. Click *OK*.
+. Click *OK*.
+.  Download the Appliance's OVA file at
 http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vbox.ova
-(http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vmware.ova?torrent[torrent]).
+(http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vbox.ova?torrent[torrent]).
 That OVA file is over 1GB in size, so it might take a while to download.
 . Launch VirtualBox, if not running already, as by single- or
 double-clicking its icon, wherever you installed it.
 . Select *Import Appliance...* from VirtualBox's *File* menu.
 . Click *Open Appliance*.
-. Navigate your way to the *appliance50-17* folder that you unzipped,
-highlight the *appliance50-17.ovf* file within, and click *Open*. Then
-click *Continue*.
+. Navigate your way to the OVA file that you downloaded, highlight it, and click *Open*. Then click *Continue*.
 . You should see a summary of the appliance's settings. Click
-*Import*, and you'll see *CS50 Appliance 17* in VirtualBox's left-hand
+*Import*, and you'll see *CS50 Appliance 19* in VirtualBox's left-hand
 menu after a few seconds or minutes.
-. Click *CS50 Appliance 17* to highlight it, then click *Start* to
+. Click *CS50 Appliance 19* to highlight it, then click *Start* to
 start the appliance. If you see a black-and-white screen entitled *GNU
 GRUB*, no need to do anything; the appliance will continue to boot after
 a few seconds!
@@ -277,30 +275,30 @@ adapter" configured. (A "host-only adapter" lets you connect to the
 link:../[CS50 Appliance] via HTTP, SSH, and the like.) To
 resolve this problem:
 
-1.  Launch VirtualBox. (If VirtualBox is already running, shut down any
+.  Launch VirtualBox. (If VirtualBox is already running, shut down any
 virtual machines that are running, as by clicking the red circle in the
 top-left corner of each's window.)
-2.  Select *Preferences...* under VirtualBox's *File* menu.
-3.  Click *Network*.
-4.  If *VirtualBox Host-Only Ethernet Adapter* does not already appear
+.  Select *Preferences...* under VirtualBox's *File* menu.
+.  Click *Network*.
+.  If *VirtualBox Host-Only Ethernet Adapter* does not already appear
 in the white box under *Host-only Networks*, click the
 image:Virtualbox-plus.png[Virtualbox-plus.png,title="image"] icon to the
 right of that box, and *VirtualBox Host-Only Ethernet Adapter* should
 then appear in the box.
-5.  Click *OK*.
-6.  Single-click whichever virtual machine originally triggered the
+.  Click *OK*.
+.  Single-click whichever virtual machine originally triggered the
 error (e.g., the link:../[CS50 Appliance]), then click
 *Settings*.
-7.  Click *Network*.
-8.  Click each of *Adapter 1*, *Adapter 2*, *Adapter 3*, and *Adapter
+.  Click *Network*.
+.  Click each of *Adapter 1*, *Adapter 2*, *Adapter 3*, and *Adapter
 4*. If any of them has both *Enable Network Adapter* checked and a value
 of *Host-only Adapter* for *Attached to* (as should the
 link:../[CS50 Appliance] for *Adapter 2*), ensure that the
 adapter also has a value of *VirtualBox Host-Only Ethernet Adapter* now
 for *Name*, selecting it yourself from the drop-down menu next to *Name*
 yourself if necessary.
-9.  Click *OK*.
-10. Start whichever virtual machine originally triggered the problem
+.  Click *OK*.
+. Start whichever virtual machine originally triggered the problem
 (e.g., the link:../[CS50 Appliance]); it should now be
 gone.
 
@@ -313,30 +311,30 @@ Sometimes (e.g., after an update), VirtualBox forgets about its
 link:../[CS50 Appliance] via HTTP, SSH, and the like.) To
 resolve this problem:
 
-1.  Launch VirtualBox. (If VirtualBox is already running, shut down any
+.  Launch VirtualBox. (If VirtualBox is already running, shut down any
 virtual machines that are running, as by clicking the red circle in the
 top-left corner of each's window.)
-2.  Select *Preferences...* under VirtualBox's *File* menu.
-3.  Click *Network*.
-4.  If *VirtualBox Host-Only Ethernet Adapter* does not already appear
+.  Select *Preferences...* under VirtualBox's *File* menu.
+.  Click *Network*.
+.  If *VirtualBox Host-Only Ethernet Adapter* does not already appear
 in the white box under *Host-only Networks*, click the
 image:Virtualbox-plus.png[Virtualbox-plus.png,title="image"] icon to the
 right of that box, and *VirtualBox Host-Only Ethernet Adapter* should
 then appear in the box.
-5.  Click *OK*.
-6.  Single-click whichever virtual machine originally triggered the
+.  Click *OK*.
+.  Single-click whichever virtual machine originally triggered the
 error (e.g., the link:../[CS50 Appliance]), then click
 *Settings*.
-7.  Click *Network*.
-8.  Click each of *Adapter 1*, *Adapter 2*, *Adapter 3*, and *Adapter
+.  Click *Network*.
+.  Click each of *Adapter 1*, *Adapter 2*, *Adapter 3*, and *Adapter
 4*. If any of them has both *Enable Network Adapter* checked and a value
 of *Host-only Adapter* for *Attached to* (as should the
 link:../[CS50 Appliance] for *Adapter 2*), ensure that the
 adapter also has a value of *VirtualBox Host-Only Ethernet Adapter* now
 for *Name*, selecting it yourself from the drop-down menu next to *Name*
 yourself if necessary.
-9.  Click *OK*.
-10. Start whichever virtual machine originally triggered the problem
+.  Click *OK*.
+. Start whichever virtual machine originally triggered the problem
 (e.g., the link:../[CS50 Appliance]); it should now be
 gone.
 
@@ -347,11 +345,11 @@ gone.
 This problem generally indicates that VirtualBox's installer wasn't run
 as an "administrator." To resolve this problem:
 
-1.  Hit image:Windows.jpg[Windows.jpg,title="image"]-*R* on your
+.  Hit image:Windows.jpg[Windows.jpg,title="image"]-*R* on your
 keyboard (i.e., hold the Windows key, then hit *R*) to open a *Run*
 prompt.
-2.  Input *ncpa.cpl* to the right of *Open*, then hit Enter.
-3.  A window entitled *Network Connections* should then appear,
+.  Input *ncpa.cpl* to the right of *Open*, then hit Enter.
+.  A window entitled *Network Connections* should then appear,
 containing an icon called *Wireless Network Connection* and/or *Local
 Area Connection* (or similar).
 * If using wireless Internet, right-click *Wireless Network Connection*
@@ -362,12 +360,12 @@ should then appear.
 similar), then choose *Properties* from the menu that appears. A window
 entitled *Local Area Connection Properties* (or similar) should then
 appear.
-4.  Inside of that window should be a list of items, some (or all) of
+.  Inside of that window should be a list of items, some (or all) of
 which are checked. If *VirtualBox Bridged Networking Driver* appears in
 the list, single-click it to highlight it, then click *Uninstall*.
-5.  If prompted if you are *sure you want to uninstall*, click *Yes*.
-6.  Click *Close*.
-7.  Proceed to reinstall VirtualBox per link:#windows[the directions
+.  If prompted if you are *sure you want to uninstall*, click *Yes*.
+.  Click *Close*.
+.  Proceed to reinstall VirtualBox per link:#windows[the directions
 above]. *Be sure to run the installer as an administrator.*
 
 Let sysadmins@cs50.net know if VirtualBox's installer still fails,
@@ -404,57 +402,54 @@ tips for that other error].
 
 === Installation
 
-1.  Download the latest version of VirtualBox from
+.  Download the latest version of VirtualBox from
 http://www.virtualbox.org/wiki/Linux_Downloads by clicking *i386* (if
 you're running a 32-bit OS) or *AMD64* (if you're running a 64-bit OS)
 to the right of your particular distribution.
-2.  Install VirtualBox via the file you just downloaded in a manner
+.  Install VirtualBox via the file you just downloaded in a manner
 consistent with your distribution (as with `dpkg`, `rpm`, or `yum`).
-3.  Launch VirtualBox, as by single- or double-clicking its icon,
+.  Launch VirtualBox, as by single- or double-clicking its icon,
 wherever you installed it.
-4.  Select *Preferences...* under VirtualBox's *File* menu.
-5.  Click *Network*.
-6.  If *VirtualBox Host-Only Ethernet Adapter* does not already appear
+.  Select *Preferences...* under VirtualBox's *File* menu.
+.  Click *Network*.
+.  If *VirtualBox Host-Only Ethernet Adapter* does not already appear
 in the white box under *Host-only Networks*, click the
 image:Virtualbox-plus.png[Virtualbox-plus.png,title="image"] icon to the
 right of that box, and *VirtualBox Host-Only Ethernet Adapter* should
 then appear in the box.
-7.  Click *VirtualBox Host-Only Ethernet Adapter* in the white box under
+.  Click *VirtualBox Host-Only Ethernet Adapter* in the white box under
 *Host-only Networks* in order to highlight it, if not highlighted
 already, then click the
 image:Virtualbox-screwdriver.png[Virtualbox-screwdriver.png,title="image"]
 icon at right.
-8.  Click *Adapter*, if not highlighted already, and ensure that the
+.  Click *Adapter*, if not highlighted already, and ensure that the
 four text fields below are as follows:
 * *IPv4 Address:* 192.168.56.1
 * *IPv4 Network Mask:* 255.255.255.0
 * *IPv6 Address:*
 * *IPv6 Network Mask:* 0
-9.  Click *OK*.
-10. Click *DHCP Server*. Ensure that *Enable Server* is checked and that
+.  Click *OK*.
+. Click *DHCP Server*. Ensure that *Enable Server* is checked and that
 the window contains precisely these values:
 * *Server Address:* 192.168.56.100
 * *Server Mask:* 255.255.255.0
 * *Lower Address Bound:* 192.168.56.101
 * *Upper Address Bound:* 192.168.56.254
-11. Click *OK*.
-12. Click *OK*.
-13.  Download the Appliance's OVA file at
+. Click *OK*.
+. Click *OK*.
+.  Download the Appliance's OVA file at
 http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vbox.ova
-(http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vmware.ova?torrent[torrent]).
+(http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vbox.ova?torrent[torrent]).
 That OVA file is over 1GB in size, so it might take a while to download.
-14. Drag that cs50-appliance-19 file somewhere safe, where you won't accidentally delete it. Do not leave it in your Downloads folder.
-15. Launch VirtualBox, if not running already, as by single- or
+. Launch VirtualBox, if not running already, as by single- or
 double-clicking its icon, wherever you installed it.
-16. Select *Import Appliance...* from VirtualBox's *File* menu.
-17. Click *Open Appliance*.
-18. Navigate your way to the *appliance50-17* folder that you unzipped,
-highlight the *appliance50-17.ovf* file within, and click *Open*. Then
-click *Continue*.
-19. You should see a summary of the appliance's settings. Click
-*Import*, and you'll see *CS50 Appliance 17* in VirtualBox's left-hand
+. Select *Import Appliance...* from VirtualBox's *File* menu.
+. Click *Open Appliance*.
+. Navigate your way to the OVA file that you downloaded, highlight it, and click *Open*. Then click *Continue*.
+. You should see a summary of the appliance's settings. Click
+*Import*, and you'll see *CS50 Appliance 19* in VirtualBox's left-hand
 menu after a few seconds or minutes.
-20. Click *CS50 Appliance 17* to highlight it, then click *Start* to
+. Click *CS50 Appliance 19* to highlight it, then click *Start* to
 start the appliance. If you see a black-and-white screen entitled *GNU
 GRUB*, no need to do anything; the appliance will continue to boot after
 a few seconds!
@@ -475,29 +470,29 @@ adapter" configured. (A "host-only adapter" lets you connect to the
 link:..[CS50 Appliance] via HTTP, SSH, and the like.) To
 resolve this problem:
 
-1.  Launch VirtualBox. (If VirtualBox is already running, shut down any
+.  Launch VirtualBox. (If VirtualBox is already running, shut down any
 virtual machines that are running, as by clicking the red circle in the
 top-left corner of each's window.)
-2.  Select *Preferences...* under VirtualBox's *File* menu.
-3.  Click *Network*.
-4.  Assuming nothing appears in the white box under *Host-only
+.  Select *Preferences...* under VirtualBox's *File* menu.
+.  Click *Network*.
+.  Assuming nothing appears in the white box under *Host-only
 Networks*, click the
 image:Virtualbox-plus.png[Virtualbox-plus.png,title="image"] icon to the
 right of that box, and *VirtualBox Host-Only Ethernet Adapter* should
 then appear in the box.
-5.  Click *OK*.
-6.  Single-click whichever virtual machine originally triggered the
+.  Click *OK*.
+.  Single-click whichever virtual machine originally triggered the
 error (e.g., the link:..[CS50 Appliance]), then click
 *Settings*.
-7.  Click *Network*.
-8.  Click each of *Adapter 1*, *Adapter 2*, *Adapter 3*, and *Adapter
+.  Click *Network*.
+.  Click each of *Adapter 1*, *Adapter 2*, *Adapter 3*, and *Adapter
 4*. If any of them has both *Enable Network Adapter* checked and a value
 of *Host-only Adapter* for *Attached to* (as should the
 link:..[CS50 Appliance] for *Adapter 2*), ensure that the
 adapter also has a value of *VirtualBox Host-Only Ethernet Adapter* now
 for *Name*, selecting it yourself from the drop-down menu next to *Name*
 yourself if necessary.
-9.  Click *OK*.
-10. Start whichever virtual machine originally triggered the problem
+.  Click *OK*.
+. Start whichever virtual machine originally triggered the problem
 (e.g., the link:..[CS50 Appliance]); it should now be
 gone.
