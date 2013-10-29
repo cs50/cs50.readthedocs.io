@@ -3,6 +3,7 @@ tags: [API]
 title: CS50 Docs API
 ---
 
+
 == Overview
 
 The CS50 Docs API allows you to request data programmatically from https://annotate.cs50.net/[CS50 Annotate] and https://submit.cs50.net/[CS50 Submit].  The API provides a http://en.wikipedia.org/wiki/Representational_State_Transfer[RESTful] interface, which means that you can query it using simple HTTP requests.
@@ -28,6 +29,182 @@ with its requests, the replies will also include:
 ----
 Access-Control-Allow-Origin: example.com
 ----
+
+
+== Users
+
+=== GET /user
+
+Returns a User object for the currently authenticated user.
+
+==== Request
+
+[source]
+----
+GET /user HTTP/1.1
+----
+
+==== Response
+
+[source]
+----
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+    "id": 1,
+    "registered": true,
+    "email": "alice@example.com",
+    "fullname": "Alice",
+    "created_at": "1970-01-01 00:00:00",
+    "updated_at": "1970-01-01 00:00:00"
+}
+----
+
+=== GET /user/dropboxes
+
+Returns an array of Dropbox objects to which the currently authenticated User has access.
+
+==== Request
+
+[source]
+----
+GET /user/dropboxes HTTP/1.1
+----
+
+==== Response
+
+[source]
+----
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+TODO
+----
+
+=== POST /user/dropboxes
+
+==== Request
+
+TODO
+
+==== Response
+
+TODO
+
+
+=== GET /user/groups
+
+Returns an array of Group objects that belong to the currently authenticated User.
+
+==== Request
+
+[source]
+----
+GET /user/groups HTTP/1.1
+----
+
+==== Response
+
+[source]
+----
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+[
+    {
+        "id": 1,
+        "user_id": 1,
+        "name": "CAs",
+        "emails": [
+            "alice@example.com",
+            "bob@example.com"
+        ],
+        "created_at": "1970-01-01 00:00:00",
+        "updated_at": "1970-01-01 00:00:00"
+    },
+    {
+        "id": 2,
+        "user_id": 1,
+        "name": "TFs",
+        "emails": [
+            "charlie@example.com",
+            "dan@example.com"
+        ],
+        "created_at": "1970-01-01 00:00:00",
+        "updated_at": "1970-01-01 00:00:00"
+    }
+]
+----
+
+
+=== POST /user/groups
+
+Creates a Group for the currently authenticated User.
+
+==== Request
+
+TODO
+
+==== Response
+
+TODO
+
+
+=== GET /user/keys
+
+Returns an array of Key objects for the currently authenticated user.
+
+==== Request
+
+TODO
+
+==== Response
+
+TODO
+
+
+=== POST /user/keys
+
+Creates a Key for the currently authenticated user.
+
+==== Request
+
+TODO
+
+==== Response
+
+TODO
+
+
+=== GET /user/submissions
+
+Returns an array of Submission objects for the currently authenticated User.
+
+==== Request
+
+TODO
+
+==== Response
+
+TODO
+
+
+=== POST /user/submissions
+
+Creates a Submission for the currently authenticated User.
+
+==== Request
+
+TODO
+
+==== Response
+
+TODO
+
+
+
+
 
 == Dropboxes
 
