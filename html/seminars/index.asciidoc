@@ -11,9 +11,17 @@ to equip students with skills and savvy beyond the scope of the course's
 own https://www.cs50.net/syllabus/[syllabus]. Below are seminars from
 this year and past years.
 
+== Fall 2013
+
+=== Leap Motion SDK
+
+_by Dan Gill and Michael Sutherland_
+
+Getting Started. Important Details. Tools and helpful tips. Community developments. Community resources. How to engage with Leap for help Q&A.
+
+* http://www.youtube.com/watch?v=u7f6ldUaSdk[Video] (pre-release)
 
 == Fall 2012
-
 
 === A Programmer's Introduction to APIs
 
