@@ -19,7 +19,7 @@ _by Dan Gill and Michael Sutherland_
 
 Getting Started. Important Details. Tools and helpful tips. Community developments. Community resources. How to engage with Leap for help Q&A.
 
-* http://cs50.tv/2013/fall/seminars/leap_motion/leap_motion-720p.mp4 [Video]
+* http://cs50.tv/2013/fall/seminars/leap_motion/leap_motion-720p.mp4[Video]
 
 == Fall 2012
 
