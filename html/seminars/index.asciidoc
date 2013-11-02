@@ -19,6 +19,7 @@ _by Gabriel Guimaraes_
 
 Ruby on Rails is an awesome framework that lets you create web applications really fast, without having to worry about unnecessary details!
 
+* http://cdn.cs50.net/2013/fall/seminars/ruby_on_rails/ruby_on_rails.pdf[Slides]
 * https://live.cs50.net/events/2504773[seminars live stream]
 
 
@@ -92,6 +93,7 @@ _by Luciano Arango_
 
 Is my new website, or web application secure? How do I make sure it's secure or test if its not? In this seminar we'll put up a website that's not yet, ahem, ready, and split the attendees into two teams. Team one's job: exploit all the vulnerabilities in the code; team two's job: patch them up before team one gets there. We'll be guiding the challenge by exposing the different mistakes that become security problems, how to spot them quickly, and how to patch them up correctly.
 
+* http://cdn.cs50.net/2013/fall/seminars/web_defense/web_defense.pdf[Slides]
 * http://cs50.tv/2013/fall/seminars/web_security/web_security-720p.mp4[Video]
 
 
