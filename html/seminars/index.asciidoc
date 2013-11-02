@@ -13,6 +13,42 @@ this year and past years.
 
 == Fall 2013
 
+=== Amazing Web Apps with Ruby on Rails
+
+_by Gabriel Guimaraes
+
+Ruby on Rails is an awesome framework that lets you create web applications really fast, without having to worry about unnecessary details!
+
+* https://live.cs50.net/events/2504773[seminars live stream]
+
+
+=== Computational Linguistics
+
+_by Lucas Freitas
+
+As computers become more and more present in our lives, making our interactions with them more intuitive and natural is essential. Computational linguistics refers to the field of computer science that uses computer science to do interesting things with natural language. Examples of large computational linguistic projects are Siri, the Jeopardy winner Watson, and Google Translate. This seminar will give a brief introduction to the field, and will include Python demos to show the potential of that area.
+
+* https://live.cs50.net/events/2504773[seminars live stream]
+
+
+=== Introduction to iOS
+
+_by Rhed Shi
+
+Learn how to program iOS applications using Objective-C and XCode 5.
+
+* https://live.cs50.net/events/2504773[seminars live stream]
+	
+
+=== JavaScript for Web Apps
+
+_by Tomas Reimers and Mike Rizzo
+
+Learn about APIs and libraries available in Javascript that are useful when writing web applications. 
+
+* https://live.cs50.net/events/2504773[seminars live stream]
+
+
 === Leap Motion SDK
 
 _by Dan Gill and Michael Sutherland_
@@ -20,6 +56,44 @@ _by Dan Gill and Michael Sutherland_
 Getting Started. Important Details. Tools and helpful tips. Community developments. Community resources. How to engage with Leap for help Q&A.
 
 * http://cs50.tv/2013/fall/seminars/leap_motion/leap_motion-720p.mp4[Video]
+
+
+=== meteor.js: JavaScript on the back end 
+
+_by Roger Zurawicki
+
+A better way to build apps.  Meteor is an open-source platform for building top-quality web apps in a fraction of the time, regardless of your comfort level. 
+We will cover the basics of server-side JavaScript and how to get started building cool real-time web apps!  More information at http://www.meteor.com/.
+
+* https://live.cs50.net/events/2504773[seminars live stream]
+
+
+=== Node.js
+
+_by Kevin Schmid
+
+Node.js is a powerful JavaScript library that allows you to create programs that deal with input and output.  That includes network data and file streams, so it's great for creating web servers! Come hear all about Node.js: how it works, where it works best, and how you could use a Node.js server in your final project! In this seminar, we'll show some examples of Node.js servers and discuss server performance.
+
+* https://live.cs50.net/events/2504773[seminars live stream]
+
+
+=== Sleek Android Design
+
+_by Jordan Jozwiak
+
+Learn about Android design patterns and how to deal with so many different device versions, sizes, and pixel densities.  We will talk about fundamental mobile designs principles, Android-specific concerns, and responsive design for phones and tablets.
+
+* https://live.cs50.net/events/2504773[seminars live stream]
+
+
+=== Web Security: Active Defense
+
+_by Luciano Arango
+
+Is my new website, or web application secure? How do I make sure it's secure or test if its not? In this seminar we'll put up a website that's not yet, ahem, ready, and split the attendees into two teams. Team one's job: exploit all the vulnerabilities in the code; team two's job: patch them up before team one gets there. We'll be guiding the challenge by exposing the different mistakes that become security problems, how to spot them quickly, and how to patch them up correctly.
+
+* http://cs50.tv/2013/fall/seminars/web_security/web_security-720p.mp4[Video]
+
 
 == Fall 2012
 
@@ -42,12 +116,7 @@ particularly encouraged to attend.
 
 _by Jordan Jozwiak '14_
 
-As of September 2012, Android had a 68% market share on smart phones
-(iOS trailed with only 17% share). Android has matured substantially in
-the last few years and is undoubtedly here to stay. What are the
-differences between iOS and Android? How has Android changed with the
-release of ICS and Jelly Bean? And, most importantly, how can you get
-started developing for Android using Java and Eclipse?
+As of September 2012, Android had a 68% market share on smart phones(iOS trailed with only 17% share). Android has matured substantially inthe last few years and is undoubtedly here to stay. What are thedifferences between iOS and Android? How has Android changed with therelease of ICS and Jelly Bean? And, most importantly, how can you getstarted developing for Android using Java and Eclipse?
 
 * http://cdn.cs50.net/2012/fall/seminars/android_apps/android_apps.pdf[Slides]
 * http://cs50.tv/2012/fall/seminars/android_apps/android_apps-720p.mp4[Video]
