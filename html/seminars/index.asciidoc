@@ -15,7 +15,7 @@ this year and past years.
 
 === Amazing Web Apps with Ruby on Rails
 
-_by Gabriel Guimaraes
+_by Gabriel Guimaraes_
 
 Ruby on Rails is an awesome framework that lets you create web applications really fast, without having to worry about unnecessary details!
 
@@ -24,7 +24,7 @@ Ruby on Rails is an awesome framework that lets you create web applications real
 
 === Computational Linguistics
 
-_by Lucas Freitas
+_by Lucas Freitas_
 
 As computers become more and more present in our lives, making our interactions with them more intuitive and natural is essential. Computational linguistics refers to the field of computer science that uses computer science to do interesting things with natural language. Examples of large computational linguistic projects are Siri, the Jeopardy winner Watson, and Google Translate. This seminar will give a brief introduction to the field, and will include Python demos to show the potential of that area.
 
@@ -33,7 +33,7 @@ As computers become more and more present in our lives, making our interactions 
 
 === Introduction to iOS
 
-_by Rhed Shi
+_by Rhed Shi_
 
 Learn how to program iOS applications using Objective-C and XCode 5.
 
@@ -42,7 +42,7 @@ Learn how to program iOS applications using Objective-C and XCode 5.
 
 === JavaScript for Web Apps
 
-_by Tomas Reimers and Mike Rizzo
+_by Tomas Reimers and Mike Rizzo_
 
 Learn about APIs and libraries available in Javascript that are useful when writing web applications. 
 
@@ -60,7 +60,7 @@ Getting Started. Important Details. Tools and helpful tips. Community developmen
 
 === meteor.js: JavaScript on the back end 
 
-_by Roger Zurawicki
+_by Roger Zurawicki_
 
 A better way to build apps.  Meteor is an open-source platform for building top-quality web apps in a fraction of the time, regardless of your comfort level. 
 We will cover the basics of server-side JavaScript and how to get started building cool real-time web apps!  More information at http://www.meteor.com/.
@@ -70,7 +70,7 @@ We will cover the basics of server-side JavaScript and how to get started buildi
 
 === Node.js
 
-_by Kevin Schmid
+_by Kevin Schmid_
 
 Node.js is a powerful JavaScript library that allows you to create programs that deal with input and output.  That includes network data and file streams, so it's great for creating web servers! Come hear all about Node.js: how it works, where it works best, and how you could use a Node.js server in your final project! In this seminar, we'll show some examples of Node.js servers and discuss server performance.
 
@@ -79,7 +79,7 @@ Node.js is a powerful JavaScript library that allows you to create programs that
 
 === Sleek Android Design
 
-_by Jordan Jozwiak
+_by Jordan Jozwiak_
 
 Learn about Android design patterns and how to deal with so many different device versions, sizes, and pixel densities.  We will talk about fundamental mobile designs principles, Android-specific concerns, and responsive design for phones and tablets.
 
@@ -88,7 +88,7 @@ Learn about Android design patterns and how to deal with so many different devic
 
 === Web Security: Active Defense
 
-_by Luciano Arango
+_by Luciano Arango_
 
 Is my new website, or web application secure? How do I make sure it's secure or test if its not? In this seminar we'll put up a website that's not yet, ahem, ready, and split the attendees into two teams. Team one's job: exploit all the vulnerabilities in the code; team two's job: patch them up before team one gets there. We'll be guiding the challenge by exposing the different mistakes that become security problems, how to spot them quickly, and how to patch them up correctly.
 
