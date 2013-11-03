@@ -20,7 +20,7 @@ _by Gabriel Guimaraes_
 Ruby on Rails is an awesome framework that lets you create web applications really fast, without having to worry about unnecessary details!
 
 * http://cdn.cs50.net/2013/fall/seminars/ruby_on_rails/ruby_on_rails.pdf[Slides]
-* https://live.cs50.net/events/2504773[seminars live stream]
+* https://live.cs50.net/events/2504773/videos/33801704/player[Video] (pre-release)
 
 
 === Computational Linguistics
@@ -38,7 +38,7 @@ _by Rhed Shi_
 
 Learn how to program iOS applications using Objective-C and XCode 5.
 
-* https://live.cs50.net/events/2504773[seminars live stream]
+* https://live.cs50.net/events/2504773/videos/33816760/player[Video] (pre-release)
 	
 
 === JavaScript for Web Apps
@@ -66,7 +66,7 @@ _by Roger Zurawicki_
 A better way to build apps.  Meteor is an open-source platform for building top-quality web apps in a fraction of the time, regardless of your comfort level. 
 We will cover the basics of server-side JavaScript and how to get started building cool real-time web apps!  More information at http://www.meteor.com/.
 
-* https://live.cs50.net/events/2504773[seminars live stream]
+* https://live.cs50.net/events/2504773/videos/33809292/player[Video] (pre-release)
 
 
 === Node.js
@@ -75,7 +75,7 @@ _by Kevin Schmid_
 
 Node.js is a powerful JavaScript library that allows you to create programs that deal with input and output.  That includes network data and file streams, so it's great for creating web servers! Come hear all about Node.js: how it works, where it works best, and how you could use a Node.js server in your final project! In this seminar, we'll show some examples of Node.js servers and discuss server performance.
 
-* https://live.cs50.net/events/2504773[seminars live stream]
+* https://live.cs50.net/events/2504773/videos/33823254/player[Video] (pre-release)
 
 
 === Sleek Android Design
