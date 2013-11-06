@@ -20,7 +20,7 @@ _by Gabriel Guimaraes_
 Ruby on Rails is an awesome framework that lets you create web applications really fast, without having to worry about unnecessary details!
 
 * http://cdn.cs50.net/2013/fall/seminars/ruby_on_rails/ruby_on_rails.pdf[Slides]
-* http://cdn.cs50.net/2013/fall/seminars/ruby_on_rails/ruby_on_rails-720p.mp4[Video]
+* http://cs50.tv/2013/fall/seminars/ruby_on_rails/[Video]
 
 
 === Computational Linguistics
@@ -38,9 +38,9 @@ _by Rhed Shi_
 
 Learn how to program iOS applications using Objective-C and XCode 5.
 
-* http://cdn.cs50.net/2013/fall/seminars/intro_to_ios/intro_to_iOS.pdf[Slides]
-* http://cdn.cs50.net/2013/fall/seminars/intro_to_ios/intro_to_iOS.zip[Source Code]
-* http://cdn.cs50.net/2013/fall/seminars/intro_to_ios/intro_to_iOS-720p.mp4[Video]
+* http://cdn.cs50.net/2013/fall/seminars/intro_to_ios/intro_to_ios.pdf[Slides]
+* http://cdn.cs50.net/2013/fall/seminars/intro_to_ios/intro_to_ios.zip[Source Code]
+* http://cs50.tv/2013/fall/seminars/intro_to_ios/[Video]
 	
 
 === JavaScript for Web Apps
@@ -59,7 +59,7 @@ _by Dan Gill and Michael Sutherland_
 Getting Started. Important Details. Tools and helpful tips. Community developments. Community resources. How to engage with Leap for help Q&A.
 
 * http://cdn.cs50.net/2013/fall/seminars/leap_motion/leap_motion.pdf[Slides]
-* http://cs50.tv/2013/fall/seminars/leap_motion/leap_motion-720p.mp4[Video]
+* http://cs50.tv/2013/fall/seminars/leap_motion/[Video]
 
 
 === meteor.js: JavaScript on the back end 
@@ -71,7 +71,7 @@ We will cover the basics of server-side JavaScript and how to get started buildi
 
 * http://cdn.cs50.net/2013/fall/seminars/meteorjs/meteorjs.pdf[Slides]
 * http://cdn.cs50.net/2013/fall/seminars/meteorjs/meteorjs.zip[Source Code]
-* http://cdn.cs50.net/2013/fall/seminars/meteorjs/meteorjs-720p.mp4[Video]
+* http://cs50.tv/2013/fall/seminars/meteorjs/[Video]
 
 
 === Node.js
@@ -82,7 +82,7 @@ Node.js is a powerful JavaScript library that allows you to create programs that
 
 * http://cdn.cs50.net/2013/fall/seminars/nodejs/nodejs.pdf[Slides]
 * http://cdn.cs50.net/2013/fall/seminars/nodejs/nodejs.zip[Source Code]
-* http://cdn.cs50.net/2013/fall/seminars/nodejs/nodejs-720p.mp4[Video]
+* http://cs50.tv/2013/fall/seminars/nodejs/[Video]
 
 
 === Sleek Android Design
@@ -101,7 +101,7 @@ _by Luciano Arango_
 Is my new website, or web application secure? How do I make sure it's secure or test if its not? In this seminar we'll put up a website that's not yet, ahem, ready, and split the attendees into two teams. Team one's job: exploit all the vulnerabilities in the code; team two's job: patch them up before team one gets there. We'll be guiding the challenge by exposing the different mistakes that become security problems, how to spot them quickly, and how to patch them up correctly.
 
 * http://cdn.cs50.net/2013/fall/seminars/web_security/web_security.pdf[Slides]
-* http://cs50.tv/2013/fall/seminars/web_security/web_security-720p.mp4[Video]
+* http://cs50.tv/2013/fall/seminars/web_security/[Video]
 
 
 == Fall 2012
