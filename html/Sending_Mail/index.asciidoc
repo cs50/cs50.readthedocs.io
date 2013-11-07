@@ -7,8 +7,8 @@ toc: false
 Below is some code with which you can send email using a library called
 PHPMailer, which is pre-installed in the link:../CS50_Appliance[CS50
 Appliance]. Although PHPMailer's
-http://phpmailer.worxware.com.php?pg=examples[examples] and
-http://phpmailer.worxware.com.php?pg=tutorial[tutorial] suggest
+http://phpmailer.worxware.com/?pg=examples[examples] and
+http://phpmailer.worxware.com/?pg=tutorial[tutorial] suggest
 different paths, include the library as follows in the appliance as
 follows.
 
@@ -20,10 +20,10 @@ require_once("PHPMailer/class.phpmailer.php");
 PHPMailer's website is a bit tricky to navigate, so here are direct
 links to some references:
 
-* http://phpmailer.worxware.com.php?pg=examples[examples]
-* http://phpmailer.worxware.com.php?pg=methods[methods]
-* http://phpmailer.worxware.com.php?pg=properties[properties]
-* http://phpmailer.worxware.com.php?pg=tutorial[tutorial]
+* http://phpmailer.worxware.com/?pg=examples[examples]
+* http://phpmailer.worxware.com/?pg=methods[methods]
+* http://phpmailer.worxware.com/?pg=properties[properties]
+* http://phpmailer.worxware.com/?pg=tutorial[tutorial]
 
 Per those references, if you'd like to send non-HTML email with
 PHPMailer, odds are you can use code like:
