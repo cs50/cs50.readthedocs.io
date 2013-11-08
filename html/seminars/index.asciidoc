@@ -48,6 +48,7 @@ Learn how to program iOS applications using Objective-C and XCode 5.
 _by Tomas Reimers and Mike Rizzo_
 
 Learn about APIs and libraries available in Javascript that are useful when writing web applications. 
+
 * http://tomasreimers.github.io/cs50-seminar/[Slides]
 * https://live.cs50.net/events/2504773[seminars live stream]
 
