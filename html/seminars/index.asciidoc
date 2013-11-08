@@ -91,7 +91,8 @@ _by Jordan Jozwiak_
 
 Learn about Android design patterns and how to deal with so many different device versions, sizes, and pixel densities.  We will talk about fundamental mobile designs principles, Android-specific concerns, and responsive design for phones and tablets.
 
-* https://live.cs50.net/events/2504773[seminars live stream]
+* http://cdn.cs50.net/2013/fall/seminars/sleek_android_design/sleek_android_design.pdf[Slides]
+* https://live.cs50.net/events/2504773/videos/34319037/player[Video] (pre-release)
 
 
 === Web Security: Active Defense
