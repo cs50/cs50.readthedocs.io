@@ -29,7 +29,7 @@ _by Lucas Freitas_
 
 As computers become more and more present in our lives, making our interactions with them more intuitive and natural is essential. Computational linguistics refers to the field of computer science that uses computer science to do interesting things with natural language. Examples of large computational linguistic projects are Siri, the Jeopardy winner Watson, and Google Translate. This seminar will give a brief introduction to the field, and will include Python demos to show the potential of that area.
 
-* https://live.cs50.net/events/2504773[seminars live stream]
+* https://live.cs50.net/events/2504773/videos/34329040/player[Video] (pre-release)
 
 
 === Introduction to iOS
