@@ -53,7 +53,7 @@ Learn about APIs and libraries available in Javascript that are useful when writ
 
 * http://tomasreimers.github.io/cs50-seminar/[Slides]
 * http://cdn.cs50.net/2013/fall/seminars/javascript_for_web_apps/javascript_for_web_apps.zip[Source]
-* https://live.cs50.net/events/2504773[seminars live stream]
+* https://live.cs50.net/events/2504773/videos/34334581/player[Video] (pre-release)
 
 
 === Leap Motion SDK
