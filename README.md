@@ -76,3 +76,4 @@ For headers use this format:
 # References
 
 * [AsciiDoc cheatsheet](http://powerman.name/doc/asciidoc)
+* [How can I use asciidoc conf file](http://discuss.asciidoctor.org/How-can-I-use-asciidoc-conf-file-tp1005p1062.html)
