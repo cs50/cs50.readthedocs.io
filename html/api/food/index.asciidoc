@@ -366,7 +366,7 @@ Array
 ----
 
 
-==== menus
+=== menus
 
 To query the HarvardFood API for menus, contact the server via URLs in
 this format:
