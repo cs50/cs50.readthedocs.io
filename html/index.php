@@ -12,27 +12,13 @@
 
 <html>
     <head>
-        <script type="text/javascript" src="//use.typekit.net/unc2dip.js"></script>
-        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-        <!-- http://yuilibrary.com/yui/docs/cssreset/ -->
-        <link href="/lib/yui-3.10.0/build/cssreset/cssreset-min.css" rel="stylesheet"/>
-
-        <!-- http://yuilibrary.com/yui/docs/cssbase/ -->
-        <link href="/lib/yui-3.10.0/build/cssbase/cssbase-min.css" rel="stylesheet"/>
-
-        <!-- https://github.com/pie4dan/CodeRay-GitHub-Theme/blob/master/coderay.css -->
-        <link href="/css/coderay.css" rel="stylesheet"/>
-
-        <!-- https://github.com/asciidoctor/asciidoctor/blob/master/stylesheets/asciidoctor.css -->
+        <!-- asciidoctor -a coderay-css=class,linkcss,source-highlighter=coderay -b html5 -D . /dev/null -->
         <link href="/css/asciidoctor.css" rel="stylesheet"/>
-
-        <link href="/css/styles.scss" rel="stylesheet"/>
+        <link href="/css/asciidoctor-coderay.css" rel="stylesheet"/>
 
         <!-- http://jquery.com/download/ -->
         <script src="/lib/jquery-1.10.1.min.js"></script>
-
-        <script src="/js/scripts.js"></script>
 
         <title>
             <?php
@@ -46,38 +32,35 @@
         </title>
     </head>
 
-    <body>
-        <div id="background"></div>
-        <div id="container" <?php if ($_SERVER["SCRIPT_URL"] != "/") { echo 'class="not-main"'; } else { echo 'class="main"'; } ?>>
-            <div id="container-background"></div>
-            <div id="search-wrapper">
-                <script>
-                    (function() {
-                        var cx = '017253632348184728259:xgoc3uuwm2s';
-                        var gcse = document.createElement('script');
-                        gcse.async = true;
-                        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-                            '//www.google.com/cse/cse.js?cx=' + cx;
-                        var s = document.getElementsByTagName('script')[0];
-                        s.parentNode.insertBefore(gcse, s);
-                    })();
-                </script>
-                <gcse:search></gcse:search>  
-            </div>
-            <h1 class="manual"><a href="/">CS50 Manual</a></h1>
-            <?php
-                if (isset($yaml["title"])) {
-                    if ($_SERVER["SCRIPT_URL"] != "/") {
-                        print("<h1 class=\"page-title\">" . htmlspecialchars($yaml["title"]) . "</h1>");
-                    }
-                    print($html);
-                }
-                else {
-                    print('<div class="circle-outer"><div class="circle-inner"></div></div><h1 class="error404">Woof, this page doesn\'t exist!</h1>');
-                }
-            ?>
-            <div id="copyright">Copyright &copy; 2013, CS50</div>
+    <body class="article toc2 toc-left">
+
+        <div>
+            <script>
+                (function() {
+                    var cx = '017253632348184728259:xgoc3uuwm2s';
+                    var gcse = document.createElement('script');
+                    gcse.async = true;
+                    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                        '//www.google.com/cse/cse.js?cx=' + cx;
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(gcse, s);
+                })();
+            </script>
+            <gcse:search></gcse:search>  
         </div>
+
+        <?php
+
+            if (isset($yaml["title"])) {
+                if ($_SERVER["SCRIPT_URL"] != "/") {
+                    print("<h1>" . htmlspecialchars($yaml["title"]) . "</h1>");
+                }
+                print($html);
+            }
+
+        ?>
+
+        <div id="copyright">Copyright &#169; <?= date("Y") ?>, CS50</div>
 
         <script>
 
