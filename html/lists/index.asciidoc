@@ -1,12 +1,9 @@
----
-tags: []
-title: Mailing Lists
----
+= Mailing Lists
+:toc: left 
 
 Below are CS-related mailing lists on campus to which you can subscribe.
 Best to subscribe using your harvard.edu email address so that you're
 approved.
-
 
 == ABCD
 
@@ -128,7 +125,6 @@ Windows."
 * http://www.abcd.harvard.edu/cgi/ABCDdb.pub?Op=Edit[abcd-www].
 "abcd-www List."
 
-
 == Entrepreneurship
 
 * http://lists.hcs.harvard.edu/mailman/listinfo/entrepreneurs[entrepreneurs]. "Harvard College Entrepreneurship Forum's open e-mail list for
@@ -148,16 +144,14 @@ maximize the chance of launching successful ventures. HCVP strives to be
 the prominent venture group on campus providing connections, resources
 and guidance to all students at Harvard College."
 
-
 == FAS
 
 * http://lists.fas.harvard.edu/mailman/listinfo/netcontacts-list[netcontacts-list].
 "Downtime Notification Mailing List."
 
-
 == HCS
 
-http://www.hcs.harvard.edu/[Harvard Computer Society] maintains a number
+The http://www.hcs.harvard.edu/[Harvard Computer Society] maintains a number
 of http://www.hcs.harvard.edu/wiki/HCS_Mailing_Lists[mailing lists] for
 its members and people interested in HCS.
 
@@ -180,7 +174,6 @@ member belongs on this list. This list has about 35 members."
 * http://lists.hcs.harvard.edu/hcs-questions[hcs-questions]. "This list
 is a forum for people (particularly new members) to ask questions."
 
-
 == Jobs
 
 * http://lists.hcs.harvard.edu/mailman/listinfo/entrepreneurs[entrepreneurs].
@@ -200,7 +193,6 @@ maximize the chance of launching successful ventures. HCVP strives to be
 the prominent venture group on campus providing connections, resources
 and guidance to all students at Harvard College."
 
-
 == SEAS
 
 * http://lists.deas.harvard.edu/mailman/listinfo/cs-undergrads[CS
@@ -211,8 +203,7 @@ Newsletter]. Weekly announcements meant for Computer Science and
 Engineering students and faculty.
 * https://lists.deas.harvard.edu/mailman/listinfo/downtime[Downtime].
 "SEAS IT service outage announcements."
-*
-http://www.eecs.harvard.edu/mailman/listinfo/icecreambreak[icecreambreak].
+* http://www.eecs.harvard.edu/mailman/listinfo/icecreambreak[icecreambreak].
 On Thursdays from 3:30pm - 4pm,
 http://www.seas.harvard.edu/faculty-research/research-areas/computer-science/[Computer
 Science] hosts an ice cream social in Maxwell Dworkin right before the

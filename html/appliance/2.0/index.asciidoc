@@ -1,7 +1,5 @@
----
-tags: []
-title: CS50 Appliance 2.0
----
+= CS50 Appliance 2.0
+:toc: left
 
 *This HOWTO is for version 2.0 of the CS50 Appliance. A
 link:../../Appliance[newer version] of the appliance is now available.*

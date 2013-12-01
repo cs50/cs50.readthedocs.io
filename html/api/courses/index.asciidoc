@@ -1,7 +1,5 @@
----
-tags: [API]
-title: HarvardCourses API
----
+= HarvardCourses API
+:toc: left
 
 The HarvardCourses API allows you to request data programmatically from
 http://courses.cs50.net/[HarvardCourses] in

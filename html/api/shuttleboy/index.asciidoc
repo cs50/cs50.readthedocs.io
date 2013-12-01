@@ -1,7 +1,5 @@
----
-tags: [API]
-title: Shuttleboy API
----
+= Shuttleboy API
+:toc: left
 
 The Shuttleboy API allows you to request data programmatically from
 http://shuttleboy.cs50.net/[Shuttleboy] in

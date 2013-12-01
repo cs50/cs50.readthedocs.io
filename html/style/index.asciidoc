@@ -1,7 +1,5 @@
----
-tags: []
-title: Style Guide
----
+= Style Guide
+:toc: left
 
 There's no one, right way to stylize code. But there are definitely a
 lot of wrong (or, at least, bad ways).  Even so, CS50 does ask that you

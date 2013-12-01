@@ -1,7 +1,5 @@
----
-tags: [HOWTO]
-title: CS50 Appliance 2.1
----
+= CS50 Appliance 2.1
+:toc: left
 
 *This HOWTO is for version 2.1 of the CS50 Appliance. If "taking"
 http://cs50.tv/2010/fall/[Fall 2010] of CS50, you should use this

@@ -1,23 +1,16 @@
----
-tags: [HOWTO]
-title: Authentication
----
+= Authentication
+:toc: left
 
 To authenticate users (i.e., require that they log in), you can
 certainly rely on your own database of usernames and passwords, as in
-http://cdn.cs50.net/2011/fall/psets/7/pset7.pdf[Fall 2011's Problem Set
+http://cdn.cs50.net/2013/fall/psets/7/pset7/pset7.html[Fall 2013's Problem Set
 7]. A downside, though, is that users have to register for yet another
 website, not to mention remember that website's password. And your
 website should really support SSL, so that users' passwords aren't
 transmitted in the clear. Unfortunately, SSL requires a unique IP
-address, for which web-hosting companies usually charge extra. Note that
-`cloud.cs50.net` does support SSL, but not for custom domain names
-(i.e., your website must live at
-`https://cloud.cs50.net/~jharvard/`, where `jharvard`
-is your own username).
+address, for which web-hosting companies usually charge extra. 
 
 But you can authenticate users via other mechanisms as well.
-
 
 == Authentication via CS50 ID
 
@@ -37,7 +30,6 @@ and/or email address. CS50 ID will not provide you with users'
 passwords, HUIDs, XIDs, or PINs.
 
 To add CS50 ID to your website, consult its link:CS50 ID[HOWTO].
-
 
 == Authentication via IP Address
 
@@ -126,47 +118,12 @@ thorough, you could OR together even more of Harvard's IPs, but the four
 prefixes above (140.247, 128.103, 10.249, and 10.250) are the most
 common.
 
-On some servers, though, `$_SERVER["REMOTE_ADDR"]`
-usually contains the IP address of the server's
-http://en.wikipedia.org/wiki/Load_balancing_(computing)[load balancer],
-which is always on campus and whose IP address is always of the form
-10.50.*.* (which is CS50's own private
-http://en.wikipedia.org/wiki/Subnetwork[subnet]), so checking its IP
-isn't helpful. For PHP-based websites that are hosted on the cloud,
-then, you'll want to check `$_SERVER["HTTP_X_FORWARDED_FOR"]`, as in the
-below:
-
-[source,php]
-----
-if (preg_match("/^(140\.247|128\.103|10\.249|10\.250)/", $_SERVER["HTTP_X_FORWARDED_FOR"]))
-{
-    // show restricted content
-}
-else
-{
-    // don't show restricted content
-}
-----
-
-Note that `$_SERVER["HTTP_X_FORWARDED_FOR"]` is only available if the
-user has visited your website via a URL that starts with `http://`; this
-variable is not available if a user has visited your website via a URL
-that starts with `https://`.
-
-Realize that this technique doesn't guarantee that a user actually goes
-to or works for Harvard; it only checks whether their IP address belongs
-to Harvard. Consider an easy, but by no means sure-fire, way of
-restricting content to Harvard affiliates with (reasonably) high
-probability.
-
-
 == Authentication via Facebook
 
 "The Login Button shows profile pictures of the user's friends who have
 already signed up for your site in addition to a login button."
 
 See https://developers.facebook.com/docs/reference/plugins/login/.
-
 
 == Authentication via Google
 
@@ -176,12 +133,11 @@ certain types of activities."
 
 See http://code.google.com/apis/accounts/docs/GettingStarted.html.
 
-
 == Authentication via Janrain
 
 "Allow your users to sign in with one of their accounts at Facebook,
 Google, Twitter and LinkedIn. 18 social networks and email providers
 supported." Note that the
-http://www.janrain.com/products/engage/pricing[Basic] plan is free.
+http://janrain.com/products/engage/engage-pricing/[Basic] plan is free.
 
 See http://www.janrain.com/products/engage/social-login.

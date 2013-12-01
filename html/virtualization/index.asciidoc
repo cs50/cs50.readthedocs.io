@@ -1,7 +1,5 @@
----
-tags: [HOWTO]
-title: Hardware Virtualization
----
+= Hardware Virtualization
+:toc: left
 
 Many computers today come with support for "hardware virtualization"
 (called
@@ -17,39 +15,34 @@ with hardware virtualization enabled, though, virtual machines might
 still feel slow if your computer is a few years old, has a CPU that's
 only 1GHz or so, or has only 1GB or so of RAM.*
 
-
 == How to Check if Hardware Virtualization is Already Enabled
-
 
 === Windows
 
-1.  Download *havdetectiontool.exe* from
+. Download *havdetectiontool.exe* from
 http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=592.
-2.  Double-click the file you just downloaded.
-3.  If asked whether you *want to run this file*, click *Run*.
-4.  If asked whether you *want to allow the following program to make
+. Double-click the file you just downloaded.
+. If asked whether you *want to run this file*, click *Run*.
+. If asked whether you *want to allow the following program to make
 changes to this computer*, click *Yes*.
-5.  If presented with license terms, check *I accept the license terms*,
+. If presented with license terms, check *I accept the license terms*,
 then click *Next*.
-6.  A window should then report:
+. A window should then report:
 * *Hardware-assisted virtualization is not enabled on this computer*, in
 which case you can enable it per link:#hardware_virtualization_windows_linux[the directions below].
 * *This computer is configured with hardware-assisted virtualization*,
 in which case hardware virtualization is indeed already enabled.
-7.  Select *No, I don't want to send data*, then click *OK*.
-
+. Select *No, I don't want to send data*, then click *OK*.
 
 === Mac OS
 
 Hardware virtualization should be enabled by default on any
 (Intel-based) Mac manufactured in the past few years!
 
-
 === Linux
 
 It depends on your distribution of Linux. It's probably easiest to just
 try to enable it, per the link:#hardware_virtualization_windows_linux[directions below].
-
 
 == How to Enable Hardware Virtualization
 
@@ -79,59 +72,52 @@ Just realize you might need to stray from these instructions on your own
 computer. And realize that your computer might not even support hardware
 virtualization!
 
-
 ==== Dell
 
-1.  Depress the F12 key when boot menu text appears at startup
-2.  Select BIOS setup and depress the Enter key
-3.  Using the mouse, expand the Virtualization Support menu item by
+. Depress the F12 key when boot menu text appears at startup
+. Select BIOS setup and depress the Enter key
+. Using the mouse, expand the Virtualization Support menu item by
 clicking on the plus to the left of Virtualization Support and select
 Virtualization
-4.  Check the Enable Intel Virtualization Technology checkbox
-5.  Click Apply
-6.  Click Exit
-7.  Fully shut down (power off), wait a few seconds, and restart your
+. Check the Enable Intel Virtualization Technology checkbox
+. Click Apply
+. Click Exit
+. Fully shut down (power off), wait a few seconds, and restart your
 computer
-
 
 ==== HP
 
-1.  Depress Esc key when prompted at startup
-2.  Depress the F10 key to Configure BIOS
-3.  Scroll to System Configuration using the arrow keys
-4.  Select Virtualization Technology and depress the Enter key
-5.  Select Enabled and depress the Enter key
-6.  Depress the F10 key to save and exit
-7.  Select Yes and depress the Enter key
-8.  Fully shut down (power off), wait a few seconds, and restart your
+. Depress Esc key when prompted at startup
+. Depress the F10 key to Configure BIOS
+. Scroll to System Configuration using the arrow keys
+. Select Virtualization Technology and depress the Enter key
+. Select Enabled and depress the Enter key
+. Depress the F10 key to save and exit
+. Select Yes and depress the Enter key
+. Fully shut down (power off), wait a few seconds, and restart your
 computer
-
 
 ==== Lenovo
 
-1.  Depress the blue ThinkVantage key when prompted at startup
-2.  Depress the F1 key to enter the BIOS setup utility
-3.  Using the arrow keys, scroll to Config and depress the Enter key
-4.  Scroll to CPU and depress the Enter key
-5.  Scroll to Intel® Virtualization Technology and depress the Enter key
-6.  Select Enabled and depress the Enter key
-7.  Depress Enter key to continue
-8.  Depress F10 key to save and exit
-9.  Select Yes and depress the Enter key
-10. Fully shut down (power off), wait a few seconds, and restart your
-computer
-
+. Depress the blue ThinkVantage key when prompted at startup
+. Depress the F1 key to enter the BIOS setup utility
+. Using the arrow keys, scroll to Config and depress the Enter key
+. Scroll to CPU and depress the Enter key
+. Scroll to Intel® Virtualization Technology and depress the Enter key
+. Select Enabled and depress the Enter key
+. Depress Enter key to continue
+. Depress F10 key to save and exit
+. Select Yes and depress the Enter key
+. Fully shut down (power off), wait a few seconds, and restart your computer
 
 ==== Panasonic
 
-1.  Depress the F2 key when boot menu text appears at startup
-2.  Select "Advanced" menu in Setup Utility
-3.  Change "Intel® Virtualization Technology" setting from "Disable" to
-"Enable"
-4.  Depress F10 to exit Setup Utility
-5.  Select "Yes" in confirmation menu
-6.  Depress Enter to exit confirmation menu.
-
+. Depress the F2 key when boot menu text appears at startup
+. Select "Advanced" menu in Setup Utility
+. Change "Intel® Virtualization Technology" setting from "Disable" to "Enable"
+. Depress F10 to exit Setup Utility
+. Select "Yes" in confirmation menu
+. Depress Enter to exit confirmation menu.
 
 === Mac OS
 

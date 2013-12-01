@@ -1,7 +1,5 @@
----
-tags: []
-title: VMware Workstation
----
+= VMware Workstation
+:toc: left
 
 Here's how to install the link:..[CS50 Appliance] using
 VMware Workstation for link:#windows[Windows] or

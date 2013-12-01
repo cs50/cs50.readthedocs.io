@@ -1,7 +1,5 @@
----
-tags: [Software]
-title: Turk50
----
+= Turk50
+:toc: left
 
 *http://mirror.cs50.net/turk50/turk50-1.0.zip[download]*
 (link:#installation[instructions])

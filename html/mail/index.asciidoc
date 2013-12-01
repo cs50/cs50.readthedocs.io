@@ -1,8 +1,4 @@
----
-tags: []
-title: Sending Mail
-toc: false
----
+= Sending Mail
 
 Below is some code with which you can send email using a library called
 PHPMailer, which is pre-installed in the link:../CS50_Appliance[CS50

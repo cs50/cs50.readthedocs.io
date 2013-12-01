@@ -1,5 +1,7 @@
-= CS50 ID
-:toc: left
+---
+tags: []
+title: CS50 ID
+---
 
 CS50 ID is an http://en.wikipedia.org/wiki/OpenID[OpenID]-based service
 that allows you to authenticate Harvard affiliates. It lives at
@@ -21,6 +23,7 @@ https://id.cs50.net/example/[example]. All the example does is tell you
 whether you're logged in (and what information about you was returned by
 CS50 ID).
 
+
 [[how_cs50_id_works]]
 == How CS50 ID Works
 
@@ -29,9 +32,9 @@ diagram below (inspired by
 http://code.google.com/apis/accounts/docs/OpenID.html#Interaction[Google's
 own]) depicts how CS50 ID works (in 8 steps, from top to bottom).
 
-image:CS50_ID.png[CS50 ID]
+image:CS50_ID.png[CS50_ID.png,title="image"]
 
-Thanks to the link:../library[CS50 Library], though, you don't need to
+Thanks to the link:../CS50_Library[CS50 Library], though, you don't need to
 implement (or even understand!) all of these steps in order to
 link:#how_to_add_cs50_id_to_your_website[add CS50 ID to your website].
 Per the link:#examples[examples] for link:#php[PHP],
@@ -43,10 +46,11 @@ own]):
 ID
 * `getUser`, which verifies CS50 ID's response
 
+
 [[how_to_add_cs50_id_to_your_website]]
 == How to Add CS50 ID to Your Website
 
-. Decide who should be allowed to log into your website. Even though
+1.  Decide who should be allowed to log into your website. Even though
 CS50 ID supports multiple options, it's best to choose just one so that
 users always log in with the same account. If you allow users multiple
 options (e.g., an `@college.harvard.edu` email address or an
@@ -60,44 +64,51 @@ can allow:
 * Anyone with an `@fas.harvard.edu` email address
 * Anyone with an `@post.harvard.edu` email address
 * Anyone with an `@seas.harvard.edu` email address
-. Decide on:
+2.  Decide on:
 * The URL at which your website will live (e.g.,
-`http://www.example.com/`), otherwise known as
+`https://cloud.cs50.net/~jharvard/`,
+`http://isawyouharvard.com/`, etc.), otherwise known as
 your `trust_root` (or `realm`) address. This must be a prefix of your
 `return_to` address. *If you later need to change this address, you'll
 need to contact sysadmins@cs50.net.*
 * The URL to which CS50 ID should return users after authentication
 (e.g.,
-`http://www.example.com/return_to.php`), otherwise known as your `return_to` address. *If you later need to
+`https://cloud.cs50.net/~jharvard/return_to.php`,
+`http://isawyouharvard.com/return_to.php`, etc.),
+otherwise known as your `return_to` address. *If you later need to
 change this address, you'll need to contact sysadmins@cs50.net.*
-. Fill out the
+3.  Fill out the
 https://spreadsheets1.google.com/spreadsheet/viewform?hl=en&hl=en&formkey=dFkxWmJHSkd3N1haM1pRN3JabnFaRkE6MQ[CS50
 ID Application]. If you don't hear back within 72 hours, email
 sysadmins@cs50.net to inquire.
-. Download the latest version of the link:../library/[CS50 Library]
+4.  Download the latest version of the link:../CS50_Library[CS50 Library]
 for http://mirror.cs50.net/library/php/[PHP],
 http://mirror.cs50.net/library/python/[Python], or
 http://mirror.cs50.net/library/ruby/[Ruby] and integrate it into your
 website, per the link:#examples[examples] below.
+
 
 [[examples]]
 == Examples
 
 Below are examples of how to add CS50 ID to your website in
 link:#php[PHP], link:#python[Python], and link:#ruby[Ruby] using the
-link:../library/[CS50 Library]. Each example implements the behavior at
+link:../CS50_Library[CS50 Library]. Each example implements the behavior at
 https://id.cs50.net/example/.
 
 To add CS50 ID to your website using some other library or language,
 review link:#how_cs50_id_works[How CS50 ID Works].
 
+
 [[php]]
 === PHP
 
 This example is available for download at
-http://mirror.cs50.net/id50/php/id50-2.zip.
+http://mirror.cs50.net/id50/php/id-1.1.zip.
 
-==== config.php
+
+config.php
+^^^^^^^^^^
 
 In this file, we define three constants:
 
@@ -108,40 +119,42 @@ ID Application].
 https://spreadsheets1.google.com/spreadsheet/viewform?hl=en&hl=en&formkey=dFkxWmJHSkd3N1haM1pRN3JabnFaRkE6MQ[CS50
 ID Application].
 
-And we also `require` the link:../library/[CS50 Library].
+And we also `require` the link:../CS50_Library[CS50 Library].
 
 [source,php]
-----
+-------------------------------------------------------------------------------------
 <?php
 
-    // URL that CS50 ID should ask users to trust; must be a prefix of RETURN_TO and
-    // must be registered with CS50, per https://manual.cs50.net/ID
-    define("TRUST_ROOT", "http://www.example.com/");
+    // URL that CS50 ID should ask users to trust; must be registered with CS50,
+    // per the HOWTO at https://manual.cs50.net/ID; must be a prefix of RETURN_TO
+    define("TRUST_ROOT", "https://cloud.cs50.net/~jharvard/");
 
-    // URL to which CS50 ID should return users;
-    // must be registered with CS50, per https://manual.cs50.net/id/
-    define("RETURN_TO", "http://www.example.com/return_to.php");
+    // URL to which CS50 ID should return users; must be registered with CS50,
+    // per the HOWTO at https://manual.cs50.net/ID
+    define("RETURN_TO", "https://cloud.cs50.net/~jharvard/return_to.php");
 
     // CS50 Library; ideally, this should not be inside public_html (or DocumentRoot)
-    require_once(__DIR__ . "/relative/path/to/CS50/CS50.php");
+    require_once(dirname(__FILE__) . "/relative/path/to/CS50/CS50.php");
 
     // ensure $_SESSION exists
     session_start();
 
 ?>
-----
+-------------------------------------------------------------------------------------
 
-Note that in the link:../appliance/[CS50
-Appliance], the CS50 Library is installed in `/usr/share/php`, which is
+Note that, on `cloud.cs50.net` and in the link:../CS50_Appliance[CS50
+Appliance], the CS50 Library is installed in `/usr/share/php/`, which is
 in PHP's `include_path`, which means you can `require` it with a much
 shorter path:
 
 [source,php]
-----
+------------------------------
 require_once("CS50/CS50.php");
-----
+------------------------------
 
-==== index.php
+
+index.php
+^^^^^^^^^
 
 Notice how this file requires link:#_config.php[config.php]. And notice
 how it infers whether a user is logged in by checking whether
@@ -149,7 +162,7 @@ how it infers whether a user is logged in by checking whether
 link:#_return_to.php[return_to.php].
 
 [source,php]
-----
+------------------------------------------------------------------------------------------------------------------------
 <?php
 
     // configuration
@@ -184,17 +197,19 @@ link:#_return_to.php[return_to.php].
     </ul>
   </body>
 </html>
-----
+------------------------------------------------------------------------------------------------------------------------
 
-==== login.php
+
+login.php
+^^^^^^^^^
 
 Rather than display a login form to the user, notice how this file
 simply redirects the user to CS50 ID, specifically to the URL returned
-by `getLoginUrl`, a static method defined in the link:../library/[CS50
+by `getLoginUrl`, a static method defined in the link:../CS50_Library[CS50
 Library].
 
 [source,php]
-----
+------------------------------------------------------------------------
 <?php
 
     // configuration
@@ -214,13 +229,15 @@ Library].
         header("Location: " . CS50::getLoginUrl(TRUST_ROOT, RETURN_TO));
 
 ?>
-----
+------------------------------------------------------------------------
 
-==== return_to.php
+
+return_to.php
+^^^^^^^^^^^^^
 
 This is the page to which the user will be returned by CS50 ID (per the
 definition of `RETURN_TO` in link:#_config.php[config.php]). Note that
-`getUser`, a static method defined in the link:../library/[CS50
+`getUser`, a static method defined in the link:../CS50_Library[CS50
 Library], will return an associative array that represents the user who
 logged in via CS50 ID. Included in that associative array will be at
 least one key:
@@ -244,7 +261,7 @@ the associative array returned by `getUser` as the value of
 `$_SESSION["user"]` to determine whether a user is logged in.
 
 [source,php]
-----
+---------------------------------------------------------------
 <?php
 
     // configuration
@@ -262,9 +279,11 @@ the associative array returned by `getUser` as the value of
     header("Location: {$protocol}://{$host}{$path}.php");
 
 ?>
-----
+---------------------------------------------------------------
 
-==== logout.php
+
+logout.php
+^^^^^^^^^^
 
 Note that logouts are not handled by CS50 ID but by your own website. So
 long as you have "remembered" that a user is logged in by storing the
@@ -274,7 +293,7 @@ to unset `$_SESSION["user"]` to log the user out; you should not
 redirect the user back to CS50 ID.
 
 [source,php]
-----
+---------------------------------------------------------------
 <?php
 
     // configuration
@@ -291,48 +310,51 @@ redirect the user back to CS50 ID.
     header("Location: {$protocol}://{$host}{$path}.php");
 
 ?>
-----
+---------------------------------------------------------------
+
 
 [[python]]
-=== Python
+Python
+~~~~~~
 
 This example is available for download at
 http://mirror.cs50.net/id50/python/id50-1.zip.
 
-==== Setup
+Setup
+^^^^^
 
 Once you've installed Python and pip, download a copy of the CS50
 library, which also comes with OpenID and Django, by typing in the
 following:
 
 [source,bash]
-----
+------------------
 $ pip install cs50
-----
+------------------
 
 Note: On Linux machines, namely the CS50 Appliance, you may need to type
 the following instead to ensure the Python modules are sufficiently
 accessible:
 
 [source,bash]
-----
+-----------------------
 $ sudo su - -c "pip install cs50"
-----
+-----------------------
 
 Now, create a new project, like `id50`:
 
 [source,bash]
-----
+-------------------------------------
 $ django-admin.py startproject id50
-----
+-------------------------------------
 
 Next, create an app within your project, like `app`, from within the
 project's root (same level as `manage.py`):
 
 [source,bash]
-----
+---------------------------------
 $ python manage.py startapp app
-----
+---------------------------------
 
 The first thing we must do with our app is add two constants we will use
 within our views file later so refer to our trusted root and return url.
@@ -340,7 +362,7 @@ Add the following to the `settings.py` file located within your project's
 similarly named subfolder:
 
 [source,python]
-----
+-----
 # URL that CS50 ID should ask users to trust; must be registered with CS50,
 # per the HOWTO at https://manual.cs50.net/ID; must be a prefix of RETURN_TO
 TRUST_ROOT = 'http://127.0.0.1:8000'
@@ -348,19 +370,19 @@ TRUST_ROOT = 'http://127.0.0.1:8000'
 # URL to which CS50 ID should return users; must be registered with CS50,
 # per the HOWTO at https://manual.cs50.net/ID
 RETURN_TO = 'http://127.0.0.1:8000/app/return_to'
-----
+-----
 
 Next, we will configure out settings in a way such that we can index
 dictionaries within our templates, which is not enabled by default. Insert
 the following code into `settings.py`:
 
 [source,python]
-----
+-----
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',
     'django.contrib.auth.context_processors.auth',
 )
-----
+-----
 
 Django has support for database-driven web applications, but ours will only use
 caching to store session and OpenID association information; type in the following
@@ -368,7 +390,7 @@ to your settings file to enable these features, and leave the DATABASES tuple in
 settings file blank:
 
 [source,python]
-----
+-----
 ...
 # cache settings so we can enable session saving via cache and remove database dependency
 CACHES = {
@@ -381,7 +403,7 @@ CACHES = {
 # setting enabled to make sure our sessions are saved via cache instead of database
 SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
 ...
-----
+-----
 
 Configuring your project to use a database is very easy and even commented in the settings
 file itself, but for further information, please consult the Django documentation.
@@ -389,12 +411,12 @@ file itself, but for further information, please consult the Django documentatio
 We will need one more line to ensure our next bit of code works, and it is the following:
 
 [source,python]
-----
+-----
 ...
 # setting enabled so that urlConfs (routes) need not have a trailing slash to be effective
 APPEND_SLASH = False
 ...
-----
+-----
 
 We are almost done preparing the project for use with our library; however, we
 may establish our URL configuration file. To do so, create a file named `urls.py`
@@ -402,7 +424,7 @@ if it does not already exist within the app folder of the project (in this case,
 `app`) and fill it with the following information:
 
 [source,python]
-----
+-----
 from django.conf.urls import url, patterns
 
 from app import views
@@ -413,7 +435,7 @@ urlpatterns = patterns('',
     url(r'^logout$', views.logout, name='logout'),
     url(r'^return_to$', views.return_to, name='return_to'),
 )
-----
+-----
 
 These are the "routes" of our application, as other frameworks traditionally call
 them, and Django refers to them as URL configurations (or URL confs). We will also
@@ -422,21 +444,23 @@ our project's root that is named after the project itself (i.e., `id50/id50` in
 this case):
 
 [source,python]
-----
+-----
 from django.conf.urls import patterns, include, url
 
 urlpatterns = patterns('',
     url(r'^app/', include('app.urls', namespace='app')),
 )
-----
+-----
 
 With this, setup is complete, and we can proceed to taking a look at the views
 our sample application will need.
 
-==== index
+
+index
+^^^^^
 
 [source,python]
-----
+-----
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.core.urlresolvers import reverse
@@ -449,16 +473,16 @@ import tempfile
 def index(request):
     return render(request, 'app/index.html')
 ...
-----
+-----
 
 The index view works by simply rendering a template we will define
 as the following, which should exist within a directory like the
-following, assuming our project is titled `id50`:
+following, assuming our project is titled id50:
 
 `id50/app/templates/app/index.html`
 
 [source,html]
-----
+-----
 {% if request.session.user %}
 
     You are logged in. <a href="/app/logout">Log out.</a><br />
@@ -482,7 +506,7 @@ following, assuming our project is titled `id50`:
     You are not logged in. <a href="/app/login">Log in.</a>
 
 {% endif %}
-----
+-----
 
 As we can see, the template logic is fairly simple; if our request possesses a session
 variable named 'user' (normally indexed as request.session['user'], but using dot syntax
@@ -490,13 +514,15 @@ for Django template syntax, hence the template settings code we had to change ea
 we are shown a login message. If we do not have this session variable, we are instead
 told we are not logged in and given a login link.
 
-==== login
+
+login
+^^^^^
 
 The login view is our second view, which actually contains the first call to the CS50
 library:
 
 [source,python]
-----
+-----
 ...
 # login test using CS50 library
 def login(request):
@@ -505,7 +531,7 @@ def login(request):
     else:
         return HttpResponseRedirect(CS50.getLoginUrl(settings.TRUST_ROOT, settings.RETURN_TO, request.session))
 ...
-----
+-----
 
 This does some more checking for 'user' in our session; should it exist, we are 
 redirected back to our index, else we get directed to CS50 ID's login screen by
@@ -513,7 +539,9 @@ passing in the root of our server and the view to which it will be directed back
 in this case a view we have titled return_to and will see soon. Also note the 
 request.session variable passed in as the final argument.
 
-==== return_to
+
+return_to
+^^^^^^^^^^^
 
 In this case, "return_to" is chosen as the name of this view in favor of "return"
 because of issues with Python treating the word "return" as a keyword. This view is
@@ -521,7 +549,7 @@ where our login view will return once we have been verified by OpenID and is the
 following:
 
 [source,python]
-----
+-----
 ...
 # return test using CS50 library
 def return_to(request):
@@ -532,7 +560,7 @@ def return_to(request):
         
     return HttpResponseRedirect(reverse('app:index'))
 ...
-----
+-----
 
 As can be seen, we obtain `user`, which is a dictionary consisting of session keys that are important
 to us (in this case, a full name and email), and get redirected to our index, which should now display
@@ -541,66 +569,75 @@ ultimately needs the GET parameters of our request, but we pass in the POST as w
 receive any parameters from OpenID via that means, and in the event OpenID ever changes their internal
 workings.
 
-==== logout
+
+logout
+^^^^^
 
 Our last view is a very simple one and is used to log out once we have obtained an active session. It
 is the following:
 
 [source,python]
-----
+-----
 ...
 # logout function
 def logout(request):
     del request.session['user']
     
     return HttpResponseRedirect(reverse('app:index'))
-----
+-----
 
 As can be seen, the only thing logout does is delete the `user` dictionary from our request object,
 assuming it exists, and then redirects us to index, where we will then be told we are not logged in.
 
 With this simple example, you are now ready to begin utilizing the CS50 Library!
 
+
+
 [[ruby]]
-=== Ruby
+Ruby
+~~~~
 
 This example is available for download at
-http://mirror.cs50.net/id50/ruby/id50-0.1.2.zip.
+http://mirror.cs50.net/library/ruby/examples/id.zip.
 
-==== Setup
+
+Setup
+^^^^^
 
 Once you've installed Ruby, Ruby on Rails, and RubyGems, download a copy
 of the CS50 Library from RubyGems via:
 
 [source,bash]
-----
+------------------
 $ gem install cs50
-----
+------------------
 
 Now, create a new project, like `id50`:
 
 [source,bash]
-----
+----------------
 $ rails new id50
-----
+----------------
 
 Now, add the CS50 library to the project by adding the following to
 `/Gemfile`:
 
 [source,ruby]
-----
+----------
 gem 'cs50'
-----
+----------
 
 The project has been configured to use the CS50 Library, so a new
 controller, called `Auth`, can be created to handle user authentication:
 
 [source,bash]
-----
+--------------------------------
 $ rails generate controller Auth
-----
+--------------------------------
 
-==== login
+
+login
+^^^^^
 
 In order to log in, users will be redirected to CS50 ID, via a link
 generated by the CS50 Library. We must specify the location of a
@@ -610,7 +647,7 @@ session. In `/add/controllers/auth_controller.rb`, create a new action
 for logging in:
 
 [source,ruby]
-----
+-----------------------------------------------------------------------------------------------------------------------------------
 def login
     # user already logged in, redirect to index
     if (session["user"])
@@ -621,9 +658,11 @@ def login
         redirect_to CS50.getLoginUrl(Rails.root.join("tmp"), "http://localhost:3000", "http://localhost:3000/auth/return", session)
     end
 end
-----
+-----------------------------------------------------------------------------------------------------------------------------------
 
-==== return
+
+return
+^^^^^^
 
 Once the user authenticates via CS50 ID, they'll be brought back to
 `http://localhost:3000/auth/return`. At this point, we
@@ -634,7 +673,7 @@ user information is stored). Because our RETURN_TO is `/auth/return`, we
 need to create a `return` action:
 
 [source,ruby]
-----
+-----------------------------------------------------------------------------------------------------
 def return
     # get authenticated user information
     user = CS50.getUser(Rails.root.join("tmp"), "http://localhost:3000/auth/return", session, params)
@@ -646,38 +685,42 @@ def return
 
     redirect_to :action => :index
 end
-----
+-----------------------------------------------------------------------------------------------------
 
-==== logout
+
+logout
+^^^^^^
 
 Because we stored user information in the session, a logout is
 accomplished by clearing the session.
 
 [source,ruby]
-----
+---------------------------------------------------
 def logout
     # clear the user's information from the session
     session["user"] = nil
 
     redirect_to :action => :index
 end
-----
+---------------------------------------------------
 
-==== index
+
+index
+^^^^^
 
 We have specified an `index` action in both `login` and `logout`, so we
 must create one:
 
 [source,ruby]
-----
+---------
 def index
 end
-----
+---------
 
 Now, create the corresponding view, `/app/views/auth.html.erb`:
 
 [source,ruby]
-----
+---------------------------------------------------------------------------------------------
 <% if (session["user"]) %>
 
     You are logged in. <%= link_to "Log out", :action => "logout" %><br />
@@ -693,30 +736,31 @@ Now, create the corresponding view, `/app/views/auth.html.erb`:
 <% else %>
     You are not logged in. <%= link_to "Log in", :action => "login" %>
 <% end %>
-----
+---------------------------------------------------------------------------------------------
 
 Finally, we must set up routes to the four actions we've created, so add
 the following to `/app/config/routes.rb`
 
 [source,ruby]
-----
+------------------------------------
 match 'auth' => 'auth#index'
 match 'auth/login' => 'auth#login'
 match 'auth/logout' => 'auth#logout'
 match 'auth/return' => 'auth#return'
-----
+------------------------------------
 
 To run the app, start the Rails server with:
 
 [source,bash]
-----
+---------
 $ rails s
-----
+---------
 
 Now, navigate to `http://localhost:3000/auth`. You should see a link to
 log in, at which point you'll be redirected to CS50 ID. After
 authenticating, you'll be brought back to your app, and you'll see your
 user information and a logout link!
+
 
 == Implementation Details
 
@@ -725,10 +769,11 @@ need to follow the link:#how_to_add_cs50_id_to_your_website[directions
 above].*
 
 If, though, you would like to add CS50 ID to your website using some
-library other than the link:../library/[CS50 Library] or some language
+library other than the link:../CS50_Library[CS50 Library] or some language
 other than link:#php[PHP], link:#python[Python], and link:#ruby[Ruby]
-(which the link:../library/[CS50 Library] supports), below are
+(which the link:../CS50_Library[CS50 Library] supports), below are
 implementation details for the technically curious.
+
 
 === Overview
 
@@ -742,7 +787,7 @@ the address on which discovery should be performed) is
 `https://id.cs50.net/`. (Note the `https`.)
 
 As per link:#how_cs50_id_works[how CS50 ID works], whether you use the
-link:../library/[CS50 Library] or some other library to add CS50 ID to
+link:../CS50_Library[CS50 Library] or some other library to add CS50 ID to
 your website, here's how authentication must flow:
 
 1.  User tries to access a page on your website that requires login.
@@ -768,6 +813,7 @@ name and/or email address).
 with a server-side session) that the user is now logged in, and then
 shows the user the page that required login.
 
+
 === Compatibility
 
 CS50 ID supports
@@ -781,6 +827,7 @@ Simple Registration Extension 1.0]
 Attribute Exchange 1.0]
 
 but with some constraints.
+
 
 ==== OpenID Authentication 2.0
 
@@ -816,6 +863,7 @@ identifier than it would if John Harvard authenticates as
 accounts (whereby the same identifier would be returned for a user, no
 matter the account with which the user authenticated).
 
+
 ==== OpenID Simple Registration Extension 1.0
 
 CS50 ID supports
@@ -833,6 +881,7 @@ If requested, CS50 ID will return, if available, a value for
 * `email`
 
 where `email` is a user's email address.
+
 
 ==== OpenID Attribute Exchange 1.0
 
@@ -854,7 +903,9 @@ If requested, CS50 ID will return, if available, a value for
 
 where `email` is a user's Harvard email address.
 
+
 == FAQs
+
 
 === How should I store users in my database?
 
@@ -870,15 +921,15 @@ instead of 84), as with the schema below (which assumes that `email` and
 
 [source,sql]
 ----
-CREATE TABLE `users` (
-    `id` INT( 11 ) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
-    `identity` CHAR( 84 ) NOT NULL ,
-    `fullname` VARCHAR( 128 ) NULL DEFAULT NULL ,
-    `email` VARCHAR( 128 ) NULL DEFAULT NULL ,
-    UNIQUE (
-        `identity`
-    )
-) ENGINE = InnoDB;
+CREATE TABLE  `users` (
+`id` INT( 11 ) NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+`identity` CHAR( 84 ) NOT NULL ,
+`fullname` VARCHAR( 128 ) NULL DEFAULT NULL ,
+`email` VARCHAR( 128 ) NULL DEFAULT NULL ,
+UNIQUE (
+`identity`
+)
+) ENGINE = MYISAM ;
 ----
 
 In theory, you could probably get away with storing only the URL's
@@ -886,6 +937,7 @@ trailing 64 hexadecimal digits, but, to be consistent with OpenID, you
 should store all 84, especially if you might decide to allow your users
 to log in via other means as well (e.g., via
 http://www.janrain.com/products/engage[Janrain Engage]).
+
 
 === Why does CS50 ID uniquely identify users with 84-character URLs?
 
@@ -895,6 +947,7 @@ OpenID providers (like CS50) return URLs based on domains that they own
 (e.g., `id.cs50.net`) so that their identifiers won't be identical to
 other providers' by accident. CS50 thus standardized on URLs that begin
 with `https://id.cs50.net/`.
+
 
 === Why doesn't CS50 ID always return a user's full name and/or email
 address?
@@ -930,6 +983,7 @@ via:
 
 * an `@post.harvard.edu` email address
 
+
 === Can I develop my site on localhost (127.0.0.1)?
 
 Yes, CS50 ID automatically trusts URLs that begin with `http://localhost/`,
@@ -954,6 +1008,7 @@ for CS50 ID.*
 When ready to launch your website, just remember to change `TRUST_ROOT`
 and `RETURN_TO` to the URLs with which you apply for CS50 ID.
 
+
 === Can I develop my site on the CS50 Appliance?
 
 Yes, provided you develop it using a "virtual host" (aka "vhost") 
@@ -971,6 +1026,7 @@ you registered for CS50 ID.
 
 When ready to launch your website, just remember to change `TRUST_ROOT`
 and `RETURN_TO` to the URLs with which you apply for CS50 ID.
+
 
 === Can I develop my site on a private network?
 
@@ -994,7 +1050,9 @@ apply for CS50 ID.*
 When ready to launch your website, just remember to change `TRUST_ROOT`
 and `RETURN_TO` to the URLs with which you apply for CS50 ID.
 
+
 == Troubleshooting
+
 
 === The site you tried to log into is not configured properly for CS50 ID
 
@@ -1004,6 +1062,7 @@ Best to double-check those values.
 
 If still unsure what's wrong (or if you don't recall which URLs we
 approved), email sysadmins@cs50.net to inquire.
+
 
 === Invalid username and/or password
 
@@ -1032,96 +1091,84 @@ https://id.cs50.net/example/ via PIN. If the user *cannot*, refer the
 user to http://reference.pin.harvard.edu/login-help. If the user *can*,
 email sysadmins@cs50.net to inquire, CCing the user.
 
+
 === CS50 Library requires bcmath or gmp extension module
 
-The link:../library/#PHP[CS50 Library for PHP] is pre-installed in the
+The link:../CS50_Library#PHP[CS50 Library for PHP] is pre-installed in the
 link:../Appliance[CS50 Appliance] and on `cloud.cs50.net`, as are all
 dependencies. But if using the library on some other server, you may see
 this error if http://php.net/manual/en/book.bc.php[BC Math] and
 http://php.net/manual/en/book.gmp.php[GMP] are not already installed.
 
+
 ==== CentOS, Fedora, RedHat
 
 Try running the following commands as `root`:
 
-[source,bash]
-----
-yum install php-bcmath php-gmp
-service httpd restart
-----
+`yum install php-bcmath php-gmp` +
+`service httpd restart`
+
 
 ==== Debian, Ubuntu
 
 Try running the following commands as `root`:
 
-[source,bash]
-----
-apt-get install php5-gmp
-service apache2 restart
-----
+`apt-get install php5-gmp` +
+`service apache2 restart`
+
 
 ==== Windows
 
 Open `php.ini` with a text editor and change:
 
-[source]
-----
-;extension=php_gmp.dll
-----
+`;extension=php_gmp.dll`
 
 if present to:
 
-[source]
-----
-extension=php_gmp.dll
-----
+`extension=php_gmp.dll`
 
 Then restart your web server.
 
+
 === CS50 Library requires dom or domxml extension module
 
-The link:../library/#PHP[CS50 Library for PHP] is pre-installed in the
+The link:../CS50_Library#PHP[CS50 Library for PHP] is pre-installed in the
 link:../Appliance[CS50 Appliance] and on `cloud.cs50.net`, as are all
 dependencies. But if using the library on some other server, you may see
 this error if PHP's http://php.net/manual/en/book.dom.php[DOM] and
 http://php.net/manual/en/book.domxml.php[DOM XML] are not already
 installed.
 
+
 ==== CentOS, Fedora, RedHat
 
 Try running the following commands as `root`:
 
-[source,bash]
-----
-yum install php-xml
-service httpd restart
-----
+`yum install php-xml` +
+`service httpd restart`
+
 
 === CS50 Library requires openssl extension module
 
-The link:../library/#PHP[CS50 Library for PHP] is pre-installed in the
+The link:../CS50_Library#PHP[CS50 Library for PHP] is pre-installed in the
 link:../Appliance[CS50 Appliance] and on `cloud.cs50.net`, as are all
 dependencies. But if using the library on some other server, you may see
 this error if http://php.net/manual/en/book.openssl.php[OpenSSL] is not
 already installed.
 
+
 ==== Windows
 
 Open `php.ini` with a text editor and change:
 
-[source]
-----
-;extension=php_openssl.dll
-----
+`;extension=php_openssl.dll`
 
 if present to:
 
-[source]
-----
-extension=php_openssl.dll
-----
+`extension=php_openssl.dll`
 
 Then restart your web server.
+
 
 == Support
 

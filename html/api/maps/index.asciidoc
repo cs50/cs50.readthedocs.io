@@ -1,7 +1,5 @@
----
-tags: [API]
-title: HarvardMaps API
----
+= HarvardMaps API
+:toc: left
 
 The HarvardMaps API allows you to request data programmatically from
 http://maps.cs50.net/[HarvardMaps] in

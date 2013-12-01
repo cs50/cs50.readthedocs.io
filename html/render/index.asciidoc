@@ -1,7 +1,5 @@
----
-tags: []
-title: render50
----
+= CS50 Render
+:toc: left
 
 `render50` is a command-line tool that we use in http://cs50.tv/[CS50]
 to render a students' source code as PDFs on which the teaching fellows
@@ -14,7 +12,7 @@ Lite]). For example, were you to render the
 http://cdn.cs50.net/2010/fall/psets/3/pset3.zip[distribution code] from
 http://cdn.cs50.net/2010/fall/[Fall 2010]'s
 http://cdn.cs50.net/2010/fall/psets/3/pset3.pdf[Problem Set 3], you'd
-get link:Render50.pdf[a PDF like this].
+get link:render50.pdf[a PDF like this].
 
 The tool's features include:
 

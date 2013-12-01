@@ -1,7 +1,5 @@
----
-tags: [HOWTO]
-title: CS50 Appliance 2.3
----
+= CS50 Appliance 2.3
+:toc: left
 
 *This HOWTO is for version 2.3 of the CS50 Appliance.*
 

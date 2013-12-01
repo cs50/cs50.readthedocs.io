@@ -1,8 +1,4 @@
----
-tags: [HOWTO]
-title: iOS
----
-
+= iOS University Program
 
 == Overview
 
@@ -70,19 +66,22 @@ development certificate]. Once approved by a Team Agent or Team Admin
 device with that certificate, per Apple's
 http://developer.apple.com/ios/my/certificates/howto.action[instructions].
 
-1.  http://developer.apple.com/programs/register/[Register as an Apple
+. http://developer.apple.com/programs/register/[Register as an Apple
 Developer] for free. You'll be prompted to create an _Apple ID_ or use
 an existing one (which you might have because you already use iTunes).
-2.  Download Xcode 4 for free from the
+. Download Xcode 4 for free from the
 http://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12[Mac App Store].
-3.  Locate your iOS device's Unique Device ID (UDID):
-a.  Connect your iOS device to your Mac and launch Xcode.
-b.  Select *Organizer* under Xcode's *Window* menu.
-c.  Highlight and copy the 40-character hexadecimal string to the right
-of *Identifier*. That's your UDID.
-4.  https://spreadsheets.google.com/viewform?hl=en&formkey=dDdtZHNEbGhESHgtVF92YXNGS3dRUFE6MQ[Apply
+. Locate your iOS device's Unique Device ID (UDID):
++
+--
+..  Connect your iOS device to your Mac and launch Xcode.
+..  Select *Organizer* under Xcode's *Window* menu.
+..  Highlight and copy the 40-character hexadecimal string to the right of *Identifier*. That's your UDID.
+--
++
+. https://spreadsheets.google.com/viewform?hl=en&formkey=dDdtZHNEbGhESHgtVF92YXNGS3dRUFE6MQ[Apply
 to join CS50's team].
-5.  Check your email. Within 72 hours of applying to join CS50's team,
+. Check your email. Within 72 hours of applying to join CS50's team,
 you should receive an invitation containing a hyperlinked invitation
 code. (If not, email sysadmins@cs50.net to inquire.) Click that link to
 join CS50's team.

@@ -1,8 +1,4 @@
----
-tags: [Data]
-title: Concentrators
-toc: false
----
+= Concentrators
 
 Below is a visualization of the number of concentrators in Computer
 Science since the concentration's introduction in 1984. In green are

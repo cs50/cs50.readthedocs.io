@@ -1,16 +1,11 @@
----
-tags: []
-title: Discounts
----
+= Discounts
+:toc: left
 
-Below are some discounts available to Harvard affiliates. See
-http://harvie.harvard.edu/perks/ for more!
-
+Below are some discounts available to Harvard affiliates. See http://www.procurement.harvard.edu/news.shtml[Harvard Strategic Procurement] and https://outingsandinnings.harvard.edu/[Outings & Innings] for more!
 
 == B&H Photo and Video
 
-*http://www.procurement.harvard.edu/secure/goods/av_general.shtml*
-
+Harvard gets (significant) discounts on audio and video goods from http://www.procurement.harvard.edu/secure/goods/av_general.shtml[B&H].
 
 == DriveSavers
 
@@ -22,56 +17,26 @@ available."
 
 Harvard's discount code is *DS19771*.
 
-
 == ESPN3
 
 *http://espn.go.com/espn3/*
 
-"http://espn.go.com/espn3/[ESPN3] is a broadband network for live sports
+http://espn.go.com/espn3/[ESPN3] is a broadband network for live sports
 programming. . . . http://espn.go.com/espn3/[ESPN3] is available free to
 fans accessing the site from a college campus network in the United
 States. . . ."
 
 So long as you're within (or https://vpn.fas.harvard.edu/[VPNed] into)
-harvard.edu (i.e., your IP address starts with 140.247.), you should
+harvard.edu (i.e., your IP address starts with `140.247.`), you should
 have access to http://espn.go.com/espn3/[ESPN3].
-
 
 == Harvard University Technology Services
 
-*http://www.uis.harvard.edu/technology_services/*
-
-Harvard gets https://cpocomputers.harvard.edu/[discounts from Apple],
-but realize that you can get (most of) those same discounts from an
+Harvard gets http://personal.huitproducts.harvard.edu/[discounts from Apple and Dell],
+but realize that you can get (some of) those same discounts from an
 http://www.apple.com/retail/[Apple Store] directly by showing your
-Harvard ID at checkout. However, you can sometimes get better
-configurations for the same price by taking advantage of Harvard's
-http://www.uis.harvard.edu/technology_services/specials/apple_specials.php[Apple
-Specials].
-
-Harvard also gets
-https://store.datanetworks.com/?affiliate=280b38fa-27a9-4795-a794-8ee8af52ea32[discounts
-from Dell].
-
-Odds are you're best off looking for discounts on the Internet before
-taking advantage of academic pricing. Here are some of CS50's favorite
-sites:
-
-* http://dealnews.com/[dealnews]. "Every day, dealnews brings you the
-best deals available on the hottest items on the Internet."
-* http://dealnews.com/memory/[dealram]. "dealram is the easiest to use
-price comparison resource for computer memory."
-* http://www.fatwallet.com/[FatWallet Forums]. "Discover Hot Deals
-shared by our million-member community."
-* http://www.techbargains.com/[Techbargains]. "Targeting the best deals
-in tech."
-
+Harvard ID at checkout. 
 
 == Personal Cellular Services
 
-*http://www.uis.harvard.edu/departmental_telecom/cellular/services.php*
-
-"Most of our cellular partners offer discounted rates for personal use
-for anyone affiliated with Harvard University. . . . Generally discounts
-apply to your monthly voice and data plans only and range from 10%-22%
-off list price."
+http://huit.harvard.edu/buy-cell-phones-and-smartphones

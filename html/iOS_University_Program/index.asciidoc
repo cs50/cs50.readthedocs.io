@@ -1,7 +1,0 @@
----
-tags: []
-title: iOS University Program
----
-
-1.  REDIRECT iOS
-

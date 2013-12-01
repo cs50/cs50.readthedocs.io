@@ -26,7 +26,7 @@
 
                 // ensure content exists before trying to parse it
                 if (count($matches) !== 3) {
-                    trigger_error("malformed asciidoc file.");
+                    trigger_error("malformed Asciidoc file");
                     return false;
                 }
 
@@ -34,7 +34,7 @@
                 $yaml = yaml_parse($matches[1]);
             }
             else {
-                trigger_error("malformed asciidoc file.");
+                trigger_error("malformed Asciidoc file");
                 return false;
             }
 
@@ -48,7 +48,7 @@
 
                 // inject document's header, possibly with TOC
                 if (!isset($yaml["toc"]) || $yaml["toc"] !== false) {
-                    $asciidoc = "= {$yaml["title"]}\n:toc:\n:toc-placement: manual\n\ntoc::[levels=5]\n\n{$matches[2]}";
+                    $asciidoc = "= {$yaml["title"]}\n:toc2:\n:toc-placement: manual\n\ntoc::[levels=5]\n\n{$matches[2]}";
                 }
                 else {
                     $asciidoc = "= {$yaml["title"]}\n\n{$matches[2]}";
@@ -57,13 +57,11 @@
                 // pipe post's AsciiDoc into asciidoctor
                 $process = proc_open(
                     join(" ", [
-                        "/usr/local/bin/asciidoctor",
-                        "-a",
-                        "coderay-css=class,coderay-linenums-mode=inline,imagesdir=.,source-highlighter=coderay",
-                        "-b",
-                        "html5",
-                        "--trace",
-                        "-s",
+                        "asciidoctor",
+                        "--attribute", "coderay-css=class,coderay-linenums-mode=inline,imagesdir=.,source-highlighter=coderay",
+                        "--backend", "html5",
+                        //"--no-header-footer",
+                        "--template-dir", __DIR__,
                         "-"
                     ]),
                     [

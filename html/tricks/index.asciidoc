@@ -1,7 +1,5 @@
----
-tags: []
-title: Neat Tricks
----
+= Neat Tricks
+:toc: left
 
 Below are neat tricks that the http://www.cs50.net/staff/[staff] find
 useful from time to time. We've tried to keep the code below simple at
@@ -12,7 +10,7 @@ return values more rigorously than we do!
 == Authenticating Users
 
 This topic warrants some discussion, so here's a whole article on
-link:Authenticating Users[authenticating users].
+link:/authentication/[authenticating users].
 
 
 [[Parsing_CSV]]

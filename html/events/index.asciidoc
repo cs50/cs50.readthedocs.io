@@ -1,7 +1,5 @@
----
-tags: []
-title: HarvardEvents
----
+= HarvardEvents
+:toc: left
 
 http://events.cs50.net/[HarvardEvents] is a university-wide
 events directory that synchronizes each night with calendars all over
@@ -36,7 +34,6 @@ directions.
 your calendar can be exported (e.g.,via a script written by you) in
 iCalendar format, follow these directions.
 
-
 [[how_to_add_a_google_calendar]]
 == How to Add a Google Calendar
 
@@ -46,40 +43,39 @@ everything is automated. Each night around midnight, HarvardEvents will
 synchronize itself with your Google Calendar automatically so that any
 changes you make are, within 24 hours, reflected at HarvardEvents.
 
-1.  Sign in to http://calendar.google.com/[Google Calendar].
-2.  Select *Calendar settings* under the *Settings* menu in the page's
+. Sign in to http://calendar.google.com/[Google Calendar].
+. Select *Calendar settings* under the *Settings* menu in the page's
 top-right corner.
-3.  Click the *Calendars* tab below *Calendar Settings* in the page's
+. Click the *Calendars* tab below *Calendar Settings* in the page's
 top-left corner.
-4.  Click the name of the calendar that you want to add to
+. Click the name of the calendar that you want to add to
 HarvardEvents.
-5.  Click the *Share this calendar* tab to the right of the *Calendar
+. Click the *Share this calendar* tab to the right of the *Calendar
 Details* tab.
-6.  Check the box next to *Make this calendar public*, if not checked
+. Check the box next to *Make this calendar public*, if not checked
 already. Do not check the box next to *Share only my free/busy
 information*.
-7.  Click *Save*.
-8.  Again select *Calendar settings* under the *Settings* menu in the
+. Click *Save*.
+. Again select *Calendar settings* under the *Settings* menu in the
 page's top-right corner.
-9.  Again click the *Calendars* tab below *Calendar Settings* in the
+. Again click the *Calendars* tab below *Calendar Settings* in the
 page's top-left corner.
-10. Again click the name of the calendar that you want to add to
+. Again click the name of the calendar that you want to add to
 HarvardEvents.
-11. Don't click *Share this calendar this time*. Instead, scroll down to
+. Don't click *Share this calendar this time*. Instead, scroll down to
 *Calendar Address*.
-12. Click the green *ICAL* icon.
-13. Highlight and copy the address that appears. This is the URL of your
+. Click the green *ICAL* icon.
+. Highlight and copy the address that appears. This is the URL of your
 calendar. Odds are it will resemble
 http://www.google.com/calendar/ical/.../public/basic.ics
 , where *...* is identical to your *Calendar ID*.
-14. Submit the form below.
+. Submit the form below.
 
 ++++
 <html>
 <iframe src="https://spreadsheets.google.com/embeddedform?formkey=dG9jZC1IajB1QTBzdW1YZV9uX0Z3VlE6MQ" width="480" height="360" frameborder="0" marginheight="0" marginwidth="0" style="border: 1px #ccc solid; padding: 1em;">Loading...</iframe>
 </html>
 ++++
-
 
 [[how_to_add_an_individual_event]]
 == How to Add an Individual Event
@@ -89,28 +85,27 @@ some other format or would like to add a one-time event for which it
 doesn't really make sense to create a dedicated Google Calendar or
 Google Spreadsheet for just that event, follow the directions below:
 
-1.  Sign into http://calendar.google.com/[Google Calendar]. You'll need
+. Sign into http://calendar.google.com/[Google Calendar]. You'll need
 to
 http://www.google.com/support/calendar/bin/answer.py?hl=en&answer=37005[create
 an account] if you don't already have one.
-2.  Once signed in, click *Create event* toward Google Calendar's
+. Once signed in, click *Create event* toward Google Calendar's
 top-left corner and
 http://www.google.com/support/calendar/bin/answer.py?hl=en&answer=72143[create
 your event] in the window that appears. (It doesn't matter which of your
 own calendars you put the event on.) If your event repeats, take care to
 http://www.google.com/support/calendar/bin/answer.py?hl=en&answer=37115[create
 a repeating event].
-3.  Into the text box under *Add guests*, paste the email address below.
+. Into the text box under *Add guests*, paste the email address below.
 It's a special email address for HarvardEvents. +
 +
-----------------------------------------------------
+----
 ec658deerd6blkv8q6uhulo8io@group.calendar.google.com
-----------------------------------------------------
-4.  Then click *Save*.
+----
+. Then click *Save*.
 
 Within 24 hours, HarvardEvents should detect that it's been invited to
 your event, and your event should appear in HarvardEvents itself.
-
 
 [[how_to_add_a_csv_feed]]
 == How to Add a CSV Feed
@@ -279,17 +274,17 @@ http://calendar.yahoo.com/[Yahoo Calendar].
 When ready to add your Google Spreadsheet to HarvardEvents, follow these
 steps:
 
-1.  Sign in to http://docs.google.com/[Google Docs] and open your
+. Sign in to http://docs.google.com/[Google Docs] and open your
 spreadsheet.
-2.  Click *Share* in the page's top-right corner.
-3.  Select *Publish as a web page* in the menu that appears.
-4.  Check the box next to *Automatically republish when changes are
+. Click *Share* in the page's top-right corner.
+. Select *Publish as a web page* in the menu that appears.
+. Check the box next to *Automatically republish when changes are
 made*, if not checked already, in the window that appears.
-5.  Click *Start publishing*.
-6.  Select *CSV (comma-separated values)* and *Sheet1* in the menus
+. Click *Start publishing*.
+. Select *CSV (comma-separated values)* and *Sheet1* in the menus
 below *Get a link to the published data*; leave *All cells* as-is.
-7.  Highlight and copy the URL that appears in the text area.
-8.  Submit the form below.
+. Highlight and copy the URL that appears in the text area.
+. Submit the form below.
 
 ++++
 <html>

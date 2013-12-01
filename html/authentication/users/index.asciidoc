@@ -1,7 +1,0 @@
----
-tags: []
-title: Authenticating Users
----
-
-1.  REDIRECT Authentication
-

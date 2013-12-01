@@ -1,8 +1,4 @@
----
-tags: [Data]
-title: Enrollment
-toc: false
----
+= Enrollment
 
 Below is a visualization of CS50's enrollments since the course's
 introduction in 1989. Click bars for more details.

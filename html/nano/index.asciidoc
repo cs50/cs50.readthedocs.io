@@ -1,7 +1,5 @@
----
-tags: [HOWTOs]
-title: nano
----
+= nano
+:toc: left
 
 image:Nano.png[The interface of the nano editor.,title="image"]
 
@@ -48,7 +46,7 @@ generally be used to move the cursor around.
 
 Typing in nano is simple: enter, backspace, delete, and other characters
 all work as expected. One thing to note, however, is that word-wrapping
-may or may not occur. On `cloud.cs50.net`, word-wrapping is *not* the
+may or may not occur. On the link:/appliance/[CS50 Appliance], word-wrapping is *not* the
 default behavior. Instead, typing will continue beyond the screen, and
 focus will move over to the right. The $ sign on the left side of the
 line (pointed to by the blue arrow in the image to the right) indicates
@@ -131,31 +129,3 @@ other lines will be lost.
 |\^Y and ^V |Scroll up and down the page, respectively. Much faster for
 longer files than simply using the up and down arrow keys.
 |=======================================================================
-
-
-== .save files
-
-If you have been using nano, you may see files with the ".save" file
-extension appearing in directories in which you are working. If you are
-editing a file (let's call it "hello.c") and somehow your connection to
-`cloud.cs50.net` is lost, whether because you closed the terminal window
-or you lost your connection to the internet or some other unknown
-reason, nano will automatically save a backup of the state of the file
-in a new file with a ".save" extension (e.g. "hello.c.save"). So, when
-you log back onto `cloud.cs50.net`, don't worry that you've lost
-everything you've been working on because you hadn't saved for an
-extended period of time, you can simply open up the ".save" file and
-then continue from where you left off, and when you go to save the file,
-you can save it with the name of the original file (without the ".save"
-extension). Don't rely entirely on this though, such as thinking you can
-just close your terminal window without saving because nano has got you
-covered, because in a very few cases the file is not correctly created.
-
-If a ".save" file already exists and you open up the file without the
-".save" extension, and your connection is lost again, nano will save the
-file with a ".save.1" file extension, incrementing the number at the end
-of the extension for each time. If you have open a file without a name
-and lose your connection, the file will automatically be saved with the
-name "nano.save".
-
-If you don't need the ".save" files, feel free to remove them.
