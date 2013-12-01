@@ -24,60 +24,56 @@ from 2011-03-21 onward are nutritional facts, portions, and recipes
 available. This wiki's article on link:../../scraping[Screen Scraping]
 discusses how this API gets its data.
 
-*Version 1.3 of this API is operational. Versions 1.2 and prior of this
+*Version 2 of this API is operational. Versions 1.3 and prior of this
 API are no longer operational.*
-
-
-== Author
-
-To report bugs or request features, contact:
-
-mailto:malan@post.harvard.edu[David J. Malan '99] +
-http://www.cs.harvard.edu/malan/
-
 
 == License
 
 Use of this API is governed by a
-http://creativecommons.org/licenses/by-nc/3.0/[Creative Commons
-Attribution-Noncommerical 3.0 Unported] license, which means that you
+http://creativecommons.org/licenses/by-nc/4.0/[Creative Commons
+Attribution-NonCommercial 4.0 International] license, which means that you
 may use its data for non-commercial purposes so long as you attribute
 your data to this API, as by including a link to
-http://food.cs50.net/[HarvardFood] in your own work. To discuss
+this documentation in your own work. To discuss
 commercial purposes, contact the author.
 
+== Registration
+
+To use this API, you must http://api.cs50.net/register[register for an API key].
+
+== Limits
+
+Usage of this API is limited to 60 queries per minute.
 
 == Methods
 
 All methods support
 http://en.wikipedia.org/wiki/Cross-Origin_Resource_Sharing[CORS].
 
-
 === facts
 
 To query the HarvardFood API for nutritional facts, contact the server
 via URLs in this format:
 
-`http://food.cs50.net/api/1.3/facts?param1=value1&param2=value2&...`
+----
+http://api.cs50.net/food/2/facts?param1=value1&param2=value2&...
+----
 
 Supported parameters include:
 
-[cols=",",options="header",]
-|=======================================================================
-|parameter |description
-|recipe |_Required._ ID of recipe for which to get nutritional facts.
-
-|output |_Required._ Format for output. Must be *csv*, *json*, *jsonp*,
-or *php*.
-
-|portion |recipe's]] unit of measure; do not include unit itself.
-|=======================================================================
+[options=header]
+|===
+| parameter | description
+| `key`| _Required._ Your API key.
+| `recipe` | _Required._ ID of recipe for which to get nutritional facts.
+| `output` | _Required._ Format for output. Must be `csv`, `json`, `jsonp`,
+or `php`.
+| `portion` | _Optional._ The recipe's unit of measure; do not include unit itself.
+|===
 
 If any parameters are malformed or any required parameters are omitted,
 an empty response will be returned along with, possibly, HTTP status
-code
-http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1[400 Bad
-Request].
+code http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1[400 Bad Request].
 
 Some facts are only available as raw amounts; some facts are available
 as raw amounts and as
@@ -85,31 +81,29 @@ http://www.fda.gov/food/labelingnutrition/consumerinformation/ucm078889.htm#see6
 daily values]. Percent daily values are based on a 2,000-calorie diet.
 Facts are measured per the units below.
 
-[cols=",,",options="header",]
-|=============================
-|Fact |Amount |Percent
-|Calcium |mg |%
-|Calories |cal |%
-|Calories from Fat |cal |_n/a_
-|Cholesterol |mg |%
-|Dietary Fiber |g |%
-|Iron |mg |%
-|Protein |g |%
-|Saturated Fat |g |%
-|Sodium |mg |%
-|Sugars |g |%
-|Total Carbs |g |%
-|Total Fat |g |%
-|Trans Fat |g |%
-|Vitamin A |iu |%
-|Vitamin C |mg |%
-|=============================
-
+[options=header]
+|===
+| Fact | Amount | Percent
+| Calcium | mg | %
+| Calories | cal | %
+| Calories from Fat | cal | _n/a_
+| Cholesterol | mg | %
+| Dietary Fiber | g | %
+| Iron | mg | %
+| Protein | g | %
+| Saturated Fat | g | %
+| Sodium | mg | %
+| Sugars | g | %
+| Total Carbs | g | %
+| Total Fat | g | %
+| Trans Fat | g | %
+| Vitamin A | iu | %
+| Vitamin C | mg | %
+|===
 
 ==== CSV
 
-If you request data in CSV format (e.g.,
-http://food.cs50.net/api/1.3/facts?recipe=117003&portion=1&output=csv),
+If you request data in CSV format (e.g., `http://api.cs50.net/food/2/facts?key=KEY&recipe=117003&portion=1&output=csv`, where `KEY` is your API key),
 the response will be a series of comma-delimited rows, per the below:
 
 [source,text]
@@ -135,13 +129,12 @@ Sugars,0,0
 Note that the response's first row defines the CSV file's fields.
 Fields' order may change over time, so do not hardcode indices into your
 own code. Use that first row to determine fields' indices dynamically,
-per this article on link:../../Neat_Tricks#Parsing_CSV[parsing CSV].
-
+per this article on link:/tricks/#Parsing_CSV[parsing CSV].
 
 ==== JSON
 
 If you request data in JSON format (e.g.,
-http://food.cs50.net/api/1.3/facts?recipe=117003&portion=1&output=json),
+`http://api.cs50.net/food/2/facts?key=KEY&recipe=117003&portion=1&output=json`, where `KEY` is your API key),
 the response will be an array of objects, per the below:
 
 [source,javascript]
@@ -224,11 +217,10 @@ the response will be an array of objects, per the below:
 ]
 ----
 
-
 ==== JSONP
 
 If you request data in JSONP format (e.g.,
-http://food.cs50.net/api/1.3/facts?recipe=117003&portion=1&output=jsonp&callback=parseResponse),
+`http://api.cs50.net/food/2/facts?key=KEY&recipe=117003&portion=1&output=jsonp&callback=parseResponse`, where `KEY` is your API key),
 the response will be a padded array of objects, per the below:
 
 [source,javascript]
@@ -236,13 +228,12 @@ the response will be a padded array of objects, per the below:
 parseResponse([{"fact":"Calcium","amount":48,"percent":4},{"fact":"Calories","amount":250,"percent":8},{"fact":"Calories from Fat","amount":135},{"fact":"Cholesterol","amount":40,"percent":13},{"fact":"Dietary Fiber","amount":1,"percent":4},{"fact":"Iron","amount":1.5,"percent":10},{"fact":"Protein","amount":15,"percent":24},{"fact":"Saturated Fat","amount":3.5,"percent":18},{"fact":"Sodium","amount":570,"percent":24},{"fact":"Sugars","amount":0,"percent":0},{"fact":"Total Carbs","amount":13,"percent":4},{"fact":"Total Fat","amount":15,"percent":23},{"fact":"Trans Fat","amount":0,"percent":0},{"fact":"Vitamin A","amount":0,"percent":0},{"fact":"Vitamin C","amount":0,"percent":0}])
 ----
 
-
 ==== PHP
 
 If you request data in
 (http://www.php.net/manual/en/language.oop5.serialization.php[serialized])
 PHP format (e.g.,
-http://food.cs50.net/api/1.3/facts?recipe=117003&portion=1&output=php),
+`http://api.cs50.net/food/2/facts?key=KEY&recipe=117003&portion=1&output=php`, where `KEY` is your API key),
 the response will be a serialized array of associative arrays, per the
 below:
 
@@ -365,36 +356,34 @@ Array
 )
 ----
 
-
 === menus
 
 To query the HarvardFood API for menus, contact the server via URLs in
 this format:
 
-`http://food.cs50.net/api/1.3/menus?param1=value1&param2=value2&...`
+----
+http://api.cs50.net/food/2/menus?param1=value1&param2=value2&...
+----
 
 Supported parameters include:
 
-[cols=",",options="header",]
-|=======================================================================
-|parameter |description
-|callback |_Required iff *output* is *jsonp*_. Callback function with
+[options=header]
+|===
+| parameter | description
+| `key` | _Required._ Your API key.
+| `callback` | _Required iff `output` is `jsonp`._ Callback function with
 which response will be padded.
-
-|edt |_Optional._ An end date in *YYYY-MM-DD* format. Menus up through
-this date will be returned. If omitted, *sdt* will be assumed.
-
-|meal |_Optional._ Meal to return. Must be *BREAKFAST*, *BRUNCH*,
-*LUNCH*, or *DINNER*. (*BRUNCH* and *LUNCH* are treated as synonyms, no
+| `edt` | _Optional._ An end date in `YYYY-MM-DD` format. Menus up through
+this date will be returned. If omitted, `sdt` will be assumed.
+| `meal` | _Optional._ Meal to return. Must be `BREAKFAST`, `BRUNCH`,
+`LUNCH`, or `DINNER`. (`BRUNCH` and `LUNCH` are treated as synonyms, no
 matter the day of the week.) If omitted, all meals will be returned.
-
-|output |_Required._ Format for output. Must be *csv*, *json*, *jsonp*,
-or *php*.
-
-|sdt |_Optional._ A start date in *YYYY-MM-DD* format. Menus from this
+| `output` | _Required._ Format for output. Must be `csv`, `json`, `jsonp`,
+or `php`.
+| `sdt` | _Optional._ A start date in `YYYY-MM-DD` format. Menus from this
 date onward will be returned. If omitted, the current date will be
 assumed.
-|=======================================================================
+|===
 
 If any parameters are malformed or any required parameters are omitted,
 an empty response will be returned along with, possibly, HTTP status
@@ -402,11 +391,10 @@ code
 http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1[400 Bad
 Request].
 
-
 ==== CSV
 
 If you request data in CSV format (e.g.,
-http://food.cs50.net/api/1.3/menus?meal=BREAKFAST&sdt=2011-03-21&output=csv),
+`http://api.cs50.net/food/2/menus?key=KEY&meal=BREAKFAST&sdt=2011-03-21&output=csv`, where `KEY` is your API key),
 the response will be a series of comma-delimited rows, per the below:
 
 [source,text]
@@ -428,13 +416,12 @@ date,meal,category,recipe,name,portion,unit
 Note that the response's first row defines the CSV file's fields.
 Fields' order may change over time, so do not hardcode indices into your
 own code. Use that first row to determine fields' indices dynamically,
-per this article on link:../../Neat_Tricks#Parsing_CSV[parsing CSV].
-
+per this article on link:/tricks/#Parsing_CSV[parsing CSV].
 
 ==== JSON
 
 If you request data in JSON format (e.g.,
-http://food.cs50.net/api/1.3/menus?meal=BREAKFAST&sdt=2011-03-21&output=json),
+`http://api.cs50.net/food/2/menus?key=KEY&meal=BREAKFAST&sdt=2011-03-21&output=json`, where `KEY` is your API key),
 the response will be an array of objects, per the below:
 
 [source,javascript]
@@ -542,11 +529,10 @@ the response will be an array of objects, per the below:
 ]
 ----
 
-
 ==== JSONP
 
 If you request data in JSONP format (e.g.,
-http://food.cs50.net/api/1.3/menus?meal=BREAKFAST&sdt=2011-03-21&output=jsonp&callback=parseResponse),
+`http://api.cs50.net/food/2/menus?key=KEY&meal=BREAKFAST&sdt=2011-03-21&output=jsonp&callback=parseResponse`, where `KEY` is your API key),
 the response will be a padded array of objects, per the below:
 
 [source,javascript]
@@ -560,7 +546,7 @@ parseResponse([{"date":"2011-03-21","meal":"BREAKFAST","category":"BREAKFAST BAK
 If you request data in
 (http://www.php.net/manual/en/language.oop5.serialization.php[serialized])
 PHP format (e.g.,
-http://food.cs50.net/api/1.3/menus?meal=BREAKFAST&sdt=2011-03-21&output=php),
+`http://api.cs50.net/food/2/menus?key=KEY&meal=BREAKFAST&sdt=2011-03-21&output=php, where `KEY` is your API key),
 the response will be a serialized array of associative arrays, per the
 below:
 
@@ -706,18 +692,20 @@ Array
 To query the HarvardFood API for recipes, contact the server via URLs in
 this format:
 
-`http://food.cs50.net/api/1.3/recipes?param1=value1&param2=value2&...`
+----
+http://api.cs50.net/food/2/recipes?param1=value1&param2=value2&...
+----
 
 Supported parameters include:
 
-[cols=",",options="header",]
-|=======================================================================
-|parameter |description
-|id |_Optional._ Comma-separated list of IDs of recipes to get.
-
-|output |_Required._ Format for output. Must be *csv*, *json*, *jsonp*,
-or *php*.
-|=======================================================================
+[options=header]
+|===
+| `parameter` | description
+| `key` | _Required._ Your API key.
+| `id` | _Optional._ Comma-separated list of IDs of recipes to get.
+| `output` | _Required._ Format for output. Must be `csv`, `json`, `jsonp`,
+or `php`.
+|===
 
 If any parameters are malformed or any required parameters are omitted,
 an empty response will be returned along with, possibly, HTTP status
@@ -728,11 +716,10 @@ Request].
 Among the fields returned will be a recipe's usual serving size and its
 unit of measure.
 
-
 ==== CSV
 
 If you request data in CSV format (e.g.,
-http://food.cs50.net/api/1.3/recipes?id=117003&output=csv), the response
+`http://api.cs50.net/food/2/recipes?key=KEY&id=117003&output=csv`, where `KEY` is your API key), the response
 will be a series of comma-delimited rows, per the below:
 
 [source,text]
@@ -744,13 +731,12 @@ id,name,size,unit,ingredients,VEGETARIAN,VEGAN,"MOLLIE KATZEN",LOCAL,ORGANIC
 Note that the response's first row defines the CSV file's fields.
 Fields' order may change over time, so do not hardcode indices into your
 own code. Use that first row to determine fields' indices dynamically,
-per this article on link:../../Neat_Tricks#Parsing_CSV[parsing CSV].
-
+per this article on link:/tricks/#Parsing_CSV[parsing CSV].
 
 ==== JSON
 
 If you request data in JSON format (e.g.,
-http://food.cs50.net/api/1.3/recipes?id=117003&output=json), the
+`http://api.cs50.net/food/2/recipes?key=KEY&id=117003&output=json`, where `KEY` is your API key), the
 response will be an array of objects, per the below:
 
 [source,javascript]
@@ -771,11 +757,10 @@ response will be an array of objects, per the below:
 ]
 ----
 
-
 ===== JSONP
 
 If you request data in JSONP format (e.g.,
-http://food.cs50.net/api/1.3/recipes?id=117003&output=jsonp&callback=parseResponse),
+`http://api.cs50.net/food/2/recipes?key=KEY&id=117003&output=jsonp&callback=parseResponse`, where `KEY` is your API key),
 the response will be a padded array of objects, per the below:
 
 [source,javascript]
@@ -783,13 +768,12 @@ the response will be a padded array of objects, per the below:
 parseResponse({"id":"117003","name":"Chickwich","size":"1","unit":"each","ingredients":"Chicken Patty (* INGREDIENT STATEMENT * Chicken breast with rib meat, water, vegetable protein product (isolated soy protein, magnesium oxide, zinc oxide, niacinamide, ferrous sulfate, vitamin B12, copper gluconate, vitamin A palmitate, calcium pantothenate, pyridoxine hydrochloride, thiamine mononitrate, riboflavin), dried whole egg, seasoning (salt, onion powder, modified corn starch, natural flavor), and sodium phosphates. BREADED WITH: Enriched wheat flour (enriched with niacin, ferrous sulfate, thiamine mononitrate, riboflavin, folic acid), water, enriched bleached wheat flour (enriched with niacin, ferrous sulfate, thiamine mononitrate, riboflavin, folic acid), salt, modified corn starch, spices, dextrose, garlic powder, oleoresin paprika and annatto, xanthan gum, and natural flavors. Breading set in vegetable oil.)","VEGETARIAN":"FALSE","VEGAN":"FALSE","MOLLIE KATZEN":"FALSE","LOCAL":"FALSE","ORGANIC":"FALSE"})
 ----
 
-
 ==== PHP
 
 If you request data in
 (http://www.php.net/manual/en/language.oop5.serialization.php[serialized])
 PHP format (e.g.,
-http://food.cs50.net/api/1.3/recipes?id=117003&output=php), the response
+`http://api.cs50.net/food/2/recipes?key=KEY&id=117003&output=php`, where `KEY` is your API key), the response
 will be a serialized array of associative arrays, per the below:
 
 [source,php]
@@ -817,49 +801,50 @@ Array
 )
 ----
 
-
 == Examples
 
+where `KEY` is your API key
+
 * Returns today's entire menu:
-** http://food.cs50.net/api/1.3/menus?output=csv
-** http://food.cs50.net/api/1.3/menus?output=json
-** http://food.cs50.net/api/1.3/menus?output=jsonp&callback=parseResponse
-** http://food.cs50.net/api/1.3/menus?output=php
+** `http://api.cs50.net/food/2/menus?key=KEY&output=csv`
+** `http://api.cs50.net/food/2/menus?key=KEY&output=json`
+** `http://api.cs50.net/food/2/menus?key=KEY&output=jsonp&callback=parseResponse`
+** `http://api.cs50.net/food/2/menus?key=KEY&output=php`
 * Returns today's lunch menu:
-** http://food.cs50.net/api/1.3/menus?meal=LUNCH&output=csv
-** http://food.cs50.net/api/1.3/menus?meal=LUNCH&output=json
-** http://food.cs50.net/api/1.3/menus?meal=LUNCH&output=jsonp&callback=parseResponse
-** http://food.cs50.net/api/1.3/menus?meal=LUNCH&output=php
+** `http://api.cs50.net/food/2/menus?key=KEY&meal=LUNCH&output=csv`
+** `http://api.cs50.net/food/2/menus?key=KEY&meal=LUNCH&output=json`
+** `http://api.cs50.net/food/2/menus?key=KEY&meal=LUNCH&output=jsonp&callback=parseResponse`
+** `http://api.cs50.net/food/2/menus?key=KEY&meal=LUNCH&output=php`
 * Returns 21 March 2011's entire menu:
-** http://food.cs50.net/api/1.3/menus?sdt=2011-03-21&output=csv
-** http://food.cs50.net/api/1.3/menus?sdt=2011-03-21&output=json
-** http://food.cs50.net/api/1.3/menus?sdt=2011-03-21&output=jsonp&callback=parseResponse
-** http://food.cs50.net/api/1.3/menus?sdt=2011-03-21&output=php
+** `http://api.cs50.net/food/2/menus?key=KEY&sdt=2011-03-21&output=csv`
+** `http://api.cs50.net/food/2/menus?key=KEY&sdt=2011-03-21&output=json`
+** `http://api.cs50.net/food/2/menus?key=KEY&sdt=2011-03-21&output=jsonp&callback=parseResponse`
+** `http://api.cs50.net/food/2/menus?key=KEY&sdt=2011-03-21&output=php`
 * Returns 21 March 2011's breakfast menu:
-** http://food.cs50.net/api/1.3/menus?meal=BREAKFAST&sdt=2011-03-21&output=csv
-** http://food.cs50.net/api/1.3/menus?meal=BREAKFAST&sdt=2011-03-21&output=json
-** http://food.cs50.net/api/1.3/menus?meal=BREAKFAST&sdt=2011-03-21&output=jsonp&callback=parseResponse
-** http://food.cs50.net/api/1.3/menus?meal=BREAKFAST&sdt=2011-03-21&output=php
+** `http://api.cs50.net/food/2/menus?key=KEY&meal=BREAKFAST&sdt=2011-03-21&output=csv`
+** `http://api.cs50.net/food/2/menus?key=KEY&meal=BREAKFAST&sdt=2011-03-21&output=json`
+** `http://api.cs50.net/food/2/menus?key=KEY&meal=BREAKFAST&sdt=2011-03-21&output=jsonp&callback=parseResponse`
+** `http://api.cs50.net/food/2/menus?key=KEY&meal=BREAKFAST&sdt=2011-03-21&output=php`
 * Returns a Chickwich's nutritional facts:
-** http://food.cs50.net/api/1.3/facts?recipe=117003&portion=1&output=csv
-** http://food.cs50.net/api/1.3/facts?recipe=117003&portion=1&output=json
-** http://food.cs50.net/api/1.3/facts?recipe=117003&portion=1&output=jsonp&callback=parseResponse
-** http://food.cs50.net/api/1.3/facts?recipe=117003&portion=1&output=php
+** `http://api.cs50.net/food/2/facts?key=KEY&recipe=117003&portion=1&output=csv`
+** `http://api.cs50.net/food/2/facts?key=KEY&recipe=117003&portion=1&output=json`
+** `http://api.cs50.net/food/2/facts?key=KEY&recipe=117003&portion=1&output=jsonp&callback=parseResponse`
+** `http://api.cs50.net/food/2/facts?key=KEY&recipe=117003&portion=1&output=php`
 * Returns a Chickwich's recipe:
-** http://food.cs50.net/api/1.3/recipes?id=117003&output=csv
-** http://food.cs50.net/api/1.3/recipes?id=117003&output=json
-** http://food.cs50.net/api/1.3/recipes?id=117003&output=jsonp&callback=parseResponse
-** http://food.cs50.net/api/1.3/recipes?id=117003&output=php
+** `http://api.cs50.net/food/2/recipes?key=KEY&id=117003&output=csv`
+** `http://api.cs50.net/food/2/recipes?key=KEY&id=117003&output=json`
+** `http://api.cs50.net/food/2/recipes?key=KEY&id=117003&output=jsonp&callback=parseResponse`
+** `http://api.cs50.net/food/2/recipes?key=KEY&id=117003&output=php`
 
-
+////
 == Implementations
 
 * http://chrome.google.com/extensions/detail/kolkghlafoledmpdmpgjahlcehclkbpa[HUDS
-Daily Menu], by Filip Zembowicz. "This chrome extension allows easy
+Daily Menu], by Filip Zembowicz. "This Chrome extension allows easy
 access to the daily menu right from the browser -- it's really
 convenient since you don't have to look through the web site, and it's
 just a tiny icon right next to your address bar."
-
+////
 
 == External Links
 
@@ -871,7 +856,6 @@ values]
 * http://php.net/manual/en/function.unserialize.php[PHP: unserialize]
 * http://en.wikipedia.org/wiki/Web_scraping[Web scraping]
 
-
 == Changelog
 
 * http://wiki.cs50.net.php?title=HarvardFood_API&oldid=1014[1.0]
@@ -882,3 +866,6 @@ values]
 * 1.3
 ** Complete overhaul. Added nutritional facts. Added recipes. Added
 support for ranges of dates for menus.
+* 2
+** Migrated to `api.cs50.net`.
+** Added requirement of API key.
