@@ -1,7 +1,5 @@
----
-tags: [API]
-title: HarvardFood API
----
+= HarvardFood API
+:toc: left
 
 The HarvardFood API allows you to retrieve
 http://www.dining.harvard.edu/[HUDS] menus in
