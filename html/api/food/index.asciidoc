@@ -16,12 +16,11 @@ http://en.wikipedia.org/wiki/Representational_State_Transfer[RESTful]
 interface, which means that you can query it using simple HTTP GET
 requests.
 
-At the moment, HarvardFood exists only as an API, not as an app;
-http://food.cs50.net/[food.cs50.net] redirects to this API
-documentation. HarvardFood's database contains menus from 2009-10-28
+At the moment, HarvardFood exists only as an API, not as an app.
+With some exceptions, HarvardFood's database contains menus from 2009-10-28
 through the present date plus 6 days into the future; only for menus
 from 2011-03-21 onward are nutritional facts, portions, and recipes
-available. This wiki's article on link:../../scraping[Screen Scraping]
+available. This wiki's article on link:/scraping/[Screen Scraping]
 discusses how this API gets its data.
 
 *Version 2 of this API is operational. Versions 1.3 and prior of this
