@@ -61,6 +61,9 @@
                 <% if has_header? %>
                     <% unless notitle %>
                         <h1><%= @header.title %></h1>
+                        <% unless @header.title == 'CS50 Manual' %>
+                            <span class="author">in the <a href="/">CS50 Manual</a></span>
+                        <% end %>
                     <% end %>
                 <% end %>
                 <% if (attr? :toc) && (attr? 'toc-placement', 'auto') %>
