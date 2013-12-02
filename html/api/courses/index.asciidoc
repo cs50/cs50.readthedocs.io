@@ -128,7 +128,7 @@ response will be an array of objects, per the below:
 ==== JSONP
 
 If you request data in JSONP format (e.g.,
-`http://api.cs50.net/courses/1.0/courses?key=KEY&cat_num=4949&output=jsonp&callback=parseResponse`, where `KEY` is your API key),
+`http://api.cs50.net/courses/2/courses?key=KEY&cat_num=4949&output=jsonp&callback=parseResponse`, where `KEY` is your API key),
 the response will be a padded array of objects, per the below:
 
 [source,javascript]
