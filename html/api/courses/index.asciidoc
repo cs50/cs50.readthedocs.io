@@ -18,28 +18,25 @@ return a lot of data. For performance's sake, you yourself should cache
 your own copy locally and synchronize with this API once per day.
 
 This API does not provide Q data, but you may request a dump of Q data
-(three SQL tables) at
-https://www.cs50.net/q/request[cs50.net/q/request].
-
-
-== Author
-
-To report bugs or request features, contact:
-
-mailto:malan@harvard.edu[David J. Malan '99] +
-http://www.cs.harvard.edu/malan/
-
+(in CSV and SQL format) at https://www.cs50.net/q/request[cs50.net/q/request].
 
 == License
 
 Use of this API is governed by a
-http://creativecommons.org/licenses/by-nc/3.0/[Creative Commons
-Attribution-Noncommerical 3.0 Unported] license, which means that you
+http://creativecommons.org/licenses/by-nc/4.0/[Creative Commons
+Attribution-NonCommercial 4.0 International] license, which means that you
 may use its data for non-commercial purposes so long as you attribute
 your data to this API, as by including a link to
-http://courses.cs50.net/[HarvardCourses] in your own work. To discuss
+this documentation in your own work. To discuss
 commercial purposes, contact the author.
 
+== Registration
+
+To use this API, you must http://api.cs50.net/register[register for an API key].
+
+== Limits
+
+Usage of this API is limited to 60 queries per minute.
 
 == Methods
 
@@ -51,37 +48,27 @@ http://en.wikipedia.org/wiki/Cross-Origin_Resource_Sharing[CORS].
 To query the HarvardCourses API for courses, contact the server via URLs
 in this format:
 
-`http://api.cs50.net/courses/1.0/courses?param1=value1&param2=value2&...`
+----
+http://api.cs50.net/courses/2/courses?param1=value1&param2=value2&...
+----
 
 Supported parameters include:
 
-[cols=",",options="header",]
-|=======================================================================
-|parameter |description
-|`cat_num` |_Optional._ A comma-separated list of catalog numbers. Only
-courses with those catalog numbers will be returned.
-
-|`faculty` |_Optional._ A comma-separated list faculty members' IDs.
-Only courses taught by at least one of them will be returned.
-
-|`field` |_Optional._ A comma-separated list fields' IDs. Only courses
-in those fields will be returned.
-
-|`output` |_Required._ Format for output. Must be `csv`, `json`,
-`jsonp`, `php`, or `xml`.
-
-|`q` |_Optional._ Query string. Only courses whose catalog number,
-field, number, title, and/or description contain the string will be
-returned. Be sure to URL-encode this parameter's value (as with PHP's
-http://php.net/manual/en/function.urlencode.php[urlencode]).
-
-|`term` |_Optional._ Must be `FALL` or `SPRING`.
+[options=header]
+|===
+| parameter | description
+| `key` | _Required._ Your API key.
+| `cat_num` | _Optional._ A comma-separated list of catalog numbers. Only courses with those catalog numbers will be returned.
+| `faculty` | _Optional._ A comma-separated list faculty members' IDs.  Only courses taught by at least one of them will be returned.
+| `field` | _Optional._ A comma-separated list fields' IDs. Only courses in those fields will be returned.
+| `output` | _Required._ Format for output. Must be `csv`, `json`, `jsonp`, `php`, or `xml`.
+| `q` | _Optional._ Query string. Only courses whose catalog number, field, number, title, and/or description contain the string will be returned. Be sure to URL-encode this parameter's value (as with PHP's http://php.net/manual/en/function.urlencode.php[urlencode]).
+| `term` | _Optional._ Must be `FALL` or `SPRING`.
 |=======================================================================
 
 If any parameters are malformed or any required parameters are omitted,
 an empty response will be returned along with, possibly, HTTP status
-code
-http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1[400 Bad
+code http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1[400 Bad
 Request].
 
 A course offered both in the fall and in the spring will be returned as
@@ -95,11 +82,10 @@ comma-separated list of faculty IDs.
 Beware that `cat_num` may contain leading zeroes for historical reasons,
 so be sure to treat it as a string, not as an integer.
 
-
 ==== CSV
 
 If you request data in CSV format (e.g.,
-http://api.cs50.net/courses/1.0/courses?cat_num=4949&output=csv), the
+`http://api.cs50.net/courses/2/courses?key=KEY&cat_num=4949&output=csv`, where `KEY` is your API key), the
 response will be a series of comma-delimited rows, per the below:
 
 [source,text]
@@ -111,13 +97,12 @@ cat_num,term,bracketed,field,number,title,faculty,description,prerequisites,note
 Note that the response's first row defines the CSV file's fields.
 Fields' order may change over time, so do not hardcode indices into your
 own code. Use that first row to determine fields' indices dynamically,
-per this article on link:../../Neat_Tricks#Parsing_CSV[parsing CSV].
-
+per this article on link:/tricks/#Parsing_CSV[parsing CSV].
 
 ==== JSON
 
 If you request data in JSON format (e.g.,
-http://api.cs50.net/courses/1.0/courses?cat_num=4949&output=json), the
+`http://api.cs50.net/courses/2/courses?key=KEY&cat_num=4949&output=json`, where `KEY` is your API key), the
 response will be an array of objects, per the below:
 
 [source,javascript]
@@ -141,11 +126,10 @@ response will be an array of objects, per the below:
 ]
 ----
 
-
 ==== JSONP
 
 If you request data in JSONP format (e.g.,
-http://api.cs50.net/courses/1.0/courses?cat_num=4949&output=jsonp&callback=parseResponse),
+`http://api.cs50.net/courses/1.0/courses?key=KEY&cat_num=4949&output=jsonp&callback=parseResponse`, where `KEY` is your API key),
 the response will be a padded array of objects, per the below:
 
 [source,javascript]
@@ -153,13 +137,12 @@ the response will be a padded array of objects, per the below:
 parseResponse([{"cat_num":"4949","term":"FALL","bracketed":false,"field":"COMPSCI","number":"50","title":"Introduction to Computer Science I","faculty":"98d2c536d93571eff451df8bd44823d8","description":"Introduction to the intellectual enterprises of computer science and the art of programming. This course teaches students how to think algorithmically and solve problems efficiently. Topics include abstraction, encapsulation, data structures, databases, memory management, software development, virtualization, and websites. Languages include C, PHP, and JavaScript plus SQL, CSS, and XHTML. Problem sets inspired by real-world domains of biology, cryptography, finance, forensics, and gaming. Designed for concentrators and non-concentrators alike, with or without prior programming experience.","prerequisites":"","notes":"This course may be taken for a letter grade or pass\/fail. When taken for a letter grade, this course meets the General Education requirement for Empirical and Mathematical Reasoning or the Core area requirement for Quantitative Reasoning. This course will also meet F., 1-2:30pm on September 3, 2010 and September 10, 2010 only. Students with conflicts should watch those lectures online.","meetings":"M., W., 1-2:30, and a weekly section.","building":"Memorial Hall","room":"Sanders Theatre"}])
 ----
 
-
 ==== PHP
 
 If you request data in
 (http://www.php.net/manual/en/language.oop5.serialization.php[serialized])
 PHP format (e.g.,
-http://api.cs50.net/courses/1.0/courses?cat_num=4949&output=php), the
+`http://api.cs50.net/courses/2/courses?cat_num=4949&output=php`, where `KEY` is your API key), the
 response will be a serialized array of associative arrays, per the
 below:
 
@@ -195,11 +178,10 @@ Array
 )
 ----
 
-
 ==== XML
 
 If you request data in XML format (e.g.,
-http://api.cs50.net/courses/1.0/courses?cat_num=4949&output=xml), the
+`http://api.cs50.net/courses/2/courses?key=KEY&cat_num=4949&output=xml`, where `KEY` is your API key), the
 response will be an XML document whose root element is `courses`, each
 of whose children is an `course`, per the below:
 
@@ -246,18 +228,19 @@ of whose children is an `course`, per the below:
 To query the HarvardCourses API for faculty, contact the server via URLs
 in this format:
 
-`http://api.cs50.net/courses/1.0/faculty?param1=value1&param2=value2&...`
+----
+http://api.cs50.net/courses/2/faculty?param1=value1&param2=value2&...
+----
 
 Supported parameters include:
 
-[cols=",",options="header",]
-|=======================================================================
-|parameter |description
-|`id` |_Optional._ A comma-separated list of faculty members' IDs.
-
-|`output` |_Required._ Format for output. Must be `csv`, `json`,
-`jsonp`, `php`, or `xml`.
-|=======================================================================
+[options=header]
+|===
+| parameter | description
+| `key` | _Required._ Your API key.
+| `id` | _Optional._ A comma-separated list of faculty members' IDs.
+| `output` | _Required._ Format for output. Must be `csv`, `json`, `jsonp`, `php`, or `xml`.
+|===
 
 If any parameters are malformed or any required parameters are omitted,
 an empty response will be returned along with, possibly, HTTP status
@@ -265,11 +248,10 @@ code
 http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1[400 Bad
 Request].
 
-
 ==== CSV
 
 If you request data in CSV format (e.g.,
-http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&output=csv),
+`http://api.cs50.net/courses/2/faculty?key=KEY&id=98d2c536d93571eff451df8bd44823d8&output=csv`, where `KEY` is your API key),
 the response will be a series of comma-delimited rows, per the below:
 
 [source,text]
@@ -281,13 +263,12 @@ id,first,middle,last,suffix
 Note that the response's first row defines the CSV file's fields.
 Fields' order may change over time, so do not hardcode indices into your
 own code. Use that first row to determine fields' indices dynamically,
-per this article on link:../../Neat_Tricks#Parsing_CSV[parsing CSV].
-
+per this article on link:/tricks/#Parsing_CSV[parsing CSV].
 
 ==== JSON
 
 If you request data in JSON format (e.g.,
-http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&output=json),
+`http://api.cs50.net/courses/2/faculty?key=KEY&id=98d2c536d93571eff451df8bd44823d8&output=json`, where `KEY` is your API key),
 the response will be an array of objects, per the below:
 
 [source,javascript]
@@ -303,11 +284,10 @@ the response will be an array of objects, per the below:
 ]
 ----
 
-
 ==== JSONP
 
 If you request data in JSONP format (e.g.,
-http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&output=jsonp&callback=parseResponse),
+`http://api.cs50.net/courses/2/faculty?key=KEY&id=98d2c536d93571eff451df8bd44823d8&output=jsonp&callback=parseResponse`, where `KEY` is your API key),
 the response will be a padded array of objects, per the below:
 
 [source,javascript]
@@ -315,13 +295,12 @@ the response will be a padded array of objects, per the below:
 parseResponse([{"id":"98d2c536d93571eff451df8bd44823d8","first":"David","middle":"J.","last":"Malan","suffix":""}])
 ----
 
-
 ==== PHP
 
 If you request data in
 (http://www.php.net/manual/en/language.oop5.serialization.php[serialized])
 PHP format (e.g.,
-http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&output=php),
+`http://api.cs50.net/courses/2/faculty?key=KEY&id=98d2c536d93571eff451df8bd44823d8&output=php`, where `KEY` is your API key),
 the response will be a serialized array of associative arrays, per the
 below:
 
@@ -348,11 +327,10 @@ Array
 )
 ----
 
-
 === XML
 
 If you request data in XML format (e.g.,
-http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&output=xml),
+`http://api.cs50.net/courses/2/faculty?key=KEY&id=98d2c536d93571eff451df8bd44823d8&output=xml`, where `KEY` is your API key),
 the response will be an XML document whose root element is `courses`,
 each of whose children is an `course`, per the below:
 
@@ -370,24 +348,24 @@ each of whose children is an `course`, per the below:
 </faculty>
 ----
 
-
 === fields
 
 To query the HarvardCourses API for fields of study, contact the server
 via URLs in this format:
 
-`http://api.cs50.net/courses/1.0/fields?param1=value1&param2=value2&...`
+----
+http://api.cs50.net/courses/2/fields?param1=value1&param2=value2&...
+----
 
 Supported parameters include:
 
-[cols=",",options="header",]
-|=======================================================================
-|parameter |description
-|`id` |_Optional._ A comma-separated list of fields' IDs.
-
-|`output` |_Required._ Format for output. Must be `csv`, `json`,
-`jsonp`, `php`, or `xml`.
-|=======================================================================
+[options=header]
+|===
+| parameter | description
+| `key` | _Required._ Your API key.
+| `id` | _Optional._ A comma-separated list of fields' IDs.
+| `output` | _Required._ Format for output. Must be `csv`, `json`, `jsonp`, `php`, or `xml`.
+|===
 
 If any parameters are malformed or any required parameters are omitted,
 an empty response will be returned along with, possibly, HTTP status
@@ -395,11 +373,10 @@ code
 http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1[400 Bad
 Request].
 
-
 ==== CSV
 
 If you request data in CSV format (e.g.,
-http://api.cs50.net/courses/1.0/fields?id=COMPSCI&output=csv), the
+`http://api.cs50.net/courses/2/fields?key=KEY&id=COMPSCI&output=csv`, where `KEY` is your API key), the
 response will be a series of comma-delimited rows, per the below:
 
 [source,text]
@@ -411,13 +388,12 @@ COMPSCI,"Computer Science"
 Note that the response's first row defines the CSV file's fields.
 Fields' order may change over time, so do not hardcode indices into your
 own code. Use that first row to determine fields' indices dynamically,
-per this article on link:../../Neat_Tricks#Parsing_CSV[parsing CSV].
-
+per this article on link:/tricks/#Parsing_CSV[parsing CSV].
 
 ==== JSON
 
 If you request data in JSON format (e.g.,
-http://api.cs50.net/courses/1.0/fields?id=COMPSCI&output=json), the
+`http://api.cs50.net/courses/2/fields?key=KEY&id=COMPSCI&output=json`, where `KEY` is your API key), the
 response will be an array of objects, per the below:
 
 [source,javascript]
@@ -430,11 +406,10 @@ response will be an array of objects, per the below:
 ]
 ----
 
-
 ==== JSONP
 
 If you request data in JSONP format (e.g.,
-http://api.cs50.net/courses/1.0/fields?id=COMPSCI&output=jsonp&callback=parseResponse),
+`http://api.cs50.net/courses/2/fields?key=KEY&id=COMPSCI&output=jsonp&callback=parseResponse`, where `KEY` is your API key),
 the response will be a padded array of objects, per the below:
 
 [source,javascript]
@@ -442,13 +417,12 @@ the response will be a padded array of objects, per the below:
 parseResponse([{"id":"COMPSCI","name":"Computer Science"}])
 ----
 
-
 ==== PHP
 
 If you request data in
 (http://www.php.net/manual/en/language.oop5.serialization.php[serialized])
 PHP format (e.g.,
-http://api.cs50.net/courses/1.0/fields?id=COMPSCI&output=php), the
+`http://api.cs50.net/courses/2/fields?key=KEY&id=COMPSCI&output=php`, where `KEY` is your API key), the
 response will be a serialized array of associative arrays, per the
 below:
 
@@ -473,11 +447,10 @@ Array
 )
 ----
 
-
 ==== XML
 
 If you request data in XML format (e.g.,
-http://api.cs50.net/courses/1.0/fields?id=COMPSCI&output=xml), the
+`http://api.cs50.net/courses/2/fields?key=KEY&id=COMPSCI&output=xml`, where `KEY` is your API key), the
 response will be an XML document whose root element is `courses`, each
 of whose children is an `course`, per the below:
 
@@ -492,55 +465,52 @@ of whose children is an `course`, per the below:
 </fields>
 ----
 
-
 == Examples
 
 * Returns all courses:
-** http://api.cs50.net/courses/1.0/courses?output=csv
-** http://api.cs50.net/courses/1.0/courses?output=json
-** http://api.cs50.net/courses/1.0/courses?output=jsonp&callback=parseResponse
-** http://api.cs50.net/courses/1.0/courses?output=php
-** http://api.cs50.net/courses/1.0/courses?output=xml
+** http://api.cs50.net/courses/2/courses?key=KEY&output=csv
+** http://api.cs50.net/courses/2/courses?key=KEY&output=json
+** http://api.cs50.net/courses/2/courses?key=KEY&output=jsonp&callback=parseResponse
+** http://api.cs50.net/courses/2/courses?key=KEY&output=php
+** http://api.cs50.net/courses/2/courses?key=KEY&output=xml
 * Returns course with catalog number 4949:
-** http://api.cs50.net/courses/1.0/courses?cat_num=4949&output=csv
-** http://api.cs50.net/courses/1.0/courses?cat_num=4949&output=json
-** http://api.cs50.net/courses/1.0/courses?cat_num=4949&output=jsonp&callback=parseResponse
-** http://api.cs50.net/courses/1.0/courses?cat_num=4949&output=php
-** http://api.cs50.net/courses/1.0/courses?cat_num=4949&output=xml
+** http://api.cs50.net/courses/2/courses?key=KEY&cat_num=4949&output=csv
+** http://api.cs50.net/courses/2/courses?key=KEY&cat_num=4949&output=json
+** http://api.cs50.net/courses/2/courses?key=KEY&cat_num=4949&output=jsonp&callback=parseResponse
+** http://api.cs50.net/courses/2/courses?key=KEY&cat_num=4949&output=php
+** http://api.cs50.net/courses/2/courses?key=KEY&cat_num=4949&output=xml
 * Returns courses taught by David J. Malan:
-** http://api.cs50.net/courses/1.0/courses?faculty=98d2c536d93571eff451df8bd44823d8&output=csv
-** http://api.cs50.net/courses/1.0/courses?faculty=98d2c536d93571eff451df8bd44823d8&output=json
-** http://api.cs50.net/courses/1.0/courses?faculty=98d2c536d93571eff451df8bd44823d8&output=jsonp&callback=parseResponse
-** http://api.cs50.net/courses/1.0/courses?faculty=98d2c536d93571eff451df8bd44823d8&output=php
-** http://api.cs50.net/courses/1.0/courses?faculty=98d2c536d93571eff451df8bd44823d8&output=xml
+** http://api.cs50.net/courses/2/courses?key=KEY&faculty=98d2c536d93571eff451df8bd44823d8&output=csv
+** http://api.cs50.net/courses/2/courses?key=KEY&faculty=98d2c536d93571eff451df8bd44823d8&output=json
+** http://api.cs50.net/courses/2/courses?key=KEY&faculty=98d2c536d93571eff451df8bd44823d8&output=jsonp&callback=parseResponse
+** http://api.cs50.net/courses/2/courses?key=KEY&faculty=98d2c536d93571eff451df8bd44823d8&output=php
+** http://api.cs50.net/courses/2/courses?key=KEY&faculty=98d2c536d93571eff451df8bd44823d8&output=xml
 * Returns Computer Science courses:
-** http://api.cs50.net/courses/1.0/courses?field=COMPSCI&output=csv
-** http://api.cs50.net/courses/1.0/courses?field=COMPSCI&output=json
-** http://api.cs50.net/courses/1.0/courses?field=COMPSCI&output=jsonp&callback=parseResponse
-** http://api.cs50.net/courses/1.0/courses?field=COMPSCI&output=php
-** http://api.cs50.net/courses/1.0/courses?field=COMPSCI&output=xml
+** http://api.cs50.net/courses/2/courses?key=KEY&field=COMPSCI&output=csv
+** http://api.cs50.net/courses/2/courses?key=KEY&field=COMPSCI&output=json
+** http://api.cs50.net/courses/2/courses?key=KEY&field=COMPSCI&output=jsonp&callback=parseResponse
+** http://api.cs50.net/courses/2/courses?key=KEY&field=COMPSCI&output=php
+** http://api.cs50.net/courses/2/courses?key=KEY&field=COMPSCI&output=xml
 * Returns courses related to archaeology:
-** http://api.cs50.net/courses/1.0/courses?q=archaeology&output=csv
-** http://api.cs50.net/courses/1.0/courses?q=archaeology&output=json
-** http://api.cs50.net/courses/1.0/courses?q=archaeology&output=jsonp&callback=parseResponse
-** http://api.cs50.net/courses/1.0/courses?q=archaeology&output=php
-** http://api.cs50.net/courses/1.0/courses?q=archaeology&output=xml
+** http://api.cs50.net/courses/2/courses?key=KEY&q=archaeology&output=csv
+** http://api.cs50.net/courses/2/courses?key=KEY&q=archaeology&output=json
+** http://api.cs50.net/courses/2/courses?key=KEY&q=archaeology&output=jsonp&callback=parseResponse
+** http://api.cs50.net/courses/2/courses?key=KEY&q=archaeology&output=php
+** http://api.cs50.net/courses/2/courses?key=KEY&q=archaeology&output=xml
 * Returns David J. Malan:
-** http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&output=csv
-** http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&output=json
-** http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&output=jsonp&callback=parseResponse
-** http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&output=php
-** http://api.cs50.net/courses/1.0/faculty?id=98d2c536d93571eff451df8bd44823d8&output=xml
+** http://api.cs50.net/courses/2/faculty?key=KEY&id=98d2c536d93571eff451df8bd44823d8&output=csv
+** http://api.cs50.net/courses/2/faculty?key=KEY&id=98d2c536d93571eff451df8bd44823d8&output=json
+** http://api.cs50.net/courses/2/faculty?key=KEY&id=98d2c536d93571eff451df8bd44823d8&output=jsonp&callback=parseResponse
+** http://api.cs50.net/courses/2/faculty?key=KEY&id=98d2c536d93571eff451df8bd44823d8&output=php
+** http://api.cs50.net/courses/2/faculty?key=KEY&id=98d2c536d93571eff451df8bd44823d8&output=xml
 * Returns Computer Science:
-** http://api.cs50.net/courses/1.0/fields?id=COMPSCI&output=csv
-** http://api.cs50.net/courses/1.0/fields?id=COMPSCI&output=json
-** http://api.cs50.net/courses/1.0/fields?id=COMPSCI&output=jsonp&callback=parseResponse
-** http://api.cs50.net/courses/1.0/fields?id=COMPSCI&output=php
-** http://api.cs50.net/courses/1.0/fields?id=COMPSCI&output=xml
+** http://api.cs50.net/courses/2/fields?key=KEY&id=COMPSCI&output=csv
+** http://api.cs50.net/courses/2/fields?key=KEY&id=COMPSCI&output=json
+** http://api.cs50.net/courses/2/fields?key=KEY&id=COMPSCI&output=jsonp&callback=parseResponse
+** http://api.cs50.net/courses/2/fields?key=KEY&id=COMPSCI&output=php
+** http://api.cs50.net/courses/2/fields?key=KEY&id=COMPSCI&output=xml
 
-
-External Links
---------------
+== External Links
 
 * http://en.wikipedia.org/wiki/Comma-separated_values[Comma-separated
 values]
@@ -550,12 +520,12 @@ values]
 * http://php.net/manual/en/function.unserialize.php[PHP: unserialize]
 * http://en.wikipedia.org/wiki/XML[XML]
 
-
-Changelog
----------
+== Changelog
 
 * http://wiki.cs50.net.php?title=HarvardCourses_API&oldid=3204[0.9]
 * 1.0
 ** Complete overhaul. Integrated with
 http://courses.cs50.net/[HarvardCourses]. Added support for multiple
 methods and multiple output formats.
+* 2
+** Added requirement of API key.
