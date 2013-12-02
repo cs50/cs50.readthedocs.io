@@ -1,9 +1,9 @@
 = CS50 Manual
 
 * APIs
-** link:api/courses/[Harvard Courses API]
+** link:api/courses/[CS50 Courses API]
+** link:api/food/[CS50 Food API]
 ** link:api/events/[Harvard Events API]
-** link:api/food/[Harvard Food API]
 ** link:api/maps/[Harvard Maps API]
 ** link:api/news/[Harvard News API]
 ** link:api/shuttleboy/[Shuttleboy API]
