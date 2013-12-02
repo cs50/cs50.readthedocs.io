@@ -1,8 +1,8 @@
-= HarvardCourses API
+= CS50 Courses API
 :toc: left
 
-The HarvardCourses API allows you to request data programmatically from
-http://courses.cs50.net/[HarvardCourses] in
+The CS50 Courses API allows you to request data programmatically from
+http://courses.cs50.net/[CS50 Courses] in
 http://en.wikipedia.org/wiki/Comma-separated_values[CSV],
 http://en.wikipedia.org/wiki/JSON[JSON],
 http://en.wikipedia.org/wiki/JSON#JSONP[JSONP],
@@ -12,8 +12,7 @@ http://en.wikipedia.org/wiki/Representational_State_Transfer[RESTful]
 interface, which means that you can query it using simple HTTP requests.
 
 At least once per day, CS50 synchronizes with the
-http://www.registrar.fas.harvard.edu/fasro/courses.jsp?cat=ugrad&subcat=courses[Courses
-of Instruction]. Because FAS offers so many courses, this API tends to
+http://www.registrar.fas.harvard.edu/courses-exams/courses-instruction[Courses of Instruction]. Because FAS offers so many courses, this API tends to
 return a lot of data. For performance's sake, you yourself should cache
 your own copy locally and synchronize with this API once per day.
 
@@ -45,7 +44,7 @@ http://en.wikipedia.org/wiki/Cross-Origin_Resource_Sharing[CORS].
 
 === courses
 
-To query the HarvardCourses API for courses, contact the server via URLs
+To query the CS50 Courses API for courses, contact the server via URLs
 in this format:
 
 ----
@@ -64,7 +63,7 @@ Supported parameters include:
 | `output` | _Required._ Format for output. Must be `csv`, `json`, `jsonp`, `php`, or `xml`.
 | `q` | _Optional._ Query string. Only courses whose catalog number, field, number, title, and/or description contain the string will be returned. Be sure to URL-encode this parameter's value (as with PHP's http://php.net/manual/en/function.urlencode.php[urlencode]).
 | `term` | _Optional._ Must be `FALL` or `SPRING`.
-|=======================================================================
+|===
 
 If any parameters are malformed or any required parameters are omitted,
 an empty response will be returned along with, possibly, HTTP status
@@ -225,7 +224,7 @@ of whose children is an `course`, per the below:
 
 === faculty
 
-To query the HarvardCourses API for faculty, contact the server via URLs
+To query the CS50 Courses API for faculty, contact the server via URLs
 in this format:
 
 ----
@@ -350,7 +349,7 @@ each of whose children is an `course`, per the below:
 
 === fields
 
-To query the HarvardCourses API for fields of study, contact the server
+To query the CS50 Courses API for fields of study, contact the server
 via URLs in this format:
 
 ----
@@ -522,10 +521,10 @@ values]
 
 == Changelog
 
-* http://wiki.cs50.net.php?title=HarvardCourses_API&oldid=3204[0.9]
+* http://wiki.cs50.net.php?title=CS50 Courses_API&oldid=3204[0.9]
 * 1.0
 ** Complete overhaul. Integrated with
-http://courses.cs50.net/[HarvardCourses]. Added support for multiple
+http://courses.cs50.net/[CS50 Courses]. Added support for multiple
 methods and multiple output formats.
 * 2
 ** Added requirement of API key.

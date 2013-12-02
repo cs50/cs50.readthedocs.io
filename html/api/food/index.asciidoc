@@ -1,7 +1,7 @@
-= HarvardFood API
+= CS50 Food API
 :toc: left
 
-The HarvardFood API allows you to retrieve
+The CS50 Food API allows you to retrieve
 http://www.dining.harvard.edu/[HUDS] menus in
 http://en.wikipedia.org/wiki/Comma-separated_values[CSV],
 http://en.wikipedia.org/wiki/JSON[JSON],
@@ -16,8 +16,7 @@ http://en.wikipedia.org/wiki/Representational_State_Transfer[RESTful]
 interface, which means that you can query it using simple HTTP GET
 requests.
 
-At the moment, HarvardFood exists only as an API, not as an app.
-With some exceptions, HarvardFood's database contains menus from 2009-10-28
+With some exceptions, the API's database contains menus from 2009-10-28
 through the present date plus 6 days into the future; only for menus
 from 2011-03-21 onward are nutritional facts, portions, and recipes
 available. This wiki's article on link:/scraping/[Screen Scraping]
@@ -51,7 +50,7 @@ http://en.wikipedia.org/wiki/Cross-Origin_Resource_Sharing[CORS].
 
 === facts
 
-To query the HarvardFood API for nutritional facts, contact the server
+To query the CS50 Food API for nutritional facts, contact the server
 via URLs in this format:
 
 ----
@@ -357,7 +356,7 @@ Array
 
 === menus
 
-To query the HarvardFood API for menus, contact the server via URLs in
+To query the CS50 Food API for menus, contact the server via URLs in
 this format:
 
 ----
@@ -688,7 +687,7 @@ Array
 
 === recipes
 
-To query the HarvardFood API for recipes, contact the server via URLs in
+To query the CS50 Food API for recipes, contact the server via URLs in
 this format:
 
 ----
@@ -847,8 +846,7 @@ just a tiny icon right next to your address bar."
 
 == External Links
 
-* http://en.wikipedia.org/wiki/Comma-separated_values[Comma-separated
-values]
+* http://en.wikipedia.org/wiki/Comma-separated_values[Comma-separated values]
 * http://en.wikipedia.org/wiki/JSON[JSON]
 * http://en.wikipedia.org/wiki/JSON#JSONP[JSONP]
 * http://php.net/manual/en/function.serialize.php[PHP: serialize]
@@ -857,10 +855,9 @@ values]
 
 == Changelog
 
-* http://wiki.cs50.net.php?title=HarvardFood_API&oldid=1014[1.0]
-* http://wiki.cs50.net.php?title=HarvardFood_API&oldid=1645[1.1]
+* 1.1
 ** Added support for JSONP.
-* http://wiki.cs50.net.php?title=HarvardFood_API&oldid=3376[1.2]
+* 1.2
 ** Added support for XML.
 * 1.3
 ** Complete overhaul. Added nutritional facts. Added recipes. Added
