@@ -19,7 +19,7 @@ requests.
 With some exceptions, the API's database contains menus from 2009-10-28
 through the present date plus 6 days into the future; only for menus
 from 2011-03-21 onward are nutritional facts, portions, and recipes
-available. This wiki's article on link:/scraping/[Screen Scraping]
+available. This manual's article on link:/scraping/[Screen Scraping]
 discusses how this API gets its data.
 
 *Version 2 of this API is operational. Versions 1.3 and prior of this

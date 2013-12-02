@@ -521,7 +521,6 @@ values]
 
 == Changelog
 
-* http://wiki.cs50.net.php?title=CS50 Courses_API&oldid=3204[0.9]
 * 1.0
 ** Complete overhaul. Integrated with
 http://courses.cs50.net/[CS50 Courses]. Added support for multiple
