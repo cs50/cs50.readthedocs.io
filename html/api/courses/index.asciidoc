@@ -141,7 +141,7 @@ parseResponse([{"cat_num":"4949","term":"FALL","bracketed":false,"field":"COMPSC
 If you request data in
 (http://www.php.net/manual/en/language.oop5.serialization.php[serialized])
 PHP format (e.g.,
-`http://api.cs50.net/courses/2/courses?cat_num=4949&output=php`, where `KEY` is your API key), the
+`http://api.cs50.net/courses/2/courses?key=KEY&cat_num=4949&output=php`, where `KEY` is your API key), the
 response will be a serialized array of associative arrays, per the
 below:
 
