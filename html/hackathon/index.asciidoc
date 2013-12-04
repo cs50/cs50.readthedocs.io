@@ -123,8 +123,10 @@ Yes. Lots. Often.
 
 Yes, but one-on-one help will be limited, as a goal of the Hackathon is
 to remove the last of CS50's training wheels! TFs and CAs will be
-present for guidance, but they'll also be hacking away on projects of
-their own! 
+present for guidance (off and on, with breaks in between),
+but they'll also be hacking away on projects of their own!
+
+If really in need of help, though, look for staff by the stairs where you checked in!
 
 === Will there be Wi-Fi?
 
@@ -138,3 +140,7 @@ people on it!
 Yes, via which you can decompress with some Just Dance, Mario Kart, Rayman Raving Rabbids, and Super Smash Bros. Brawl.
 
 And those Wiis will be raffled off to 4 lucky winners who are still awake and present around 5am!
+
+=== Will there be a live video stream?
+
+Yes.  Head to http://live.cs50.net/ during the Hackathon if you'd like to see what's going on outside of your hive!
