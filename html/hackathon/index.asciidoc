@@ -89,7 +89,7 @@ But you'll miss out when we link:#raffle[raffle off 4 Wiis around 5am]!
 
 Yes, via regularly scheduled shuttles.  But space will be limited, so it's probably best to walk to the Hackathon instead with friends.
 
-With that said, the Allston Express is scheduled to depart Lamont Library for the i-lab (which is where the HBS Hives are) at 7:50pm, 8:05pm, 8:20pm, 8:50pm, 9:05pm, 9:20pm, 9:35pm, 9:50pm, 10:05pm, 10:35pm, 11:05pm, 11:35pm, and 12:05am.  Those are regularly scheduled shuttles, not CS50 Shuttles, so space will be limited.  Odds are the drive will take *10+ minutes*.
+With that said, the Allston Express is scheduled to depart Lamont Library for the i-lab (which is where the HBS Hives are) at 7:35pm, 7:50pm, 8:05pm, 8:20pm, 8:50pm, 9:05pm, 9:20pm, 9:35pm, 9:50pm, 10:05pm, 10:35pm, 11:05pm, 11:35pm, and 12:05am.  Those are regularly scheduled shuttles, not CS50 Shuttles, so space will be limited.  Odds are the drive will take *10+ minutes*.
 
 ==== From the Hackathon?
 
