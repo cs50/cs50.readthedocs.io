@@ -123,8 +123,7 @@ Yes!  But we're literally maxing out the capacities of two Dominos plus a Chines
 
 Yes, but one-on-one help will be limited, as a goal of the Hackathon is
 to remove the last of CS50's training wheels! TFs and CAs will be
-present for guidance (off and on, with breaks in between),
-but they'll also be hacking away on projects of their own!
+present for guidance, but they'll also be hacking away on projects of their own!
 
 If really in need of help, though, look for staff by the stairs where you checked in!
 
