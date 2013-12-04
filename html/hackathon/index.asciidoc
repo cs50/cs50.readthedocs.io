@@ -33,7 +33,7 @@ So that check-in isn't overwhelmed (and you aren't stuck waiting in line), do ar
 == How to get there
 
 * If *walking* from, say, Widener Library, http://goo.gl/maps/wYNIo[follow this route].  Odds are the walk will take *20+ minutes*.
-* If *taking the shuttle*, know that the Allston Express is scheduled to depart Lamont Library for the i-lab (which is where the HBS Hives are) at 7:50pm, 8:05pm, 8:20pm, 8:50pm, 9:05pm, 9:20pm, 9:35pm, 9:50pm, 10:05pm, 10:35pm, 11:05pm, 11:35pm, and 12:05am.  Those are regularly scheduled shuttles, not CS50 Shuttles, so space will be limited.  Odds are the drive will take *10+ minutes*.
+* If *taking the shuttle*, know that the Allston Express is scheduled to depart Lamont Library for the i-lab (which is where the HBS Hives are) at 7:35pm, 7:50pm, 8:05pm, 8:20pm, 8:50pm, 9:05pm, 9:20pm, 9:35pm, 9:50pm, 10:05pm, 10:35pm, 11:05pm, 11:35pm, and 12:05am.  Those are regularly scheduled shuttles, not CS50 Shuttles, so space will be limited.  Odds are the drive will take *10+ minutes*.
 * If *driving*, drive to https://maps.google.com/maps?t=m&q=125+Western+Avenue%2C+Boston+MA&output=classic[125 Western Avenue] in Allston (aka Boston).  Metered parking is available *behind* the i-lab, in the lot whose entrance is on Western Avenue itself.
 
 If you find yourself lost, call 617-BUG-CS50, option 0, and tell us what you see around you!
