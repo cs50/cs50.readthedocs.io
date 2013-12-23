@@ -1,5 +1,7 @@
 <?php
 
+    require(__DIR__ . "/../includes/config.php");
+
     // map **/ to **/index
     $path = $_SERVER["SCRIPT_URL"];
     if (preg_match("#/$#", $path)) {

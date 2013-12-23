@@ -31,7 +31,4 @@
     // default time zone
     date_default_timezone_set("America/New_York");
 
-    // require functions
-    require_once(__DIR__ . "/functions.php");
-
 ?>
