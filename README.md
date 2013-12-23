@@ -5,7 +5,6 @@
 Inside appliance as `root`:
 
     sudo su -
-    yum install php-pecl-yaml
     gem install asciidoctor coderay tilt 
     exit
 

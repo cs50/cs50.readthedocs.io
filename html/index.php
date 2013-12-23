@@ -13,14 +13,6 @@
         // read article's file
         $asciidoc = file_get_contents($file);
 
-        // ignore drafts
-        /*
-        if (isset($yaml["draft"]) && $yaml["draft"] === true) {
-            http_response_code(404);
-            exit;
-        }
-        */
-
         // pipe post's AsciiDoc into asciidoctor
         $process = proc_open(
             join(" ", [
