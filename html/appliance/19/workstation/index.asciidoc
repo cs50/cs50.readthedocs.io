@@ -1,24 +1,20 @@
 = VMware Workstation
 :toc: left
 
-Here's how to install the link:..[CS50 Appliance] using
-VMware Workstation for link:#windows[Windows] or
-link:#linux[Linux].
-
+Here's how to install the link:..[CS50 Appliance] using VMware Workstation for link:#windows[Windows] or link:#linux[Linux].
 
 [[windows]]
 == Windows
 
-
 === Installation
 
 . Download VMware Workstation as follows:
-* If you're a student at Harvard,
+* If you're a student at Harvard College or Harvard Extension School,
 https://docs.google.com/spreadsheet/viewform?hl=en_US&formkey=dHoyMG5LNTgxeGFhakNaaE9CdTlkbWc6MQ[apply
 for the VMware Academic Program] (VMAP) in order to obtain a username
 and password with which you can download VMware Workstation for free
 from http://vmap.cs50.net/, along with a serial number.
-* If you're not a student at Harvard, you can download a 30-day trial of
+* If you're not a student at Harvard College or Harvard Extension School, you can download a 30-day trial of
 VMware Workstation from http://www.vmware.com/products/workstation/.
 After 30 days, you'll need to http://www.vmware.com/a/buylink/9[purchase
 a license].
@@ -74,19 +70,14 @@ that_' appliance50-19_' file (wherever you moved it for safe-keeping),
 highlight the *appliance50-19.ova* file within, and click *Open*. Then
 click VMware Workstation's ▶ button to start up the appliance.
 
-
 === Troubleshooting
-
 
 ==== Binary translation is incompatible with long mode on this platform
 
 If you see this message, you might need to enable
-link:../../../Hardware_Virtualization[hardware virtualization] on your computer.
-
+link:../../../../virtualization[hardware virtualization] on your computer.
 
 [[linux]]
 == Linux
 
-Coming soon!
-
-Category:HOWTO
+_Coming Soon_

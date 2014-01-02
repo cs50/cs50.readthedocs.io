@@ -40,8 +40,7 @@ to boot after a few seconds!
 
 == Troubleshooting
 
-
 === Binary translation is incompatible with long mode on this platform
 
 If you see this message, you might need to enable
-link:../../Hardware_Virtualization[hardware virtualization] on your computer.
+link:../../../virtualization/[hardware virtualization] on your computer.
