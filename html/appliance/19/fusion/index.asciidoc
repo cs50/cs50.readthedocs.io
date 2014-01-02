@@ -5,20 +5,8 @@ VMware Fusion for link:#_installation[Mac OS].
 
 == Installation
 
-////
-1.  Download VMware Fusion as follows:
-* If you're a student or course staff member at Harvard,
-https://docs.google.com/spreadsheet/viewform?hl=en_US&formkey=dHoyMG5LNTgxeGFhakNaaE9CdTlkbWc6MQ[apply
-for the VMware Academic Program] (VMAP) in order to obtain a username
-and password with which you can download VMware Fusion for free from
-http://vmap.cs50.net/, along with a serial number.
-* If you're not a student at Harvard, you can download a 30-day trial of
-VMware Fusion from http://www.vmware.com/products/fusion/overview.html.
-After 30 days, you'll need to
-http://www.vmware.com/a/buylink/10[purchase a license] for $49.99.
-////
 . Download VMware Fusion as follows:
-* If you are a student taking CS50x through edX, email software@cs50.net to request a 365-day license.  Within a few minutes, you should receive a reply with further instructions.
+* If you are a student taking CS50x through edX, email software@cs50.net to request a 365-day license.  Within a few minutes, you should receive a reply with further instructions on how to download VMware Fusion.
 * If you are a student at Harvard College or Harvard Extension School, https://docs.google.com/spreadsheet/viewform?hl=en_US&formkey=dHoyMG5LNTgxeGFhakNaaE9CdTlkbWc6MQ[apply for the VMware Academic Program] (VMAP) in order to obtain a username and password with which you can download VMware Fusion for free from http://vmap.cs50.net/, along with a serial number.
 .  Double-click the file you just downloaded (which is likely in your
 *Downloads* folder) in order to "mount" VMware Fusion's icon on your
