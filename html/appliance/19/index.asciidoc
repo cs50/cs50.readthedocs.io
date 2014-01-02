@@ -80,10 +80,11 @@ that will let you run
 http://en.wikipedia.org/wiki/Virtual_machine[virtual machines] on your
 own computer, whether you run Mac OS, Windows, or Linux.
 
-* If you have a *Mac*, we recommend that you follow  link:fusion/[these instructions for VMware Fusion].
+* If you have a *Mac*, we recommend that you follow link:fusion/[these instructions for VMware Fusion].  (If you're not able to get VMware Fusion to work, 
 * If you have a *PC running Windows*, we recommend that you follow link:player/[these instructions for VMware Player].
 * If you have a *PC running Linux*, we recommend that you follow link:player/[these instructions for VMware Player].
-* Alternatively (and particularly if you run into trouble with VMware Fusion or VMware Player), you can follow link:virtualbox/[these instructions for VirtualBox].
+
+Alternatively (and particularly if you run into trouble with VMware Fusion or VMware Player), you can follow link:virtualbox/[these instructions for VirtualBox].
 
 Once installed, it's not uncommon for the appliance to take a minute or
 so to boot. But if, once at John Harvard's desktop, the appliance still
