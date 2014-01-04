@@ -30,7 +30,7 @@ Agreement*, click *Agree*. If prompted for *Licensing*, paste in your
 license key, then click *OK*. If prompted to *Create New*, *Convert VM*,
 or *Migrate PC*, simply click *Skip*. If you do not yet have a license key, begin the
 trial. You may need to input an email address to proceed.
-. Select *File > Import...*. Navigate your way to that *appliance50-19-vmware.ova* and click *Open*.
+. Select *File > Open...*. Navigate your way to that *appliance50-19-vmware.ova* and click *Open*.
 . Click VMware Player's &#9654; button to start up the appliance. If
 prompted to "upgrade this virtual machine," click *Upgrade*.
 
