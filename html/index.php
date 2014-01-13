@@ -36,19 +36,23 @@
         if (is_resource($process)) {
             fwrite($pipes[0], $asciidoc);
             fclose($pipes[0]);
-            $html = stream_get_contents($pipes[1]);
+            $stdout = stream_get_contents($pipes[1]);
+            $stderr = stream_get_contents($pipes[2]);
             fclose($pipes[1]);
+            fclose($pipes[2]);
             $return_var = proc_close($process);
             if ($return_var !== 0) {
-                trigger_error("non-zero return value from asciidoctor");
+                http_response_code(500);
+                die($stderr);
             }
         }
         else {
-            trigger_error("could not spawn asciidoctor");
+            http_response_code(500);
+            die("could not spawn asciidoctor");
         }
 
         // render article
-        print($html);
+        print($stdout);
     }
     else {
         http_response_code(404);
