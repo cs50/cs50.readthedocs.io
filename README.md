@@ -1,6 +1,6 @@
 # Installation
 
-*Assumes [CS50 Appliance 17](https://manual.cs50.net/CS50_Appliance_17).*
+*Assumes [CS50 Appliance 19](https://manual.cs50.net/appliance/19/).*
 
 Inside appliance as `root`:
 
