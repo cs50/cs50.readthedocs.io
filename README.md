@@ -7,9 +7,9 @@ Inside appliance as `root`:
     sudo su -
     gem install asciidoctor coderay tilt 
     yum install php-pecl-yaml
+    gem install sass
     chmod 755 /usr/local/bin/*
     chmod 644 /usr/local/share/gems/specifications/sass*
-    gem install sass
     exit
 
 Inside appliance as `jharvard`:
