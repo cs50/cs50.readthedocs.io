@@ -9,10 +9,11 @@ image:http://www.papersizes.org/images/portrait-landscape.gif[]
 
 * Make sure there is plenty of light on you, be careful that you are not silhouetted. (Don't shoot in front of a window!)
 * Make sure it is reasonably quiet (Turn off TV, Radio, etc)
-* Upload the highest quality possible (we prefer HD)!  While we can work with any file, higher resolution devices will look better
 * Try to keep your recording duration to about 10 seconds
+* It is ideal if you ask your question in the form of "Hi, my name is _____ from _____. My question is..."
+* Upload the highest quality possible (we prefer HD)!  While we can work with any file, higher resolution devices will look better
 * Watch your video once complete, make sure it looks and sounds good to you
 
 .Uploading
-Once satisfied, upload your video to a public video sharing service such as link:http://youtube.com[YouTube], link:http://vimeo.com[Vimeo], or link:http://dropbox.com[Dropbox] and send us the link at mailto:live@cs50.net[live@cs50.net], be sure to *include* your *Name* (or what we should call you) and *Country* in the email!
+Once satisfied, upload your video to a public video sharing service such as link:http://youtube.com[YouTube], link:http://vimeo.com[Vimeo], or link:http://dropbox.com[Dropbox] and send us the link at mailto:live@cs50.net[live@cs50.net], be sure to *include* your *Name* (or what we should call you) and *Country* and optionally any other details you think we might be interested in (age, occupation) in the email!
 
