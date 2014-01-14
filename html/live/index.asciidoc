@@ -3,7 +3,7 @@
 Thanks for taking the time to submit a video to CS50 Live for us to use on our broadcast!  Here are some simple steps to help ensure that your video is what we need.
 
 .Recommendations
-* Please make sure you shoot in Landscape Mode, NOT portrait mode
+* Please make sure you shoot in *landscape* mode, NOT portrait mode
 
 image:http://www.papersizes.org/images/portrait-landscape.gif[]
 
