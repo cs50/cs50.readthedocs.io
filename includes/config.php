@@ -8,11 +8,6 @@
         trigger_error("requires PHP 5.4.0 or higher", E_USER_ERROR);
     }
 
-    // yum install php-pecl-yaml
-    if (!extension_loaded("yaml")) {
-        trigger_error("missing yaml extension module", E_USER_ERROR);
-    }
-
     // gem install asciidoctor
     if (!file_exists("/usr/local/bin/asciidoctor")) {
         trigger_error("missing asciidoctor", E_USER_ERROR);

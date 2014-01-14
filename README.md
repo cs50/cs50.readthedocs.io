@@ -5,11 +5,8 @@
 Inside appliance as `root`:
 
     sudo su -
-    gem install asciidoctor coderay tilt 
-    yum install php-pecl-yaml
-    gem install sass
+    gem install asciidoctor coderay sass tilt 
     chmod 755 /usr/local/bin/*
-    chmod 644 /usr/local/share/gems/specifications/sass*
     exit
 
 Inside appliance as `jharvard`:
@@ -31,6 +28,8 @@ Outside appliance (assuming Mac):
 
     chmod 700 ~/vhosts/manual.cs50.net/bin/chmod
     ~/vhosts/manual.cs50.net/bin/chmod
+
+    chmod 644 /usr/local/share/gems/specifications/sass*
 
 # Usage
 
