@@ -10,7 +10,7 @@ image:http://www.papersizes.org/images/portrait-landscape.gif[]
 * Make sure there is plenty of light on you, be careful that you are not silhouetted. (Don't shoot in front of a window!)
 * Make sure it is reasonably quiet (Turn off TV, Radio, etc)
 * Try to keep your recording duration to about 10 seconds
-* It is ideal if you ask your question in the form of "Hi, my name is _____ from _____. My question is..."
+* It is ideal if you ask your question in the form of "Hi, my name is \______\______ from \______\______. My question is..."
 * Upload the highest quality possible (we prefer HD)!  While we can work with any file, higher resolution devices will look better
 * Watch your video once complete, make sure it looks and sounds good to you
 
