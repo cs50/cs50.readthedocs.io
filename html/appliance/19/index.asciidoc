@@ -5,7 +5,7 @@
 
 *This HOWTO is for version 19 of the CS50 Appliance.*
 
-* *If following CS50x 2014, you should use this version of the appliance.*
+* *If taking CS50x, CSCI E-50, or CS50's certificate option, you should use this version of the appliance.*
 * *If following Fall 2013 of CS50 (or CSCI E-50), you should use this version of the appliance.*
 * *If following Fall 2012 of CS50 (or CSCI E-52), you should use link:../17[version 17] of the appliance.*
 * *If following Summer 2012 of CSCI S-75, you should also use this
