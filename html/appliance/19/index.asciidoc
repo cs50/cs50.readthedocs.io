@@ -137,7 +137,7 @@ interfaces] do exist. We've installed
 http://en.wikipedia.org/wiki/Xfce[Xfce], one of the most popular, for
 you. However, we installed as few programs as possible to keep the
 appliance small. You're welcome to install additional programs via *Menu
-> Administration > Add/Remove Applications*.
+> Administration > Software*.
 
 
 ==== How to Change Name
