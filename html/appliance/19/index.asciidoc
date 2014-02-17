@@ -62,14 +62,26 @@ See link:#instructions[instructions] for much more detail.
 http://w.x.y.z/phpMyAdmin/ from your own computer
 |====================================================
 
-'''In version 19 of the appliance, the superuser account (i.e., root) is
+*In version 19 of the appliance, the superuser account (i.e., root) is
 locked (i.e., disabled). But John Harvard has "sudo" (i.e.,
-administrative) privileges.
+administrative) privileges.*
 
+[[notice]]
+== Notice
+
+For research purposes, the CS50 Appliance is designed to log:
+
+* command-line commands (e.g., `ls`, `make hello`, etc.);
+* the output of programs like `clang`, `check50`, `gdb`, `style50`, etc.;
+* `gdb` commands; and
+* source code that you create and/or save inside of the appliance. Those logs are then periodically uploaded to CS50's servers.
+
+Among CS50's overarching research goals are to understand better how students code, how students respond to error messages, and how students progress from non-working to working code. None of the data that's logged is used to compute grades.
+
+The CS50 Appliance does not (and cannot) log any activities or files on your own Mac or PC (outside of the CS50 Appliance).  It can only log activity *inside* of the CS50 Appliance (i.e., inside of its own window). Even so, you may disable the uploading of logs to CS50's servers if you would like to opt out of this research.  Simply run `no50` in a terminal window to opt out.
 
 [[instructions]]
 == Instructions
-
 
 [[how_to_install_appliance]]
 === How to Install Appliance
