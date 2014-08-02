@@ -19,7 +19,7 @@
         $process = proc_open(
             join(" ", [
                 "asciidoctor",
-                "--attribute", "coderay-css=class,coderay-linenums-mode=inline,imagesdir=.,linkcss,source-highlighter=coderay",
+                "--attribute", "coderay-css=class,coderay-linenums-mode=inline,idprefix=,imagesdir=.,linkcss,source-highlighter=coderay",
                 "--backend", "html5",
                 "-T", __DIR__ . "/../includes",
                 "-"
