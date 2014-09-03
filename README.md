@@ -5,7 +5,7 @@
 Inside appliance as `root`:
 
     sudo su -
-    gem install asciidoctor coderay sass tilt 
+    gem install asciidoctor coderay sass thread_safe tilt
     chmod 755 /usr/local/bin/*
     exit
 

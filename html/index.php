@@ -21,6 +21,7 @@
                 "asciidoctor",
                 "--attribute", "coderay-css=class,coderay-linenums-mode=inline,idprefix=,imagesdir=.,linkcss,source-highlighter=coderay",
                 "--backend", "html5",
+                "--trace",
                 "-T", __DIR__ . "/../includes",
                 "-"
             ]),
