@@ -5,7 +5,7 @@
 
 *This HOWTO is for version 19 of the CS50 Appliance.*
 
-* *If taking CS50 (or CSCI E-50) in Fall 2014, you should wait until a new version of the appliance is announced, which will be soon!*
+* *If taking CS50 (or CSCI E-50) in Fall 2014, stay tuned for a new version of the appliance in Week 1!*
 * *If taking CS50x, you should use this version of the appliance.*
 * *If following Fall 2013 of CS50 (or CSCI E-50), you should use this version of the appliance.*
 * *If following Fall 2012 of CS50 (or CSCI E-52), you should use link:../17[version 17] of the appliance.*
