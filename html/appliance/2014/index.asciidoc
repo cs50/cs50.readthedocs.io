@@ -13,7 +13,7 @@
 * *If following Spring 2012 of CS1, CS51, or CS164, you should use link:../3[version 3] of the appliance.*
 * *If following https://www.cs50.net/[Fall 2011] of CS50, you should use link:../2.3[version 2.3] of the appliance.*
 * *If following http://cs50.tv/2010/fall/[Fall 2010] of CS50, you should use link:../2.1[version 2.1] of the appliance.*
-* *If following http://cs50.tv/2009/fall/[Fall 2009] of CS50, you should use link:../1.4[version 1.4] instead.*
+* *If following http://cs50.tv/2009/fall/[Fall 2009] of CS50, you should use link:../1.4[version 1.4] of the appliance.*
 
 The CS50 Appliance is a
 http://en.wikipedia.org/wiki/Virtual_machine[virtual machine] (VM) that
@@ -61,7 +61,7 @@ http://w.x.y.z/phpmyadmin/ from your own computer
 For research purposes, the CS50 Appliance is designed to log:
 
 * command-line commands (e.g., `ls`, `make hello`, etc.);
-* the output of programs like `clang`, `check50`, `gdb`, `style50`, etc.;
+* the output of programs like `check50`, `clang`, `gdb`, `style50`, etc.;
 * `gdb` commands; and
 * source code that you create and/or save inside of the appliance. Those logs are then periodically uploaded to CS50's servers.
 
@@ -252,9 +252,6 @@ If you'd like to SSH to the appliance from your own computer (as with
 Terminal on Mac OS or with PuTTY on Windows), you can SSH from your
 computer to the appliance's IP address (which is displayed in the
 appliance's bottom-right corner).
-
-*Note that, for security's sake, you can SSH to the appliance as
-`jharvard` but not as `root`.*
 
 ////
 ==== How to Assign Appliance a Static IP Address

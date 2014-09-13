@@ -1,14 +1,12 @@
 = VMware Player
 :toc: left
 
-Here's how to install the link:..[CS50 Appliance] using
-VMware Player for link:#_installation[Windows].
-
+Here's how to install the link:..[CS50 Appliance] using VMware Player for link:#installation[Windows].
 
 == Installation
 
-. Download VMware Player for free from
-http://www.vmware.com/go/downloadplayer/.
+. Download VMware Player for Windows (or for Linux, but only if your own computer is running Linux) for free from
+http://www.vmware.com/go/downloadplayer/. 
 . Double-click the file you just downloaded (which is likely in your
 *Downloads* folder) in order launch VMware Player's installer.
 . If a window entitled *User Account Control* appears, click *Yes*.
@@ -43,4 +41,4 @@ to boot after a few seconds!
 === Binary translation is incompatible with long mode on this platform
 
 If you see this message, you might need to enable
-link:../../../virtualization/[hardware virtualization] on your computer.
+link:/virtualization/[hardware virtualization] on your computer.
