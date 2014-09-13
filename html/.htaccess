@@ -66,4 +66,4 @@ Redirect /VirtualBox /virtualbox
 Redirect /Virtualization /virtualization
 
 # redirects to latest versions of pages
-RedirectMatch /appliance/$ /appliance/19/
+RedirectMatch /appliance/$ /appliance/2014/

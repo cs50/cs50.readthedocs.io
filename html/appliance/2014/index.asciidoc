@@ -1,14 +1,15 @@
-= CS50 Appliance 19
+= CS50 Appliance 2014
 :toc: left
 
 == NOTICE
 
-*This HOWTO is for version 19 of the CS50 Appliance.*
+*This HOWTO is for version 2014 of the CS50 Appliance.*
 
-* *If taking CS50x, you should use this version of the appliance.*
-* *If following Fall 2013 of CS50 (or CSCI E-50), you should use this version of the appliance.*
+* *If taking CS50 (or CSCI E-50) in Fall 2014, you should use this version of the appliance.*
+* *If taking CS50x, you should use link:../19[version 19] of the appliance.*
+* *If following Fall 2013 of CS50 (or CSCI E-50), you should use link:../19[version 19] of the appliance.*
 * *If following Fall 2012 of CS50 (or CSCI E-52), you should use link:../17[version 17] of the appliance.*
-* *If following Summer 2012 of CSCI S-75, you should use link:../17[version 17] of the appliance.*
+* *If following Summer 2012 of CSCI S-75, you should also use link:../17[version 17] of the appliance.*
 * *If following Spring 2012 of CS1, CS51, or CS164, you should use link:../3[version 3] of the appliance.*
 * *If following https://www.cs50.net/[Fall 2011] of CS50, you should use link:../2.3[version 2.3] of the appliance.*
 * *If following http://cs50.tv/2010/fall/[Fall 2010] of CS50, you should use link:../2.1[version 2.1] of the appliance.*
@@ -20,7 +21,7 @@ lets you "take" CS50 (and other courses!), even if you're not a student
 at Harvard.
 
 It's based on
-http://en.wikipedia.org/wiki/Fedora_(operating_system)[Fedora], a
+http://en.wikipedia.org/wiki/Ubuntu_(operating_system)[Ubuntu], a
 http://en.wikipedia.org/wiki/Linux[Linux]-based
 http://en.wikipedia.org/wiki/Operating_system[operating system]. It's an
 http://en.wikipedia.org/wiki/Computer_appliance[appliance] in the sense
@@ -28,8 +29,7 @@ that we've preconfigured this VM for a specific purpose: CS50!
 
 In other words, even if you're not a student in CS50, you can still play
 along at home. The CS50 Appliance will let you compile source code from
-https://www.cs50.net/lectures/[lectures] and implement
-https://cs50.tv/#l=psets/[problem sets] without having to figure out how
+lectures and implement problem sets without having to figure out how
 to configure http://en.wikipedia.org/wiki/Clang[clang], etc. yourself.
 Moreover, the CS50 Appliance lets you run Linux inside of a window on
 your own computer, even if you're already running (some other version
@@ -37,7 +37,6 @@ of) Linux, Mac OS, Solaris, or Windows!
 
 Incidentally, the appliance is always work in progress, so please
 forgive any bugs!
-
 
 == Cheatsheet
 
@@ -49,19 +48,14 @@ See link:#instructions[instructions] for much more detail.
 |*Your Username* | jharvard
 |*Your Password* | crimson
 |*Appliance's IP Address* | a number of the form *w.x.y.z*, which can be found in the appliance's bottom-right corner
-|*Appliance's Version* | a number of the form *19-#*, which can be found in the appliance's bottom-right corner
+|*Appliance's Version* | a number of the form *2014-#*, which can be found in the appliance's bottom-right corner
 |*Your MySQL Username* | jharvard
 |*Your MySQL Password* | crimson
-|*phpMyAdmin* | http://localhost/phpMyAdmin/ from within the appliance
+|*phpMyAdmin* | http://localhost/phpmyadmin/ from within the appliance
 
-http://w.x.y.z/phpMyAdmin/ from your own computer
+http://w.x.y.z/phpmyadmin/ from your own computer
 |====================================================
 
-*In version 19 of the appliance, the superuser account (i.e., root) is
-locked (i.e., disabled). But John Harvard has "sudo" (i.e.,
-administrative) privileges.*
-
-[[notice]]
 == Notice
 
 For research purposes, the CS50 Appliance is designed to log:
@@ -73,12 +67,10 @@ For research purposes, the CS50 Appliance is designed to log:
 
 Among CS50's overarching research goals are to understand better how students code, how students respond to error messages, and how students progress from non-working to working code. None of the data that's logged is used to compute grades.
 
-The CS50 Appliance does not (and cannot) log any activities or files on your own Mac or PC (outside of the CS50 Appliance).  It can only log activity *inside* of the CS50 Appliance (i.e., inside of its own window). Even so, you may disable the uploading of logs to CS50's servers if you would like to opt out of this research.  Simply run `no50` in a terminal window to opt out.
+The CS50 Appliance does not (and cannot) log any activities or files on your own Mac or PC (outside of the CS50 Appliance).  It can only log activity *inside* of the CS50 Appliance (i.e., inside of its own window). Even so, you may disable the uploading of logs to CS50's servers if you would like to opt out of this research. Simply run `no50` in a terminal window to opt out.
 
-[[instructions]]
 == Instructions
 
-[[how_to_install_appliance]]
 === How to Install Appliance
 
 In order to install the CS50 Appliance, you first need to install a
@@ -96,15 +88,13 @@ Alternatively (and particularly if you run into trouble with VMware Fusion or VM
 Once installed, it's not uncommon for the appliance to take a minute or
 so to boot. But if, once at John Harvard's desktop, the appliance still
 feels unbearably slow, you might need to enable
-link:../../Hardware_Virtualization[hardware virtualization] on your computer
+link:/virtualization[hardware virtualization] on your computer
 if it's a PC running Windows or Linux. (Hardware virtualization should
 be enabled by default on any Intel-based Mac manufactured in the past
 few years.) Even with hardware virtualization enabled, though, virtual
 machines might still feel slow if your computer is a few years old, has
 a CPU that's only 1GHz or so, or has only 1GB or so of RAM.
 
-
-[[how_to_update_appliance]]
 === How to Update Appliance
 
 To determine which version of the appliance you have, simply 
@@ -112,23 +102,27 @@ look in the appliance's bottom-right corner, where
 you should see *19-#* in boldface, where *#* is a number. Alternatively, you can
 link:#how_to_open_a_terminal[open a terminal] and execute
 
-`appliance50 -v`
+[source,bash]
+----
+appliance50 -v
+----
 
-which should report `19-#` as well.
+which should report `2014-#` as well.
 
 To ensure you have the latest version of the appliance, you can update yourse by 
 link:#how_to_open_a_terminal[opening a terminal] and executing:
 
-`update50`
+[source,bash]
+----
+update50
+----
 
 An update may take several minutes.
 
-*Note that you cannot update from version 1.4, 2.1, 2.3, 3, 17a, or 17 of
-the appliance to version 19. You must instead download 19, per the
+*Note that you cannot update from version 1.4, 2.1, 2.3, 3, 17a, 17, or 19 of
+the appliance to version 2014. You must instead download 2014, per the
 link:#how_to_install_appliance[instructions] above.*
 
-
-[[how_to_use_appliance]]
 === How to Use Appliance
 
 The first thing you should see when the appliance boots up is John
@@ -143,10 +137,9 @@ http://en.wikipedia.org/wiki/Graphical_user_interface[graphical user
 interfaces] do exist. We've installed
 http://en.wikipedia.org/wiki/Xfce[Xfce], one of the most popular, for
 you. However, we installed as few programs as possible to keep the
-appliance small. You're welcome to install additional programs via *Menu
-> Administration > Software*.
+appliance small. You're welcome to install additional programs via `apt-get`.
 
-
+////
 ==== How to Change Name
 
 As much as you might not like being called John, *do not try to change
@@ -156,10 +149,12 @@ With that said, if you'd _really_ like to be yourself (or someone else
 altogether), you're welcome to create a new account.
 link:#how_to_open_a_terminal[Open a terminal] and execute
 
-[source]
+[source,bash]
+----
 sudo adduser --comment "Jane Harvard" --gid students --groups wheel janeh
 echo crimson | sudo passwd --stdin janeh
 echo -e "crimson\ncrimson" | sudo smbpasswd -a -s janeh
+----
 
 where `Jane Harvard` is your desired name, `crimson` is your desired
 password, and `janeh` is your desired username. Be sure not to overlook
@@ -172,19 +167,19 @@ under your new identity (instead of John Harvard's), execute
 
 and change `jharvard` to your own username. Then hit *ctrl-x*, then *y*,
 then *Enter* to save and quit.
+////
 
-
-[[how_to_change_password]]
 ==== How to Change Password
 
 You can change your password in any of these ways:
 
-* Select *Menu > Settings > Password* and follow the on-screen prompts.
+* Select *Menu > Settings Manager > Users and Groups* and follow the on-screen prompts.
 * link:#how_to_open_a_terminal[Open a terminal] and execute: +
 +
-------
+[source,bash]
+----
 passwd
-------
+----
 
 With that said, allow us to suggest that you not change John Harvard's
 password if your own computer is already password-protected. (Life will
@@ -193,7 +188,7 @@ way that only someone with access to your computer (e.g., you) can
 access the appliance. Even though the appliance can connect to the
 Internet, the Internet cannot connect to the appliance.
 
-
+////
 ==== How to Change Language
 
 *This feature may require Internet access.*
@@ -206,8 +201,9 @@ your preferred language from the list that appears, then click *OK*. If
 prompted, click *Import key*. You may need to wait for a bit as the
 language is installed. Then link:#how_to_restart_appliance[restart the
 appliance] and log back in.
+////
 
-
+////
 ==== How to Change Keyboard Layout
 
 If you have a non-U.S. (or non-standard) keyboard, you may want (or
@@ -223,36 +219,33 @@ listed.
 7.  Click *OK*.
 8.  Ensure that your selection is now highlighted instead of *English
 (US)*, then click *Close*.
+////
 
-
+////
 ==== How to Change Time Zone
 
 If you don't live in Cambridge, Massachusetts, USA, you may want to
 change the appliance's timezone. Select *Menu > Administration > Date &
 Time*. Click the *Time Zone* tab, select the nearest city in your time
 zone, then click *OK*, leaving *System clock uses UTC* checked.
+////
 
-
-[[how_to_open_a_terminal]]
 ==== How to Open a Terminal
 
 You can open a terminal in any of these ways:
 
-* Select *Menu > Programming > Terminal* or *Menu > Accessories >
-Terminal*. You'll find yourself in your home directory (`~`).
+* Select *Menu > Accessories > Terminal Emulator*.  You'll find yourself in your home directory (`~`).
 * Click Terminal's icon (a black square) in the appliance's bottom-left
 corner. You'll find yourself in your home directory (`~`).
 * Right-click anywhere on your desktop and select *Open Terminal Here*.
 You'll find yourself in `~/Desktop/`.
-* Select *Menu > Programming > gedit* or *Menu > Accessories > gedit*.
+* Select *Menu > Accessories > gedit*.
 You'll find yourself in your home directory (`~`) in gedit's bottom
 panel.
 
 No matter the approach you take, it's in the terminal window that you'll
 be able to type commands like `cd`, `clang`, `ls`, etc.
 
-
-[[how_to_ssh_to_appliance]]
 ==== How to SSH to Appliance
 
 If you'd like to SSH to the appliance from your own computer (as with
@@ -263,22 +256,22 @@ appliance's bottom-right corner).
 *Note that, for security's sake, you can SSH to the appliance as
 `jharvard` but not as `root`.*
 
-
+////
 ==== How to Assign Appliance a Static IP Address
 
 _Coming Soon_
-
+////
 
 ==== How to Change Resolution
 
 You can change the appliance's resolution (i.e., width and height) in
 either of these ways:
 
-* Select *Menu > Settings > Display* within the appliance, select a new
+* Select *Menu > Settings Manager > Display* within the appliance, select a new
 value to the right of *Resolution*, then click *Close*.
 * Click and drag the appliance's bottom-right corner.
 
-
+////
 ==== How to Change Volume
 
 1.  Select *Menu > Sound & Video > Mixer*.
@@ -289,8 +282,9 @@ Mixer)* next to *Sound card*.
 5.  Drag the sliders upward to increase the audio's volume.
 6.  Click *Quit*.
 7.  Visit http://www.youtube.com/ in Chrome to test with a video!
+////
 
-
+////
 ==== How to Enter/Exit Fullscreen Mode
 
 To enter fullscreen mode, select *Switch to Fullscreen* from
@@ -300,7 +294,9 @@ is outside of the appliance, not inside of it.)
 To exit fullscreen mode, move your cursor to the middle of the bottom of
 your screen, at which point a menu should appear. Click the second icon
 from the right (which resembles two squares).
+////
 
+////
 ==== How to Use phpMyAdmin
 
 You can access phpMyAdmin in either of these ways:
@@ -314,8 +310,9 @@ using your own computer's browser.
 
 No matter the approach you take, log in as *jharvard* with a password of
 *crimson* if prompted.
+////
 
-
+////
 ==== How to Restore Snapshots
 
 Every 10 minutes, the appliance take "snapshots" of source code in
@@ -366,7 +363,7 @@ depend on the current time.
 To see which intervals are actually available to you, execute:
 
 `ls /.snapshots/`
-
+////
 
 ==== How to Enable Dropbox
 
@@ -374,49 +371,44 @@ To see which intervals are actually available to you, execute:
 
 To make it easier to back up files within the appliance automatically as
 well as share them with your own computer(s), you can synchronize a
-directory in John Harvard's account with
-http://www.dropbox.com/features[Dropbox]. *If taking a course, just take
-care to respect the course's policies on academic honesty.*
+directory in John Harvard's account with http://www.dropbox.com/features[Dropbox]. 
 
 Here's how to configure the appliance for Dropbox.
 
-1.  Select *Menu > Dropbox*.
-2.  You should be prompted to "download the proprietary daemon" (i.e.,
+. Select *Menu > Dropbox*.
+. You should be prompted to "download the proprietary daemon" (i.e.,
 software); click *OK*. The software should proceed to download and
 unpack.
-3.  You should then be prompted to set up Dropbox.
-* If you don't already have a Dropbox account, leave *I don't have a
-Dropbox account* checked, then click *Next*. Create your Dropbox as
-prompted.
-* If you already have an Dropbox account, check *I already have a
-Dropbox account*, then click *OK*. Log in as prompted.
-4.  If prompted to upgrade your Dropbox, simply leave *2 GB* checked
+. You should then be prompted to set up Dropbox.
++
+--
+* If you don't already have a Dropbox account, leave *I don't have a Dropbox account* checked, then click *Next*. Create your Dropbox as prompted.
+* If you already have an Dropbox account, check *I already have a Dropbox account*, then click *OK*. Log in as prompted.
+--
++
+. If prompted to upgrade your Dropbox, simply leave *2 GB* checked
 (which is free) then click *Next*, unless you want to upgrade to a paid
 account.
-5.  If prompted to *Choose setup type*, leave *Typical* checked, then
+. If prompted to *Choose setup type*, leave *Typical* checked, then
 click *Install*. If prompted to "merge", click *Merge*.
-6.  If prompted to take a 5-step tour, click *Skip Tour*; its
+. If prompted to take a 5-step tour, click *Skip Tour*; its
 screenshots won't match what you'll see in the appliance.
-7.  When informed *That's it!*, uncheck *Open my Dropbox folder now*,
+. When informed *That's it!*, uncheck *Open my Dropbox folder now*,
 then click *Finish*. A Dropbox icon should then appear in the
 appliance's bottom-right corner.
 
 *Only those files and folders that you save in `~/Dropbox/` will be
 synchronized with your Dropbox account.*
 
+===== How to Prevent Dropbox from Synching Personal Files into the Appliance
 
-How to Prevent Dropbox from Synching Personal Files _into_ the Appliance
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-1.  Ctrl-click on the Dropbox icon in the appliance's bottom-right
+. Ctrl-click on the Dropbox icon in the appliance's bottom-right
 corner and select *Preferences...*.
-2.  Click *Advanced*.
-3.  Click *Selective Sync...*.
-4.  Uncheck the folders that you don't want synched into the appliance.
-5.  Click *Update*.
+. Click *Advanced*.
+. Click *Selective Sync...*.
+. Uncheck the folders that you don't want synched into the appliance.
+. Click *Update*.
 
-
-[[how_transfer_files_between_appliance_and_your_computer]]
 ==== How to Transfer Files between Appliance and Your Computer
 
 If you'd like to
@@ -433,117 +425,116 @@ otherwise known as http://en.wikipedia.org/wiki/CIFS[CIFS]) in a window
 on your own desktop, to and from which you can drag and drop files.
 Here's how, whether you run Linux, Mac OS, or Windows.
 
+===== Windows
 
-Windows
-+++++++
-
-1.  Open any folder on your hard drive.
-2.  Click the address bar atop the folder's window and input
+. Open any folder on your hard drive.
+. Click the address bar atop the folder's window and input
 *\\w.x.y.z\jharvard* (where *w.x.y.z* is the appliance's IP address,
 which can be found in the appliance's bottom-right corner), then click
 *Enter*.
-3.  If prompted for your name and password:
-
-a.  Input *jharvard* for *User name*.
-b.  Input *crimson* for *Password*.
-c.  Check *Remember my credentials* if you'd like.
-d.  Click *Connect*.
+. If prompted for your name and password:
++
+--
+. Input *jharvard* for *User name*.
+. Input *crimson* for *Password*.
+. Check *Remember my credentials* if you'd like.
+. Click *Connect*.
+--
 
 John Harvard's home directory should then open in a new window.
 
+===== Mac OS
 
-Mac OS
-++++++
-
-1.  Select *Connect to Server...* from the Finder's *Go* menu.
-2.  Under *Server Address:*, input *smb://w.x.y.z* (where *w.x.y.z* is
+. Select *Connect to Server...* from the Finder's *Go* menu.
+. Under *Server Address:*, input *smb://w.x.y.z* (where *w.x.y.z* is
 the appliance's IP address, which can be found in the appliance's
 bottom-right corner). (Click the *+* icon if you'd like to add the
 appliance to your *Favorite Servers*.) Then click *Connect*.
-3.  If prompted for your name and password:
-a.  Select *Registered User*.
-b.  Input *jharvard* for *Name*.
-c.  Input *crimson* for *Password*.
-d.  Click *Connect*.
+. If prompted for your name and password:
++
+--
+. Select *Registered User*.
+. Input *jharvard* for *Name*.
+. Input *crimson* for *Password*.
+. Click *Connect*.
+--
 
 John Harvard's home directory should then open in a new window.
 
+////
+===== Linux
 
-Linux
-+++++
+====== GNOME
 
-
-GNOME
-
-1.  Select *Connect to Server...* from the *Places* menu.
-2.  Input *w.x.y.z* for *Server* (where *w.x.y.z* is the appliance's IP
+. Select *Connect to Server...* from the *Places* menu.
+. Input *w.x.y.z* for *Server* (where *w.x.y.z* is the appliance's IP
 address, which can be found in the appliance's bottom-right corner).
-3.  Select *Windows share* for *Type*.
-4.  Input *jharvard* for *Share*.
-5.  Input */* for *Folder*.
-6.  Input *CS50* for *Domain name*.
-7.  Input *jharvard* for *User name*.
-8.  Input *crimson* for *Password*.
-9.  Check *Remember this password* if you'd like.
-10. Click *Connect*.
+. Select *Windows share* for *Type*.
+. Input *jharvard* for *Share*.
+. Input */* for *Folder*.
+. Input *CS50* for *Domain name*.
+. Input *jharvard* for *User name*.
+. Input *crimson* for *Password*.
+. Check *Remember this password* if you'd like.
+. Click *Connect*.
 
 John Harvard's home directory should then open in a new window.
 
+====== KDE
 
-KDE
-
-1.  Open Dolphin (as via *Computer > Network*).
-2.  Select *Network*.
-3.  Click *Add Network Folder*.
-4.  Select *Microsoft® Windows® network drive*, then click *Next*.
-5.  Input *appliance* for *Name*.
-6.  Input *w.x.y.z* for *Server* (where *w.x.y.z* is the appliance's IP
+. Open Dolphin (as via *Computer > Network*).
+. Select *Network*.
+. Click *Add Network Folder*.
+. Select *Microsoft® Windows® network drive*, then click *Next*.
+. Input *appliance* for *Name*.
+. Input *w.x.y.z* for *Server* (where *w.x.y.z* is the appliance's IP
 address, which can be found in the appliance's bottom-right corner).
-7.  Input *jharvard* for *Folder*.
-8.  Check *Create an icon for this remote folder* if you'd like.
-9.  Click *Finish*.
-10. Input *jharvard* for *Username*.
-11. Input *crimson* for *Password*.
-12. Check *Remember password* if you'd like.
-13. Click *OK*.
+. Input *jharvard* for *Folder*.
+. Check *Create an icon for this remote folder* if you'd like.
+. Click *Finish*.
+. Input *jharvard* for *Username*.
+. Input *crimson* for *Password*.
+. Check *Remember password* if you'd like.
+. Click *OK*.
 
 John Harvard's home directory should then open in a new window.
 
+====== Xfce
 
-Xfce
-
-1.  Install `gvfs-smb` as `root` (as via `sudo`) if not installed
+. Install `gvfs-smb` as `root` (as via `sudo`) if not installed
 already, as with
 +
------------------------
+[source,bash]
+----
 yum -y install gvfs-smb
------------------------
+----
 +
 if running CentOS, Fedora, or RedHat or with
 +
------------------------------
+[source,bash]
+----
 apt-get install gvfs-backends
------------------------------
+----
 +
 if running Debian or Ubuntu.
-2.  Launch Thunar (as via *Applications Menu > System > Thunar File
+. Launch Thunar (as via *Applications Menu > System > Thunar File
 Manager*).
-3.  Select *Open Location...* from the *Go* menu.
-4.  Input *smb://w.x.y.z/jharvard/* (where *w.x.y.z* is the appliance's
+. Select *Open Location...* from the *Go* menu.
+. Input *smb://w.x.y.z/jharvard/* (where *w.x.y.z* is the appliance's
 IP address, which can be found in the appliance's bottom-right corner)
 for *Location* then click *Open*.
-5.  Input *jharvard* for *Username*.
-6.  Input *CS50* for *Domain*.
-7.  Input *crimson* for *Password*.
-8.  Check *Remember forever* if you'd like.
-9.  Click *Connect*.
+. Input *jharvard* for *Username*.
+. Input *CS50* for *Domain*.
+. Input *crimson* for *Password*.
+. Check *Remember forever* if you'd like.
+. Click *Connect*.
+////
 
-
+////
 ==== How to Access Appliance from Another Computer
 
 *This feature is not supported on Harvard's campus on the "Harvard
-University" SSID.* It does work on the "CS50" SSID in Annenberg and
-Sanders Theatre, though.
+University" SSID.* 
 
 By default, you can access the appliance from your own computer via
 *w.x.y.z* (where *w.x.y.z* is the appliance's IP address, which can be
@@ -624,24 +615,23 @@ your LAN without your home router even knowing, select *Menu >
 Administration > Network*, highlight *eth2* in the window that appears,
 click *Edit*, select *Statically set IP addresses*, and configure the
 interface as you see fit.
+////
 
 
 ==== How to Take a Screenshot
 
 It's sometimes helpful to take a screenshot of the appliance so that you
-can remember or share something you see on your screen. *If taking a
-course, just take care to respect the course's policies on academic
-honesty.*
+can remember or share something you see on your screen.
 
 To take a screenshot inside of the appliance:
 
-1.  Select *Menu > Accessories > Screenshot*.
-2.  Check a *Region to capture*.
-3.  Leave *Capture the mouse pointer* checked unless you'd like to hide
+. Select *Menu > Accessories > Screenshot*.
+. Check a *Region to capture*.
+. Leave *Capture the mouse pointer* checked unless you'd like to hide
 it.
-4.  Leave *Delay before capturing* at *1*, unless you need more time.
-5.  Click *OK*.
-6.  You should then be prompted to decide on an *Action*. Leave *Save*
+. Leave *Delay before capturing* at *1*, unless you need more time.
+. Click *OK*.
+. You should then be prompted to decide on an *Action*. Leave *Save*
 checked and then click *OK* if you'd like to save the screenshot as a
 file; decide on a destination as prompted. You can then share that
 screenshot with someone if necessary, as by opening Gmail in Firefox and
@@ -649,7 +639,6 @@ sending it as an attachment.
 
 You can also link:#_how_to_share_control_of_your_screen[share control of
 your screen] if you need someone else to see more than a screenshot.
-
 
 ==== How to Share Control of Your Screen
 
@@ -659,26 +648,25 @@ So that you can help (and be helped by!) fellow learners on the
 Internet, the appliance comes with
 http://www.teamviewer.com/[TeamViewer], which lets you share (control
 of) your screen with someone else (a "partner") on the Internet (and
-vice versa). *If taking a course, just take care to respect the course's
-policies on academic honesty.*
+vice versa).
 
 To share your screen with some else:
 
-1.  Select *Menu > TeamViewer*. (Click *Accept License Agreement* if
+. Select *Menu > TeamViewer*. (Click *Accept* if
 prompted.) A window should appear.
-2.  Tell your partner *Your ID* and *Password* that you see. Once your
+. Tell your partner *Your ID* and *Password* that you see. Once your
 partner inputs those values, your screen should be shared. Though if
 your own computer has a firewall, you might first be prompted to "allow
 incoming connections" or the like.
 
 To see someone else's screen:
 
-1.  Ask your partner for a *Partner ID* and *Password*.
-2.  Select *Menu > TeamViewer*. (Click *Accept License Agreement* if
+. Ask your partner for a *Partner ID* and *Password*.
+. Select *Menu > TeamViewer*. (Click *Accept License Agreement* if
 prompted.) A window should appear.
-3.  Input the *Partner ID* into that window, then click *Connect to
+. Input the *Partner ID* into that window, then click *Connect to
 partner*.
-4.  When prompted, input the *Password*, at which point you should see
+. When prompted, input the *Password*, at which point you should see
 your partner's screen.
 
 If you would like to connect to someone else's appliance from your own
@@ -686,7 +674,7 @@ computer (rather than from your own appliance) or from a mobile device,
 you can download TeamViewer for free for Android, iOS, Linux, Mac OS, or
 Windows from http://www.teamviewer.com/en/download/.
 
-
+////
 ==== How to Disable Automatic Login
 
 By default, the appliance logs you in as John Harvard. To disable
@@ -697,16 +685,17 @@ execute:
 
 Then link:#_how_to_restart_appliance[restart the appliance]. You should
 now see a login prompt instead of John Harvard's desktop.
+////
 
-
+////
 ==== How to Log Out of Appliance
 
 To log out of the appliance, click
 image:Exit.png[Exit.png,title="image"] in the appliance's bottom-right
 corner, then click *Log Out*.
+////
 
-
-[[how_to_restart_appliance]]
+////
 ==== How to Restart Appliance
 
 You can restart the appliance in either of these ways:
@@ -719,8 +708,9 @@ inputting your password if prompted:
 ------
 reboot
 ------
+////
 
-
+////
 ==== How to Shut Down Appliance
 
 You can shut down the appliance in either of these ways:
@@ -733,8 +723,9 @@ inputting your password if prompted:
 -------------
 sudo shutdown
 -------------
+////
 
-
+////
 ==== How to Configure Appliance for a Proxy Server
 
 If your own computer sits behind an HTTP proxy server, you might need to
@@ -762,20 +753,22 @@ sudo chmod 644 /etc/profile.d/proxy.sh
 +
 in the terminal.
 5.  link:#how_to_restart_appliance[Restart the appliance].
+////
 
-
+////
 === How to Run Programs from Lectures
 
 See link:../../Fall_2012[Fall 2012's HOWTO].
+////
 
-
+////
 === How to Do Problem Sets
 
 See link:../../Fall_2012[Fall 2012's HOWTO].
+////
 
-
-Accessibility
--------------
+////
+== Accessibility
 
 The CS50 Appliance comes pre-configured with
 http://live.gnome.org/Orca[Orca], a screen reader. To enable Orca,
@@ -805,8 +798,9 @@ John Harvard's home directory] on your own computer.
 
 *If you have suggestions on how to improve the appliance's
 accessibility, please let sysadmins@cs50.net know!*
+////
 
-
+////
 Forget a password?
 ------------------
 
@@ -839,8 +833,10 @@ exit
 to restart the appliance.
 
 You should then be able to log in as John Harvard again.
+////
 
 
+////
 === I forgot John Harvard's MySQL password
 
 John Harvard's password for MySQL is *crimson* by default. But if you
@@ -852,7 +848,7 @@ and executing the below:
 
 That command will restore the appliance to "factory defaults." It will
 not delete any code that you've written.
-
+////
 
 [[Changelog]]
 Changelog
@@ -864,14 +860,14 @@ Changelog
 * 2.2
 * link:../2.3#Changelog[2.3]
 * link:../3#Changelog[3]
-* 19-0
-** Upgraded to Fedora 19.
+* link:../19#Changelog[19]
+* 2014-0
+** Transitioned to Ubuntu
 
 Known Issues
 ------------
 
 _None at this time._
-
 
 Future Work
 -----------
@@ -880,9 +876,8 @@ Below are features that may be included in some future version of the
 appliance.
 
 * Add Selenium.
-* Add dnsmasq and resolve *.localdomain to 127.0.0.1.
+* Add `dnsmasq` and resolve *.localdomain to 127.0.0.1.
 * Add support for static IPs.
-
 
 Acknowledgements
 ----------------
@@ -892,11 +887,13 @@ including, but not limited to:
 
 * Aaron Oehlschlaeger
 * Amir
+* Cheng Gong
 * Chris Gerber
 * Dan Armendariz
 * Darrin Ragsdale
 * Dotty
 * Federico Lerner
+* Gabriel Guimaraes
 * Glenn Holloway
 * James Lankford
 * Kartikeya Srivastava
