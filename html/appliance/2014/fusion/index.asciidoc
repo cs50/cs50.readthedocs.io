@@ -4,8 +4,15 @@ Here's how to install the link:..[CS50 Appliance] using VMware Fusion for link:#
 
 == Installation
 
-. link:https://docs.google.com/spreadsheet/viewform?hl=en_US&formkey=dHoyMG5LNTgxeGFhakNaaE9CdTlkbWc6MQ[Apply for the VMware Academic Program] (VMAP) in order to obtain a username and password with which you'll eventually be able to download a license key for VMware Fusion 7 from link:https://e5.onthehub.com/WebStore/Security/Signin.aspx?ws=340f7ddc-c740-de11-b696-0030485a8df0&vsro=8&rurl=%2fWebStore%2fProductsByMajorVersionList.aspx%3fws%3d340f7ddc-c740-de11-b696-0030485a8df0%26vsro%3d8&JSEnabled=1[OnTheHub]. You won't need that license key just yet, since VMware Fusion 7 offers a 30-day trial that you can use in the meantime.
-. link:http://www.vmware.com/go/try-fusion-en[Download a 30-day trial of VMware Fusion 7].
+. link:https://docs.google.com/spreadsheet/viewform?hl=en_US&formkey=dHoyMG5LNTgxeGFhakNaaE9CdTlkbWc6MQ[Apply for the VMware Academic Program] (VMAP) in order to obtain a username and password with which you'll eventually be able to download a license key for VMware Fusion from link:https://e5.onthehub.com/WebStore/Security/Signin.aspx?ws=340f7ddc-c740-de11-b696-0030485a8df0&vsro=8&rurl=%2fWebStore%2fProductsByMajorVersionList.aspx%3fws%3d340f7ddc-c740-de11-b696-0030485a8df0%26vsro%3d8&JSEnabled=1[OnTheHub]. Odds are you won't need that license key just yet, since VMware Fusion offers a 30-day trial that you can use in the meantime.
+. In your Mac's top-left corner, select *&#63743; > About This Mac* to determine determine which version of Mac OS you have.
++
+--
+* If running Mac OS 10.8 or later, link:http://www.vmware.com/go/try-fusion-en[download a 30-day trial of VMware Fusion 7].
+* If running Mac OS 10.7, wait until you receive a username and password for VMAP so that you can download VMware Fusion 6 from link:https://e5.onthehub.com/WebStore/Security/Signin.aspx?ws=340f7ddc-c740-de11-b696-0030485a8df0&vsro=8&rurl=%2fWebStore%2fProductsByMajorVersionList.aspx%3fws%3d340f7ddc-c740-de11-b696-0030485a8df0%26vsro%3d8&JSEnabled=1[OnTheHub]. If pressed for time, email sysadmins@cs50.harvard.edu to inquire as to the status of your username and password.
+* If running Mac OS 10.6, wait until you receive a username and password for VMAP so that you can download VMware Fusion 5 from link:https://e5.onthehub.com/WebStore/Security/Signin.aspx?ws=340f7ddc-c740-de11-b696-0030485a8df0&vsro=8&rurl=%2fWebStore%2fProductsByMajorVersionList.aspx%3fws%3d340f7ddc-c740-de11-b696-0030485a8df0%26vsro%3d8&JSEnabled=1[OnTheHub]. If pressed for time, email sysadmins@cs50.harvard.edu to inquire as to the status of your username and password.
+--
++
 . Double-click the file you just downloaded (which is likely in your *Downloads* folder) in order to "mount" VMware Fusion's icon on your desktop.
 . A window should open. Double-click the *VMware Fusion* (or *VMware Fusion.app*) icon in that window, click *Open* if prompted, and type your password if prompted.
 . When prompted for a license key, select *I want to try VMware Fusion 7 for 30 days* (unless you already have a VMAP account, in which case you can paste your own license key), and then click *Continue*.
