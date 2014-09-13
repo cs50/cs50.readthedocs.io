@@ -9,8 +9,8 @@ Here's how to install the link:..[CS50 Appliance] using VMware Fusion for link:#
 +
 --
 * If running Mac OS 10.8 or later, link:http://www.vmware.com/go/try-fusion-en[download VMware Fusion 7].
-* If running Mac OS 10.7, link:https://my.vmware.com/web/vmware/details?downloadGroup=FUS-604&productId=361&rPId=6092[download VMware Fusion 6]. (Click *Download Now* to the right of *VMware Fusion 6 Only*.)
-* If running Mac OS 10.6, link:https://my.vmware.com/web/vmware/details?downloadGroup=FUS-505&productId=294&rPId=6208[download VMware Fusion 5]. (Click *Download Now* to the right of *Download including only VMware Fusion 5.0.5 software*.)
+* If running Mac OS 10.7, link:https://my.vmware.com/web/vmware/details?downloadGroup=FUS-604&productId=361&rPId=6092[download VMware Fusion 6]. (Click *Download Now* to the right of *VMware Fusion 6 Only*. If prompted to log in, select the *Register* tab and register for a vmware.com account, which will be separate from your VMAP account.)
+* If running Mac OS 10.6, link:https://my.vmware.com/web/vmware/details?downloadGroup=FUS-505&productId=294&rPId=6208[download VMware Fusion 5]. (Click *Download Now* to the right of *Download including only VMware Fusion 5.0.5 software*. If prompted to log in, select the *Register* tab and register for a vmware.com account, which will be separate from your VMAP account.)
 --
 +
 . Double-click the file you just downloaded (which is likely in your *Downloads* folder) in order to "mount" VMware Fusion's icon on your desktop.
