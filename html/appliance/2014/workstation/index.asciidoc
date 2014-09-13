@@ -8,76 +8,42 @@ Here's how to install the link:..[CS50 Appliance] using VMware Workstation for l
 
 === Installation
 
-. Download VMware Workstation as follows:
-* If you're a student at Harvard College or Harvard Extension School,
-https://docs.google.com/spreadsheet/viewform?hl=en_US&formkey=dHoyMG5LNTgxeGFhakNaaE9CdTlkbWc6MQ[apply
-for the VMware Academic Program] (VMAP) in order to obtain a username
-and password with which you can download VMware Workstation for free
-from http://vmap.cs50.net/, along with a serial number.
-* If you're not a student at Harvard College or Harvard Extension School, you can download a 30-day trial of
-VMware Workstation from http://www.vmware.com/products/workstation/.
-After 30 days, you'll need to http://www.vmware.com/a/buylink/9[purchase
-a license].
-. Double-click the file you just downloaded (which is likely in your
-*Downloads* folder) in order launch VMware Workstation's installer.
-. If a window entitled *User Account Control* appears, click *Yes*.
+. link:https://docs.google.com/spreadsheet/viewform?hl=en_US&formkey=dHoyMG5LNTgxeGFhakNaaE9CdTlkbWc6MQ[Apply for the VMware Academic Program] (VMAP) in order to obtain a username and password with which you'll eventually be able to download a license key for VMware Workstation 10 from link:https://e5.onthehub.com/WebStore/Security/Signin.aspx?ws=340f7ddc-c740-de11-b696-0030485a8df0&vsro=8&rurl=%2fWebStore%2fProductsByMajorVersionList.aspx%3fws%3d340f7ddc-c740-de11-b696-0030485a8df0%26vsro%3d8&JSEnabled=1[OnTheHub]. You won't need that license key just yet, since VMware Workstation 10 offers a 30-day trial that you can use in the meantime.
+. link:http://www.vmware.com/go/tryworkstation-win[Download a 30-day trial of VMware Workstation].
+. Double-click the file you just downloaded (which is likely in your *Downloads* folder) in order launch VMware Workstation's installer.
+. If prompted to allow the program to make changes to your computer, input your password, and then click *Yes*.
 . A window entitled *VMware Workstation Setup* should appear. Click
-*Next*. _If you have already installed VMware Player (another product)
-on your computer before, the Setup Wizard will ask that you uninstall
-VMware Player before installing Workstation. To do so, click
-*Uninstall*. When this process finishes, a restart will be required.
-Once the restart finishes, log into your Desktop and wait. The VMware
-Software Installer should automatically open a window entitled *User
-Account Control*, at which point you should click *Yes*._
-. When prompted to select a *Setup Type*, click *Typical*, then click
 *Next*.
-. When prompted about *Software Updates*, leave *Check for product
-updates on startup* checked and click *Next*.
-. When prompted about the *User Experience Improvement Program*,
-decide whether to check or uncheck the box, then click *Next*.
-. When prompted about *Shortcuts*, click Next. (Uncheck *Desktop*
-and/or *Start Menu Programs folder* if you'd like.)
-. When prompted to *Perform the Requested Operations*, click
-*Continue*.
-. When the installation completes, you will see *Enter License Key*.
-At this point in the process, you will want to enter the license key you
-were given on the page from which you downloaded VMware Workstation.
-Recall that it's an alphanumeric string of the form
-#####-#####-#####-#####-#####, but you won't need to type the hyphens,
-as they'll be added automatically for you. Should you ever lose the key,
-you can always return to VMware's site to retrieve it. Once you've
-inputted the key, click *Enter >*.
-. Once you see *Setup Wizard Complete*, click *Restart Now* if
-prompted, else *Finish*.
-. Download the Appliance's OVA file at
-http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vmware.ova
-(http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vmware.ova?torrent[torrent]).
-That OVA file is over 1GB in size, so it might take a while to download.
-. Drag that cs50-appliance-19 file somewhere safe, where you won't accidentally delete it. Do not leave it in your Downloads folder.
+. When prompted with a license agreement, select *I accept the terms in the license agreement*, then click *Next*.
+. When prompted to select a *Setup Type*, click *Typical*.
+. When prompted for a *Destination Folder*, click *Next*.
+. When prompted about *Software Updates*, leave *Check for product updates on startup* checked, and then click *Next*.
+. When prompted about the *User Experience Improvement Program*, decide whether to check or uncheck the box, then click *Next*.
+. When prompted about *Shortcuts*, decide whether to check or uncheck the boxes, then click Next.
+. When prompted to *Perform the Requested Operations*, click *Continue*.
+. Once you see *Enter License Key*, click *Skip* (unless you already have a VMAP account, in which case you can paste your own license key), then click *Finish*.
+. Download the CS50 Appliance itself at http://mirror.cs50.net/appliance50/2014/releases/0/appliance50-2014-vmware.ova (http://mirror.cs50.net/appliance50/2014/releases/0/appliance50-2014-vmware.ova?torrent[torrent]). That file is nearly 2GB in size, so it might take a while to download.
 . Launch VMware Workstation, as by single- or double-clicking its
-icon, wherever it was installed. The first time you open the program,
-you will be asked to accept the terms to the license agreement. Do so by
-selecting the appropriate radio button and click *Ok*.
-. If presented with a *Thank you for evaluating VMware Workstation*
-dialog, simply press *Close* at bottom-right.
-. If prompted with *Software Updates*, click *Download and Install*.
-Else select *Help > Software Updates*, then click *Check for Updates*.
-Update and relaunch VMware Workstation as needed.
-. Select *Preferences > Display* and check the box labeled *Autofit
-guest*, then click *OK*.
-. Select *File > Open a Virtual Machine...*. Navigate your way to
-that_' appliance50-19_' file (wherever you moved it for safe-keeping),
-highlight the *appliance50-19.ova* file within, and click *Open*. Then
-click VMware Workstation's ▶ button to start up the appliance.
+icon, wherever it was installed. If prompted for a license key, select *I want to try VMware Workstation 10 for 30 days* and type your email address (unless you already have a VMAP account, in which case you can paste your own license key), then click *Continue*.
+. If prompted to allow the program to make changes to your computer, input your password, and then click *Yes*.
+. Click *Finish*.
+. When prompted for activation, click *Close*.
+. Select *File > Open*, navigate your way to *appliance50-2014-vmware.ova* (which is likely in your *Downloads* folder), then click *Open*.
+. When prompted for a name and local storage path, click *Import* (after changing the defaults if you'd prefer).
+. If informed that the import failed because the file "did not pass OVF specification conformance or virtual hardware compliance checks," not to worry; click *Retry*, and the file should import.
+. Click *&#9654; Power on this virtual machine*. If prompted about removable devices, click *OK*.
 
 === Troubleshooting
 
 ==== Binary translation is incompatible with long mode on this platform
 
 If you see this message, you might need to enable
-link:../../../../virtualization[hardware virtualization] on your computer.
+link:/virtualization[hardware virtualization] on your computer.
 
-[[linux]]
 == Linux
 
-_Coming Soon_
+. link:https://docs.google.com/spreadsheet/viewform?hl=en_US&formkey=dHoyMG5LNTgxeGFhakNaaE9CdTlkbWc6MQ[Apply for the VMware Academic Program] (VMAP) in order to obtain a username and password with which you'll eventually be able to download a license key for VMware Workstation 10 from link:https://e5.onthehub.com/WebStore/Security/Signin.aspx?ws=340f7ddc-c740-de11-b696-0030485a8df0&vsro=8&rurl=%2fWebStore%2fProductsByMajorVersionList.aspx%3fws%3d340f7ddc-c740-de11-b696-0030485a8df0%26vsro%3d8&JSEnabled=1[OnTheHub]. You won't need that license key just yet, since VMware Workstation 10 offers a 30-day trial that you can use in the meantime.
+. link:http://www.vmware.com/products/workstation/workstation-evaluation[Download a 30-day trial of VMware Workstation].
+. Install VMware Workstation.
+. Download the CS50 Appliance from http://mirror.cs50.net/appliance50/2014/releases/0/appliance50-2014-vmware.ova (http://mirror.cs50.net/appliance50/2014/releases/0/appliance50-2014-vmware.ova?torrent[torrent]).
+. Import the CS50 Appliance into VMware Workstation.
