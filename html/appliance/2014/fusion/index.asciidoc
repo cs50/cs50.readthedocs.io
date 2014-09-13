@@ -8,9 +8,9 @@ Here's how to install the link:..[CS50 Appliance] using VMware Fusion for link:#
 . In your Mac's top-left corner, select *&#63743; > About This Mac* to determine determine which version of Mac OS you have.
 +
 --
-* If running Mac OS 10.8 or later, link:http://www.vmware.com/go/try-fusion-en[download a 30-day trial of VMware Fusion 7].
-* If running Mac OS 10.7, wait until you receive a username and password for VMAP so that you can download VMware Fusion 6 from link:https://e5.onthehub.com/WebStore/Security/Signin.aspx?ws=340f7ddc-c740-de11-b696-0030485a8df0&vsro=8&rurl=%2fWebStore%2fProductsByMajorVersionList.aspx%3fws%3d340f7ddc-c740-de11-b696-0030485a8df0%26vsro%3d8&JSEnabled=1[OnTheHub]. If pressed for time, email sysadmins@cs50.harvard.edu to inquire as to the status of your username and password.
-* If running Mac OS 10.6, wait until you receive a username and password for VMAP so that you can download VMware Fusion 5 from link:https://e5.onthehub.com/WebStore/Security/Signin.aspx?ws=340f7ddc-c740-de11-b696-0030485a8df0&vsro=8&rurl=%2fWebStore%2fProductsByMajorVersionList.aspx%3fws%3d340f7ddc-c740-de11-b696-0030485a8df0%26vsro%3d8&JSEnabled=1[OnTheHub]. If pressed for time, email sysadmins@cs50.harvard.edu to inquire as to the status of your username and password.
+* If running Mac OS 10.8 or later, link:http://www.vmware.com/go/try-fusion-en[download VMware Fusion 7].
+* If running Mac OS 10.7, link:https://my.vmware.com/web/vmware/details?downloadGroup=FUS-604&productId=361&rPId=6092[download VMware Fusion 6]. (Click *Download Now* to the right of *VMware Fusion 6 Only*.)
+* If running Mac OS 10.6, link:https://my.vmware.com/web/vmware/details?downloadGroup=FUS-505&productId=294&rPId=6208[download VMware Fusion 5]. (Click *Download Now* to the right of *Download including only VMware Fusion 5.0.5 software*.)
 --
 +
 . Double-click the file you just downloaded (which is likely in your *Downloads* folder) in order to "mount" VMware Fusion's icon on your desktop.
