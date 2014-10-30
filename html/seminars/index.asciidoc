@@ -2,16 +2,16 @@
 :toc: left
 
 Each fall, CS50 offers a series of seminars. Led by the course's own
-https://www.cs50.net/staff[staff] as well as by
+https://cs50.harvard.edu/staff[staff] as well as by
 http://huit.harvard.edu/[HUIT staff] and
 http://www.abcd.harvard.edu/[ABCD members], CS50 seminars are designed
 to equip students with skills and savvy beyond the scope of the course's
-own https://www.cs50.net/syllabus/[syllabus]. Below are seminars from
+own https://cs50.harvard.edu/syllabus[syllabus]. Below are seminars from
 this year and past years.
 
 == Fall 2014
 
-Each seminar will be recorded and posted here a few days after it's held!
+Each seminar will be streamed live at https://live.cs50.net/[live.cs50.net] and then posted here a few days after it's held!
 
 ++++
 <iframe src="https://www.google.com/calendar/embed?showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=9q5vbacbfsvejq8g84j66gn14o%40group.calendar.google.com&amp;color=%235229A3&amp;ctz=America%2FNew_York" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"></iframe>
