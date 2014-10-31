@@ -17,6 +17,158 @@ Click a seminar's title to see its description and location. No need to register
 <iframe src="https://www.google.com/calendar/embed?showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=9q5vbacbfsvejq8g84j66gn14o%40group.calendar.google.com&amp;color=%235229A3&amp;ctz=America%2FNew_York" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"></iframe>
 ++++
 
+=== 3D Modeling and Manufacture
+
+_by Ansel Duff_
+
+The software/hardware harmony brings code to life. This seminar aims to familiarize students with elementary manufacturing techniques and provide students with access to CS50's 3D printers. Whether you're designing a holder for a mobile phone payment platform or reinventing the Hue lighting system, customized mechanical components transform a purely software backend to a physical product.
+
+* video coming soon
+
+=== Amazing Web Apps with Ruby on Rails
+
+_by Gabriel Guimaraes, Stephen Turban and Zack Chauvin_
+
+Ruby on Rails is an awesome framework that lets you create web applications really fast, without having to worry about unnecessary details. In this seminar we will take a look at the Model View Controller paradigm and how this way of thinking can be applied to web programming, specifically using Rails. We will also discuss what a web framework does for you (and what it doesn't do) showing an example of how Rails can solve many tasks of web programming automatically, leaving you more time to work on the real world problems your application is actually trying to solve.
+
+* video coming soon
+
+=== Android 101
+
+_by Fred Widjaja_
+
+Learn the basics of building apps on Android, the world's most popular mobile platform! We'll also be going through how to code in Java and how to use development tools like Android Studio.
+
+* video coming soon
+
+=== Breaking Through The (Google) Glass Ceiling
+
+_by Christopher Bartholomew_
+
+Do you have an interest in creating apps for the most controversial piece of wearable technology today? The rise and success of any wearable technology depends on one major element: apps. In this seminar, we’ll overview Google Glass’s three application design patterns: Periodic Notifications using Glass’s Mirror API, Immersion using the Glass Developer Kit (GDK), and Ongoing Tasks which utilize both the Mirror API and GDK. We’ll also provide helpful resources on interacting with and implementing REST web services, creating database structures for Google’s Open Authorization (OAuth), and setting up a standard Integrated Development Environment (IDE) for your chosen design pattern. If you’re planning on creating a Google Glass application, then this seminar will help you get started.
+
+* video coming soon
+
+=== Build Tomorrow's Library
+
+_by Jeffrey Licht_
+
+Get your hands on the full bibliographic data about virtually all of the 12.7 million items in the Harvard Library collection, plus millions of images, plus some extremely anonymized usage data, and more. All of this can be put to use in the apps you'll learn to write that use the API of Harvard Library Cloud, a new open metadata server. Library metadata is rich, complex, and very human, so let's dig in!
+
+* video coming soon
+
+=== Building Dynamic Web Apps with Laravel
+
+_by Eric Ouyang_
+
+Laravel is a powerful and elegant PHP web development framework for building interactive websites, such as CS50's own site! Learn about how to leverage this cutting edge development tool to create everything from simple APIs to sophisticated modern web applications.
+
+* video coming soon
+
+=== CSS: Awesome Style and Design
+
+_by Allison Buchholtz-Au and Tomas Reimers_
+
+CSS allows for the stylization of websites. This seminar will cover basic principles for web design from selecting HTML elements with CSS to positioning elements on the page and fully understanding the "box model." Additionally, we will cover common aesthetic improvements seen on websites such as rounding corners, background images, and custom fonts.
+
+* video coming soon
+
+=== Data Analysis in R
+
+_by Dusin Tran_
+
+Data has increasingly become crucial for solving problems in industry and research. R provides a powerful and flexible toolkit for this sort of analysis: statistical modeling, machine learning, visualization, and the fundamental process of importing and manipulating data. This seminar will provide a quick introduction to using R and show the tremendous capabilities that the language has to offer.
+
+* video coming soon
+
+=== Data Visualization and D3
+
+_by David Chouinard_
+
+Learn to convey valuable insights through interactive maps, charts and diagrams. We’ll explore D3, a JavaScript library, and learn the tools for producing interactive web-based data visualization.
+
+* video coming soon
+
+=== Essential Scale-Out Computing
+
+_by James Cuff_
+
+Each day you interact with thousands upon thousands of processors, servers, storage systems and high-speed networks. You don't see them, and you don't physically touch them, but they are there, making everything happen behind the scenes. Everything is powered by advanced computing, from your morning news, movie and video streams, phone conversations, currency, financial markets, pharmaceuticals, navigation, traffic, weather, email and of course all of our social media updates.  Each of us consumes vast amounts of data and computation on a daily basis. We also continue to push the boundaries of our science and discovery. Using ever more complex computer models to peer into the darkness of space or to understanding the genetic basis as to why were are human. All of this needs computing for it to work correctly, and it also needs advanced infrastructure and distributed computing architectures to work quickly.  James Cuff is the Assistant Dean for Research Computing here at Harvard. His group runs more than sixty thousand high performance computing processors and more than fourteen petabytes of storage for science. On a global scale, this system is tiny. However, he will show you real world examples of the advances in computation science, physical infrastructure and distributed computing systems we are using each day, whether you are a particle physicist trying to reverse engineer the very fabric of the universe – or maybe you are just updating your selfie...  So what will you learn from this seminar? You are all designing software for your final project. Facebook for example, was originally designed as a small single server PHP application. In order to make it scale to today’s hundreds of thousands of servers and billions of users took years. James will explain how both datacenter and systems architectures that now surpass electrical power usage of 10-20 megawatts – (enough to power more than 20,000 houses, nearly half of the City of Cambridge) enable today’s applications to scale. Each computation, be it add, subtract, multiply, divide, strcmp(), grep or memory hash lookup you make in your application now matters. You will be shown not only how distributed computing factors into your applications, but also how the actual energy efficiency of your algorithms matters. Designing, and thinking about how your application will scale from the beginning to potentially manage 10,000’s of page impressions a second is now the new normal.
+
+* video coming soon
+
+=== Exposing Digital Photography
+
+_by Dan Armendariz_
+
+This seminar is a fast-paced introduction to photography. We'll cover exposure, the impact of exposure values on a photograph, metering, the impact of the human visual system (illusions), and a discussion of modern digital imaging technology including sensor types, sensor sizes, and the limitations that arise from these properties. By the end, you should have a better understanding of the compromises that make up all forms of digital photography from smartphones to digital SLRs and walk away with some tools to find the balance that captures the photograph you want.
+
+* video coming soon
+
+=== Futuristic User Interactions: An Introduction to Leap Motion
+
+_by Armaghan Behlum and Tomas Reimers_
+
+The leap motion is a device that allows users to interact with the computer by moving their hands in front of it. Students will learn how to write code that takes advantage of the leap motion and build websites that the user can interact with using simple hand gestures.
+
+* video coming soon
+
+=== How to Build Innovative Technologies
+
+_by Abby Fichtner_
+
+Ever wonder how startups are able to create innovative, disruptive technologies that are successful in the market? In this seminar, you'll learn lean startup and agile development practices that can be seen time and again in the small percentage of startups that make it big. Using examples from Facebook, Dropbox, Pinterest and more, you'll learn tips for how to find your initial users and validate your ideas. As well as techniques like kanban, emergent design and continuous deployment to help you build your product and get it out there as quickly and efficiently as possible.
+
+* video coming soon
+
+=== Introduction to Amazon Web Services
+
+_by Leo Zhadanovsky_
+
+Learn about cloud computing with Amazon Web Services. During this talk, we will discuss the various Networking, Compute, Database, Storage, Application, Deployment and Management services that AWS offers. We will demonstrate how to launch a full three tier LAMP stack in minutes, as well as how to setup a simple web server on AWS. We will also discuss several use-cases, demonstrating how customers such as Enterprises, Startups, and Government Agencies are using AWS to power their computing needs.
+
+* video coming soon
+
+=== iOS App Development with Swift
+
+_by Dan Armendariz_
+
+An introduction to iOS programming using Swift, Apple's new programming language for Macs and iOS devices. We will cover the basics of the language, using APIs in your app, and deploying your app to an iOS device. Development requires a recent Mac with OS X 10.9.4 or later and, optional (but recommended), a device running iOS 7 or later.
+
+* video coming soon
+
+=== Learning iOS: Create your own app with Objective-C!
+
+_by Tianyu Liu_
+
+Ever wanted to build your own iOS app with Objective-C but didn't know where to start? Learn the basic introduction to iOS and get started making your cool apps on the App Store.
+
+* video coming soon
+
+=== Light Your World (with Hue Bulbs)
+
+_by Dan Bradley_
+
+As seen in the first week of lecture, Hue bulbs are light bulbs you can control wirelessly. They can do pretty amazing things, if you know how to program them properly. In this seminar, we'll create a small JavaScript web app that can turn Hue bulbs on and off as well as change their color. We'll also more broadly touch on APIs and Ajax calls.
+
+* video coming soon
+
+=== Meteor: a better way to build apps
+
+_by Roger Zurawicki_
+
+This is a hands-on introduction to Meteor, a JavaScript and Node.js framework built for the future. Meteor is an open-source platform for building top-quality web apps in a fraction of the time, whether you're an expert developer or just getting started. Meter rocks because: you write in the same language on both the server and the browser; 50 lines of code gets you a working chat app; your app will work in real time; you get an awesome package system; and you can run your app natively on iOS and Android. Find out more at https://www.meteor.com/ 
+
+* video coming soon
+	
+=== Teach Your Computer to See: Augmented Reality with OpenCV
+
+_by Joshua Meier_
+
+In this seminar, we explore the field of computer vision using the powerful library OpenCV. We’ll learn how to build programs that use your phone/computer's camera in order to interact with the real-world, augment reality, figure out who’s in the picture, and more. Come learn about the technology powering the world’s most popular and entertaining apps.
+
+* video coming soon
+
 == Fall 2013
 
 === Amazing Web Apps with Ruby on Rails
