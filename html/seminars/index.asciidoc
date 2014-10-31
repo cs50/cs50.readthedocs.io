@@ -151,7 +151,7 @@ _by Dan Bradley_
 
 As seen in the first week of lecture, Hue bulbs are light bulbs you can control wirelessly. They can do pretty amazing things, if you know how to program them properly. In this seminar, we'll create a small JavaScript web app that can turn Hue bulbs on and off as well as change their color. We'll also more broadly touch on APIs and Ajax calls.
 
-* video coming soon
+* http://cs50.tv/2014/fall/seminars/hue_bulbs/[Video]
 
 === Meteor: a better way to build apps
 
