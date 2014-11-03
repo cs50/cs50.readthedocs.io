@@ -1,13 +1,16 @@
 = CS50 Manual
 
-* APIs
-** link:api/courses/[CS50 Courses API]
-** link:api/food/[CS50 Food API]
+////
 ** link:api/events/[Harvard Events API]
-** link:api/maps/[Harvard Maps API]
 ** link:api/news/[Harvard News API]
 ** link:api/shuttleboy/[Shuttleboy API]
 ** link:api/tweets/[Harvard Tweets API]
+////
+
+* APIs
+** link:api/courses/[CS50 Courses API]
+** link:api/food/[CS50 Food API]
+** link:api/maps/[Harvard Maps API]
 * link:authentication/[Authenticating Users]
 * link:concentrators/[Concentrators]
 * CS50 Appliance
@@ -21,6 +24,7 @@
 *** link:appliance/19/virtualbox/[VirtualBox] (Linux, Mac OS, Windows)
 *** link:appliance/19/fusion/[VMware Fusion] (Mac OS)
 *** link:appliance/19/player/[VMware Player] (Linux, Windows)
+** link:appliance/2014/[CS50 Appliance 2014]
 * link:id/[CS50 ID]
 * link:library/[CS50 Library]
 * link:render/[CS50 Render]
