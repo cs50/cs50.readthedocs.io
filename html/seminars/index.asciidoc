@@ -47,7 +47,9 @@ _by Christopher Bartholomew_
 
 Do you have an interest in creating apps for the most controversial piece of wearable technology today? The rise and success of any wearable technology depends on one major element: apps. In this seminar, we’ll overview Google Glass’s three application design patterns: Periodic Notifications using Glass’s Mirror API, Immersion using the Glass Developer Kit (GDK), and Ongoing Tasks which utilize both the Mirror API and GDK. We’ll also provide helpful resources on interacting with and implementing REST web services, creating database structures for Google’s Open Authorization (OAuth), and setting up a standard Integrated Development Environment (IDE) for your chosen design pattern. If you’re planning on creating a Google Glass application, then this seminar will help you get started.
 
-* http://live.cs50.net/events/2504773/videos/67064489/player[Video (pre-release)]
+* http://cs50.tv/2014/fall/seminars/glass/[Video]
+* http://cdn.cs50.net/2014/fall/seminars/glass/glass.pdf[Slides]
+* http://cdn.cs50.net/2014/fall/seminars/glass/setup_and_playground.pdf[Setup Instructions]
 
 === Build Tomorrow's Library
 
@@ -127,7 +129,8 @@ _by Leo Zhadanovsky_
 
 Learn about cloud computing with Amazon Web Services. During this talk, we will discuss the various Networking, Compute, Database, Storage, Application, Deployment and Management services that AWS offers. We will demonstrate how to launch a full three tier LAMP stack in minutes, as well as how to setup a simple web server on AWS. We will also discuss several use-cases, demonstrating how customers such as Enterprises, Startups, and Government Agencies are using AWS to power their computing needs.
 
-* video coming soon
+* http://cs50.tv/2014/fall/seminars/aws/[Video]
+* http://cdn.cs50.net/2014/fall/seminars/aws/aws.pdf[Slides]
 
 === iOS App Development with Swift
 
