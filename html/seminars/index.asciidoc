@@ -119,7 +119,7 @@ _by Abby Fichtner_
 
 Ever wonder how startups are able to create innovative, disruptive technologies that are successful in the market? In this seminar, you'll learn lean startup and agile development practices that can be seen time and again in the small percentage of startups that make it big. Using examples from Facebook, Dropbox, Pinterest and more, you'll learn tips for how to find your initial users and validate your ideas. As well as techniques like kanban, emergent design and continuous deployment to help you build your product and get it out there as quickly and efficiently as possible.
 
-* http://live.cs50.net/events/2504773/videos/67108589/player[Video (pre-release)]
+* http://cs50.tv/2014/fall/seminars/innovative_technologies/[Video]
 
 === Introduction to Amazon Web Services
 
