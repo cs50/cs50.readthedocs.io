@@ -47,7 +47,7 @@ _by Christopher Bartholomew_
 
 Do you have an interest in creating apps for the most controversial piece of wearable technology today? The rise and success of any wearable technology depends on one major element: apps. In this seminar, we’ll overview Google Glass’s three application design patterns: Periodic Notifications using Glass’s Mirror API, Immersion using the Glass Developer Kit (GDK), and Ongoing Tasks which utilize both the Mirror API and GDK. We’ll also provide helpful resources on interacting with and implementing REST web services, creating database structures for Google’s Open Authorization (OAuth), and setting up a standard Integrated Development Environment (IDE) for your chosen design pattern. If you’re planning on creating a Google Glass application, then this seminar will help you get started.
 
-* video coming soon
+* http://live.cs50.net/events/2504773/videos/67064489/player[Video (pre-release)]
 
 === Build Tomorrow's Library
 
@@ -119,7 +119,7 @@ _by Abby Fichtner_
 
 Ever wonder how startups are able to create innovative, disruptive technologies that are successful in the market? In this seminar, you'll learn lean startup and agile development practices that can be seen time and again in the small percentage of startups that make it big. Using examples from Facebook, Dropbox, Pinterest and more, you'll learn tips for how to find your initial users and validate your ideas. As well as techniques like kanban, emergent design and continuous deployment to help you build your product and get it out there as quickly and efficiently as possible.
 
-* video coming soon
+* http://live.cs50.net/events/2504773/videos/67108589/player[Video (pre-release)]
 
 === Introduction to Amazon Web Services
 
