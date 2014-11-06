@@ -77,7 +77,7 @@ CSS allows for the stylization of websites. This seminar will cover basic princi
 
 === Data Analysis in R
 
-_by Dusin Tran_
+_by Dustin Tran_
 
 Data has increasingly become crucial for solving problems in industry and research. R provides a powerful and flexible toolkit for this sort of analysis: statistical modeling, machine learning, visualization, and the fundamental process of importing and manipulating data. This seminar will provide a quick introduction to using R and show the tremendous capabilities that the language has to offer.
 
