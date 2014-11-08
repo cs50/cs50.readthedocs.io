@@ -66,7 +66,7 @@ _by Eric Ouyang_
 
 Laravel is a powerful and elegant PHP web development framework for building interactive websites, such as CS50's own site! Learn about how to leverage this cutting edge development tool to create everything from simple APIs to sophisticated modern web applications.
 
-* http://live.cs50.net/events/2504773/videos/67356967/player[Video (pre-release)]
+* http://cs50.tv/2014/fall/seminars/laravel/[Video]
 * http://cdn.cs50.net/2014/fall/seminars/laravel/laravel.pdf[Slides]
 * http://cdn.cs50.net/2014/fall/seminars/laravel/blog50.zip[Project Starting Point]
 * http://cdn.cs50.net/2014/fall/seminars/laravel/blog50_completed.zip[Completed Project Example]
