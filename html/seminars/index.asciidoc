@@ -32,7 +32,8 @@ _by Gabriel Guimaraes, Stephen Turban and Zack Chauvin_
 
 Ruby on Rails is an awesome framework that lets you create web applications really fast, without having to worry about unnecessary details. In this seminar we will take a look at the Model View Controller paradigm and how this way of thinking can be applied to web programming, specifically using Rails. We will also discuss what a web framework does for you (and what it doesn't do) showing an example of how Rails can solve many tasks of web programming automatically, leaving you more time to work on the real world problems your application is actually trying to solve.
 
-* http://live.cs50.net/events/2504773/videos/67364657/player[Video (pre-release)]
+* http://cs50.tv/2014/fall/seminars/ruby_on_rails/[Video]
+* http://cdn.cs50.net/2014/fall/seminars/ruby_on_rails.pdf[Slides]
 
 === Android 101
 
@@ -77,7 +78,8 @@ _by Allison Buchholtz-Au and Tomas Reimers_
 
 CSS allows for the stylization of websites. This seminar will cover basic principles for web design from selecting HTML elements with CSS to positioning elements on the page and fully understanding the "box model." Additionally, we will cover common aesthetic improvements seen on websites such as rounding corners, background images, and custom fonts.
 
-* http://live.cs50.net/events/2504773/videos/67371282/player[Video (pre-release)]
+* http://cs50.tv/2014/fall/seminars/css/[Video]
+* http://cdn.cs50.net/2014/fall/seminars/css/css.pdf[Slides]
 
 === Data Analysis in R
 
