@@ -24,7 +24,7 @@ _by Ansel Duff_
 The software/hardware harmony brings code to life. This seminar aims to familiarize students with elementary manufacturing techniques and provide students with access to CS50's 3D printers. Whether you're designing a holder for a mobile phone payment platform or reinventing the Hue lighting system, customized mechanical components transform a purely software backend to a physical product.
 
 * http://cs50.tv/2014/fall/seminars/3d_modeling/[Video]
-* http://cdn.cs50.net/2014/seminars/3d_modeling/iphone_dock.SLDPRT[iPhone 5/5s SolidWorks example file]
+* http://cdn.cs50.net/2014/fall/seminars/3d_modeling/iphone_dock.SLDPRT[iPhone 5/5s SolidWorks example file]
 
 === Amazing Web Apps with Ruby on Rails
 
