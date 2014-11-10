@@ -23,8 +23,9 @@ _by Ansel Duff_
 
 The software/hardware harmony brings code to life. This seminar aims to familiarize students with elementary manufacturing techniques and provide students with access to CS50's 3D printers. Whether you're designing a holder for a mobile phone payment platform or reinventing the Hue lighting system, customized mechanical components transform a purely software backend to a physical product.
 
-* http://cs50.tv/2014/fall/seminars/3d_modeling/[Video]
 * http://cdn.cs50.net/2014/fall/seminars/3d_modeling/iphone_dock.SLDPRT[iPhone 5/5s SolidWorks example file]
+* http://cs50.tv/2014/fall/seminars/3d_modeling/[Video]
+
 
 === Amazing Web Apps with Ruby on Rails
 
@@ -32,9 +33,10 @@ _by Gabriel Guimaraes, Stephen Turban and Zack Chauvin_
 
 Ruby on Rails is an awesome framework that lets you create web applications really fast, without having to worry about unnecessary details. In this seminar we will take a look at the Model View Controller paradigm and how this way of thinking can be applied to web programming, specifically using Rails. We will also discuss what a web framework does for you (and what it doesn't do) showing an example of how Rails can solve many tasks of web programming automatically, leaving you more time to work on the real world problems your application is actually trying to solve.
 
-* http://cs50.tv/2014/fall/seminars/ruby_on_rails/[Video] 
 * http://cdn.cs50.net/2014/fall/seminars/ruby_on_rails/ruby_on_rails.pdf[Slides]
-* http://cdn.cs50.net/2014/fall/seminars/ruby_on_rails/ruby_working_twitter.pdf[Working Example Code]
+* http://cdn.cs50.net/2014/fall/seminars/ruby_on_rails/ruby_on_rails[Source Code]
+* http://cs50.tv/2014/fall/seminars/ruby_on_rails/[Video] 
+
 
 === Android 101
 
@@ -50,9 +52,9 @@ _by Christopher Bartholomew_
 
 Do you have an interest in creating apps for the most controversial piece of wearable technology today? The rise and success of any wearable technology depends on one major element: apps. In this seminar, we’ll overview Google Glass’s three application design patterns: Periodic Notifications using Glass’s Mirror API, Immersion using the Glass Developer Kit (GDK), and Ongoing Tasks which utilize both the Mirror API and GDK. We’ll also provide helpful resources on interacting with and implementing REST web services, creating database structures for Google’s Open Authorization (OAuth), and setting up a standard Integrated Development Environment (IDE) for your chosen design pattern. If you’re planning on creating a Google Glass application, then this seminar will help you get started.
 
-* http://cs50.tv/2014/fall/seminars/glass/[Video]
-* http://cdn.cs50.net/2014/fall/seminars/glass/glass.pdf[Slides]
 * http://cdn.cs50.net/2014/fall/seminars/glass/setup_and_playground.pdf[Setup Instructions]
+* http://cdn.cs50.net/2014/fall/seminars/glass/glass.pdf[Slides]
+* http://cs50.tv/2014/fall/seminars/glass/[Video]
 
 === Build Tomorrow's Library
 
@@ -68,10 +70,9 @@ _by Eric Ouyang_
 
 Laravel is a powerful and elegant PHP web development framework for building interactive websites, such as CS50's own site! Learn about how to leverage this cutting edge development tool to create everything from simple APIs to sophisticated modern web applications.
 
-* http://cs50.tv/2014/fall/seminars/laravel/[Video]
 * http://cdn.cs50.net/2014/fall/seminars/laravel/laravel.pdf[Slides]
-* http://cdn.cs50.net/2014/fall/seminars/laravel/blog50.zip[Project Starting Point]
-* http://cdn.cs50.net/2014/fall/seminars/laravel/blog50_completed.zip[Completed Project Example]
+* http://cdn.cs50.net/2014/fall/seminars/laravel/laravel.zip[Source Code]
+* http://cs50.tv/2014/fall/seminars/laravel/[Video]
 
 === CSS: Awesome Style and Design
 
@@ -79,8 +80,8 @@ _by Allison Buchholtz-Au and Tomas Reimers_
 
 CSS allows for the stylization of websites. This seminar will cover basic principles for web design from selecting HTML elements with CSS to positioning elements on the page and fully understanding the "box model." Additionally, we will cover common aesthetic improvements seen on websites such as rounding corners, background images, and custom fonts.
 
-* http://cs50.tv/2014/fall/seminars/css/[Video]
 * http://cdn.cs50.net/2014/fall/seminars/css/css.pdf[Slides]
+* http://cs50.tv/2014/fall/seminars/css/[Video]
 
 === Data Analysis in R
 
@@ -136,8 +137,8 @@ _by Leo Zhadanovsky_
 
 Learn about cloud computing with Amazon Web Services. During this talk, we will discuss the various Networking, Compute, Database, Storage, Application, Deployment and Management services that AWS offers. We will demonstrate how to launch a full three tier LAMP stack in minutes, as well as how to setup a simple web server on AWS. We will also discuss several use-cases, demonstrating how customers such as Enterprises, Startups, and Government Agencies are using AWS to power their computing needs.
 
-* http://cs50.tv/2014/fall/seminars/aws/[Video]
 * http://cdn.cs50.net/2014/fall/seminars/aws/aws.pdf[Slides]
+* http://cs50.tv/2014/fall/seminars/aws/[Video]
 
 === iOS App Development with Swift
 
