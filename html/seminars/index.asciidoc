@@ -89,7 +89,7 @@ _by Dustin Tran_
 
 Data has increasingly become crucial for solving problems in industry and research. R provides a powerful and flexible toolkit for this sort of analysis: statistical modeling, machine learning, visualization, and the fundamental process of importing and manipulating data. This seminar will provide a quick introduction to using R and show the tremendous capabilities that the language has to offer.
 
-* video coming soon
+* http://live.cs50.net/events/2504773/videos/67992958/player[Video (pre-release)]
 
 === Data Visualization and D3
 
@@ -170,7 +170,7 @@ _by Roger Zurawicki_
 
 This is a hands-on introduction to Meteor, a JavaScript and Node.js framework built for the future. Meteor is an open-source platform for building top-quality web apps in a fraction of the time, whether you're an expert developer or just getting started. Meter rocks because: you write in the same language on both the server and the browser; 50 lines of code gets you a working chat app; your app will work in real time; you get an awesome package system; and you can run your app natively on iOS and Android. Find out more at https://www.meteor.com/ 
 
-* video coming soon
+* http://live.cs50.net/events/2504773/videos/68003083/player[Video (pre-release)]
 	
 === Teach Your Computer to See: Augmented Reality with OpenCV
 
