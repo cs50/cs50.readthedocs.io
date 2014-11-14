@@ -656,29 +656,29 @@ below:
 where `KEY` is your API key
 
 * Returns today's entire menu:
-** `http://api.cs50.net/food/2/menus?key=KEY&output=json`
-** `http://api.cs50.net/food/2/menus?key=KEY&output=jsonp&callback=parseResponse`
-** `http://api.cs50.net/food/2/menus?key=KEY&output=xml`
+** `http://api.cs50.net/food/3/menus?key=KEY&output=json`
+** `http://api.cs50.net/food/3/menus?key=KEY&output=jsonp&callback=parseResponse`
+** `http://api.cs50.net/food/3/menus?key=KEY&output=xml`
 * Returns today's lunch menu:
-** `http://api.cs50.net/food/2/menus?key=KEY&meal=LUNCH&output=json`
-** `http://api.cs50.net/food/2/menus?key=KEY&meal=LUNCH&output=jsonp&callback=parseResponse`
-** `http://api.cs50.net/food/2/menus?key=KEY&meal=LUNCH&output=xml`
+** `http://api.cs50.net/food/3/menus?key=KEY&meal=LUNCH&output=json`
+** `http://api.cs50.net/food/3/menus?key=KEY&meal=LUNCH&output=jsonp&callback=parseResponse`
+** `http://api.cs50.net/food/3/menus?key=KEY&meal=LUNCH&output=xml`
 * Returns 21 March 2011's entire menu:
-** `http://api.cs50.net/food/2/menus?key=KEY&sdt=2011-03-21&output=json`
-** `http://api.cs50.net/food/2/menus?key=KEY&sdt=2011-03-21&output=jsonp&callback=parseResponse`
-** `http://api.cs50.net/food/2/menus?key=KEY&sdt=2011-03-21&output=xml`
+** `http://api.cs50.net/food/3/menus?key=KEY&sdt=2011-03-21&output=json`
+** `http://api.cs50.net/food/3/menus?key=KEY&sdt=2011-03-21&output=jsonp&callback=parseResponse`
+** `http://api.cs50.net/food/3/menus?key=KEY&sdt=2011-03-21&output=xml`
 * Returns 21 March 2011's breakfast menu:
-** `http://api.cs50.net/food/2/menus?key=KEY&meal=BREAKFAST&sdt=2011-03-21&output=json`
-** `http://api.cs50.net/food/2/menus?key=KEY&meal=BREAKFAST&sdt=2011-03-21&output=jsonp&callback=parseResponse`
-** `http://api.cs50.net/food/2/menus?key=KEY&meal=BREAKFAST&sdt=2011-03-21&output=xml`
+** `http://api.cs50.net/food/3/menus?key=KEY&meal=BREAKFAST&sdt=2011-03-21&output=json`
+** `http://api.cs50.net/food/3/menus?key=KEY&meal=BREAKFAST&sdt=2011-03-21&output=jsonp&callback=parseResponse`
+** `http://api.cs50.net/food/3/menus?key=KEY&meal=BREAKFAST&sdt=2011-03-21&output=xml`
 * Returns a Chickwich's nutritional facts:
-** `http://api.cs50.net/food/2/facts?key=KEY&recipe=117003&portion=1&output=json`
-** `http://api.cs50.net/food/2/facts?key=KEY&recipe=117003&portion=1&output=jsonp&callback=parseResponse`
-** `http://api.cs50.net/food/2/facts?key=KEY&recipe=117003&portion=1&output=xml`
+** `http://api.cs50.net/food/3/facts?key=KEY&recipe=117003&portion=1&output=json`
+** `http://api.cs50.net/food/3/facts?key=KEY&recipe=117003&portion=1&output=jsonp&callback=parseResponse`
+** `http://api.cs50.net/food/3/facts?key=KEY&recipe=117003&portion=1&output=xml`
 * Returns a Chickwich's recipe:
-** `http://api.cs50.net/food/2/recipes?key=KEY&id=117003&output=json`
-** `http://api.cs50.net/food/2/recipes?key=KEY&id=117003&output=jsonp&callback=parseResponse`
-** `http://api.cs50.net/food/2/recipes?key=KEY&id=117003&output=xml`
+** `http://api.cs50.net/food/3/recipes?key=KEY&id=117003&output=json`
+** `http://api.cs50.net/food/3/recipes?key=KEY&id=117003&output=jsonp&callback=parseResponse`
+** `http://api.cs50.net/food/3/recipes?key=KEY&id=117003&output=xml`
 
 ////
 == Implementations
