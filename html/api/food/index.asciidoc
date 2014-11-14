@@ -21,7 +21,7 @@ from 2011-03-21 onward are nutritional facts, portions, and recipes
 available. This manual's article on link:/scraping/[Screen Scraping]
 discusses how this API gets its data.
 
-*This API is currently offline due to some bugs in the HUDS website. Version 3, up soon, will account for these.*
+*Version 3 is online, all previous versions are deprecated.*
 
 == License
 
@@ -35,7 +35,7 @@ commercial purposes, contact the author.
 
 == Registration
 
-To use this API, you must https://docs.cs50.net/[register for an API key].
+To use this API, you must https://docs.cs50.net/#plans[register for an API key].
 
 == Limits
 
@@ -193,7 +193,7 @@ the response will be a padded array of objects, per the below:
 ----
 parseResponse([{"fact":"Calcium","amount":48,"percent":4},{"fact":"Calories","amount":250,"percent":8},{"fact":"Calories from Fat","amount":135},{"fact":"Cholesterol","amount":40,"percent":13},{"fact":"Dietary Fiber","amount":1,"percent":4},{"fact":"Iron","amount":1.5,"percent":10},{"fact":"Protein","amount":15,"percent":24},{"fact":"Saturated Fat","amount":3.5,"percent":18},{"fact":"Sodium","amount":570,"percent":24},{"fact":"Sugars","amount":0,"percent":0},{"fact":"Total Carbs","amount":13,"percent":4},{"fact":"Total Fat","amount":15,"percent":23},{"fact":"Trans Fat","amount":0,"percent":0},{"fact":"Vitamin A","amount":0,"percent":0},{"fact":"Vitamin C","amount":0,"percent":0}])
 ----
-////
+
 ==== XML
 
 If you request data in
@@ -207,85 +207,84 @@ below:
 ----
 <?xml version="1.0" encoding="UTF-8"?>
 <facts>
-   <type>
+   <item>
       <fact>Calcium</fact>
-      <amount>48</amount>
-      "percent":4
-   },
-   {
-      "fact":"Calories",
-      "amount":250,
-      "percent":8
-   },
-   {
-      "fact":"Calories from Fat",
-      "amount":135
-   },
-   {
-      "fact":"Cholesterol",
-      "amount":40,
-      "percent":13
-   },
-   {
-      "fact":"Dietary Fiber",
-      "amount":1,
-      "percent":4
-   },
-   {
-      "fact":"Iron",
-      "amount":1.5,
-      "percent":10
-   },
-   {
-      "fact":"Protein",
-      "amount":15,
-      "percent":24
-   },
-   {
-      "fact":"Saturated Fat",
-      "amount":3.5,
-      "percent":18
-   },
-   {
-      "fact":"Sodium",
-      "amount":570,
-      "percent":24
-   },
-   {
-      "fact":"Sugars",
-      "amount":0,
-      "percent":0
-   },
-   {
-      "fact":"Total Carbs",
-      "amount":13,
-      "percent":4
-   },
-   {
-      "fact":"Total Fat",
-      "amount":15,
-      "percent":23
-   },
-   {
-      "fact":"Trans Fat",
-      "amount":0,
-      "percent":0
-   },
-   {
-      "fact":"Vitamin A",
-      "amount":0,
-      "percent":0
-   },
-   {
-      "fact":"Vitamin C",
-      "amount":0,
-      "percent":0
-   }
-]
-  </field>
-</fields>
+      <amount>48.00</amount>
+      <percent>5.0</percent>
+   </item>
+   <item>
+      <fact>Calories</fact>
+      <amount>250.00</amount>
+      <percent>0</percent>
+   </item>
+   <item>
+      <fact>Calories from Fat</fact>
+      <amount>135.00</amount>
+      <percent>0</percent>
+   </item>
+   <item>
+      <fact>Cholesterol</fact>
+      <amount>40.00</amount>
+      <percent>13.0</percent>
+   </item>
+   <item>
+      <fact>Dietary Fiber</fact>
+      <amount>1.00</amount>
+      <percent>4.0</percent>
+   </item>
+   <item>
+      <fact>Iron</fact>
+      <amount>1.50</amount>
+      <percent>8.0</percent>
+   </item>
+   <item>
+      <fact>Protein</fact>
+      <amount>15.00</amount>
+      <percent>27.0</percent>
+   </item>
+   <item>
+      <fact>Saturated Fat</fact>
+      <amount>3.50</amount>
+      <percent>18.0</percent>
+   </item>
+   <item>
+      <fact>Sodium</fact>
+      <amount>570.00</amount>
+      <percent>24.0</percent>
+   </item>
+   <item>
+      <fact>Sugars</fact>
+      <amount>0</amount>
+      <percent>0</percent>
+   </item>
+   <item>
+      <fact>Total Carbs</fact>
+      <amount>13.00</amount>
+      <percent>10.0</percent>
+   </item>
+   <item>
+      <fact>Total Fat</fact>
+      <amount>15.00</amount>
+      <percent>0</percent>
+   </item>
+   <item>
+      <fact>Trans Fat</fact>
+      <amount>0</amount>
+      <percent>0</percent>
+   </item>
+   <item>
+      <fact>Vitamin A</fact>
+      <amount>0</amount>
+      <percent>0</percent>
+   </item>
+   <item>
+      <fact>Vitamin C</fact>
+      <amount>0</amount>
+      <percent>0</percent>
+   </item>
+</facts>
 ----
-////
+
 === menus
 
 To query the CS50 Food API for menus, contact the server via URLs in
@@ -324,7 +323,7 @@ Request].
 ==== JSON
 
 If you request data in JSON format (e.g.,
-`http://api.cs50.net/food/2/menus?key=KEY&meal=BREAKFAST&sdt=2011-03-21&output=json`, where `KEY` is your API key),
+`http://api.cs50.net/food/3/menus?key=KEY&meal=BREAKFAST&sdt=2011-03-21&output=json`, where `KEY` is your API key),
 the response will be an array of objects, per the below:
 
 [source,javascript]
@@ -435,12 +434,128 @@ the response will be an array of objects, per the below:
 ==== JSONP
 
 If you request data in JSONP format (e.g.,
-`http://api.cs50.net/food/2/menus?key=KEY&meal=BREAKFAST&sdt=2011-03-21&output=jsonp&callback=parseResponse`, where `KEY` is your API key),
+`http://api.cs50.net/food/3/menus?key=KEY&meal=BREAKFAST&sdt=2011-03-21&output=jsonp&callback=parseResponse`, where `KEY` is your API key),
 the response will be a padded array of objects, per the below:
 
 [source,javascript]
 ----
 parseResponse([{"date":"2011-03-21","meal":"BREAKFAST","category":"BREAKFAST BAKERY","recipe":"213012","name":"Aesops Bagels","portion":"1","unit":"each"},{"date":"2011-03-21","meal":"BREAKFAST","category":"BREAKFAST BAKERY","recipe":"213032","name":"Whole Wheat Blueberry Muffin","portion":"1","unit":"each"},{"date":"2011-03-21","meal":"BREAKFAST","category":"BREAKFAST ENTREES","recipe":"061003","name":"Scrambled Eggs","portion":"4","unit":"oz"},{"date":"2011-03-21","meal":"BREAKFAST","category":"BREAKFAST ENTREES","recipe":"061041","name":"Egg Beaters","portion":"4","unit":"oz"},{"date":"2011-03-21","meal":"BREAKFAST","category":"BREAKFAST ENTREES","recipe":"061042","name":"Egg Whites","portion":"4","unit":"oz"},{"date":"2011-03-21","meal":"BREAKFAST","category":"BREAKFAST ENTREES","recipe":"061056","name":"Eggs Cooked to Order","portion":"1","unit":"each"},{"date":"2011-03-21","meal":"BREAKFAST","category":"BREAKFAST ENTREES","recipe":"061062","name":"Vegetable Frittata","portion":"1\/24","unit":"PAN"},{"date":"2011-03-21","meal":"BREAKFAST","category":"BREAKFAST ENTREES","recipe":"161049","name":"Hard Cooked Eggs","portion":"1","unit":"each"},{"date":"2011-03-21","meal":"BREAKFAST","category":"BREAKFAST MEATS","recipe":"089003","name":"Pork Sausage Pattie","portion":"2","unit":"each"},{"date":"2011-03-21","meal":"BREAKFAST","category":"MAKE OR BUILD YOUR OWN","recipe":"031003","name":"Oatmeal Steel Cut","portion":"6","unit":"fl. oz"},{"date":"2011-03-21","meal":"BREAKFAST","category":"MAKE OR BUILD YOUR OWN","recipe":"031008","name":"Grits","portion":"6","unit":"fl. oz"}])
+----
+
+==== XML
+
+If you request data in XML
+format (e.g.,
+`http://api.cs50.net/food/3/menus?key=KEY&meal=BREAKFAST&sdt=2011-03-21&output=xml`, where `KEY` is your API key),
+the response will be an xml file, per the
+below:
+
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<menus>
+   <item>
+      <date>2011-03-21</date>
+      <meal>BREAKFAST</meal>
+      <category>BREAKFAST BAKERY</category>
+      <recipe>213012</recipe>
+      <name>Assorted Bagels</name>
+      <portion>1</portion>
+      <unit>each</unit>
+   </item>
+   <item>
+      <date>2011-03-21</date>
+      <meal>BREAKFAST</meal>
+      <category>BREAKFAST BAKERY</category>
+      <recipe>213032</recipe>
+      <name>Whole Wheat Blueberry Muffin</name>
+      <portion>1</portion>
+      <unit>each</unit>
+   </item>
+   <item>
+      <date>2011-03-21</date>
+      <meal>BREAKFAST</meal>
+      <category>BREAKFAST ENTREES</category>
+      <recipe>061003</recipe>
+      <name>Scrambled Cage Free Eggs</name>
+      <portion>4</portion>
+      <unit>oz</unit>
+   </item>
+   <item>
+      <date>2011-03-21</date>
+      <meal>BREAKFAST</meal>
+      <category>BREAKFAST ENTREES</category>
+      <recipe>061041</recipe>
+      <name>Cage-Free Egg Whites Cooked to Order</name>
+      <portion>4</portion>
+      <unit>oz</unit>
+   </item>
+   <item>
+      <date>2011-03-21</date>
+      <meal>BREAKFAST</meal>
+      <category>BREAKFAST ENTREES</category>
+      <recipe>061042</recipe>
+      <name>Cage Free Egg Whites</name>
+      <portion>4</portion>
+      <unit>oz</unit>
+   </item>
+   <item>
+      <date>2011-03-21</date>
+      <meal>BREAKFAST</meal>
+      <category>BREAKFAST ENTREES</category>
+      <recipe>061056</recipe>
+      <name>Cage Free Eggs Cooked to Order</name>
+      <portion>1</portion>
+      <unit>each</unit>
+   </item>
+   <item>
+      <date>2011-03-21</date>
+      <meal>BREAKFAST</meal>
+      <category>BREAKFAST ENTREES</category>
+      <recipe>061062</recipe>
+      <name>
+      Vegetable Frittata with Broccoli, Peppers and Onion
+      </name>
+      <portion>1/24</portion>
+      <unit>PAN</unit>
+   </item>
+   <item>
+      <date>2011-03-21</date>
+      <meal>BREAKFAST</meal>
+      <category>BREAKFAST ENTREES</category>
+      <recipe>161049</recipe>
+      <name>Cage Free Hard Boiled Eggs</name>
+      <portion>1</portion>
+      <unit>each</unit>
+   </item>
+   <item>
+      <date>2011-03-21</date>
+      <meal>BREAKFAST</meal>
+      <category>BREAKFAST MEATS</category>
+      <recipe>089003</recipe>
+      <name>Pork Sausage Pattie</name>
+      <portion>2</portion>
+      <unit>Patties</unit>
+   </item>
+   <item>
+      <date>2011-03-21</date>
+      <meal>BREAKFAST</meal>
+      <category>MAKE OR BUILD YOUR OWN</category>
+      <recipe>031003</recipe>
+      <name>Steel Cut Oatmeal</name>
+      <portion>6</portion>
+      <unit>fl. oz</unit>
+   </item>
+   <item>
+      <date>2011-03-21</date>
+      <meal>BREAKFAST</meal>
+      <category>MAKE OR BUILD YOUR OWN</category>
+      <recipe>031008</recipe>
+      <name>Grits</name>
+      <portion>6</portion>
+      <unit>fl. oz</unit>
+   </item>
+</menus>
 ----
 
 === recipes
@@ -475,7 +590,7 @@ unit of measure.
 ==== JSON
 
 If you request data in JSON format (e.g.,
-`http://api.cs50.net/food/2/recipes?key=KEY&id=117003&output=json`, where `KEY` is your API key), the
+`http://api.cs50.net/food/3/recipes?key=KEY&id=117003&output=json`, where `KEY` is your API key), the
 response will be an array of objects, per the below:
 
 [source,javascript]
@@ -499,12 +614,41 @@ response will be an array of objects, per the below:
 ===== JSONP
 
 If you request data in JSONP format (e.g.,
-`http://api.cs50.net/food/2/recipes?key=KEY&id=117003&output=jsonp&callback=parseResponse`, where `KEY` is your API key),
+`http://api.cs50.net/food/3/recipes?key=KEY&id=117003&output=jsonp&callback=parseResponse`, where `KEY` is your API key),
 the response will be a padded array of objects, per the below:
 
 [source,javascript]
 ----
 parseResponse({"id":"117003","name":"Chickwich","size":"1","unit":"each","ingredients":"Chicken Patty (* INGREDIENT STATEMENT * Chicken breast with rib meat, water, vegetable protein product (isolated soy protein, magnesium oxide, zinc oxide, niacinamide, ferrous sulfate, vitamin B12, copper gluconate, vitamin A palmitate, calcium pantothenate, pyridoxine hydrochloride, thiamine mononitrate, riboflavin), dried whole egg, seasoning (salt, onion powder, modified corn starch, natural flavor), and sodium phosphates. BREADED WITH: Enriched wheat flour (enriched with niacin, ferrous sulfate, thiamine mononitrate, riboflavin, folic acid), water, enriched bleached wheat flour (enriched with niacin, ferrous sulfate, thiamine mononitrate, riboflavin, folic acid), salt, modified corn starch, spices, dextrose, garlic powder, oleoresin paprika and annatto, xanthan gum, and natural flavors. Breading set in vegetable oil.)","VEGETARIAN":"FALSE","VEGAN":"FALSE","MOLLIE KATZEN":"FALSE","LOCAL":"FALSE","ORGANIC":"FALSE"})
+----
+
+==== XML
+
+If you request data in XML
+format (e.g.,
+`http://api.cs50.net/food/3/recipes?key=KEY&id=117003&output=xml`, where `KEY` is your API key),
+the response will be an xml file, per the
+below:
+
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<recipes>
+   <item>
+      <id>117003</id>
+      <name>Chickwich</name>
+      <size>1</size>
+      <unit>each</unit>
+      <ingredients>
+      Chicken Patty (Chicken Breast with Rib Meat, Water, Vegetable Protein Product (Isolated Soy Protein, Magnesium Oxide, Zinc Oxide, Niacinamide, Ferrous Sulfate, Vitamin B12, Copper Gluconate, Vitamin A Palmitate, Calcium Pantothenate, Pyridoxine Hydrochloride, Thiamine Mononitrate, Riboflavin), Dried Whole Egg, Seasoning (Salt, Onion Powder, Modified Corn Starch, Natural Flavor), and Sodium Phosphates. BREADED WITH: Enriched Wheat Flour (Enriched With Niacin, Ferrous Sulfate, Thiamine Mononitrate, Riboflavin, Folic Acid), Water, Enriched Bleached Wheat Flour (Enriched With Niacin, Ferrous Sulfate, Thiamine Mononitrate, Riboflavin, Folic Acid), Salt, Modified Corn Starch, Spices, Dextrose, Garlic Powder, Oleoresin Paprika and Annatto, Xanthan Gum, and Natural Flavors. Breading Set In Vegetable Oil. .)
+      </ingredients>
+      <VEGETARIAN>false</VEGETARIAN>
+      <VEGAN>false</VEGAN>
+      <MOLLIE_KATZEN>false</MOLLIE_KATZEN>
+      <LOCAL>false</LOCAL>
+      <ORGANIC>false</ORGANIC>
+   </item>
+</recipes>
 ----
 
 == Examples
@@ -566,3 +710,6 @@ support for ranges of dates for menus.
 * 2
 ** Migrated to `api.cs50.net`.
 ** Added requirement of API key.
+* 3
+** Changed backend to python
+** Changed hosts to 3scale
