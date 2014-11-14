@@ -3,10 +3,9 @@
 
 The CS50 Food API allows you to retrieve
 http://www.dining.harvard.edu/[HUDS] menus in
-http://en.wikipedia.org/wiki/Comma-separated_values[CSV],
 http://en.wikipedia.org/wiki/JSON[JSON],
 http://en.wikipedia.org/wiki/JSON#JSONP[JSONP], or
-http://php.net/manual/en/function.serialize.php[serialized PHP]. Each
+http://en.wikipedia.org/wiki/XML[XML]. Each
 night, CS50 link:../../scraping[screen-scrapes] nutritional facts,
 menus, and recipes from
 http://www.foodpro.huds.harvard.edu/foodpro/menu_items.asp[This Week's
@@ -22,8 +21,7 @@ from 2011-03-21 onward are nutritional facts, portions, and recipes
 available. This manual's article on link:/scraping/[Screen Scraping]
 discusses how this API gets its data.
 
-*Version 2 of this API is operational. Versions 1.3 and prior of this
-API are no longer operational.*
+*This API is currently offline due to some bugs in the HUDS website. Version 3, up soon, will account for these.*
 
 == License
 
@@ -37,7 +35,7 @@ commercial purposes, contact the author.
 
 == Registration
 
-To use this API, you must http://api.cs50.net/register[register for an API key].
+To use this API, you must https://docs.cs50.net/[register for an API key].
 
 == Limits
 
@@ -54,7 +52,7 @@ To query the CS50 Food API for nutritional facts, contact the server
 via URLs in this format:
 
 ----
-http://api.cs50.net/food/2/facts?param1=value1&param2=value2&...
+http://api.cs50.net/food/3/facts?param1=value1&param2=value2&...
 ----
 
 Supported parameters include:
@@ -64,8 +62,8 @@ Supported parameters include:
 | parameter | description
 | `key`| _Required._ Your API key.
 | `recipe` | _Required._ ID of recipe for which to get nutritional facts.
-| `output` | _Required._ Format for output. Must be `csv`, `json`, `jsonp`,
-or `php`.
+| `output` | _Required._ Format for output. Must be `json`, `jsonp`,
+or `xml`.
 | `portion` | _Optional._ The recipe's unit of measure; do not include unit itself.
 |===
 
@@ -98,36 +96,6 @@ Facts are measured per the units below.
 | Vitamin A | iu | %
 | Vitamin C | mg | %
 |===
-
-==== CSV
-
-If you request data in CSV format (e.g., `http://api.cs50.net/food/2/facts?key=KEY&recipe=117003&portion=1&output=csv`, where `KEY` is your API key),
-the response will be a series of comma-delimited rows, per the below:
-
-[source,text]
-----
-fact,amount,percent
-Calcium,48,4
-Calories,250,8
-"Calories from Fat",135,
-Cholesterol,40,13
-"Dietary Fiber",1,4
-Iron,1.5,10
-Protein,15,24
-"Saturated Fat",3.5,18
-Sodium,570,24
-Sugars,0,0
-"Total Carbs",13,4
-"Total Fat",15,23
-"Trans Fat",0,0
-"Vitamin A",0,0
-"Vitamin C",0,0
-----
-
-Note that the response's first row defines the CSV file's fields.
-Fields' order may change over time, so do not hardcode indices into your
-own code. Use that first row to determine fields' indices dynamically,
-per this article on link:/tricks/#Parsing_CSV[parsing CSV].
 
 ==== JSON
 
@@ -225,142 +193,106 @@ the response will be a padded array of objects, per the below:
 ----
 parseResponse([{"fact":"Calcium","amount":48,"percent":4},{"fact":"Calories","amount":250,"percent":8},{"fact":"Calories from Fat","amount":135},{"fact":"Cholesterol","amount":40,"percent":13},{"fact":"Dietary Fiber","amount":1,"percent":4},{"fact":"Iron","amount":1.5,"percent":10},{"fact":"Protein","amount":15,"percent":24},{"fact":"Saturated Fat","amount":3.5,"percent":18},{"fact":"Sodium","amount":570,"percent":24},{"fact":"Sugars","amount":0,"percent":0},{"fact":"Total Carbs","amount":13,"percent":4},{"fact":"Total Fat","amount":15,"percent":23},{"fact":"Trans Fat","amount":0,"percent":0},{"fact":"Vitamin A","amount":0,"percent":0},{"fact":"Vitamin C","amount":0,"percent":0}])
 ----
-
-==== PHP
+////
+==== XML
 
 If you request data in
-(http://www.php.net/manual/en/language.oop5.serialization.php[serialized])
-PHP format (e.g.,
-`http://api.cs50.net/food/2/facts?key=KEY&recipe=117003&portion=1&output=php`, where `KEY` is your API key),
-the response will be a serialized array of associative arrays, per the
+(http://en.wikipedia.org/wiki/XML[XML])
+format (e.g.,
+`http://api.cs50.net/food/2/facts?key=KEY&recipe=117003&portion=1&output=xml`, where `KEY` is your API key),
+the response will be an xml file, per the
 below:
 
-[source,php]
+[source,xml]
 ----
-a:15:{i:0;a:3:{s:4:"fact";s:7:"Calcium";s:6:"amount";d:48;s:7:"percent";d:4;}i:1;a:3:{s:4:"fact";s:8:"Calories";s:6:"amount";d:250;s:7:"percent";d:8;}i:2;a:2:{s:4:"fact";s:17:"Calories from Fat";s:6:"amount";d:135;}i:3;a:3:{s:4:"fact";s:11:"Cholesterol";s:6:"amount";d:40;s:7:"percent";d:13;}i:4;a:3:{s:4:"fact";s:13:"Dietary Fiber";s:6:"amount";d:1;s:7:"percent";d:4;}i:5;a:3:{s:4:"fact";s:4:"Iron";s:6:"amount";d:1.5;s:7:"percent";d:10;}i:6;a:3:{s:4:"fact";s:7:"Protein";s:6:"amount";d:15;s:7:"percent";d:24;}i:7;a:3:{s:4:"fact";s:13:"Saturated Fat";s:6:"amount";d:3.5;s:7:"percent";d:18;}i:8;a:3:{s:4:"fact";s:6:"Sodium";s:6:"amount";d:570;s:7:"percent";d:24;}i:9;a:3:{s:4:"fact";s:6:"Sugars";s:6:"amount";d:0;s:7:"percent";d:0;}i:10;a:3:{s:4:"fact";s:11:"Total Carbs";s:6:"amount";d:13;s:7:"percent";d:4;}i:11;a:3:{s:4:"fact";s:9:"Total Fat";s:6:"amount";d:15;s:7:"percent";d:23;}i:12;a:3:{s:4:"fact";s:9:"Trans Fat";s:6:"amount";d:0;s:7:"percent";d:0;}i:13;a:3:{s:4:"fact";s:9:"Vitamin A";s:6:"amount";d:0;s:7:"percent";d:0;}i:14;a:3:{s:4:"fact";s:9:"Vitamin C";s:6:"amount";d:0;s:7:"percent";d:0;}}
+<?xml version="1.0" encoding="UTF-8"?>
+<facts>
+   <type>
+      <fact>Calcium</fact>
+      <amount>48</amount>
+      "percent":4
+   },
+   {
+      "fact":"Calories",
+      "amount":250,
+      "percent":8
+   },
+   {
+      "fact":"Calories from Fat",
+      "amount":135
+   },
+   {
+      "fact":"Cholesterol",
+      "amount":40,
+      "percent":13
+   },
+   {
+      "fact":"Dietary Fiber",
+      "amount":1,
+      "percent":4
+   },
+   {
+      "fact":"Iron",
+      "amount":1.5,
+      "percent":10
+   },
+   {
+      "fact":"Protein",
+      "amount":15,
+      "percent":24
+   },
+   {
+      "fact":"Saturated Fat",
+      "amount":3.5,
+      "percent":18
+   },
+   {
+      "fact":"Sodium",
+      "amount":570,
+      "percent":24
+   },
+   {
+      "fact":"Sugars",
+      "amount":0,
+      "percent":0
+   },
+   {
+      "fact":"Total Carbs",
+      "amount":13,
+      "percent":4
+   },
+   {
+      "fact":"Total Fat",
+      "amount":15,
+      "percent":23
+   },
+   {
+      "fact":"Trans Fat",
+      "amount":0,
+      "percent":0
+   },
+   {
+      "fact":"Vitamin A",
+      "amount":0,
+      "percent":0
+   },
+   {
+      "fact":"Vitamin C",
+      "amount":0,
+      "percent":0
+   }
+]
+  </field>
+</fields>
 ----
-
-Once you http://php.net/manual/en/function.unserialize.php[unserialize]
-that response, you'll have the below in memory:
-
-[source,php]
-----
-Array
-(
-    [0] => Array
-        (
-            [fact] => Calcium
-            [amount] => 48
-            [percent] => 4
-        )
-
-    [1] => Array
-        (
-            [fact] => Calories
-            [amount] => 250
-            [percent] => 8
-        )
-
-    [2] => Array
-        (
-            [fact] => Calories from Fat
-            [amount] => 135
-        )
-
-    [3] => Array
-        (
-            [fact] => Cholesterol
-            [amount] => 40
-            [percent] => 13
-        )
-
-    [4] => Array
-        (
-            [fact] => Dietary Fiber
-            [amount] => 1
-            [percent] => 4
-        )
-
-    [5] => Array
-        (
-            [fact] => Iron
-            [amount] => 1.5
-            [percent] => 10
-        )
-
-    [6] => Array
-        (
-            [fact] => Protein
-            [amount] => 15
-            [percent] => 24
-        )
-
-    [7] => Array
-        (
-            [fact] => Saturated Fat
-            [amount] => 3.5
-            [percent] => 18
-        )
-
-    [8] => Array
-        (
-            [fact] => Sodium
-            [amount] => 570
-            [percent] => 24
-        )
-
-    [9] => Array
-        (
-            [fact] => Sugars
-            [amount] => 0
-            [percent] => 0
-        )
-
-    [10] => Array
-        (
-            [fact] => Total Carbs
-            [amount] => 13
-            [percent] => 4
-        )
-
-    [11] => Array
-        (
-            [fact] => Total Fat
-            [amount] => 15
-            [percent] => 23
-        )
-
-    [12] => Array
-        (
-            [fact] => Trans Fat
-            [amount] => 0
-            [percent] => 0
-        )
-
-    [13] => Array
-        (
-            [fact] => Vitamin A
-            [amount] => 0
-            [percent] => 0
-        )
-
-    [14] => Array
-        (
-            [fact] => Vitamin C
-            [amount] => 0
-            [percent] => 0
-        )
-
-)
-----
-
+////
 === menus
 
 To query the CS50 Food API for menus, contact the server via URLs in
 this format:
 
 ----
-http://api.cs50.net/food/2/menus?param1=value1&param2=value2&...
+http://api.cs50.net/food/3/menus?param1=value1&param2=value2&...
 ----
 
 Supported parameters include:
@@ -376,8 +308,8 @@ this date will be returned. If omitted, `sdt` will be assumed.
 | `meal` | _Optional._ Meal to return. Must be `BREAKFAST`, `BRUNCH`,
 `LUNCH`, or `DINNER`. (`BRUNCH` and `LUNCH` are treated as synonyms, no
 matter the day of the week.) If omitted, all meals will be returned.
-| `output` | _Required._ Format for output. Must be `csv`, `json`, `jsonp`,
-or `php`.
+| `output` | _Required._ Format for output. Must be `json`, `jsonp`,
+or `xml`.
 | `sdt` | _Optional._ A start date in `YYYY-MM-DD` format. Menus from this
 date onward will be returned. If omitted, the current date will be
 assumed.
@@ -388,33 +320,6 @@ an empty response will be returned along with, possibly, HTTP status
 code
 http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.1[400 Bad
 Request].
-
-==== CSV
-
-If you request data in CSV format (e.g.,
-`http://api.cs50.net/food/2/menus?key=KEY&meal=BREAKFAST&sdt=2011-03-21&output=csv`, where `KEY` is your API key),
-the response will be a series of comma-delimited rows, per the below:
-
-[source,text]
-----
-date,meal,category,recipe,name,portion,unit
-2011-03-21,BREAKFAST,"BREAKFAST BAKERY",213012,"Aesops Bagels",1,each
-2011-03-21,BREAKFAST,"BREAKFAST BAKERY",213032,"Whole Wheat Blueberry Muffin",1,each
-2011-03-21,BREAKFAST,"BREAKFAST ENTREES",061003,"Scrambled Eggs",4,oz
-2011-03-21,BREAKFAST,"BREAKFAST ENTREES",061041,"Egg Beaters",4,oz
-2011-03-21,BREAKFAST,"BREAKFAST ENTREES",061042,"Egg Whites",4,oz
-2011-03-21,BREAKFAST,"BREAKFAST ENTREES",061056,"Eggs Cooked to Order",1,each
-2011-03-21,BREAKFAST,"BREAKFAST ENTREES",061062,"Vegetable Frittata",1/24,PAN
-2011-03-21,BREAKFAST,"BREAKFAST ENTREES",161049,"Hard Cooked Eggs",1,each
-2011-03-21,BREAKFAST,"BREAKFAST MEATS",089003,"Pork Sausage Pattie",2,each
-2011-03-21,BREAKFAST,"MAKE OR BUILD YOUR OWN",031003,"Oatmeal Steel Cut",6,"fl. oz"
-2011-03-21,BREAKFAST,"MAKE OR BUILD YOUR OWN",031008,Grits,6,"fl. oz"
-----
-
-Note that the response's first row defines the CSV file's fields.
-Fields' order may change over time, so do not hardcode indices into your
-own code. Use that first row to determine fields' indices dynamically,
-per this article on link:/tricks/#Parsing_CSV[parsing CSV].
 
 ==== JSON
 
@@ -538,160 +443,13 @@ the response will be a padded array of objects, per the below:
 parseResponse([{"date":"2011-03-21","meal":"BREAKFAST","category":"BREAKFAST BAKERY","recipe":"213012","name":"Aesops Bagels","portion":"1","unit":"each"},{"date":"2011-03-21","meal":"BREAKFAST","category":"BREAKFAST BAKERY","recipe":"213032","name":"Whole Wheat Blueberry Muffin","portion":"1","unit":"each"},{"date":"2011-03-21","meal":"BREAKFAST","category":"BREAKFAST ENTREES","recipe":"061003","name":"Scrambled Eggs","portion":"4","unit":"oz"},{"date":"2011-03-21","meal":"BREAKFAST","category":"BREAKFAST ENTREES","recipe":"061041","name":"Egg Beaters","portion":"4","unit":"oz"},{"date":"2011-03-21","meal":"BREAKFAST","category":"BREAKFAST ENTREES","recipe":"061042","name":"Egg Whites","portion":"4","unit":"oz"},{"date":"2011-03-21","meal":"BREAKFAST","category":"BREAKFAST ENTREES","recipe":"061056","name":"Eggs Cooked to Order","portion":"1","unit":"each"},{"date":"2011-03-21","meal":"BREAKFAST","category":"BREAKFAST ENTREES","recipe":"061062","name":"Vegetable Frittata","portion":"1\/24","unit":"PAN"},{"date":"2011-03-21","meal":"BREAKFAST","category":"BREAKFAST ENTREES","recipe":"161049","name":"Hard Cooked Eggs","portion":"1","unit":"each"},{"date":"2011-03-21","meal":"BREAKFAST","category":"BREAKFAST MEATS","recipe":"089003","name":"Pork Sausage Pattie","portion":"2","unit":"each"},{"date":"2011-03-21","meal":"BREAKFAST","category":"MAKE OR BUILD YOUR OWN","recipe":"031003","name":"Oatmeal Steel Cut","portion":"6","unit":"fl. oz"},{"date":"2011-03-21","meal":"BREAKFAST","category":"MAKE OR BUILD YOUR OWN","recipe":"031008","name":"Grits","portion":"6","unit":"fl. oz"}])
 ----
 
-
-==== PHP
-
-If you request data in
-(http://www.php.net/manual/en/language.oop5.serialization.php[serialized])
-PHP format (e.g.,
-`http://api.cs50.net/food/2/menus?key=KEY&meal=BREAKFAST&sdt=2011-03-21&output=php, where `KEY` is your API key),
-the response will be a serialized array of associative arrays, per the
-below:
-
-[source,php]
-----
-a:11:{i:0;a:7:{s:4:"date";s:10:"2011-03-21";s:4:"meal";s:9:"BREAKFAST";s:8:"category";s:16:"BREAKFAST BAKERY";s:6:"recipe";s:6:"213012";s:4:"name";s:13:"Aesops Bagels";s:7:"portion";s:1:"1";s:4:"unit";s:4:"each";}i:1;a:7:{s:4:"date";s:10:"2011-03-21";s:4:"meal";s:9:"BREAKFAST";s:8:"category";s:16:"BREAKFAST BAKERY";s:6:"recipe";s:6:"213032";s:4:"name";s:28:"Whole Wheat Blueberry Muffin";s:7:"portion";s:1:"1";s:4:"unit";s:4:"each";}i:2;a:7:{s:4:"date";s:10:"2011-03-21";s:4:"meal";s:9:"BREAKFAST";s:8:"category";s:17:"BREAKFAST ENTREES";s:6:"recipe";s:6:"061003";s:4:"name";s:14:"Scrambled Eggs";s:7:"portion";s:1:"4";s:4:"unit";s:2:"oz";}i:3;a:7:{s:4:"date";s:10:"2011-03-21";s:4:"meal";s:9:"BREAKFAST";s:8:"category";s:17:"BREAKFAST ENTREES";s:6:"recipe";s:6:"061041";s:4:"name";s:11:"Egg Beaters";s:7:"portion";s:1:"4";s:4:"unit";s:2:"oz";}i:4;a:7:{s:4:"date";s:10:"2011-03-21";s:4:"meal";s:9:"BREAKFAST";s:8:"category";s:17:"BREAKFAST ENTREES";s:6:"recipe";s:6:"061042";s:4:"name";s:10:"Egg Whites";s:7:"portion";s:1:"4";s:4:"unit";s:2:"oz";}i:5;a:7:{s:4:"date";s:10:"2011-03-21";s:4:"meal";s:9:"BREAKFAST";s:8:"category";s:17:"BREAKFAST ENTREES";s:6:"recipe";s:6:"061056";s:4:"name";s:20:"Eggs Cooked to Order";s:7:"portion";s:1:"1";s:4:"unit";s:4:"each";}i:6;a:7:{s:4:"date";s:10:"2011-03-21";s:4:"meal";s:9:"BREAKFAST";s:8:"category";s:17:"BREAKFAST ENTREES";s:6:"recipe";s:6:"061062";s:4:"name";s:18:"Vegetable Frittata";s:7:"portion";s:4:"1/24";s:4:"unit";s:3:"PAN";}i:7;a:7:{s:4:"date";s:10:"2011-03-21";s:4:"meal";s:9:"BREAKFAST";s:8:"category";s:17:"BREAKFAST ENTREES";s:6:"recipe";s:6:"161049";s:4:"name";s:16:"Hard Cooked Eggs";s:7:"portion";s:1:"1";s:4:"unit";s:4:"each";}i:8;a:7:{s:4:"date";s:10:"2011-03-21";s:4:"meal";s:9:"BREAKFAST";s:8:"category";s:15:"BREAKFAST MEATS";s:6:"recipe";s:6:"089003";s:4:"name";s:19:"Pork Sausage Pattie";s:7:"portion";s:1:"2";s:4:"unit";s:4:"each";}i:9;a:7:{s:4:"date";s:10:"2011-03-21";s:4:"meal";s:9:"BREAKFAST";s:8:"category";s:22:"MAKE OR BUILD YOUR OWN";s:6:"recipe";s:6:"031003";s:4:"name";s:17:"Oatmeal Steel Cut";s:7:"portion";s:1:"6";s:4:"unit";s:6:"fl. oz";}i:10;a:7:{s:4:"date";s:10:"2011-03-21";s:4:"meal";s:9:"BREAKFAST";s:8:"category";s:22:"MAKE OR BUILD YOUR OWN";s:6:"recipe";s:6:"031008";s:4:"name";s:5:"Grits";s:7:"portion";s:1:"6";s:4:"unit";s:6:"fl. oz";}}
-----
-
-Once you http://php.net/manual/en/function.unserialize.php[unserialize]
-that response, you'll have the below in memory:
-
-[source,php]
-----
-Array
-(
-    [0] => Array
-        (
-            [date] => 2011-03-21
-            [meal] => BREAKFAST
-            [category] => BREAKFAST BAKERY
-            [recipe] => 213012
-            [name] => Aesops Bagels
-            [portion] => 1
-            [unit] => each
-        )
-
-    [1] => Array
-        (
-            [date] => 2011-03-21
-            [meal] => BREAKFAST
-            [category] => BREAKFAST BAKERY
-            [recipe] => 213032
-            [name] => Whole Wheat Blueberry Muffin
-            [portion] => 1
-            [unit] => each
-        )
-
-    [2] => Array
-        (
-            [date] => 2011-03-21
-            [meal] => BREAKFAST
-            [category] => BREAKFAST ENTREES
-            [recipe] => 061003
-            [name] => Scrambled Eggs
-            [portion] => 4
-            [unit] => oz
-        )
-
-    [3] => Array
-        (
-            [date] => 2011-03-21
-            [meal] => BREAKFAST
-            [category] => BREAKFAST ENTREES
-            [recipe] => 061041
-            [name] => Egg Beaters
-            [portion] => 4
-            [unit] => oz
-        )
-
-    [4] => Array
-        (
-            [date] => 2011-03-21
-            [meal] => BREAKFAST
-            [category] => BREAKFAST ENTREES
-            [recipe] => 061042
-            [name] => Egg Whites
-            [portion] => 4
-            [unit] => oz
-        )
-
-    [5] => Array
-        (
-            [date] => 2011-03-21
-            [meal] => BREAKFAST
-            [category] => BREAKFAST ENTREES
-            [recipe] => 061056
-            [name] => Eggs Cooked to Order
-            [portion] => 1
-            [unit] => each
-        )
-
-    [6] => Array
-        (
-            [date] => 2011-03-21
-            [meal] => BREAKFAST
-            [category] => BREAKFAST ENTREES
-            [recipe] => 061062
-            [name] => Vegetable Frittata
-            [portion] => 1/24
-            [unit] => PAN
-        )
-
-    [7] => Array
-        (
-            [date] => 2011-03-21
-            [meal] => BREAKFAST
-            [category] => BREAKFAST ENTREES
-            [recipe] => 161049
-            [name] => Hard Cooked Eggs
-            [portion] => 1
-            [unit] => each
-        )
-
-    [8] => Array
-        (
-            [date] => 2011-03-21
-            [meal] => BREAKFAST
-            [category] => BREAKFAST MEATS
-            [recipe] => 089003
-            [name] => Pork Sausage Pattie
-            [portion] => 2
-            [unit] => each
-        )
-
-    [9] => Array
-        (
-            [date] => 2011-03-21
-            [meal] => BREAKFAST
-            [category] => MAKE OR BUILD YOUR OWN
-            [recipe] => 031003
-            [name] => Oatmeal Steel Cut
-            [portion] => 6
-            [unit] => fl. oz
-        )
-
-    [10] => Array
-        (
-            [date] => 2011-03-21
-            [meal] => BREAKFAST
-            [category] => MAKE OR BUILD YOUR OWN
-            [recipe] => 031008
-            [name] => Grits
-            [portion] => 6
-            [unit] => fl. oz
-        )
-
-)
-----
-
-
 === recipes
 
 To query the CS50 Food API for recipes, contact the server via URLs in
 this format:
 
 ----
-http://api.cs50.net/food/2/recipes?param1=value1&param2=value2&...
+http://api.cs50.net/food/3/recipes?param1=value1&param2=value2&...
 ----
 
 Supported parameters include:
@@ -701,8 +459,8 @@ Supported parameters include:
 | `parameter` | description
 | `key` | _Required._ Your API key.
 | `id` | _Optional._ Comma-separated list of IDs of recipes to get.
-| `output` | _Required._ Format for output. Must be `csv`, `json`, `jsonp`,
-or `php`.
+| `output` | _Required._ Format for output. Must be `json`, `jsonp`,
+or `xml`.
 |===
 
 If any parameters are malformed or any required parameters are omitted,
@@ -713,23 +471,6 @@ Request].
 
 Among the fields returned will be a recipe's usual serving size and its
 unit of measure.
-
-==== CSV
-
-If you request data in CSV format (e.g.,
-`http://api.cs50.net/food/2/recipes?key=KEY&id=117003&output=csv`, where `KEY` is your API key), the response
-will be a series of comma-delimited rows, per the below:
-
-[source,text]
-----
-id,name,size,unit,ingredients,VEGETARIAN,VEGAN,"MOLLIE KATZEN",LOCAL,ORGANIC
-117003,Chickwich,1,each,"Chicken Patty (* INGREDIENT STATEMENT * Chicken breast with rib meat, water, vegetable protein product (isolated soy protein, magnesium oxide, zinc oxide, niacinamide, ferrous sulfate, vitamin B12, copper gluconate, vitamin A palmitate, calcium pantothenate, pyridoxine hydrochloride, thiamine mononitrate, riboflavin), dried whole egg, seasoning (salt, onion powder, modified corn starch, natural flavor), and sodium phosphates. BREADED WITH: Enriched wheat flour (enriched with niacin, ferrous sulfate, thiamine mononitrate, riboflavin, folic acid), water, enriched bleached wheat flour (enriched with niacin, ferrous sulfate, thiamine mononitrate, riboflavin, folic acid), salt, modified corn starch, spices, dextrose, garlic powder, oleoresin paprika and annatto, xanthan gum, and natural flavors. Breading set in vegetable oil.)",FALSE,FALSE,FALSE,FALSE,FALSE
-----
-
-Note that the response's first row defines the CSV file's fields.
-Fields' order may change over time, so do not hardcode indices into your
-own code. Use that first row to determine fields' indices dynamically,
-per this article on link:/tricks/#Parsing_CSV[parsing CSV].
 
 ==== JSON
 
@@ -766,73 +507,34 @@ the response will be a padded array of objects, per the below:
 parseResponse({"id":"117003","name":"Chickwich","size":"1","unit":"each","ingredients":"Chicken Patty (* INGREDIENT STATEMENT * Chicken breast with rib meat, water, vegetable protein product (isolated soy protein, magnesium oxide, zinc oxide, niacinamide, ferrous sulfate, vitamin B12, copper gluconate, vitamin A palmitate, calcium pantothenate, pyridoxine hydrochloride, thiamine mononitrate, riboflavin), dried whole egg, seasoning (salt, onion powder, modified corn starch, natural flavor), and sodium phosphates. BREADED WITH: Enriched wheat flour (enriched with niacin, ferrous sulfate, thiamine mononitrate, riboflavin, folic acid), water, enriched bleached wheat flour (enriched with niacin, ferrous sulfate, thiamine mononitrate, riboflavin, folic acid), salt, modified corn starch, spices, dextrose, garlic powder, oleoresin paprika and annatto, xanthan gum, and natural flavors. Breading set in vegetable oil.)","VEGETARIAN":"FALSE","VEGAN":"FALSE","MOLLIE KATZEN":"FALSE","LOCAL":"FALSE","ORGANIC":"FALSE"})
 ----
 
-==== PHP
-
-If you request data in
-(http://www.php.net/manual/en/language.oop5.serialization.php[serialized])
-PHP format (e.g.,
-`http://api.cs50.net/food/2/recipes?key=KEY&id=117003&output=php`, where `KEY` is your API key), the response
-will be a serialized array of associative arrays, per the below:
-
-[source,php]
-----
-a:10:{s:2:"id";s:6:"117003";s:4:"name";s:9:"Chickwich";s:4:"size";s:1:"1";s:4:"unit";s:4:"each";s:11:"ingredients";s:833:"Chicken Patty (* INGREDIENT STATEMENT * Chicken breast with rib meat, water, vegetable protein product (isolated soy protein, magnesium oxide, zinc oxide, niacinamide, ferrous sulfate, vitamin B12, copper gluconate, vitamin A palmitate, calcium pantothenate, pyridoxine hydrochloride, thiamine mononitrate, riboflavin), dried whole egg, seasoning (salt, onion powder, modified corn starch, natural flavor), and sodium phosphates. BREADED WITH: Enriched wheat flour (enriched with niacin, ferrous sulfate, thiamine mononitrate, riboflavin, folic acid), water, enriched bleached wheat flour (enriched with niacin, ferrous sulfate, thiamine mononitrate, riboflavin, folic acid), salt, modified corn starch, spices, dextrose, garlic powder, oleoresin paprika and annatto, xanthan gum, and natural flavors. Breading set in vegetable oil.)";s:10:"VEGETARIAN";s:5:"FALSE";s:5:"VEGAN";s:5:"FALSE";s:13:"MOLLIE KATZEN";s:5:"FALSE";s:5:"LOCAL";s:5:"FALSE";s:7:"ORGANIC";s:5:"FALSE";}
-----
-
-Once you http://php.net/manual/en/function.unserialize.php[unserialize]
-that response, you'll have the below in memory:
-
-[source,php]
-----
-Array
-(
-    [id] => 117003
-    [name] => Chickwich
-    [size] => 1
-    [unit] => each
-    [ingredients] => Chicken Patty (* INGREDIENT STATEMENT * Chicken breast with rib meat, water, vegetable protein product (isolated soy protein, magnesium oxide, zinc oxide, niacinamide, ferrous sulfate, vitamin B12, copper gluconate, vitamin A palmitate, calcium pantothenate, pyridoxine hydrochloride, thiamine mononitrate, riboflavin), dried whole egg, seasoning (salt, onion powder, modified corn starch, natural flavor), and sodium phosphates. BREADED WITH: Enriched wheat flour (enriched with niacin, ferrous sulfate, thiamine mononitrate, riboflavin, folic acid), water, enriched bleached wheat flour (enriched with niacin, ferrous sulfate, thiamine mononitrate, riboflavin, folic acid), salt, modified corn starch, spices, dextrose, garlic powder, oleoresin paprika and annatto, xanthan gum, and natural flavors. Breading set in vegetable oil.)
-    [VEGETARIAN] => FALSE
-    [VEGAN] => FALSE
-    [MOLLIE KATZEN] => FALSE
-    [LOCAL] => FALSE
-    [ORGANIC] => FALSE
-)
-----
-
 == Examples
 
 where `KEY` is your API key
 
 * Returns today's entire menu:
-** `http://api.cs50.net/food/2/menus?key=KEY&output=csv`
 ** `http://api.cs50.net/food/2/menus?key=KEY&output=json`
 ** `http://api.cs50.net/food/2/menus?key=KEY&output=jsonp&callback=parseResponse`
-** `http://api.cs50.net/food/2/menus?key=KEY&output=php`
+** `http://api.cs50.net/food/2/menus?key=KEY&output=xml`
 * Returns today's lunch menu:
-** `http://api.cs50.net/food/2/menus?key=KEY&meal=LUNCH&output=csv`
 ** `http://api.cs50.net/food/2/menus?key=KEY&meal=LUNCH&output=json`
 ** `http://api.cs50.net/food/2/menus?key=KEY&meal=LUNCH&output=jsonp&callback=parseResponse`
-** `http://api.cs50.net/food/2/menus?key=KEY&meal=LUNCH&output=php`
+** `http://api.cs50.net/food/2/menus?key=KEY&meal=LUNCH&output=xml`
 * Returns 21 March 2011's entire menu:
-** `http://api.cs50.net/food/2/menus?key=KEY&sdt=2011-03-21&output=csv`
 ** `http://api.cs50.net/food/2/menus?key=KEY&sdt=2011-03-21&output=json`
 ** `http://api.cs50.net/food/2/menus?key=KEY&sdt=2011-03-21&output=jsonp&callback=parseResponse`
-** `http://api.cs50.net/food/2/menus?key=KEY&sdt=2011-03-21&output=php`
+** `http://api.cs50.net/food/2/menus?key=KEY&sdt=2011-03-21&output=xml`
 * Returns 21 March 2011's breakfast menu:
-** `http://api.cs50.net/food/2/menus?key=KEY&meal=BREAKFAST&sdt=2011-03-21&output=csv`
 ** `http://api.cs50.net/food/2/menus?key=KEY&meal=BREAKFAST&sdt=2011-03-21&output=json`
 ** `http://api.cs50.net/food/2/menus?key=KEY&meal=BREAKFAST&sdt=2011-03-21&output=jsonp&callback=parseResponse`
-** `http://api.cs50.net/food/2/menus?key=KEY&meal=BREAKFAST&sdt=2011-03-21&output=php`
+** `http://api.cs50.net/food/2/menus?key=KEY&meal=BREAKFAST&sdt=2011-03-21&output=xml`
 * Returns a Chickwich's nutritional facts:
-** `http://api.cs50.net/food/2/facts?key=KEY&recipe=117003&portion=1&output=csv`
 ** `http://api.cs50.net/food/2/facts?key=KEY&recipe=117003&portion=1&output=json`
 ** `http://api.cs50.net/food/2/facts?key=KEY&recipe=117003&portion=1&output=jsonp&callback=parseResponse`
-** `http://api.cs50.net/food/2/facts?key=KEY&recipe=117003&portion=1&output=php`
+** `http://api.cs50.net/food/2/facts?key=KEY&recipe=117003&portion=1&output=xml`
 * Returns a Chickwich's recipe:
-** `http://api.cs50.net/food/2/recipes?key=KEY&id=117003&output=csv`
 ** `http://api.cs50.net/food/2/recipes?key=KEY&id=117003&output=json`
 ** `http://api.cs50.net/food/2/recipes?key=KEY&id=117003&output=jsonp&callback=parseResponse`
-** `http://api.cs50.net/food/2/recipes?key=KEY&id=117003&output=php`
+** `http://api.cs50.net/food/2/recipes?key=KEY&id=117003&output=xml`
 
 ////
 == Implementations
@@ -849,8 +551,7 @@ just a tiny icon right next to your address bar."
 * http://en.wikipedia.org/wiki/Comma-separated_values[Comma-separated values]
 * http://en.wikipedia.org/wiki/JSON[JSON]
 * http://en.wikipedia.org/wiki/JSON#JSONP[JSONP]
-* http://php.net/manual/en/function.serialize.php[PHP: serialize]
-* http://php.net/manual/en/function.unserialize.php[PHP: unserialize]
+* http://en.wikipedia.org/wiki/XML[XML]
 * http://en.wikipedia.org/wiki/Web_scraping[Web scraping]
 
 == Changelog
