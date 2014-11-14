@@ -175,7 +175,7 @@ _by Roger Zurawicki_
 This is a hands-on introduction to Meteor, a JavaScript and Node.js framework built for the future. Meteor is an open-source platform for building top-quality web apps in a fraction of the time, whether you're an expert developer or just getting started. Meter rocks because: you write in the same language on both the server and the browser; 50 lines of code gets you a working chat app; your app will work in real time; you get an awesome package system; and you can run your app natively on iOS and Android. Find out more at https://www.meteor.com/ 
 
 * http://cdn.cs50.net/2014/fall/seminars/meteorjs/meteorjs.zip[Source Code]
-* http://cs50.tv/2014/fall/seminars/meteorjs/[Video (pre-release)]
+* http://cs50.tv/2014/fall/seminars/meteorjs/[Video]
 	
 === Teach Your Computer to See: Augmented Reality with OpenCV
 
