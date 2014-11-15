@@ -99,7 +99,8 @@ _by David Chouinard_
 
 Learn to convey valuable insights through interactive maps, charts and diagrams. We’ll explore D3, a JavaScript library, and learn the tools for producing interactive web-based data visualization.
 
-* http://live.cs50.net/events/2504773/videos/68018483/player[Video (pre-release)]
+* http://cdn.cs50.net/2014/fall/seminars/data_visualization/data_visualization.pdf[Slides]
+* http://cs50.tv/2014/fall/seminars/data_visualization/[Video]
 
 === Essential Scale-Out Computing
 
@@ -117,7 +118,7 @@ This seminar is a fast-paced introduction to photography. We'll cover exposure, 
 
 * http://cdn.cs50.net/2014/fall/seminars/digital_photography/digital_photography_handout.pdf[Handout]
 * http://cdn.cs50.net/2014/fall/seminars/digital_photography/digital_photography.pdf[Slides]
-* http://live.cs50.net/events/2504773/videos/68029638/player[Video (pre-release)]
+* http://cs50.tv/2014/fall/seminars/digital_photography/[Video (pre-release)]
 
 === Futuristic User Interactions: An Introduction to Leap Motion
 
