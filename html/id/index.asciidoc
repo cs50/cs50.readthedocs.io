@@ -674,7 +674,7 @@ def index
 end
 ----
 
-Now, create the corresponding view, `/app/views/auth.html.erb`:
+Now, create the corresponding view, `/app/views/index.html.erb`:
 
 [source,ruby]
 ----
@@ -700,10 +700,10 @@ the following to `/app/config/routes.rb`
 
 [source,ruby]
 ----
-match 'auth' => 'auth#index'
-match 'auth/login' => 'auth#login'
-match 'auth/logout' => 'auth#logout'
-match 'auth/return' => 'auth#return'
+get 'auth' => 'auth#index'
+post 'auth/login' => 'auth#login'
+get 'auth/logout' => 'auth#logout'
+get 'auth/return' => 'auth#return'
 ----
 
 To run the app, start the Rails server with:
