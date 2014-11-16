@@ -10,7 +10,7 @@ follows.
 
 [source,php]
 ----
-require_once("PHPMailer/class.phpmailer.php");
+require("libphp-phpmailer/class.phpmailer.php");
 ----
 
 PHPMailer's website is a bit tricky to navigate, so here are direct
