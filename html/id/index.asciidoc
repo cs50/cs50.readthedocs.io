@@ -701,7 +701,7 @@ the following to `/app/config/routes.rb`
 [source,ruby]
 ----
 get 'auth' => 'auth#index'
-post 'auth/login' => 'auth#login'
+get 'auth/login' => 'auth#login'
 get 'auth/logout' => 'auth#logout'
 get 'auth/return' => 'auth#return'
 ----
