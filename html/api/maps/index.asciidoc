@@ -40,7 +40,7 @@ http://en.wikipedia.org/wiki/Cross-Origin_Resource_Sharing[CORS].
 To query the HarvardMaps API for buildings, contact the server via URLs
 in this format:
 
-`http://maps.cs50.net/api/1.3/channels?param1=value1&param2=value2&...`
+`http://api.cs50.net/maps/2/buildings?param1=value1&param2=value2&...`
 
 Supported parameters include:
 
@@ -76,7 +76,7 @@ values. Some building IDs and some roots include leading zeroes.
 ==== JSON
 
 If you request channels in JSON format (e.g.,
-http://maps.cs50.net/api/1.3/buildings?root=03364,03365&output=json),
+http://api.cs50.net/maps/2/buildings?root=03364,03365&output=json),
 the response wil be an array of objects, per the below:
 
 [source,javascript]
@@ -103,7 +103,7 @@ the response wil be an array of objects, per the below:
 ==== JSONP
 
 If you request channels in JSONP format (e.g.,
-http://maps.cs50.net/api/1.3/buildings?root=03364,03365&output=jsonp&callback=parseResponse),
+http://api.cs50.net/maps/2/buildings?root=03364,03365&output=jsonp&callback=parseResponse),
 the response will be a padded array of objects, per the below:
 
 [source,javascript]
@@ -114,7 +114,7 @@ parseResponse([{"root":"03364","id":"991","name":"Mather House","lat":"42.368270
 ==== XML
 
 If you request data in XML format (e.g.,
-http://maps.cs50.net/api/1.3/buildings?root=03364,03365&output=xml), the
+http://api.cs50.net/maps/2/buildings?root=03364,03365&output=xml), the
 response will be an XML document whose root element is *buildings*, each
 of whose children is a *building*, per the below:
 
@@ -143,13 +143,13 @@ of whose children is a *building*, per the below:
 ==== Examples
 
 * Returns all buildings:
-** http://maps.cs50.net/api/1.3/buildings?output=json
-** http://maps.cs50.net/api/1.3/buildings?output=jsonp&callback=parseResponse
-** http://maps.cs50.net/api/1.3/buildings?output=xml
+** http://api.cs50.net/maps/2/buildings?output=json
+** http://api.cs50.net/maps/2/buildings?output=jsonp&callback=parseResponse
+** http://api.cs50.net/maps/2/buildings?output=xml
 * Returns Mather House:
-** http://maps.cs50.net/api/1.3/buildings?id=991&output=json
-** http://maps.cs50.net/api/1.3/buildings?id=991&output=jsonp&callback=parseResponse
-** http://maps.cs50.net/api/1.3/buildings?id=991&output=xml
+** http://api.cs50.net/maps/2/buildings?id=991&output=json
+** http://api.cs50.net/maps/2/buildings?id=991&output=jsonp&callback=parseResponse
+** http://api.cs50.net/maps/2/buildings?id=991&output=xml
 
 
 == External Links
