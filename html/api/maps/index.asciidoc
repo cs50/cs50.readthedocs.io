@@ -170,4 +170,5 @@ https://manual.cs50.net.php?title=HarvardMaps_API&oldid=4364[1.2]
 * 1.3
 ** Fixed bug in CSV format whereby `address` header was omitted.
 * 2
-** Added API keys, changed backend to python
+** Added API keys
+** Changed backend to python
