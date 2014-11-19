@@ -62,6 +62,7 @@ _by Jeffrey Licht_
 
 Get your hands on the full bibliographic data about virtually all of the 12.7 million items in the Harvard Library collection, plus millions of images, plus some extremely anonymized usage data, and more. All of this can be put to use in the apps you'll learn to write that use the API of Harvard Library Cloud, a new open metadata server. Library metadata is rich, complex, and very human, so let's dig in!
 
+* http://cdn.cs50.net/2014/fall/seminars/building_tomorrows_library.pdf[Slides]
 * http://live.cs50.net/events/2504773/videos/68625175/player[Video (pre-release)]
 
 === Building Dynamic Web Apps with Laravel
@@ -159,6 +160,7 @@ _by Tianyu Liu_
 
 Ever wanted to build your own iOS app with Objective-C but didn't know where to start? Learn the basic introduction to iOS and get started making your cool apps on the App Store.
 
+* http://cdn.cs50.net/2014/fall/seminars/apps_with_objective_c.pdf[Slides]
 * http://live.cs50.net/events/2504773/videos/68634930/player[Video (pre-release)]
 
 === Light Your World (with Hue Bulbs)
