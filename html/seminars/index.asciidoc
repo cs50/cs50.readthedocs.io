@@ -38,6 +38,8 @@ _by Fred Widjaja_
 
 Learn the basics of building apps on Android, the world's most popular mobile platform! We'll also be going through how to code in Java and how to use development tools like Android Studio.
 
+* http://cdn.cs50.net/2014/fall/seminars/android101/android101.pdf[Slides]
+* http://cdn.cs50.net/2014/fall/seminars/android101/android101.zip[Source Code]
 * http://live.cs50.net/events/2504773/videos/68856633/player[Video (pre-release)]
 
 === Breaking Through The (Google) Glass Ceiling
@@ -123,6 +125,7 @@ _by Armaghan Behlum and Tomas Reimers_
 
 The leap motion is a device that allows users to interact with the computer by moving their hands in front of it. Students will learn how to write code that takes advantage of the leap motion and build websites that the user can interact with using simple hand gestures.
 
+* http://cdn.cs50.net/2014/fall/seminars/user_interactions/user_interactions.zip[Source Code]
 * http://live.cs50.net/events/2504773/videos/68864010/player[Video (pre-release)]
 
 === How to Build Innovative Technologies
