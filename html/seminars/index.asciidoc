@@ -103,6 +103,8 @@ _by James Cuff_
 
 Each day you interact with thousands upon thousands of processors, servers, storage systems and high-speed networks. You don't see them, and you don't physically touch them, but they are there, making everything happen behind the scenes. Everything is powered by advanced computing, from your morning news, movie and video streams, phone conversations, currency, financial markets, pharmaceuticals, navigation, traffic, weather, email and of course all of our social media updates.  Each of us consumes vast amounts of data and computation on a daily basis. We also continue to push the boundaries of our science and discovery. Using ever more complex computer models to peer into the darkness of space or to understanding the genetic basis as to why were are human. All of this needs computing for it to work correctly, and it also needs advanced infrastructure and distributed computing architectures to work quickly.  James Cuff is the Assistant Dean for Research Computing here at Harvard. His group runs more than sixty thousand high performance computing processors and more than fourteen petabytes of storage for science. On a global scale, this system is tiny. However, he will show you real world examples of the advances in computation science, physical infrastructure and distributed computing systems we are using each day, whether you are a particle physicist trying to reverse engineer the very fabric of the universe – or maybe you are just updating your selfie...  So what will you learn from this seminar? You are all designing software for your final project. Facebook for example, was originally designed as a small single server PHP application. In order to make it scale to today’s hundreds of thousands of servers and billions of users took years. James will explain how both datacenter and systems architectures that now surpass electrical power usage of 10-20 megawatts – (enough to power more than 20,000 houses, nearly half of the City of Cambridge) enable today’s applications to scale. Each computation, be it add, subtract, multiply, divide, strcmp(), grep or memory hash lookup you make in your application now matters. You will be shown not only how distributed computing factors into your applications, but also how the actual energy efficiency of your algorithms matters. Designing, and thinking about how your application will scale from the beginning to potentially manage 10,000’s of page impressions a second is now the new normal.
 
+* http://cdn.cs50.net/2014/fall/seminars/scale_out_computing/scale_out_computing.pptx[PowerPoint with Video]
+* http://cdn.cs50.net/2014/fall/seminars/scale_out_computing/scale_out_computing.pdf[Slides]
 * http://live.cs50.net/events/2504773/videos/68841595/player[Video (pre-release)]
 
 === Exposing Digital Photography
@@ -147,7 +149,7 @@ _by Dan Armendariz_
 An introduction to iOS programming using Swift, Apple's new programming language for Macs and iOS devices. We will cover the basics of the language, using APIs in your app, and deploying your app to an iOS device. Development requires a recent Mac with OS X 10.9.4 or later and, optional (but recommended), a device running iOS 7 or later.
 
 * http://cdn.cs50.net/2014/fall/seminars/swift/swift.pdf[Slides]
-* http://cdn.cs50.net/2014/fall/seminars/swift/swift.zip[Slides]
+* http://cdn.cs50.net/2014/fall/seminars/swift/swift.zip[Source Code]
 * http://live.cs50.net/events/2504773/videos/68850913/player[Video (pre-release)]
 
 === Learning iOS: Create your own app with Objective-C!
