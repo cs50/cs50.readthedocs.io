@@ -45,6 +45,8 @@ http://en.wikipedia.org/wiki/Cross-Origin_Resource_Sharing[CORS].
 The online https://docs.cs50.net/docs[documentation] allows you, once you sign in, 
 to try out making queries on you own, so be sure to try out some queries and see how it works.
 
+== Bug Report
+If you find bugs in any CS50 API, email mailto:api@cs50.net[api@cs50.net] with your bug.
 
 === courses
 
