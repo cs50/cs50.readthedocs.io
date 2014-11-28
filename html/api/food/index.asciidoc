@@ -18,7 +18,7 @@ requests.
 With some exceptions, the API's database contains menus from 2009-10-28
 through the present date plus 6 days into the future; only for menus
 from 2011-03-21 onward are nutritional facts, portions, and recipes
-available. This manual's article on link:/scraping/[Screen Scraping]
+available. This manual's article on link:../../scraping[Screen Scraping]
 discusses how this API gets its data.
 
 *Version 3 is online, all previous versions are deprecated.*
@@ -45,6 +45,15 @@ Usage of this API is limited to 60 queries per minute.
 
 All methods support
 http://en.wikipedia.org/wiki/Cross-Origin_Resource_Sharing[CORS].
+
+== Try it out!
+
+The online https://docs.cs50.net/docs[documentation] allows you, once you sign in, 
+to try out making queries on you own, so be sure to try out some queries and see how it works.
+
+== Bug Report
+If you find bugs in any CS50 API, email mailto:api@cs50.net[api@cs50.net] with your bug.
+
 
 === facts
 
