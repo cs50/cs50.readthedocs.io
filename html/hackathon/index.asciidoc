@@ -3,18 +3,18 @@
 
 The CS50 Hackathon is an epic all-nighter in the http://shepleybulfinch.com/images/hub_images/sb_home_944x583_harvard_hi_2.jpg[HBS Hives] atop the http://i-lab.harvard.edu/[i-lab] at https://maps.google.com/maps?t=m&q=125+Western+Avenue%2C+Boston+MA&output=classic[125 Western Avenue] during
 which you can dive into your final project's implementation alongside
-classmates and staff. If you choose to partake, you’ll be asked to
+classmates and staff. If you choose to partake, you'll be asked to
 propose three milestones for yourself that evening: a "good" one that
 you intend to achieve no matter what; a "better" one that you think you
-can achieve; and a "best" one that you hope to achieve. Pizza will be
-served around 9:00pm; Chinese food will be served around 1:30am; and
-those still standing at 5:00am will be treated to breakfast at IHOP.
+can achieve; and a "best" one that you hope to achieve. Felipe's will be
+served around 9pm; Dominos will be served around 1am; and
+those still standing at 5am will be treated to breakfast at IHOP.
 Snacks and drinks will be served throughout the evening.
 
 *Space is limited, so attendance is lotteried. If you RSVPed for a spot
 at this year's Hackathon, you should have heard from the CS50 Bot
 already as to whether you have a spot or were waitlisted. If not, email
-heads@cs50.net to inquire.*
+heads@cs50.harvard to inquire.*
 
 *Space at IHOP is even more limited, so attendance at breakfast may be lotteried separately, depending on how many classmates are still awake at 5am!*
 
@@ -25,18 +25,18 @@ So that check-in isn't overwhelmed (and you aren't stuck waiting in line), do ar
 [options=header,width=75%]
 |===
 | If your LAST name starts with... | arrive at HBS Hives at...
-| A – G | 7:45pm
-| H – N | 8:00pm
-| O – Z | 8:15pm
+| A – G | 7:00pm
+| H – N | 7:15pm
+| O – Z | 7:30pm
 |===
 
 == How to get there
 
 * If *walking* from, say, Widener Library, http://goo.gl/maps/wYNIo[follow this route].  Odds are the walk will take *20+ minutes*.
-* If *taking the shuttle*, know that the Allston Express is scheduled to depart Lamont Library for the i-lab (which is where the HBS Hives are) at 7:35pm, 7:50pm, 8:05pm, 8:20pm, 8:50pm, 9:05pm, 9:20pm, 9:35pm, 9:50pm, 10:05pm, 10:35pm, 11:05pm, 11:35pm, and 12:05am.  Those are regularly scheduled shuttles, not CS50 Shuttles, so space will be limited.  Odds are the drive will take *10+ minutes*.
+* If *taking the shuttle*, take the Allston Express to the i-lab (which is where the HBS Hives are), per the schedule for the http://www.transportation.harvard.edu/shuttle-van-services/shuttles-schedule/evening-nights-monday-friday[Allston Campus Express PM]; consult the column called *Hi Lab*. Those are regularly scheduled shuttles, not CS50 Shuttles, so space will be limited.  Odds are the trip will take *10+ minutes*.
 * If *driving*, drive to https://maps.google.com/maps?t=m&q=125+Western+Avenue%2C+Boston+MA&output=classic[125 Western Avenue] in Allston (aka Boston).  Metered parking is available *behind* the i-lab, in the lot whose entrance is on Western Avenue itself.
 
-If you find yourself lost, call 617-BUG-CS50, option 0, and tell us what you see around you!
+If you find yourself lost, call 617-BUG-CS50, option H, and tell us what you see around you!
 
 == What to bring 
 
@@ -49,12 +49,12 @@ of the CS50 Bot's confirmation of your spot)
 
 === You might also want to bring...
 
+* Blanket; Pillow
 * Camera
 * Contact lens case/solution; eyeglasses
 * Headphones; iPod
 * Phone with charger
 * Sweater/sweatshirt
-* Pillow
 
 === You may not bring...
 
@@ -66,8 +66,8 @@ of the CS50 Bot's confirmation of your spot)
 
 Space is limited, so attendance is lotteried. If you registered for a
 spot at this year's Hackathon, you should have heard from the CS50 Bot
-by Tue 12/3 as to whether you have a spot! If not, email
-heads@cs50.net to inquire.
+by Tue 12/2 as to whether you have a spot! If not, email
+heads@cs50.harvard.edu to inquire.
 
 === Can I arrive late?
 
@@ -77,25 +77,23 @@ to those who can partake for the entire time.)
 
 === Can I leave early?
 
-If you really, really want to, yes.  If you leave before 3am, call the http://www.campusservices.harvard.edu/transit-fleet/evening-van-service[Evening Van Service] at 617-495-0400 before 2:30am to arrange for pick-up.  If you leave between 3am and 5am, best to call 617-782-5500 for a taxi.  If leaving on foot, be sure to walk with multiple friends.
-
-But you'll miss out when we link:#raffle[raffle off 4 Wiis around 5am]!
+If you really, really want to, yes.  If you leave before 3am, call the http://www.transportation.harvard.edu/shuttle-van-services/evening-van-service[Evening Van Service] at 617-495-0400 before 2:30am to arrange for pick-up. If you leave between 3am and 5am, best to use https://www.uber.com/[Uber] or call 617-782-5500 for a taxi. If leaving on foot, be sure to walk with multiple friends.
 
 === Will there be shuttles?
 
-*If, because of mobility impairment or medical condition, you find it difficult or impossible to use Harvard's shuttles, do contact the http://www.campusservices.harvard.edu/transit-fleet/evening-van-service[Evening Van Service] in advance of the Hackathon to make arrangements to and from the Hackathon.  Just let heads@cs50.net know if you need a hand.*
+*If, because of mobility impairment or medical condition, you find it difficult or impossible to use Harvard's shuttles, do contact the http://www.transportation.harvard.edu/shuttle-van-services/evening-van-service[Evening Van Service] in advance of the Hackathon to make arrangements to and from the Hackathon.  Just let heads@cs50.harvard.edu know if you need a hand.*
 
 ==== To the Hackathon?
 
-Yes, via regularly scheduled shuttles.  But space will be limited, so it's probably best to walk to the Hackathon instead with friends.
+Yes, via regularly scheduled shuttles. But space will be limited, so it's probably best to walk to the Hackathon instead with friends.
 
-With that said, the Allston Express is scheduled to depart Lamont Library for the i-lab (which is where the HBS Hives are) at 7:35pm, 7:50pm, 8:05pm, 8:20pm, 8:50pm, 9:05pm, 9:20pm, 9:35pm, 9:50pm, 10:05pm, 10:35pm, 11:05pm, 11:35pm, and 12:05am.  Those are regularly scheduled shuttles, not CS50 Shuttles, so space will be limited.  Odds are the drive will take *10+ minutes*.
+With that said, you can take the Allston Express to the i-lab (which is where the HBS Hives are), per the schedule for the   http://www.transportation.harvard.edu/shuttle-van-services/shuttles-schedule/evening-nights-monday-friday[Allston Campus Express PM]; consult the column called *Hi Lab*. Those are regularly scheduled shuttles, not CS50 Shuttles, so space will be limited.  Odds are the trip will take *10+ minutes*.
 
 ==== From the Hackathon?
 
-Yes, via chartered CS50 Shuttles.  Most of the shuttles will likely depart the Hackathon for IHOP around 5am, depending on how many classmates are (still!) hungry.  A few shuttles will head to the River houses, Yard, and Quad.
+Yes, via chartered CS50 Shuttles. Some of the shuttles will head to IHOP around 5am, depending on how many classmates are (still!) hungry, and some shuttles will head to the River houses, Yard, and Quad.
 
-With that said, space will still be limited, even though we've literally reserved every shuttle that Harvard owns!  So the shuttles destined for the River houses, Yard, and Quad will likely make multiple loops, in which case there might be a bit of a wait.  But you're welcome to walk home with friends if you'd rather not wait!
+With that said, space will still be limited, even though we've literally reserved every shuttle that Harvard owns! So the shuttles destined for the River houses, Yard, and Quad will likely make multiple loops, in which case there might be a bit of a wait. But you're welcome to walk home with friends if you'd rather not wait!
 
 Please forgive, especially if weary or grumpy at that hour, if we can't quite fit everyone into shuttles all at once!
 
@@ -108,16 +106,16 @@ Please forgive if we can't accommodate everyone who'd like to go!
 === What if I can't attend after all?
 
 If the CS50 Bot confirmed your spot but you can no longer attend, please
-email heads@cs50.net right away so that we can give your spot to
+email heads@cs50.harvard.edu right away so that we can give your spot to
 someone who's waitlisted.
 
 === What if my partner was waitlisted but I wasn't?
 
-Let heads@cs50.net know.
+Let heads@cs50.harvard.edu know.
 
 === Will there be food and drinks?
 
-Yes!  But we're literally maxing out the capacities of two Dominos plus a Chinese restaurant, so do be gentle with quantities.  We thought it best to de-waitlist as many classmates as possible, albeit at a risk of running low on food!
+Yes! But we're literally maxing out the capacities of two Dominos plus Felipe's, so do be gentle with quantities. We thought it best to de-waitlist as many classmates as possible, albeit at a risk of running low on food!
 
 === Will there be office hours?
 
@@ -133,13 +131,6 @@ Yes. But best to download anything big (e.g., software, movies, etc.)
 beforehand, lest Wi-Fi at HBS be a bit slow with so many
 people on it!
 
-[[raffle]]
-=== Will there be a superhive with 4 Wiis?
-
-Yes, via which you can decompress with some Just Dance, Mario Kart, Rayman Raving Rabbids, and Super Smash Bros. Brawl.
-
-And those Wiis will be raffled off to 4 lucky winners who are still awake and present around 5am!
-
 === Will there be a live video stream?
 
-Yes.  Head to http://live.cs50.net/ during the Hackathon if you'd like to see what's going on outside of your hive!
+Yes. Head to http://live.cs50.net/ during the Hackathon if you'd like to see what's going on outside of your hive!
