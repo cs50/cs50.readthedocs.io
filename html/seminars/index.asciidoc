@@ -28,7 +28,7 @@ _by Gabriel Guimaraes, Stephen Turban and Zack Chauvin_
 Ruby on Rails is an awesome framework that lets you create web applications really fast, without having to worry about unnecessary details. In this seminar we will take a look at the Model View Controller paradigm and how this way of thinking can be applied to web programming, specifically using Rails. We will also discuss what a web framework does for you (and what it doesn't do) showing an example of how Rails can solve many tasks of web programming automatically, leaving you more time to work on the real world problems your application is actually trying to solve.
 
 * http://cdn.cs50.net/2014/fall/seminars/ruby_on_rails/ruby_on_rails.pdf[Slides]
-* http://cdn.cs50.net/2014/fall/seminars/ruby_on_rails/ruby_on_rails[Source Code]
+* http://cdn.cs50.net/2014/fall/seminars/ruby_on_rails/ruby_on_rails.zip[Source Code]
 * http://cs50.tv/2014/fall/seminars/ruby_on_rails/[Video] 
 
 
