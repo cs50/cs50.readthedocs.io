@@ -14,13 +14,13 @@ Snacks and drinks will be served throughout the evening.
 *Space is limited, so attendance is lotteried. If you RSVPed for a spot
 at this year's Hackathon, you should have heard from the CS50 Bot
 already as to whether you have a spot or were waitlisted. If not, email
-heads@cs50.harvard to inquire.*
+mailto:heads@cs50.harvard to inquire.*
 
 *Space at IHOP is even more limited, so attendance at breakfast may be lotteried separately, depending on how many classmates are still awake at 5am!*
 
 == When to get there
 
-So that check-in isn't overwhelmed (and you aren't stuck waiting in line), do arrive at the HBS Hives per the times below (unless you've been confirmed by the CS50 Bot for late arrival, in which case just arrive asap).  If you can't make your prescribed time or if you want to travel with your partner(s), that's fine; just let heads@cs50.net know in advance so we know when to expect you.
+So that check-in isn't overwhelmed (and you aren't stuck waiting in line), do arrive at the HBS Hives per the times below (unless you've been confirmed by the CS50 Bot for late arrival, in which case just arrive asap).  If you can't make your prescribed time or if you want to travel with your partner(s), that's fine; just let mailto:heads@cs50.harvard.edu know in advance so we know when to expect you.
 
 [options=header,width=75%]
 |===
@@ -67,7 +67,7 @@ of the CS50 Bot's confirmation of your spot)
 Space is limited, so attendance is lotteried. If you registered for a
 spot at this year's Hackathon, you should have heard from the CS50 Bot
 by Tue 12/2 as to whether you have a spot! If not, email
-heads@cs50.harvard.edu to inquire.
+mailto:heads@cs50.harvard.edu to inquire.
 
 === Can I arrive late?
 
@@ -81,7 +81,7 @@ If you really, really want to, yes.  If you leave before 3am, call the http://ww
 
 === Will there be shuttles?
 
-*If, because of mobility impairment or medical condition, you find it difficult or impossible to use Harvard's shuttles, do contact the http://www.transportation.harvard.edu/shuttle-van-services/evening-van-service[Evening Van Service] in advance of the Hackathon to make arrangements to and from the Hackathon.  Just let heads@cs50.harvard.edu know if you need a hand.*
+*If, because of mobility impairment or medical condition, you find it difficult or impossible to use Harvard's shuttles, do contact the http://www.transportation.harvard.edu/shuttle-van-services/evening-van-service[Evening Van Service] in advance of the Hackathon to make arrangements to and from the Hackathon.  Just let mailto:heads@cs50.harvard.edu know if you need a hand.*
 
 ==== To the Hackathon?
 
@@ -106,12 +106,12 @@ Please forgive if we can't accommodate everyone who'd like to go!
 === What if I can't attend after all?
 
 If the CS50 Bot confirmed your spot but you can no longer attend, please
-email heads@cs50.harvard.edu right away so that we can give your spot to
+email mailto:heads@cs50.harvard.edu right away so that we can give your spot to
 someone who's waitlisted.
 
 === What if my partner was waitlisted but I wasn't?
 
-Let heads@cs50.harvard.edu know.
+Let mailto:heads@cs50.harvard.edu know.
 
 === Will there be food and drinks?
 
