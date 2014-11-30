@@ -161,7 +161,8 @@ _by Tianyu Liu_
 
 Ever wanted to build your own iOS app with Objective-C but didn't know where to start? Learn the basic introduction to iOS and get started making your cool apps on the App Store.
 
-* http://cdn.cs50.net/2014/fall/seminars/apps_with_objective_c.pdf[Slides]
+* http://cdn.cs50.net/2014/fall/seminars/apps_with_objective_c/apps_with_objective_c.pdf[Slides]
+* http://cdn.cs50.net/2014/fall/seminars/apps_with_objective_c/apps_with_objective_c.zip[Source Code]
 * http://cs50.tv/2014/fall/seminars/apps_with_objective_c/[Video]
 
 === Light Your World (with Hue Bulbs)
