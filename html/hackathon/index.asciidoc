@@ -32,7 +32,8 @@ So that check-in isn't overwhelmed (and you aren't stuck waiting in line), do ar
 
 == How to get there
 
-* If *walking* from, say, Widener Library, http://goo.gl/maps/wYNIo[follow this route].  Odds are the walk will take *20+ minutes*.
+* If *walking* from, say, Widener Library,
+* link:https://www.google.com/maps/dir/Harry+Elkins+Widener+Memorial+Library,+Harvard+St,+Cambridge,+MA+02138/125+Western+Ave,+Allston,+Boston,+MA/@42.3685508,-71.1293217,15z/data=!4m29!4m28!1m20!1m1!1s0x89e377436d7628e5:0xd094748bb4eaa34a!2m2!1d-71.116521!2d42.373427!3m4!1m2!1d-71.117715!2d42.3730613!3s0x89e3774322d771b9:0x968292cede475a0d!3m4!1m2!1d-71.1253892!2d42.3666295!3s0x89e377610cfd3869:0x1025a278cd0f4aa5!3m4!1m2!1d-71.123325!2d42.363811!3s0x89e377602f7be679:0x15c6cfe7ee0ea253!1m5!1m1!1s0x89e37761d7d4572b:0xaf083e816c6fc10c!2m2!1d-71.124626!2d42.363655!3e2[follow this route].  Odds are the walk will take *20+ minutes*.
 * If *taking the shuttle*, take the Allston Express to the i-lab (which is where the HBS Hives are), per the schedule for the http://www.transportation.harvard.edu/shuttle-van-services/shuttles-schedule/evening-nights-monday-friday[Allston Campus Express PM]; consult the column called *Hi Lab*. Those are regularly scheduled shuttles, not CS50 Shuttles, so space will be limited.  Odds are the trip will take 10+ minutes.
 * If *driving*, drive to https://maps.google.com/maps?t=m&q=125+Western+Avenue%2C+Boston+MA&output=classic[125 Western Avenue] in Allston (aka Boston).  Metered parking is available *behind* the i-lab, in the lot whose entrance is on Western Avenue itself.
 
@@ -93,7 +94,7 @@ With that said, you can take the Allston Express to the i-lab (which is where th
 
 Yes, via chartered CS50 Shuttles. Some of the shuttles will head to IHOP around 5am, depending on how many classmates are (still!) hungry, and some shuttles will head to the River houses, Yard, and Quad.
 
-With that said, space will still be limited, even though we've literally reserved every shuttle that Harvard owns! So the shuttles destined for the River houses, Yard, and Quad will likely make multiple loops, in which case there might be a bit of a wait. But you're welcome to walk home with friends if you'd rather not wait!
+With that said, space will still be limited, even though we've literally reserved every shuttle that Harvard owns! So the shuttles destined for the River houses, Yard, and Quad might make multiple loops, in which case there might be a bit of a wait. But you're welcome to walk home with friends if you'd rather not wait!
 
 Please forgive, especially if weary or grumpy at that hour, if we can't quite fit everyone into shuttles all at once!
 
@@ -121,7 +122,7 @@ Yes! But we're literally maxing out the capacities of two Dominos plus Felipe's,
 
 Yes, but one-on-one help will be limited, as a goal of the Hackathon is
 to remove the last of CS50's training wheels! TFs and CAs will be
-present for guidance, but they'll also be hacking away on projects of their own!
+present for guidance, but they'll also be working on projects of their own!
 
 If really in need of help, though, look for staff by the stairs where you checked in!
 
@@ -133,4 +134,4 @@ people on it!
 
 === Will there be a live video stream?
 
-Yes. Head to http://live.cs50.net/ during the Hackathon if you'd like to see what's going on outside of your hive!
+Yes, periodically throughout the evening. Head to http://live.cs50.net/ during the Hackathon if you'd like to see what's going on outside of your hive!
