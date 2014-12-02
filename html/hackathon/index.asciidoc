@@ -14,7 +14,7 @@ Snacks and drinks will be served throughout the evening.
 *Space is limited, so attendance is lotteried. If you RSVPed for a spot
 at this year's Hackathon, you should have heard from the CS50 Bot
 already as to whether you have a spot or were waitlisted. If not, email
-mailto:heads@cs50.harvard to inquire.*
+mailto:heads@cs50.harvard.edu[heads@cs50.harvard.edu] to inquire.*
 
 *Space at IHOP is even more limited, so attendance at breakfast may be lotteried separately, depending on how many classmates are still awake at 5am!*
 
