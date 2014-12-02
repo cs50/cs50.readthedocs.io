@@ -45,7 +45,6 @@ If you find yourself lost, call 617-BUG-CS50, option H, and tell us what you see
 * Harvard ID (unless you don't have one, in which case bring a printout
 of the CS50 Bot's confirmation of your spot)
 * Laptop (that supports Wi-Fi) plus power adapter
-* Excitement
 
 === You might also want to bring...
 
