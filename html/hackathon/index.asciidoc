@@ -62,7 +62,7 @@ of the CS50 Bot's confirmation of your spot)
 
 == Chat Rooms
 
-To chat with classmates during the Hackathon, visit https://cs50.harvard.edu/chat[cs50.harvard.edu/chat].
+To chat with classmates during the Hackathon, visit https://cs50.harvard.edu/chat[cs50.harvard.edu/chat]. If informed that "account has already been created using that email address," visit https://hackathon50.hipchat.com[hackathon50.hipchat.com] instead.
 
 To get someone's attention in a chat room, type `@` and then their name (assuming they've logged in too).
 
