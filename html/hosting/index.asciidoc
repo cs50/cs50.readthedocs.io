@@ -1,6 +1,8 @@
 = Hosting
 :toc: left
 
+*Please consider this hosting opportunity very much in beta. CS50 has not used Namecheap before for hosting, so we don't know what sort of experience to expect yet. Best to implement your final project on the appliance first (so that it definitely works for your TF and at the CS50 Fair) before trying out hosting.*
+
 In order to put a website on the Internet, you generally need:
 
 . a *domain name* (e.g., example.com), and
@@ -33,3 +35,9 @@ CS50's nameservers (i.e., DNS servers) for hosting are:
 * ns2.cs50.me
 
 If you bought your domain name through Namecheap, you can configure it to use CS50's nameservers per https://www.namecheap.com/support/knowledgebase/article.aspx/767/10/how-can-i-change-the-nameservers-for-my-domain[these instructions]. If you bought your domain name elsewhere, best to consult your registrar's own documentation.
+
+=== cPanel
+
+Once you've received a hosting account (i.e., a username and password) from CS50's sysadmins, head to https://host32.registrar-servers.com/cpanel in order to access cPanel, a popular (but awful) control panel via which you can administer your hosting account. In particular, via cPanel can you upload files, access phpMyAdmin, and more. See https://www.namecheap.com/support/knowledgebase/category.aspx/95/hosting-cpanel for some documentation.
+
+To have "shell access" (i.e., SSH) enabled for your account (if familiar), start a live chat with Namecheap at https://www.namecheap.com/support/live-chat/general.aspx and request as much. See https://www.namecheap.com/support/knowledgebase/category.aspx/89/ssh-access for some documentation.
