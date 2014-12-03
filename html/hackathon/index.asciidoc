@@ -60,6 +60,14 @@ of the CS50 Bot's confirmation of your spot)
 
 * Alcohol, etc.
 
+== Chat Rooms
+
+To chat with classmates during the Hackathon, visit https://cs50.harvard.edu/chat[cs50.harvard.edu/chat].
+
+To get someone's attention in a chat room, type `@` and then their name (assuming they've logged in too).
+
+If you forget your password, visit https://www.hipchat.com/forgot_password[hipchat.com/forgot_password].
+
 == FAQs
 
 === Can I attend?
