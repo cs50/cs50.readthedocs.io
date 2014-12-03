@@ -68,6 +68,10 @@ To get someone's attention in a chat room, type `@` and then their name (assumin
 
 If you forget your password, visit https://www.hipchat.com/forgot_password[hipchat.com/forgot_password].
 
+== Live Stream
+
+To see what's going on elsewhere at the Hackathon, tune into https://live.cs50.net/[live.cs50.net] from time to time.
+
 == FAQs
 
 === Can I attend?
