@@ -79,6 +79,22 @@ to those who can partake for the entire time.)
 
 If you really, really want to, yes.  If you leave before 3am, call the http://www.transportation.harvard.edu/shuttle-van-services/evening-van-service[Evening Van Service] at 617-495-0400 before 2:30am to arrange for pick-up. If you leave between 3am and 5am, best to use https://www.uber.com/[Uber] or call 617-782-5500 for a taxi. If leaving on foot, be sure to walk with multiple friends.
 
+=== Can I go to IHOP?
+
+Space at IHOP is even more limited than the Hackathon itself, so attendance at breakfast may be lotteried separately, depending on how many classmates are still awake at 5am!
+
+Please forgive if we can't accommodate everyone who'd like to go!
+
+=== What if I can't attend after all?
+
+If the CS50 Bot confirmed your spot but you can no longer attend, please
+email mailto:heads@cs50.harvard.edu[heads@cs50.harvard.edu] right away so that we can give your spot to
+someone who's waitlisted.
+
+=== What if my partner was waitlisted but I wasn't?
+
+Let mailto:heads@cs50.harvard.edu[heads@cs50.harvard.edu] know.
+
 === When does it end?
 
 By 5am for folks who're sleepy and by 7am for folks who're awake (and hungry!) for IHOP, though <<can_i_go_to_ihop,attendance at breakfast may be lotteried>>.
@@ -86,6 +102,10 @@ By 5am for folks who're sleepy and by 7am for folks who're awake (and hungry!) f
 === When does it start?
 
 Around 7pm, but do check <<when_to_get_there,when to get there>>.
+
+=== Will there be food and drinks?
+
+Yes! But we're literally maxing out the capacities of two Dominos plus Felipe's, so do be gentle with quantities. We thought it best to de-waitlist as many classmates as possible, albeit at a risk of running low on food!
 
 === Will there be gluten-free food?
 
@@ -109,27 +129,7 @@ With that said, space will still be limited, even though we've literally reserve
 
 Please forgive, especially if weary or grumpy at that hour, if we can't quite fit everyone into shuttles all at once!
 
-=== Can I go to IHOP?
-
-Space at IHOP is even more limited than the Hackathon itself, so attendance at breakfast may be lotteried separately, depending on how many classmates are still awake at 5am!
-
-Please forgive if we can't accommodate everyone who'd like to go!
-
-=== What if I can't attend after all?
-
-If the CS50 Bot confirmed your spot but you can no longer attend, please
-email mailto:heads@cs50.harvard.edu[heads@cs50.harvard.edu] right away so that we can give your spot to
-someone who's waitlisted.
-
-=== What if my partner was waitlisted but I wasn't?
-
-Let mailto:heads@cs50.harvard.edu[heads@cs50.harvard.edu] know.
-
-=== Will there be food and drinks?
-
-Yes! But we're literally maxing out the capacities of two Dominos plus Felipe's, so do be gentle with quantities. We thought it best to de-waitlist as many classmates as possible, albeit at a risk of running low on food!
-
-=== Will there be office hours?
+== Will there be office hours?
 
 Yes, but one-on-one help will be limited, as a goal of the Hackathon is
 to remove the last of CS50's training wheels! TFs and CAs will be
@@ -145,4 +145,4 @@ people on it!
 
 === Will there be a live video stream?
 
-Yes, periodically throughout the evening. Head to http://live.cs50.net/ during the Hackathon if you'd like to see what's going on outside of your hive!
+Yes, periodically throughout the evening. Head to https://live.cs50.net/ during the Hackathon if you'd like to see what's going on outside of your hive!
