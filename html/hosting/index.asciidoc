@@ -1,0 +1,35 @@
+= Hosting
+:toc: left
+
+In order to put a website on the Internet, you generally need:
+
+. a *domain name* (e.g., example.com), and
+. a *hosting account*, which provides you with a server on which to put your files (and often a database and more).
+
+== Domain Name
+
+If you'd indeed like your own domain name, it's probably best to buy it yourself so that you own and control it. Domain names generally cost a few dollars per year. You can buy a domain name from any number of "registrars," but allow us to recommend https://www.namecheap.com/[Namecheap], if only because they're (relatively) cheap and popular. CS50 is currently using them for some of its domains.
+
+=== Namecheap
+
+To buy a domain name, visit https://www.namecheap.com/[namecheap.com] and search for one that's available! (That's sometimes the hardest part.) Any top-level domain (TLD) that's available is fine (e.g., .com, .net, .pizza); there are tons (of crazy ones) these days. Proceed to check out once you've added one to your cart. 
+
+No need to pay for anything (e.g., hosting) other than *1 Year* of *Domain Registration*, though it's fine to let Namecheap give you *1 Year* of *Free WhoisGuard* for free; that'll make it harder for others to figure out that it's you who owns your domain.
+
+== Hosting Account
+
+Generally, hosting accounts cost a few dollars (or more) per month. However, CS50 has a "reseller account" through https://www.namecheap.com/[Namecheap] via which we can provide you with a hosting account *through June 2015* for free. After June 2015, if you'd like your website to remain online, you'll want to transfer your files (and any database, etc.) to your own hosting account, whether through Namecheap or elsewhere.
+
+To sign up for a free hosting account through June 2015 via CS50,
+
+. https://docs.google.com/forms/d/1dNAX-hfKNAz6iXh415zHnNQ1hp2z55Q-Dljx94pDOHQ/viewform[submit a request] to CS50's sysadmins; and
+. configure your domain name to use CS50's nameservers.
+
+=== CS50's Nameservers
+
+CS50's nameservers (i.e., DNS servers) for hosting are:
+
+* ns1.cs50.me
+* ns2.cs50.me
+
+If you bought your domain name through Namecheap, you can configure it to use CS50's nameservers per https://www.namecheap.com/support/knowledgebase/article.aspx/767/10/how-can-i-change-the-nameservers-for-my-domain[these instructions]. If you bought your domain name elsewhere, best to consult your registrar's own documentation.
