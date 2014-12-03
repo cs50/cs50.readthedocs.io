@@ -129,7 +129,7 @@ With that said, space will still be limited, even though we've literally reserve
 
 Please forgive, especially if weary or grumpy at that hour, if we can't quite fit everyone into shuttles all at once!
 
-== Will there be office hours?
+=== Will there be office hours?
 
 Yes, but one-on-one help will be limited, as a goal of the Hackathon is
 to remove the last of CS50's training wheels! TFs and CAs will be
