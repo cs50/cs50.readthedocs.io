@@ -79,6 +79,14 @@ to those who can partake for the entire time.)
 
 If you really, really want to, yes.  If you leave before 3am, call the http://www.transportation.harvard.edu/shuttle-van-services/evening-van-service[Evening Van Service] at 617-495-0400 before 2:30am to arrange for pick-up. If you leave between 3am and 5am, best to use https://www.uber.com/[Uber] or call 617-782-5500 for a taxi. If leaving on foot, be sure to walk with multiple friends.
 
+=== When does it end?
+
+By 5am for folks who're sleepy and by 7am for folks who're awake (and hungry!) for IHOP.
+
+=== When does it start?
+
+Around 7pm, but do check <<when_to_get_there,when to get there>>.
+
 === Will there be shuttles?
 
 *If, because of mobility impairment or medical condition, you find it difficult or impossible to use Harvard's shuttles, do contact the http://www.transportation.harvard.edu/shuttle-van-services/evening-van-service[Evening Van Service] in advance of the Hackathon to make arrangements to and from the Hackathon.  Just let mailto:heads@cs50.harvard.edu[heads@cs50.harvard.edu] know if you need a hand.*
