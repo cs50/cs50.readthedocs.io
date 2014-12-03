@@ -36,7 +36,7 @@ So that check-in isn't overwhelmed (and you aren't stuck waiting in line), do ar
 * If *taking the shuttle*, take the Allston Express to the i-lab (which is where the HBS Hives are), per the schedule for the http://www.transportation.harvard.edu/shuttle-van-services/shuttles-schedule/evening-nights-monday-friday[Allston Campus Express PM]; consult the column called *Hi Lab*. Those are regularly scheduled shuttles, not CS50 Shuttles, so space will be limited.  Odds are the trip will take 10+ minutes.
 * If *driving*, drive to https://maps.google.com/maps?t=m&q=125+Western+Avenue%2C+Boston+MA&output=classic[125 Western Avenue] in Allston (aka Boston).  Metered parking is available *behind* the i-lab, in the lot whose entrance is on Western Avenue itself.
 
-If you find yourself lost, call 617-BUG-CS50, option H, and tell us what you see around you!
+If you find yourself lost, call 617-BUG-CS50, option 4, and tell us what you see around you!
 
 == What to bring 
 
@@ -109,7 +109,7 @@ Yes! But we're literally maxing out the capacities of two Dominos plus Felipe's,
 
 === Will there be gluten-free food?
 
-Some, yes. It'll be set aside, so just check with Daven as to where it is. If you have trouble finding Daven, call 617-BUG-CS50, option H, to reach another of the course's heads!
+Some, yes. It'll be set aside, so just check with Daven as to where it is. If you have trouble finding Daven, call 617-BUG-CS50, option 4, to reach another of the course's heads!
 
 === Will there be shuttles?
 
