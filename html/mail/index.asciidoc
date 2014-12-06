@@ -26,7 +26,7 @@ PHPMailer, odds are you can use code like:
 
 [source,php]
 ----
-require_once("PHPMailer/class.phpmailer.php");
+require_once("libphp-phpmailer/class.phpmailer.php");
 
 // instantiate mailer
 $mail = new PHPMailer();
@@ -57,7 +57,7 @@ code like:
 
 [source,php]
 ----
-require_once("PHPMailer/class.phpmailer.php");
+require_once("libphp-phpmailer/class.phpmailer.php");
 
 // instantiate mailer
 $mail = new PHPMailer();
@@ -91,7 +91,7 @@ use code like:
 
 [source,php]
 ----
-require_once("PHPMailer/class.phpmailer.php");
+require_once("libphp-phpmailer/class.phpmailer.php");
 
 // instantiate mailer
 $mail = new PHPMailer();
