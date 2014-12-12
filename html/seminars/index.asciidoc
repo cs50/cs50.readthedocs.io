@@ -13,7 +13,7 @@ this year and past years.
 
 === 3D Modeling and Manufacture
 
-_by Ansel Duff_
+_by Ansel Duff '15_
 
 The software/hardware harmony brings code to life. This seminar aims to familiarize students with elementary manufacturing techniques and provide students with access to CS50's 3D printers. Whether you're designing a holder for a mobile phone payment platform or reinventing the Hue lighting system, customized mechanical components transform a purely software backend to a physical product.
 
@@ -23,7 +23,7 @@ The software/hardware harmony brings code to life. This seminar aims to familiar
 
 === Amazing Web Apps with Ruby on Rails
 
-_by Gabriel Guimaraes, Stephen Turban and Zack Chauvin_
+_by Gabriel Guimaraes '17, Stephen Turban and Zack Chauvin '17_
 
 Ruby on Rails is an awesome framework that lets you create web applications really fast, without having to worry about unnecessary details. In this seminar we will take a look at the Model View Controller paradigm and how this way of thinking can be applied to web programming, specifically using Rails. We will also discuss what a web framework does for you (and what it doesn't do) showing an example of how Rails can solve many tasks of web programming automatically, leaving you more time to work on the real world problems your application is actually trying to solve.
 
@@ -34,7 +34,7 @@ Ruby on Rails is an awesome framework that lets you create web applications real
 
 === Android 101
 
-_by Fred Widjaja_
+_by Fred Widjaja '17_
 
 Learn the basics of building apps on Android, the world's most popular mobile platform! We'll also be going through how to code in Java and how to use development tools like Android Studio.
 
@@ -63,7 +63,7 @@ Get your hands on the full bibliographic data about virtually all of the 12.7 mi
 
 === Building Dynamic Web Apps with Laravel
 
-_by Eric Ouyang_
+_by Eric Ouyang '17_
 
 Laravel is a powerful and elegant PHP web development framework for building interactive websites, such as CS50's own site! Learn about how to leverage this cutting edge development tool to create everything from simple APIs to sophisticated modern web applications.
 
@@ -73,7 +73,7 @@ Laravel is a powerful and elegant PHP web development framework for building int
 
 === CSS: Awesome Style and Design
 
-_by Allison Buchholtz-Au and Tomas Reimers_
+_by Allison Buchholtz-Au '15 and Tomas Reimers '17_
 
 CSS allows for the stylization of websites. This seminar will cover basic principles for web design from selecting HTML elements with CSS to positioning elements on the page and fully understanding the "box model." Additionally, we will cover common aesthetic improvements seen on websites such as rounding corners, background images, and custom fonts.
 
@@ -121,7 +121,7 @@ This seminar is a fast-paced introduction to photography. We'll cover exposure, 
 
 === Futuristic User Interactions: An Introduction to Leap Motion
 
-_by Armaghan Behlum and Tomas Reimers_
+_by Armaghan Behlum '17 and Tomas Reimers '17_
 
 The leap motion is a device that allows users to interact with the computer by moving their hands in front of it. Students will learn how to write code that takes advantage of the leap motion and build websites that the user can interact with using simple hand gestures.
 
@@ -157,7 +157,7 @@ An introduction to iOS programming using Swift, Apple's new programming language
 
 === Learning iOS: Create your own app with Objective-C!
 
-_by Tianyu Liu_
+_by Tianyu Liu '16_
 
 Ever wanted to build your own iOS app with Objective-C but didn't know where to start? Learn the basic introduction to iOS and get started making your cool apps on the App Store.
 
@@ -167,7 +167,7 @@ Ever wanted to build your own iOS app with Objective-C but didn't know where to 
 
 === Light Your World (with Hue Bulbs)
 
-_by Dan Bradley_
+_by Dan Bradley '14_
 
 As seen in the first week of lecture, Hue bulbs are light bulbs you can control wirelessly. They can do pretty amazing things, if you know how to program them properly. In this seminar, we'll create a small JavaScript web app that can turn Hue bulbs on and off as well as change their color. We'll also more broadly touch on APIs and Ajax calls.
 
@@ -186,7 +186,7 @@ This is a hands-on introduction to Meteor, a JavaScript and Node.js framework bu
 
 === Amazing Web Apps with Ruby on Rails
 
-_by Gabriel Guimaraes_
+_by Gabriel Guimaraes '17_
 
 Ruby on Rails is an awesome framework that lets you create web applications really fast, without having to worry about unnecessary details!
 
@@ -207,7 +207,7 @@ As computers become more and more present in our lives, making our interactions 
 
 === Introduction to iOS
 
-_by Rhed Shi_
+_by Rhed Shi '15_
 
 Learn how to program iOS applications using Objective-C and XCode 5.
 
@@ -218,7 +218,7 @@ Learn how to program iOS applications using Objective-C and XCode 5.
 
 === JavaScript for Web Apps
 
-_by Tomas Reimers and Mike Rizzo_
+_by Tomas Reimers '17' and Mike Rizzo_
 
 Learn about APIs and libraries available in Javascript that are useful when writing web applications. 
 
@@ -272,7 +272,7 @@ Learn about Android design patterns and how to deal with so many different devic
 
 === Web Security: Active Defense
 
-_by Luciano Arango_
+_by Luciano Arango '16_
 
 Is my new website, or web application secure? How do I make sure it's secure or test if its not? In this seminar we'll put up a website that's not yet, ahem, ready, and split the attendees into two teams. Team one's job: exploit all the vulnerabilities in the code; team two's job: patch them up before team one gets there. We'll be guiding the challenge by exposing the different mistakes that become security problems, how to spot them quickly, and how to patch them up correctly.
 
