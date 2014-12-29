@@ -68,7 +68,7 @@ the window contains precisely these values:
 18. Click *OK*.
 19. Download a ZIP file of the link:../../CS50_Appliance_17[CS50 Appliance] at
 http://mirror.cs50.net/appliance50/17/i386/appliance50-17-9-ovf.zip
-(http://mirror.cs50.net.s3.amazonaws.com/appliance50/17/i386/appliance50-17-9-ovf.zip?torrent[torrent]).
+(http://mirror.cs50.net.s3.amazonaws.com/appliance50/17/i386/appliance50-17-9-ovf.zip.torrent[torrent]).
 That ZIP file is over 1GB in size, so it might take a while to download.
 20. Once downloaded, unzip the ZIP file, and you should have a folder
 named *appliance50-17* with two files within (*appliance50-17.ovf* and
@@ -246,7 +246,7 @@ the window contains precisely these values:
 18. Click *OK*.
 19. Download a ZIP file of the link:../../CS50_Appliance_17[CS50 Appliance] at
 http://mirror.cs50.net/appliance50/17/i386/appliance50-17-9-ovf.zip
-(http://mirror.cs50.net.s3.amazonaws.com/appliance50/17/i386/appliance50-17-9-ovf.zip?torrent[torrent]).
+(http://mirror.cs50.net.s3.amazonaws.com/appliance50/17/i386/appliance50-17-9-ovf.zip.torrent[torrent]).
 That ZIP file is over 1GB in size, so it might take a while to download.
 20. Once downloaded, unzip the ZIP file, and you should have a folder
 named *appliance50-17* with two files within (*appliance50-17.ovf* and
@@ -447,7 +447,7 @@ the window contains precisely these values:
 12. Click *OK*.
 13. Download a ZIP file of the link:..[CS50 Appliance] at
 http://mirror.cs50.net/appliance50/17/i386/appliance50-17-9-ovf.zip
-(http://mirror.cs50.net.s3.amazonaws.com/appliance50/17/i386/appliance50-17-9-ovf.zip?torrent[torrent]).
+(http://mirror.cs50.net.s3.amazonaws.com/appliance50/17/i386/appliance50-17-9-ovf.zip.torrent[torrent]).
 That ZIP file is over 1GB in size, so it might take a while to download.
 14. Once downloaded, unzip the ZIP file, and you should have a folder
 named *appliance50-17* with two files within (*appliance50-17.ovf* and
