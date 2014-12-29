@@ -22,7 +22,7 @@ Here's how to install the link:..[CS50 Appliance] using VMware Workstation for l
 . When prompted about *Shortcuts*, decide whether to check or uncheck the boxes, then click Next.
 . When prompted to *Perform the Requested Operations*, click *Continue*.
 . Once you see *Enter License Key*, click *Skip* (unless you already have a VMAP account, in which case you can paste your own license key), then click *Finish*.
-. Download the CS50 Appliance itself at http://mirror.cs50.net/appliance50/2014/releases/0/appliance50-2014-vmware.ova (http://mirror.cs50.net/appliance50/2014/releases/0/appliance50-2014-vmware.ova?torrent[torrent]). That file is nearly 2GB in size, so it might take a while to download.
+. Download the CS50 Appliance itself at http://mirror.cs50.net/appliance50/2014/releases/0/appliance50-2014-vmware.ova (http://mirror.cs50.net/appliance50/2014/releases/0/appliance50-2014-vmware.ova.torrent[torrent]). That file is nearly 2GB in size, so it might take a while to download.
 . Launch VMware Workstation, as by single- or double-clicking its
 icon, wherever it was installed. If prompted for a license key, select *I want to try VMware Workstation 10 for 30 days* and type your email address (unless you already have a VMAP account, in which case you can paste your own license key), then click *Continue*.
 . If prompted to allow the program to make changes to your computer, input your password, and then click *Yes*.
@@ -45,5 +45,5 @@ link:/virtualization[hardware virtualization] on your computer.
 . link:https://docs.google.com/spreadsheet/viewform?hl=en_US&formkey=dHoyMG5LNTgxeGFhakNaaE9CdTlkbWc6MQ[Apply for the VMware Academic Program] (VMAP) in order to obtain a username and password with which you'll eventually be able to download a license key for VMware Workstation 10 from link:https://e5.onthehub.com/WebStore/Security/Signin.aspx?ws=340f7ddc-c740-de11-b696-0030485a8df0&vsro=8&rurl=%2fWebStore%2fProductsByMajorVersionList.aspx%3fws%3d340f7ddc-c740-de11-b696-0030485a8df0%26vsro%3d8&JSEnabled=1[OnTheHub]. You won't need that license key just yet, since VMware Workstation 10 offers a 30-day trial that you can use in the meantime.
 . link:http://www.vmware.com/products/workstation/workstation-evaluation[Download a 30-day trial of VMware Workstation].
 . Install VMware Workstation.
-. Download the CS50 Appliance from http://mirror.cs50.net/appliance50/2014/releases/0/appliance50-2014-vmware.ova (http://mirror.cs50.net/appliance50/2014/releases/0/appliance50-2014-vmware.ova?torrent[torrent]).
+. Download the CS50 Appliance from http://mirror.cs50.net/appliance50/2014/releases/0/appliance50-2014-vmware.ova (http://mirror.cs50.net/appliance50/2014/releases/0/appliance50-2014-vmware.ova.torrent[torrent]).
 . Import the CS50 Appliance into VMware Workstation.

@@ -14,8 +14,8 @@ desktop.
 .  A window should open. Drag the *VMware Fusion* (or *VMware
 Fusion.app*) icon in that window to your *Applications* folder.
 .  Download the CS50 Appliance itself at
-http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vmware.ova
-(http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vmware.ova?torrent[torrent]).
+http://mirror.cs50.net/appliance50/19/i386/appliance50-19-0-vmware.ova
+(http://mirror.cs50.net/appliance50/19/i386/appliance50-19-0-vmware.ova.torrent[torrent]).
 That file is over 1GB in size, so it might take a while to download.
 . Once the file has finished downloading, check whether its name ends in *.ova* or *.ovf*.  There appears to be a bug in Chrome whereby *.ova* is incorrectly changed to *.ovf*, so if the file's name does now end in *.ovf*, change it back as follows:
 * Single-click the file.
@@ -29,7 +29,7 @@ If prompted to *Create New*, *Convert VM*, or *Migrate PC*, simply click *Skip*.
 7.  Ensure that you have the latest version of VMware Fusion, as by
 selecting *VMware Fusion > Check for Updates...*. Update and relaunch
 VMware Fusion as needed.
-8.  Select *File > Import...*. Navigate your way to that *appliance50-19-vmware.ova*
+8.  Select *File > Import...*. Navigate your way to that *appliance50-19-0-vmware.ova*
 file (which is probably still in *Downloads*) and select it.
 9. Click VMware Fusion's &#9654; button to start the appliance. If
 prompted to "upgrade this virtual machine," click *Upgrade*.

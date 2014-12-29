@@ -19,7 +19,7 @@ Here's how to install the link:..[CS50 Appliance] using VMware Fusion for link:#
 . When prompted for your email address, type your email address, ensure that *Try VMware Fusion 7* is selected (and not *Try VMware Fusion 7 Professional*), and then click *Continue*.
 . Type your password if prompted, and then click *OK*.
 . Click *Done*.
-. Download the CS50 Appliance itself at http://mirror.cs50.net/appliance50/2014/releases/0/appliance50-2014-vmware.ova (http://mirror.cs50.net/appliance50/2014/releases/0/appliance50-2014-vmware.ova?torrent[torrent]).  That file is nearly 2GB in size, so it might take a while to download.
+. Download the CS50 Appliance itself at http://mirror.cs50.net/appliance50/2014/releases/0/appliance50-2014-vmware.ova (http://mirror.cs50.net/appliance50/2014/releases/0/appliance50-2014-vmware.ova.torrent[torrent]).  That file is nearly 2GB in size, so it might take a while to download.
 . Once the file has finished downloading, check whether its name ends in *.ova* or *.ovf*. There appears to be a bug in some versions of Chrome whereby *.ova* is incorrectly changed to *.ovf*, so if the file's name does now end in *.ovf*, change it back as follows:
 * Single-click the file.
 * Hit Enter.

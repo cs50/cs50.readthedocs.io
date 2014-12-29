@@ -50,10 +50,10 @@ inputted the key, click *Enter >*.
 . Once you see *Setup Wizard Complete*, click *Restart Now* if
 prompted, else *Finish*.
 . Download the Appliance's OVA file at
-http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vmware.ova
-(http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vmware.ova?torrent[torrent]).
+http://mirror.cs50.net/appliance50/19/i386/appliance50-19-0-vmware.ova
+(http://mirror.cs50.net/appliance50/19/i386/appliance50-19-0-vmware.ova.torrent[torrent]).
 That OVA file is over 1GB in size, so it might take a while to download.
-. Drag that cs50-appliance-19 file somewhere safe, where you won't accidentally delete it. Do not leave it in your Downloads folder.
+. Drag that *appliance50-19-0-vmware.ova* file somewhere safe, where you won't accidentally delete it. Do not leave it in your Downloads folder.
 . Launch VMware Workstation, as by single- or double-clicking its
 icon, wherever it was installed. The first time you open the program,
 you will be asked to accept the terms to the license agreement. Do so by
@@ -66,7 +66,7 @@ Update and relaunch VMware Workstation as needed.
 . Select *Preferences > Display* and check the box labeled *Autofit
 guest*, then click *OK*.
 . Select *File > Open a Virtual Machine...*. Navigate your way to
-that_' appliance50-19_' file (wherever you moved it for safe-keeping),
+that *appliance50-19-0-vmware.ova* file (wherever you moved it for safe-keeping),
 highlight the *appliance50-19.ova* file within, and click *Open*. Then
 click VMware Workstation's ▶ button to start up the appliance.
 

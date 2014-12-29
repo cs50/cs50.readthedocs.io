@@ -64,7 +64,7 @@ the window contains precisely these values:
 . Click *OK*.
 .  Download the Appliance's OVA file at
 http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vbox.ova
-(http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vbox.ova?torrent[torrent]).
+(http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vbox.ova.torrent[torrent]).
 That file is over 1GB in size, so it might take a while to download.
 . If using a Mac, check, once the file has finished downloading, whether its name ends in *.ova* or *.ovf*.  There appears to be a bug in Chrome whereby *.ova* is incorrectly changed to *.ovf*, so if the file's name does now end in *.ovf*, change it back as follows:
 * Single-click the file.
@@ -235,7 +235,7 @@ the window contains precisely these values:
 . Click *OK*.
 .  Download the Appliance's OVA file at
 http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vbox.ova
-(http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vbox.ova?torrent[torrent]).
+(http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vbox.ova.torrent[torrent]).
 That OVA file is over 1GB in size, so it might take a while to download.
 . Launch VirtualBox, if not running already, as by single- or
 double-clicking its icon, wherever you installed it.
@@ -418,7 +418,7 @@ the window contains precisely these values:
 . Click *OK*.
 . Download the Appliance's OVA file at
 http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vbox.ova
-(http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vbox.ova?torrent[torrent]).
+(http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vbox.ova.torrent[torrent]).
 That OVA file is over 1GB in size, so it might take a while to download.
 . Launch VirtualBox, if not running already, as by single- or
 double-clicking its icon, wherever you installed it.

@@ -20,7 +20,7 @@ and/or *Start Menu Programs folder* if you'd like.)
 prompted, else *Continue*.
 . Download the CS50 Appliance itself at
 http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vmware.ova
-(http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vmware.ova?torrent[torrent]).
+(http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vmware.ova.torrent[torrent]).
 That file is over 1GB in size, so it might take a while to download.
 . Launch VMware Player, as by double-clicking its icon, which should
 be in your *Applications* folder. If prompted with a *Software License
