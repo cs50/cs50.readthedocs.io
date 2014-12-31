@@ -3,20 +3,20 @@
 
 == NOTICE
 
-*This HOWTO is for version 2014 of the CS50 Appliance.*
+*This documentation is for version 2014 of the CS50 Appliance.*
 
-* You should use link:#instructions[this version] of the appliance if you are:
-** taking CS50x 2015 through edX,
-** taking CSCI E-50 through Harvard Extension School, or
-** pursuing a CS50 Certificate through Harvard Division of Continuing Education.
-* *If following Fall 2014 of CS50 (or CSCI E-50), you should use link:#instructions[this version] of the appliance.
-* *If following Fall 2013 of CS50 (or CSCI E-50), you should use link:../19[version 19] of the appliance.*
-* *If following Fall 2012 of CS50 (or CSCI E-52), you should use link:../17[version 17] of the appliance.*
-* *If following Summer 2012 of CSCI S-75, you should also use link:../17[version 17] of the appliance.*
-* *If following Spring 2012 of CS1, CS51, or CS164, you should use link:../3[version 3] of the appliance.*
-* *If following https://www.cs50.net/[Fall 2011] of CS50, you should use link:../2.3[version 2.3] of the appliance.*
-* *If following http://cs50.tv/2010/fall/[Fall 2010] of CS50, you should use link:../2.1[version 2.1] of the appliance.*
-* *If following http://cs50.tv/2009/fall/[Fall 2009] of CS50, you should use link:../1.4[version 1.4] of the appliance.*
+* *You should use link:#instructions[this version] of the appliance if you are:*
+** *taking CS50x 2015 through edX,*
+** *taking CSCI E-50 in Spring 2015 through Harvard Extension School, or*
+** *pursuing a CS50 Certificate in 2015 through Harvard Division of Continuing Education.*
+* If following Fall 2014 of CS50 (or CSCI E-50), you should use link:#instructions[this version] of the appliance.
+* If following Fall 2013 of CS50 (or CSCI E-50), you should use link:../19[version 19] of the appliance.
+* If following Fall 2012 of CS50 (or CSCI E-52), you should use link:../17[version 17] of the appliance.
+* If following Summer 2012 of CSCI S-75, you should also use link:../17[version 17] of the appliance.
+* If following Spring 2012 of CS1, CS51, or CS164, you should use link:../3[version 3] of the appliance.
+* If following https://www.cs50.net/[Fall 2011] of CS50, you should use link:../2.3[version 2.3] of the appliance.
+* If following http://cs50.tv/2010/fall/[Fall 2010] of CS50, you should use link:../2.1[version 2.1] of the appliance.
+* If following http://cs50.tv/2009/fall/[Fall 2009] of CS50, you should use link:../1.4[version 1.4] of the appliance.
 
 The CS50 Appliance is a
 http://en.wikipedia.org/wiki/Virtual_machine[virtual machine] (VM) that
