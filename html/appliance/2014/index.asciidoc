@@ -22,7 +22,6 @@ The CS50 Appliance is a
 http://en.wikipedia.org/wiki/Virtual_machine[virtual machine] (VM) that
 lets you "take" CS50 (and other courses!), even if you're not a student
 at Harvard.
-
 It's based on
 http://en.wikipedia.org/wiki/Ubuntu_(operating_system)[Ubuntu], a
 http://en.wikipedia.org/wiki/Linux[Linux]-based
