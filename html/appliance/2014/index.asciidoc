@@ -5,8 +5,11 @@
 
 *This HOWTO is for version 2014 of the CS50 Appliance.*
 
-* *If taking CS50 (or CSCI E-50) in Fall 2014, you should use this version of the appliance.*
-* *If taking CS50x, you should use link:../19[version 19] of the appliance.*
+* You should use link:#instructions[this version] of the appliance if you are:
+** taking CS50x 2015 through edX,
+** taking CSCI E-50 through Harvard Extension School, or
+** pursuing a CS50 Certificate through Harvard Division of Continuing Education.
+* *If following Fall 2014 of CS50 (or CSCI E-50), you should use link:#instructions[this version] of the appliance.
 * *If following Fall 2013 of CS50 (or CSCI E-50), you should use link:../19[version 19] of the appliance.*
 * *If following Fall 2012 of CS50 (or CSCI E-52), you should use link:../17[version 17] of the appliance.*
 * *If following Summer 2012 of CSCI S-75, you should also use link:../17[version 17] of the appliance.*
