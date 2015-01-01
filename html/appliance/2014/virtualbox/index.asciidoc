@@ -63,10 +63,12 @@ the window contains precisely these values:
 . Click *OK*.
 . Click *OK*.
 .  Download the Appliance's OVA file at
-http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vbox.ova
-(http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vbox.ova.torrent[torrent]).
-That file is over 1GB in size, so it might take a while to download.
-. If using a Mac, check, once the file has finished downloading, whether its name ends in *.ova* or *.ovf*.  There appears to be a bug in Chrome whereby *.ova* is incorrectly changed to *.ovf*, so if the file's name does now end in *.ovf*, change it back as follows:
+http://mirror.cs50.net/appliance50/2014/releases/24/appliance50-2014-vbox.ova
+(http://mirror.cs50.net/appliance50/2014/releases/24/appliance50-2014-vbox.ova.torrent[torrent]).
+That file is nearly 2GB in size, so it might take a while to download.
+. Once the file has finished downloading, check whether its name ends in *.ova* or *.ovf*.
+There appears to be a bug in Chrome whereby *.ova* is incorrectly changed to *.ovf*,
+so if the file's name does now end in *.ovf*, change it back as follows:
 * Single-click the file.
 * Hit Enter.
 * Change *.ovf* to *.ova*.
@@ -79,9 +81,9 @@ double-clicking its icon, wherever you installed it. (Odds are it's in
 . Navigate your way to the OVA file that you downloaded, highlight it, and click *Open*. Then
 click *Continue*.
 . You should see a summary of the appliance's settings. Click
-*Import*, and you'll see *CS50 Appliance 19* in VirtualBox's left-hand
+*Import*, and you'll see *CS50 Appliance 2014* in VirtualBox's left-hand
 menu after a few seconds or minutes.
-. Click *CS50 Appliance 19* to highlight it, then click *Start* to
+. Click *CS50 Appliance 2014* to highlight it, then click *Start* to
 start the appliance. If you see a black-and-white screen entitled *GNU
 GRUB*, no need to do anything; the appliance will continue to boot after
 a few seconds!
@@ -234,9 +236,9 @@ the window contains precisely these values:
 . Click *OK*.
 . Click *OK*.
 .  Download the Appliance's OVA file at
-http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vbox.ova
-(http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vbox.ova.torrent[torrent]).
-That OVA file is over 1GB in size, so it might take a while to download.
+http://mirror.cs50.net/appliance50/2014/releases/24/appliance50-2014-vbox.ova
+(http://mirror.cs50.net/appliance50/2014/releases/24/appliance50-2014-vbox.ova.torrent[torrent]).
+That OVA file is nearly 2GB in size, so it might take a while to download.
 . Launch VirtualBox, if not running already, as by single- or
 double-clicking its icon, wherever you installed it.
 . Select *Import Appliance...* from VirtualBox's *File* menu.
@@ -245,13 +247,13 @@ double-clicking its icon, wherever you installed it.
 . You should see a summary of the appliance's settings. Click
 *Import*, and you'll see *CS50 Appliance 19* in VirtualBox's left-hand
 menu after a few seconds or minutes.
-. Click *CS50 Appliance 19* to highlight it, then click *Start* to
+. Click *CS50 Appliance 2014* to highlight it, then click *Start* to
 start the appliance. If you see a black-and-white screen entitled *GNU
 GRUB*, no need to do anything; the appliance will continue to boot after
 a few seconds!
 
 If you ultimately find that the link:../[CS50 Appliance]
-runs unbearably slow within VirtualBox, you might need to enable
+runs unbearably slowly within VirtualBox, you might need to enable
 link:/virtualization/[hardware virtualization] on your PC.
 
 === Troubleshooting
@@ -391,12 +393,12 @@ consistent with your distribution (as with `dpkg`, `rpm`, or `yum`).
 wherever you installed it.
 . Select *Preferences...* under VirtualBox's *File* menu.
 . Click *Network*.
-. If *VirtualBox Host-Only Ethernet Adapter* does not already appear
+. If *vboxnet0* does not already appear
 in the white box under *Host-only Networks*, click the
 image:Virtualbox-plus.png[Virtualbox-plus.png,title="image"] icon to the
-right of that box, and *VirtualBox Host-Only Ethernet Adapter* should
+right of that box, and *vboxnet0* should
 then appear in the box.
-. Click *VirtualBox Host-Only Ethernet Adapter* in the white box under
+. Click *vboxnet0* in the white box under
 *Host-only Networks* in order to highlight it, if not highlighted
 already, then click the
 image:Virtualbox-screwdriver.png[Virtualbox-screwdriver.png,title="image"]
@@ -417,9 +419,9 @@ the window contains precisely these values:
 . Click *OK*.
 . Click *OK*.
 . Download the Appliance's OVA file at
-http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vbox.ova
-(http://mirror.cs50.net/appliance50/19/i386/appliance50-19-vbox.ova.torrent[torrent]).
-That OVA file is over 1GB in size, so it might take a while to download.
+http://mirror.cs50.net/appliance50/2014/releases/24/appliance50-2014-vbox.ova
+(http://mirror.cs50.net/appliance50/2014/releases/24/appliance50-2014-vbox.ova.torrent[torrent]).
+That OVA file is nearly 2GB in size, so it might take a while to download.
 . Launch VirtualBox, if not running already, as by single- or
 double-clicking its icon, wherever you installed it.
 . Select *Import Appliance...* from VirtualBox's *File* menu.
@@ -428,13 +430,13 @@ double-clicking its icon, wherever you installed it.
 . You should see a summary of the appliance's settings. Click
 *Import*, and you'll see *CS50 Appliance 19* in VirtualBox's left-hand
 menu after a few seconds or minutes.
-. Click *CS50 Appliance 19* to highlight it, then click *Start* to
+. Click *CS50 Appliance 2014* to highlight it, then click *Start* to
 start the appliance. If you see a black-and-white screen entitled *GNU
 GRUB*, no need to do anything; the appliance will continue to boot after
 a few seconds!
 
 If you ultimately find that the link:..[CS50 Appliance]
-runs unbearably slow within VirtualBox, you might need to enable
+runs unbearably slowly within VirtualBox, you might need to enable
 link:../../Hardware_Virtualization[hardware virtualization] on your PC.
 
 === Troubleshooting
@@ -454,7 +456,7 @@ top-left corner of each's window.)
 . Assuming nothing appears in the white box under *Host-only
 Networks*, click the
 image:Virtualbox-plus.png[Virtualbox-plus.png,title="image"] icon to the
-right of that box, and *VirtualBox Host-Only Ethernet Adapter* should
+right of that box, and *vboxnet0* should
 then appear in the box.
 . Click *OK*.
 . Single-click whichever virtual machine originally triggered the
@@ -465,7 +467,7 @@ error (e.g., the link:..[CS50 Appliance]), then click
 4*. If any of them has both *Enable Network Adapter* checked and a value
 of *Host-only Adapter* for *Attached to* (as should the
 link:..[CS50 Appliance] for *Adapter 2*), ensure that the
-adapter also has a value of *VirtualBox Host-Only Ethernet Adapter* now
+adapter also has a value of *vboxnet0* now
 for *Name*, selecting it yourself from the drop-down menu next to *Name*
 yourself if necessary.
 . Click *OK*.

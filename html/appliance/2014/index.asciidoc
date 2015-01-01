@@ -3,12 +3,17 @@
 
 == NOTICE
 
+[options="compact"]
 *This documentation is for version 2014 of the CS50 Appliance.*
 
-* *You should use link:#instructions[this version] of the appliance if you are:*
+* *You should use this version of the appliance if you are:*
 ** *taking CS50x 2015 through edX,*
 ** *taking CSCI E-50 in Spring 2015 through Harvard Extension School, or*
 ** *pursuing a CS50 Certificate in 2015 through Harvard Division of Continuing Education.*
+
++
+*In any of the above cases, follow the link:#instructions[instructions] later on this page.*
+
 * If following Fall 2014 of CS50 (or CSCI E-50), you should use link:#instructions[this version] of the appliance.
 * If following Fall 2013 of CS50 (or CSCI E-50), you should use link:../19[version 19] of the appliance.
 * If following Fall 2012 of CS50 (or CSCI E-52), you should use link:../17[version 17] of the appliance.
@@ -40,6 +45,8 @@ of) Linux, Mac OS, Solaris, or Windows!
 Incidentally, the appliance is always work in progress, so please
 forgive any bugs!
 
+In case your computer is unable to support a virtual machine, or you simply prefer not to use one, and you know how to install Linux from an ISO-9660 image, we provide link:http://mirror.cs50.net/appliance50/2014/releases/24/appliance50-2014.iso[an ISO image] that you can use to install an Ubuntu system equivalent to the CS50 Appliance on "bare metal".
+
 == Cheatsheet
 
 See link:#instructions[instructions] for much more detail.
@@ -50,12 +57,12 @@ See link:#instructions[instructions] for much more detail.
 |*Your Username* | jharvard
 |*Your Password* | crimson
 |*Appliance's IP Address* | a number of the form *w.x.y.z*, which can be found in the appliance's bottom-right corner
-|*Appliance's Version* | a number of the form *2014-#*, which can be found in the appliance's bottom-right corner
+|*Appliance's Version* | a number of the form *2014-nn*, (where *nn* is a minor version number) which can be found in the appliance's bottom-right corner
 |*Your MySQL Username* | jharvard
 |*Your MySQL Password* | crimson
 |*phpMyAdmin* | http://localhost/phpmyadmin/ from within the appliance
 
-http://w.x.y.z/phpmyadmin/ from your own computer
+http://w.x.y.z/phpmyadmin/ from your own computer (where *w.x.y.z* is the IP address in the appliance's bottom-right corner)
 |====================================================
 
 == Notice
@@ -82,12 +89,9 @@ http://en.wikipedia.org/wiki/Virtual_machine[virtual machines] on your
 own computer, whether you run Mac OS, Windows, or Linux.
 
 * If you have a *Mac*, we recommend that you follow link:fusion/[these instructions for VMware Fusion].
-* If you have a *PC running Windows*, we recommend that you follow link:workstation/[these instructions for VMware Workstation].
-* If you have a *PC running Linux*, we recommend that you follow link:workstation/[these instructions for VMware Workstation].
+* If you have a *PC running Windows or Linux*, we recommend that you follow link:workstation/[these instructions for VMware Workstation].
 
-////
-Alternatively (and particularly if you run into trouble with VMware Fusion or VMware Player), you can follow link:virtualbox/[these instructions for VirtualBox].
-////
+Alternatively (and particularly if you run into trouble with VMware Fusion or VMware Workstation), you can follow link:virtualbox/[these instructions for VirtualBox].
 
 Once installed, it's not uncommon for the appliance to take a minute or
 so to boot. But if, once at John Harvard's desktop, the appliance still
@@ -103,7 +107,7 @@ a CPU that's only 1GHz or so, or has only 1GB or so of RAM.
 
 To determine which version of the appliance you have, simply 
 look in the appliance's bottom-right corner, where
-you should see *19-#* in boldface, where *#* is a number. Alternatively, you can
+you should see *2014-nn* in boldface, where *nn* is a number. Alternatively, you can
 link:#how_to_open_a_terminal[open a terminal] and execute
 
 [source,bash]
@@ -111,9 +115,9 @@ link:#how_to_open_a_terminal[open a terminal] and execute
 appliance50 -v
 ----
 
-which should report `2014-#` as well.
+which should report `2014-nn` as well.
 
-To ensure you have the latest version of the appliance, you can update yourse by 
+To ensure you have the latest version of the appliance, you can update yours by 
 link:#how_to_open_a_terminal[opening a terminal] and executing:
 
 [source,bash]
@@ -864,6 +868,7 @@ Changelog
 * link:../19#Changelog[19]
 * 2014-0
 ** Transitioned to Ubuntu
+* 2014-24
 
 Known Issues
 ------------

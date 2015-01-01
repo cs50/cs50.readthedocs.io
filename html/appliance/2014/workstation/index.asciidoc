@@ -8,12 +8,20 @@ Here's how to install the link:..[CS50 Appliance] using VMware Workstation for l
 
 === Installation
 
-. link:https://docs.google.com/spreadsheet/viewform?hl=en_US&formkey=dHoyMG5LNTgxeGFhakNaaE9CdTlkbWc6MQ[Apply for the VMware Academic Program] (VMAP) in order to obtain a username and password with which you'll eventually be able to download a license key for VMware Workstation 10 from link:https://e5.onthehub.com/WebStore/Security/Signin.aspx?ws=340f7ddc-c740-de11-b696-0030485a8df0&vsro=8&rurl=%2fWebStore%2fProductsByMajorVersionList.aspx%3fws%3d340f7ddc-c740-de11-b696-0030485a8df0%26vsro%3d8&JSEnabled=1[OnTheHub]. You won't need that license key just yet, since VMware Workstation 10 offers a 30-day trial that you can use in the meantime.
-. link:http://www.vmware.com/go/tryworkstation-win[Download a 30-day trial of VMware Workstation].
+. VMware is supporting CS50 and CS50x by providing evaluation licenses for VMware Workstation 11 at no cost to students. These will be active throughout 2015.
+* If you are enrolled in CS50 at Harvard College or CSCI E-50 through the Harvard Extension School, visit the link:https://cs50.harvard.edu/vmware[VMware Software Center for CS50] and sign in with your Harvard University ID number and pin. You will automatically receive an account at the software center. Its user name and initial email address will both be your Harvard email address.
+* If you are enrolled in CS50x, the on-line offering through edX, visit the link:http://cs50.edX.org/vmware[VMware Software Center for CS50x] and sign in with you edX user name and password. You will automatically receive an account at the software center. Its user name will be your edX user name. Its initial email address will be the one you've registered with edX.
+
++
+In either case, you can change your preferred email address later if you wish, but leave the user name unchanged (even if it's an email address that you no longer use).
+. The VMware Software Center is set up like a store, but if you see multiple offerings of Workstation 11, be sure to choose the free one.
++
+Order Workstation 11, then proceed through the check-out process until you reach a screen with a Start Download button. After a momentary delay, a unique product key will be generated for you on that screen. Copy that key into a place where you'll be able to retrieve it later. It will serve as your license key for Workstation 11.
++
+Click the Start Download button to download the installer for Workstation 11.
 . Double-click the file you just downloaded (which is likely in your *Downloads* folder) in order launch VMware Workstation's installer.
 . If prompted to allow the program to make changes to your computer, input your password, and then click *Yes*.
-. A window entitled *VMware Workstation Setup* should appear. Click
-*Next*.
+. A window entitled *VMware Workstation Setup* should appear. Click *Next*.
 . When prompted with a license agreement, select *I accept the terms in the license agreement*, then click *Next*.
 . When prompted to select a *Setup Type*, click *Typical*.
 . When prompted for a *Destination Folder*, click *Next*.
@@ -21,13 +29,12 @@ Here's how to install the link:..[CS50 Appliance] using VMware Workstation for l
 . When prompted about the *User Experience Improvement Program*, decide whether to check or uncheck the box, then click *Next*.
 . When prompted about *Shortcuts*, decide whether to check or uncheck the boxes, then click Next.
 . When prompted to *Perform the Requested Operations*, click *Continue*.
-. Once you see *Enter License Key*, click *Skip* (unless you already have a VMAP account, in which case you can paste your own license key), then click *Finish*.
-. Download the CS50 Appliance itself at http://mirror.cs50.net/appliance50/2014/releases/0/appliance50-2014-vmware.ova (http://mirror.cs50.net/appliance50/2014/releases/0/appliance50-2014-vmware.ova.torrent[torrent]). That file is nearly 2GB in size, so it might take a while to download.
+. Once you see *Enter License Key*, paste in the license key you saved earlier, then click *Finish*.
+. Download the CS50 Appliance itself at http://mirror.cs50.net/appliance50/2014/releases/24/appliance50-2014-vmware.ova (http://mirror.cs50.net/appliance50/2014/releases/24/appliance50-2014-vmware.ova.torrent[torrent]). That file is nearly 2GB in size, so it might take a while to download.
 . Launch VMware Workstation, as by single- or double-clicking its
-icon, wherever it was installed. If prompted for a license key, select *I want to try VMware Workstation 10 for 30 days* and type your email address (unless you already have a VMAP account, in which case you can paste your own license key), then click *Continue*.
+icon, wherever it was installed.
 . If prompted to allow the program to make changes to your computer, input your password, and then click *Yes*.
 . Click *Finish*.
-. When prompted for activation, click *Close*.
 . Select *File > Open*, navigate your way to *appliance50-2014-vmware.ova* (which is likely in your *Downloads* folder), then click *Open*.
 . When prompted for a name and local storage path, click *Import* (after changing the defaults if you'd prefer).
 . If informed that the import failed because the file "did not pass OVF specification conformance or virtual hardware compliance checks," not to worry; click *Retry*, and the file should import.
@@ -37,13 +44,23 @@ icon, wherever it was installed. If prompted for a license key, select *I want t
 
 ==== Binary translation is incompatible with long mode on this platform
 
-If you see this message, you might need to enable
-link:/virtualization[hardware virtualization] on your computer.
+If you see this message, you should try to enable link:/virtualization[hardware virtualization] on your computer. However, if your system doesn't support hardware virtualization, you can still run the CS50 Appliance because it doesn't require "long mode", which is needed for 64-bit virtual machines.
 
 == Linux
 
-. link:https://docs.google.com/spreadsheet/viewform?hl=en_US&formkey=dHoyMG5LNTgxeGFhakNaaE9CdTlkbWc6MQ[Apply for the VMware Academic Program] (VMAP) in order to obtain a username and password with which you'll eventually be able to download a license key for VMware Workstation 10 from link:https://e5.onthehub.com/WebStore/Security/Signin.aspx?ws=340f7ddc-c740-de11-b696-0030485a8df0&vsro=8&rurl=%2fWebStore%2fProductsByMajorVersionList.aspx%3fws%3d340f7ddc-c740-de11-b696-0030485a8df0%26vsro%3d8&JSEnabled=1[OnTheHub]. You won't need that license key just yet, since VMware Workstation 10 offers a 30-day trial that you can use in the meantime.
-. link:http://www.vmware.com/products/workstation/workstation-evaluation[Download a 30-day trial of VMware Workstation].
+=== Installation
+
+. VMware is supporting CS50 and CS50x by providing evaluation licenses for VMware Workstation 11 at no cost to students. These will be active throughout 2015.
+* If you are enrolled in CS50 at Harvard College or CSCI E-50 through the Harvard Extension School, visit the link:https://cs50.harvard.edu/vmware[VMware Software Center for CS50] and sign in with your Harvard University ID number and pin. You will automatically receive an account at the software center. Its user name and initial email address will both be your Harvard email address.
+* If you are enrolled in CS50x, the on-line offering through edX, visit the link:http://cs50.edX.org/vmware[VMware Software Center for CS50x] and sign in with you edX user name and password. You will automatically receive an account at the software center. Its user name will be your edX user name. Its initial email address will be the one you've registered with edX.
+
++
+In either case, you can change your preferred email address later if you wish, but leave the user name unchanged (even if it's an email address that you no longer use).
+. The VMware Software Center is set up like a store, but if you see multiple offerings of Workstation 11, be sure to choose the free one.
++
+Order Workstation 11, then proceed through the check-out process until you reach a screen with a Start Download button. After a momentary delay, a unique product key will be generated for you on that screen. Copy that key into a place where you'll be able to retrieve it later. It will serve as your license key for Workstation 11.
++
+Click the Start Download button to download the installer for Workstation 11.
 . Install VMware Workstation.
-. Download the CS50 Appliance from http://mirror.cs50.net/appliance50/2014/releases/0/appliance50-2014-vmware.ova (http://mirror.cs50.net/appliance50/2014/releases/0/appliance50-2014-vmware.ova.torrent[torrent]).
+. Download the CS50 Appliance from http://mirror.cs50.net/appliance50/2014/releases/24/appliance50-2014-vmware.ova (http://mirror.cs50.net/appliance50/2014/releases/24/appliance50-2014-vmware.ova.torrent[torrent]).
 . Import the CS50 Appliance into VMware Workstation.
