@@ -5,16 +5,14 @@ Here's how to install the link:..[CS50 Appliance] using VMware Fusion for Mac OS
 == Installation
 
 . VMware is supporting CS50 and CS50x by providing evaluation licenses for VMware Fusion 7 at no cost to students. These will be active throughout 2015.
-* If you are enrolled in CS50 at Harvard College or CSCI E-50 through the Harvard Extension School, visit the link:https://cs50.harvard.edu/vmware[VMware Software Center for CS50] and sign in with your Harvard University ID number and pin. You will automatically receive an account at the software center. Its user name and initial email address will both be your Harvard email address.
-* If you are enrolled in CS50x, the on-line offering through edX, visit the link:http://cs50.edX.org/vmware[VMware Software Center for CS50x] and sign in with you edX user name and password. You will automatically receive an account at the software center. Its user name will be your edX user name. Its initial email address will be the one you've registered with edX.
+* If you are enrolled in CS50 at Harvard College or CSCI E-50 through the Harvard Extension School, visit the link:https://cs50.harvard.edu/vmware[VMware Software Center for CS50] and sign in with your Harvard University ID number and pin. You will automatically receive an account at the Software Center. Its user name and initial email address will both be your Harvard email address.
+* If you are enrolled in CS50x, the on-line offering through edX, visit the link:http://cs50.edX.org/vmware[VMware Software Center for CS50x] and sign in with your edX user name and password. You will automatically receive an account at the Software Center. Its user name will be your edX user name. Its initial email address will be the one you've registered with edX.
 
 +
 In either case, you can change your preferred email address later if you wish, but leave the user name unchanged (even if it's an email address that you no longer use).
-. The VMware Software Center is set up like a store, but if you see multiple offerings of Fusion 7, be sure to choose the free one.
+. The VMware Software Center is set up like a store. On the "store front" page, click on VMware Fusion 7. If you see both free and non-free offerings of the product, choose the free one. (It's the same Fusion 7 Pro software, but it expires after 2015.) Click the *Add to Cart* button, then proceed through the check-out process until you reach a screen with a *Start Download* button. After a momentary delay, your unique product key should appear in red on that screen. Copy that key into a place where you keep software serial numbers and license keys. You'll need it to install Fusion 7 now and to reinstall it later if the need arises.
 +
-Order Fusion 7, then proceed through the check-out process until you reach a screen with a Start Download button. After a momentary delay, a unique product key will be generated for you on that screen. Copy that key into a place where you'll be able to retrieve it later. It will serve as your license key for Fusion 7.
-+
-Click the Start Download button to download the installer for Fusion 7.
+Click the *Start Download* button to download the installer for Fusion 7.
 . Double-click the file you just downloaded (which is likely in your *Downloads* folder) in order to "mount" VMware Fusion's icon on your desktop.
 . A window should open. Double-click the *VMware Fusion* (or *VMware Fusion.app*) icon in that window, click *Open* if prompted, and type your password if prompted. Follow the instructions to install Fusion 7. When prompted for a license key, use the product key generated for you by the VMware Software Center.
 . Download the CS50 Appliance itself at http://mirror.cs50.net/appliance50/2014/releases/24/appliance50-2014-vmware.ova (http://mirror.cs50.net/appliance50/2014/releases/24/appliance50-2014-vmware.ova.torrent[torrent]).  That file is nearly 2GB in size, so it might take a while to download.
@@ -30,13 +28,3 @@ be in your *Applications* folder.  If prompted to *Create New*, *Convert VM*, or
 . When prompted with *Finish*, click *Finish*.
 . The appliance should start to boot. (If it doesn't, click VMware Fusion's &#9654; button.) If prompted to "upgrade this virtual machine," click *Upgrade*. Don't worry if you see *fail* in red a couple of times as the appliance starts.
 . When prompted to register, follow the on-screen prompts.
-////
-. In your Mac's top-left corner, select *&#63743; > About This Mac* to determine determine which version of Mac OS you have.
-+
---
-* If running Mac OS 10.8 or later, link:http://www.vmware.com/go/try-fusion-en[download VMware Fusion 7].
-* If running Mac OS 10.7, link:https://my.vmware.com/web/vmware/details?downloadGroup=FUS-604&productId=361&rPId=6092[download VMware Fusion 6]. (Click *Download Now* to the right of *VMware Fusion 6 Only*. If prompted to log in, select the *Register* tab and register for a vmware.com account, which will be separate from your VMAP account.)
-* If running Mac OS 10.6, link:https://my.vmware.com/web/vmware/details?downloadGroup=FUS-505&productId=294&rPId=6208[download VMware Fusion 5]. (Click *Download Now* to the right of *Download including only VMware Fusion 5.0.5 software*. If prompted to log in, select the *Register* tab and register for a vmware.com account, which will be separate from your VMAP account.)
---
-+
-////

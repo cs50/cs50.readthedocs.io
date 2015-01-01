@@ -3,18 +3,19 @@
 
 == NOTICE
 
-[options="compact"]
-*This documentation is for version 2014 of the CS50 Appliance.*
+*The documentation on this page is for version 2014 of the CS50 Appliance.*
 
-* *You should use this version of the appliance if you are:*
+* *You should use version 2014 of the appliance if you are:*
 ** *taking CS50x 2015 through edX,*
-** *taking CSCI E-50 in Spring 2015 through Harvard Extension School, or*
-** *pursuing a CS50 Certificate in 2015 through Harvard Division of Continuing Education.*
+** *taking CSCI E-50 in Spring 2015 through Harvard Extension School,*
+** *pursuing a CS50 Certificate in 2015 through Harvard Division of Continuing Education, or*
+** *following the fall 2014 offering of CS50 on line.*
 
 +
 *In any of the above cases, follow the link:#instructions[instructions] later on this page.*
-
-* If following Fall 2014 of CS50 (or CSCI E-50), you should use link:#instructions[this version] of the appliance.
+////
+Why both "Extension School" and "DCE" above?
+////
 * If following Fall 2013 of CS50 (or CSCI E-50), you should use link:../19[version 19] of the appliance.
 * If following Fall 2012 of CS50 (or CSCI E-52), you should use link:../17[version 17] of the appliance.
 * If following Summer 2012 of CSCI S-75, you should also use link:../17[version 17] of the appliance.
@@ -57,12 +58,12 @@ See link:#instructions[instructions] for much more detail.
 |*Your Username* | jharvard
 |*Your Password* | crimson
 |*Appliance's IP Address* | a number of the form *w.x.y.z*, which can be found in the appliance's bottom-right corner
-|*Appliance's Version* | a number of the form *2014-nn*, (where *nn* is a minor version number) which can be found in the appliance's bottom-right corner
+|*Appliance's Version* | a number of the form *+2014-#+*, (where *+#+* is a minor version number) which can be found in the appliance's bottom-right corner
 |*Your MySQL Username* | jharvard
 |*Your MySQL Password* | crimson
-|*phpMyAdmin* | http://localhost/phpmyadmin/ from within the appliance
+|*phpMyAdmin* | `http://localhost/phpmyadmin/` from within the appliance
 
-http://w.x.y.z/phpmyadmin/ from your own computer (where *w.x.y.z* is the IP address in the appliance's bottom-right corner)
+`http://*w.x.y.z*/phpmyadmin/` from your own computer (where `*w.x.y.z*` is the IP address in the appliance's bottom-right corner)
 |====================================================
 
 == Notice
@@ -88,26 +89,25 @@ that will let you run
 http://en.wikipedia.org/wiki/Virtual_machine[virtual machines] on your
 own computer, whether you run Mac OS, Windows, or Linux.
 
-* If you have a *Mac*, we recommend that you follow link:fusion/[these instructions for VMware Fusion].
-* If you have a *PC running Windows or Linux*, we recommend that you follow link:workstation/[these instructions for VMware Workstation].
+* If you have a *Mac*, you can check which version of OS X it's running by selecting *About this Mac* from the Apple-logo menu at the top-left corner of your screen. If your version of OS X is 10.8.x ("Mountain Lion") or later, we recommend that you follow link:fusion/[these instructions for VMware Fusion 7]. footnote:[If you're using OS X version 10.7.x ("Lion"), please drop a note to sysadmins@cs50.harvard.edu.]
+* If you have a *PC running a 64-bit edition of Windows or Linux*, we recommend that you follow link:workstation/[these instructions for VMware Workstation 11]. footnote:[If your Windows or Linux computer runs a 32-bit OS, please drop a note to sysadmins@cs50.harvard.edu.]
 
-Alternatively (and particularly if you run into trouble with VMware Fusion or VMware Workstation), you can follow link:virtualbox/[these instructions for VirtualBox].
+Alternatively (if your computer doesn't meet the requirements above, or you run into trouble with the applications donated by VMware), you might follow link:virtualbox/[these instructions for VirtualBox].
 
-Once installed, it's not uncommon for the appliance to take a minute or
+Once the appliance installed, it's not uncommon for it to take a minute or
 so to boot. But if, once at John Harvard's desktop, the appliance still
-feels unbearably slow, you might need to enable
-link:/virtualization[hardware virtualization] on your computer
-if it's a PC running Windows or Linux. (Hardware virtualization should
+feels unbearably slow on a PC running Windows or Linux, you might need to enable
+link:/virtualization[hardware virtualization]. (Hardware virtualization should
 be enabled by default on any Intel-based Mac manufactured in the past
 few years.) Even with hardware virtualization enabled, though, virtual
 machines might still feel slow if your computer is a few years old, has
-a CPU that's only 1GHz or so, or has only 1GB or so of RAM.
+a CPU that's running at less than 2GHz, or has only 1GB or so of RAM.
 
 === How to Update Appliance
 
 To determine which version of the appliance you have, simply 
 look in the appliance's bottom-right corner, where
-you should see *2014-nn* in boldface, where *nn* is a number. Alternatively, you can
+you should see *+2014-#+* in boldface, where *+#+* is a number. Alternatively, you can
 link:#how_to_open_a_terminal[open a terminal] and execute
 
 [source,bash]
@@ -115,7 +115,7 @@ link:#how_to_open_a_terminal[open a terminal] and execute
 appliance50 -v
 ----
 
-which should report `2014-nn` as well.
+which should report `2014-#` as well.
 
 To ensure you have the latest version of the appliance, you can update yours by 
 link:#how_to_open_a_terminal[opening a terminal] and executing:

@@ -9,16 +9,14 @@ Here's how to install the link:..[CS50 Appliance] using VMware Workstation for l
 === Installation
 
 . VMware is supporting CS50 and CS50x by providing evaluation licenses for VMware Workstation 11 at no cost to students. These will be active throughout 2015.
-* If you are enrolled in CS50 at Harvard College or CSCI E-50 through the Harvard Extension School, visit the link:https://cs50.harvard.edu/vmware[VMware Software Center for CS50] and sign in with your Harvard University ID number and pin. You will automatically receive an account at the software center. Its user name and initial email address will both be your Harvard email address.
-* If you are enrolled in CS50x, the on-line offering through edX, visit the link:http://cs50.edX.org/vmware[VMware Software Center for CS50x] and sign in with you edX user name and password. You will automatically receive an account at the software center. Its user name will be your edX user name. Its initial email address will be the one you've registered with edX.
+* If you are enrolled in CS50 at Harvard College or CSCI E-50 through the Harvard Extension School, visit the link:https://cs50.harvard.edu/vmware[VMware Software Center for CS50] and sign in with your Harvard University ID number and pin. You will automatically receive an account at the Software Center. Its user name and initial email address will both be your Harvard email address.
+* If you are enrolled in CS50x, the on-line offering through edX, visit the link:http://cs50.edX.org/vmware[VMware Software Center for CS50x] and sign in with your edX user name and password. You will automatically receive an account at the Software Center. Its user name will be your edX user name. Its initial email address will be the one you've registered with edX.
 
 +
 In either case, you can change your preferred email address later if you wish, but leave the user name unchanged (even if it's an email address that you no longer use).
-. The VMware Software Center is set up like a store, but if you see multiple offerings of Workstation 11, be sure to choose the free one.
+. The VMware Software Center is set up like a store. On the "store front" page, click on VMware Workstation 11. If you see both a free and a non-free offering of the product, choose the free one. In the drop-down menu labeled *Choose a platform*, make sure that *Windows* is selected. Click the *Add to Cart* button, then proceed through the check-out process until you reach a screen with a *Start Download* button. After a momentary delay, your unique product key should appear in red on that screen. Copy that key into a place where you keep software serial numbers and license keys. You'll need it to install Workstation 11 now and to reinstall it later if the need arises.
 +
-Order Workstation 11, then proceed through the check-out process until you reach a screen with a Start Download button. After a momentary delay, a unique product key will be generated for you on that screen. Copy that key into a place where you'll be able to retrieve it later. It will serve as your license key for Workstation 11.
-+
-Click the Start Download button to download the installer for Workstation 11.
+Click the *Start Download* button to download the installer for Workstation 11.
 . Double-click the file you just downloaded (which is likely in your *Downloads* folder) in order launch VMware Workstation's installer.
 . If prompted to allow the program to make changes to your computer, input your password, and then click *Yes*.
 . A window entitled *VMware Workstation Setup* should appear. Click *Next*.
@@ -51,16 +49,15 @@ If you see this message, you should try to enable link:/virtualization[hardware 
 === Installation
 
 . VMware is supporting CS50 and CS50x by providing evaluation licenses for VMware Workstation 11 at no cost to students. These will be active throughout 2015.
-* If you are enrolled in CS50 at Harvard College or CSCI E-50 through the Harvard Extension School, visit the link:https://cs50.harvard.edu/vmware[VMware Software Center for CS50] and sign in with your Harvard University ID number and pin. You will automatically receive an account at the software center. Its user name and initial email address will both be your Harvard email address.
-* If you are enrolled in CS50x, the on-line offering through edX, visit the link:http://cs50.edX.org/vmware[VMware Software Center for CS50x] and sign in with you edX user name and password. You will automatically receive an account at the software center. Its user name will be your edX user name. Its initial email address will be the one you've registered with edX.
+* If you are enrolled in CS50 at Harvard College or CSCI E-50 through the Harvard Extension School, visit the link:https://cs50.harvard.edu/vmware[VMware Software Center for CS50] and sign in with your Harvard University ID number and pin. You will automatically receive an account at the Software Center. Its user name and initial email address will both be your Harvard email address.
+* If you are enrolled in CS50x, the on-line offering through edX, visit the link:http://cs50.edX.org/vmware[VMware Software Center for CS50x] and sign in with you edX user name and password. You will automatically receive an account at the Software Center. Its user name will be your edX user name. Its initial email address will be the one you've registered with edX.
 
 +
 In either case, you can change your preferred email address later if you wish, but leave the user name unchanged (even if it's an email address that you no longer use).
-. The VMware Software Center is set up like a store, but if you see multiple offerings of Workstation 11, be sure to choose the free one.
+
+. The VMware Software Center is set up like a store. On the "store front" page, click on VMware Workstation 11. If you see both a free and a non-free offering of the product, choose the free one. In the drop-down menu labeled *Choose a platform*, make sure that *Linux* is selected. Click the *Add to Cart* button, then proceed through the check-out process until you reach a screen with a *Start Download* button. After a momentary delay, your unique product key should appear in red on that screen. Copy that key into a place where you keep software serial numbers and license keys. You'll need it to install Workstation 11 now and to reinstall it later if the need arises.
 +
-Order Workstation 11, then proceed through the check-out process until you reach a screen with a Start Download button. After a momentary delay, a unique product key will be generated for you on that screen. Copy that key into a place where you'll be able to retrieve it later. It will serve as your license key for Workstation 11.
-+
-Click the Start Download button to download the installer for Workstation 11.
+Click the *Start Download* button to download the installer for Workstation 11.
 . Install VMware Workstation.
 . Download the CS50 Appliance from http://mirror.cs50.net/appliance50/2014/releases/24/appliance50-2014-vmware.ova (http://mirror.cs50.net/appliance50/2014/releases/24/appliance50-2014-vmware.ova.torrent[torrent]).
 . Import the CS50 Appliance into VMware Workstation.
