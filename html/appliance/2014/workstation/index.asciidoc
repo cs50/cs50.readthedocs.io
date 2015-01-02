@@ -18,25 +18,23 @@ In either case, you can change your preferred email address later if you wish, b
 +
 Click the *Start Download* button to download the installer for Workstation 11.
 . Double-click the file you just downloaded (which is likely in your *Downloads* folder) in order launch VMware Workstation's installer.
-. If prompted to allow the program to make changes to your computer, input your password, and then click *Yes*.
+. If you are asked whether to allow the installer to make changes to your computer, click *Yes*.
 . A window entitled *VMware Workstation Setup* should appear. Click *Next*.
 . When prompted with a license agreement, select *I accept the terms in the license agreement*, then click *Next*.
 . When prompted to select a *Setup Type*, click *Typical*.
 . When prompted for a *Destination Folder*, click *Next*.
-. When prompted about *Software Updates*, leave *Check for product updates on startup* checked, and then click *Next*.
+. When prompted about *Software Updates*, decide whether to check or uncheck *Check for product updates on startup*, and then click *Next*.
 . When prompted about the *User Experience Improvement Program*, decide whether to check or uncheck the box, then click *Next*.
-. When prompted about *Shortcuts*, decide whether to check or uncheck the boxes, then click Next.
-. When prompted to *Perform the Requested Operations*, click *Continue*.
-. Once you see *Enter License Key*, paste in the license key you saved earlier, then click *Finish*.
-. Download the CS50 Appliance itself at http://mirror.cs50.net/appliance50/2014/releases/24/appliance50-2014-vmware.ova (http://mirror.cs50.net/appliance50/2014/releases/24/appliance50-2014-vmware.ova.torrent[torrent]). That file is nearly 2GB in size, so it might take a while to download.
-. Launch VMware Workstation, as by single- or double-clicking its
-icon, wherever it was installed.
-. If prompted to allow the program to make changes to your computer, input your password, and then click *Yes*.
-. Click *Finish*.
-. Select *File > Open*, navigate your way to *appliance50-2014-vmware.ova* (which is likely in your *Downloads* folder), then click *Open*.
-. When prompted for a name and local storage path, click *Import* (after changing the defaults if you'd prefer).
-. If informed that the import failed because the file "did not pass OVF specification conformance or virtual hardware compliance checks," not to worry; click *Retry*, and the file should import.
-. Click *&#9654; Power on this virtual machine*. If prompted about removable devices, click *OK*.
+. When prompted about *Shortcuts*, decide whether to check or uncheck the boxes, then click *Next*.
+. When asked whether you're *Ready to Perform the Requested Operations*, click *Continue*.
+. Once you see *Enter License Key*, paste in the license key you saved earlier, then click *Enter >*.
+. You should see *Setup Wizard Complete*. Click *Finish*.
+. You don't need to keep the Workstation installer after a successful installation. You can download it again later if you need it.
+. Download the CS50 Appliance itself from http://mirror.cs50.net/appliance50/2014/releases/24/appliance50-2014-vmware.ova (http://mirror.cs50.net/appliance50/2014/releases/24/appliance50-2014-vmware.ova.torrent[torrent]). That file is nearly 2GB in size, so it might take a while to download.
+. Launch VMware Workstation 11 and select *Open...* from the *File* menu, then navigate to *appliance50-2014-vmware.ova* (which is likely in your *Downloads* folder) and select it. Click *Open*.
+. When prompted for a name and local storage path, you can change the defaults if you wish. Then click *Import*.
+. If you see a warning that the import failed because the file "did not pass OVF specification conformance or virtual hardware compliance checks," don't worry. Just click *Retry*, and the import should succeed.
+. In the new tab describing the CS50 Appliance, click *&#9654; Power on this virtual machine*. If prompted about removable devices, decide whether to check or uncheck *Do not show this hint again*, then click *OK*.
 
 === Troubleshooting
 
