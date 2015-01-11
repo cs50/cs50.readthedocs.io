@@ -772,13 +772,9 @@ shows the user the page that required login.
 
 CS50 ID supports
 
-* http://openid.net/specs/openid-authentication-2_0.html[OpenID
-Authentication 2.0]
-*
-http://openid.net/specs/openid-simple-registration-extension-1_0.html[OpenID
-Simple Registration Extension 1.0]
-* http://openid.net/specs/openid-attribute-exchange-1_0.html[OpenID
-Attribute Exchange 1.0]
+* http://openid.net/specs/openid-authentication-2_0.html[OpenID Authentication 2.0]
+* http://openid.net/specs/openid-simple-registration-extension-1_0.html[OpenID Simple Registration Extension 1.0]
+* http://openid.net/specs/openid-attribute-exchange-1_0.html[OpenID Attribute Exchange 1.0]
 
 but with some constraints.
 
