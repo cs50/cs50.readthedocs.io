@@ -46,7 +46,7 @@ of) Linux, Mac OS, Solaris, or Windows!
 Incidentally, the appliance is always work in progress, so please
 forgive any bugs!
 
-In case your computer is unable to support a virtual machine, or you simply prefer not to use one, and you know how to install Linux from an ISO-9660 image, we provide link:http://mirror.cs50.net/appliance50/2014/releases/24/appliance50-2014.iso[an ISO image] that you can use to install an Ubuntu system equivalent to the CS50 Appliance on "bare metal".
+In case your computer is unable to support a virtual machine, or you simply prefer not to use one, and you know how to install Linux from an ISO-9660 image, we provide link:http://mirror.cs50.net/appliance50/2014/releases/26/appliance50-2014.iso[an ISO image] that you can use to install an Ubuntu system equivalent to the CS50 Appliance on "bare metal".
 
 == Cheatsheet
 
@@ -90,7 +90,10 @@ http://en.wikipedia.org/wiki/Virtual_machine[virtual machines] on your
 own computer, whether you run Mac OS, Windows, or Linux.
 
 * If you have a *Mac*, you can check which version of OS X it's running by selecting *About this Mac* from the Apple-logo menu at the top-left corner of your screen. If your version of OS X is 10.8.x ("Mountain Lion") or later, we recommend that you follow link:fusion/[these instructions for VMware Fusion 7]. footnote:[If you're using OS X version 10.7.x ("Lion"), please drop a note to sysadmins@cs50.harvard.edu.]
-* If you have a *PC running a 64-bit edition of Windows or Linux*, we recommend that you follow link:workstation/[these instructions for VMware Workstation 11]. footnote:[If your Windows or Linux computer runs a 32-bit OS, please drop a note to sysadmins@cs50.harvard.edu.] footnote:[If you are running your own 64-bit Ubuntu Linux, you can run `wget -q -O - http://mirror.cs50.net/appliance50/2014/debs/keyFile | sudo apt-key add -` followed by `sudo add-apt-repository "deb http://mirror.cs50.net/appliance50/2014/debs/dists/trusty/main/binary-i386 /"`, after which `sudo apt-get install check50 library50-c style50` will install check50, the CS50 Library, and style50, respectively.]
+* If you have a *PC running a 64-bit edition of Windows or Linux*, we recommend that you follow link:workstation/[these instructions for VMware Workstation 11]. footnote:[If your Windows or Linux computer runs a 32-bit OS, please drop a note to sysadmins@cs50.harvard.edu.]
+////
+footnote:[If you are running your own 64-bit Ubuntu Linux, you can run `wget -q -O - http://mirror.cs50.net/appliance50/2014/debs/keyFile | sudo apt-key add -` followed by `sudo add-apt-repository "deb http://mirror.cs50.net/appliance50/2014/debs/dists/trusty/main/binary-i386 /"`, after which `sudo apt-get install check50 library50-c style50` will install check50, the CS50 Library, and style50, respectively.]
+////
 
 Alternatively (if your computer doesn't meet the requirements above, or you run into trouble with the applications donated by VMware), you might follow link:virtualbox/[these instructions for VirtualBox].
 
@@ -869,6 +872,7 @@ Changelog
 * 2014-0
 ** Transitioned to Ubuntu
 * 2014-24
+* 2014-26
 
 Known Issues
 ------------
