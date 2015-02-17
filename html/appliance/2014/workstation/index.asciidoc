@@ -30,7 +30,7 @@ Click the *Start Download* button to download the installer for Workstation 11.
 . Once you see *Enter License Key*, paste in the license key you saved earlier, then click *Enter >*.
 . You should see *Setup Wizard Complete*. Click *Finish*.
 . You don't need to keep the Workstation installer after a successful installation. You can download it again later if you need it.
-. Download the CS50 Appliance itself from http://mirror.cs50.net/appliance50/2014/releases/26/appliance50-2014-vmware.ova (http://mirror.cs50.net/appliance50/2014/releases/26/appliance50-2014-vmware.ova.torrent[torrent]). That file is nearly 2GB in size, so it might take a while to download.
+. Download the CS50 Appliance itself from http://mirror.cs50.net/appliance50/2014/releases/29/appliance50-2014-vmware.ova (http://mirror.cs50.net/appliance50/2014/releases/29/appliance50-2014-vmware.ova.torrent[torrent]). That file is nearly 2GB in size, so it might take a while to download.
 . Launch VMware Workstation 11 and select *Open...* from the *File* menu, then navigate to *appliance50-2014-vmware.ova* (which is likely in your *Downloads* folder) and select it. Click *Open*.
 . When prompted for a name and local storage path, you can change the defaults if you wish. Then click *Import*.
 . If you see a warning that the import failed because the file "did not pass OVF specification conformance or virtual hardware compliance checks," don't worry. Just click *Retry*, and the import should succeed.
@@ -57,5 +57,5 @@ In either case, you can change your preferred email address later if you wish, b
 +
 Click the *Start Download* button to download the installer for Workstation 11.
 . Install VMware Workstation.
-. Download the CS50 Appliance from http://mirror.cs50.net/appliance50/2014/releases/26/appliance50-2014-vmware.ova (http://mirror.cs50.net/appliance50/2014/releases/26/appliance50-2014-vmware.ova.torrent[torrent]).
+. Download the CS50 Appliance from http://mirror.cs50.net/appliance50/2014/releases/29/appliance50-2014-vmware.ova (http://mirror.cs50.net/appliance50/2014/releases/29/appliance50-2014-vmware.ova.torrent[torrent]).
 . Import the CS50 Appliance into VMware Workstation.

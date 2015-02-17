@@ -46,7 +46,7 @@ of) Linux, Mac OS, Solaris, or Windows!
 Incidentally, the appliance is always work in progress, so please
 forgive any bugs!
 
-In case your computer is unable to support a virtual machine, or you simply prefer not to use one, and you know how to install Linux from an ISO-9660 image, we provide link:http://mirror.cs50.net/appliance50/2014/releases/26/appliance50-2014.iso[an ISO image] that you can use to install an Ubuntu system equivalent to the CS50 Appliance on "bare metal".
+In case your computer is unable to support a virtual machine, or you simply prefer not to use one, and you know how to install Linux from an ISO-9660 image, we provide link:http://mirror.cs50.net/appliance50/2014/releases/29/appliance50-2014.iso[an ISO image] that you can use to install an Ubuntu system equivalent to the CS50 Appliance on "bare metal".
 
 == Cheatsheet
 
@@ -873,6 +873,7 @@ Changelog
 ** Transitioned to Ubuntu
 * 2014-24
 * 2014-26
+* 2014-29
 
 Known Issues
 ------------
