@@ -55,8 +55,8 @@ var rows = [
      ["2010", 309, 185],
      ["2011", 392, 215],
      ["2012", 479, 269],
-     ["2013", 0, 693], // confirm
-     ["2014", 0, 874] // confirm
+     ["2013", 271, 423],
+     ["2014", 259, 566]
 ];
 
 google.load("visualization", "1", {packages:["columnchart"]});
@@ -70,10 +70,6 @@ google.setOnLoadCallback(function() {
     {
         var students = rows[i][1] + rows[i][2];
         data["enrollment"][i] = [rows[i][0], {v: students, f: students + " students"}];
-
-        // skip gender for 2013 onward for now
-        if (i >= rows.length - 2)
-            continue;
 
         var percent =  Math.round(rows[i][2] / (rows[i][1] + rows[i][2]) * 100);
         data ["women"][i] = [rows[i][0], {v: percent, f: percent + "% (" + rows[i][2] + "/" + (rows[i][1] + rows[i][2]) + ")"}];
