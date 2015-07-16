@@ -10,12 +10,14 @@ link:#linux[Linux].
 
 === Installation
 
-In the instructions below, *4.x.y* represents whatever version of
-VirtualBox is available on the day that you download it.
-
-. Download the latest version of VirtualBox from
-http://www.virtualbox.org/wiki/Downloads by clicking *x86/amd64* to the
-right of *VirtualBox 4.x.y for OS X Hosts*.
+. If your Mac is running OS X 10.8 or later, then
+download the latest release of VirtualBox from
+http://www.virtualbox.org/wiki/Downloads by clicking *amd64* to the
+right of *VirtualBox 5.x.y for OS X Hosts* (where *5.x.y* stands for the
+current release). If your Mac is running an earlier version of
+Mac OS X, then download the latest release of VirtualBox *4.3.y* from
+https://www.virtualbox.org/wiki/Download_Old_Builds_4_3 by clicking
+*Intel Macs* to the right of *OS X hosts* under *VirtualBox 4.3.y*.
 . Double-click the file you just downloaded. You may see a window that
 says *Verifying...* after which a *VirtualBox* icon should appear on
 your desktop (or on the lefthand side of a Finder window).
