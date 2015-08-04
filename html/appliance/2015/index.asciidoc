@@ -5,7 +5,7 @@
 
 *The documentation on this page is for version 2015 of the CS50 Appliance.*
 
-* *If taking CS61 at Harvard College, you should use this version of the appliance. Follow link:#instructions[these instructions].*
+* *If taking CS61 (or CSCI E-61), you should use this version of the appliance. Follow link:#instructions[these instructions].*
 * If taking CS50x 2015, you should use link:../2014[version 2014] of the appliance.
 * If following Fall 2014 of CS50 (or CSCI E-50), you should use link:../2014[version 2014] of the appliance.
 * If following Fall 2013 of CS50 (or CSCI E-50), you should use link:../19[version 19] of the appliance.
