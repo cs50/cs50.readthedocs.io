@@ -15,7 +15,7 @@ In either case, you can change your preferred email address later if you wish, b
 Click the *Start Download* button to download the installer for Fusion 7.
 . Double-click the file you just downloaded (which is likely in your *Downloads* folder) in order to "mount" VMware Fusion's icon on your desktop.
 . A window should open. Double-click the *VMware Fusion* (or *VMware Fusion.app*) icon in that window, click *Open* if prompted, and type your password if prompted. Follow the instructions to install Fusion 7. When prompted for a license key, use the product key generated for you by the VMware Software Center.
-. Download the CS50 Appliance itself at http://mirror.cs50.net/appliance50/2015/releases/29/appliance50-2015-vmware.ova (http://mirror.cs50.net/appliance50/2015/releases/29/appliance50-2015-vmware.ova.torrent[torrent]).  That file is nearly 2GB in size, so it might take a while to download.
+. Download the CS50 Appliance itself at http://mirror.cs50.net/appliance50/2015/releases/0/appliance50-2015-vmware.ova (http://mirror.cs50.net/appliance50/2015/releases/0/appliance50-2015-vmware.ova.torrent[torrent]).  That file is nearly 2GB in size, so it might take a while to download.
 . Once the file has finished downloading, check whether its name ends in *.ova* or *.ovf*. There appears to be a bug in some versions of Chrome whereby *.ova* is incorrectly changed to *.ovf*, so if the file's name does now end in *.ovf*, change it back as follows:
 * Single-click the file.
 * Hit Enter.

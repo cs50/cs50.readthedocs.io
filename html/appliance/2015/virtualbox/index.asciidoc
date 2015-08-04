@@ -63,8 +63,8 @@ the window contains precisely these values:
 . Click *OK*.
 . Click *OK*.
 .  Download the Appliance's OVA file at
-http://mirror.cs50.net/appliance50/2015/releases/29/appliance50-2015-vbox.ova
-(http://mirror.cs50.net/appliance50/2015/releases/29/appliance50-2015-vbox.ova.torrent[torrent]).
+http://mirror.cs50.net/appliance50/2015/releases/0/appliance50-2015-vbox.ova
+(http://mirror.cs50.net/appliance50/2015/releases/0/appliance50-2015-vbox.ova.torrent[torrent]).
 That file is nearly 2GB in size, so it might take a while to download.
 . Once the file has finished downloading, check whether its name ends in *.ova* or *.ovf*.
 There appears to be a bug in Chrome whereby *.ova* is incorrectly changed to *.ovf*,
@@ -236,8 +236,8 @@ the window contains precisely these values:
 . Click *OK*.
 . Click *OK*.
 .  Download the Appliance's OVA file at
-http://mirror.cs50.net/appliance50/2015/releases/29/appliance50-2015-vbox.ova
-(http://mirror.cs50.net/appliance50/2015/releases/29/appliance50-2015-vbox.ova.torrent[torrent]).
+http://mirror.cs50.net/appliance50/2015/releases/0/appliance50-2015-vbox.ova
+(http://mirror.cs50.net/appliance50/2015/releases/0/appliance50-2015-vbox.ova.torrent[torrent]).
 That OVA file is nearly 2GB in size, so it might take a while to download.
 . Launch VirtualBox, if not running already, as by single- or
 double-clicking its icon, wherever you installed it.
@@ -419,8 +419,8 @@ the window contains precisely these values:
 . Click *OK*.
 . Click *OK*.
 . Download the Appliance's OVA file at
-http://mirror.cs50.net/appliance50/2015/releases/29/appliance50-2015-vbox.ova
-(http://mirror.cs50.net/appliance50/2015/releases/29/appliance50-2015-vbox.ova.torrent[torrent]).
+http://mirror.cs50.net/appliance50/2015/releases/0/appliance50-2015-vbox.ova
+(http://mirror.cs50.net/appliance50/2015/releases/0/appliance50-2015-vbox.ova.torrent[torrent]).
 That OVA file is nearly 2GB in size, so it might take a while to download.
 . Launch VirtualBox, if not running already, as by single- or
 double-clicking its icon, wherever you installed it.
