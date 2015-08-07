@@ -46,14 +46,15 @@ See link:#instructions[instructions] for much more detail.
 
 [cols=",",]
 |====================================================
-|*Your Name* | John Harvard
-|*Your Username* | jharvard
-|*Your Password* | crimson
+|*Your SSH Username* | ubuntu
+|*Your SSH Password* | crimson
 |*Appliance's IP Address* | a number of the form *w.x.y.z*, which can be found in the appliance's bottom-right corner
 |*Appliance's Version* | a number of the form *+2015-#+*, (where *+#+* is a minor version number) which can be found in the appliance's bottom-right corner
 |*Your MySQL Username* | jharvard
 |*Your MySQL Password* | crimson
 |*phpMyAdmin* | `http://localhost/phpmyadmin/` from within the appliance
+|*Your Samba Username* | jharvard
+|*Your Samba Password* | crimson
 
 `http://*w.x.y.z*/phpmyadmin/` from your own computer (where `*w.x.y.z*` is the IP address in the appliance's bottom-right corner)
 |====================================================
