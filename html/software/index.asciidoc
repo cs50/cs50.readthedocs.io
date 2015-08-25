@@ -1,7 +1,6 @@
-== iOS University Program
+== 1Password
 
-See link:../iOS_University_Program[iOS University Program].
-
+CS50 has a "site license" for https://agilebits.com/onepassword[1Password], which means that CS50 students and staff may use 1Password for free, even after the course ends. To request a license for 1Password, submit https://cs50.harvard.edu/1Password[this form].
 
 == DreamSpark
 
@@ -16,3 +15,8 @@ Office suite (Word, Excel, PowerPoint, or Outlook).
 
 To sign up for DreamSpark, simply send a nice note from your Harvard
 email address to sysadmins@cs50.harvard.edu explaining your eligibility.
+
+== iOS University Program
+
+See link:../iOS_University_Program[iOS University Program].
+
