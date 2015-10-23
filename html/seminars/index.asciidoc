@@ -9,6 +9,10 @@ to equip students with skills and savvy beyond the scope of the course's
 own https://cs50.harvard.edu/syllabus[syllabus]. Below are seminars from
 this year and past years.
 
+== Fall 2015
+
+To register for Fall 2015's upcoming seminars, visit https://cs50.harvard.edu/register.
+
 == Fall 2014
 
 === 3D Modeling and Manufacture
