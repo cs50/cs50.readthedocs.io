@@ -11,7 +11,8 @@ this year and past years.
 
 == Fall 2015
 
-To register for Fall 2015's upcoming seminars, visit https://cs50.harvard.edu/register.
+* https://cs50.harvard.edu/seminars/schedule[Schedule of Seminars]
+* https://cs50.harvard.edu/register[Register for Seminars]
 
 == Fall 2014
 
