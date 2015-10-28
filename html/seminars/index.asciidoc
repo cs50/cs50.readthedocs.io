@@ -20,7 +20,7 @@ _by Connor Harris_
 
 Statisticians, scientists, and data analysts often use R, an free, open-source interpreted language with matchless support for statistical analysis and data visualization. This seminar will provide an introduction to R's syntax and capabilities, with special attention to common pitfalls and points of confusion. Examples will be tailored to those with only a modicum of statistical knowledge.
 
-* events/4461247/videos/103094812/player[Video (pre-release)]
+* http://live.cs50.net/events/4461247/videos/103094812/player[Video (pre-release)]
 
 
 == Fall 2014
