@@ -14,6 +14,7 @@ this year and past years.
 * https://cs50.harvard.edu/seminars/schedule[Schedule of Seminars]
 * https://cs50.harvard.edu/register[Register for Seminars]
 
+
 === Contain Yourself: An Intro to Docker and Containers
 
 _by Nicola Kabar, Solutions Architect, and Mano Parks, Developer Relations Manager_
@@ -23,6 +24,24 @@ Docker is the name on the tip of many tongues at the moment. It is an open-sourc
 * http://cdn.cs50.net/2015/fall/seminars/docker/docker.pdf[Slides]
 * http://live.cs50.net/events/2504773/videos/103153213/player[Video (pre-release)]
 
+=== Exploring JavaScript and the Web Audio API
+
+_by Hugh Zabriskie and Sam Green_
+
+The Web Audio API is high-level, powerful versatile system for controlling audio in web applications and is built in to most modern browsers. Originally designed for online gaming, this JavaScript API has been used to support a multitude of music-oriented applications, including online synthesizers, drum machines, guitar tuners, and collaborative music-making tools. The seminar will go over the major components of the API and then dive into some code for a basic sequencer.
+
+* http://cdn.cs50.net/2015/fall/seminars/web_audio/web_audio.pdf[Slides]
+* http://live.cs50.net/events/4461247/videos/103231932/player[Video (pre-release)]
+
+=== Responsive Design with Bootstrap
+
+_by Neel Mehta_
+
+More people now visit the internet from mobile devices than desktops, but too many websites are built only with desktops in mind and look awful on mobile. Learn how to make your website look awesome on screens from tiny iPhones to giant iMacs using Bootstrap, the world's most popular frontend web development framework.
+
+* http://cdn.cs50.net/2015/fall/seminars/bootstrap/bootstrap.pdf[Slides]
+* http://cdn.cs50.net/2015/fall/seminars/bootstrap/bootstrap.zip[Source Code]
+* http://live.cs50.net/events/4461247/videos/103169996/player[Video (pre-release)]
 
 === Statistical Programming with R 
 
@@ -32,6 +51,27 @@ Statisticians, scientists, and data analysts often use R, an free, open-source i
 
 * http://cdn.cs50.net/2015/fall/seminars/statistical_programming_with_r/statistical-programming-with-r.pdf[Slides]
 * http://live.cs50.net/events/4461247/videos/103094812/player[Video (pre-release)]
+
+=== Web Apps of the Future with React
+
+_by Neel Mehta_
+
+Forget PHP—React, developed by Facebook, is the future of web app development. It's a powerful, easy to understand framework that lets you build entire web apps with nothing but JavaScript. There's a reason it's exploding in popularity and being adopted by apps like Instagram and Khan Academy—give it a try here.
+
+* http://cdn.cs50.net/2015/fall/seminars/react/react.pdf[Slides]
+* http://cdn.cs50.net/2015/fall/seminars/react/react.zip[Source Code]
+* http://live.cs50.net/events/4461247/videos/103177410/player[Video (pre-release)]
+
+=== Writing 2D Games in C using SDL
+
+_by Thomas Lively_
+
+SDL, the Simple DirectMedia Layer, is the cross-platform game library used in everything from small indie games to Valve's blockbuster triple-A games to other applications with rich media needs. This seminar will teach you how to use this powerful C library to write your own 2D games. We will talk about the structure of game code and cover the installation and initialization of the SDL library, the creation and management of the game window, how to draw images onto the window, and how to handle keyboard and mouse input. By the end of the seminar you will have created a small demo that you can later build on as much as you want.
+
+* http://cdn.cs50.net/2015/fall/seminars/2d_games/2d_games.pdf[Slides]
+* http://cdn.cs50.net/2015/fall/seminars/2d_games/2d_games.zip[Source Code]
+* http://live.cs50.net/events/4461247/videos/103236113/player[Video (pre-release)]
+
 
 
 == Fall 2014
