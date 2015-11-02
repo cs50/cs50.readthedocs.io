@@ -31,6 +31,7 @@ _by Hugh Zabriskie and Sam Green_
 The Web Audio API is high-level, powerful versatile system for controlling audio in web applications and is built in to most modern browsers. Originally designed for online gaming, this JavaScript API has been used to support a multitude of music-oriented applications, including online synthesizers, drum machines, guitar tuners, and collaborative music-making tools. The seminar will go over the major components of the API and then dive into some code for a basic sequencer.
 
 * http://cdn.cs50.net/2015/fall/seminars/web_audio/web_audio.pdf[Slides]
+* http://cdn.cs50.net/2015/fall/seminars/web_audio/web_audio.zip[Source Code]
 * http://live.cs50.net/events/4461247/videos/103231932/player[Video (pre-release)]
 
 === Responsive Design with Bootstrap
