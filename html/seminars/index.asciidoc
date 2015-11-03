@@ -50,6 +50,8 @@ _by Leila Hofer_
 
 Ruby on rails is an open source web development framework that is one of the most popular frameworks on the web. Rails has a lot to offer, but this seminar will focus on an introduction to rails and how to get a functional website up and running. It will review Model View Controller (MVC – you’ll be learning about this soon!) architecture and how to implement a basic MVC in Rails.
 
+* http://cdn.cs50.net/2015/fall/seminars/ruby/ruby.pdf[Slides]
+* http://cdn.cs50.net/2015/fall/seminars/ruby/ruby.zip[Source Code]
 * http://live.cs50.net/events/4461247/videos/103627636/player[Video (pre-release)]
 
 === Statistical Programming with R 
