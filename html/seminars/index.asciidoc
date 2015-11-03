@@ -24,6 +24,15 @@ Docker is the name on the tip of many tongues at the moment. It is an open-sourc
 * http://cdn.cs50.net/2015/fall/seminars/docker/docker.pdf[Slides]
 * http://live.cs50.net/events/2504773/videos/103153213/player[Video (pre-release)]
 
+=== iOS App Development with Swift
+
+_by Dan Armendariz_
+
+An introduction to iOS programming using Swift, Apple’s new programming language for Macs and iOS devices. We will cover the basics of the language, using APIs in your app, and deploying your app to an iOS device. Development requires a recent Mac with OS X 10.10.5 or later and, optional (but recommended), a device running a modern version of iOS.
+
+* http://cdn.cs50.net/2015/fall/seminars/swift/swift.pdf[Slides]
+* http://live.cs50.net/events/4461247/videos/103636407/player[Video (pre-release)]
+
 === Exploring JavaScript and the Web Audio API
 
 _by Sam Green and Hugh Zabriskie_
