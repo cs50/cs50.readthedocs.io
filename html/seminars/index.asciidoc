@@ -26,7 +26,7 @@ Docker is the name on the tip of many tongues at the moment. It is an open-sourc
 
 === Exploring JavaScript and the Web Audio API
 
-_by Hugh Zabriskie and Sam Green_
+_by Sam Green and Hugh Zabriskie_
 
 The Web Audio API is high-level, powerful versatile system for controlling audio in web applications and is built in to most modern browsers. Originally designed for online gaming, this JavaScript API has been used to support a multitude of music-oriented applications, including online synthesizers, drum machines, guitar tuners, and collaborative music-making tools. The seminar will go over the major components of the API and then dive into some code for a basic sequencer.
 
@@ -42,7 +42,7 @@ More people now visit the internet from mobile devices than desktops, but too ma
 
 * http://cdn.cs50.net/2015/fall/seminars/bootstrap/bootstrap.pdf[Slides]
 * http://cdn.cs50.net/2015/fall/seminars/bootstrap/bootstrap.zip[Source Code]
-* http://live.cs50.net/events/4461247/videos/103169996/player[Video (pre-release)]
+* http://cs50.tv/2015/fall/seminars/bootstrap/[Video]
 
 === Ruby on Rails
 
@@ -81,7 +81,7 @@ SDL, the Simple DirectMedia Layer, is the cross-platform game library used in ev
 
 * http://cdn.cs50.net/2015/fall/seminars/2d_games/2d_games.pdf[Slides]
 * http://cdn.cs50.net/2015/fall/seminars/2d_games/2d_games.zip[Source Code]
-* http://live.cs50.net/events/4461247/videos/103236113/player[Video (pre-release)]
+* http://cs50.tv/2015/fall/seminars/2d_games/[Video]
 
 
 
