@@ -41,7 +41,7 @@ The Web Audio API is high-level, powerful versatile system for controlling audio
 
 * http://cdn.cs50.net/2015/fall/seminars/web_audio/web_audio.pdf[Slides]
 * http://cdn.cs50.net/2015/fall/seminars/web_audio/web_audio.zip[Source Code]
-* http://live.cs50.net/events/4461247/videos/103231932/player[Video (pre-release)]
+* http://cs50.tv/2015/fall/seminars/web_audio/[Video]
 
 
 === Fun with Music and Programming 
