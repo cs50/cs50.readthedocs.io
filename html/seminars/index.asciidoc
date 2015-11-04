@@ -43,6 +43,24 @@ The Web Audio API is high-level, powerful versatile system for controlling audio
 * http://cdn.cs50.net/2015/fall/seminars/web_audio/web_audio.zip[Source Code]
 * http://live.cs50.net/events/4461247/videos/103231932/player[Video (pre-release)]
 
+
+=== Fun with Music and Programming 
+
+_by Connor Harris and Stephen Krewson_
+
+Students who want to do final projects involving music have a wealth of free, open-source resources available to them but may not know where to look. This seminar will serve as a quick introduction to libraries and programs for several common tasks, including sound processing and analysis, MIDI synthesis, and music-score typesetting. The seminar will focus especially on Euterpea, a library in the Haskell programming language for algorithmic composition and MIDI synthesis; and on Lilypond, a LaTeX-like declarative language . No prior knowledge of Haskell is assumed; elementary concepts will be covered as necessary.
+
+* http://live.cs50.net/events/4461247/videos/103652789/player[Video (pre-release)]
+
+=== Python Web Apps with Flask
+
+_by Ezra Zigmond_
+
+Web frameworks like Django or Ruby on Rails are great for building large, production applications, but sometimes you want something simpler. Flask is a small, easy to use framework for creating web apps in Python. This seminar will demonstrate creating a small application using Flask along with peewee, a Python library that makes it simple to work with SQL databases.
+
+* http://cdn.cs50.net/2015/fall/seminars/flask/flask.pdf[Slides]
+* http://live.cs50.net/events/4461247/videos/103641050/player[Video (pre-release)]
+
 === Responsive Design with Bootstrap
 
 _by Neel Mehta_
@@ -80,7 +98,16 @@ Forget PHP—React, developed by Facebook, is the future of web app development.
 
 * http://cdn.cs50.net/2015/fall/seminars/react/react.pdf[Slides]
 * http://cdn.cs50.net/2015/fall/seminars/react/react.zip[Source Code]
-* http://live.cs50.net/events/4461247/videos/103177410/player[Video (pre-release)]
+* http://cs50.tv/2015/fall/seminars/react/[Video]
+
+=== Web Scraping with Nokogiri/Kimono 
+
+_by Robert Krabek_
+
+There’s a lot of data out there on the internet that you might be interested in collecting but if you don’t want to manually copy it and there are no Application Programming Interfaces (APIs) available for that data, then you might need to scrape that information. Web scraping, helps collect that data by parsing the HTML of a web page and extracting the information you want. We’ll go over the basics of how to use Nokogiri, a web scraping library in Ruby, and Kimono, a chrome extension with basic web scraping capabilities, to extract the data you need from the HTML of a website and output it into spreadsheet.
+
+* http://cdn.cs50.net/2015/fall/seminars/web_scraping/web_scraping.pdf[Slides]
+* http://live.cs50.net/events/4461247/videos/103645263/player[Video (pre-release)]
 
 === Writing 2D Games in C using SDL
 
