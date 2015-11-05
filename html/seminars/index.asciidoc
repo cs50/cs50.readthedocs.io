@@ -25,6 +25,14 @@ An introduction to iOS programming using Swift, Apple’s new programming langua
 * http://cdn.cs50.net/2015/fall/seminars/swift/swift.zip[Source Code]
 * http://cs50.tv/2015/fall/seminars/swift/[Video]
 
+=== Awesome iPhone Apps with Objective-C
+
+_by Zack Chauvin_
+
+Learn the basics of Objective-C and Xcode to get started with app development for iPhone. In this tutorial, you'll become familiar with the IDE used for iOS, the basic structure of an iPhone application, and some tips and tricks for jumping into development. 
+
+* http://live.cs50.net/events/4461247/videos/103775928/player[Video (pre-release)]
+
 === Contain Yourself: An Intro to Docker and Containers
 
 _by Nicola Kabar, Solutions Architect, and Mano Parks, Developer Relations Manager_
