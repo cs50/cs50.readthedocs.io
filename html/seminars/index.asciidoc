@@ -90,6 +90,15 @@ Statisticians, scientists, and data analysts often use R, an free, open-source i
 * http://cdn.cs50.net/2015/fall/seminars/programming_with_r/programming_with_r.pdf[Slides]
 * http://live.cs50.net/events/4461247/videos/103094812/player[Video (pre-release)]
 
+=== The Internet of Things
+
+_by James Whittaker, Microsoft Distinguished Engineer_
+
+Change is coming. The web is being consumed by apps. Search is becoming a victim of its own success. The Internet of things is upon us and in the distance quantum computing is clouding the horizon. These changes will mean a shift of wealth. New winners, new losers. New monetization methods. New uses of data and machine intelligence. Where will it take us? Where will this all end? Join Microsoft Distinguished Engineer James Whittaker for a presentation that begins 20 years in the past and ends 20 years in the future with insight into how society will work, if machines will take over and what’s left for humanity if they do.
+
+* http://live.cs50.net/events/4461247/videos/103713663/player[Video (pre-release)]
+
+
 === Web Apps of the Future with React
 
 _by Neel Mehta_
