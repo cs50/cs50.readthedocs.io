@@ -52,6 +52,14 @@ The Web Audio API is high-level, powerful versatile system for controlling audio
 * http://cdn.cs50.net/2015/fall/seminars/web_audio/web_audio.zip[Source Code]
 * http://cs50.tv/2015/fall/seminars/web_audio/[Video]
 
+=== From C to Python
+
+_by Ross Rheingans-Yoo_
+
+Python is a popular language for everything from short, informal scripts to complex data-processing frameworks. Fortunately, the syntax is very similar to C, with just a few key differences. In this seminar, we'll walk you through them, leaving you with the ability to write your own short (or long!) programs in Python, doing everything you already know how to do in C, only with fewer compilation errors!
+
+* http://cdn.cs50.net/2015/fall/seminars/c_to_python/c_to_python.pdf[Slides]
+* http://live.cs50.net/events/4461247/videos/103784913/player[Video (pre-release)]
 
 === Fun with Music and Programming 
 
