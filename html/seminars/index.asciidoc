@@ -35,6 +35,15 @@ Learn the basics of Objective-C and Xcode to get started with app development fo
 * http://cdn.cs50.net/2015/fall/seminars/swift/objective_c.zip[Source Code]
 * http://cs50.tv/2015/fall/seminars/objective_c/[Video]
 
+=== Building Apps for Mobile, Gaming, IoT and more using AWS DynamoDB
+
+_by Rick Houlihan, Principal Solutions Architect, AWS Database Services_
+
+Databases have always been the backbone of applications over the past several decades. With time the database technologies have evolved. In this session, we will talk about the evolution of databases from SQL to NoSQL and understand how the NoSQL paradigm is making a big difference in powering modern-day use-cases. We will also take a close look at DynamoDB, Amazon’s primary NoSQL database. We will go over the high level concepts and design patterns with DynamoDB, and focus on how you can build interesting applications for Mobile, Gaming, IoT etc. using DynamoDB. This Tech Talk will use AWS and online materials contained in the AWS Educate portal. To access the materials and get free credits to use AWS for your CS50 projects and more, signup in advance for a student membership at www.awseducate.com. Be sure to use your Harvard University email account when you sign up to get $100 in free AWS credits.
+
+*http://livestream.com/accounts/2829914/events/4461247/videos/103865698/player[Video (pre-release)]
+
+
 === Contain Yourself: An Intro to Docker and Containers
 
 _by Nicola Kabar, Solutions Architect, and Mano Parks, Developer Relations Manager_
@@ -42,7 +51,7 @@ _by Nicola Kabar, Solutions Architect, and Mano Parks, Developer Relations Manag
 Docker is the name on the tip of many tongues at the moment. It is an open-source containerization engine which allows developers to package up an application in a container along with all the settings and software required to run it, and deploy with a minimum of fuss. Tens of thousands of developers currently use Docker for their development, testing, and deployment workflows. This session will introduce the Docker ecosystem, how it works, and how to build, share, and deploy Docker containers.
 
 * http://cdn.cs50.net/2015/fall/seminars/docker/docker.pdf[Slides]
-* http://live.cs50.net/events/2504773/videos/103153213/player[Video (pre-release)]
+* http://live.cs50.net/events/2504773/videos/103153213/player[Video]
 
 === Exploring JavaScript and the Web Audio API
 
@@ -111,6 +120,7 @@ Statisticians, scientists, and data analysts often use R, an free, open-source i
 
 * http://cdn.cs50.net/2015/fall/seminars/programming_with_r/programming_with_r.pdf[Slides]
 * http://cs50.tv/2015/fall/seminars/programming_with_r/[Video]
+
 
 === The Internet of Things
 
