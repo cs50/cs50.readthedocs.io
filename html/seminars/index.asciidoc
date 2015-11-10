@@ -82,6 +82,15 @@ Students who want to do final projects involving music have a wealth of free, op
 * http://cdn.cs50.net/2015/fall/seminars/fun_with_music/fun_with_music.zip[Source Code]
 * http://cs50.tv/2015/fall/seminars/fun_with_music/[Video]
 
+
+=== How (and Why) You Should Use Git 
+
+_by Anna Whitney_
+
+Git is an extremely powerful version control and collaboration system, used throughout the world of software engineering (as well as in higher-level CS courses here at Harvard). Learn to use some of git's incredibly useful features, and revolutionize your software development process—for your CS50 final project, future courses, personal projects, and career!
+
+* http://livestream.com/accounts/2829914/events/4461247/videos/104217279/player[Video (pre-release)]
+
 === Python Web Apps with Flask
 
 _by Ezra Zigmond_
