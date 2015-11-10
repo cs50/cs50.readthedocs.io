@@ -41,7 +41,7 @@ _by Rick Houlihan, Principal Solutions Architect, AWS Database Services_
 
 Databases have always been the backbone of applications over the past several decades. With time the database technologies have evolved. In this session, we will talk about the evolution of databases from SQL to NoSQL and understand how the NoSQL paradigm is making a big difference in powering modern-day use-cases. We will also take a close look at DynamoDB, Amazon’s primary NoSQL database. We will go over the high level concepts and design patterns with DynamoDB, and focus on how you can build interesting applications for Mobile, Gaming, IoT etc. using DynamoDB. This Tech Talk will use AWS and online materials contained in the AWS Educate portal. To access the materials and get free credits to use AWS for your CS50 projects and more, signup in advance for a student membership at www.awseducate.com. Be sure to use your Harvard University email account when you sign up to get $100 in free AWS credits.
 
-*http://livestream.com/accounts/2829914/events/4461247/videos/103865698/player[Video (pre-release)]
+* http://cs50.tv/2015/fall/seminars/aws/[Video]
 
 
 === Contain Yourself: An Intro to Docker and Containers
