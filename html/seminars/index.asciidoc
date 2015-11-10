@@ -51,7 +51,17 @@ _by Nicola Kabar, Solutions Architect, and Mano Parks, Developer Relations Manag
 Docker is the name on the tip of many tongues at the moment. It is an open-source containerization engine which allows developers to package up an application in a container along with all the settings and software required to run it, and deploy with a minimum of fuss. Tens of thousands of developers currently use Docker for their development, testing, and deployment workflows. This session will introduce the Docker ecosystem, how it works, and how to build, share, and deploy Docker containers.
 
 * http://cdn.cs50.net/2015/fall/seminars/docker/docker.pdf[Slides]
-* http://live.cs50.net/events/2504773/videos/103153213/player[Video]
+* http://cs50.tv/2015/fall/seminars/docker/[Video]
+
+
+
+=== Customizing Cloud9 and the CS50 IDE
+
+_by Dan Armendariz_
+
+* http://live.cs50.net/events/4461247/videos/104221273/player[Video (pre-release)]
+
+
 
 === Exploring JavaScript and the Web Audio API
 
@@ -91,7 +101,8 @@ Git is an extremely powerful version control and collaboration system, used thro
 
 * http://cdn.cs50.net/2015/fall/seminars/git/git.pdf[Slides]
 * http://cdn.cs50.net/2015/fall/seminars/git/git.zip[Source Code]
-* http://livestream.com/accounts/2829914/events/4461247/videos/104217279/player[Video (pre-release)]
+* http://live.cs50.net/events/4461247/videos/104217279/player[Video (pre-release)]
+
 
 === Python Web Apps with Flask
 
