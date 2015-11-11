@@ -75,7 +75,7 @@ The CS50 IDE is used by all students in CS50 and is easily customizable using th
 
 * http://cdn.cs50.net/2015/fall/seminars/cloud9/cloud9.pdf[Slides]
 * http://cdn.cs50.net/2015/fall/seminars/cloud9/cloud9.zip[Source Code]
-* http://live.cs50.net/events/4461247/videos/104221273/player[Video (pre-release)]
+* http://cs50.tv/2015/fall/seminars/cloud9/[Video]
 
 === Exploring JavaScript and the Web Audio API
 
@@ -115,7 +115,7 @@ Git is an extremely powerful version control and collaboration system, used thro
 
 * http://cdn.cs50.net/2015/fall/seminars/git/git.pdf[Slides]
 * http://cdn.cs50.net/2015/fall/seminars/git/git.zip[Source Code]
-* http://live.cs50.net/events/4461247/videos/104217279/player[Video (pre-release)]
+* http://cs50.tv/2015/fall/seminars/git/[Video]
 
 === Programming with R 
 
@@ -125,7 +125,6 @@ Statisticians, scientists, and data analysts often use R, an free, open-source i
 
 * http://cdn.cs50.net/2015/fall/seminars/programming_with_r/programming_with_r.pdf[Slides]
 * http://cs50.tv/2015/fall/seminars/programming_with_r/[Video]
-
 
 
 === Python Web Apps with Flask
