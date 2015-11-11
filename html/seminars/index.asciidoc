@@ -9,20 +9,6 @@ to equip students with skills and savvy beyond the scope of the course's
 own https://cs50.harvard.edu/syllabus[syllabus]. Below are seminars from
 this year and past years.
 
-== AI Series
-
-=== Recommender Systems
-
-_by Brian Scassellati_
-
-* https://www.youtube.com/watch?v=Eeg1DEeWUjA&index=1&list=PLhQjrBD2T3817S0ICAys_liOODx47UKaf[Video]
-
-=== Self-Driving Cars
-
-_by Brian Scassellati_
-
-* https://www.youtube.com/watch?v=JEH9zM1sY9Y&index=2&list=PLhQjrBD2T3817S0ICAys_liOODx47UKaf[Video]
-
 
 == Fall 2015
 
@@ -38,6 +24,20 @@ An introduction to iOS programming using Swift, Apple’s new programming langua
 * http://cdn.cs50.net/2015/fall/seminars/swift/swift.pdf[Slides]
 * http://cdn.cs50.net/2015/fall/seminars/swift/swift.zip[Source Code]
 * http://cs50.tv/2015/fall/seminars/swift/[Video]
+
+== AI Series
+
+=== Recommender Systems
+
+_by Brian Scassellati_
+
+* https://www.youtube.com/watch?v=Eeg1DEeWUjA&index=1&list=PLhQjrBD2T3817S0ICAys_liOODx47UKaf[Video]
+
+=== Self-Driving Cars
+
+_by Brian Scassellati_
+
+* https://www.youtube.com/watch?v=JEH9zM1sY9Y&index=2&list=PLhQjrBD2T3817S0ICAys_liOODx47UKaf[Video]
 
 === Awesome iPhone Apps with Objective-C
 
@@ -117,6 +117,16 @@ Git is an extremely powerful version control and collaboration system, used thro
 * http://cdn.cs50.net/2015/fall/seminars/git/git.zip[Source Code]
 * http://live.cs50.net/events/4461247/videos/104217279/player[Video (pre-release)]
 
+=== Programming with R 
+
+_by Connor Harris_
+
+Statisticians, scientists, and data analysts often use R, an free, open-source interpreted language with matchless support for statistical analysis and data visualization. This seminar will provide an introduction to R's syntax and capabilities, with special attention to common pitfalls and points of confusion. Examples will be tailored to those with only a modicum of statistical knowledge.
+
+* http://cdn.cs50.net/2015/fall/seminars/programming_with_r/programming_with_r.pdf[Slides]
+* http://cs50.tv/2015/fall/seminars/programming_with_r/[Video]
+
+
 
 === Python Web Apps with Flask
 
@@ -147,16 +157,6 @@ Ruby on rails is an open source web development framework that is one of the mos
 * http://cdn.cs50.net/2015/fall/seminars/ruby/ruby.pdf[Slides]
 * http://cdn.cs50.net/2015/fall/seminars/ruby/ruby.zip[Source Code]
 * http://cs50.tv/2015/fall/seminars/ruby/[Video]
-
-=== Programming with R 
-
-_by Connor Harris_
-
-Statisticians, scientists, and data analysts often use R, an free, open-source interpreted language with matchless support for statistical analysis and data visualization. This seminar will provide an introduction to R's syntax and capabilities, with special attention to common pitfalls and points of confusion. Examples will be tailored to those with only a modicum of statistical knowledge.
-
-* http://cdn.cs50.net/2015/fall/seminars/programming_with_r/programming_with_r.pdf[Slides]
-* http://cs50.tv/2015/fall/seminars/programming_with_r/[Video]
-
 
 === The Internet of Things
 
