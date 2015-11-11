@@ -9,11 +9,25 @@ to equip students with skills and savvy beyond the scope of the course's
 own https://cs50.harvard.edu/syllabus[syllabus]. Below are seminars from
 this year and past years.
 
+== AI Series
+
+=== Recommender Systems
+
+_by Brian Scassellati_
+
+* https://www.youtube.com/watch?v=Eeg1DEeWUjA&index=1&list=PLhQjrBD2T3817S0ICAys_liOODx47UKaf[Video]
+
+=== Self-Driving Cars
+
+_by Brian Scassellati_
+
+* https://www.youtube.com/watch?v=JEH9zM1sY9Y&index=2&list=PLhQjrBD2T3817S0ICAys_liOODx47UKaf[Video]
+
+
 == Fall 2015
 
 * https://cs50.harvard.edu/seminars/schedule[Schedule of Seminars]
 * https://cs50.harvard.edu/register[Register for Seminars]
-
 
 === iOS App Development with Swift
 
