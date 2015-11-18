@@ -25,15 +25,15 @@ An introduction to iOS programming using Swift, Apple’s new programming langua
 * http://cdn.cs50.net/2015/fall/seminars/swift/swift.zip[Source Code]
 * http://cs50.tv/2015/fall/seminars/swift/[Video]
 
-== AI Series
+=== AI Series
 
-=== Recommender Systems
+==== Recommender Systems
 
 _by Brian Scassellati_
 
 * https://www.youtube.com/watch?v=Eeg1DEeWUjA&index=1&list=PLhQjrBD2T3817S0ICAys_liOODx47UKaf[Video]
 
-=== Self-Driving Cars
+==== Self-Driving Cars
 
 _by Brian Scassellati_
 
