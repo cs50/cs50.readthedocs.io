@@ -45,8 +45,8 @@ _by Zack Chauvin_
 
 Learn the basics of Objective-C and Xcode to get started with app development for iPhone. In this tutorial, you'll become familiar with the IDE used for iOS, the basic structure of an iPhone application, and some tips and tricks for jumping into development. 
 
-* http://cdn.cs50.net/2015/fall/seminars/swift/objective_c.pdf[Slides]
-* http://cdn.cs50.net/2015/fall/seminars/swift/objective_c.zip[Source Code]
+* http://cdn.cs50.net/2015/fall/seminars/objective_c/objective_c.pdf[Slides]
+* http://cdn.cs50.net/2015/fall/seminars/objective_c/objective_c.zip[Source Code]
 * http://cs50.tv/2015/fall/seminars/objective_c/[Video]
 
 === Building Apps for Mobile, Gaming, IoT and more using AWS DynamoDB
