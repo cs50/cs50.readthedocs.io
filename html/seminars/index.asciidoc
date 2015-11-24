@@ -117,15 +117,6 @@ Git is an extremely powerful version control and collaboration system, used thro
 * http://cdn.cs50.net/2015/fall/seminars/git/git.zip[Source Code]
 * http://cs50.tv/2015/fall/seminars/git/[Video]
 
-=== Programming with R 
-
-_by Connor Harris_
-
-Statisticians, scientists, and data analysts often use R, an free, open-source interpreted language with matchless support for statistical analysis and data visualization. This seminar will provide an introduction to R's syntax and capabilities, with special attention to common pitfalls and points of confusion. Examples will be tailored to those with only a modicum of statistical knowledge.
-
-* http://cdn.cs50.net/2015/fall/seminars/programming_with_r/programming_with_r.pdf[Slides]
-* http://cs50.tv/2015/fall/seminars/programming_with_r/[Video]
-
 
 === Python Web Apps with Flask
 
@@ -156,6 +147,15 @@ Ruby on rails is an open source web development framework that is one of the mos
 * http://cdn.cs50.net/2015/fall/seminars/ruby/ruby.pdf[Slides]
 * http://cdn.cs50.net/2015/fall/seminars/ruby/ruby.zip[Source Code]
 * http://cs50.tv/2015/fall/seminars/ruby/[Video]
+
+=== Statistical Programming with R 
+
+_by Connor Harris_
+
+Statisticians, scientists, and data analysts often use R, an free, open-source interpreted language with matchless support for statistical analysis and data visualization. This seminar will provide an introduction to R's syntax and capabilities, with special attention to common pitfalls and points of confusion. Examples will be tailored to those with only a modicum of statistical knowledge.
+
+* http://cdn.cs50.net/2015/fall/seminars/programming_with_r/programming_with_r.pdf[Slides]
+* http://cs50.tv/2015/fall/seminars/programming_with_r/[Video]
 
 === The Internet of Things
 
