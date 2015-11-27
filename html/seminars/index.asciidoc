@@ -15,16 +15,6 @@ this year and past years.
 * https://cs50.harvard.edu/seminars/schedule[Schedule of Seminars]
 * https://cs50.harvard.edu/register[Register for Seminars]
 
-=== iOS App Development with Swift
-
-_by Dan Armendariz_
-
-An introduction to iOS programming using Swift, Apple’s new programming language for Macs and iOS devices. We will cover the basics of the language, using APIs in your app, and deploying your app to an iOS device. Development requires a recent Mac with OS X 10.10.5 or later and, optional (but recommended), a device running a modern version of iOS.
-
-* http://cdn.cs50.net/2015/fall/seminars/swift/swift.pdf[Slides]
-* http://cdn.cs50.net/2015/fall/seminars/swift/swift.zip[Source Code]
-* http://cs50.tv/2015/fall/seminars/swift/[Video]
-
 === AI Series
 
 ==== Recommender Systems
@@ -116,6 +106,17 @@ Git is an extremely powerful version control and collaboration system, used thro
 * http://cdn.cs50.net/2015/fall/seminars/git/git.pdf[Slides]
 * http://cdn.cs50.net/2015/fall/seminars/git/git.zip[Source Code]
 * http://cs50.tv/2015/fall/seminars/git/[Video]
+
+
+=== iOS App Development with Swift
+
+_by Dan Armendariz_
+
+An introduction to iOS programming using Swift, Apple’s new programming language for Macs and iOS devices. We will cover the basics of the language, using APIs in your app, and deploying your app to an iOS device. Development requires a recent Mac with OS X 10.10.5 or later and, optional (but recommended), a device running a modern version of iOS.
+
+* http://cdn.cs50.net/2015/fall/seminars/swift/swift.pdf[Slides]
+* http://cdn.cs50.net/2015/fall/seminars/swift/swift.zip[Source Code]
+* http://cs50.tv/2015/fall/seminars/swift/[Video]
 
 
 === Python Web Apps with Flask
