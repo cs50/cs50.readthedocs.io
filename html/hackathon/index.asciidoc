@@ -7,9 +7,10 @@ classmates and staff. If you choose to partake, you'll be asked to
 propose three milestones for yourself that evening: a "good" one that
 you intend to achieve no matter what; a "better" one that you think you
 can achieve; and a "best" one that you hope to achieve. Felipe's will be
-served around 9pm; Dominos will be served around 1am; and
+served around 9pm; Domino's will be served around 1am; and
 those still standing at 5am will be treated to breakfast at IHOP.
 Snacks and drinks will be served throughout the evening.
+Gluten-free and vegetarian options will also be available.
 
 *Space is limited, so attendance is lotteried. If you RSVPed for a spot
 at this year's Hackathon, you should have heard from the CS50 Bot
@@ -33,7 +34,7 @@ So that check-in isn't overwhelmed (and you aren't stuck waiting in line), do ar
 == How to get there
 
 * If *walking* from, say, Out of Town News, link:https://www.google.com/maps/dir/Harvard+Square,+18+Brattle+St+%23352,+Cambridge,+MA+02138/125+Western+Ave,+Allston,+Boston,+MA/@42.3686033,-71.1295785,15z/data=!4m19!4m18!1m10!1m1!1s0x89e37742bc65ca79:0x59ca183286a63b76!2m2!1d-71.11896!2d42.373532!3m4!1m2!1d-71.1254162!2d42.3666013!3s0x89e377610cfd3869:0x1025a278cd0f4aa5!1m5!1m1!1s0x89e37761d7d4572b:0xaf083e816c6fc10c!2m2!1d-71.124626!2d42.363655!3e2[follow this route]. Odds are the walk will take 20+ minutes.
-* If *taking the shuttle*, take the Allston Express to the i-lab (which is where the HBS Hives are), per the schedule for the http://www.transportation.harvard.edu/shuttle-van-services/shuttles-schedule/evening-nights-monday-friday[Allston Campus Express PM]; consult the column called *Hi Lab*. Those are regularly scheduled shuttles, not CS50 Shuttles, so space will be limited.  Odds are the trip will take 10+ minutes.
+* If *taking the shuttle*, take the Allston Express to the i-lab (which is where the HBS Hives are), per the schedule for the http://www.transportation.harvard.edu/shuttle-van-services/shuttles-schedule/evening-nights-monday-friday[Allston Campus Express PM]; consult the column called *Hi Lab HBS*. Those are regularly scheduled shuttles, not CS50 Shuttles, so space will be limited.  Odds are the trip will take 10+ minutes.
 * If *driving*, drive to https://maps.google.com/maps?t=m&q=125+Western+Avenue%2C+Boston+MA&output=classic[125 Western Avenue] in Allston (aka Boston).  Metered parking is available *behind* the i-lab, in the lot whose entrance is on Western Avenue itself.
 
 If you find yourself lost, call 617-BUG-CS50, option 4, and tell us what you see around you!
@@ -42,7 +43,7 @@ If you find yourself lost, call 617-BUG-CS50, option 4, and tell us what you see
 
 === You must bring...
 
-* Harvard ID (unless you don't have one, in which case bring a printout
+* Harvard ID or Yale ID (unless you don't have one, in which case bring a printout
 of the CS50 Bot's confirmation of your spot)
 * Laptop (that supports Wi-Fi) plus power adapter
 
@@ -60,6 +61,7 @@ of the CS50 Bot's confirmation of your spot)
 
 * Alcohol, etc.
 
+////
 == Chat Rooms
 
 To chat with classmates during the Hackathon, visit https://cs50.harvard.edu/chat[cs50.harvard.edu/chat]. If informed that "account has already been created using that email address," visit https://hackathon50.hipchat.com/chat[hackathon50.hipchat.com/chat] to sign in instead. Click *Launch the web app* once signed in if prompted.
@@ -72,13 +74,14 @@ If you forget your password, visit https://www.hipchat.com/forgot_password[hipch
 
 To see what's going on elsewhere at the Hackathon, tune into https://live.cs50.net/[live.cs50.net] from time to time.
 
+////
 == FAQs
 
 === Can I attend?
 
 Space is limited, so attendance is lotteried. If you registered for a
 spot at this year's Hackathon, you should have heard from the CS50 Bot
-by Tue 12/2 as to whether you have a spot! If not, email
+by Wed 12/2 as to whether you have a spot! If not, email
 mailto:heads@cs50.harvard.edu[heads@cs50.harvard.edu] to inquire.
 
 === Can I arrive late?
@@ -117,15 +120,19 @@ Around 7pm, but do check <<when_to_get_there,when to get there>>.
 
 === Will there be food and drinks?
 
-Yes! But we're essentially maxing out the capacities of Felipe's and Dominos, so do be gentle with quantities. 
+Yes! But we're essentially maxing out the capacities of Felipe's and Domino's, so do be gentle with quantities. 
 
 === Will there be gluten-free food?
 
-Some, yes. It'll be set aside, so just check with Daven as to where it is. If you have trouble finding Daven, call 617-BUG-CS50, option 4, to reach another of the course's heads!
+Some, yes. It'll be set aside, so just check with Aliess as to where it is. If you have trouble finding Aliess, call 617-BUG-CS50, option 4, to reach another member of the staff!
 
 === Will there be shuttles?
 
 *If, because of mobility impairment or medical condition, you find it difficult or impossible to use Harvard's shuttles, do contact the http://www.transportation.harvard.edu/shuttle-van-services/evening-van-service[Evening Van Service] in advance of the Hackathon to make arrangements to and from the Hackathon.  Just let mailto:heads@cs50.harvard.edu[heads@cs50.harvard.edu] know if you need a hand.*
+
+=== Will there be vegetarian food?
+
+Yes! There will be vegetarian options from Felipe's and Domino's in addition to fruit and veggies.
 
 ==== To the Hackathon?
 
