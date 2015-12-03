@@ -98,6 +98,14 @@ Space at IHOP is even more limited than the Hackathon itself, so attendance at b
 
 Please forgive if we can't accommodate everyone who'd like to go!
 
+=== How do I check in upon arrival?
+
+First visit the check-in tables atop the first flight of stairs. Then complete your check-in at https://cs50.harvard.edu/[cs50.harvard.edu/checkin].
+
+=== How do I check out before leaving?
+
+Simply visit https://cs50.harvard.edu[cs50.harvard.edu/checkout]!
+
 === What if I can't attend after all?
 
 If the CS50 Bot confirmed your spot but you can no longer attend, please
