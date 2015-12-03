@@ -63,7 +63,7 @@ of the CS50 Bot's confirmation of your spot)
 
 == Chat Rooms
 
-To chat with classmates during the Hackathon, visit https://hackathon50.slack.com/?redir=%2Fmessages[hackathon50.slack.com] and join any channels of interest. If prompted, enabled "desktop notifications."
+To chat with classmates during the Hackathon, visit https://hackathon50.slack.com/?redir=%2Fmessages[hackathon50.slack.com] and join any channels of interest. (If you can't seem to sign up, email heads@cs50.harvard.edu.) If prompted, enabled "desktop notifications."
 
 To create a new channel, click ⊕ to the right of *CHANNELS* at top-left.
 
