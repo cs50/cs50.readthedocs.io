@@ -61,20 +61,18 @@ of the CS50 Bot's confirmation of your spot)
 
 * Alcohol, etc.
 
-////
 == Chat Rooms
 
-To chat with classmates during the Hackathon, visit https://cs50.harvard.edu/chat[cs50.harvard.edu/chat]. If informed that "account has already been created using that email address," visit https://hackathon50.hipchat.com/chat[hackathon50.hipchat.com/chat] to sign in instead. Click *Launch the web app* once signed in if prompted.
+To chat with classmates during the Hackathon, visit https://hackathon50.slack.com/chat[hackathon50.slack.com] and join any channels of interest. If prompted, enabled "desktop notifications."
+
+To message everyone within a channel, start your message with `@channel`.
 
 To get someone's attention in a chat room, type `@` and then their name (assuming they've logged in too).
 
-If you forget your password, visit https://www.hipchat.com/forgot_password[hipchat.com/forgot_password].
-
-== Live Stream
+== Video Stream
 
 To see what's going on elsewhere at the Hackathon, tune into https://live.cs50.net/[live.cs50.net] from time to time.
 
-////
 == FAQs
 
 === Can I attend?
@@ -162,8 +160,6 @@ Yes. But best to download anything big (e.g., software, movies, etc.)
 beforehand, lest Wi-Fi at HBS be a bit slow with so many
 people on it!
 
-////
-=== Will there be a live video stream?
+=== Will there be a video stream?
 
-Yes, periodically throughout the evening. Head to https://live.cs50.net/ during the Hackathon if you'd like to see what's going on outside of your hive!
-////
+Yes. Visit https://live.cs50.net/[live.cs50.net] throughout the eve if you'd like to see what's going on outside of your hive!
