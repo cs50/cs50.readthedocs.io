@@ -1,6 +1,6 @@
 == 1Password
 
-CS50 has a "site license" for https://agilebits.com/onepassword[1Password], which means that CS50 students and staff may use 1Password for free, even after the course ends. To request a license for 1Password, submit https://cs50.harvard.edu/1Password[this form].
+CS50 has a "site license" for https://agilebits.com/onepassword[1Password], which means that CS50 students and staff may use 1Password for free, even after the course ends. To request a license for 1Password, submit https://cs50.harvard.edu/1password[this form].
 
 == DreamSpark
 
