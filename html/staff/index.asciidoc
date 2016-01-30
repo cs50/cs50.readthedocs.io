@@ -1,0 +1,5 @@
+= CS50 Staff
+
+To apply for any of the positions below, submit https://cs50.harvard.edu/apply[cs50.harvard.edu/apply].
+
+== Teaching Fellow
