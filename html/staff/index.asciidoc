@@ -1,5 +1,75 @@
 = CS50 Staff
 
-To apply for any of the positions below, submit https://cs50.harvard.edu/apply[cs50.harvard.edu/apply].
+Below are CS50's job descriptions. To apply for any of the positions below, submit https://cs50.harvard.edu/apply[cs50.harvard.edu/apply].
+
+== Composer
+
+Interested in music? Want to compose your own arrangements for the course's events and videos? Apply to be a Composer!
+
+=== Details
+
+* Applicants of all comfort levels welcome. Not necessary to have taken CS50 (or any CS).
+* Seeking dedicated and creative candidates.
+* Time commitment is flexible but generally 6 to 12 hours per week.
+
+=== Position offers opportunities to:
+
+* Compose original scores and arrangements. 
+* Work closely with CS50's production team.
+* Perform at various events. 
+
+== Course Assistant
+
+Like to stay involved with CS50 and join its staff? Like to work with students one-on-one and hone your own skills? Apply to be a course assistant (CA)!
+
+=== Opportunity involves:
+
+* Holding office hours or tutoring students for 3 hours per week for 9 weeks.
+* Attending weekly staff training.
+* Participating in 2 quiz-grading parties.
+* Attending CS50 Training before term's start.
+* Hosting (or participating in!) CS50 Puzzle Day.
+* Hosting the CS50 Hackathon.
+* Hosting the CS50 Fair.
+
+=== Additional Details
+
+* Time commitment is ordinarily >= 4 hours per week.
+
+== Designer
+
+Familiar with print or web design? Interested in strengthening your skills? Apply to be a Designer!
+
+=== Details:
+
+* Applicants of all comfort levels welcome. Not necessary to have taken CS50 (or any formal CS).
+* Knowledge of HTML, CSS, and JavaScript a plus.
+* Seeking dedicated and creative candidates.
+* Time commitment is flexible but generally 6 to 12 hours.
+
+=== Position offers opportunities to:
+
+* Design and produce original content for print and web.
+* Learn Adobe Photoshop, InDesign, Illustrator, and other tools.
+
+== Grader
+
+Like to help students improve their programming skills? Like to hone your own? Apply to be a Grader!
+
+=== Opportunity involves:
+
+* Grading problem sets for a section of students.
+* Holding office hours or tutoring students for 3 hours each week.
+* Attending weekly staff training.
+* Participating in 2 quiz-grading parties.
+* Attending CS50 Training before term's start.
+* Hosting (or participating in!) CS50 Puzzle Day.
+* Hosting the CS50 Hackathon.
+* Hosting the CS50 Fair.
+
+=== Additional Details:
+
+* Time commitment is ordinarily >= 7 hours per week.
 
 == Teaching Fellow
+
