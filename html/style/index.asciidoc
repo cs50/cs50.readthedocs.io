@@ -49,17 +49,11 @@ float c = 5.0 / 9.0 * (f - 32.0);
 ----
 
 Atop your .c and .h files should be multi-line comments that summarize
-what your program (or that particular file) does along with, perhaps,
-your name and that of the file, as in:
+what your program (or that particular file) does, as in:
 
 [source,c]
 ----
 /**
- * hello.c
- *
- * David J. Malan
- * malan@harvard.edu
- *
  * Says hello to the world.
  */
 ----
@@ -116,17 +110,19 @@ To save space, some programmers like to keep the first curly brace on the
 same line as the condition itself, but we don't recommend, as it's
 harder to read, so don't do this:
 
-------------------------------
+[source,c]
+----
 if (x < 0) {
     printf("x is negative\n");
 } else if (x < 0) {
     printf("x is negative\n");
 }
-------------------------------
+----
 
 And definitely don't do this:
 
-------------------------------
+[source,c]
+----
 if (x < 0)
     {
     printf("x is negative\n");
@@ -135,7 +131,7 @@ else
     {
     printf("x is negative\n");
     }
-------------------------------
+----
 
 == Switches
 
@@ -170,7 +166,7 @@ Notice how:
 
 == Functions
 
-Be sure to define `main`, in accordance with http://en.wikipedia.org/wiki/C99[C99], with:
+In accordance with http://en.wikipedia.org/wiki/C99[C99], be sure to declare `main` with:
 
 [source,c]
 ----
@@ -180,39 +176,40 @@ int main(void)
 }
 ----
 
-Or with:
+or, if using the CS50 Library, with:
 
 [source,c]
 ----
-int main(int argc, char* argv[])
-{
-    
-}
-----
+#include <cs50.h>
 
-However, if using the link:/library/[CS50 Library], it's fine to define `main` with
-
-[source,c]
-----
 int main(int argc, string argv[])
 {
 
 }
 ----
 
-since `string` is just a `typedef` (i.e., synonym) for `char*`.
-
-Do not declare `main` with:
+or with:
 
 [source,c]
 ----
-int main(int argc, char** argv)
+int main(int argc, char *argv[])
+{
+    
+}
+----
+
+or even with:
+
+[source,c]
+----
+int main(int argc, char **argv)
 {
 
 }
 ----
 
-or with:
+
+Do not declare `main` with:
 
 [source,c]
 ----
@@ -253,10 +250,11 @@ code are inside of others. If you use your keyboard's Tab key to do so,
 be sure that your text editor's configured to convert tabs (`\t`) to
 four spaces, else your code may not print or display properly on someone
 else's computer, since `\t` renders differently in different editors.
-(If using the link:/appliance/[CS50 Appliance], it's fine to use
+(If using http://cs50.io/[CS50 IDE], it's fine to use
 Tab for indentation, rather than hitting your keyboard's space bar repeatedly,
-since we've preconfigured `gedit` and other programs
-to convert `\t` to four spaces.) Here's some nicely indented code:
+since we've preconfigured it to convert `\t` to four spaces.) 
+
+Here's some nicely indented code:
 
 [source,c]
 ----
@@ -337,22 +335,19 @@ Notice how:
 
 == Pointers
 
-When declaring a pointer, write the `*` next to the type, as in:
-
-[source,c]
-----
-int* p;
-----
-
-Don't write it next to the variable's name, as in:
+When declaring a pointer, write the `*` next to the variable, as in:
 
 [source,c]
 ----
 int *p;
 ----
 
-This convention can lead to ambiguity in some contexts, but we think,
-overall, it's clearer when first learning pointers.
+Don't write it next to the type, as in:
+
+[source,c]
+----
+int* p;
+----
 
 == Variables
 
@@ -396,14 +391,13 @@ Also take care to declare pointers separately from non-pointers, as in:
 
 [source,c]
 ----
-int* p;
+int *p;
 int n;
 ----
 
-Don't declare pointers on the same line as non-pointers, lest it be
-ambiguous as to whether the latter was meant to be the former, as in:
+Don't declare pointers on the same line as non-pointers, as in:
 
 [source,c]
 ----
-int* p, n;
+int *p, n;
 ----
