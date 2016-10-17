@@ -1,19 +1,19 @@
 = Seminars
 :toc: left
 
-Each fall, CS50 offers a series of seminars. Led by the course's own
-https://cs50.harvard.edu/staff[staff] as well as by
-http://huit.harvard.edu/[HUIT staff] and
-http://www.abcd.harvard.edu/[ABCD members], CS50 seminars are designed
+Each fall, CS50 offers a series of seminars, designed
 to equip students with skills and savvy beyond the scope of the course's
 own https://cs50.harvard.edu/syllabus[syllabus]. Below are seminars from
 this year and past years.
 
+== Fall 2016
+
+////
+* https://cs50.harvard.edu/seminars/schedule[Schedule of Seminars]
+////
+* https://cs50.harvard.edu/seminars/register[Register for Seminars]
 
 == Fall 2015
-
-* https://cs50.harvard.edu/seminars/schedule[Schedule of Seminars]
-* https://cs50.harvard.edu/register[Register for Seminars]
 
 === AI Series
 
