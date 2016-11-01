@@ -23,7 +23,7 @@ Learn how to build native mobile apps that work on iOS and Android by writing ju
 * http://cdn.cs50.net/2016/fall/seminars/javascript_with_exponent_and_react_native/javascript_with_exponent_and_react_native.zip[Source Code]
 * https://www.youtube.com/watch?v=rw1-lPlVH4Q[Video]
 
-=== Smart Cities Data
+=== Smart Cities Data 
 
 _by Matt Caywood_
 
