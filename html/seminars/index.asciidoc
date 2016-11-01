@@ -20,7 +20,7 @@ _by Charlie Cheever_
 Learn how to build native mobile apps that work on iOS and Android by writing just JavaScript. In this seminar, we'll cover some background on the state of mobile apps, and then we'll walk through building a simple app using Exponent and React Native.
 
 * http://cdn.cs50.net/2016/fall/seminars/javascript_with_exponent_and_react_native/javascript_with_exponent_and_react_native.pdf[Slides]
-http://cdn.cs50.net/2016/fall/seminars/javascript_with_exponent_and_react_native/javascript_with_exponent_and_react_native.zip[Source Code]
+* http://cdn.cs50.net/2016/fall/seminars/javascript_with_exponent_and_react_native/javascript_with_exponent_and_react_native.zip[Source Code]
 * https://www.youtube.com/watch?v=rw1-lPlVH4Q[Video]
 
 === Smart Cities Data
