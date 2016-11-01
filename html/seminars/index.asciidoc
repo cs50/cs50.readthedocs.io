@@ -29,6 +29,7 @@ _by Matt Caywood_
 
 Cambridge isn’t just home to a hundred thousand smart people — it’s home to hundreds of thousands of smart sensors. From mobile phones to GPS trackers, electricity meters, cameras, microphones, and other “internet of things” devices, how does all this real-time data find its way to solutions for urban problems, as well as commercial opportunities? What other sources of non-real-time data (including maps) are available? What software and tools are available for turning “smart cities data” into information and ultimately action?
 
+* http://cdn.cs50.net/2016/fall/seminars/smart_cities/smart_cities.pdf[Source Code]
 * https://www.youtube.com/watch?v=JiCHjOwbTgM[Video]
 
 
