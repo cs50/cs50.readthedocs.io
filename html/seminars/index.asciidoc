@@ -13,6 +13,16 @@ this year and past years.
 ////
 * https://cs50.harvard.edu/seminars/register[Register for Seminars]
 
+=== Automated Analysis of Music and Audio
+
+_by Vivek Jayaram_
+
+The intersection of music and CS is an interesting field with many applications, such as Shazam, Auto-Tune, and other automated methods. This seminar will not focus on creating music, but rather analyzing and manipulating existing audio files. A background in music theory is beneficial but not recommended, and non-musical applications to general audio will also be discussed. Topics include fourier transforms, spectrograms, machine learning methods, beat/key detection, isolation of sounds, and structure detection. 
+
+* http://cdn.cs50.net/2016/fall/seminars/automated_analysis_music/automated_analysis_music.pdf[Slides]
+* http://cdn.cs50.net/2016/fall/seminars/automated_analysis_music/automated_analysis_music.zip[Source Code]
+* https://www.youtube.com/watch?v=mq8zj_iH7lg[Video (pre-release)]
+
 === Chrome Extensions
 
 _by Walter Martin_
