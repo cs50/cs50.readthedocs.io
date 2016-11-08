@@ -39,7 +39,7 @@ _by Alan Xie_
 
 New to web development? This seminar will cover a basic introduction to the Meteor.js and ReactJS frameworks, which allow you to prototype a reactive web application in mere hours. We will also integrate technologies such as the d3.js visualization library into our application and discuss pathways for developing a full machine-learning platform.
 
-* https://www.youtube.com/watch?v=T_UC8vSt5-s[Video (pre-release)]
+* https://www.youtube.com/watch?v=4jhhbppL_WQ[Video (pre-release)]
 
 
 === An Introduction to Git and GitHub
