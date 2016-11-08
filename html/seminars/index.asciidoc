@@ -13,6 +13,18 @@ this year and past years.
 ////
 * https://cs50.harvard.edu/seminars/register[Register for Seminars]
 
+=== Chrome Extensions
+
+_by Walter Martin_
+
+Chrome Extensions are a wonderful platform for lightweight applications, and are much simpler to create than you might think!
+
+* http://cdn.cs50.net/2016/fall/seminars/chrome_extensions/chrome_extensions.pdf[Slides]
+* http://cdn.cs50.net/2016/fall/seminars/chrome_extensions/chrome_extensions.zip[Source Code]
+* https://www.youtube.com/watch?v=Zz7HRDj9E-o[Video]
+
+
+
 === JavaScript with Exponent and React Native
 
 _by Charlie Cheever_
@@ -29,8 +41,8 @@ _by Athena Kan_
 
 Harvard Business Review named data scientist "the sexiest job of the 21st century." Python pandas is a commonly-used tool in the industry to easily and efficiently clean, analyze, and visualize data of varying sizes and types. In this seminar, we'll learn how to use pandas to extract meaningful insights and recommendations from real-world datasets. 
 
-* http://cdn.cs50.net/2016/fall/seminars/python_pandas.pdf[Slides]
-* http://cdn.cs50.net/2016/fall/seminars/python_pandas_src.pdf[Source Code]
+* http://cdn.cs50.net/2016/fall/seminars/python_pandas/python_pandas.pdf[Slides]
+* http://cdn.cs50.net/2016/fall/seminars/python_pandas/python_pandas_src.pdf[Source Code]
 * https://www.youtube.com/watch?v=POe1cufDWFs[Video]
 
 === Smart Cities Data 
