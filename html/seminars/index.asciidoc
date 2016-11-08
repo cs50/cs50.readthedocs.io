@@ -33,7 +33,22 @@ Chrome Extensions are a wonderful platform for lightweight applications, and are
 * http://cdn.cs50.net/2016/fall/seminars/chrome_extensions/chrome_extensions.zip[Source Code]
 * https://www.youtube.com/watch?v=Zz7HRDj9E-o[Video]
 
+=== Data Analytics with Meteor.js + ReactJS
 
+_by Alan Xie_
+
+New to web development? This seminar will cover a basic introduction to the Meteor.js and ReactJS frameworks, which allow you to prototype a reactive web application in mere hours. We will also integrate technologies such as the d3.js visualization library into our application and discuss pathways for developing a full machine-learning platform.
+
+* https://www.youtube.com/watch?v=T_UC8vSt5-s[Video (pre-release)]
+
+
+=== An Introduction to Git and GitHub
+_by Brian Yu_
+
+Git is a powerful piece of version control software that helps you to keep track of different versions of your code, collaborate on your code with other people, and experiment with new changes to your code. It's used in industry, in many open-source projects, and in many computer science courses here at Harvard. This seminar will be a hands-on opportunity for you to learn how to leverage the features offered by Git and GitHub.
+
+* http://cdn.cs50.net/2016/fall/seminars/github/github.pdf[Slides]
+* https://www.youtube.com/watch?v=T_UC8vSt5-s[Video (pre-release)]
 
 === JavaScript with Exponent and React Native
 
