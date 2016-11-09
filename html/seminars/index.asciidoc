@@ -39,10 +39,31 @@ _by Alan Xie_
 
 New to web development? This seminar will cover a basic introduction to the Meteor.js and ReactJS frameworks, which allow you to prototype a reactive web application in mere hours. We will also integrate technologies such as the d3.js visualization library into our application and discuss pathways for developing a full machine-learning platform.
 
+* http://cdn.cs50.net/2016/fall/seminars/data_analytics/data_analytics.pdf[Slides]
+* http://cdn.cs50.net/2016/fall/seminars/data_analytics/data_analytics.zip[Source Code]
 * https://www.youtube.com/watch?v=4jhhbppL_WQ[Video (pre-release)]
 
+=== Data Science with Python Pandas
+
+_by Athena Kan_
+
+Harvard Business Review named data scientist "the sexiest job of the 21st century." Python pandas is a commonly-used tool in the industry to easily and efficiently clean, analyze, and visualize data of varying sizes and types. In this seminar, we'll learn how to use pandas to extract meaningful insights and recommendations from real-world datasets. 
+
+* http://cdn.cs50.net/2016/fall/seminars/python_pandas/python_pandas.pdf[Slides]
+* http://cdn.cs50.net/2016/fall/seminars/python_pandas/python_pandas_src.pdf[Source Code]
+* https://www.youtube.com/watch?v=POe1cufDWFs[Video]
+
+=== Drawing Real Web Apps with Pagedraw
+
+_by Gabriel Guimaraes and Jared Pochtar_
+
+Pagedraw is a tool that compiles mockups and drawings into fully semantic HTML + CSS + Jinja code. That's right, you don't need to code HTML and CSS by hand anymore. You can just draw what you envision in our tool and we'll generate the entire frontend automatically for you. Pagedraw code automatically works across multiple screen sizes, supports mobile views, dynamic data, and more!
+
+* http://cdn.cs50.net/2016/fall/seminars/pagedraw/pagedraw.pdf[Slides]
+* https://www.youtube.com/watch?v=3mww5tsrhSo[Video]
 
 === An Introduction to Git and GitHub
+
 _by Brian Yu_
 
 Git is a powerful piece of version control software that helps you to keep track of different versions of your code, collaborate on your code with other people, and experiment with new changes to your code. It's used in industry, in many open-source projects, and in many computer science courses here at Harvard. This seminar will be a hands-on opportunity for you to learn how to leverage the features offered by Git and GitHub.
@@ -60,15 +81,14 @@ Learn how to build native mobile apps that work on iOS and Android by writing ju
 * http://cdn.cs50.net/2016/fall/seminars/javascript_with_exponent_and_react_native/javascript_with_exponent_and_react_native.zip[Source Code]
 * https://www.youtube.com/watch?v=rw1-lPlVH4Q[Video]
 
-=== Data Science with Python Pandas
+=== P vs. NP
 
-_by Athena Kan_
+_by Sammy Mehra_
 
-Harvard Business Review named data scientist "the sexiest job of the 21st century." Python pandas is a commonly-used tool in the industry to easily and efficiently clean, analyze, and visualize data of varying sizes and types. In this seminar, we'll learn how to use pandas to extract meaningful insights and recommendations from real-world datasets. 
+Introduction to the most famous unsolved problem in Computer Science. Introduction to Turing Machines, runtime of algorithms, and the classes P and NP. What would the universe look like if P=NP. History of the problem, and attempts to solve the problem.
 
-* http://cdn.cs50.net/2016/fall/seminars/python_pandas/python_pandas.pdf[Slides]
-* http://cdn.cs50.net/2016/fall/seminars/python_pandas/python_pandas_src.pdf[Source Code]
-* https://www.youtube.com/watch?v=POe1cufDWFs[Video]
+* http://cdn.cs50.net/2016/fall/seminars/p_vs_np/p_vs_np.pdf[Slides]
+* https://www.youtube.com/watch?v=FPn3PQtbOAw[Video]
 
 === Smart Cities Data 
 
