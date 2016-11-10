@@ -48,6 +48,16 @@ Harvard Business Review named data scientist "the sexiest job of the 21st centur
 * http://cdn.cs50.net/2016/fall/seminars/python_pandas/python_pandas_src.pdf[Source Code]
 * https://www.youtube.com/watch?v=POe1cufDWFs[Video]
 
+=== Data Visualization with D3
+
+_by Michael Menz_
+
+D3 is a Javascript library for data-visualization used by popular websites like the New York Times and FiveThirtyEight. In this seminar, students will learn the basics of D3. We will then use NBA shot data to demonstrate some of the advanced components of the framework. See https://github.com/d3/d3/wiki/Gallery for a few examples of what's possible with D3.
+
+* http://cdn.cs50.net/2016/fall/seminars/data_visualization_with_d3/data_visualization_with_d3.pdf[Slides]
+* http://cdn.cs50.net/2016/fall/seminars/data_visualization_with_d3/data_visualization_with_d3.zip[Source Code]
+* https://www.youtube.com/watch?v=219xXJRh4Lw[Video]
+
 === Drawing Real Web Apps with Pagedraw
 
 _by Gabriel Guimaraes and Jared Pochtar_
