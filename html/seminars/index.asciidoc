@@ -8,11 +8,6 @@ this year and past years.
 
 == Fall 2016
 
-////
-* https://cs50.harvard.edu/seminars/schedule[Schedule of Seminars]
-////
-* https://cs50.harvard.edu/seminars/register[Register for Seminars]
-
 === Automated Analysis of Music and Audio
 
 _by Vivek Jayaram_
@@ -21,7 +16,7 @@ The intersection of music and CS is an interesting field with many applications,
 
 * http://cdn.cs50.net/2016/fall/seminars/automated_analysis_music/automated_analysis_music.pdf[Slides]
 * http://cdn.cs50.net/2016/fall/seminars/automated_analysis_music/automated_analysis_music.zip[Source Code]
-* https://www.youtube.com/watch?v=mq8zj_iH7lg[Video (pre-release)]
+* https://www.youtube.com/watch?v=SFtoiK64TaY[Video]
 
 === Chrome Extensions
 
@@ -41,7 +36,7 @@ New to web development? This seminar will cover a basic introduction to the Mete
 
 * http://cdn.cs50.net/2016/fall/seminars/data_analytics/data_analytics.pdf[Slides]
 * http://cdn.cs50.net/2016/fall/seminars/data_analytics/data_analytics.zip[Source Code]
-* https://www.youtube.com/watch?v=4jhhbppL_WQ[Video (pre-release)]
+* https://www.youtube.com/watch?v=bhri6WQJCJ0[Video]
 
 === Data Science with Python Pandas
 
@@ -69,7 +64,7 @@ _by Brian Yu_
 Git is a powerful piece of version control software that helps you to keep track of different versions of your code, collaborate on your code with other people, and experiment with new changes to your code. It's used in industry, in many open-source projects, and in many computer science courses here at Harvard. This seminar will be a hands-on opportunity for you to learn how to leverage the features offered by Git and GitHub.
 
 * http://cdn.cs50.net/2016/fall/seminars/github/github.pdf[Slides]
-* https://www.youtube.com/watch?v=T_UC8vSt5-s[Video (pre-release)]
+* https://www.youtube.com/watch?v=MJUJ4wbFm_A[Video]
 
 === JavaScript with Exponent and React Native
 
@@ -88,7 +83,7 @@ _by Sammy Mehra_
 Introduction to the most famous unsolved problem in Computer Science. Introduction to Turing Machines, runtime of algorithms, and the classes P and NP. What would the universe look like if P=NP. History of the problem, and attempts to solve the problem.
 
 * http://cdn.cs50.net/2016/fall/seminars/p_vs_np/p_vs_np.pdf[Slides]
-* https://www.youtube.com/watch?v=FPn3PQtbOAw[Video]
+* https://www.youtube.com/watch?v=p5RethqipI0[Video]
 
 === Smart Cities Data 
 
