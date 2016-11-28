@@ -1,7 +1,7 @@
 = CS50 Hackathon
 :toc: left
 
-The CS50 Hackathon is an epic all-nighter in the http://shepleybulfinch.com/images/hub_images/sb_home_944x583_harvard_hi_2.jpg[HBS Hives] atop the http://i-lab.harvard.edu/[i-lab] at https://maps.google.com/maps?t=m&q=125+Western+Avenue%2C+Boston+MA&output=classic[125 Western Avenue] during
+The CS50 Hackathon is an epic all-nighter in the http://shepleybulfinch.com/images/hub_images/sb_home_944x583_harvard_hi_2.jpg[HBS Hives] atop the http://i-lab.harvard.edu/[i-lab] in http://www.hbs.edu/maps/#15.5,91.7[Batten Hall] at https://maps.google.com/maps?t=m&q=125+Western+Avenue%2C+Boston+MA&output=classic[125 Western Avenue] during
 which you can dive into your final project's implementation alongside
 classmates and staff. If you choose to partake, you'll be asked to
 propose three milestones for yourself that evening: a "good" one that
@@ -34,10 +34,12 @@ So that check-in isn't overwhelmed (and you aren't stuck waiting in line), do ar
 == How to get there
 
 * If *walking* from, say, Out of Town News, link:https://www.google.com/maps/dir/Harvard+Square,+18+Brattle+St+%23352,+Cambridge,+MA+02138/125+Western+Ave,+Allston,+Boston,+MA/@42.3686033,-71.1295785,15z/data=!4m19!4m18!1m10!1m1!1s0x89e37742bc65ca79:0x59ca183286a63b76!2m2!1d-71.11896!2d42.373532!3m4!1m2!1d-71.1254162!2d42.3666013!3s0x89e377610cfd3869:0x1025a278cd0f4aa5!1m5!1m1!1s0x89e37761d7d4572b:0xaf083e816c6fc10c!2m2!1d-71.124626!2d42.363655!3e2[follow this route]. Odds are the walk will take 20+ minutes.
-* If *taking the shuttle*, take the Allston Express to the i-lab (which is where the HBS Hives are), per the schedule for the http://www.transportation.harvard.edu/shuttle-van-services/shuttles-schedule/evening-nights-monday-friday[Allston Campus Express PM]; consult the column called *Hi Lab HBS*. Those are regularly scheduled shuttles, not CS50 Shuttles, so space will be limited.  Odds are the trip will take 10+ minutes.
+* If *taking the shuttle*, take the Allston Express to the i-lab (which is where the HBS Hives are), per the schedule for the http://www.transportation.harvard.edu/shuttle-van-services/shuttles-schedule/evening-nights-monday-friday[Allston Campus Express PM]; consult the column called *i Lab Western Ave*. Those are regularly scheduled shuttles, not CS50 Shuttles, so space will be limited.  Odds are the trip will take 10+ minutes.
 * If *driving*, drive to https://maps.google.com/maps?t=m&q=125+Western+Avenue%2C+Boston+MA&output=classic[125 Western Avenue] in Allston (aka Boston).  Metered parking is available *behind* the i-lab, in the lot whose entrance is on Western Avenue itself.
 
+////
 If you find yourself lost, call 413-400-CS50 and tell us what you see around you!
+////
 
 == What to bring 
 
@@ -52,7 +54,7 @@ of the CS50 Bot's confirmation of your spot)
 * Blanket; pillow
 * Camera
 * Contact lens case/solution; eyeglasses
-* Headphones; iPod
+* Headphones
 * Phone with charger
 * Sweater/sweatshirt
 * Water bottle
@@ -92,7 +94,7 @@ to those who can partake for the entire time.)
 
 === Can I leave early?
 
-If you really, really want to, yes.  If you leave before 3am, call the http://www.transportation.harvard.edu/shuttle-van-services/evening-van-service[Evening Van Service] at 617-495-0400 before 2:30am to arrange for pick-up. If you leave between 3am and 5am, best to use https://www.uber.com/[Uber] or call 617-782-5500 for a taxi. If leaving on foot, be sure to walk with multiple friends.
+If you really, really want to, yes.  If you leave before 3am, call the http://www.transportation.harvard.edu/shuttle-van-services/evening-van-service[Evening Van Service] at 617-495-0400 before 2:30am to arrange for pick-up. If you leave between 3am and 5am, best to use https://get.uber.com/[Uber] or call 617-782-5500 for a taxi. If leaving on foot, be sure to walk with multiple friends.
 
 === Can I go to IHOP?
 
@@ -102,11 +104,11 @@ Please forgive if we can't accommodate everyone who'd like to go!
 
 === How do I check in upon arrival?
 
-First visit the check-in tables atop the first flight of stairs. Then complete your check-in at https://cs50.harvard.edu/[cs50.harvard.edu/checkin].
+First visit the check-in tables atop the first flight of stairs. Then complete your check-in at https://cs50.net/[cs50.net/checkin].
 
 === How do I check out before leaving?
 
-Simply visit https://cs50.harvard.edu[cs50.harvard.edu/checkout]!
+Simply visit https://cs50.net[cs50.net/checkout]!
 
 === What if I can't attend after all?
 
@@ -142,7 +144,7 @@ Some, yes. It'll be set aside, so just check with the staff as to where it is.
 
 Yes, via regularly scheduled shuttles. But space will be limited, so it's probably best to walk to the Hackathon instead with friends.
 
-With that said, you can take the Allston Express to the i-lab (which is where the HBS Hives are), per the schedule for the   http://www.transportation.harvard.edu/shuttle-van-services/shuttles-schedule/evening-nights-monday-friday[Allston Campus Express PM]; consult the column called *Hi Lab*. Those are regularly scheduled shuttles, not CS50 Shuttles, so space will be limited. Odds are the trip will take 10+ minutes.
+With that said, you can take the Allston Express to the i-lab (which is where the HBS Hives are), per the schedule for the   http://www.transportation.harvard.edu/shuttle-van-services/shuttles-schedule/evening-nights-monday-friday[Allston Campus Express PM]; consult the column called *i Lab Western Ave*. Those are regularly scheduled shuttles, not CS50 Shuttles, so space will be limited. Odds are the trip will take 10+ minutes.
 
 ==== From the Hackathon?
 
@@ -169,7 +171,3 @@ Yes! There will be vegetarian options from Felipe's and Domino's in addition to 
 Yes. But best to download anything big (e.g., software, movies, etc.)
 beforehand, lest Wi-Fi at HBS be a bit slow with so many
 people on it!
-
-=== Will there be a video stream?
-
-Yes. Visit https://live.cs50.net/[live.cs50.net] throughout the eve if you'd like to see what's going on outside of your hive!

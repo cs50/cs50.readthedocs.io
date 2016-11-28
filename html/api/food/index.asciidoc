@@ -35,7 +35,7 @@ commercial purposes, contact the author.
 
 == Registration
 
-To use this API, you must https://docs.cs50.net/#plans[register for an API key].
+To use this API, you must https://cs50.3scale.net/#plans[register for an API key].
 
 == Limits
 
@@ -43,7 +43,7 @@ Usage of this API is limited to 60 queries per minute.
 
 == Try it out!
 
-The online https://docs.cs50.net/docs[documentation] allows you, once you sign in, 
+The online https://cs50.3scale.net/docs[documentation] allows you, once you sign in, 
 to try out making queries on you own, so be sure to try out some queries and see how it works.
 
 == Bug Report
