@@ -35,7 +35,7 @@ So that check-in isn't overwhelmed (and you aren't stuck waiting in line!), do a
 
 === Yale Students
 
-_Coming Soon_
+So that we arrive in time for Hackathon's start, please meet outside Arthur K. Watson at 51 Prospect Street by *3:45pm* on Thu 12/1. You will be asked to fill out a brief waiver form before boarding the charter buses, which are scheduled for a prompt 4pm departure. Buses should have outlets and Wi-Fi, though best to charge all gear and download all files ahead of time, just in case. In addition, food will not be served until ~9pm at the Hackathon, so best to order a bag lunch or bring other snacks with you for the ride. Finally, A reminder that if you take a bus to Harvard with us, you *must* return to Yale with us.
 
 == How to get there
 
@@ -44,10 +44,6 @@ _Coming Soon_
 * If *walking* from, say, Out of Town News, link:https://www.google.com/maps/dir/Harvard+Square,+18+Brattle+St+%23352,+Cambridge,+MA+02138/125+Western+Ave,+Allston,+Boston,+MA/@42.3686033,-71.1295785,15z/data=!4m19!4m18!1m10!1m1!1s0x89e37742bc65ca79:0x59ca183286a63b76!2m2!1d-71.11896!2d42.373532!3m4!1m2!1d-71.1254162!2d42.3666013!3s0x89e377610cfd3869:0x1025a278cd0f4aa5!1m5!1m1!1s0x89e37761d7d4572b:0xaf083e816c6fc10c!2m2!1d-71.124626!2d42.363655!3e2[follow this route]. Odds are the walk will take 20+ minutes.
 * If *taking the shuttle*, take the Allston Express to the i-lab (which is where the HBS Hives are), per the schedule for the http://www.transportation.harvard.edu/shuttle-van-services/shuttles-schedule/evening-nights-monday-friday[Allston Campus Express PM]; consult the column called *i Lab Western Ave*. Those are regularly scheduled shuttles, not CS50 Shuttles, so space will be limited.  Odds are the trip will take 10+ minutes.
 * If *driving*, drive to https://maps.google.com/maps?t=m&q=125+Western+Avenue%2C+Boston+MA&output=classic[125 Western Avenue] in Allston (aka Boston).  Metered parking is available *behind* the i-lab, in the lot whose entrance is on Western Avenue itself.
-
-=== Yale Students
-
-_Coming Soon_
 
 ////
 If you find yourself lost, call 413-400-CS50 and tell us what you see around you!
@@ -154,6 +150,10 @@ Yes, via regularly scheduled shuttles. But space will be limited, so it's probab
 
 With that said, you can take the Allston Express to the i-lab (which is where the HBS Hives are), per the schedule for the   http://www.transportation.harvard.edu/shuttle-van-services/shuttles-schedule/evening-nights-monday-friday[Allston Campus Express PM]; consult the column called *i Lab Western Ave*. Those are regularly scheduled shuttles, not CS50 Shuttles, so space will be limited. Odds are the trip will take 10+ minutes.
 
+=== To the Hackathon, from Yale?
+
+See "When to get there."
+
 ==== From the Hackathon?
 
 Yes, via chartered CS50 Shuttles. Some of the shuttles will head to IHOP around 5am, depending on how many classmates are (still!) hungry, and some shuttles will head to the River houses, Yard, and Quad.
@@ -161,6 +161,10 @@ Yes, via chartered CS50 Shuttles. Some of the shuttles will head to IHOP around 
 With that said, space will still be limited, even though we've literally reserved every shuttle that Harvard owns! So the shuttles destined for the River houses, Yard, and Quad might make multiple loops, in which case there might be a bit of a wait. But you're welcome to walk home with friends if you'd rather not wait!
 
 Please forgive, especially if weary or grumpy at that hour, if we can't quite fit everyone into shuttles all at once!
+
+=== From the Hackathon, to Yale?
+
+Yes, via the same buses on which you arrived. On Fri 12/2 morning, these buses will depart for IHOP, where a bountiful (likely bleary-eyed) breakfast will be served. We'll then return to Yale, arriving around 10am.
 
 === Will there be office hours?
 
