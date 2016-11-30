@@ -150,7 +150,7 @@ Yes, via regularly scheduled shuttles. But space will be limited, so it's probab
 
 With that said, you can take the Allston Express to the i-lab (which is where the HBS Hives are), per the schedule for the   http://www.transportation.harvard.edu/shuttle-van-services/shuttles-schedule/evening-nights-monday-friday[Allston Campus Express PM]; consult the column called *i Lab Western Ave*. Those are regularly scheduled shuttles, not CS50 Shuttles, so space will be limited. Odds are the trip will take 10+ minutes.
 
-=== To the Hackathon, from Yale?
+==== To the Hackathon, from Yale?
 
 See "When to get there."
 
@@ -162,7 +162,7 @@ With that said, space will still be limited, even though we've literally reserve
 
 Please forgive, especially if weary or grumpy at that hour, if we can't quite fit everyone into shuttles all at once!
 
-=== From the Hackathon, to Yale?
+==== From the Hackathon, to Yale?
 
 Yes, via the charter buses on which you arrived. On Fri 12/2 morning, these buses will depart for IHOP, where a bountiful (likely bleary-eyed) breakfast will be served. We'll then return to Yale, arriving around 10am.
 
