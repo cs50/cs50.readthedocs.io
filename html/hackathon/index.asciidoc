@@ -49,6 +49,10 @@ So that we arrive in time for Hackathon's start, please meet outside Arthur K. W
 If you find yourself lost, call 413-400-CS50 and tell us what you see around you!
 ////
 
+=== Yale Studens
+
+See <<when_to_get_there,When to get there>>.
+
 == What to bring 
 
 === You must bring...
