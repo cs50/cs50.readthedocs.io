@@ -37,7 +37,7 @@ Usage of this API is limited to 60 queries per minute.
 
 == Try it out!
 
-The online https://cs50.3scale.net/docs[documentation] allows you, once you sign in, 
+The online https://cs50.3scale.net/docs[documentation] allows you, once you sign in,
 to try out making queries on you own, so be sure to try out some queries and see how it works.
 
 == Bug Report
@@ -55,7 +55,7 @@ To query the CS50 Courses API for courses, contact the server via URLs
 in this format:
 
 ----
-http://api.cs50.net/courses/courses?param1=value1&param2=value2&...
+http://api.cs50.net/courses/3/courses?param1=value1&param2=value2&...
 ----
 
 Supported parameters include:
@@ -86,12 +86,12 @@ If a course is taught by multiple faculty some term, `faculty` will be a
 comma-separated list of faculty IDs.
 
 Beware that `cat_num` may contain leading zeroes for historical reasons,
-so be sure to treat it as a string, not as an integer. 
+so be sure to treat it as a string, not as an integer.
 
 ==== JSON
 
 If you request data in JSON format (e.g.,
-`http://api.cs50.net/courses/2/courses?key=KEY&cat_num=4949&output=json`, where `KEY` is your API key), the
+`http://api.cs50.net/courses/3/courses?key=KEY&cat_num=4949&output=json`, where `KEY` is your API key), the
 response will be an array of objects, per the below:
 
 [source,javascript]
@@ -146,7 +146,7 @@ response will be an array of objects, per the below:
 ==== JSONP
 
 If you request data in JSONP format (e.g.,
-`http://api.cs50.net/courses/courses?key=KEY&cat_num=4949&output=jsonp&callback=parseResponse`, where `KEY` is your API key),
+`http://api.cs50.net/courses/3/courses?key=KEY&cat_num=4949&output=jsonp&callback=parseResponse`, where `KEY` is your API key),
 the response will be a padded array of objects, per the below:
 
 [source,javascript]
@@ -157,7 +157,7 @@ parseResponse([{"cat_num": "4949", "term": "FALL", "bracketed": false, "field": 
 ==== XML
 
 If you request data in XML format (e.g.,
-`http://api.cs50.net/courses/courses?key=KEY&cat_num=4949&output=xml`, where `KEY` is your API key), the
+`http://api.cs50.net/courses/3/courses?key=KEY&cat_num=4949&output=xml`, where `KEY` is your API key), the
 response will be an XML document whose root element is `courses`, each
 of whose children is an `course`, per the below:
 
@@ -218,7 +218,7 @@ To query the CS50 Courses API for faculty, contact the server via URLs
 in this format:
 
 ----
-http://api.cs50.net/courses/faculty?param1=value1&param2=value2&...
+http://api.cs50.net/courses/3/faculty?param1=value1&param2=value2&...
 ----
 
 Supported parameters include:
@@ -240,7 +240,7 @@ Request].
 ==== JSON
 
 If you request data in JSON format (e.g.,
-`http://api.cs50.net/courses/faculty?key=KEY&id=F98d2c536d93571eff451df8bd44823d8&output=json`, where `KEY` is your API key),
+`http://api.cs50.net/courses/3/faculty?key=KEY&id=F98d2c536d93571eff451df8bd44823d8&output=json`, where `KEY` is your API key),
 the response will be an array of objects, per the below:
 
 [source,javascript]
@@ -259,7 +259,7 @@ the response will be an array of objects, per the below:
 ==== JSONP
 
 If you request data in JSONP format (e.g.,
-`http://api.cs50.net/courses/faculty?key=KEY&id=F98d2c536d93571eff451df8bd44823d8&output=jsonp&callback=parseResponse`, where `KEY` is your API key),
+`http://api.cs50.net/courses/3/faculty?key=KEY&id=F98d2c536d93571eff451df8bd44823d8&output=jsonp&callback=parseResponse`, where `KEY` is your API key),
 the response will be a padded array of objects, per the below:
 
 [source,javascript]
@@ -270,7 +270,7 @@ parseResponse([{"id":"F98d2c536d93571eff451df8bd44823d8","first":"David","middle
 === XML
 
 If you request data in XML format (e.g.,
-`http://api.cs50.net/courses/faculty?key=KEY&id=98d2c536d93571eff451df8bd44823d8&output=xml`, where `KEY` is your API key),
+`http://api.cs50.net/courses/3/faculty?key=KEY&id=98d2c536d93571eff451df8bd44823d8&output=xml`, where `KEY` is your API key),
 the response will be an XML document whose root element is `courses`,
 each of whose children is an `course`, per the below:
 
@@ -294,7 +294,7 @@ To query the CS50 Courses API for fields of study, contact the server
 via URLs in this format:
 
 ----
-http://api.cs50.net/courses/fields?param1=value1&param2=value2&...
+http://api.cs50.net/courses/3/fields?param1=value1&param2=value2&...
 ----
 
 Supported parameters include:
@@ -316,7 +316,7 @@ Request].
 ==== JSON
 
 If you request data in JSON format (e.g.,
-`http://api.cs50.net/courses/fields?key=KEY&id=COMPSCI&output=json`, where `KEY` is your API key), the
+`http://api.cs50.net/courses/3/fields?key=KEY&id=COMPSCI&output=json`, where `KEY` is your API key), the
 response will be an array of objects, per the below:
 
 [source,javascript]
@@ -333,7 +333,7 @@ response will be an array of objects, per the below:
 ==== JSONP
 
 If you request data in JSONP format (e.g.,
-`http://api.cs50.net/courses/fields?key=KEY&id=COMPSCI&output=jsonp&callback=parseResponse`, where `KEY` is your API key),
+`http://api.cs50.net/courses/3/fields?key=KEY&id=COMPSCI&output=jsonp&callback=parseResponse`, where `KEY` is your API key),
 the response will be a padded array of objects, per the below:
 
 [source,javascript]
@@ -363,33 +363,33 @@ of whose children is an `course`, per the below:
 == Examples
 
 * Returns all courses:
-** http://api.cs50.net/courses/courses?key=KEY&output=json
-** http://api.cs50.net/courses/courses?key=KEY&output=jsonp&callback=parseResponse
-** http://api.cs50.net/courses/courses?key=KEY&output=xml
+** http://api.cs50.net/courses/3/courses?key=KEY&output=json
+** http://api.cs50.net/courses/3/courses?key=KEY&output=jsonp&callback=parseResponse
+** http://api.cs50.net/courses/3/courses?key=KEY&output=xml
 * Returns course with catalog number 4949:
-** http://api.cs50.net/courses/courses?key=KEY&cat_num=4949&output=json
-** http://api.cs50.net/courses/courses?key=KEY&cat_num=4949&output=jsonp&callback=parseResponse
-** http://api.cs50.net/courses/courses?key=KEY&cat_num=4949&output=xml
+** http://api.cs50.net/courses/3/courses?key=KEY&cat_num=4949&output=json
+** http://api.cs50.net/courses/3/courses?key=KEY&cat_num=4949&output=jsonp&callback=parseResponse
+** http://api.cs50.net/courses/3/courses?key=KEY&cat_num=4949&output=xml
 * Returns courses taught by David J. Malan:
-** http://api.cs50.net/courses/courses?key=KEY&faculty=F98d2c536d93571eff451df8bd44823d8&output=json
-** http://api.cs50.net/courses/courses?key=KEY&faculty=F98d2c536d93571eff451df8bd44823d8&output=jsonp&callback=parseResponse
-** http://api.cs50.net/courses/courses?key=KEY&faculty=F98d2c536d93571eff451df8bd44823d8&output=xml
+** http://api.cs50.net/courses/3/courses?key=KEY&faculty=F98d2c536d93571eff451df8bd44823d8&output=json
+** http://api.cs50.net/courses/3/courses?key=KEY&faculty=F98d2c536d93571eff451df8bd44823d8&output=jsonp&callback=parseResponse
+** http://api.cs50.net/courses/3/courses?key=KEY&faculty=F98d2c536d93571eff451df8bd44823d8&output=xml
 * Returns Computer Science courses:
-** http://api.cs50.net/courses/courses?key=KEY&field=COMPSCI&output=json
-** http://api.cs50.net/courses/courses?key=KEY&field=COMPSCI&output=jsonp&callback=parseResponse
-** http://api.cs50.net/courses/courses?key=KEY&field=COMPSCI&output=xml
+** http://api.cs50.net/courses/3/courses?key=KEY&field=COMPSCI&output=json
+** http://api.cs50.net/courses/3/courses?key=KEY&field=COMPSCI&output=jsonp&callback=parseResponse
+** http://api.cs50.net/courses/3/courses?key=KEY&field=COMPSCI&output=xml
 * Returns courses related to archaeology:
-** http://api.cs50.net/courses/courses?key=KEY&q=archaeology&output=json
-** http://api.cs50.net/courses/courses?key=KEY&q=archaeology&output=jsonp&callback=parseResponse
-** http://api.cs50.net/courses/courses?key=KEY&q=archaeology&output=xml
+** http://api.cs50.net/courses/3/courses?key=KEY&q=archaeology&output=json
+** http://api.cs50.net/courses/3/courses?key=KEY&q=archaeology&output=jsonp&callback=parseResponse
+** http://api.cs50.net/courses/3/courses?key=KEY&q=archaeology&output=xml
 * Returns David J. Malan:
-** http://api.cs50.net/courses/faculty?key=KEY&id=F98d2c536d93571eff451df8bd44823d8&output=json
-** http://api.cs50.net/courses/faculty?key=KEY&id=F98d2c536d93571eff451df8bd44823d8&output=jsonp&callback=parseResponse
-** http://api.cs50.net/courses/faculty?key=KEY&id=F98d2c536d93571eff451df8bd44823d8&output=xml
+** http://api.cs50.net/courses/3/faculty?key=KEY&id=F98d2c536d93571eff451df8bd44823d8&output=json
+** http://api.cs50.net/courses/3/faculty?key=KEY&id=F98d2c536d93571eff451df8bd44823d8&output=jsonp&callback=parseResponse
+** http://api.cs50.net/courses/3/faculty?key=KEY&id=F98d2c536d93571eff451df8bd44823d8&output=xml
 * Returns Computer Science:
-** http://api.cs50.net/courses/fields?key=KEY&id=COMPSCI&output=json
-** http://api.cs50.net/courses/fields?key=KEY&id=COMPSCI&output=jsonp&callback=parseResponse
-** http://api.cs50.net/courses/fields?key=KEY&id=COMPSCI&output=xml
+** http://api.cs50.net/courses/3/fields?key=KEY&id=COMPSCI&output=json
+** http://api.cs50.net/courses/3/fields?key=KEY&id=COMPSCI&output=jsonp&callback=parseResponse
+** http://api.cs50.net/courses/3/fields?key=KEY&id=COMPSCI&output=xml
 
 == External Links
 
@@ -405,5 +405,5 @@ http://courses.cs50.net/[CS50 Courses]. Added support for multiple
 methods and multiple output formats.
 * 2
 ** Added requirement of API key.
-* 3 
+* 3
 ** Complete overhaul. Rewrote backend, added 3scale support

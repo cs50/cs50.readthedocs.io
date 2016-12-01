@@ -43,7 +43,7 @@ Usage of this API is limited to 60 queries per minute.
 
 == Try it out!
 
-The online https://cs50.3scale.net/docs[documentation] allows you, once you sign in, 
+The online https://cs50.3scale.net/docs[documentation] allows you, once you sign in,
 to try out making queries on you own, so be sure to try out some queries and see how it works.
 
 == Bug Report
@@ -108,7 +108,7 @@ Facts are measured per the units below.
 ==== JSON
 
 If you request data in JSON format (e.g.,
-`http://api.cs50.net/food/2/facts?key=KEY&recipe=117003&portion=1&output=json`, where `KEY` is your API key),
+`http://api.cs50.net/food/3/facts?key=KEY&recipe=117003&portion=1&output=json`, where `KEY` is your API key),
 the response will be an array of objects, per the below:
 
 [source,javascript]
@@ -194,7 +194,7 @@ the response will be an array of objects, per the below:
 ==== JSONP
 
 If you request data in JSONP format (e.g.,
-`http://api.cs50.net/food/2/facts?key=KEY&recipe=117003&portion=1&output=jsonp&callback=parseResponse`, where `KEY` is your API key),
+`http://api.cs50.net/food/3/facts?key=KEY&recipe=117003&portion=1&output=jsonp&callback=parseResponse`, where `KEY` is your API key),
 the response will be a padded array of objects, per the below:
 
 [source,javascript]
@@ -207,7 +207,7 @@ parseResponse([{"fact":"Calcium","amount":48,"percent":4},{"fact":"Calories","am
 If you request data in
 (http://en.wikipedia.org/wiki/XML[XML])
 format (e.g.,
-`http://api.cs50.net/food/2/facts?key=KEY&recipe=117003&portion=1&output=xml`, where `KEY` is your API key),
+`http://api.cs50.net/food/3/facts?key=KEY&recipe=117003&portion=1&output=xml`, where `KEY` is your API key),
 the response will be an xml file, per the
 below:
 
