@@ -87,7 +87,7 @@ To get someone's attention in a chat room, type `@` and then their name (assumin
 
 Space is limited, so attendance is lotteried. If you registered for a
 spot at this year's Hackathon, you should have heard from the CS50 Bot
-by Wed 12/2 as to whether you have a spot! If not, email
+as to whether you have a spot! If not, email
 mailto:heads@cs50.harvard.edu[heads@cs50.harvard.edu] to inquire.
 
 === Can I arrive late?
@@ -108,7 +108,7 @@ Please forgive if we can't accommodate everyone who'd like to go!
 
 === How do I check in upon arrival?
 
-First visit the check-in tables atop the first flight of stairs. Then complete your check-in at https://cs50.net/[cs50.net/checkin].
+First visit the check-in tables in the ground-floor lobby. Then complete your check-in at https://cs50.net/[cs50.net/checkin].
 
 === How do I check out before leaving?
 
@@ -134,7 +134,7 @@ Around 7pm, but do check <<when_to_get_there,when to get there>>.
 
 === Will there be food and drinks?
 
-Yes! But we're essentially maxing out the capacities of Felipe's and Domino's, so do be gentle with quantities. 
+Yes! With so many folks in attendance, though, do try to be gentle with quantities. 
 
 === Will there be gluten-free food?
 
@@ -142,19 +142,17 @@ Some, yes. It'll be set aside, so just check with the staff as to where it is.
 
 === Will there be shuttles?
 
+==== Harvard Students
+
 *If, because of mobility impairment or medical condition, you find it difficult or impossible to use Harvard's shuttles, do contact the http://www.transportation.harvard.edu/shuttle-van-services/evening-van-service[Evening Van Service] in advance of the Hackathon to make arrangements to and from the Hackathon.  Just let mailto:heads@cs50.harvard.edu[heads@cs50.harvard.edu] know if you need a hand.*
 
-==== To the Hackathon?
+===== To the Hackathon?
 
 Yes, via regularly scheduled shuttles. But space will be limited, so it's probably best to walk to the Hackathon instead with friends.
 
 With that said, you can take the Allston Express to the i-lab (which is where the HBS Hives are), per the schedule for the   http://www.transportation.harvard.edu/shuttle-van-services/shuttles-schedule/evening-nights-monday-friday[Allston Campus Express PM]; consult the column called *i Lab Western Ave*. Those are regularly scheduled shuttles, not CS50 Shuttles, so space will be limited. Odds are the trip will take 10+ minutes.
 
-==== To the Hackathon, from Yale?
-
-See "When to get there."
-
-==== From the Hackathon?
+===== From the Hackathon?
 
 Yes, via chartered CS50 Shuttles. Some of the shuttles will head to IHOP around 5am, depending on how many classmates are (still!) hungry, and some shuttles will head to the River houses, Yard, and Quad.
 
@@ -162,7 +160,13 @@ With that said, space will still be limited, even though we've literally reserve
 
 Please forgive, especially if weary or grumpy at that hour, if we can't quite fit everyone into shuttles all at once!
 
-==== From the Hackathon, to Yale?
+==== Yale Students
+
+===== To the Hackathon?
+
+Yes, see <<when_to_get_there,When to get there>>.
+
+===== From the Hackathon?
 
 Yes, via the charter buses on which you arrived. On Fri 12/2 morning, these buses will depart for IHOP, where a bountiful (likely bleary-eyed) breakfast will be served. We'll then return to Yale, arriving around 10am.
 
