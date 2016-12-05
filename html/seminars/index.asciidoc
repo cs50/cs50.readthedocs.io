@@ -86,6 +86,16 @@ Learn how to build native mobile apps that work on iOS and Android by writing ju
 * http://cdn.cs50.net/2016/fall/seminars/javascript_with_exponent_and_react_native/javascript_with_exponent_and_react_native.zip[Source Code]
 * https://www.youtube.com/watch?v=rw1-lPlVH4Q[Video]
 
+
+=== Making the Most of Bootstrap
+
+_by Claire Carroll_
+
+Bootstrap is a set of templates and tools that fast-track front-end web development. Basically, it makes your site look pretty and professional! We'll go over tips and tricks and make sure you're taking full advantage of the opportunities Bootstrap can provide.
+
+* http://cdn.cs50.net/2016/fall/seminars/bootstrap_basics/bootstrap_basics.pdf[Slides]
+* https://www.youtube.com/watch?v=sDyG8z5Q-m4[Video]
+
 === P vs. NP
 
 _by Sammy Mehra_
