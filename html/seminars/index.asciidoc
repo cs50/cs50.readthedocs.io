@@ -8,6 +8,15 @@ this year and past years.
 
 == Fall 2016
 
+=== An Introduction to Git and GitHub
+
+_by Brian Yu_
+
+Git is a powerful piece of version control software that helps you to keep track of different versions of your code, collaborate on your code with other people, and experiment with new changes to your code. It's used in industry, in many open-source projects, and in many computer science courses here at Harvard. This seminar will be a hands-on opportunity for you to learn how to leverage the features offered by Git and GitHub.
+
+* http://cdn.cs50.net/2016/fall/seminars/github/github.pdf[Slides]
+* https://www.youtube.com/watch?v=MJUJ4wbFm_A[Video]
+
 === Automated Analysis of Music and Audio
 
 _by Vivek Jayaram_
@@ -66,15 +75,6 @@ Pagedraw is a tool that compiles mockups and drawings into fully semantic HTML +
 
 * http://cdn.cs50.net/2016/fall/seminars/pagedraw/pagedraw.pdf[Slides]
 * https://www.youtube.com/watch?v=3mww5tsrhSo[Video]
-
-=== An Introduction to Git and GitHub
-
-_by Brian Yu_
-
-Git is a powerful piece of version control software that helps you to keep track of different versions of your code, collaborate on your code with other people, and experiment with new changes to your code. It's used in industry, in many open-source projects, and in many computer science courses here at Harvard. This seminar will be a hands-on opportunity for you to learn how to leverage the features offered by Git and GitHub.
-
-* http://cdn.cs50.net/2016/fall/seminars/github/github.pdf[Slides]
-* https://www.youtube.com/watch?v=MJUJ4wbFm_A[Video]
 
 === JavaScript with Exponent and React Native
 
