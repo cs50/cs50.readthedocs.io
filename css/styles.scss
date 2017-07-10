@@ -2,6 +2,7 @@
 ---
 
 @import "toolkit-light";
+@import "bootstrap-toc";
 
 /* global body padding */
 body {
@@ -34,6 +35,7 @@ iframe {
     max-width: 100%;
 }
 
+/* */
 img {
     max-width: 100%;
 }
@@ -43,15 +45,17 @@ table {
   @extend .table;
 }
 
-/* small screens */
+/* override the Affix plugin so that the navigation isn't sticky */
 @media (max-width: 768px) {
-  /* override the Affix plugin so that the navigation isn't sticky */
   nav.affix[data-toggle="toc"] {
     position: static;
   }
 
-  /* alternatively, if you *do* want the second-level navigation to be shown (as seen on this page on mobile), use this */
-  #toc .nav .nav {
-    display: block;
-  }
 }
+
+/* second-level navigation to be shown */
+/* TODO: ensure column scrolls
+nav[data-toggle=toc] .nav .nav {
+    display: block;
+}
+*/
