@@ -8,6 +8,9 @@ exclude:
   - "TODO.md"
 gems:
   - jekyll-optional-front-matter
+  - jekyll-redirect-from
+  - jekyll-relative-links
   - jekyll-titles-from-headings
+  - jemoji
 host: 0.0.0.0
 port: 8080
