@@ -10,4 +10,4 @@ up: build
 	docker-compose up &
 
 shell:
-	docker exec -it docs50_web bash -l
+	docker exec -it manual50_web bash -l

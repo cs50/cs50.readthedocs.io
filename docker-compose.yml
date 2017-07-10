@@ -1,9 +1,12 @@
 services:
   web:
     build: .
-    container_name: docs50_web
+    container_name: manual50_web
     environment:
       APPLICATION_ENV: dev
     ports:
       - "8080:8080"
+    volumes:
+      - .:/srv/www
+      - /srv/www/public/
 version: "2"
