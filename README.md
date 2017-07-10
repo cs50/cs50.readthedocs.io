@@ -1,3 +1,9 @@
-# CS50 Docs
+# References
 
-This is documentation for CS50, Harvard University's introduction to the intellectual enterprises of computer science and the art of programming.
+- https://github.com/vmg/redcarpet/blob/v3.2.2/README.markdown#and-its-like-really-simple-to-use
+- https://jekyllrb.com/docs/quickstart/
+- https://afeld.github.io/bootstrap-toc/
+
+# TODO
+
+- Decide how to mount `/srv/www` without shadowing `/srv/www/public`.

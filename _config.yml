@@ -1,0 +1,13 @@
+exclude: 
+  - "docker-compose.yml"
+  - "Dockerfile"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "Makefile"
+  - "README.md"
+  - "TODO.md"
+gems:
+  - jekyll-optional-front-matter
+  - jekyll-titles-from-headings
+host: 0.0.0.0
+port: 8080

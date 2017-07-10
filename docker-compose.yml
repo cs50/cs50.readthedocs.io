@@ -1,0 +1,9 @@
+services:
+  web:
+    build: .
+    container_name: docs50_web
+    environment:
+      APPLICATION_ENV: dev
+    ports:
+      - "8080:8080"
+version: "2"

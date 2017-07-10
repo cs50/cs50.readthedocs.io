@@ -1,0 +1,16 @@
+language: ruby
+install: true
+script: true
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: "$AWS_ACCESS_KEY_ID"
+  secret_access_key: "$AWS_SECRET_ACCESS_KEY"
+  region: us-east-1
+  app: manual50
+  env: manual50
+  bucket_name: travis50
+  on:
+    branch: master
+notifications:
+  slack:
+    secure: uj3sv20pWLKUbfqypMqJetGdeFOx4EdCxLWHun60KHbFVS4KNO11pnHEAFeY4pDi2tRJZMr8IpDKOSIdXmGheyEBHwfnp0k7YlXtRfX4Dk8yV2WDKnUMHy5IFwJvk/Lq4VZ2LxiZE++eUPbI6qFvJOdo/+BG7qr0XvBzpnT7MvDkpjGsvG3ntMdR47xpzZqT6WvdU73Qc11MIlS7tCLNQjNewJ70X90/z+EiBIMeFOSHfsBVqvbTj9gBmBlzXP/sEWMgrhTpEUBqAE5LhcMYhWuNelmJPktdd+J+kKljjmE0HisMe7NM89xr3qEFYP8QUvuy23210qhtKyQp9Il2xwLZsIgygwPyTaYrAzaYv9rdRlerSs6+QEf44/b0lamR/pAWZu4Y6kDK3Eag5T/+7daOYYvbynVMgnJNt0MrNkaWsz9UCtMBeMfCy0Hx6VYjXGStLNVntP1LGJmTvOS+N4m1Hb+kczrEt/eexJAAFnU6IC5UkJwCW5Y3xbyXUyV6IqO1iGFuQQDvjv7dPpjS6tb+vTNPQZ1gXw/oD4rhnf763Yqna27cXeLcAT0Icm5kjdNSUmDZbFRCGoP0HyE9KuC9kufnZS53YxI84cCXkF7Cht+TTBCtNlDQlepNHEJfWYeAf/2fNUqBfEZAkkJ+K9pihXudfal/rdAtg93+Wqk=

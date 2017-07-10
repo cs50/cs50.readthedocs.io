@@ -1,0 +1,57 @@
+---
+---
+
+@import "toolkit-light";
+
+/* global body padding */
+body {
+    padding-top:    20px;
+    padding-bottom: 20px;
+}
+@media (min-width: 768px) {
+    body {
+        padding-top:    50px;
+        padding-bottom: 50px;
+  }
+}
+
+/* global spacing overrides */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-top: 0;
+}
+hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.navbar-fixed-top,
+.navbar-static-top {
+    border-bottom: 0;
+}
+
+/* */
+iframe {
+    max-width: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* apply .table to all table elements */
+table {
+  @extend .table;
+}
+
+/* small screens */
+@media (max-width: 768px) {
+  /* override the Affix plugin so that the navigation isn't sticky */
+  nav.affix[data-toggle="toc"] {
+    position: static;
+  }
+
+  /* alternatively, if you *do* want the second-level navigation to be shown (as seen on this page on mobile), use this */
+  #toc .nav .nav {
+    display: block;
+  }
+}
