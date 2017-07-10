@@ -1,8 +1,0 @@
----
-tags: []
-title: APIs
----
-
-* link:CS50 APIs[CS50 APIs]
-* link:Third-Party APIs[Third-Party APIs]
-

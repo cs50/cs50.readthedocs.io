@@ -1,7 +1,0 @@
----
-tags: []
-title: Associativity
----
-
-1.  redirect Precedence#Associativity
-

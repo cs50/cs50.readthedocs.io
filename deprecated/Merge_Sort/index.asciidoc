@@ -1,7 +1,0 @@
----
-tags: []
-title: Merge Sort
----
-
-1.  REDIRECT Sort_algorithms#Merge_Sort
-

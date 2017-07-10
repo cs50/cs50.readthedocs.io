@@ -1,7 +1,0 @@
----
-tags: []
-title: free
----
-
-1.  redirect link:Dynamic Memory Allocation[Dynamic Memory Allocation]
-

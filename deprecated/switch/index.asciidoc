@@ -1,7 +1,0 @@
----
-tags: []
-title: switch
----
-
-1.  REDIRECT Condition#switch
-

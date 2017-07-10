@@ -1,7 +1,0 @@
----
-tags: []
-title: Deals
----
-
-1.  REDIRECT Discounts
-

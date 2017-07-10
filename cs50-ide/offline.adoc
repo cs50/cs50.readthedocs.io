@@ -1,0 +1,116 @@
+// enable self-linked titles
+:sectlinks:
+
+= CS50 IDE Offline
+
+Normally, the CS50 IDE requires a constant connection to the internet. This may not fit users with slow or unstable internet connections, or those who want to continue using the IDE offline for any number of reasons. The following instructions walk you through how to download and install the offline version of the CS50 IDE.
+
+'''
+
+[[install]]
+== Installing the IDE
+
+The CS50 IDE Offline is a containerized app. We need to install a platform called https://www.docker.com/what-docker[Docker] to run and manage our CS50 IDE.
+
+[[linux]]
+=== Linux
+
+Follow the instructions for your Linux distribution to https://docs.docker.com/engine/installation/linux/[install the Docker
+Engine].
+
+. Open up a Terminal window and run the following command to create a new CS50 IDE instance
+
+ $ docker run --privileged -e "OFFLINE_IP=127.0.0.1" -e "OFFLINE_PORT=8080" --name ide50 -d -p 5050:5050 -p 8080-8082:8080-8082 cs50/ide50-offline
+ 
+. Visit http://localhost:5050 in your favorite browser to access the CS50 IDE.
+
+[[mac]]
+=== Mac
+
+NOTE: If https://docs.docker.com/docker-for-mac/install/#what-to-know-before-you-install[these system requirements] are not met, skip to *<<docker-toolbox>>*.
+
+. Install https://docs.docker.com/docker-for-mac/install/[Docker for Mac].
+. Open up a Terminal window and run the following command to create a new CS50 IDE instance
+
+ $ docker run --privileged -e "OFFLINE_IP=127.0.0.1" -e "OFFLINE_PORT=8080" --name ide50 -d -p 5050:5050 -p 8080-8082:8080-8082 cs50/ide50-offline
+
+. Visit http://localhost:5050 in your favorite browser to access the CS50 IDE.
+
+[[windows]]
+=== Windows
+
+NOTE: If https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install[these system requirements] are not met, skip to *<<docker-toolbox>>*.
+
+. Install https://docs.docker.com/docker-for-mac/install/[Docker for Windows].
+. Open up a Command Prompt window and run the following command to create a new CS50 IDE instance
+
+ $ docker run --privileged -e "OFFLINE_IP=127.0.0.1" -e "OFFLINE_PORT=8080" --name ide50 -d -p 5050:5050 -p 8080-8082:8080-8082 cs50/ide50-offline
+
+. Visit http://localhost:5050 in your favorite browser to access the CS50 IDE.
+
+[[docker-toolbox]]
+=== Docker Toolbox
+
+NOTE: You should only follow these instructions if you are a Mac or Windows user and the system requirements for *<<mac>>* or *<<windows>>*, respectively, are not met.
+
+. Download and install *Docker Toolbox* on your
+https://docs.docker.com/toolbox/toolbox_install_mac/[Mac] or
+https://docs.docker.com/toolbox/toolbox_install_windows/[Windows].
+. Open up the *Docker QuickStart Terminal* app that was installed on your computer. After a while, you should see something like the following, with a command prompt below it
+image:/assets/docker-quickstart-terminal.png[alt="Docker QuickStart Terminal"]
+. [[ip]] The IP stated in the screenshot above is the IP of the https://docs.docker.com/machine/overview/[Docker machine]. It may be different on your computer. You are going to use this IP to access your CS50 IDE, so you should record it.
+. Run the following command in the Docker QuickStart Terminal to create a new CS50 IDE instance
+ 
+ $ docker run --privileged -e "OFFLINE_IP=$(docker-machine ip default)" -e "OFFLINE_PORT=8080" --name ide50 -d -p 5050:5050 -p 8080-8082:8080-8082 cs50/ide50-offline
+
+. Visit http://<machine-ip>:5050, in your favorite browser, to access the CS50 IDE, after replacing <machine-ip> with the actual IP for the Docker machine per <<ip, this step>>.
+
+TIP: If you ever forgot or lost the IP of the Docker machine, you should be able to get it back by running `docker-machine ip default` in the Docker QuickStart Terminal.
+
+'''
+
+[[managing-ide]]
+== Managing the IDE
+
+[[starting-the-ide]]
+=== Starting the IDE
+
+If you can't access your CS50 IDE (e.g., after restarting your computer), it's possibly because it's stopped. To start it back, open up a Terminal window (if using *<<mac>>*), a Command Prompt (if using *<<windows>>*), or Docker QuickStart Terminal (if using *<<docker-toolbox>>*), and run the following command
+
+----
+$ docker start ide50
+----
+
+[[restarting-ide]]
+=== Restarting the IDE
+
+Normally, you shouldn't need to restart the IDE, but if you ever wanted to open up a Terminal window (if using *<<mac>>*), a Command Prompt (if using *<<windows>>*), or Docker QuickStart Terminal (if using *<<docker-toolbox>>*), and run the following command
+
+----
+$ docker restart ide50
+----
+
+[[stopping-ide]]
+=== Stopping the IDE
+
+To stop the CS50 IDE open up a Terminal window (if using *<<mac>>*), a Command Prompt (if using *<<windows>>*), or Docker QuickStart Terminal (if using *<<docker-toolbox>>*), and run the following command
+
+----
+$ docker stop ide50
+----
+
+[[removing-ide]]
+=== Removing the IDE
+
+To remove the CS50 IDE instance, ensure the IDE is stopped (see *<<stopping-ide>>*), then open up a Terminal window (if using *<<mac>>*), a Command Prompt (if using *<<windows>>*), or Docker QuickStart Terminal (if using *<<docker-toolbox>>*), and run the following command
+
+----
+$ docker rm ide50
+----
+
+'''
+
+[[where-to-go]]
+== Where to Go Next?
+
+You may read the link:online.adoc[guide] on how to use the CS50 IDE!

@@ -1,7 +1,0 @@
----
-tags: []
-title: Selection Sort
----
-
-1.  REDIRECT Sort_algorithms#Selection_Sort
-

@@ -1,7 +1,0 @@
----
-tags: []
-title: Check
----
-
-1.  REDIRECT link:CS50 Check[CS50 Check]
-

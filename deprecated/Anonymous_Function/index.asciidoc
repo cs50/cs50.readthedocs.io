@@ -1,7 +1,0 @@
----
-tags: []
-title: Anonymous Function
----
-
-1.  redirect link:Anonymous Function[Anonymous Function]
-

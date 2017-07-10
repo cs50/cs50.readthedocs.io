@@ -1,7 +1,0 @@
----
-tags: []
-title: Linked List
----
-
-1.  redirect link:Linked List[Linked List]
-

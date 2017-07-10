@@ -1,8 +1,0 @@
----
-tags: []
-title: float
----
-
-1.  redirect Type#Floating_points:_float,_double[Type#Floating points:
-float, double]
-

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8"/>
+
+        <meta name="description" content="">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <meta property="og:description" content="TODO"/>
+        <meta property="og:image" content="TODO"/>
+        <meta property="og:title" content="TODO"/>
+
+        <link rel="icon" href="/favicon.ico"/>
+
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic"/>
+
+        <link rel="stylesheet" href="/css/styles.css"/>
+
+        <link rel="stylesheet" href="/css/bootstrap-toc.min.css"/>
+
+        <title>CS50 Server</title>
+
+    </head>
+
+    <body data-spy="scroll" data-target="#toc">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 sidebar">
+                    <nav class="sidebar-nav">
+                        <div class="sidebar-header">
+                            <button class="nav-toggler nav-toggler-sm sidebar-toggler" type="button" data-toggle="collapse" data-target="#nav-toggleable-sm">
+                                <span class="sr-only">Toggle nav</span>
+                            </button>
+                            <a class="sidebar-brand img-responsive" href="/">
+                                <h1 data-toc-skip>CS50 Manual</h1>
+                            </a>
+                        </div>
+                        <div class="collapse nav-toggleable-sm" id="nav-toggleable-sm">
+                            <ul class="nav nav-pills nav-stacked">
+                                <li class="nav-header">CS50 IDE</li>
+                                <li><a href="/ide50/faqs">FAQs</a></li>
+                                <li><a href="/ide50/offline">Offline</a></li>
+                                <li><a href="/ide50">Online</a></li>
+                                <li class="nav-header">CS50x</li>
+                                <li><a href="/cs50x/faqs">FAQs</a></li>
+                                <li class="nav-header">Docker Images</li>
+                                <li><a href="/cli">CS50 CLI</a></li>
+                                <li><a href="/server">CS50 Server</a></li>
+                            </ul>
+                            <hr class="visible-xs m-t"/>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-sm-7 content">
+                    <h1 id="cs50-server">CS50 Server</h1>
+
+<p>CS50 Server is a <a href="https://github.com/cs50/server/blob/master/Dockerfile">Docker</a> image with which you can (easily!) serve websites with, optionally, back ends implemented in JavaScript, PHP, Python, or Ruby. (We use it to serve CS50’s own apps on <a href="https://aws.amazon.com/elasticbeanstalk/">AWS Elastic Beanstalk</a>!) Essentially, it’s a lightly customized installation of <a href="https://www.phusionpassenger.com/library/">Passenger</a>, an app server, to which we’ve added support for PHP (for some of CS50’s older web apps). It also facilitates configuration of Nginx, the web server used by Passenger in in <a href="https://www.phusionpassenger.com/library/config/standalone/intro.html">Standalone mode</a>,  via two files, <code class="highlighter-rouge">httpd.conf</code> and <code class="highlighter-rouge">server.conf</code>. The image itself is based on <a href="https://hub.docker.com/_/ubuntu/">Ubuntu 14.04</a>, a (Linux) operating system.</p>
+
+<p>Once <a href="https://cs50.io/">CS50 IDE</a> migrates from Ubuntu 14.04 LTS to Ubuntu 16.04 will CS50 Server be migrated as well.</p>
+
+<h2 id="usage">Usage</h2>
+
+<p>Assuming you already have <a href="https://docs.docker.com/engine/installation/">Docker Engine</a> installed, base your own <code class="highlighter-rouge">Dockerfile</code> on <code class="highlighter-rouge">cs50/server</code> as follows, exposing TCP port 8080, the server’s default:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>FROM cs50/server
+EXPOSE 8080
+</code></pre>
+</div>
+
+<p>Then ensure your app is structured as follows.</p>
+
+<ul>
+  <li>If your app’s back end is implemented in <strong>Meteor</strong>
+    <ul>
+      <li>in bundled/packaged mode, ensure you have a file called <code class="highlighter-rouge">app.js</code> (your app’s entry point file) in the same directory as your <code class="highlighter-rouge">Dockerfile</code>.</li>
+      <li>in non-bundled/packaged mode, ensure you have a file called <code class="highlighter-rouge">.meteor</code> in the same directory as your <code class="highlighter-rouge">Dockerfile</code>.</li>
+    </ul>
+  </li>
+  <li>If your app’s back end is implemented in <strong>Node.js</strong>, ensure you have a file called <code class="highlighter-rouge">app.js</code> (your app’s entry point file) in the same directory as your <code class="highlighter-rouge">Dockerfile</code>.</li>
+  <li>If your website’s back end is implemented in <strong>PHP</strong>, ensure that you have a directory called <code class="highlighter-rouge">public</code> in the same directory as your <code class="highlighter-rouge">Dockerfile</code>, inside of which are any PHP files meant to be served publicly.</li>
+  <li>If your website’s back end is implemented in <strong>Python</strong>, ensure you have a (WSGI) file called <code class="highlighter-rouge">passenger_wsgi.py</code>, formatted <a href="https://www.phusionpassenger.com/library/walkthroughs/start/python.html#the-passenger-wsgi-file">as prescribed</a>, in the same directory as your <code class="highlighter-rouge">Dockerfile</code>.</li>
+  <li>If your website’s back end is implemented in <strong>Ruby</strong> (or <strong>Ruby on Rails</strong>), ensure you have a file called <code class="highlighter-rouge">config.ru</code>, formatted <a href="https://www.phusionpassenger.com/library/deploy/config_ru.html">as prescribed</a>, in the same directory as your <code class="highlighter-rouge">Dockerfile</code>.</li>
+  <li>If your website does not have a back end, only a front end implemented in <strong>HTML</strong> (presumably with CSS and/or JavaScript), ensure that you have a directory called <code class="highlighter-rouge">public</code> in the same directory as your <code class="highlighter-rouge">Dockerfile</code>, inside of which are any HTML (and CSS and/or JavaScript) files meant to be served publicly.</li>
+</ul>
+
+<h2 id="configuration">Configuration</h2>
+
+<h3 id="application_env"><code class="highlighter-rouge">APPLICATION_ENV</code></h3>
+
+<p>If you set an environment called <code class="highlighter-rouge">APPLICATION_ENV</code> to a value of <code class="highlighter-rouge">dev</code>, as via a <code class="highlighter-rouge">docker-compose.yml</code> file, CS50 Server (and, in turn, Passenger) will restart your application’s back end after every HTTP request (by <a href="https://github.com/cs50/server/blob/master/bin/passenger">creating a temporary file</a> called <code class="highlighter-rouge">tmp/always_restart.txt</code>), thereby ensuring that any changes you make to files are noticed (and not cached).</p>
+
+<h3 id="entry-point">Entry Point</h3>
+
+<p>By default, CS50 Server looks for a file called <code class="highlighter-rouge">app.js</code>, <code class="highlighter-rouge">config.ru</code>, <code class="highlighter-rouge">.meteor</code>, or <code class="highlighter-rouge">passenger_wsgi.py</code> per its «Usage». To configure CS50 Server to use some other file as an app’s entry point, adjust your <code class="highlighter-rouge">Dockerfile</code> as follows, where <code class="highlighter-rouge">app_type</code> is <a href="https://www.phusionpassenger.com/library/config/standalone/reference/#--app-type-app_type">as prescribed</a> and <code class="highlighter-rouge">startup_file</code> is the relative path of the file to use.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>FROM cs50/server
+EXPOSE ####
+...
+CMD passenger start --app-type app_type --startup-file startup_file
+</code></pre>
+</div>
+
+<h3 id="nginx">Nginx</h3>
+
+<p>You can customize CS50 Server’s installation of Nginx by adding <a href="http://nginx.org/en/docs/dirindex.html">directives</a> as follows.</p>
+
+<ul>
+  <li>To add directives to Nginix’s <code class="highlighter-rouge">http</code> context, put them in a file called <code class="highlighter-rouge">http.conf</code> in the same directory as your <code class="highlighter-rouge">Dockerfile</code>.
+ Do not surround them with <code class="highlighter-rouge">http {</code> and <code class="highlighter-rouge">}</code>.</li>
+  <li>To add directives to Nginix’s <code class="highlighter-rouge">server</code> context, put them in a file called <code class="highlighter-rouge">server.conf</code> in the same directory as your <code class="highlighter-rouge">Dockerfile</code>. Do not surround them with <code class="highlighter-rouge">server {</code> and <code class="highlighter-rouge">}</code>.</li>
+</ul>
+
+<h4 id="rewrite"><code class="highlighter-rouge">rewrite</code></h4>
+
+<p>To redirect <code class="highlighter-rouge">/surprise</code> (and <code class="highlighter-rouge">/surprise/</code>) to <code class="highlighter-rouge">https://youtu.be/dQw4w9WgXcQ</code>, create a file called <code class="highlighter-rouge">server.conf</code> in the same directory as your <code class="highlighter-rouge">Dockerfile</code>, the contents of which are as follows.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>rewrite ^/surprise/?$ https://youtu.be/dQw4w9WgXcQ redirect;
+</code></pre>
+</div>
+
+<p>To redirect one domain to another (e.g., <code class="highlighter-rouge">www.cs50.harvard.edu</code> to <code class="highlighter-rouge">cs50.harvard.edu</code>), create a file called <code class="highlighter-rouge">server.conf</code> in the same directory as your <code class="highlighter-rouge">Dockerfile</code>, the contents of which are as follows.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>if ($http_host = www.cs50.harvard.edu) {
+    rewrite (.*) https://cs50.harvard.edu$1;
+}
+</code></pre>
+</div>
+
+<h4 id="try_files"><code class="highlighter-rouge">try_files</code></h4>
+
+<p>To route all requests (that aren’t for actual files or directories) to <code class="highlighter-rouge">public/index.php</code>, create a file called <code class="highlighter-rouge">server.conf</code> in the same directory as your <code class="highlighter-rouge">Dockerfile</code>, the contents of which are as follows.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>location / {
+    try_files $uri $uri/ /index.php =404;
+}
+</code></pre>
+</div>
+
+<p>To route all requests (that aren’t for actual files or directories) to <code class="highlighter-rouge">public/index.html</code>, create a file called <code class="highlighter-rouge">server.conf</code> in the same directory as your <code class="highlighter-rouge">Dockerfile</code>, the contents of which are as follows.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>location / {
+    try_files $uri $uri/ /index.html =404;
+}
+</code></pre>
+</div>
+
+<h3 id="port">Port</h3>
+
+<p>By default, CS50 Server uses TCP port 8080. To configure CS50 Server to use some other port, adjust your <code class="highlighter-rouge">Dockerfile</code> as follows, where <code class="highlighter-rouge">####</code> is your choice of ports:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>FROM cs50/server
+EXPOSE ####
+...
+CMD passenger start --port ####
+</code></pre>
+</div>
+
+<h3 id="static-files">Static Files</h3>
+
+<p>By default, CS50 Server assumes that your app’s static files are in <code class="highlighter-rouge">public</code>, which is assumed to be in the same directory as your <code class="highlighter-rouge">Dockerfile</code>. To configure CS50 Server to look in some other directory, configure your <code class="highlighter-rouge">Dockerfile</code> as follows, where <code class="highlighter-rouge">path/to/directory</code> is the relative path to that directory:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>FROM cs50/server
+...
+CMD passenger start --static-files-dir path/to/directory
+</code></pre>
+</div>
+
+<h2 id="notes">Notes</h2>
+
+<h3 id="https">HTTPS</h3>
+
+<p>If CS50 Server detects that it’s running behind a load balancer, whereby <code class="highlighter-rouge">X-Forwarded-Proto</code> (an HTTP header) is set, and the value of that header is <code class="highlighter-rouge">http</code> (the implication of which is that a client’s request used HTTP instead of HTTPS), CS50 Server will redirect the request to use HTTPS.</p>
+
+<h3 id="versions">Versions</h3>
+
+<p>CS50 Server provides the following environments.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Node.js</td>
+      <td>7.6.0</td>
+    </tr>
+    <tr>
+      <td>PHP</td>
+      <td>7.1</td>
+    </tr>
+    <tr>
+      <td>Python</td>
+      <td>3.6.0</td>
+    </tr>
+    <tr>
+      <td>Ruby</td>
+      <td>2.4.0</td>
+    </tr>
+  </tbody>
+</table>
+
+                </div>
+                <div class="col-sm-2 content">
+                    <nav id="toc" data-spy="affix" data-toggle="toc"></nav>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+        <script src="/js/toolkit.min.js"></script>
+
+        <script src="/js/bootstrap-toc.min.js"></script>
+
+        
+
+    </body>
+</html>

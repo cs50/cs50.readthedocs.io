@@ -1,6 +1,0 @@
----
-tags: []
-title: Structures
----
-1.  redirect struct
-

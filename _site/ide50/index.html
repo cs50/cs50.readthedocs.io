@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8"/>
+
+        <meta name="description" content="">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <meta property="og:description" content="TODO"/>
+        <meta property="og:image" content="TODO"/>
+        <meta property="og:title" content="TODO"/>
+
+        <link rel="icon" href="/favicon.ico"/>
+
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic"/>
+
+        <link rel="stylesheet" href="/css/styles.css"/>
+
+        <link rel="stylesheet" href="/css/bootstrap-toc.min.css"/>
+
+        <title>CS50 IDE</title>
+
+    </head>
+
+    <body data-spy="scroll" data-target="#toc">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 sidebar">
+                    <nav class="sidebar-nav">
+                        <div class="sidebar-header">
+                            <button class="nav-toggler nav-toggler-sm sidebar-toggler" type="button" data-toggle="collapse" data-target="#nav-toggleable-sm">
+                                <span class="sr-only">Toggle nav</span>
+                            </button>
+                            <a class="sidebar-brand img-responsive" href="/">
+                                <h1 data-toc-skip>CS50 Manual</h1>
+                            </a>
+                        </div>
+                        <div class="collapse nav-toggleable-sm" id="nav-toggleable-sm">
+                            <ul class="nav nav-pills nav-stacked">
+                                <li class="nav-header">CS50 IDE</li>
+                                <li><a href="/ide50/faqs">FAQs</a></li>
+                                <li><a href="/ide50/offline">Offline</a></li>
+                                <li><a href="/ide50">Online</a></li>
+                                <li class="nav-header">CS50x</li>
+                                <li><a href="/cs50x/faqs">FAQs</a></li>
+                                <li class="nav-header">Docker Images</li>
+                                <li><a href="/cli">CS50 CLI</a></li>
+                                <li><a href="/server">CS50 Server</a></li>
+                            </ul>
+                            <hr class="visible-xs m-t"/>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-sm-7 content">
+                    <h1 id="cs50-ide">CS50 IDE</h1>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>CS50 IDE is a cloud-based Integrated Development Environment powered by <a href="https://c9.io">Cloud9</a> that features a cloud-based Ubuntu environment. It features a browser-based editor, that supports C syntax highlighting and word completion, a GUI-based GDB debugging, full control over a cloud-based Ubuntu environment, and many more features including themes, customizable layouts, and keyboard shortcuts. Since it’s cloud-based, you can continue working on your problem sets even if you use a different computer!</p>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<ol>
+  <li>Visit <a href="https://cs50.io">cs50.io</a>.</li>
+  <li>Use your edX, Harvard, or Yale credentials to log in.</li>
+  <li>Once you log in, you will automatically be forwarded to CS50 IDE! Hereafter, you may simply return to cs50.io to log in and return to CS50 IDE, where all your files and settings are preserved.</li>
+  <li>Ensure your workspace is up-to-date. (See <a href="#updating">Updating</a>!)</li>
+</ol>
+
+<p>NOTE: Upon logging into CS50 IDE for the first time, you may be prompted (again) for your email address. If so, after providing it, click <strong>Private</strong> under <strong>Hosted workspace</strong>, then click <strong>Create workspace</strong>.</p>
+
+<h2 id="working-with-files">Working with Files</h2>
+
+<h3 id="creating-files">Creating Files</h3>
+
+<p>There are multiple ways to create a new file in CS50 IDE:</p>
+
+<ul>
+  <li>Click <strong>File &gt; New File</strong>.</li>
+  <li>Click on the little <img src="/ide50/plus.png" alt="plus" /> button atop any of the open panes and choose <strong>New File</strong> to open a blank file in that particular pane.</li>
+  <li>From the file browser on the left, right-click or control-click on a directory and choose <strong>New File</strong> from the menu to create a blank file inside that directory, then double-click that file to open it.</li>
+  <li>Press <kbd>Alt</kbd> + <kbd>N</kbd> (on a PC) or <kbd>⌘</kbd> + <kbd>N</kbd> (on a Mac).</li>
+</ul>
+
+<p>TIP: There are also provided file templates. For example, to open a <code class="highlighter-rouge">.c</code> template, click <strong>File &gt; New From Template &gt; C</strong> and save yourself some keystrokes!</p>
+
+<h3 id="saving-files">Saving Files</h3>
+
+<p>When a file is open in a tab and you have some unsaved changes, CS50 IDE will show a red dot a top that tab, until you save your changes. Probably the easiest way to save a file is to press <kbd>Ctrl</kbd> + <kbd>S</kbd> (on a PC) or <kbd>⌘</kbd> + <kbd>S</kbd> (on a Mac), but you can also achieve the same by clicking <strong>File &gt; Save</strong> (or <strong>File &gt; Save As…</strong> if you want to save that as a new file), while you’re working on that file.</p>
+
+<p><img src="/ide50/unsaved.png" alt="red dot" /></p>
+
+<h3 id="downloading-files">Downloading Files</h3>
+
+<p>To download a file from your workspace to your local computer, simply navigate to the location of that file, in the file browser on the left, right-click on that file’s name, and choose <strong>Download</strong>.</p>
+
+<p>To download all files in your workspace, click <strong>File &gt; Download Project</strong>.</p>
+
+<h3 id="uploading-files">Uploading Files</h3>
+
+<p>To upload a file from your local computer to your workspace:</p>
+
+<ol>
+  <li>Select a directory where you want your files to get uploaded into, by clicking on that directory in the file browser on the left. By default, this is going to be your <code class="highlighter-rouge">~/workspace</code> directory.</li>
+  <li>Click <strong>File &gt; Upload Local Files…</strong>, then choose either <strong>Select files</strong> or <strong>Select folder</strong>, depending on what you want to upload.</li>
+</ol>
+
+<h3 id="file-revision-history">File Revision History</h3>
+
+<p>While working on a file, you can easily undo changes by clicking <strong>Edit &gt; Undo</strong> or by hitting <kbd>Ctrl</kbd> + <kbd>Z</kbd> (on a PC) or <kbd>⌘</kbd> + <kbd>Z</kbd> on your keyboard. Similarly, you can redo changes by clicking <strong>Edit &gt; Redo</strong> or by hitting <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Z</kbd>.</p>
+
+<p>The CS50 IDE also keeps track of file revisions, in case you want to toggle between file revisions, without having to undo or redo many times. You can show the whole file revision history by clicking <strong>File &gt; Show File Revision History</strong>, which will show a timeline similar to the following, on which you can click to jump to a particular version.</p>
+
+<p><img src="/ide50/history.png" alt="revision history" /></p>
+
+<h2 id="working-with-terminals">Working with Terminals</h2>
+
+<p>Terminals allow you to interact with the underlying Ubuntu environment of CS50 IDE, using textual commands, to do all sorts of things, such as creating, copying, or moving files, compiling and running your programs, and more.</p>
+
+<h3 id="opening-new-terminals">Opening New Terminals</h3>
+
+<p>When CS50 IDE first starts, there should be a terminal tab open at the bottom, by default. You can also open a new terminal tab in that or any other pane of your choice by clicking the <img src="/ide50/plus.png" alt="plus" /> button atop that pane, and choosing <strong>New Terminal</strong>. Alternatively, you may just hit <kbd>Alt</kbd> + <kbd>T</kbd> (on a PC) or <kbd>Option</kbd> + <kbd>T</kbd> (on a Mac).</p>
+
+<p>By default, the current working directory (CWD) in a new terminal is your <code class="highlighter-rouge">~/workspace</code> directory. You can always navigate to your desired directory using <code class="highlighter-rouge">cd path/to/directory</code>.</p>
+
+<p>TIP: To open a terminal in a different directory, navigate to that directory in your file browser, right-click (on a PC) or Ctrl-click (on a Mac) on the directory’s name, and choose <strong>Open Terminal Here</strong>.</p>
+
+<h3 id="copying-and-pasting">Copying and Pasting</h3>
+
+<p>You will probably need to copy and paste commands into terminal tabs to run them. By default, copying and pasting via menus will work inside CS50 IDE only (you might even get warned), so it’s recommended to use your keyboard to copy and paste by hitting <kbd>Ctrl</kbd> + <kbd>C</kbd> and <kbd>Ctrl</kbd> + <kbd>C</kbd>&gt; (on a PC) or <kbd>⌘</kbd> + <kbd>C</kbd> and <kbd>⌘</kbd> + <kbd>V</kbd> (on a Mac).</p>
+
+<h3 id="command-history">Command History</h3>
+
+<p>You will be often using the same commands over and over. Whether you don’t remember a particular command, or too lazy to type it again, you can leverage the command history that is kept by your terminals. You can scroll up and down through the list of commands by hitting your keyboard’s up or down arrow.</p>
+
+<p>Additionally, you can search for a particular command by hitting <kbd>Ctrl</kbd> + <kbd>R</kbd> (on a PC) or <kbd>⌘</kbd> + <kbd>R</kbd> (on a Mac), then hitting the same again to scroll through the matches, then hitting <kbd>Tab</kbd> to select a particular match to modify it before running or <kbd>Enter</kbd> if you want to run it directly.</p>
+
+<h3 id="clearing-terminals">Clearing Terminals</h3>
+
+<p>From time to time you will need to clear your terminal so that it’s easier to see what you’re doing. There are two main ways to do that</p>
+
+<ol>
+  <li>Press <kbd>Ctrl</kbd> + <kbd>L</kbd> (on a PC) or <kbd>⌘</kbd> + <kbd>L</kbd> (on a Mac). This way doesn’t actually clear the terminal, but rather just scrolls down, so you can always scroll back up and see what got cleared, if you wanted to.</li>
+  <li>Press <kbd>Ctrl</kbd> + <kbd>K</kbd> (on a PC) or <kbd>⌘</kbd> + <kbd>K</kbd> (on a Mac). This way actually clears the terminal; you won’t be able to scroll back up and see what got cleared.</li>
+</ol>
+
+<h3 id="restarting-terminals">Restarting Terminals</h3>
+
+<p>Sometimes you need to restart your terminals, for example after an update (see <em>«updating-ide»</em>), to have the new changes reflected on your terminal tabs. While you could go ahead and close any open terminal tabs, then reopen them, there’s an easier way by right-clicking (on a PC) or Control-clicking (on a Mac) inside of any terminal tab and choosing <em>Restart All Terminal Sessions</em>.</p>
+
+<h3 id="troubleshooting">Troubleshooting</h3>
+
+<p>If you want to force a program to quit, for example because it’s stuck in an infinite loop, press <kbd>Ctrl</kbd> + <kbd>C</kbd> (on a PC) or <kbd>⌘</kbd> + <kbd>C</kbd> (on a Mac). It may take several seconds for the program to respond, so do be patient!</p>
+
+<p>As a last resort, in case the program won’t stop, you might need to forcibly kill it. Perhaps the easiest way to do that is to just close the terminal tab, clicking <em>Close</em> when prompted, and opening a new one.</p>
+
+<p>Alternatively, you can click the stats button (showing memory, CPU, and disk stats) on the upper-right corner, and click <em>Show Process List</em>, find your program in the list, select it, and click <strong>Kill</strong>. If it doesn’t respond within a few seconds, click <em>Force Kill</em> instead.</p>
+
+<h2 id="layouts-and-themes">Layouts and Themes</h2>
+
+<h3 id="layouts">Layouts</h3>
+
+<p>The CS50 IDE is very customizable when it comes to laying out panes and tabs. You could very easily split a pane horizontally or vertically, by right-clicking (on a PC) or Ctrl-clicking (on a Mac) somewhere next to the <img src="/ide50/plus.png" alt="plus" /> button atop the pane you want to split and choosing <strong>Split Pane in Two Rows</strong> or <strong>Split Pane in Two Columns</strong>.</p>
+
+<p><img src="/ide50/layout.png" alt="vertical panes" /></p>
+
+<p>You could also move tabs between different panes by dragging and dropping a tab to the targeted pane or even to somewhere you want a new pane with that tab to be created.</p>
+
+<h3 id="themes">Themes</h3>
+
+<p>There’s a number of themes available in CS50 IDE that you can find under <strong>View &gt; Themes</strong>. By default a theme called <strong>Cloud9 Day</strong> is selected, but if you prefer a dark theme, you can select it via <strong>View &gt; Night Mode</strong>. Otherwise, you’re free to select from any of the available themes.</p>
+
+<p><img src="/ide50/night-mode.png" alt="night mode" /></p>
+
+<h3 id="presentation-mode">Presentation Mode</h3>
+
+<p>CS50 IDE also provides <strong>Presentation Mode</strong> in which the user interface is even more simplified and font sizes are larger. You can toggle that mode via <strong>View &gt; Presentation Mode</strong>.</p>
+
+<p><img src="/ide50/presentation.png" alt="presentation mode" /></p>
+
+<h2 id="sharing-your-workspace">Sharing Your Workspace</h2>
+
+<h3 id="code-sharing">Code Sharing</h3>
+
+<p>You can easily share code snippets by highlighting the lines you want to share and clicking the <img src="/ide50/octocat.png" alt="octocat" /> button on the left. Do be reasonable, per CS50’s policy on academic honesty.</p>
+
+<p><img src="/ide50/gist.png" alt="gist" /></p>
+
+<h3 id="adding-users-to-your-workspace">Adding Users to Your Workspace</h3>
+
+<p>Sometimes it’s useful to share your workspace with someone (e.g. your teacher or TF) to assist you with something. If using the online IDE, and you have the username or email of the user with whom you want to share your workspace, use the <strong>Share</strong> button near the upper-right corner, type that username or email in the text field under <strong>Invite People</strong> and click <strong>Invite</strong>.</p>
+
+<h3 id="removing-users-from-your-workspace">Removing Users from Your Workspace</h3>
+
+<p>To remove a user from your workspace, click on the <em>Share</em> button near the upper-right corner, then click on the <img src="/ide50/remove.png" alt="remove user" /> button next to the name of that user, in the <em>Who has access</em> section, and confirm by clicking <strong>Remove member</strong> when prompted.</p>
+
+<h3 id="sharing-your-workspace-domain">Sharing Your Workspace Domain</h3>
+
+<p>By default, your workspace domain is private. But you may want your workspace domain to be publicly accessibly, for example, if you want to demonstrate a web app hosted in your workspace to your teacher, TF, fellow students, friends, or even people on the internet. To do that, click the <em>Share</em> button on the upper-right corner, and check the box that says <em>Public</em>, in front of <em>Application</em>.</p>
+
+<p>TIP: The URL next to <strong>Application</strong> is your workspace’s fully-qualified domain name, but you can also print it by running <code class="highlighter-rouge">hostname50</code> or open it in a new browser tab by clicking <strong>CS50 IDE &gt; Web Server</strong>.</p>
+
+<h2 id="updating-the-ide">Updating the IDE</h2>
+
+<p>To ensure your workspace is up-to-date, click inside any open terminal tab (or open a new one), type <code class="highlighter-rouge">update50</code> and hit <kbd>Enter</kbd>.</p>
+
+<h2 id="reporting-problems">Reporting Problems</h2>
+
+<p>If having any problems with CS50 IDE, please contact sysadmins@cs50.harvard.edu with all the necessary information about the problem, and how to replicate it, attaching screenshot(s) if need be!</p>
+
+                </div>
+                <div class="col-sm-2 content">
+                    <nav id="toc" data-spy="affix" data-toggle="toc"></nav>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+        <script src="/js/toolkit.min.js"></script>
+
+        <script src="/js/bootstrap-toc.min.js"></script>
+
+        
+
+    </body>
+</html>

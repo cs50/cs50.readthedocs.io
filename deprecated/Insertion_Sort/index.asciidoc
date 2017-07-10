@@ -1,7 +1,0 @@
----
-tags: []
-title: Insertion Sort
----
-
-1.  REDIRECT Sort_algorithms#Insertion_Sort
-

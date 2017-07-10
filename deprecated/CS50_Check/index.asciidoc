@@ -1,5 +1,0 @@
----
-tags: []
-title: CS50 Check
----
-_Coming Soon_

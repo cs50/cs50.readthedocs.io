@@ -1,7 +1,0 @@
----
-tags: []
-title: Prettytable
----
-
-border="1" cellpadding="5" style="border: gray solid 1px;
-border-collapse: collapse; text-align: justify;"

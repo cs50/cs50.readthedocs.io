@@ -1,0 +1,199 @@
+// enable menus and keyboard shortcuts
+:experimental:
+
+// enable self-linked titles
+:sectlinks:
+
+= CS50 IDE
+
+[[intro]]
+== Introduction
+
+The CS50 IDE is a cloud-based Integrated Development Environment powered by Cloud9 (https://c9.io) that features a cloud-based Ubuntu environment, similar to the CS50 Appliance. It features a browser-based editor, that supports C syntax highlighting and word completion, a GUI-based GDB debugging, full control over a cloud-based Ubuntu
+environment, and many more features including themes, customizable layouts, and keyboard shortcuts. Since it's cloud-based, you can continue working on your problem sets even if you use a different computer!
+
+'''
+
+[[getting-started]]
+== Getting Started
+
+1. Visit https://cs50.io.
+2. Use your edX, Harvard, or Yale credentials to log in. 
+3. Once you log in, you will automatically be forwarded to the CS50 IDE! Hereafter, you may simply return to cs50.io to log in and return to the CS50 IDE, where all your files and settings are preserved.
+4. Ensure your workspace is up-to-date. (See *<<updating-ide>>*!)
+
+NOTE: Upon logging into CS50 IDE for the first time, you may be prompted (again) for your email address. If so, after providing it, click *Private* under *Hosted workspace*, then click *Create workspace*.
+
+'''
+
+[[working-with-files]]
+== Working with Files
+
+[[creating-files]]
+=== Creating Files
+
+There are multiple ways to create a new file in the CS50 IDE. To create a blank file, you may
+
+1. click *menu:File[New File]*,
+2. click on the little image:/assets/plus.png[alt="Plus"] button atop any of the open panes and choose *New File*, to open a blank file in that particular pane,
+3. from the file browser on the left, right-click on a directory and choose *New File*, from the menu, to create a blank file inside that directory, then double-click that file to open it,
+4. or press *kbd:[Alt + N]* on your keyboard.
+
+TIP: There are also provided file templates. For example, to open a `.c` template, click *menu:File[New From Template > C]*, and save yourself some keystrokes!
+
+[[saving-files]]
+=== Saving Files
+
+When a file is open in a tab and you have some unsaved changes, the CS50 IDE will show a red dot a top that tab, until you save your changes. Probably the easiest way to save a file is to press *kbd:[Ctrl + S]* (or *kbd:[⌘ + S]*) on your keyboard, but you can also achieve the same by clicking *menu:File[Save]* or (*menu:File[Save As...]*, if you want to save that as a new file), while you're working on that file.
+
+image:/assets/unsaved.png["Red dot"]
+
+[[downloading-files]]
+=== Downloading Files
+
+To download a file from your workspace to your local computer, simply navigate to the location of that file, in the file browser on the left, right-click on that file's name, and choose *Download*.
+
+To download all files in your workspace, click *menu:File[Download Project]*.
+
+[[uploading-files]]
+=== Uploading Files
+
+To upload a file from your local computer to your workspace
+
+1. select a directory where you want your files to get uploaded into, by clicking on that directory in the file browser on the left (by default, this is going to be your `~/workspace` directory)
+2.  click *menu:File[Upload Local Files ...]*, then choose either *Select files* or *Select folder*, depending on what you want to upload.
+
+[[file-revision-history]]
+=== File Revision History
+
+While working on a file, you can easily undo changes by clicking *menu:Edit[Undo]* or *kbd:[Ctrl + Z]* (or *kbd:[⌘ + Z]*) on your keyboard. Similarly, you can redo changes by clicking *menu:Edit[Redo]*, or pressing *kbd:[Ctrl + Shift + Z]* (or *kbd:[⌘ + Shift + Z]*) on your keyboard.
+
+The CS50 IDE also keeps track of file revisions, in case you want to toggle between file revisions, without having to undo or redo many times. You can show the whole file revision history by clicking *menu:File[Show File Revision History]*, which will show a timeline similar to the following, on which you can click to jump to a particular version.
+
+image:/assets/history.png[alt="Revision history"]
+
+'''
+
+[[working-with-terminals]]
+== Working with Terminals
+
+Terminals allow you to interact with the underlying Ubuntu environment of the CS50 IDE, using textual commands, to do all sorts of things, such as creating, copying, or moving files, compiling and running your programs, and more.
+
+[[opening-new-terminals]]
+=== Opening New Terminals
+
+When the CS50 IDE first starts, there should be a terminal tab open at the bottom, by default. You can also open a new terminal tab in that or any other pane of your choice by clicking the image:/assets/plus.png[alt="Plus"] button atop that pane, and choosing *New Terminal*. Alternatively, you may just hit *kbd:[Alt + T]* on your keyboard.
+
+By default, the current working directory (CWD) in a new terminal is your `~/workspace` directory. You can always navigate to your desired directory using `cd path/to/directory`.
+
+TIP: To open a terminal in a different directory, navigate to that directory in your file browser,
+right-click on the directory's name, and choose *Open Terminal Here*.
+
+[[copying-and-pasting]]
+=== Copying and Pasting
+
+You will probably need to copy and paste commands into terminal tabs to run them. By default, copying and pasting via menus will work inside the CS50 IDE only (you might even get warned), so it's recommended to use your keyboard to copy and paste by pressing *kbd:[Ctrl + C]* (or *kbd:[⌘ + C]*) and **kbd:[Ctrl + V]* (or *kbd:[⌘ + V]*) respectively.
+
+
+[[command-history]]
+=== Command History
+
+You will be often using the same commands over and over. Whether you don't remember a particular command, or too lazy to type it again, you can leverage the command history that is kept by your terminals. You can scroll up and down through the list of commands by pressing the *kbd:[▲]* or *kbd:[▼]* arrows on your keyboard.
+
+Additionally, you can search for a particular command by pressing *kbd:[Ctrl + R]* (or *kbd:[⌘ + R]*), typing *kbd:[Ctrl + R]* (or *kbd:[⌘ + R]*) again to scroll through the matches, *kbd:[Tab]* to select a particular match (to modify it before running), or *kbd:[Enter]*, if you want to run it directly.
+
+[[clearing-terminals]]
+=== Clearing Terminals
+
+From time to time you will need to clear your terminal, so that it's easier to see what you're doing. There are two main ways to do that
+
+1. Press *kbd:[Ctrl + L]* (or *kbd:[⌘ + L]*) on your keyboard. This doesn't actually clear the terminal, but rather just scrolls down, so you can always scroll back up and see what got cleared, if you wanted to.
+2. Press *kbd:[Ctrl + K]* (or *kbd:[⌘ + K]*) on your keyboard to actually clear the terminal (i.e., you won't be able to scroll back up and see what got cleared).
+
+[[restarting-terminals]]
+=== Restarting Terminals
+
+Sometimes you need to restart your terminals, for example after an update (see *<<updating-ide>>*), to have the new changes reflected on your terminal tabs. While you could go ahead and close any open terminal tabs, then reopen them,
+there's an easier way by right-clicking inside any terminal tab and choosing *Restart All Terminal Sessions*.
+
+[[troubleshooting]]
+=== Troubleshooting
+
+If you want to force a program to quit, for example because it's stuck in an infinite loop, press *kbd:[Ctrl]* (or *kbd:[⌘ + C]*) on your keyboard. It may take several seconds for the program to respond, so please be patient!
+
+As a last resort, in case the program won't stop, you may need to forcibly kill it. Perhaps the easiest way to do that is to just close the terminal tab, clicking *Close* when prompted, and opening a new one.
+
+Alternatively, if using the online IDE, you could click the stats button (showing memory, CPU, and disk stats) on the upper-right corner, and click *Show Process List*, find your program in the list, select it, and click **Kill**, and if it doesn't respond in a few seconds, click *Force Kill*.
+
+'''
+
+[[layouts-and-themes]]
+== Layouts and Themes
+
+[[layouts]]
+=== Layouts
+The CS50 IDE is very customizable when it comes to laying out panes and tabs. You could very easily split a pane horizontally or vertically, by right-clicking somewhere next to the image:/assets/plus.png[alt="Plus"] button atop the pane you want to split, and choosing *Split Pane in Two Rows* or *Split Pane in Two Columns*.
+
+image:/assets/layout.png[alt="Vertical panes"]
+
+You could also move tabs between different panes by dragging and dropping a tab to the targeted pane, or even to somewhere you you want a new pane, holding that tab, to be created.
+
+[[themes]]
+=== Themes
+
+The is a number of themes available in the CS50 IDE, that you can find under *menu:View[Themes]*. By default a theme called *Cloud9 Day* is selected, or if you prefer a dark theme, you can easily toggle that from *menu:View[Night Mode]*. Otherwise, you're free to select from any of the available themes.
+
+image:/assets/night-mode.png[alt="Night mode"]
+
+[[presentation]]
+=== Presentation Mode
+
+The CS50 IDE also provides *Presentation Mode*, in which the user interface is even more simplified, and the font sizes, of code editor and terminal tabs, are bigger, to better fit while presenting. You can toggle that mode from *menu:View[Presentation Mode]*.
+
+image:/assets/presentation.png[alt="Presentation mode"]
+
+'''
+
+[[sharing-workspace]]
+== Sharing Your Workspace
+
+[[code-sharing]]
+=== Code Sharing
+
+You can easily share code snippets by highlighting the lines you want to share and clicking the image:/assets/octocat.png[alt="octocat"] button on the
+left. Do be reasonable, per CS50's policy on academic honesty!
+
+image:/assets/gist.png[alt="Gist"]
+
+[[adding-users]]
+=== Adding Users to Your Workspace
+
+Sometimes it's useful to share your workspace with someone (e.g. your teacher or TF) to assist you with something. If using the online IDE, and you have the username or email of the user with whom you want to share your workspace, use the **Share** button near the upper-right corner, type that username or email in the text field under *Invite
+People* and click **Invite**.
+
+[[removing-users]]
+=== Removing Users from Your Workspace
+
+To remove a user from your workspace, click on the *Share* button near the upper-right corner, then click on the image:/assets/remove.png[alt="Remove user"] button next to the name of that user, in the *Who has access* section, and confirm by clicking *Remove member* when prompted.
+
+[[workspace-domain]]
+=== Sharing Your Workspace Domain
+
+By default, your workspace domain is private. But you may want your workspace domain to be publicly accessibly, for example, if you want to demonstrate a web app hosted in your workspace to your teacher, TF, fellow students, friends, or even people on the internet. To do that, click the *Share* button on the upper-right corner, and check the box that says *Public*, in front of *Application*.
+
+TIP: The URL next to *Application* is your workspace domain, but you can also print it by running `hostname50`, or open it in a new browser tab by clicking *menu:CS50 IDE[Web Server]*.
+
+'''
+
+[[updating-ide]]
+== Updating the IDE
+
+To ensure your workspace is up-to-date, click inside any open terminal tab (or open a new one), type `update50` and hit *kbd:[Enter]*.
+
+'''
+
+[[reporting-problems]]
+== Reporting Problems
+
+If having any problems with the CS50 IDE, please contact
+sysadmins@cs50.harvard.edu with all the necessary information about the problem, and how to replicate it, attaching screenshot(s) if need be!

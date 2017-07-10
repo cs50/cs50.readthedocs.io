@@ -1,7 +1,0 @@
----
-tags: []
-title: submit50
----
-
-1.  REDIRECT link:CS50 Submit[CS50 Submit]
-

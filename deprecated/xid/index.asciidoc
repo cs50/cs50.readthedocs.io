@@ -1,7 +1,0 @@
----
-tags: []
-title: XID
----
-
-1.  REDIRECT XID
-

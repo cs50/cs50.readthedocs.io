@@ -1,7 +1,0 @@
----
-tags: []
-title: ID
----
-
-1.  REDIRECT link:CS50 ID[CS50 ID]
-

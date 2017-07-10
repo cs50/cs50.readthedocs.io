@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8"/>
+
+        <meta name="description" content="">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <meta property="og:description" content="TODO"/>
+        <meta property="og:image" content="TODO"/>
+        <meta property="og:title" content="TODO"/>
+
+        <link rel="icon" href="/favicon.ico"/>
+
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic"/>
+
+        <link rel="stylesheet" href="/css/styles.css"/>
+
+        <link rel="stylesheet" href="/css/bootstrap-toc.min.css"/>
+
+        <title>CS50 IDE FAQs</title>
+
+    </head>
+
+    <body data-spy="scroll" data-target="#toc">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 sidebar">
+                    <nav class="sidebar-nav">
+                        <div class="sidebar-header">
+                            <button class="nav-toggler nav-toggler-sm sidebar-toggler" type="button" data-toggle="collapse" data-target="#nav-toggleable-sm">
+                                <span class="sr-only">Toggle nav</span>
+                            </button>
+                            <a class="sidebar-brand img-responsive" href="/">
+                                <h1 data-toc-skip>CS50 Manual</h1>
+                            </a>
+                        </div>
+                        <div class="collapse nav-toggleable-sm" id="nav-toggleable-sm">
+                            <ul class="nav nav-pills nav-stacked">
+                                <li class="nav-header">CS50 IDE</li>
+                                <li><a href="/ide50/faqs">FAQs</a></li>
+                                <li><a href="/ide50/offline">Offline</a></li>
+                                <li><a href="/ide50">Online</a></li>
+                                <li class="nav-header">CS50x</li>
+                                <li><a href="/cs50x/faqs">FAQs</a></li>
+                                <li class="nav-header">Docker Images</li>
+                                <li><a href="/cli">CS50 CLI</a></li>
+                                <li><a href="/server">CS50 Server</a></li>
+                            </ul>
+                            <hr class="visible-xs m-t"/>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-sm-7 content">
+                    <h1 id="cs50-ide-faqs">CS50 IDE FAQs</h1>
+
+<h2 id="how-can-i-open-a-file-in-the-editor-from-a-terminal-tab">How can I open a file in the editor from a terminal tab?</h2>
+
+<p>If you want to open a file named <code class="highlighter-rouge">foo</code>, run <code class="highlighter-rouge">c9 open path/to/foo</code>.</p>
+
+<h2 id="i-closed-the-terminal-underneath-my-editor-by-mistake-how-do-i-get-it-back">I closed the terminal underneath my editor by mistake. How do I get it back?</h2>
+
+<p>If the Console pane at the bottom is visible, you should be able to open a new terminal tab by clicking the <img src="/ide50/plus.png" alt="plus" /> button atop that pane, and choosing <strong>New Terminal</strong>.</p>
+
+<p><img src="/ide50/console.png" alt="console pane" /></p>
+
+<p>TIP: If you no longer see the Console pane, you can bring it back via <strong>View &gt; Console</strong> or by hitting <kbd>F6</kbd>. You can also open a terminal in any other pane.</p>
+
+<h2 id="can-i-use-a-different-editor">Can I use a different editor?</h2>
+
+<p>Sure, if you are more familiar, you can run editors in the terminal such as <code class="highlighter-rouge">emacs</code>, <code class="highlighter-rouge">nano</code>, or <code class="highlighter-rouge">vim</code>.</p>
+
+<h2 id="whats-the-best-way-to-back-up-my-work">What’s the best way to back up my work?</h2>
+
+<p>Choose <strong>File &gt; Download Project</strong> to download an archived file (in <code class="highlighter-rouge">.zip</code> format) of your workspace files.</p>
+
+<h2 id="what-if-i-already-have-a-cloud9-account">What if I already have a Cloud9 account?</h2>
+
+<p>You can use your existing Cloud9 account to create a CS50 IDE workspace by <a href="https://c9.io/open/?name=ide50&amp;workspaceType=cs50&amp;private=true">clicking this link</a>, which will bring up a <strong>Create a workspace</strong> page with the default settings already selected.</p>
+
+<p>NOTE: Be sure to check <strong>Private</strong>, under <strong>Hosted Workspace</strong>, if not checked.</p>
+
+<p>All you’ll need to do is create it! You can then access CS50 IDE from your Cloud9 dashboard, like you would access any other workspace.</p>
+
+<h2 id="i-registered-for-edx-using-my-facebook-google-or-microsoft-account-and-cant-log-into-the-cs50-ide-what-should-i-do">I registered for edX using my Facebook, Google, or Microsoft account, and can’t log into the CS50 IDE. What should I do?</h2>
+
+<p>Unfortunately, edX’s OpenID (which we use for authentication) doesn’t support logging in with Facebook, Google, or Microsoft accounts yet. To get around this, for now, you should try restting your password (even though you may have never set any before) from your <a href="https://courses.edx.org/account/settings">Account Settings</a> page on edX, then head to <a href="https://cs50.io/">cs50.io</a> again and log in with the email associated with your Facebook, Google, or Microsoft account you use to log into edX, and the password you just set.</p>
+
+<h2 id="i-see-a-c9-folder-appearing-right-under-my-workspace-folder-that-i-havent-created-is-this-normal">I see a <code class="highlighter-rouge">.c9</code> folder appearing right under my <code class="highlighter-rouge">~/workspace</code> folder, that I haven’t created. Is this normal?</h2>
+
+<p><img src="/ide50/c9-dir.png" alt=".c9 folder" /></p>
+
+<p>Yes, this is totally normal. If curious, <code class="highlighter-rouge">~/workspace/.c9/</code> is used by Cloud9 IDE (and CS50 IDE) to hold some workspace settings, your undo history, and other metadata.</p>
+
+<p>Generally, you shouldn’t touch this folder or its contents. Files and folders whose names start with a dot (aka dot files) should be hidden by default. You may want to hide the <code class="highlighter-rouge">.c9</code> folder (along with any other dot files) by clicking the gear icon atop the file browser on the left and unchecking <strong>Show Hidden Files</strong>.</p>
+
+<p><img src="/ide50/hidden-files.png" alt="show hidden files" /></p>
+
+                </div>
+                <div class="col-sm-2 content">
+                    <nav id="toc" data-spy="affix" data-toggle="toc"></nav>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+        <script src="/js/toolkit.min.js"></script>
+
+        <script src="/js/bootstrap-toc.min.js"></script>
+
+        
+
+    </body>
+</html>

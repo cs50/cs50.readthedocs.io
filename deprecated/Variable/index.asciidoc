@@ -1,7 +1,0 @@
----
-tags: []
-title: Variable
----
-
-1.  redirect Variable
-

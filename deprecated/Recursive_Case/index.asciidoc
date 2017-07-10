@@ -1,8 +1,0 @@
----
-tags: []
-title: Recursive Case
----
-
-1.  REDIRECT link:Recursion#The_Recursive_Case[Recursion#The Recursive
-Case]
-

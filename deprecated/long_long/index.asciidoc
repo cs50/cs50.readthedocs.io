@@ -1,8 +1,0 @@
----
-tags: []
-title: long long
----
-
-1.  redirect Type#Integer_types:_char,_int,_long,_...[Type#Integer
-types: char, int, long, ...]
-

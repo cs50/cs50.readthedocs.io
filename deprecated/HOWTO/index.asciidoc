@@ -1,5 +1,0 @@
----
-tags: []
-title: HOWTO
----
-These are CS50 HOWTOs.

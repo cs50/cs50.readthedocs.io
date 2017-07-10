@@ -1,7 +1,0 @@
----
-tags: []
-title: GDB
----
-
-1.  REDIRECT Debugging#GDB
-
