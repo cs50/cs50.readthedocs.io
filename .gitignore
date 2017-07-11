@@ -3,4 +3,5 @@
 !.travis.yml
 _site
 Gemfile.lock
+public/
 tmp/
