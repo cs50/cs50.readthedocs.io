@@ -1,13 +1,8 @@
-default: up
+install:
+	bundle install
 
-build:
-	docker-compose build
+serve: install
+	bundle exec jekyll serve
 
-rebuild:
-	docker-compose build --no-cache
-
-up: build
-	docker-compose up &
-
-shell:
-	docker exec -it manual50_web bash -l
+build: install
+	bundle exec jekyll build
