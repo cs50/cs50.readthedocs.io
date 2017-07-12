@@ -16,8 +16,6 @@
 
         <link rel="icon" href="{{ "/favicon.ico" | relative_url }}"/>
 
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic"/>
-
         <link rel="stylesheet" href="{{ "/css/styles.css" | relative_url }}"/>
 
         <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
@@ -28,7 +26,7 @@
 
         <div class="container-fluid markdown-body">
             <div class="row">
-                <div class="col-sm-2 sidebar">
+                <div class="col-sm-3 sidebar">
                     <nav class="sidebar-nav">
                         <div class="sidebar-header">
                             <button class="nav-toggler nav-toggler-sm sidebar-toggler" type="button" data-toggle="collapse" data-target="#nav-toggleable-sm">
@@ -49,12 +47,20 @@
                                 <li class="nav-header">Docker Images</li>
                                 <li><a href="{{ "/cli" | relative_url }}">CS50 CLI</a></li>
                                 <li><a href="{{ "/server" | relative_url }}">CS50 Server</a></li>
+                                <li class="nav-header">Test</li>
+                                <li>
+                                    <li><a href="{{ "/server" | relative_url }}">Baz</a></li>
+                                    <ul>
+                                        <li>Foo</li>
+                                        <li>Bar</li>
+                                    </ul>
+                                </li>
                             </ul>
                             <hr class="visible-xs m-t"/>
                         </div>
                     </nav>
                 </div>
-                <div class="col-sm-8 content">
+                <div class="col-sm-7 content">
                     {{ content }}
                 </div>
                 <div class="col-sm-2 content">
