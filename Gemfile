@@ -1,3 +1,13 @@
 source "https://rubygems.org"
 
-gem "github-pages", group: :jekyll_plugins
+gem "jekyll", group: :jekyll_plugins
+group :jekyll_plugins do
+    gem "commonmarker" # markdownfilter
+    gem "jekyll-html-pipeline"
+    gem "jekyll-optional-front-matter"
+    gem "jekyll-redirect-from"
+    gem "jekyll-sitemap"
+    gem "jekyll-titles-from-headings"
+    gem "jemoji" # emojifilter
+    gem "rinku" # autolinkfilter
+end

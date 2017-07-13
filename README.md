@@ -1,9 +1,10 @@
 # References
 
-- https://github.com/vmg/redcarpet/blob/v3.2.2/README.markdown#and-its-like-really-simple-to-use
-- https://jekyllrb.com/docs/quickstart/
 - https://afeld.github.io/bootstrap-toc/
-
-# TODO
-
-- Decide how to mount `/srv/www` without shadowing `/srv/www/public`.
+- http://primercss.io/colors/
+    - https://github.com/primer/primer-css/issues/232
+- https://github.com/gjtorikian/jekyll-html-pipeline
+    - https://github.com/jch/html-pipeline
+    - https://github.com/jch/html-pipeline/blob/master/lib/html/pipeline/filter.rb 
+    - https://github.com/gjtorikian/commonmarker
+- https://github.com/github/pages-gem#bypassing-the-plugin-whitelist

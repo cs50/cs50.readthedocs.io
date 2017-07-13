@@ -4,6 +4,12 @@ layout: default
 
 # CS50 IDE
 
+@dmalan  
+malan@harvard.edu  
+http://cs.harvard.edu/malan  
+
+:smile:
+
 ## Introduction
 
 CS50 IDE is a cloud-based Integrated Development Environment powered by [Cloud9](https://c9.io) that features a cloud-based Ubuntu environment. It features a browser-based editor, that supports C syntax highlighting and word completion, a GUI-based GDB debugging, full control over a cloud-based Ubuntu environment, and many more features including themes, customizable layouts, and keyboard shortcuts. Since it's cloud-based, you can continue working on your problem sets even if you use a different computer!
