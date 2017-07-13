@@ -7,10 +7,9 @@ exclude:
   - "README.md"
   - "TODO.md"
 host: 0.0.0.0
+kramdown:
+  parse_block_html: true
+  toc_levels: 2..6
+markdown: kramdown
 port: 8080
-markdown: HTMLPipeline
-html_pipeline:
-  filters:
-    - "markdownfilter"
-    - "autolinkfilter"
-    - "rougefilter"
+syntax_highlighter: rouge

@@ -2,9 +2,9 @@
 ---
 
 @import "toolkit-light";
-@import "bootstrap-toc";
+/*@import "bootstrap-toc";*/
 @import "rouge";
-/*@import "build";*/
+@import "build";
 
 /* global body padding */
 body {
@@ -44,7 +44,7 @@ img {
 
 /* apply .table to all table elements */
 table {
-  @extend .table;
+  /*@extend .table;*/
 }
 
 /* override the Affix plugin so that the navigation isn't sticky */
@@ -56,8 +56,7 @@ table {
 }
 
 /* second-level navigation to be shown */
-/* TODO: ensure column scrolls
 nav[data-toggle=toc] .nav .nav {
     display: block;
 }
-*/
+
