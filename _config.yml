@@ -6,12 +6,6 @@ exclude:
   - "Makefile"
   - "README.md"
   - "TODO.md"
-gems:
-  - jekyll-optional-front-matter
-  - jekyll-redirect-from
-  - jekyll-sitemap
-  - jekyll-titles-from-headings
-  - jekyll-html-pipeline
 host: 0.0.0.0
 port: 8080
 markdown: HTMLPipeline
@@ -19,3 +13,4 @@ html_pipeline:
   filters:
     - "markdownfilter"
     - "autolinkfilter"
+    - "rougefilter"
