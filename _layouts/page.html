@@ -17,6 +17,7 @@
 
         <link rel="icon" href="{{ "/favicon.ico" | relative_url }}"/>
         <link rel="stylesheet" href="{{ "/css/styles.css" | relative_url }}"/>
+        <link rel="stylesheet" href="{{ "/css/build.css" | relative_url }}"/>
 
         <title>{{ title }}</title>
 
@@ -26,13 +27,25 @@
 
         <div class="container-fluid markdown-body">
             <div class="row">
-                <div class="col-sm-3">
-                    {% assign my_min = page.toc_min | default: site.toc_min | default: 1 %}
-                    {% assign my_max = page.toc_max | default: site.toc_max | default: 6 %}
-                    {% include toc_pure_liquid.html html=content sanitize=true h_min=my_min h_max=my_max %}
+                <div class="col-sm-3 sidebar">
+                    <nav class="sidebar-nav">
+                        <div class="sidebar-header">
+                            <button class="nav-toggler nav-toggler-sm sidebar-toggler" type="button" data-toggle="collapse" data-target="#nav-toggleable-sm">
+                                <span class="sr-only">Toggle nav</span>
+                            </button>
+                        </div>
+                        <div class="collapse nav-toggleable-sm" id="nav-toggleable-sm">
+                            {% assign my_min = page.toc_min | default: site.toc_min | default: 2 %}
+                            {% assign my_max = page.toc_max | default: site.toc_max | default: 6 %}
+                            {% include toc_pure_liquid.html html=content sanitize=true h_min=my_min h_max=my_max %}
+                            <hr class="visible-xs m-t"/>
+                        </div>
+                    </nav>
                 </div>
-                <div class="col-sm-9">
-                    {{ content }}
+                <div class="col-sm-9 content">
+                    <main>
+                        {{ content }}
+                    </main>
                 </div>
             </div>
         </div>
@@ -40,7 +53,12 @@
         <!-- https://code.jquery.com/ -->
         <script>
             {% include jquery-3.2.1.min.js %}
+        </script>
+
+        <!-- https://themes.getbootstrap.com/ -->
         <script>
+            {% include toolkit.min.js %}
+        </script>
 
         {% if jekyll.environment == "production" and site.google_analytics %}
             <script>

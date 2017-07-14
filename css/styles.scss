@@ -2,7 +2,6 @@
 ---
 
 @import "toolkit-light";
-/*@import "bootstrap-toc";*/
 @import "rouge";
 @import "build";
 
@@ -18,18 +17,13 @@ body {
   }
 }
 
-/* global spacing overrides */
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-    margin-top: 0;
+/* prevent word breaks */
+.markdown-body {
+    word-wrap: normal;
 }
-hr {
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-.navbar-fixed-top,
-.navbar-static-top {
-    border-bottom: 0;
+
+.sidebar-nav {
+    font-size: smaller;
 }
 
 /* */
@@ -46,17 +40,3 @@ img {
 table {
   /*@extend .table;*/
 }
-
-/* override the Affix plugin so that the navigation isn't sticky */
-@media (max-width: 768px) {
-  nav.affix[data-toggle="toc"] {
-    position: static;
-  }
-
-}
-
-/* second-level navigation to be shown */
-nav[data-toggle=toc] .nav .nav {
-    display: block;
-}
-
