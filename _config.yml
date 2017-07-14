@@ -1,3 +1,6 @@
+description: >
+  CS50's adaptation of the Linux Programmer's Manual,
+  for students less comfortable and more comfortable alike.
 exclude: 
   - "docker-compose.yml"
   - "Dockerfile"
@@ -10,3 +13,4 @@ host: 0.0.0.0
 markdown: kramdown
 port: 8080
 syntax_highlighter: rouge
+title: CS50 Programmer's Manual

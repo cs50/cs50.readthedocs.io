@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 
+{% assign title = page.title | default: site.title %}
+{% assign description = page.description | default: site.description %}
+
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
     <head>
 
         <meta charset="utf-8"/>
-
-        <meta name="description" content="{{ page.description | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-
+        <meta name="description" content="{{ description }}">
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-        <meta property="og:description" content="TODO"/>
+        <meta property="og:description" content="{{ description }}"/>
         <meta property="og:image" content="TODO"/>
-        <meta property="og:title" content="TODO"/>
+        <meta property="og:title" content="{{ title }}"/>
 
         <link rel="icon" href="{{ "/favicon.ico" | relative_url }}"/>
-
         <link rel="stylesheet" href="{{ "/css/styles.css" | relative_url }}"/>
 
-        <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+        <title>{{ title }}</title>
 
     </head>
 
