@@ -1,6 +1,6 @@
 language: ruby
-install: true
-script: true
+install: bundle install
+script: bundle exec jekyll build
 deploy:
   provider: elasticbeanstalk
   access_key_id: "$AWS_ACCESS_KEY_ID"
