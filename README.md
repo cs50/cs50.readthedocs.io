@@ -13,4 +13,4 @@
 
 - Add anchor icons, https://www.bryanbraun.com/anchorjs/#examples.
 - Have hamburger menu autoscroll back up.
-
+- Use Sass for Bootstrap theme and GitHub rather than CSS alone (so as to have access to variables).
