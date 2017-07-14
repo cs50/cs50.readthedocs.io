@@ -1,4 +1,5 @@
 language: ruby
+ruby: 2.2.0
 install: bundle install
 script: bundle exec jekyll build
 deploy:
