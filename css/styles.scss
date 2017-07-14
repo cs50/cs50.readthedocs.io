@@ -7,14 +7,6 @@
 
 /* global body padding */
 body {
-    padding-top:    20px;
-    padding-bottom: 20px;
-}
-@media (min-width: 768px) {
-    body {
-        padding-top:    50px;
-        padding-bottom: 50px;
-  }
 }
 
 /* prevent word breaks */
@@ -22,8 +14,34 @@ body {
     word-wrap: normal;
 }
 
+/* TODO: use Sass to figure out 768px via variable */
+@media (min-width: 768px) {
+    .sidebar {
+        height: 100%;
+        overflow-y: auto;
+        position: fixed;
+    }
+}
+
 .sidebar-nav {
     font-size: smaller;
+}
+
+.sidebar-nav a {
+    color: #999;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+}
+
+/* TODO: use Sass to figure out right and top margins via variables */
+.sidebar-toggler {
+    background-color: #fff;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 1;
 }
 
 /* */
