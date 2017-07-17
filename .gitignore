@@ -1,7 +1,8 @@
 .*
 !.gitignore
 !.travis.yml
-_site
+__pycache__/
+_site/
 Gemfile.lock
 public/
 tmp/
