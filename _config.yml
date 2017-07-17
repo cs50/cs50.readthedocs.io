@@ -1,11 +1,14 @@
 description: Documentation for CS50's tools.
+destination: _site
 exclude: 
+  - "application.py"
   - "docker-compose.yml"
   - "Dockerfile"
   - "Gemfile"
   - "Gemfile.lock"
   - "Makefile"
   - "README.md"
+  - "passenger_wsgi.py"
   - "TODO.md"
 host: 0.0.0.0
 markdown: kramdown
