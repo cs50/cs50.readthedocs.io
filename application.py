@@ -24,7 +24,7 @@ def index(path):
     elif os.path.isfile(os.path.join(p, ".html")):
         return send_file(os.path.join(p, ".html"))
     elif os.path.isdir(p) and os.path.isfile(os.path.join(p, "index.html")):
-        if p.endswith("/") and p != "/":
+        if p.endswith("/") and path != "/":
             return redirect(path[:-1])
         return send_file(os.path.join(p, "index.html"))
     else:
