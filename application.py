@@ -16,17 +16,27 @@ _site = os.path.realpath("_site")
 @app.route("/", defaults={"path": ""})
 @app.route("/<path:path>")
 def index(path):
-    p = os.path.join(_site, path)
+    p = os.path.realpath(os.path.join(_site, path))
     if not p.startswith(_site):
         abort(403)
     if os.path.isfile(p):
-        return send_file(p)
-    elif os.path.isfile(os.path.join(p, ".html")):
-        return send_file(os.path.join(p, ".html"))
-    elif os.path.isdir(p) and os.path.isfile(os.path.join(p, "index.html")):
-        if p.endswith("/") and path != "/":
-            return redirect(path[:-1])
-        return send_file(os.path.join(p, "index.html"))
+        basename = os.path.basename(path)
+        if basename == "index.html":
+            return redirect(os.path.dirname(path))
+        elif basename.endswith(".html"):
+            return redirect(os.path.splitext(path)[0])
+        else:
+            return send_file(p)
+    elif os.path.isfile(p + ".html") and os.path.basename(p) != "index":
+        return send_file(p + ".html")
+    elif os.path.isdir(p):
+        if os.path.isfile(os.path.join(p, "index.html")):
+            if path.endswith("/") and path != "/":
+                return redirect(path[:-1])
+            else:
+                return send_file(os.path.join(p, "index.html"))
+        else:
+            abort(403)
     else:
         abort(404)
     return p
