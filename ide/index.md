@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: left
 ---
 
 # CS50 IDE
