@@ -1,7 +1,8 @@
 ---
 ---
 
-@import "toolkit-light";
+@import "bootstrap-sprockets";
+@import "bootstrap";
 @import "rouge";
 @import "build";
 
@@ -38,7 +39,7 @@
     padding-top: 50px; 
 }
 @media (min-width: 768px) {
-    .col-sm-3 {
+    .col-sm-3 { /* scroll TOC independently */
         bottom: 0;
         left: 0;
         overflow-y: auto;
