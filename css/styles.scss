@@ -5,26 +5,46 @@
 @import "rouge";
 @import "build";
 
-/* prevent word breaks */
-.markdown-body {
-    word-wrap: normal;
-}
-
 /* TODO: use Sass to figure out 768px via variable */
 @media (min-width: 768px) {
     .col-sm-3 {
-        height: 100%;
+        bottom: 0;
+        left: 0;
         overflow-y: auto;
         position: fixed;
+        right: 0;
+        top: 50px; /* http://getbootstrap.com/components/#navbar-fixed-top */
     }
     .col-sm-3 h1 {
+        white-space: nowrap;
         visibility: hidden;
+    }
+    .col-sm-9 {
     }
 }
 @media (max-width: 768px) {
+    .col-sm-3 {
+    }
     .col-sm-9 h1 {
         display: none;
     }
+}
+
+/* https://github.com/twbs/bootstrap/issues/1768#issuecomment-46519033 */
+*[id]:before { 
+  content: " "; 
+  display: block; 
+  margin-top: -74px; 
+  height: 74px; /* TODO: base 50px + 24px on variables */
+  visibility: hidden; 
+}
+
+.col-sm-12 {
+    padding-top: 50px; /* http://getbootstrap.com/components/#navbar-fixed-top */
+}
+
+.col-sm-12 .col-sm-12 {
+    padding-top: 0;
 }
 
 nav {
@@ -35,6 +55,10 @@ nav a {
     color: #999;
 }
 
+nav .navbar-form {
+    box-shadow: none;
+}
+
 /* TODO: use Sass to figure out right and top margins via variables */
 .sidebar-toggler {
     background-color: #fff;
@@ -42,6 +66,11 @@ nav a {
     right: 15px;
     top: 15px;
     z-index: 1;
+}
+
+/* prevent word breaks */
+.markdown-body {
+    word-wrap: normal;
 }
 
 /* */
