@@ -5,31 +5,24 @@
 @import "rouge";
 @import "build";
 
+/* position title above TOC if small screen */
 /* TODO: use Sass to figure out 768px via variable */
-@media (min-width: 768px) {
-    .col-sm-3 {
-        bottom: 0;
-        left: 0;
-        overflow-y: auto;
-        position: fixed;
-        right: 0;
-        top: 50px; /* http://getbootstrap.com/components/#navbar-fixed-top */
-    }
-    .col-sm-3 h1 {
-        white-space: nowrap;
-        visibility: hidden;
-    }
-    .col-sm-9 {
+@media (max-width: 768px) {
+    .col-sm-9 h1 {
+        display: none; /* hide other title */
     }
 }
-@media (max-width: 768px) {
-    .col-sm-3 {
+@media (min-width: 768px) {
+    .col-sm-3 h1 { 
+        white-space: nowrap; /* confine to one line so title doesn't invisibly wrap */
+        visibility: hidden; /* hide title above TOC but preserve its height */
     }
-    .col-sm-9 h1 {
+    .col-sm-12 nav + h1[id] {
         display: none;
     }
 }
 
+/* position anchors below navbar-fixed-top */
 /* https://github.com/twbs/bootstrap/issues/1768#issuecomment-46519033 */
 *[id]:before { 
   content: " "; 
@@ -39,33 +32,31 @@
   visibility: hidden; 
 }
 
+/* position columns below navbar-fixed-top */
+/* http://getbootstrap.com/components/#navbar-fixed-top */
 .col-sm-12 {
-    padding-top: 50px; /* http://getbootstrap.com/components/#navbar-fixed-top */
+    padding-top: 50px; 
+}
+@media (min-width: 768px) {
+    .col-sm-3 {
+        bottom: 0;
+        left: 0;
+        overflow-y: auto;
+        position: fixed;
+        right: 0;
+        top: 50px;
+    }
 }
 
-.col-sm-12 .col-sm-12 {
-    padding-top: 0;
-}
-
+/* stylize TOC */
 nav {
     font-size: smaller;
 }
-
 nav a {
     color: #999;
 }
-
 nav .navbar-form {
     box-shadow: none;
-}
-
-/* TODO: use Sass to figure out right and top margins via variables */
-.sidebar-toggler {
-    background-color: #fff;
-    position: fixed;
-    right: 15px;
-    top: 15px;
-    z-index: 1;
 }
 
 /* prevent word breaks */
@@ -73,18 +64,9 @@ nav .navbar-form {
     word-wrap: normal;
 }
 
-/* */
-iframe {
+/* constrain to viewport */
+iframe, img {
     max-width: 100%;
-}
-
-/* */
-img {
-    max-width: 100%;
-}
-
-nav + div > h1 {
-    display: none;
 }
 
 /* apply .table to all table elements */
