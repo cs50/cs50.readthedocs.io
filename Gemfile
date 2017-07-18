@@ -5,7 +5,6 @@ group :jekyll_plugins do
     gem "bootstrap-sass", "3.3.7"
     gem "jekyll-bootstrap-sass"
     gem "jekyll-optional-front-matter"
-    gem "jekyll-redirect-from"
     gem "jekyll-sitemap"
     gem "jekyll-titles-from-headings"
     gem "jemoji"
