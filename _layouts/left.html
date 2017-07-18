@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div class="row">
+    <div class="col-sm-3 sidebar">
+        <nav class="sidebar-nav">
+            <div class="sidebar-header">
+                <a href="#top">
+                    <button class="nav-toggler nav-toggler-sm sidebar-toggler" data-target="#nav-toggleable-sm" data-toggle="collapse" type="button">
+                        <span class="sr-only">Toggle Menu</span>
+                    </button>
+                </a>
+            </div>
+            <div class="collapse nav-toggleable-sm" id="nav-toggleable-sm">
+
+                <!-- https://allejo.io/blog/a-jekyll-toc-in-liquid-only/ -->
+                {% assign my_min = page.toc_min | default: site.toc_min | default: 2 %}
+                {% assign my_max = page.toc_max | default: site.toc_max | default: 6 %}
+                {% include toc_pure_liquid.html html=content sanitize=true h_min=my_min h_max=my_max %}
+
+            </div>
+        </nav>
+    </div>
+    <div class="col-sm-9 content col-sm-offset-3">
+        {{ content }}
+    </div>
+</div>
