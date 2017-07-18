@@ -2,24 +2,19 @@
 layout: default
 ---
 
-<div>
-    <h1>{{ page.title }}</h1>
-</div>
-<nav class="sidebar-nav">
-    <a href="#top">
-        <button class="nav-toggler nav-toggler-sm sidebar-toggler" data-target="#nav-toggleable-sm" data-toggle="collapse" type="button">
-            <span class="sr-only">Toggle Menu</span>
-        </button>
-    </a>
-    <div class="collapse nav-toggleable-sm" id="nav-toggleable-sm">
+<div class="row">
+    <div class="col-sm-12">
+        <h1>{{ page.title }}</h1>
+        <nav>
 
-        <!-- https://allejo.io/blog/a-jekyll-toc-in-liquid-only/ -->
-        {% assign my_min = page.toc_min | default: site.toc_min | default: 2 %}
-        {% assign my_max = page.toc_max | default: site.toc_max | default: 6 %}
-        {% include toc_pure_liquid.html html=content sanitize=true h_min=my_min h_max=my_max %}
+                <!-- https://allejo.io/blog/a-jekyll-toc-in-liquid-only/ -->
+                {% assign my_min = page.toc_min | default: site.toc_min | default: 2 %}
+                {% assign my_max = page.toc_max | default: site.toc_max | default: 6 %}
+                {% include toc_pure_liquid.html html=content sanitize=true h_min=my_min h_max=my_max %}
 
+        </nav>
+        <div>
+            {{ content }}
+        </div>
     </div>
-</nav>
-<div>
-    {{ content }}
 </div>

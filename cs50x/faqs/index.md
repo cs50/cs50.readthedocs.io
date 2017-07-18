@@ -1,10 +1,10 @@
 ---
-layout: default
+layout: top 
 ---
 
 # CS50x FAQs
 
-Here are answers to some frequently asked questions (FAQs). For answers to other questions, do just strike up a [discussion](https://courses.edx.org/courses/course-v1:HarvardX+CS50+X/a7ec0c0a7b6e460f877da0734811c4cd/) with classmates!
+For answers to other questions, do just strike up a [discussion](https://courses.edx.org/courses/course-v1:HarvardX+CS50+X/a7ec0c0a7b6e460f877da0734811c4cd/) with classmates!
 
 ## Can I use CS50 IDE offline?
 

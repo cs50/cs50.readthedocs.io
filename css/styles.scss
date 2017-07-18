@@ -12,19 +12,17 @@
 
 /* TODO: use Sass to figure out 768px via variable */
 @media (min-width: 768px) {
-
-    .sidebar {
+    .col-sm-3 {
         height: 100%;
         overflow-y: auto;
         position: fixed;
     }
-
-    .sidebar h1 {
+    .col-sm-3 h1 {
         visibility: hidden;
     }
 }
 @media (max-width: 768px) {
-    .content h1 {
+    .col-sm-9 h1 {
         display: none;
     }
 }
@@ -35,10 +33,6 @@ nav {
 
 nav a {
     color: #999;
-}
-
-nav ul {
-    list-style: none;
 }
 
 /* TODO: use Sass to figure out right and top margins via variables */

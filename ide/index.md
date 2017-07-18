@@ -149,4 +149,4 @@ To ensure your workspace is up-to-date, click inside any open terminal tab (or o
 
 ## Reporting Problems
 
-If having any problems with CS50 IDE, please contact sysadmins@cs50.harvard.edu with all the necessary information about the problem, and how to replicate it, attaching screenshot(s) if need be!
+If having any problems with CS50 IDE, please contact <sysadmins@cs50.harvard.edu> with all the necessary information about the problem, and how to replicate it, attaching screenshot(s) if need be!
