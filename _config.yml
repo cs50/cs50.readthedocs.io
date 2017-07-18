@@ -1,7 +1,4 @@
-bootstrap:
-  assets: true
 description: Documentation for CS50's tools.
-destination: _site
 exclude: 
   - "application.py"
   - "docker-compose.yml"
@@ -11,9 +8,6 @@ exclude:
   - "Makefile"
   - "README.md"
   - "passenger_wsgi.py"
-  - "TODO.md"
 host: 0.0.0.0
-markdown: kramdown
 port: 8080
-syntax_highlighter: rouge
 title: CS50 Documentation
