@@ -1,9 +1,26 @@
 ---
 ---
 
+/*
+gem install bootstrap-sass -v 3.3.7
+*/
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+/*
+gem install rouge
+rougify style github > _sass/syntax.css
+*/
 @import "rouge";
+
+/*
+wget https://github.com/primer/primer-css/archive/master.zip
+unzip master.zip
+cd primer-css-master
+npm install --save primer-css
+cp node_modules/primer-css/build.css _sass/
+*/
 @import "build";
 
 /* position title above TOC if small screen */
