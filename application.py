@@ -7,7 +7,7 @@ from raven.contrib.flask import Sentry
 app = Flask(__name__)
 
 # monitoring
-Sentry(app)
+sentry = Sentry(app)
 
 # path to _site
 _site = os.path.realpath("_site")
@@ -38,5 +38,6 @@ def index(path):
         else:
             abort(403)
     else:
+        sentry.captureMessage("404: {}".format(path))
         abort(404)
     return p
