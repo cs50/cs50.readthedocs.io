@@ -55,7 +55,7 @@ NOTE: You should only follow these instructions if you are a Windows or Mac user
 1. Download and install **Docker Toolbox** for [Windows](https://docs.docker.com/toolbox/toolbox_install_windows/) or [Mac](https://docs.docker.com/toolbox/toolbox_install_mac/).
 
 1. Open up the **Docker QuickStart Terminal** app that was installed on your computer. After a while, you should see something like the following, with a command prompt below it:
-    ![Docker QuickStart Terminal](ide/docker-quickstart-terminal.png)
+    ![Docker QuickStart Terminal](docker-quickstart-terminal.png)
 
 1. The IP stated in the screenshot above is the IP of the [Docker machine](https://docs.docker.com/machine/overview/). It may be different on your computer. You are going to use this IP to access your CS50 IDE, so you should record it.
 
