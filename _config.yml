@@ -1,3 +1,5 @@
+bootstrap:
+  assets: true
 description: Documentation for CS50's tools.
 destination: _site
 exclude: 
