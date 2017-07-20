@@ -1,0 +1,11 @@
+services:
+  web:
+    build: .
+    container_name: manual50_web
+    environment:
+      APPLICATION_ENV: dev
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/srv/www
+version: "2"
