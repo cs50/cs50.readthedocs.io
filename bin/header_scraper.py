@@ -6,15 +6,16 @@
     Scrapes cppreference.com for contents of header files.
     Outputs to directories containing CSV, with format as follows:
         foo
-        ├── functions.csv
-        ├── macros.csv
-        └── typedefs.csv
+        |-- functions.csv
+        |-- macros.csv
+        |-- typedefs.csv
         ...
 
         .csv:
-        item_a, C## standard
-        item_b, C## standard
+        item_a, C##, until/since C##
+        item_b, C##, until/since C##
         ...
+        (where C## is the C standard it conforms to, if appropriate)
 """
 
 import os
@@ -33,15 +34,15 @@ class Header:
 
     def addf(self, content):
         """Add function."""
-        self.functions.update(content)
+        self.functions.add(content)
 
     def addm(self, content):
         """Add macro."""
-        self.macros.update(content)
+        self.macros.add(content)
 
     def addt(self, content):
         """Add typedef."""
-        self.typedefs.update(content)
+        self.typedefs.add(content)
 
     def get_functions(self):
         """Return functions of library."""
@@ -65,30 +66,29 @@ def main():
 
     with requests.session() as client:
 
-        # first, get a list of all URLs we'll scrape, from cppreference's list of header files
+        # get <tr> elements containing all URLs we'll scrape
         header_list = client.get(HEADERS_URL)
         header_soup = BeautifulSoup(header_list.content, "lxml")
         rows = header_soup.find_all("table", class_="t-dsc-begin")[0].find_all("tr")
 
-        # assemble list of URLs from provided href tags
+        # assemble URL list from each row's <a> element
         url_list = []
         for row in rows:
             link = row.find("a").get("href")
             url_list.append(BASE_URL + link)
 
+        # scrape each header's (well, topic's) URL
         for url in url_list:
-
-            # scrape target URL
             result = client.get(url)
 
             # get HTML content as soup object
             soup = BeautifulSoup(result.content, "lxml")
 
-            # get all tables from relevant part of page
-            # only search direct children so as not to include Navbar
-            # exclude first element, which is TOC
+            # get tables documenting C library functions
+            # only search direct children, skipping first element so as not to include navbar, table of contents, and other irrelevant <table> elements
             tables = soup.find("div", id="mw-content-text").find_all("table", recursive=False)[1:]
 
+            # iterate through each function table
             for table in tables:
                 rows = table.find_all("tr")
                 for row in rows:
@@ -98,7 +98,7 @@ def main():
                     if len(data) == 0:
                         continue
 
-                    # categorize into header
+                    # categorize into library
                     if len(data) < 2:
                         # exclude non-library headings
                         if "header" in data[0].get_text():
@@ -110,55 +110,82 @@ def main():
                                 header = libraries[name]
                         continue
 
-                    # data[0] will be the function, macro, etc.
-                    # data[1] will be the description and type (e.g. "function", "macro constant", etc.)
+                    # data[0] is the function, macro, or typedef (herein an "element")
+                    # data[1] is the description and type (e.g. "function", "macro constant", etc.)
                     type = data[1].get_text()
-                    # get span element containing all entries in this data block
-                    span = data[0].find("span")
-                    if not span:
-                        continue
-                    # iterate over individual elements' spans
-                    text = ""
-                    for element in span.find_all("span"):
-                        text += element.get_text().strip()
 
-                    # add version of C this was added in, if appropriate
+                    # get span element containing all entries in this data block
+                    # skip over empty data blocks
+                    parent_span = data[0].find("span")
+                    if not parent_span:
+                        continue
+
+                    # each row could contain multiple elements
+                    # in which case, they are all the same type and version, but should be separate rows in the CSV
+                    # create a string of all elements, later to be converted into a list
+                    text = ""
+                    for element in parent_span.find_all("span"):
+                        text += element.get_text().strip() + "\n"
+
+                    # add C standard to which this element conforms, if given
                     version = data[0].find("span", class_="t-mark-rev")
                     if version:
-                        text += " " + version.get_text()
+                        # remove parentheses
+                        version = version.get_text().replace("(", "").replace(")", "")
 
-                    text += "\n"
-                    text = text.splitlines()
+                    # make a tuple for each element, all should be same type
+                    for element in text.splitlines():
+                        el_tuple = tuple()
+                        el_tuple += (element,)
 
-                    # don't insert duplicates
-                    if "(function)" in type or "(function macro)" in type:
-                        header.addf(text)
-                    elif "(macro constant)" in type:
-                        header.addm(text)
-                    elif "(typedef)" in type:
-                        header.addt(text)
+                        # add in version if it was given
+                        if version:
+                            # "until" and "since" lines should go in 3rd column of CSV
+                            if "since" in version or "until" in version:
+                                el_tuple += ("",)
+                                el_tuple += (version,)
+                            else:
+                                el_tuple += (version,)
+                                el_tuple += ("",)
+
+                        # convert tuple to CSV format
+                        el_csv = ",".join(el_tuple) + "\n"
+
+                        # insert tuple into appropriate set
+                        if "(function)" in type or "(function macro)" in type:
+                            header.addf(el_csv)
+                        elif "(macro constant)" in type:
+                            header.addm(el_csv)
+                        elif "(typedef)" in type:
+                            header.addt(el_csv)
 
         # send output to CSV files
         csv_format(libraries)
 
 def csv_format(libraries):
     """Output dictionary data in .csv file format."""
+    # constant filenames
     FUNC_FILE = "functions.csv"
     MAC_FILE = "macros.csv"
     TYPE_FILE = "typedefs.csv"
 
+    # iterate over all libraries in the dict
     for library_name, library_contents in libraries.items():
+
+        # create directories for each if they don't already exist
         if not os.path.exists(library_name):
             os.makedirs(library_name)
+
+        # for each library, create a functions, macros, and typedefs file
         with open(library_name + "/" + FUNC_FILE, 'w') as f:
             for function in library_contents.get_functions():
-                f.write(",".join(function.split(" "))  + "\n")
+                f.write(function)
         with open(library_name + "/" + MAC_FILE, 'w') as f:
             for macro in library_contents.get_macros():
-                f.write(",".join(macro.split(" "))  + "\n")
+                f.write(macro)
         with open(library_name + "/" + TYPE_FILE, 'w') as f:
             for typedef in library_contents.get_typedefs():
-                f.write(",".join(typedef.split(" ")) + "\n")
+                f.write(typedef)
 
 if __name__ == "__main__":
     main()
