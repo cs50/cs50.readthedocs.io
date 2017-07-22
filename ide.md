@@ -125,7 +125,7 @@ CS50 IDE also provides **Presentation Mode** in which the user interface is even
 
 ### Code Sharing
 
-You can easily share code snippets by highlighting the lines you want to share and clicking the ![octocat](ide/octocat.png) button on the left. Do be reasonable, per CS50's policy on academic honesty.
+You can easily share code snippets as GitHub gists by highlighting the lines you want to share and clicking the ![octocat](ide/octocat.png) button on the left. Do be reasonable, per CS50's policy on academic honesty.
 
 ![gist](ide/gist.png)
 
