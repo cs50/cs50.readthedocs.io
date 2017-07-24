@@ -18,6 +18,7 @@
         (where C## is the C standard it conforms to, if appropriate)
 """
 
+from collections import namedtuple
 import csv
 import os
 import re
@@ -29,7 +30,7 @@ def main():
     HEADERS_URL = "http://en.cppreference.com/w/c/header"
     BASE_URL = "http://en.cppreference.com"
 
-    # Dictionary where key is library name, value is list of sets of functions, macros, typedefs
+    # Dictionary where key is library name, value is named tuple of sets of functions, macros, typedefs
     libraries = {}
 
     with requests.session() as client:
@@ -74,8 +75,8 @@ def main():
                         if "header" in data[0].get_text():
                             name = re.search("\w+\.h", data[0].get_text()).group(0).split(".")[0]
                             if name not in libraries.keys():
-                                # List of three sets (functions, macros, typedefs) for each library
-                                header = [set() for _ in range(3)]
+                                # Named tuple of three sets (functions, macros, typedefs) for each library
+                                header = namedtuple("Header", "functions, macros, typedefs")._make([set() for _ in range(3)])
                                 libraries[name] = header
                             else:
                                 header = libraries[name]
@@ -107,10 +108,12 @@ def main():
                         version = data[0].find("span", class_="t-mark-rev")
                         if version:
                             version = version.get_text()
+
                             # "until" lines go in third column of CSV
                             if "until" in version:
                                 el_tuple += ("",)
                                 el_tuple += (re.search("C[0-9][0-9]" ,version).group(0),)
+
                             # "since" and vanilla standard numbers go in second column
                             else:
                                 el_tuple += (re.search("C[0-9][0-9]" ,version).group(0),)
@@ -118,13 +121,14 @@ def main():
 
                         # Insert tuple into appropriate set
                         if "(function)" in type or "(function macro)" in type:
-                            header[0].add(el_tuple)
+                            header.functions.add(el_tuple)
                         elif "(macro constant)" in type:
-                            header[1].add(el_tuple)
+                            header.macros.add(el_tuple)
                         elif "(typedef)" in type:
-                            header[2].add(el_tuple)
+                            header.typedefs.add(el_tuple)
 
         print("done\nParsing into CSV...")
+
         # Send output to CSV files
         csv_format(libraries)
         print("done")
