@@ -46,6 +46,5 @@ def index(path):
         else:
             abort(403)
     else:
-        sentry.captureMessage("404: /{}".format(path))
         abort(404)
     return p
