@@ -16,6 +16,8 @@
         item_b, C##, until/since C##
         ...
         (where C## is the C standard it conforms to, if appropriate)
+
+        stdbool.h and tgmath.h, due to formatting differences, are coded differently
 """
 
 from collections import namedtuple
@@ -55,9 +57,34 @@ def main():
             # Get HTML content as soup object
             soup = BeautifulSoup(result.content, "lxml")
 
+            # stdbool.h
+            if url == "http://en.cppreference.com/w/c/types/boolean":
+                header = namedtuple("Header", "functions, macros, typedefs")._make([set() for _ in range(3)])
+                header.macros.update([("bool", "C99", ""), ("true", "C99", ""), ("false", "C99", ""), ("__bool_true_false_are_defined", "C99", "")])
+                libraries["stdbool"] = header
+                continue
+
+            # tgmath.h
+            if url == "http://en.cppreference.com/w/c/numeric/tgmath":
+                header = namedtuple("Header", "functions, macros, typedefs")._make([set() for _ in range(3)])
+                libraries["tgmath"] = header
+                tables = soup.find_all("table", class_="wikitable")
+                for table in tables:
+                    rows = table.find_all("tr")
+
+                    # First two rows are are headers
+                    for row in rows[2:]:
+                        el_tuple = tuple()
+                        el_tuple += (row.find("th").get_text().strip(),)
+
+                        # All tgmath are C99
+                        el_tuple += ("C99", "",)
+                        header.macros.add(el_tuple)
+                continue
+
             # Get tables documenting C library functions
             # Only search direct children, skipping first element so as not to include navbar, table of contents, and other irrelevant <table> elements
-            tables = soup.find("div", id="mw-content-text").find_all("table", recursive=False)[1:]
+            tables = soup.find_all("table", class_="t-dsc-begin")
 
             # Iterate through each function table
             for table in tables:
@@ -131,7 +158,7 @@ def main():
 
         # Send output to CSV files
         csv_format(libraries)
-        print("done")
+        print("done\nSuccessfully scraped {} headers.".format(len(libraries.keys())))
 
 def csv_format(libraries):
     """Output dictionary data in .csv file format."""
