@@ -14,6 +14,7 @@ TODO
 - Add anchor icons, https://www.bryanbraun.com/anchorjs/#examples.
 - Use Sass for Bootstrap and GitHub rather than CSS alone (so as to have access to variables).
 - Elaborate on restarting authentication agent for `submit50`.
+- Fix use of backticks in section headings.
 
 # Future Work
 
