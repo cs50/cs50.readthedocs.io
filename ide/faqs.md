@@ -45,3 +45,16 @@ Yes, this is totally normal. If curious, `~/workspace/.c9/` is used by Cloud9 ID
 Generally, you shouldn't touch this folder or its contents. Files and folders whose names start with a dot (aka dot files) should be hidden by default. You may want to hide the `.c9` folder (along with any other dot files) by clicking the gear icon atop the file browser on the left and unchecking **Show Hidden Files**.
 
 ![show hidden files](hidden-files.png)
+
+## My workspace has less than 5GB of total disk space. How to get a new workspace with 5GB disk space?
+
+Old workspaces used to have less than 5GB of total disk space. This may be problematic particularly when running `update50` to get the latest updates since this may consume your disk space quota. We are hoping to address this better in the near future so that wouldn't be a concern for you, but in the meantime you can get a 5GB workspace by following these instructions:
+
+1. Back up your files per [What's the best way to back up my work?](#whats-the-best-way-to-back-up-my-work).
+2. From **CS50 IDE > Dashboard** click on **ide50**.
+3. Click on the ![gear](gear.png) icon on the top-right corner.
+4. Scroll down to the bottom of the page and click **Delete workspace**.
+5. In the text field type **ide50** and click **Confirm**.
+6. Go to [cs50.io](https://cs50.io/) and log in as usual.
+
+This should automatically create a new 5GB workspace for you. You can confirm by clicking ![stats button](stats.png) on the top-right corner and checking the disk space. Please follow the instructions per [Uploading Files](/ide#uploading-files) to upload your files to your new workspace. Let [sysadmins@cs50.harvard.edu](mailto:sysadmins@cs50.harvard.edu) know if you need further assistance!
