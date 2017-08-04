@@ -27,21 +27,29 @@ By default, `submit50` pushes your work to GitHub via HTTPS, which requires your
 If you'd prefer not to provide `submit50` with your GitHub username and password at all, you can instead push your work to GitHub via SSH. Configure your account as follows.
 
 1. [Generate an SSH key and add it to `ssh-agent`](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/).
+
 1. [Add the SSH key to your GitHub acount](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/).
+
 1. Execute
+
    ```
    git config --global credential.https://github.com/submit50.username jharvard
    ```
+
    where `jharvard` is your own GitHub username, which should add lines like the below to your `.gitconfig` so that `submit50` knows your GitHub username.
+
    ```
    [credential "https://github.com/submit50"]
        username = jharvard
    ```
+
 1. Execute 
+
    ```
    ssh git@github.com
    ```
-   to add `github.com` to the list of known hosts for `ssh`, answering "yes" if prompted whether you're sure you want to continue connecting. 
+
+    to add `github.com` to the list of known hosts for `ssh`, answering "yes" if prompted whether you're sure you want to continue connecting. 
 
 Thereafter, you should be able to run `submit50` without ever being prompted for your GitHub username or password. 
 
@@ -64,12 +72,17 @@ If you'd like to install `submit50` on your own Mac or PC, so that you can submi
 To install `submit50` within that command-line environment:
 
 1. [Install Python](https://www.python.org/downloads/) 2.7 or higher, if not already installed.
+
 1. Install `pip`, as via 
+
    ```
    sudo easy_install pip
    ```
+
    if not already installed.
+
 1. Execute 
+
    ```
    sudo pip install submit50
    ```
