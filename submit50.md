@@ -22,9 +22,9 @@ where `slug` is the unique identifier for the work you're submitting, as prescri
 
 #### Via SSH
 
-By default, `submit50` pushes your work to GitHub via HTTPS, which requires your GitHub username and password, which is why `submit50` prompts you for both at least once per week. For convenience, `submit50` remembers your username and password in RAM using [`git-credential-store`](https://git-scm.com/docs/git-credential-store/). Per the [source code](https://github.com/cs50/submit50/blob/master/submit50.py) for `submit50`, your username and password are not sent to CS50's own servers.
+By default, `submit50` pushes your work to GitHub via HTTPS, which requires your GitHub username and password, which is why `submit50` prompts you for both at least once per week. For convenience, `submit50` remembers your username and password in RAM using [`git-credential-store`](https://git-scm.com/docs/git-credential-store/). Per the [source code](https://github.com/cs50/submit50/blob/master/submit50.py) for `submit50`, your username and password are sent only to GitHub, not to CS50's own servers.
 
-If you'd prefer not to provide `submit50` with your GitHub username and password at all, you can instead push your work to GitHub via SSH. Configure your account as follows.
+If you'd prefer not to provide `submit50` with your GitHub username and password at all, you can instead push your work to GitHub via SSH. Configure your workspace on [CS50 IDE](https://cs50.io/) (or your own computer) as follows.
 
 1. [Generate an SSH key and add it to `ssh-agent`](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/).
 
