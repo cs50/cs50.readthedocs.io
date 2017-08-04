@@ -20,7 +20,7 @@ pip install cli50
 
 ## Usage
 
-You can mount your current working directory within CS50 CLI as follows. 
+You can mount your current working directory within CS50 CLI as follows.
 
 ```
 cli50
@@ -41,10 +41,10 @@ CS50 CLI differs from a terminal window in [CS50 IDE](https://cs50.io/) in, at l
 | | CS50 CLI | CS50 IDE
 | --- | --- | ---
 | Clang | 3.8 | 3.6
-| Node.js | 7.6.0 | 0.10
+| Node.js | 7.6.0 | 7.6.0
 | PHP | 7.1 | 5.5
-| Python | 3.6.0 | 3.4
-| Ruby | 2.4.0 | 2.1
+| Python | 3.6.0 | 3.6.0
+| Ruby | 2.4.0 | 2.3.0
 |===
 
 CS50 IDE will eventually be updated to bring it in parity.
