@@ -22,35 +22,26 @@ where `slug` is the unique identifier for the work you're submitting, as prescri
 
 #### Via SSH
 
-By default, `submit50` pushes your work to GitHub via HTTPS, which requires your GitHub username and password, which is why `submit50` prompts you for both at least once per week. For convenience, `submit50` remembers your username and password in RAM using [`git-credential-store`](https://git-scm.com/docs/git-credential-store/). Per the [source code](https://github.com/cs50/submit50/blob/develop/submit50.py) for `submit50`, your username and password are not sent to CS50's own servers.
+By default, `submit50` pushes your work to GitHub via HTTPS, which requires your GitHub username and password, which is why `submit50` prompts you for both at least once per week. For convenience, `submit50` remembers your username and password in RAM using [`git-credential-store`](https://git-scm.com/docs/git-credential-store/). Per the [source code](https://github.com/cs50/submit50/blob/master/submit50.py) for `submit50`, your username and password are not sent to CS50's own servers.
 
 If you'd prefer not to provide `submit50` with your GitHub username and password at all, you can instead push your work to GitHub via SSH. Configure your account as follows.
 
-1. [Configure your GitHub account for SSH](https://help.github.com/articles/connecting-to-github-with-ssh/).
+1. [Generate an SSH key and add it to `ssh-agent`](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/).
+1. [Add the SSH key to your GitHub acount](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/).
 1. Execute
-
    ```
    git config --global credential.https://github.com/submit50.jharvard
    ```
-
-   where `jharvard` is your own GitHub username, which should add lines like the below to `.gitconfig` so that `submit50` knows your GitHub username.
+   where `jharvard` is your own GitHub username, which should add lines like the below to your `.gitconfig` so that `submit50` knows your GitHub username.
    ```
    [credential "https://github.com/submit50"]
        username = jharvard
    ```
 1. Execute 
-
    ```
    ssh git@github.com
    ```
-
-   to add `github.com` to the list of known hosts for `ssh`. And if your SSH key has a passphrase, also execute
-
-   ```
-   eval `ssh-agent -s` && ssh-add
-   ```
-
-   to start an authentication agent.
+   to add `github.com` to the list of known hosts for `ssh`, answering "yes" if prompted whether you're sure you want to continue connecting. 
 
 Thereafter, you should be able to run `submit50` without ever being prompted for your GitHub username or password. 
 
@@ -72,27 +63,41 @@ If you'd like to install `submit50` on your own Mac or PC, so that you can submi
 
 To install `submit50` within that command-line environment:
 
-1. Install [Python](https://www.python.org/downloads/) 2.7 or higher, if not already installed.
-1. Install `pip`, as via `sudo easy_install pip`, if not already installed.
-1. Execute `sudo pip install submit50`.
+1. [Install Python](https://www.python.org/downloads/) 2.7 or higher, if not already installed.
+1. Install `pip`, as via 
+   ```
+   sudo easy_install pip
+   ```
+   if not already installed.
+1. Execute 
+   ```
+   sudo pip install submit50
+   ```
+   to install `submit50` itself.
+
+## Upgrading
+
+Execute
+
+```
+sudo pip install --upgrade submit50
+```
+
+to upgrade `submit50`, once installed.
 
 ## Implementation Details
 
 To see how `submit50` uses `git` underneath the hood, execute
-
 ```
 submit50 -v slug
 ```
-
 or
-
 ```
 submit50 --verbose slug
 ```
-
 where `slug` is the unique identifier for the work you're submitting.
 
-To view the source code for `submit50`, see <https://github.com/cs50/submit50/blob/develop/submit50.py>.
+To view the source code for `submit50`, see <https://github.com/cs50/submit50/blob/master/submit50.py>.
 
 ## FAQs
 
