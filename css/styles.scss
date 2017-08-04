@@ -3,10 +3,9 @@
 
 /*
 gem install bootstrap-sass -v 3.3.7
+curl -o _sass/_bootstrap-custom.scss https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/_bootstrap.scss # https://github.com/twbs/bootstrap-sass#sass
 */
-@import "bootstrap-sprockets";
-@import "bootstrap";
-
+@import 'bootstrap-custom';
 
 /*
 gem install rouge
