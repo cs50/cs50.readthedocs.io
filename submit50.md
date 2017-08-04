@@ -1,5 +1,4 @@
 ---
-layout: left
 ---
 
 # `submit50`

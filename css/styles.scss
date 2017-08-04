@@ -34,9 +34,9 @@ cp node_modules/primer-css/build.css _sass/
         white-space: nowrap; /* confine to one line so title doesn't invisibly wrap */
         visibility: hidden; /* hide title above TOC but preserve its height */
     }
-    .col-sm-12 nav + h1[id] {
-        display: none;
-    }
+}
+.col-sm-12 nav + h1[id] {
+    display: none;
 }
 
 /* position anchors below navbar-fixed-top */
