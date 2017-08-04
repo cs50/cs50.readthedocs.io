@@ -30,7 +30,7 @@ If you'd prefer not to provide `submit50` with your GitHub username and password
 1. [Add the SSH key to your GitHub acount](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/).
 1. Execute
    ```
-   git config --global credential.https://github.com/submit50.jharvard
+   git config --global credential.https://github.com/submit50.username jharvard
    ```
    where `jharvard` is your own GitHub username, which should add lines like the below to your `.gitconfig` so that `submit50` knows your GitHub username.
    ```
