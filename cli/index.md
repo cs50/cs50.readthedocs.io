@@ -41,9 +41,7 @@ CS50 CLI differs from a terminal window in [CS50 IDE](https://cs50.io/) in, at l
 | | CS50 CLI | CS50 IDE
 | --- | --- | ---
 | Clang | 3.8 | 3.6
-| Node.js | 7.6.0 | 7.6.0
 | PHP | 7.1 | 5.5
-| Python | 3.6.0 | 3.6.0
 | Ruby | 2.4.0 | 2.3.0
 |===
 
