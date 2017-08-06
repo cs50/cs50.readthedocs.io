@@ -44,16 +44,6 @@ body {
     display: none;
 }
 
-/* position anchors below navbar-fixed-top */
-/* https://github.com/twbs/bootstrap/issues/1768#issuecomment-46519033 */
-*[id]:before { 
-  content: " "; 
-  display: block; 
-  margin-top: -74px; 
-  height: 74px; /* TODO: base 50px + 24px on variables */
-  visibility: hidden; 
-}
-
 /* position columns below navbar-fixed-top */
 /* http://getbootstrap.com/components/#navbar-fixed-top */
 .col-sm-12 {
@@ -89,6 +79,11 @@ nav .navbar-form {
 /* constrain to viewport */
 iframe, img {
     max-width: 100%;
+}
+
+/* ensure long paths wrap on mobile */
+p {
+    word-break: break-word;
 }
 
 /* don't stylize AnchorJS links */
