@@ -80,6 +80,11 @@
             anchors.options.visible = "always";
             anchors.add();
 
+            window.onhashchange = function() {
+                window.scrollTo(0, window.scrollY + 1);
+                console.log("yes");
+            };
+
         </script>
 
         {% if jekyll.environment == "production" and site.google_analytics %}
