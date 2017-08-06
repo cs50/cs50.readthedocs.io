@@ -22,6 +22,11 @@ cp node_modules/primer-css/build.css _sass/
 */
 @import "build";
 
+/* symmetry with navbar-fixed-top */
+body {
+    margin-bottom: 50px;
+}
+
 /* position title above TOC if small screen */
 /* TODO: use Sass to figure out 768px via variable */
 @media (max-width: 768px) {
@@ -84,4 +89,10 @@ nav .navbar-form {
 /* constrain to viewport */
 iframe, img {
     max-width: 100%;
+}
+
+/* don't stylize AnchorJS links */
+a.anchorjs-link {
+    color: inherit;
+    text-decoration: inherit;
 }
