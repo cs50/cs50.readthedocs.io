@@ -51,7 +51,7 @@ To import scores from previous years, head to [CS50.me/account](https://cs50.me/
 
 ## When are Verified Certificates generated?
 
-At the end of each month, CS50's staff provides edX with a list of students who have satisfied CS50x's requirements (by receiving scores of at least 70% on every one of the course's nine problem sets as well as on the final project). Within a few days, edX then generates students' Verified Certificates, at which point they should appear automatically on edX's [dashboard](https://courses.edx.org/dashboard).
+At the end of each month, CS50's staff provides edX with a list of students who have satisfied CS50x's requirements (by receiving scores of at least 70% on every required problem submitted as part of the course's nine problem sets as well as on the final project). Within a few days, edX then generates students' Verified Certificates, at which point they should appear automatically on edX's [dashboard](https://courses.edx.org/dashboard).
 
 ## When are deadlines?
 
