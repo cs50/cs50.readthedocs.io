@@ -36,7 +36,7 @@ If you set an environment called `APPLICATION_ENV` to a value of `dev`, as via a
 
 ### Entry Point
 
-By default, CS50 Server looks for a file called `app.js`, `config.ru`, `.meteor`, or `passenger_wsgi.py` per its <<Usage>>. To configure CS50 Server to use some other file as an app's entry point, adjust your `Dockerfile` as follows, where `app_type` is [as prescribed](https://www.phusionpassenger.com/library/config/standalone/reference/#--app-type-app_type) and `startup_file` is the relative path of the file to use.
+By default, CS50 Server looks for a file called `app.js`, `config.ru`, `.meteor`, or `passenger_wsgi.py` per its [Usage](#usage). To configure CS50 Server to use some other file as an app's entry point, adjust your `Dockerfile` as follows, where `app_type` is [as prescribed](https://www.phusionpassenger.com/library/config/standalone/reference/#--app-type-app_type) and `startup_file` is the relative path of the file to use.
 
 ```
 FROM cs50/server
