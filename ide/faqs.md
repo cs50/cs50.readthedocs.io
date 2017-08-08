@@ -22,7 +22,19 @@ Sure, if you are more familiar, you can run editors in the terminal such as `ema
 
 ## What's the best way to back up my work?
 
-Choose **File > Download Project** to download an archived file (in `.zip` format) of your workspace files.
+Choose **File > Download Project** to download `ide50.zip`, an archived file (in `.zip` format) of your workspace files.
+
+## How to restore my work after backing it up?
+
+If you backed up your work per [What's the best way to back up my work?](#whats-the-best-way-to-back-up-my-work), and you would like to restore it in a different (or same) workspace, upload `ide50.zip` to your workspace per [Uploading Files](/ide#uploading-files), then run the following commands in a terminal tab in your workspace:
+
+```
+$ unzip ide50.zip
+$ mv ~/workspace/workspace/* ~/workspace/
+$ rm -rf ide50.zip ~/workspace/workspace/
+```
+
+
 
 ## What if I already have a Cloud9 account?
 
@@ -57,4 +69,4 @@ Old workspaces used to have less than 5GB of total disk space. This may be probl
 1. In the text field type **ide50** and click **Confirm**.
 6. Go to [cs50.io](https://cs50.io/) and log in as usual.
 
-This should automatically create a new 5GB workspace for you. You can confirm by clicking ![stats button](stats.png) on the top-right corner and checking the disk space. Please follow the instructions per [Uploading Files](/ide#uploading-files) to upload your files to your new workspace. Let [sysadmins@cs50.harvard.edu](mailto:sysadmins@cs50.harvard.edu) know if you need further assistance!
+This should automatically create a new 5GB workspace for you. You can confirm by clicking ![stats button](stats.png) on the top-right corner and checking the disk space. Please follow the instructions per [How to restore my work after backing it up?](#how-to-restore-my-work-after-backing-it-up) to upload your files to your new workspace. Let [sysadmins@cs50.harvard.edu](mailto:sysadmins@cs50.harvard.edu) know if you need further assistance!
