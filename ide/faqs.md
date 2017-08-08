@@ -52,7 +52,7 @@ Old workspaces used to have less than 5GB of total disk space. This may be probl
 
 1. Back up your files per [What's the best way to back up my work?](#whats-the-best-way-to-back-up-my-work).
 1. From **CS50 IDE > Dashboard** click on **ide50**.
-1. Click on the ![gear](gear.png) icon on the top-right corner.
+1. Click on the ![gear](gear.png) icon next to ![clone](clone.png) on the top-right corner. Alternatively, you may visit https://cs50.io/**\<your-username\>**/ide50/settings where **\<your-username\>** is your CS50 IDE username. Your CS50 IDE username should be part of the the URL of your workspace, or you may run `username50` in a CS50 IDE terminal tab to get it.
 1. If you are sure you have backed up your files, scroll down to the bottom of the page and click **Delete workspace**.
 1. In the text field type **ide50** and click **Confirm**.
 6. Go to [cs50.io](https://cs50.io/) and log in as usual.
