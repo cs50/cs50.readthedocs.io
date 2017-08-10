@@ -14,4 +14,5 @@ title: CS50 Documentation
 - CS50x
   - [FAQs](cs50x/faqs)
 - [Style Guide](style)
+- [`style50`](style50)
 - [`submit50`](submit50)
