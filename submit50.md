@@ -18,13 +18,11 @@ To submit work with `submit50`, `cd` to the work's directory and execute
 submit50 slug
 ```
 
-where `slug` is the unique identifier for the work you're submitting, as prescribed by the course (as in a problem's specification). Although the `slug` might resemble the path to a directory, it's simply a unique identifier, independent of your own work's location. If you've not recently run `submit50`, you might be prompted to log in with your GitHub username and password. You will then be prompted to confirm whether you indeed want to submit one or more files from your current directory, unless you're missing one or more required files, in which case `submit50` will instead exit without submitting anything.
+where `slug` is the unique identifier for the work you're submitting, as prescribed by the course (as in a problem's specification). Although the `slug` might resemble the path to a directory, it's simply a unique identifier, independent of your own work's location. If you've not recently run `submit50` (within the past week), you might be prompted to log in with your GitHub username and password. (Per the [source code](https://github.com/cs50/submit50/blob/master/submit50.py) for `submit50`, your username and password are sent only to GitHub, not to CS50's own servers.) You will then be prompted to confirm whether you indeed want to submit one or more files from your current directory, unless you're missing one or more required files, in which case `submit50` will instead exit without submitting anything.
 
 #### Via SSH
 
-By default, `submit50` pushes your work to GitHub via HTTPS, which requires your GitHub username and password, which is why `submit50` prompts you for both at least once per week. For convenience, `submit50` remembers your username and password in RAM using [`git-credential-store`](https://git-scm.com/docs/git-credential-store/). Per the [source code](https://github.com/cs50/submit50/blob/master/submit50.py) for `submit50`, your username and password are sent only to GitHub, not to CS50's own servers.
-
-If you'd prefer not to provide `submit50` with your GitHub username and password at all, you can instead push your work to GitHub via SSH. Configure your workspace on [CS50 IDE](https://cs50.io/) (or your own computer) as follows.
+By default, `submit50` pushes your work to GitHub via HTTPS, which requires your GitHub username and password, which is why `submit50` prompts you for both at least once per week. If you'd prefer not to provide `submit50` with your GitHub username and password at all, you can instead push your work to GitHub via SSH. Configure your workspace on [CS50 IDE](https://cs50.io/) (or your own computer) as follows.
 
 1. [Generate an SSH key and add it to `ssh-agent`](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/).
 
@@ -114,6 +112,14 @@ To view the source code for `submit50`, see <https://github.com/cs50/submit50/bl
 
 ## FAQs
 
+### Do I need to provide `submit50` with my GitHub username and password?
+
+Nope, you can instead authenticate [via SSH](#via-ssh).
+
 ### If I use `git` locally, will `submit50` affect my local repository?
 
-No, `submit50` uses its own `GIT_DIR` (in `/tmp`). It will ignore any `.git` directory that you might have locally.
+Nope, `submit50` uses its own `GIT_DIR` (in `/tmp`). It will ignore any `.git` directory that you might have locally.
+
+### How does `submit50` remember my GitHub password?
+
+So that you need only type it once per week, `submit50` remembers your username and password in RAM using [`git-credential-store`](https://git-scm.com/docs/git-credential-store/).
