@@ -20,7 +20,8 @@ cd primer-css-master
 npm install --save primer-css
 cp node_modules/primer-css/build.css _sass/
 */
-@import "build";
+@import "primer-css";
+@import "primer-utilities";
 
 /* symmetry with navbar-fixed-top */
 body {
