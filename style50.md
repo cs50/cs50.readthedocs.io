@@ -97,7 +97,12 @@ printf("hello, world\n");
 
 In `split` mode, `style50` displays its input and output side by side, as in the below.
 
-TODO
+<pre>#include &lt;stdio.h&gt;               #include &lt;stdio.h&gt;
+
+int main(void)                   int main(void)
+    <span class="text-red p-0">{</span>                            <span class="text-green p-0">{</span>
+printf("hello, world\n");        <span class="bg-greenp-0">    </span>printf("hello, world\n");
+    <span class="text-red p-0">}</span>                            <span class="text-green p-0">}</span></pre>
 
 ### `unified`
 
