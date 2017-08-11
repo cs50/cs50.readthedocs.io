@@ -18,7 +18,7 @@ To submit work with `submit50`, `cd` to the work's directory and execute
 submit50 slug
 ```
 
-where `slug` is the unique identifier for the work you're submitting, as prescribed by the course (as in a problem's specification). Although the `slug` might resemble the path to a directory, it's simply a unique identifier, independent of your own work's location. If you've not recently run `submit50` (within the past week), you might be prompted to log in with your GitHub username and password. (Per the [source code](https://github.com/cs50/submit50/blob/master/submit50.py) for `submit50`, your username and password are sent only to GitHub, not to CS50's own servers.) You will then be prompted to confirm whether you indeed want to submit one or more files from your current directory, unless you're missing one or more required files, in which case `submit50` will instead exit without submitting anything.
+where `slug` is the unique identifier for the work you're submitting, as prescribed by the course (as in a problem's specification). Although the `slug` might resemble the path to a directory, it's simply a unique identifier, independent of your own work's location. If you've not recently run `submit50` (within the past week), you might be prompted to log in with your GitHub username and password. (Per the [source code](https://github.com/cs50/submit50) for `submit50`, your username and password are sent only to GitHub, not to CS50's own servers.) You will then be prompted to confirm whether you indeed want to submit one or more files from your current directory, unless you're missing one or more required files, in which case `submit50` will instead exit without submitting anything.
 
 #### Via SSH
 
@@ -108,7 +108,7 @@ submit50 --verbose slug
 ```
 where `slug` is the unique identifier for the work you're submitting.
 
-To view the source code for `submit50`, see <https://github.com/cs50/submit50/blob/master/submit50.py>.
+To view the source code for `submit50`, see <https://github.com/cs50/submit50>.
 
 ## FAQs
 

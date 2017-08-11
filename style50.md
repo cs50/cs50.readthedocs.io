@@ -1,5 +1,5 @@
 ---
-layout: top
+layout: left
 ---
 
 # `style50`
@@ -15,6 +15,103 @@ style50 file
 ```
 
 where `file` is the (path to some) file whose style you'd like to check.
+
+## Examples
+
+### Addition
+
+Consider the code below, wherein the call to `printf` isn't properly indented.
+
+```
+#include <stdio.h>
+
+int main(void)
+{
+printf("hello, world\n");
+}
+```
+
+Given that code as input, `style50` will output
+
+<pre>#include &lt;stdio.h&gt;
+
+int main(void)
+{
+<span class="bg-green p-0">    </span>printf("hello, world\n");
+}</pre>
+
+wherein highlighted in green are four spaces that should be added for style's sake.
+
+### Deletion
+
+Consider the code below, wherein the curly braces are unnecessarily indented.
+
+```
+#include <stdio.h>
+
+int main(void)
+    {
+    printf("hello, world\n");
+    }
+```
+
+Given that code as input, `style50` will output
+
+<pre>#include &lt;stdio.h&gt;
+
+int main(void)
+<span class="bg-red p-0">    </span>{
+    printf("hello, world\n");
+<span class="bg-red p-0">    </span>}</pre>
+
+wherein highlighted in red are spaces that should be deleted for style's sake.
+
+## Modes
+
+By default, `style50` operates in [`character`](#character) mode, but you can specify other modes with `-o` or `--output`.
+
+Consider the code below for a look at these modes.
+
+```
+#include <stdio.h>
+
+int main(void)
+{
+    printf("hello, world\n");
+}
+```
+
+### `character`
+
+In `character` mode (the default), `style50` compares its input against CS50's style guide character by character, as in the below.
+
+<pre>#include &lt;stdio.h&gt;
+
+int main(void)
+<span class="bg-green p-0">{\n</span>
+    <span class="bg-red p-0">{\n</span>
+printf("hello, world\n");
+<span class="bg-red p-0">    }</span></pre>
+
+### `split`
+
+In `split` mode, `style50` displays its input and output side by side, as in the below.
+
+TODO
+
+### `unified`
+
+In `unified` mode, `style50` displays its output line by line, akin to [`git-diff`](https://git-scm.com/docs/git-diff), as in the below.
+
+<pre>  #include &lt;stdio.h&gt;
+  
+  int main(void)
+<span class="text-red p-0">-     {</span>
+<span class="text-green p-0">+ {</span>
+<span class="text-red p-0">- printf("hello, world\n");</span>
+<span class="text-green p-0">+     printf("hello, world\n");</span>
+<span class="text-red p-0">-     }</span>
+<span class="text-green p-0">+ }</span></pre>
 
 ## Installation
 
@@ -57,4 +154,4 @@ to upgrade `style50`, once installed.
 
 ## Implementation Details
 
-To view the source code for `style50`, see <https://github.com/cs50/style50/blob/master/style50.py>.
+To view the source code for `style50`, see <https://github.com/cs50/style50>.
