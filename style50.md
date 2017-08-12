@@ -65,15 +65,15 @@ where `file` is the (path to some) file whose style you'd like to check.
 
 By default, `style50` operates in [`character`](#character) mode, but you can specify other modes with `-o` or `--output`.
 
-Consider the file below, `hello.c`, for a look at these modes.
+Consider the (poorly styled) file below, `hello.c`, for a look at these modes.
 
 ```
 #include <stdio.h>
 
 int main(void)
-{
-    printf("hello, world\n");
-}
+    {
+printf("hello, world\n");
+    }
 ```
 
 #### `character`
