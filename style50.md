@@ -6,21 +6,7 @@ layout: left
 
 `style50` is a command-line tool with which you can check your code for consistency with [CS50's style guide](style) (for C). If your code isn't styled consistently, `style50` will summarize the changes you should make to your code, as by highlighting in <span class="bg-green p-1 text-white">green</span> characters you should add and highlighting in <span class="bg-red p-1 text-white">red</span> characters you should delete.
 
-## Usage
-
-To check your code's style, execute
-
-```
-style50 file
-```
-
-where `file` is the (path to some) file whose style you'd like to check.
-
-## Examples
-
-### Addition
-
-Consider the code below, wherein the call to `printf` isn't properly indented.
+For instance, consider the code below, wherein the call to `printf` isn't properly indented.
 
 ```
 #include <stdio.h>
@@ -42,9 +28,7 @@ int main(void)
 
 wherein highlighted in green are four spaces that should be added for style's sake.
 
-### Deletion
-
-Consider the code below, wherein the curly braces are unnecessarily indented.
+On the other hand, consider the code below, wherein the curly braces are unnecessarily indented.
 
 ```
 #include <stdio.h>
@@ -66,11 +50,22 @@ int main(void)
 
 wherein highlighted in red are spaces that should be deleted for style's sake.
 
-## Modes
+
+## Usage
+
+To check your code's style, execute
+
+```
+style50 file
+```
+
+where `file` is the (path to some) file whose style you'd like to check.
+
+### Modes
 
 By default, `style50` operates in [`character`](#character) mode, but you can specify other modes with `-o` or `--output`.
 
-Consider the code below for a look at these modes.
+Consider the file, `hello.c`, below for a look at these modes.
 
 ```
 #include <stdio.h>
@@ -81,9 +76,27 @@ int main(void)
 }
 ```
 
-### `character`
+#### `character`
 
-In `character` mode (the default), `style50` compares its input against CS50's style guide character by character, as in the below.
+In `character` mode, `style50` compares its input against CS50's style guide character by character. Were you to run
+
+```
+style50 --output character hello.c
+```
+
+or just
+
+```
+style50 -o character hello.c
+```
+
+or even just 
+
+```
+style50 hello.c
+```
+
+you would see the below.
 
 <pre>#include &lt;stdio.h&gt;
 
@@ -93,9 +106,21 @@ int main(void)
 printf("hello, world\n");
 <span class="bg-red p-0">    }</span></pre>
 
-### `split`
+#### `split`
 
-In `split` mode, `style50` displays its input and output side by side, as in the below.
+In `split` mode, `style50` displays its input and output side by side. Were you to run
+
+```
+style50 --output split hello.c
+```
+
+or just
+
+```
+style50 -o split hello.c
+```
+
+you would see the below.
 
 <pre>#include &lt;stdio.h&gt;               #include &lt;stdio.h&gt;
 
@@ -104,9 +129,21 @@ int main(void)                   int main(void)
 printf("hello, world\n");        <span class="bg-green p-0">    </span>printf("hello, world\n");
     <span class="text-red p-0">}</span>                            <span class="text-green p-0">}</span></pre>
 
-### `unified`
+#### `unified`
 
-In `unified` mode, `style50` displays its output line by line, akin to [`git-diff`](https://git-scm.com/docs/git-diff), as in the below.
+In `unified` mode, `style50` displays its output line by line, akin to [`git-diff`](https://git-scm.com/docs/git-diff). Were you to run
+
+```
+style50 --output unified hello.c
+```
+
+or just
+
+```
+style50 -o unified hello.c
+```
+
+you would see the below.
 
 <pre>  #include &lt;stdio.h&gt;
   
