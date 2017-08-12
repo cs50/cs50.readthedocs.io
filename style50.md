@@ -26,7 +26,7 @@ int main(void)
 <span class="bg-green p-0">    </span>printf("hello, world\n");
 }</pre>
 
-wherein highlighted in green are four spaces that should be added for style's sake.
+wherein highlighted are four spaces that should be added for style's sake.
 
 On the other hand, consider the code below, wherein the curly braces are unnecessarily indented.
 
@@ -48,7 +48,7 @@ int main(void)
     printf("hello, world\n");
 <span class="bg-red p-0">    </span>}</pre>
 
-wherein highlighted in red are spaces that should be deleted for style's sake.
+wherein highlighted are four spaces that should be deleted for style's sake.
 
 
 ## Usage
