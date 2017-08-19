@@ -75,7 +75,7 @@ To route all requests (that aren't for actual files or directories) to `public/i
 
 ```
 location / {
-    try_files $uri $uri/ /index.php;
+    try_files $uri $uri/ /index.php?$query_string;
 }
 ```
 
