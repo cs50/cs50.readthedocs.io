@@ -75,15 +75,15 @@ To route all requests (that aren't for actual files or directories) to `public/i
 
 ```
 location / {
-    try_files $uri $uri/ /index.php =404;
+    try_files $uri $uri/ /index.php;
 }
 ```
 
-To route all requests (that aren't for actual files or directories) to `public/index.html`, create a file called `server.conf` in the same directory as your `Dockerfile`, the contents of which are as follows.
+To route all requests (that aren't for actual files or directories) to `public/index.html` (as you might for a JavaScript-based single-page app), create a file called `server.conf` in the same directory as your `Dockerfile`, the contents of which are as follows.
 
 ```
 location / {
-    try_files $uri $uri/ /index.html =404;
+    try_files $uri $uri/ /index.html;
 }
 ```
 
