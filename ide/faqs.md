@@ -70,3 +70,9 @@ Old workspaces used to have less than 5GB of total disk space. This may be probl
 6. Go to [cs50.io](https://cs50.io/) and log in as usual.
 
 This should automatically create a new 5GB workspace for you. You can confirm by clicking ![stats button](stats.png) on the top-right corner and checking the disk space. Please follow the instructions per [How to restore my work after backing it up?](#how-to-restore-my-work-after-backing-it-up) to upload your files to your new workspace. Let [sysadmins@cs50.harvard.edu](mailto:sysadmins@cs50.harvard.edu) know if you need further assistance!
+
+## I'm getting an error that says `Looks like check50 (or submit50) isn't enabled for your account yet. Log into https://cs50.me/ in a browser, click Authorize Application, and re-run check50 (or submit50) here!` even after following these instructions. What should I do?
+
+Go to https://github.com/check50/\<your-username\>/invitations and https://github.com/submit50/\<your-username\>/invitations, after replacing `<your-username>` with your actual GitHub username, and click **Accept invitation**, then try `check50` and/or `submit50` again. Let sysadmins@cs50.harvard.edu know if you need further assistance!
+
+If curious why this happens, earlier the **Authorize Application** step was sufficient for adding your GitHub user as a collaborator with write access on your check50 and submit50 repositories that we automatically create for you, but GitHub updated their API recently to require users to accept invitations for repositories they're added to, so the **Authorize Application** step isn't sufficient any more, and you have to accept these invitations.

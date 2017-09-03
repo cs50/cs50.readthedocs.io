@@ -68,9 +68,3 @@ If it's been a while since you submitted Problem Set 0, but you're still not see
 ## Why does edX think my grade 0%?
 
 CS50x doesn't use edX's built-in gradebook, so all students' scores appear (in edX's gradebook) as 0%. Not to worry, see [CS50x's gradebook](https://courses.edx.org/courses/course-v1:HarvardX+CS50+X/05722c69041f4754ae097af65aae2083/) for your actual scores.
-
-## I'm getting an error that says `Looks like check50 (or submit50) isn't enabled for your account yet. Log into https://cs50.me/ in a browser, click Authorize Application, and re-run check50 (or submit50) here!` even after following these instructions. What should I do?
-
-Go to https://github.com/check50/\<your-username\>/invitations and https://github.com/submit50/\<your-username\>/invitations, after replacing `<your-username>` with your actual GitHub username, and click **Accept invitation**, then try `check50` and/or `submit50` again. Let sysadmins@cs50.harvard.edu know if you need further assistance!
-
-If curious why this happens, earlier the **Authorize Application** step was sufficient for adding your GitHub user as a collaborator with write access on your check50 and submit50 repositories that we automatically create for you, but GitHub updated their API recently to require users to accept invitations for repositories they're added to, so the **Authorize Application** step isn't sufficient any more, and you have to accept these invitations.
