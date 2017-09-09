@@ -64,7 +64,7 @@ Old workspaces used to have less than 5GB of total disk space. This may be probl
 
 1. Back up your files per [What's the best way to back up my work?](#whats-the-best-way-to-back-up-my-work).
 1. From **CS50 IDE > Dashboard** click on **ide50**.
-1. Click on the ![gear](gear.png) icon next to ![clone](clone.png) on the top-right corner. Alternatively, you may visit https://cs50.io/**\<your-username\>**/ide50/settings where **\<your-username\>** is your CS50 IDE username. Your CS50 IDE username should be part of the the URL of your workspace, or you may run `username50` in a CS50 IDE terminal tab to get it.
+1. Click on the ![gear](gear.png) icon next to ![clone](clone.png) on the top-right corner. Alternatively, you may visit https://cs50.io/**\<your-username\>**/ide50/settings where **\<your-username\>** is your CS50 IDE username. Your CS50 IDE username should be part of the URL of your workspace, or you may run `username50` in a CS50 IDE terminal tab to get it.
 1. If you are sure you have backed up your files, scroll down to the bottom of the page and click **Delete workspace**.
 1. In the text field type **ide50** and click **Confirm**.
 6. Go to [cs50.io](https://cs50.io/) and log in as usual.
@@ -76,3 +76,17 @@ This should automatically create a new 5GB workspace for you. You can confirm by
 Go to https://github.com/check50/\<your-username\>/invitations and https://github.com/submit50/\<your-username\>/invitations, after replacing `<your-username>` with your actual GitHub username, and click **Accept invitation**, then try `check50` and/or `submit50` again. Let sysadmins@cs50.harvard.edu know if you need further assistance!
 
 If curious why this happens, earlier the **Authorize Application** step was sufficient for adding your GitHub user as a collaborator with write access on your check50 and submit50 repositories that we automatically create for you, but GitHub updated their API recently to require users to accept invitations for repositories they're added to, so the **Authorize Application** step isn't sufficient any more, and you have to accept these invitations.
+
+## My workspace doesn't look like David's from lecture and none of the `*50` commands work. What should I do?
+
+Probably you're using a non-CS50 workspace. Follow these instructions to delete your current workspace, and create a CS50 workspace:
+
+1. Back up your files per [What's the best way to back up my work?](#whats-the-best-way-to-back-up-my-work).
+1. From **Cloud9 > Go To Your Dashboard** click on **ide50**.
+1. Click on the ![gear](gear.png) icon next to ![clone](clone.png) on the top-right corner. Alternatively, you may visit https://cs50.io/**\<your-username\>**/ide50/settings where **\<your-username\>** is your CS50 IDE username. Your CS50 IDE username should be part of the URL.
+1. If you are sure you have backed up your files, scroll down to the bottom of the page and click **Delete workspace**.
+1. In the text field type **ide50** and click **Confirm**.
+1. Go to [cs50.io](https://cs50.io/) and log in as usual.
+1. If you're presented with the **Create a new workspace page**, be sure to click **Private** under **Hosted workspace**, and to select **Harvard's CS50** under **Choose a template**.
+1. Follow the instructions per [How to restore my work after backing it up?](#how-to-restore-my-work-after-backing-it-up) to upload your files to your new workspace.
+Let [sysadmins@cs50.harvard.edu](mailto:sysadmins@cs50.harvard.edu) know if you need further assistance!
