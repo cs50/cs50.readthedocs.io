@@ -1,3 +1,7 @@
+collections:
+  pages:
+    output: true
+    permalink: /:path
 defaults:
   -
     scope:
@@ -14,6 +18,7 @@ exclude:
   - "Makefile"
   - "README.md"
   - "passenger_wsgi.py"
+  - "server.conf"
 host: 0.0.0.0
 port: 8080
 title: CS50 Documentation

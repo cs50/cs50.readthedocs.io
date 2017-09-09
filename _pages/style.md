@@ -5,7 +5,7 @@ layout: left
 # Style Guide
 
 There's no one, right way to stylize code. But there are definitely a
-lot of wrong (or, at least, bad ways).  Even so, CS50 does ask that you
+lot of wrong (or, at least, bad ways). Even so, CS50 does ask that you
 adhere to the conventions below so that we can reliably analyze
 your code's style. Similarly do companies typically adopt their own,
 company-wide conventions for style.
@@ -26,50 +26,41 @@ questions:
 Within functions, use "inline comments" and keep them short (e.g., one line), else it becomes
 difficult to distinguish comments from code, even with
 [syntax highlighting](http://en.wikipedia.org/wiki/Syntax_highlighting).
-No need to write in full sentences, but do leave one space between the
+No need to write in full sentences, but do capitalize the comment's first word
+(unless it's the name of a function, variable, or the like), and do leave one space between the
 `//` and your comment's first character, as in:
 
 ```c
-// convert Fahrenheit to Celsius
+// Convert Fahrenheit to Celsius
 float c = 5.0 / 9.0 * (f - 32.0);
 ```
 
 In other words, don't do this:
 
 ```c
-//convert Fahrenheit to Celsius
+//Convert Fahrenheit to Celsius
 float c = 5.0 / 9.0 * (f - 32.0);
 ```
 
 Or this:
  
 ```c
-// Convert Fahrenheit to Celsius.
+// convert Fahrenheit to Celsius
 float c = 5.0 / 9.0 * (f - 32.0);
 ```
 
-Atop your .c and .h files should be multi-line comments that summarize
+Atop your .c and .h files should be a comment that summarize
 what your program (or that particular file) does, as in:
 
 ```c
-/**
- * Says hello to the world.
- */
+// Says hello to the world
 ```
 
-Notice how:
-
-- the first line starts with `/**`;
-- the last line ends with `*/`; and 
-- all of the asterisks (`*`) between those lines line up perfectly in a column.
-
-Atop each of your functions (except, perhaps, `main`), meanwhile, should be multi-line
-comments that summarize what your function, as in:
+Atop each of your functions (except, perhaps, `main`), meanwhile, should be a
+comment that summarize what your function, as in:
 
 ```c
-/**
- * Returns n^2 (n squared).
- */
+// Returns the square of n
 int square(int n)
 {
     return n * n;
@@ -199,7 +190,6 @@ int main(int argc, char **argv)
 }
 ```
 
-
 Do not declare `main` with:
 
 ```c
@@ -245,7 +235,7 @@ since we've preconfigured it to convert `\t` to four spaces.)
 Here's some nicely indented code:
 
 ```c
-// print command-line arguments one per line
+// Print command-line arguments one per line
 printf("\n");
 for (int i = 0; i < argc; i++)
 {
@@ -271,7 +261,7 @@ for (int i = 0; i < LIMIT; i++)
     {
         for (int k = 0; k < LIMIT; k++)
         {
-            // do something
+            // Do something
         }
     }
 }
@@ -287,7 +277,7 @@ Declare `while` loops as follows:
 ```c
 while (condition)
 {
-    // do something
+    // Do something
 }
 ```
 
@@ -305,7 +295,7 @@ Declare `do ... while` loops as follows:
 ```c
 do
 {
-    // do something
+    // Do something
 }
 while (condition);
 ```
