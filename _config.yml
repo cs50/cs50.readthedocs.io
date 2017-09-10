@@ -22,3 +22,5 @@ exclude:
 host: 0.0.0.0
 port: 8080
 title: CS50 Documentation
+titles_from_headings:
+  collections: true
