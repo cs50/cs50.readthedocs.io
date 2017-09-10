@@ -47,4 +47,3 @@ def index(path):
             abort(403)
     else:
         abort(404)
-    return p
