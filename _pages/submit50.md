@@ -122,4 +122,4 @@ Nope, `submit50` uses its own `GIT_DIR` (in `/tmp`). It will ignore any `.git` d
 
 ### How does `submit50` remember my GitHub password?
 
-So that you need only type it once per week, `submit50` remembers your username and password in RAM using [`git-credential-store`](https://git-scm.com/docs/git-credential-store/).
+So that you need only type it once per week, `submit50` remembers your username and password in RAM using [`git-credential-cache`](https://git-scm.com/docs/git-credential-cache/).
