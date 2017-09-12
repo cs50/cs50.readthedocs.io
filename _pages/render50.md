@@ -6,9 +6,10 @@ layout: default
 
 `render50` is a command-line tool with which you can generate syntax-highlighted PDFs of source code. In years past, CS50 generated PDFs of students' submissions so that teaching fellows (TFs) could annotate the PDFs with typed feedback. These days, CS50 generates PDFs of lectures' source code so that students can annotate them during lectures. And so that David has a printout of each lecture's source code in front of him during lecture!
 
-PDFs can be annoated (for free) with:
+PDFs can be annotated (for free) with:
 
 - [Adobe Reader DC](https://acrobat.adobe.com/us/en/acrobat/pdf-reader.html) on macOS and Windows
+- [Evince Document Viewer](https://help.ubuntu.com/community/Evince) on Ubuntu Linux
 - [Preview](https://support.apple.com/en-us/HT201740) on macOS
 
 ## Usage
