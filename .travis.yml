@@ -4,6 +4,9 @@ install: bundle install
 script: bundle exec jekyll build
 deploy:
   provider: elasticbeanstalk
+  edge:
+    source: cs50/dpl
+  force_update: true
   access_key_id: "$AWS_ACCESS_KEY_ID"
   secret_access_key: "$AWS_SECRET_ACCESS_KEY"
   region: us-east-1
