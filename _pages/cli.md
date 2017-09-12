@@ -38,7 +38,11 @@ You can mount some other directory within CS50 CLI as follows, where `path/to/di
 cli50 path/to/directory
 ```
 
-If `~/.gitconfig` exists on your host machine, it will be mounted read-only inside of CS50 CLI.
+If invoked with `--fast` (or `-f`), `cli50` will start CS50 CLI without autoupdating its `cs50/cli` image.
+
+If invoked with `--git` (or `-g`), `cli50` will mount `~/.gitconfig` read-only inside of CS50 CLI.
+
+If invoked with `--ssh` (or `-s`), `cli50` will mount `~/.ssh` read-only inside of CS50 CLI.
 
 ## Notes
 
