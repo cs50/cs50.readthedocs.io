@@ -50,7 +50,6 @@ int main(void)
 
 wherein highlighted are four spaces that should be deleted for style's sake.
 
-
 ## Usage
 
 To check your code's style, execute
