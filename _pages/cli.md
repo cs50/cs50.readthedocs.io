@@ -52,7 +52,6 @@ CS50 CLI differs from a terminal window in [CS50 IDE](https://cs50.io/) in, at l
 | --- | --- | ---
 | Clang | 3.8 | 3.6
 | PHP | 7.1 | 5.5
-| Ruby | 2.4.0 | 2.3.0
 |===
 
 CS50 IDE will eventually be updated to bring it in parity.
