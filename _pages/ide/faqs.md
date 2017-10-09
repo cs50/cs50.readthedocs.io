@@ -93,4 +93,4 @@ Let [sysadmins@cs50.harvard.edu](mailto:sysadmins@cs50.harvard.edu) know if you 
 
 ## How to restore files that I have accidentally deleted?
 
-Please follow the instructions per **[How do I recover a deleted file?](https://community.c9.io/t/how-do-i-recover-a-deleted-file/17/2)** Let sysadmins@cs50.harvard.edu know if you need further assistance!
+Please follow the instructions at **[How do I recover a deleted file?](https://community.c9.io/t/how-do-i-recover-a-deleted-file/17/2)**. Let sysadmins@cs50.harvard.edu know if you need further assistance!
