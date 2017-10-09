@@ -90,3 +90,7 @@ Probably you're using a non-CS50 workspace. Follow these instructions to delete 
 1. If you're presented with the **Create a new workspace page**, be sure to click **Private** under **Hosted workspace**, and to select **Harvard's CS50** under **Choose a template**.
 1. Follow the instructions per [How to restore my work after backing it up?](#how-to-restore-my-work-after-backing-it-up) to upload your files to your new workspace.
 Let [sysadmins@cs50.harvard.edu](mailto:sysadmins@cs50.harvard.edu) know if you need further assistance!
+
+## How to restore files that I have accidentally deleted?
+
+Please follow the instructions at **[How do I recover a deleted file?](https://community.c9.io/t/how-do-i-recover-a-deleted-file/17/2)**. Let sysadmins@cs50.harvard.edu know if you need further assistance!
