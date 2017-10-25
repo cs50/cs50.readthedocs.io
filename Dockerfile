@@ -1,4 +1,4 @@
-FROM cs50/server
+FROM cs50/server:passenger-5.1.11
 EXPOSE 8080
 
 RUN pip3 install raven[flask]
