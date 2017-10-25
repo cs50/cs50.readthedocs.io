@@ -1,6 +1,6 @@
 language: ruby
 rvm: 2.2
-install: bundle install
+cache: bundler
 script: bundle exec jekyll build
 deploy:
   provider: elasticbeanstalk
