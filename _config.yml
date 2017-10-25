@@ -19,6 +19,7 @@ exclude:
   - "README.md"
   - "passenger_wsgi.py"
   - "server.conf"
+  - "vendor"
 host: 0.0.0.0
 port: 8080
 title: CS50 Documentation
