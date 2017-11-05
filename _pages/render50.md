@@ -34,6 +34,12 @@ To generate a PDF (e.g., `foo.pdf`) from multiple source files, including only t
 render50 --include "*.c" foo.pdf *
 ```
 
+or:
+
+```
+render50 -i "*.c" foo.pdf *
+```
+
 Take care to quote (or escape with `\`) any patterns with wildcards, lest your shell glob the pattern before `render50` can.
 
 To generate a PDF (e.g., `foo.pdf`) from multiple source files, excluding those that match some pattern (e.g., `*.h`), execute:
@@ -42,11 +48,37 @@ To generate a PDF (e.g., `foo.pdf`) from multiple source files, excluding those 
 render50 --exclude "*.h" foo.pdf *
 ```
 
+or: 
+
+```
+render50 -e "*.h" foo.pdf *
+```
+
 As before, take care to quote (or escape with `\`) any patterns with wildcards, lest your shell glob the pattern before `render50` can.
+
+To generate a PDF (e.g., `foo.pdf`) with two source files (e.g., `bar.c` and `baz.c`) side by side, execute:
+
+```
+render50 --side-by-side foo.pdf bar.c baz.c
+```
+
+or:
+
+```
+render50 --y foo.pdf bar.c baz.c
+```
 
 To recurse into directories, invoke `render50` with `--recursive` (or `-r`).
 
-To disable syntax highlighting, invoke `render50` with `--no-color`.
+To disable syntax highlighting, invoke `render50` with `--no-color` (or `-C`).
+
+To generate a PDF (e.g., `foo.pdf`) with a source file at a URL (e.g., https://github.com/cs50/render50/blob/master/render50), execute:
+
+```
+render50 foo.pdf https://github.com/cs50/render50/blob/master/render50
+```
+
+Note that URLs on `github.com` are handled specially: URLs of the form `https://github.com/*/*/blob/*` are resolved to `https://github.com/*/*/raw/*` so that the file is downloaded from `raw.githubusercontent.com`.
 
 By default, `render50` outputs letter-sized (8.5" × 11") pages in landscape orientation. To override that default, invoke `render50` with `--size SIZE`, where `SIZE` is [as prescribed by CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/@page/size). Supported values for `SIZE` thus include:
 
