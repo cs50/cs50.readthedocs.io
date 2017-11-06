@@ -98,6 +98,8 @@ To install `render50` within that command-line environment:
    ```
    to install `render50` itself.
 
+And then install [WeasyPrint](http://weasyprint.readthedocs.io/en/latest/install.html)'s dependencies.
+
 ## Upgrading
 
 Execute
