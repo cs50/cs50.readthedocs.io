@@ -73,7 +73,7 @@ By default, `render50` outputs letter-sized (8.5" × 11") pages in landscape ori
 
 `render50` is already installed for you in [CS50 IDE](https://cs50.io/), so no need to install it yourself; simply use it as directed!
 
-If you'd like to install `render50` on your own Mac or PC, so that you can check your code's style without using CS50 IDE, you'll need a command-line environment:
+If you'd like to install `render50` on your own Mac or PC, so that you can render PDFs without using CS50 IDE, you'll need a command-line environment:
 
 - If running Linux or the like, you already have one! Open a terminal window in your usual way.
 - If running Mac OS, you already have one! Open **Applications > Utilities > Terminal**.
