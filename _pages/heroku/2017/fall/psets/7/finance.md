@@ -45,9 +45,13 @@ Here's how to deploy your implementation of [C$50 Finance](https://docs.cs50.net
 1. Create a new app at <https://dashboard.heroku.com/new-app>.
 
 1. Via the **Deploy** tab that appears, configure your app as follows.
+
     * **Add this app to a pipeline:** No need to configure; leave as is.
+
     * **Deployment method:** Select **GitHub**, then click **Connect to GitHub**. If prompted to log into GitHub, click **Authorize heroku**.
+
     * **App connected to GitHub:** Search for your app's repository (e.g., `username/finance`, where `username` is your own GitHub username), then click **Connect**.
+
     * **Automatic deploys:** Click **Enable Automatic Deploys**.
 
 1. Create a new file in CS50 IDE called `Procfile` in `~/workspace/pset7/finance/` whose contents are:
