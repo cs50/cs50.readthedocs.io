@@ -12,7 +12,7 @@ Here's how to deploy your implementation of [C$50 Finance](https://docs.cs50.net
 
 1. Create a new **private** repository at <https://github.com/new> (called, e.g., `finance`).
 
-1. Highlight and copy the **HTTPS** URL of the repository (e.g., `https://github.com/username/finance.git`, where `username` is your own GitHub username).
+1. Take note of the **HTTPS** URL of the repository (e.g., `https://github.com/username/finance.git`, where `username` is your own GitHub username).
 
 1. Change to your implementation's directory on CS50 IDE.
 
@@ -44,7 +44,7 @@ Here's how to deploy your implementation of [C$50 Finance](https://docs.cs50.net
 
 1. Create a new app at <https://dashboard.heroku.com/new-app>.
 
-1. Via the **Deploy** tab that appears, configure your app as follows.
+1. Configure your app at `https://dashboard.heroku.com/apps/app-name/deploy/github`, where `app-name` is your Heroku app's name.
 
     * **Add this app to a pipeline:** No need to configure; leave as is.
 
@@ -53,6 +53,18 @@ Here's how to deploy your implementation of [C$50 Finance](https://docs.cs50.net
     * **App connected to GitHub:** Search for your app's repository (e.g., `username/finance`, where `username` is your own GitHub username), then click **Connect**.
 
     * **Automatic deploys:** Click **Enable Automatic Deploys**.
+
+1. Search for and provision **Heroku Postgres** at https://dashboard.heroku.com/apps/app-name/resources; select a **Plan name** of **Hobby Dev — Free**.
+
+1. At `https://dashboard.heroku.com/apps/app-name/resources`, where `app-name` is your Heroku app's name, click **Heroku Postgres :: Database**. In the tab that opens, click **Settings**, then click **View Credentials...**. Highlight and copy the **URI** that appears.
+
+1. In CS50 IDE, connect to the database, where `URI` is that URI.
+
+    ```
+    psql URI
+    ```
+
+1. TODO
 
 1. Create a new file in CS50 IDE called `Procfile` in `~/workspace/pset7/finance/` whose contents are:
 
