@@ -8,7 +8,7 @@ Here's how to deploy your implementation of [C$50 Finance](https://docs.cs50.net
 
 1. Watch [Brian's seminar](https://youtu.be/MJUJ4wbFm_A) to learn about `git` and GitHub, if not already familiar.
 
-1. Sign up for free private repositories at <https://education.github.com/discount_requests/new>. 
+1. Sign up for free, private GitHub repositories at <https://education.github.com/discount_requests/new>. 
 
 1. Create a new **private** repository at <https://github.com/new> (called, e.g., `finance`).
 
@@ -40,7 +40,7 @@ Here's how to deploy your implementation of [C$50 Finance](https://docs.cs50.net
     ```
     If you visit `https://github.com/username/finance`, where `username` is your own GitHub username, you should see your code in the repository. 
 
-1. Sign up for a free account at <https://signup.heroku.com/>, if you don't have one already.
+1. Sign up for a free Heroku account at <https://signup.heroku.com/>, if you don't have one already.
 
 1. Create a new app at <https://dashboard.heroku.com/new-app>.
 
@@ -69,4 +69,4 @@ Here's how to deploy your implementation of [C$50 Finance](https://docs.cs50.net
     git push
     ```
 
-If you visit `https://app-name.herokuapp.com/`, where `app-name` is your Heroku app's name, you should see your app! If you instead see some error, visit `https://dashboard.heroku.com/apps/app-name/logs, where `app-name` is your app's name, to diagnose the issue!
+    If you visit `https://app-name.herokuapp.com/`, where `app-name` is your Heroku app's name, you should see your app! If you instead see some error, visit `https://dashboard.heroku.com/apps/app-name/logs`, where `app-name` is your app's name, to diagnose! Each time you add (new or changed) files to your repository and push to GitHub hereafter, your app will be re-deployed to Heroku.
