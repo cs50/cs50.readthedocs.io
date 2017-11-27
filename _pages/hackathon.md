@@ -79,7 +79,7 @@ of the CS50 Bot's confirmation of your spot)
 
 To chat with classmates during the Hackathon, visit [cs50.ly/slack](https://cs50.ly/slack) and join (or create) any channels of interest. If prompted, enabled "desktop notifications."
 
-* To create a new channel, click ⊕ to the right of *CHANNELS* at top-left.
+* To create a new channel, click ⊕ to the right of **CHANNELS** at top-left.
 * To message everyone within a channel, start your message with `@channel`.
 * To get someone's attention in a chat room, type `@` and then their name (assuming they've logged in too).
 
