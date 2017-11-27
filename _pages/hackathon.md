@@ -94,9 +94,7 @@ as to whether you have a spot! If not, email
 
 ### Can I arrive late?
 
-Yes, but only if you receive an email from the CS50 Bot confirming a
-"late arrival" for you. (Space is limited, so we try to give preference
-to those who can partake for the entire time.)
+Yes, but only if you receive an email from the CS50 Bot or one of the course's heads confirming a "late arrival" for you. (Space is limited, so we try to give preference to those who can partake for the entire time.)
 
 ### Can I leave early?
 
