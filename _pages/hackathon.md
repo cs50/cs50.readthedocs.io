@@ -36,7 +36,7 @@ So that check-in isn't overwhelmed (and you aren't stuck waiting in line!), do a
 
 ### Yale Students
 
-So that we arrive in time for Hackathon's start, please meet outside Arthur K. Watson at 51 Prospect Street by *3:45pm* on Thu 11/30. You will be asked to fill out a brief waiver form before boarding the charter buses, which are scheduled for a prompt 4pm departure. Buses should have outlets and Wi-Fi, though best to charge all gear and download all files ahead of time, just in case. In addition, food will not be served until 9pm or so at the Hackathon, so best to order a bag lunch or bring other snacks with you for the ride. Finally, a reminder that if you take a bus to Harvard with us, you **must** return to Yale with us.
+So that we arrive in time for Hackathon's start, please meet outside Arthur K. Watson at 51 Prospect Street by **3:45pm** or **5:15** (depending on your assigned bus) on Thu 11/30. You will be asked to fill out a brief waiver form before boarding the charter buses, which are scheduled for prompt 4pm and 5:30pm departures. Buses should have outlets and Wi-Fi, though best to charge all gear and download all files ahead of time, just in case. In addition, food will not be served until 9pm or so at the Hackathon, so best to order a bag lunch or bring other snacks with you for the ride. Finally, a reminder that if you take a bus to Harvard with us, you **must** return to Yale with us.
 
 ## How to get there
 
@@ -116,7 +116,7 @@ Please forgive if we can't accommodate everyone who'd like to go!
 
 ### How do I check in upon arrival?
 
-First visit the check-in tables in the ground-floor lobby. Then complete your check-in at https://cs50.net/[cs50.net/checkin].
+First visit the check-in tables in the ground-floor lobby. Then complete your check-in at [cs50.ly/checkin](https://cs50.ly/checkin).
 
 ### How do I check out before leaving?
 
