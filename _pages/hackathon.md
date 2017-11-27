@@ -146,7 +146,7 @@ Some, yes. It'll be set aside, so just check with the staff as to where it is.
 
 #### Harvard Students
 
-*If, because of mobility impairment or medical condition, you find it difficult or impossible to use Harvard's shuttles, do contact the http://www.transportation.harvard.edu/shuttle-van-services/evening-van-service[Evening Van Service] in advance of the Hackathon to make arrangements to and from the Hackathon.  Just let mailto:heads@cs50.harvard.edu[heads@cs50.harvard.edu] know if you need a hand.*
+**If, because of mobility impairment or medical condition, you find it difficult or impossible to use Harvard's shuttles, do contact the [Evening Van Service](http://www.transportation.harvard.edu/shuttle-van-services/evening-van-service) in advance of the Hackathon to make arrangements to and from the Hackathon. Just let <heads@cs50.harvard.edu> know if you need assistance.**
 
 ##### To the Hackathon?
 
