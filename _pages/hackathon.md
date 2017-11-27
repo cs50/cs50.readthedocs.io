@@ -119,7 +119,7 @@ Simply visit [cs50.ly/checkout](cs50.ly/checkout)!
 ### What if I can't attend after all?
 
 If the CS50 Bot confirmed your spot but you can no longer attend, please
-email mailto:heads@cs50.harvard.edu[heads@cs50.harvard.edu] right away so that we can give your spot to
+email <heads@cs50.harvard.edu> right away so that we can give your spot to
 someone who might be waitlisted.
 
 ### What if my partner was waitlisted but I wasn't?
