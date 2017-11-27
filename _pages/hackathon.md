@@ -100,7 +100,13 @@ to those who can partake for the entire time.)
 
 ### Can I leave early?
 
+#### Harvard Students
+
 If you really, really want to, yes.  If you leave before 3am, call the [Evening Van Service](http://www.transportation.harvard.edu/shuttle-van-services/evening-van-service) at 617-495-0400 before 2:30am to arrange for pick-up. If you leave between 3am and 5am, best to use [Lyft](https://www.lyft.com/) or [Uber](https://get.uber.com/) or call 617-782-5500 for a taxi. If leaving on foot, be sure to walk with multiple friends.
+
+#### Yale Students
+
+Afraid the buses won't be leaving until 5am! And if you take a bus from New Haven to Cambridge, you **must** return to New Haven on the bus; afraid it's not allowed to stay behind in Cambridge.
 
 ### Can I go to IHOP?
 
@@ -170,7 +176,7 @@ Yes, see [when to get there](#when-to-get-there).
 
 ##### From the Hackathon?
 
-Yes, via the charter buses on which you arrived. On Fri 12/1 morning, these buses will depart for IHOP, where a bountiful (likely bleary-eyed) breakfast will be served. We'll then return to Yale, arriving around 10am.
+Yes, via the charter buses on which you arrived. On Fri 12/1 morning, one bus will head straight to New Haven (in time for Friday-morning classes) and one will stop at IHOP (arriving in New Haven by 10am).
 
 ### Will there be office hours?
 
