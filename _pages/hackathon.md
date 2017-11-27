@@ -52,7 +52,7 @@ If you find yourself lost, call 413-400-CS50 and tell us what you see around you
 
 ### Yale Students
 
-See [When to get there](#when-to-get-there).
+See [when to get there](#when-to-get-there).
 
 ## What to bring 
 
