@@ -50,9 +50,9 @@ So that we arrive in time for Hackathon's start, please meet outside Arthur K. W
 If you find yourself lost, call 413-400-CS50 and tell us what you see around you!
 -->
 
-### Yale Studens
+### Yale Students
 
-See [When to get there](#when_to_get_there).
+See [When to get there](#when-to-get-there).
 
 ## What to bring 
 
@@ -128,11 +128,11 @@ Let <heads@cs50.harvard.edu> know.
 
 ### When does it end?
 
-By 5am for folks who're sleepy and by 7am for folks who're awake (and hungry!) for IHOP, though [attendance at breakfast might be lotteried](#can_i_go_to_ihop).
+By 5am for folks who're sleepy and by 7am for folks who're awake (and hungry!) for IHOP, though [attendance at breakfast might be lotteried](#can-i-go-to-ihop).
 
 ### When does it start?
 
-Around 7pm, but do check <<when_to_get_there,when to get there>>.
+Around 7pm, but do check [when to get there](#when-to-get-there).
 
 ### Will there be food and drinks?
 
@@ -166,7 +166,7 @@ Please forgive, especially if weary or grumpy at that hour, if we can't quite fi
 
 ##### To the Hackathon?
 
-Yes, see [when to get there](#when_to_get_there).
+Yes, see [when to get there](#when-to-get-there).
 
 ##### From the Hackathon?
 
