@@ -44,7 +44,7 @@ So that we arrive in time for Hackathon's start, please meet outside Arthur K. W
 
 * If **walking** from, say, Out of Town News, [follow this route](https://www.google.com/maps/dir/Harvard+Square,+18+Brattle+St+%23352,+Cambridge,+MA+02138/125+Western+Ave,+Allston,+Boston,+MA/@42.3686033,-71.1295785,15z/data=!4m19!4m18!1m10!1m1!1s0x89e37742bc65ca79:0x59ca183286a63b76!2m2!1d-71.11896!2d42.373532!3m4!1m2!1d-71.1254162!2d42.3666013!3s0x89e377610cfd3869:0x1025a278cd0f4aa5!1m5!1m1!1s0x89e37761d7d4572b:0xaf083e816c6fc10c!2m2!1d-71.124626!2d42.363655!3e2). Odds are the walk will take 20+ minutes.
 * If **taking the shuttle**, take the Allston Express to the i-lab (which is where the HBS Hives are), per the schedule for the [Allston Campus Express PM](http://www.transportation.harvard.edu/shuttle-van-services/shuttles-schedule/evening-nights-monday-friday); consult the column called **i Lab Western Ave**. Those are regularly scheduled shuttles, not CS50 Shuttles, so space will be limited.  Odds are the trip will take 10+ minutes.
-* If *driving*, drive to [125 Western Avenue](https://maps.google.com/maps?t=m&q=125+Western+Avenue%2C+Boston+MA&output=classic) in Allston (aka Boston).  Metered parking is available **behind** the i-lab, in the lot whose entrance is on Western Avenue itself.
+* If **driving**, drive to [125 Western Avenue](https://maps.google.com/maps?t=m&q=125+Western+Avenue%2C+Boston+MA&output=classic) in Allston (aka Boston).  Metered parking is available **behind** the i-lab, in the lot whose entrance is on Western Avenue itself.
 
 <!--
 If you find yourself lost, call 413-400-CS50 and tell us what you see around you!
