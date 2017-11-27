@@ -1,5 +1,5 @@
 ---
-toc: left
+layout: left
 ---
 
 # CS50 Hackathon
