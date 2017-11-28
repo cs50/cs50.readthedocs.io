@@ -46,9 +46,7 @@ So that we arrive in time for Hackathon's start, please meet outside Arthur K. W
 * If **taking the shuttle**, take the Allston Express to the i-lab (which is where the HBS Hives are), per the schedule for the [Allston Campus Express PM](http://www.transportation.harvard.edu/shuttle-van-services/shuttles-schedule/evening-nights-monday-friday); consult the column called **i Lab Western Ave**. Those are regularly scheduled shuttles, not CS50 Shuttles, so space will be limited.  Odds are the trip will take 10+ minutes.
 * If **driving**, drive to [125 Western Avenue](https://maps.google.com/maps?t=m&q=125+Western+Avenue%2C+Boston+MA&output=classic) in Allston (aka Boston).  Metered parking is available **behind** the i-lab, in the lot whose entrance is on Western Avenue itself.
 
-<!--
-If you find yourself lost, call 413-400-CS50 and tell us what you see around you!
--->
+If you find yourself lost, call the course's heads at 617-506-9150 and tell us what you see around you!
 
 ### Yale Students
 
