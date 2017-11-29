@@ -44,9 +44,6 @@ NOTE: Be sure to check **Private**, under **Hosted Workspace**, if not checked.
 
 All you'll need to do is create it! You can then access CS50 IDE from your Cloud9 dashboard, like you would access any other workspace.
 
-## I registered for edX using my Facebook, Google, or Microsoft account, and can't log into the CS50 IDE. What should I do?
-
-Unfortunately, edX's OpenID (which we use for authentication) doesn't support logging in with Facebook, Google, or Microsoft accounts yet. To get around this, for now, you should try restting your password (even though you may have never set any before) from your [Account Settings](https://courses.edx.org/account/settings) page on edX, then head to [cs50.io](https://cs50.io/) again and log in with the email associated with your Facebook, Google, or Microsoft account you use to log into edX, and the password you just set.
 
 ## I see a `.c9` folder appearing right under my `~/workspace` folder, that I haven't created. Is this normal?
 
