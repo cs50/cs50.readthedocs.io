@@ -54,17 +54,31 @@ Here's how to deploy your implementation of [C$50 Finance](https://docs.cs50.net
 
     * **Automatic deploys:** Click **Enable Automatic Deploys**.
 
-1. Search for and provision **Heroku Postgres** at https://dashboard.heroku.com/apps/app-name/resources; select a **Plan name** of **Hobby Dev — Free**.
+1. Search for and provision **Heroku Postgres** at <https://dashboard.heroku.com/apps/app-name/resources>; select a **Plan name** of **Hobby Dev — Free**.
 
 1. At `https://dashboard.heroku.com/apps/app-name/resources`, where `app-name` is your Heroku app's name, click **Heroku Postgres :: Database**. In the tab that opens, click **Settings**, then click **View Credentials...**. Highlight and copy the **URI** that appears.
 
-1. In CS50 IDE, connect to the database, where `URI` is that URI.
+1. In CS50 IDE, open `application.py` in `~/workspace/pset7/finance/` and find:
+
+    ```py
+    db = SQL("sqlite:///finance.db")
+    ```
+
+    Replace `sqlite:///finance.db` with that URI (so that the CS50 Library will connect to your Postgres database instead of your SQLite database).
+
+1. In CS50 IDE, execute the below to import `finance.db` into your Postgres database, where `URI` is that same URI. Be sure to append `?sslmode=require` to the URI.
 
     ```
-    psql URI
+    pgloader finance.db URI?sslmode=require
     ```
 
-1. TODO
+    Thereafter, if you'd like to browse or edit your Postgres database, you can use Adminer (a tool like phpLiteAdmin for Postgres databases), which is installed on CS50 IDE. To launch Adminer, execute
+
+    ```
+    adminer50
+    ```
+
+    and visit the outputted URL. Log in using your database's credentials: at `https://dashboard.heroku.com/apps/app-name/resources`, where `app-name` is your Heroku app's name, click **Heroku Postgres :: Database**. In the tab that opens, click **Settings**, then click **View Credentials...**. 
 
 1. Create a new file in CS50 IDE called `Procfile` in `~/workspace/pset7/finance/` whose contents are:
 
