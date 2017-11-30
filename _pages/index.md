@@ -13,6 +13,7 @@ title: CS50 Documentation
 - [CS50 Server](server)
 - CS50x
   - [FAQs](cs50x/faqs)
+- [Heroku](heroku)
 - [`render50`](render50)
 - [Style Guide](style)
 - [`style50`](style50)
