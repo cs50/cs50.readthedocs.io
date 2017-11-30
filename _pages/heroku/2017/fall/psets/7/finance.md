@@ -54,7 +54,7 @@ Here's how to deploy your implementation of [C$50 Finance](https://docs.cs50.net
 
     * **Automatic deploys:** Click **Enable Automatic Deploys**.
 
-1. Search for and provision **Heroku Postgres** at <https://dashboard.heroku.com/apps/app-name/resources>; select a **Plan name** of **Hobby Dev — Free**.
+1. Search for and provision **Heroku Postgres** at `https://dashboard.heroku.com/apps/app-name/resources`, where `app-name` is your Heroku app's name; select a **Plan name** of **Hobby Dev — Free**.
 
 1. At `https://dashboard.heroku.com/apps/app-name/resources`, where `app-name` is your Heroku app's name, click **Heroku Postgres :: Database**. In the tab that opens, click **Settings**, then click **View Credentials...**. Highlight and copy the **URI** that appears.
 
