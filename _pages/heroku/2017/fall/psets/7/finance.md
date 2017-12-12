@@ -35,7 +35,7 @@ Here's how to deploy your implementation of [C$50 Finance](https://docs.cs50.net
 1. Push your code to GitHub.
 
     ```
-    git add -am "first commit"
+    git commit -am "first commit"
     git push -u origin master
     ```
     If you visit `https://github.com/username/finance`, where `username` is your own GitHub username, you should see your code in the repository. 
