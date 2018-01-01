@@ -20,6 +20,7 @@ exclude:
   - "passenger_wsgi.py"
   - "server.conf"
   - "vendor"
+  - "vender"
 host: 0.0.0.0
 port: 8080
 title: CS50 Documentation
