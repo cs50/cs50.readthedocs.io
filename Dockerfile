@@ -1,4 +1,4 @@
-FROM cs50/server:ubuntu
+FROM cs50/server
 EXPOSE 8080
 
 RUN pip3 install raven[flask]
