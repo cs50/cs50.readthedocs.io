@@ -6,6 +6,12 @@ layout: left
 
 There's no one, right way to stylize code. But there are definitely a lot of wrong (or, at least, bad ways). Even so, CS50 does ask that you adhere to the conventions below so that we can reliably analyze your code's style. Similarly do companies typically adopt their own, company-wide conventions for style.
 
+## Line Length
+
+A convention the maximum length of a line of code is 80 characters long in C, with that being historically grounded in relatively standard-sized monitors on older computer terminals, which could display 24 lines vertically and 80 characters horizontally. Though modern technology has obsoleted the need to keep lines capped at 80 characters, it is still a guidelines that should be considered a "soft stop," and a line of 100 characters should really be the longest you write in C. If you need more than 100 characters, it may be time to rethink either your variable names or your overall design!
+<br>
+In other languages, particularly JavaScript, it is significantly more difficult to constrain lines to a maximum length; there, your goal should instead be to break up lines (as via `\n`) in locations that maximize readability and clarity.
+
 ## Comments
 
 Comments make code more readable, not only for others (e.g., your TF) but also for you, especially when hours, days, weeks, months, or years pass between writing and reading your own code. Commenting too little is bad. Commenting too much is bad. Where's the sweet spot? Commenting every few lines of code (i.e., interesting blocks) is a decent guideline. Try to write comments that address one or both of these questions:
