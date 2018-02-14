@@ -8,14 +8,15 @@ There's no one, right way to stylize code. But there are definitely a lot of wro
 
 ## Line Length
 
-A convention the maximum length of a line of code is 80 characters long in C, with that being historically grounded in relatively standard-sized monitors on older computer terminals, which could display 24 lines vertically and 80 characters horizontally. Though modern technology has obsoleted the need to keep lines capped at 80 characters, it is still a guideline that should be considered a "soft stop," and a line of 100 characters should really be the longest you write in C, else readers will generally need to scroll. If you need more than 100 characters, it may be time to rethink either your variable names or your overall design!
+By convention the maximum length of a line of code is 80 characters long in C, with that being historically grounded in standard-sized monitors on older computer terminals, which could display 24 lines vertically and 80 characters horizontally. Though modern technology has obsoleted the need to keep lines capped at 80 characters, it is still a guideline that should be considered a "soft stop," and a line of 100 characters should really be the longest you write in C, else readers will generally need to scroll. If you need more than 100 characters, it may be time to rethink either your variable names or your overall design!
 
 ```c
-int first_collected_integer_value_from_user = get_int("Number please: ");
-int second_collected_integer_value_from_user = get_int("Another number please: ");
+// These next lines of code first prompt the user to give two integer values and then multiplies those two integer values together so they can be used later in the program
+int first_collected_integer_value_from_user = get_int("Integer please: ");
+int second_collected_integer_value_from_user = get_int("Another integer please: ");
 int product_of_the_two_integer_values_from_user = first_collected_integer_value_from_user * second_collected_integer_value_from_user;
 ```
-<br>
+
 In other languages, particularly JavaScript, it is significantly more difficult to constrain lines to a maximum length; there, your goal should instead be to break up lines (as via `\n`) in locations that maximize readability and clarity.
 
 ## Comments
