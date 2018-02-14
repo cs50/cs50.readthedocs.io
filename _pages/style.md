@@ -4,31 +4,16 @@ layout: left
 
 # Style Guide
 
-There's no one, right way to stylize code. But there are definitely a
-lot of wrong (or, at least, bad ways). Even so, CS50 does ask that you
-adhere to the conventions below so that we can reliably analyze
-your code's style. Similarly do companies typically adopt their own,
-company-wide conventions for style.
+There's no one, right way to stylize code. But there are definitely a lot of wrong (or, at least, bad ways). Even so, CS50 does ask that you adhere to the conventions below so that we can reliably analyze your code's style. Similarly do companies typically adopt their own, company-wide conventions for style.
 
 ## Comments
 
-Comments make code more readable, not only for others (e.g., your TF)
-but also for you, especially when hours, days, weeks, months, or years
-pass between writing and reading your own code. Commenting too little is
-bad. Commenting too much is bad. Where's the sweet spot? Commenting
-every few lines of code (i.e., interesting blocks) is a decent rule of
-thumb. Try to write comments that address one or both of these
-questions:
+Comments make code more readable, not only for others (e.g., your TF) but also for you, especially when hours, days, weeks, months, or years pass between writing and reading your own code. Commenting too little is bad. Commenting too much is bad. Where's the sweet spot? Commenting every few lines of code (i.e., interesting blocks) is a decent guideline. Try to write comments that address one or both of these questions:
 
 1. What does this block do?
 1. Why did I implement this block in this way?
 
-Within functions, use "inline comments" and keep them short (e.g., one line), else it becomes
-difficult to distinguish comments from code, even with
-[syntax highlighting](http://en.wikipedia.org/wiki/Syntax_highlighting).
-No need to write in full sentences, but do capitalize the comment's first word
-(unless it's the name of a function, variable, or the like), and do leave one space between the
-`//` and your comment's first character, as in:
+Within functions, use "inline comments" and keep them short (e.g., one line), else it becomes difficult to distinguish comments from code, even with [syntax highlighting](http://en.wikipedia.org/wiki/Syntax_highlighting). Place the comment above the line(s) to which it applies. No need to write in full sentences, but do capitalize the comment's first word (unless it's the name of a function, variable, or the like), and do leave one space between the `//` and your comment's first character, as in:
 
 ```c
 // Convert Fahrenheit to Celsius
@@ -49,15 +34,19 @@ Or this:
 float c = 5.0 / 9.0 * (f - 32.0);
 ```
 
-Atop your .c and .h files should be a comment that summarize
-what your program (or that particular file) does, as in:
+Or this:
+
+```c
+float c = 5.0 / 9.0 * (f - 32.0); // Convert Fahrenheit to Celsius
+```
+
+Atop your .c and .h files should be a comment that summarize what your program (or that particular file) does, as in:
 
 ```c
 // Says hello to the world
 ```
 
-Atop each of your functions (except, perhaps, `main`), meanwhile, should be a
-comment that summarize what your function, as in:
+Atop each of your functions (except, perhaps, `main`), meanwhile, should be a comment that summarize what your function, as in:
 
 ```c
 // Returns the square of n
@@ -88,16 +77,13 @@ else
 
 Notice how:
 
-- the curly braces line up nicely, each on its own line, making perfectly clear
-what's inside the branch;
+- the curly braces line up nicely, each on its own line, making perfectly clear what's inside the branch;
 - there's a single space after each `if`;
 - each call to `printf` is indented with 4 spaces;
 - there are single spaces around the `>` and around the `>`; and
 - there isn't any space immediately after each `(` or immediately before each `)`.
 
-To save space, some programmers like to keep the first curly brace on the
-same line as the condition itself, but we don't recommend, as it's
-harder to read, so don't do this:
+To save space, some programmers like to keep the first curly brace on the same line as the condition itself, but we don't recommend, as it's harder to read, so don't do this:
 
 ```c
 if (x < 0) {
@@ -217,20 +203,11 @@ main()
 }
 ```
 
-As for your own functions, be sure to define them similiarly, with each curly
-brace on its own line and with the return type on the same line as the function's name, 
-just as we've done with `main`.
+As for your own functions, be sure to define them similiarly, with each curly brace on its own line and with the return type on the same line as the function's name, just as we've done with `main`.
 
 ## Indentation
 
-Indent your code four spaces at a time to make clear which blocks of
-code are inside of others. If you use your keyboard's Tab key to do so,
-be sure that your text editor's configured to convert tabs (`\t`) to
-four spaces, else your code may not print or display properly on someone
-else's computer, since `\t` renders differently in different editors.
-(If using [CS50 IDE](https://cs50.io/), it's fine to use
-Tab for indentation, rather than hitting your keyboard's space bar repeatedly,
-since we've preconfigured it to convert `\t` to four spaces.) 
+Indent your code four spaces at a time to make clear which blocks of code are inside of others. If you use your keyboard's Tab key to do so, be sure that your text editor's configured to convert tabs (`\t`) to four spaces, else your code may not print or display properly on someone else's computer, since `\t` renders differently in different editors. (If using [CS50 IDE](https://cs50.io/), it's fine to use Tab for indentation, rather than hitting your keyboard's space bar repeatedly, since we've preconfigured it to convert `\t` to four spaces.) 
 
 Here's some nicely indented code:
 
@@ -251,8 +228,7 @@ for (int i = 0; i < argc; i++)
 
 ### for
 
-Whenever you need temporary variables for iteration, use `i`, then `j`,
-then `k`, unless more specific names would make your code more readable:
+Whenever you need temporary variables for iteration, use `i`, then `j`, then `k`, unless more specific names would make your code more readable:
 
 ```c
 for (int i = 0; i < LIMIT; i++)
@@ -267,8 +243,7 @@ for (int i = 0; i < LIMIT; i++)
 }
 ```
 
-If you need more than three variables for iteration, it might be time to
-rethink your design!
+If you need more than three variables for iteration, it might be time to rethink your design!
 
 ### while
 
@@ -323,11 +298,7 @@ int* p;
 
 ## Variables
 
-Because CS50 uses [C99](http://en.wikipedia.org/wiki/C99), do not define
-all of your variables at the very top of your functions but, rather,
-when and where you actually need them. Moreover, scope your variables as
-tightly as possible. For instance, if `i` is only needed for the sake of
-a loop, declare `i` within the loop itself:
+Because CS50 uses [C99](http://en.wikipedia.org/wiki/C99), do not define all of your variables at the very top of your functions but, rather, when and where you actually need them. Moreover, scope your variables as tightly as possible. For instance, if `i` is only needed for the sake of a loop, declare `i` within the loop itself:
 
 ```c
 for (int i = 0; i < LIMIT; i++)
@@ -336,15 +307,9 @@ for (int i = 0; i < LIMIT; i++)
 }
 ```
 
-Though it's fine to use variables like `i`, `j`, and `k` for iteration,
-most of your variables should be more specifically named. If you're
-summing some values, for instance, call your variable `sum`. If your
-variable's name warrants two words (e.g., `is_ready`), put an underscore
-between them, a convention popular in C though less so in other
-languages.
+Though it's fine to use variables like `i`, `j`, and `k` for iteration, most of your variables should be more specifically named. If you're summing some values, for instance, call your variable `sum`. If your variable's name warrants two words (e.g., `is_ready`), put an underscore between them, a convention popular in C though less so in other languages.
 
-If declaring multiple variables of the same type at once, it's fine to
-declare them together, as in:
+If declaring multiple variables of the same type at once, it's fine to declare them together, as in:
 
 ```c
 int quarters, dimes, nickels, pennies;
