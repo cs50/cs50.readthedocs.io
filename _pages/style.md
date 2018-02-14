@@ -8,7 +8,7 @@ There's no one, right way to stylize code. But there are definitely a lot of wro
 
 ## Line Length
 
-A convention the maximum length of a line of code is 80 characters long in C, with that being historically grounded in relatively standard-sized monitors on older computer terminals, which could display 24 lines vertically and 80 characters horizontally. Though modern technology has obsoleted the need to keep lines capped at 80 characters, it is still a guidelines that should be considered a "soft stop," and a line of 100 characters should really be the longest you write in C. If you need more than 100 characters, it may be time to rethink either your variable names or your overall design!
+A convention the maximum length of a line of code is 80 characters long in C, with that being historically grounded in relatively standard-sized monitors on older computer terminals, which could display 24 lines vertically and 80 characters horizontally. Though modern technology has obsoleted the need to keep lines capped at 80 characters, it is still a guideline that should be considered a "soft stop," and a line of 100 characters should really be the longest you write in C, else readers will generally need to scroll. If you need more than 100 characters, it may be time to rethink either your variable names or your overall design!
 
 ```c
 int first_collected_integer_value_from_user = get_int("Number please: ");
