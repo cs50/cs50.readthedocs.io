@@ -46,6 +46,14 @@ Atop your .c and .h files should be a comment that summarize what your program (
 // Says hello to the world
 ```
 
+You may also wish you to include your name, the date, and any other relevant information in your comments atop your .c and .h files:
+
+```c
+// John Harvard
+// 1 January 2018
+// Problem Set 1
+```
+
 Atop each of your functions (except, perhaps, `main`), meanwhile, should be a comment that summarize what your function, as in:
 
 ```c
