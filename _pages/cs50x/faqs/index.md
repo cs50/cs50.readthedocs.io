@@ -33,13 +33,13 @@ You don't get any extra points for doing the "more comfortable" problems. If you
 
 Nope!  If you would like an edX Verified Certificate, you can pay for verification at any point during the year, even after completing all of the coursework.
 
-## If I paid for a verified certificate before 2017, do I need to pay again?
+## If I paid for a verified certificate before 2018, do I need to pay again?
 
 No, you should be able to re-verify yourself via edX's [dashboard](https://courses.edx.org/dashboard).
 
-## If I started CS50x before 2017, can I resume?
+## If I started CS50x before 2018, can I resume?
 
-Yes, any scores you received on past years' problem sets will (soon) be imported into CS50x 2017. (We're still updating CS50x 2017's gradebook.) However, moving forward, you must submit CS50x 2017's problem sets, per the [syllabus](https://courses.edx.org/courses/course-v1:HarvardX+CS50+X/dfface6ffc1c43e6882a245c945f7feb/).
+Yes, any scores you received on past years' problem sets will be imported into CS50x 2018. However, moving forward, you must submit CS50x 2018's problem sets, per the [syllabus](https://courses.edx.org/courses/course-v1:HarvardX+CS50+X/dfface6ffc1c43e6882a245c945f7feb/).
 
 ## Is my child too young to take CS50x?
 
