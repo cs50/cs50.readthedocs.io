@@ -123,12 +123,6 @@ CS50 IDE also provides **Presentation Mode** in which the user interface is even
 
 ## Sharing Your Workspace
 
-### Code Sharing
-
-You can easily share code snippets as GitHub gists by highlighting the lines you want to share and clicking the ![octocat](ide/octocat.png) button on the left. Do be reasonable, per CS50's policy on academic honesty.
-
-![gist](ide/gist.png)
-
 ### Adding Users to Your Workspace
 
 Sometimes it's useful to share your workspace with someone (e.g. your teacher or TF) to assist you with something. If using the online IDE, and you have the username or email of the user with whom you want to share your workspace, use the **Share** button near the upper-right corner, type that username or email in the text field under **Invite People** and click **Invite**.
