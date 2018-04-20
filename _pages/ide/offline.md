@@ -39,7 +39,7 @@ NOTE: If [these system requirements](https://docs.docker.com/docker-for-mac/inst
 
 NOTE: If [these system requirements](https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install) are not met, skip to [Docker Toolbox](#docker-toolbox).
 
-1. Install [Docker for Windows](https://docs.docker.com/docker-for-mac/install/).
+1. Install [Docker for Windows](https://docs.docker.com/docker-for-windows/install/).
 1. Open up a command prompt window and run the following command to create a new CS50 IDE instance:
 
     ```
