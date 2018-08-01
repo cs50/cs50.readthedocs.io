@@ -1,3 +1,5 @@
+language: python
+python: 3.6
 install: pip install --upgrade sphinx
 script:
   - mkdir --parents api/checks && git clone --branch v3dev --depth 1 https://github.com/cs50/check50.git api/checks
