@@ -1,6 +1,0 @@
-.*
-!.gitignore
-!.travis.yml
-__pycache__/
-_site/
-tmp/
