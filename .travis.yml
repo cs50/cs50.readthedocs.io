@@ -1,4 +1,4 @@
-install: true
+install: pip install --upgrade sphinx
 script:
   - mkdir --parents api/checks && git clone --branch v3dev --depth 1 https://github.com/cs50/check50.git api/checks
   - pushd api/checks; git filter-branch --subdirectory-filter docs/source && rm --force --recursive .git; popd
