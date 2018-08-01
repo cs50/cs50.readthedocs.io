@@ -7,5 +7,5 @@ script:
   - make html && rm --force --recursive _build
 deploy:
   provider: script
-  script: 'git remote set-url origin "https://$USERNAME:$PASSWORD@github.com/cs50/manual50.git" && git branch --delete rel && git checkout -b rel && git add --all && git commit --message "$(date) [skip ci]" && git push --force origin rel'
+  script: 'git remote set-url origin "https://$USERNAME:$PASSWORD@github.com/cs50/manual50.git" && git fetch origin && git branch --delete rel && git checkout -b rel && git add --all && git commit --message "$(date) [skip ci]" && git push --force origin rel'
   skip_cleanup: true
