@@ -1,0 +1,83 @@
+/* Momentum scrolling on iOS */
+.wy-side-scroll {
+    -webkit-overflow-scrolling: touch;
+}
+
+/* White backgound */
+.wy-nav-content, .wy-nav-content-wrap {
+    background-color: #fff !important;
+}
+
+/* Fill viewport horizontally */
+.wy-nav-content {
+    max-width: inherit;
+}
+
+/* Match font size in nav */
+nav code {
+    font-size: inherit;
+}
+
+/* Don't display breadcrumbs */
+.rst-content [role=navigation] {
+    display: none;
+}
+
+/* Fill viewport horizontally */
+img {
+    width: 100%;
+}
+
+/* Match color of non-monospaced anchors */
+.rst-content a tt.literal,
+.rst-content a tt.literal,
+.rst-content a code.literal {
+    color: inherit;
+}
+
+/* Decrease margins above and below code blocks in lists */
+.rst-content li pre.literal-block,
+.rst-content li div[class^='highlight'] {
+    margin-bottom: 6px;
+}
+.rst-content .section ol p + pre.literal-block,
+.rst-content .section ol p + div[class^='highlight'],
+.rst-content .section ul p + pre.literal-block,
+.rst-content .section ul p + div[class^='highlight'] {
+    margin-top: -6px;
+}
+
+/* Decrease margins below paragraphs*/
+p {
+    margin-bottom: 12px;
+}
+
+/* Decrease margins above nested lists */
+li > p + ol,
+li > p + ul {
+    margin-top: -12px;
+}
+
+/* Decrease margins below lists */
+.wy-plain-list-decimal,
+.rst-content .section ol,
+.rst-content ol.arabic,
+article ol {
+    margin-bottom: 12px;
+}
+.wy-plain-list-disc,
+.rst-content .section ul,
+.rst-content .toctree-wrapper ul,
+article ul {
+    margin-bottom: 12px;
+}
+
+/* Wrap code */
+code, .rst-content tt, .rst-content code {
+    white-space: inherit;
+}
+
+/* Don't display footer */
+footer [role=contentinfo] {
+    display: none;
+}
