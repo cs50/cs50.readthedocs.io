@@ -58,7 +58,7 @@ Usage
 
 .. type:: string
 
-    Type reprsenting a C string. Aliased to :type:`char *`.
+    Type representing a C string. Aliased to :type:`char *`.
 
     Example usage::
 
