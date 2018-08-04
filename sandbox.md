@@ -2,8 +2,8 @@
 
 CS50 Sandbox is a web app at [sandbox.cs50.io](https://sandbox.cs50.io/), for students and teachers especially, that allows users to
 
-* create temporary programming environments quickly, without even logging in, and 
-* share copies (aka clones) of those environments with others.
+* create temporary programming environments (sandboxes) quickly, without even logging in, and 
+* share copies (aka clones) of those sandboxes with others.
 
 For instance, a teacher might
 
@@ -17,6 +17,30 @@ CS50 Sandbox is essentially a lightweight version of [CS50 IDE](https://cs50.io/
 * does not have `debug50`, CS50 IDE's graphical debugger for C and Python,
 * does not offer [file revision history](https://docs.c9.io/docs/file-revision-history), and
 * does not support real-time [collaboration](https://docs.c9.io/docs/share-a-workspace#section-collaboration-features) or chat.
+
+## Configuration
+
+CS50 Sandbox supports, via both GET and POST, these HTTP parameters:
+
+* `file`, which, if present, is a file path to pre-create within the sandbox in `/root/sandbox`. If `window` has a value of `editor` (potentially among other values), that file will also be pre-opened in the code editor, unless the value of `file` includes not only a file name but a parent directory as well.
+* `window`, whose value must be at least one of:
+  * `browser`, in which case the sandbox will have an embedded browser, pre-configured with an address of `http://localhost:8080/`,
+  * `editor`, in which case the sandbox will have a code editor,
+  * `terminal`, in which case the sandbox will have a terminal window, and/or
+  * `x11`, in which case the sandbox will have an embedded X window.
+
+Values of `browser` and `x11` for `window` are mutually exclusive.
+
+When submitted via POST, each value of `file` can be an actual file encoded as `multipart/form-data`, as via a form like the below:
+
+```html
+<form action="https://sandbox.cs50.io/" enctype="multipart/form-data" method="post">
+    <input name="file" type="file">
+    <input name="window" type="hidden" value="editor">
+    <input name="window" type="hidden" value="terminal">
+    <input type="submit">
+</form>
+```
 
 ## Notes
 
