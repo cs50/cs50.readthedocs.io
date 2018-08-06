@@ -5,7 +5,7 @@
    :hidden:
    :maxdepth: 1
 
-   Checks <https://cs50.readthedocs.io/projects/check50/>
+   Checks <api/check50>
 
 .. toctree::
    :caption: Command-Line Tools
