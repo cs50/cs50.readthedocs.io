@@ -3,7 +3,7 @@ python: 3.6
 install: pip install --upgrade --requirement requirements.txt
 script:
   - rm --force --recursive api/checks && mkdir --parents api/checks && git clone --branch v3dev --depth 1 https://github.com/cs50/check50.git api/checks
-  - pushd api/checks; git filter-branch --subdirectory-filter docs/source && rm --force --recursive .git; popd
+  - pushd api/checks; git filter-branch --subdirectory-filter docs && rm --force --recursive .git; popd
   - make html && rm --force --recursive _build
 deploy:
   provider: script
