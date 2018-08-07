@@ -5,7 +5,7 @@
    :hidden:
    :maxdepth: 1
 
-   check50 <check50/index>
+   check50/index
    cli50
    render50
    style50
