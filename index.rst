@@ -1,18 +1,11 @@
 .. title:: Home
 
 .. toctree::
-   :caption: APIs
-   :hidden:
-   :maxdepth: 1
-
-   Checks <api/checks>
-
-.. toctree::
    :caption: Command-Line Tools
    :hidden:
    :maxdepth: 1
 
-   check50 
+   check50 <check50/index>
    cli50
    render50
    style50
@@ -47,6 +40,7 @@
    heroku
    pip
    python
+   terminal
 
 .. toctree::
    :caption: Libraries

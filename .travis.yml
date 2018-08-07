@@ -2,8 +2,8 @@ language: python
 python: 3.6
 install: pip install --upgrade --requirement requirements.txt
 script:
-  - rm --force --recursive api/checks && mkdir --parents api/checks && git clone --branch v3dev --depth 1 https://github.com/cs50/check50.git api/checks
-  - pushd api/checks; git filter-branch --subdirectory-filter docs && rm --force --recursive .git; popd
+  - rm --force --recursive /tmp/check50 && git clone --branch v3dev --depth 1 https://github.com/cs50/check50.git /tmp/check50
+  - pip install /tmp/check50 && mv /tmp/check50/docs/source check50 && rm --force --recursive /tmp/check50
   - make html && rm --force --recursive _build
 deploy:
   provider: script
