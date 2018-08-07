@@ -5,7 +5,7 @@
    :hidden:
    :maxdepth: 1
 
-   Checks <api/check50>
+   Checks <api/checks>
 
 .. toctree::
    :caption: Command-Line Tools
