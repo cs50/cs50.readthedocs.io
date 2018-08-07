@@ -6,7 +6,6 @@ install:
   - pip install /tmp/check50 && mv /tmp/check50/docs/source check50 && rm --force --recursive /tmp/check50
 script:
   - make html && rm --force --recursive _build
-before_deploy: ls .
 deploy:
   provider: script
   script: 'git remote set-url origin "https://$USERNAME:$PASSWORD@github.com/cs50/manual50.git" && git branch --delete rel || true && git checkout -b rel && git add --all && git commit --allow-empty --message "$(date) [skip ci]" && git push --force origin rel'
