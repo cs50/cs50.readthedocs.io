@@ -61,7 +61,7 @@ optional arguments:
 To generate a PDF (e.g., `foo.pdf`) from a source file (e.g., `bar.c`), execute:
 
 ```
-render50 -O foo.pdf bar.c
+render50 -o foo.pdf bar.c
 ```
 
 ### Render multiple files
@@ -69,7 +69,7 @@ render50 -O foo.pdf bar.c
 To generate a PDF (e.g., `foo.pdf`) from multiple source files (e.g., `bar.c` and `baz.c`), execute:
 
 ```
-render50 -O foo.pdf bar.c baz.c
+render50 -o foo.pdf bar.c baz.c
 ```
 
 The source files will be rendered in the order in which they're specified on the command line.
@@ -79,7 +79,7 @@ The source files will be rendered in the order in which they're specified on the
 To generate a PDF (e.g., `foo.pdf`) from multiple source files, including only those that match some pattern (e.g., `*.c`), execute:
 
 ```
-render50 -i "*.c" -O foo.pdf *
+render50 -i "*.c" -o foo.pdf *
 ```
 
 Take care to quote (or escape with `\`) any patterns with wildcards, lest your shell glob the pattern before `render50` can.
@@ -89,7 +89,7 @@ Take care to quote (or escape with `\`) any patterns with wildcards, lest your s
 To generate a PDF (e.g., `foo.pdf`) from multiple source files, excluding those that match some pattern (e.g., `*.h`), execute:
 
 ```
-render50 -x "*.h" -O foo.pdf *
+render50 -x "*.h" -o foo.pdf *
 ```
 
 As before, take care to quote (or escape with `\`) any patterns with wildcards, lest your shell glob the pattern before `render50` can.
@@ -99,7 +99,7 @@ As before, take care to quote (or escape with `\`) any patterns with wildcards, 
 To generate a PDF (e.g., `foo.pdf`) with two source files (e.g., `bar.c` and `baz.c`) side by side, execute:
 
 ```
-render50 -O foo.pdf -y bar.c baz.c
+render50 -o foo.pdf -y bar.c baz.c
 ```
 
 ### Render files recursively
@@ -115,7 +115,7 @@ To disable syntax highlighting, invoke `render50` with `-C`.
 To generate a PDF (e.g., `foo.pdf`) with a source file at a URL (e.g., https://github.com/cs50/render50/blob/master/render50), execute:
 
 ```
-render50 -O foo.pdf https://github.com/cs50/render50/blob/master/render50
+render50 -o foo.pdf https://github.com/cs50/render50/blob/master/render50
 ```
 
 Note that URLs on `github.com` are handled specially: URLs of the form `https://github.com/*/*/blob/*` are resolved to `https://github.com/*/*/raw/*` so that the file is downloaded from `raw.githubusercontent.com`. And URLs of the form `https://gist.github.com/*/*` (and `https://gist.github.com/*/*#file-*`) are resolved to `https://gist.github.com/*/*/raw` (and `https://gist.github.com/*/*/raw/*`) so that the file is downloaded from `gist.githubusercontent.com`.
