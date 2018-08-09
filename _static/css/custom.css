@@ -77,6 +77,11 @@ code, .rst-content tt, .rst-content code {
     white-space: inherit;
 }
 
+/* Wrap long URLs */
+* {
+    overflow-wrap: break-word;
+}
+
 /* Don't display footer */
 footer [role=contentinfo] {
     display: none;
