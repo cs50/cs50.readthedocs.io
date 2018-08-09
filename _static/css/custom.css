@@ -23,11 +23,6 @@ nav code {
     display: none;
 }
 
-/* Fill viewport horizontally */
-img {
-    width: 100%;
-}
-
 /* Match color of non-monospaced anchors */
 .rst-content a tt.literal,
 .rst-content a tt.literal,

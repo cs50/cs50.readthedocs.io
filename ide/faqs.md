@@ -1,7 +1,3 @@
----
-layout: top
----
-
 # CS50 IDE FAQs
 
 ## How can I open a file in the editor from a terminal tab?
