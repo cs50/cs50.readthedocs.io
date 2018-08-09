@@ -58,7 +58,7 @@ By default, `submit50` pushes your work to GitHub via HTTPS, which requires your
    ```
    to add `github.com` to the list of known hosts for `ssh`, answering "yes" if prompted whether you're sure you want to continue connecting. If all goes well, you should see the message
 
-    ```   
+    ```
     Hi <USERNAME>! You've successfully authenticated, but GitHub does not provide shell access.
     Connection to github.com closed.
     ```

@@ -65,7 +65,7 @@
    :maxdepth: 1
 
    forms
-   ide
+   ide/index
    lab
    sandbox
    vault

@@ -164,9 +164,16 @@ source_parsers = {
    '.md': 'recommonmark.parser.CommonMarkParser',
 }
 
-# https://docs.readthedocs.io/en/latest/guides/adding-custom-css.html
-def setup(app):
-    app.add_stylesheet('css/custom.css')
-
 # http://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_title
 html_title = "CS50 Docs"
+
+# https://github.com/rtfd/recommonmark/tree/master/docs
+from recommonmark.transform import AutoStructify
+def setup(app):
+
+    # https://docs.readthedocs.io/en/latest/guides/adding-custom-css.html
+    app.add_stylesheet('css/custom.css')
+
+    app.add_config_value("recommonmark_config", {
+        "enable_auto_toc_tree": True}, True)
+    app.add_transform(AutoStructify)

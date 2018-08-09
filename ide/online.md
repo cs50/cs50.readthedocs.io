@@ -1,5 +1,8 @@
 # CS50 IDE
 
+* [FAQs](faqs.md)
+* [Offline](offline.md)
+
 ## Introduction
 
 CS50 IDE is a cloud-based Integrated Development Environment powered by [Cloud9](https://c9.io) that features a cloud-based Ubuntu environment. It features a browser-based editor, that supports C syntax highlighting and word completion, a GUI-based GDB debugging, full control over a cloud-based Ubuntu environment, and many more features including themes, customizable layouts, and keyboard shortcuts. Since it's cloud-based, you can continue working on your problem sets even if you use a different computer!
@@ -20,7 +23,7 @@ NOTE: Upon logging into CS50 IDE for the first time, you may be prompted (again)
 There are multiple ways to create a new file in CS50 IDE:
 
 - Click **File > New File**.
-- Click on the little ![plus](ide/plus.png) button atop any of the open panes and choose **New File** to open a blank file in that particular pane.
+- Click on the little ![plus](plus.png) button atop any of the open panes and choose **New File** to open a blank file in that particular pane.
 - From the file browser on the left, right-click or control-click on a directory and choose **New File** from the menu to create a blank file inside that directory, then double-click that file to open it.
 - Press <kbd>Alt</kbd> + <kbd>N</kbd> (on a PC) or <kbd>⌘</kbd> + <kbd>N</kbd> (on a Mac).
 
@@ -30,7 +33,7 @@ TIP: There are also provided file templates. For example, to open a `.c` templat
 
 When a file is open in a tab and you have some unsaved changes, CS50 IDE will show a red dot a top that tab, until you save your changes. Probably the easiest way to save a file is to press <kbd>Ctrl</kbd> + <kbd>S</kbd> (on a PC) or <kbd>⌘</kbd> + <kbd>S</kbd> (on a Mac), but you can also achieve the same by clicking **File > Save** (or **File > Save As...** if you want to save that as a new file), while you're working on that file.
 
-![red dot](ide/unsaved.png)
+![red dot](unsaved.png)
 
 ### Downloading Files
 
@@ -51,7 +54,7 @@ While working on a file, you can easily undo changes by clicking **Edit > Undo**
 
 The CS50 IDE also keeps track of file revisions, in case you want to toggle between file revisions, without having to undo or redo many times. You can show the whole file revision history by clicking **File > Show File Revision History**, which will show a timeline similar to the following, on which you can click to jump to a particular version.
 
-![revision history](ide/history.png)
+![revision history](history.png)
 
 ## Working with Terminals
 
@@ -59,7 +62,7 @@ Terminals allow you to interact with the underlying Ubuntu environment of CS50 I
 
 ### Opening New Terminals
 
-When CS50 IDE first starts, there should be a terminal tab open at the bottom, by default. You can also open a new terminal tab in that or any other pane of your choice by clicking the ![plus](ide/plus.png) button atop that pane, and choosing **New Terminal**. Alternatively, you may just hit <kbd>Alt</kbd> + <kbd>T</kbd> (on a PC) or <kbd>Option</kbd> + <kbd>T</kbd> (on a Mac).
+When CS50 IDE first starts, there should be a terminal tab open at the bottom, by default. You can also open a new terminal tab in that or any other pane of your choice by clicking the ![plus](plus.png) button atop that pane, and choosing **New Terminal**. Alternatively, you may just hit <kbd>Alt</kbd> + <kbd>T</kbd> (on a PC) or <kbd>Option</kbd> + <kbd>T</kbd> (on a Mac).
 
 By default, the current working directory (CWD) in a new terminal is your `~/workspace` directory. You can always navigate to your desired directory using `cd path/to/directory`.
 
@@ -99,9 +102,9 @@ Alternatively, you can click the stats button (showing memory, CPU, and disk sta
 
 ### Layouts
 
-The CS50 IDE is very customizable when it comes to laying out panes and tabs. You could very easily split a pane horizontally or vertically, by right-clicking (on a PC) or Ctrl-clicking (on a Mac) somewhere next to the ![plus](ide/plus.png) button atop the pane you want to split and choosing **Split Pane in Two Rows** or **Split Pane in Two Columns**.
+The CS50 IDE is very customizable when it comes to laying out panes and tabs. You could very easily split a pane horizontally or vertically, by right-clicking (on a PC) or Ctrl-clicking (on a Mac) somewhere next to the ![plus](plus.png) button atop the pane you want to split and choosing **Split Pane in Two Rows** or **Split Pane in Two Columns**.
 
-![vertical panes](ide/layout.png)
+![vertical panes](layout.png)
 
 You could also move tabs between different panes by dragging and dropping a tab to the targeted pane or even to somewhere you want a new pane with that tab to be created.
 
@@ -109,13 +112,13 @@ You could also move tabs between different panes by dragging and dropping a tab 
 
 There's a number of themes available in CS50 IDE that you can find under **View > Themes**. By default a theme called **Cloud9 Day** is selected, but if you prefer a dark theme, you can select it via **View > Night Mode**. Otherwise, you're free to select from any of the available themes.
 
-![night mode](ide/night-mode.png)
+![night mode](night-mode.png)
 
 ### Presentation Mode
 
 CS50 IDE also provides **Presentation Mode** in which the user interface is even more simplified and font sizes are larger. You can toggle that mode via **View > Presentation Mode**.
 
-![presentation mode](ide/presentation.png)
+![presentation mode](presentation.png)
 
 ## Sharing Your Workspace
 
@@ -125,7 +128,7 @@ Sometimes it's useful to share your workspace with someone (e.g. your teacher or
 
 ### Removing Users from Your Workspace
 
-To remove a user from your workspace, click on the *Share* button near the upper-right corner, then click on the ![remove user](ide/remove.png) button next to the name of that user, in the *Who has access* section, and confirm by clicking **Remove member** when prompted.
+To remove a user from your workspace, click on the *Share* button near the upper-right corner, then click on the ![remove user](remove.png) button next to the name of that user, in the *Who has access* section, and confirm by clicking **Remove member** when prompted.
 
 ### Sharing Your Workspace Domain
 
