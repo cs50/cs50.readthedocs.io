@@ -279,7 +279,7 @@ Usage
         }
 
 
-.. function char *get_string(const char *format, ...)
+.. function:: char *get_string(const char *format, ...)
 
     :param format: the :func:`printf`-like format string used to display the prompt
     :param ...: values to be substituted into the format string a la :func:`printf`
