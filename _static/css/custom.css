@@ -77,7 +77,8 @@ code, .rst-content tt, .rst-content code {
     overflow-wrap: break-word;
 }
 .rst-content div[class^='highlight'],
-.rst-content div[class^='highlight'] div[class^='highlight'] {
+.rst-content div[class^='highlight'] div[class^='highlight'],
+.rst-content div[class^='highlight'] div[class^='highlight'] pre {
     overflow-wrap: inherit;
 }
 
