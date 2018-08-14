@@ -76,8 +76,9 @@ code, .rst-content tt, .rst-content code {
 * {
     overflow-wrap: break-word;
 }
-.highlight, pre {
-    overflow-wrap: initial;
+.rst-content div[class^='highlight'],
+.rst-content div[class^='highlight'] div[class^='highlight'] {
+    overflow-wrap: inherit;
 }
 
 /* Don't display footer */
