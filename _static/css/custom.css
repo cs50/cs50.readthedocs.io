@@ -73,7 +73,7 @@ code, .rst-content tt, .rst-content code {
 }
 
 /* Wrap long URLs, but don't wrap code blocks */
-*:not(pre) {
+*:not(.highlight) {
     overflow-wrap: break-word;
 }
 
