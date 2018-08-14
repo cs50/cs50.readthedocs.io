@@ -73,8 +73,11 @@ code, .rst-content tt, .rst-content code {
 }
 
 /* Wrap long URLs, but don't wrap code blocks */
-*:not(.highlight):not(pre) {
+* {
     overflow-wrap: break-word;
+}
+.highlight, pre) {
+    overflow-wrap: initial;
 }
 
 /* Don't display footer */
