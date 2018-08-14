@@ -72,9 +72,12 @@ code, .rst-content tt, .rst-content code {
     white-space: inherit;
 }
 
-/* Wrap long URLs */
+/* Wrap long URLs, but don't wrap code blocks */
 * {
     overflow-wrap: break-word;
+}
+pre {
+    overflow-wrap: initial;
 }
 
 /* Don't display footer */
