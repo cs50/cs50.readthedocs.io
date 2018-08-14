@@ -76,7 +76,7 @@ code, .rst-content tt, .rst-content code {
 * {
     overflow-wrap: break-word;
 }
-.highlight, pre) {
+.highlight, pre {
     overflow-wrap: initial;
 }
 
