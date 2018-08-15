@@ -73,12 +73,10 @@ code, .rst-content tt, .rst-content code {
 }
 
 /* Wrap long URLs, but don't wrap code blocks */
-:not(pre) { /* Without :not, Safari forces pre tags to wrap */
+:not(pre) {
     overflow-wrap: break-word;
 }
-pre,
-.rst-content div[class^='highlight'],
-.rst-content div[class^='highlight'] div[class^='highlight'] {
+pre {
     overflow-wrap: normal;
 }
 
