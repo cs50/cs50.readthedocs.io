@@ -77,8 +77,7 @@ code, .rst-content tt, .rst-content code {
     overflow-wrap: break-word;
     word-wrap: break-word;
 }
-pre {
-    overflow: auto;
+pre, pre span {
     overflow-wrap: normal;
     word-wrap: normal;
 }
