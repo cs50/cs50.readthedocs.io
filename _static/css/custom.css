@@ -76,9 +76,10 @@ code, .rst-content tt, .rst-content code {
 :not(pre) { /* Without :not, Safari forces pre tags to wrap */
     overflow-wrap: break-word;
 }
+pre,
 .rst-content div[class^='highlight'],
 .rst-content div[class^='highlight'] div[class^='highlight'] {
-    overflow-wrap: inherit;
+    overflow-wrap: normal;
 }
 
 /* Don't display footer */
