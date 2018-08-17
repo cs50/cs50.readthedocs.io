@@ -7,7 +7,7 @@ CS50 is a [scaffolding](https://en.wikipedia.org/wiki/Instructional_scaffolding)
 
 To create a lab as a teacher, all you need is a [GitHub](https://github.com/) account and a (public or private) [repository](https://help.github.com/articles/create-a-repo/). To log into and work on a lab as a student, all you need is the former. Neither use case requires familiarity with `git` itself though if or once comfortable with `git`, you can create labs even more quickly via a command line!
 
-CS50 Lab is essentially an enhanced version of [CS50 Sandbox](sandbox), inspired (and supported!) by our friends at [Next XYZ](https://www.next.xyz/), that allows teachers to embed interactive instructions alongside a sandbox. As such, CS50 Lab is, also, essentially a lightweight version of [CS50 IDE](ide) with problems' specifications embedded in students' actual programming environments.
+CS50 Lab is essentially an extension of [CS50 Sandbox](sandbox) that allows teachers to embed interactive instructions alongside a sandbox. As such, CS50 Lab is, also, essentially a lightweight version of [CS50 IDE](ide) with problems' specifications embedded in students' actual programming environments.
 
 URLs of labs are of the form `https://lab.cs50.io/:owner/:repo/:branch/:path`, where 
 
@@ -71,7 +71,7 @@ Also available as values for `windows` are
 
 but those two values are mutually exclusive.
 
-A lab must have, as the value of `windows`, at least one of these values. 
+A lab must have, as the value of `windows`, at least one of these five values. 
 
 It's worth noting that a lab without `readme` is functionally similar to [CS50 Sandbox](sandbox). Whereas sandboxes are temporary, cookie-based and thus lost when cookies are cleared or expired, labs are persistent: if a student logs into a lab and makes changes, those changes will persist indefinitely (unless the student resets the lab).
 
@@ -86,7 +86,7 @@ lab50:
     - foo.h
 ```
 
-If those files exist (in the same directory as `.cs50.yaml`), they will be copied into students' environments and opened automatically (if recognized as text files). If those files don't exist, they will be created as empty files (and opened).
+If those files exist (in the same directory as `.cs50.yaml`), they will be copied into students' environments and opened automatically (if recognized as text files). If those files don't exist, they will be created as empty (and opened).
 
 Files (e.g., `bar.c` and `bar.h`) can also be in subdirectories (of whatever directory `.cs50.yaml` is in):
 
@@ -97,7 +97,7 @@ lab50:
     - foo/bar.h
 ```
 
-Alternatively, you can specify the subdirectory itself:
+Alternatively, you can specify subdirectories:
 
 ```
 lab50:
@@ -105,18 +105,44 @@ lab50:
     - foo/
 ```
 
-Globbing is also supported, but asterisks have special meaning in YAML, so take care to quote any strings with wildcards:
+Globbing is also supported, but asterisks have special meaning in YAML, so take care to quote any strings that have wildcards:
 
 ```
 lab50:
   files:
     - "foo/*.c"
-    - "foo/*.h"
+   - "foo/*.h"
 ```
 
 #### `checks`
 
-TODO
+To specify checks via which students can receive feedback from [`check50`](check50) on their lab, add a key below `lab50` called `checks`, the value of which is those checks' slug:
+
+```
+lab50:
+  checks: cs50/labs/python/mario
+```
+
+That slug can defined in the same `.cs50.yaml` file in which the lab itself is defined, as with:
+
+```
+check50: true
+```
+
+#### `submit`
+
+To specify a "slug" via which students can submit a lab via [`submit50`](submit50), add a key below `lab50` called `submit`, the value of which is that slug:
+
+```
+lab50:
+  submit: cs50/labs/python/mario
+```
+
+That slug can defined in the same `.cs50.yaml` file in which the lab itself is defined, as with:
+
+```
+submit50: true
+```
 
 ### `README.md`
 
@@ -124,6 +150,36 @@ A lab's instructions should be written in `README.md` (which must be in the same
 [GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/). Via CS50-specific "tags" can you add interactive features to those instructions. If present, each should appear on a line of its own but might very work in other contexts too (e.g., in ordered or unordered lists).
 
 #### `check`
+
+To provide students with a **Check** button via which they can receive automated feedback on a particular check from [`check50`](check50), using the [slug defined in `.cs50.yaml`](#checks), you can use these tags, between which is an object (e.g., `compiles`) that representing that check's result (and the results of any checks on which that check depends):
+
+```
+{% check %}
+{{ compiles }}
+{% endcheck %}
+```
+
+You can override the button's label with a quoted string:
+
+```
+{% check "Does your code compile?" %}
+{{ compiles }}
+{% endcheck %}
+```
+
+Between those tags can also be logic that inspects the value of objects' properties (e.g., `passed`):
+
+```
+{% check "Does your code compile?" %}
+{{ if compiles.passed }}
+Yes! Nicely done.
+{% else %}
+{{ compiles }}
+{% endif %}
+{% endcheck %}
+```
+
+Supported logic includes [control flow](https://shopify.github.io/liquid/tags/control-flow/) and [iteration](https://shopify.github.io/liquid/tags/iteration/).
 
 #### `next`
 
@@ -156,7 +212,7 @@ You can override the button's label with a quoted string. Accordingly, via
 
 ```
 {% spoiler "Hint" %}
-...
+You're really not going to like it.
 {% endspoiler %}
 ```
 
@@ -164,7 +220,7 @@ could you provide students with a hint. And via
 
 ```
 {% spoiler "Solution" %}
-...
+Forty-two.
 {% endspoiler %}
 ```
 
