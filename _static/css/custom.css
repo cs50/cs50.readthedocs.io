@@ -94,7 +94,7 @@ pre, pre span {
 }
 
 /* Decrease margins below headings to match paragraphs */
-h1,
+h1:not(:first),
 h2,
 h3,
 h4,
