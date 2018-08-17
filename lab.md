@@ -22,7 +22,7 @@ The source for a lab like [https://lab.cs50.io/cs50/labs/python/mario/](https://
 * `labs` is the lab's repository,
 * `python` is the lab's branch,
 * `loops` is the lab's path, and heretofore unmentioned,
-* `tree` is just a GitHub-specific trick via which you can browse that branch and path.
+* `tree` is just a GitHub-specific trick, sandwiched between `:repo` and `:branch`, via which you can browse that branch and path.
 
 ## Creation
 
