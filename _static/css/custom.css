@@ -74,7 +74,7 @@ article ul {
 }
 
 /* Increase margins above sections */
-.section {
+.section:not(:first) {
     margin-top: 24px;
 }
 
@@ -94,7 +94,7 @@ pre, pre span {
 }
 
 /* Decrease margins below headings to match paragraphs */
-h1:not(:first),
+h1,
 h2,
 h3,
 h4,
