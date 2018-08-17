@@ -26,6 +26,24 @@ The source for a lab like [https://lab.cs50.io/cs50/labs/python/mario/](https://
 
 ## Creation
 
+To create a lab:
+
+1. [Sign up](https://github.com/join) for a (free) GitHub account, if you don't have one already.
+1. [Create a repository](https://github.com/new), if you don't have one (that you'd like to use) already.
+1. [Create a file](https://blog.github.com/2012-12-05-creating-files-on-github/) in that repository called `.cs50.yaml`, optionally [inside of one or more directories](https://github.com/KirstieJane/STEMMRoleModels/wiki/Creating-new-folders-in-GitHub-repository-via-the-browser), using GitHub's website. Or create (and push) the same using `git` itself. Configure `.cs50.yaml` per below.
+1. Optionally create another file in the same directory as `.cs50.yaml` called `README.md`, configured per below. While technically optional, without this file your lab won't have instructions!
+1. Optionally create in or [upload](https://blog.github.com/2016-02-18-upload-files-to-your-repositories/) to that directory (or any descendent thereof) any files you'd like to install in a student's environment (and automatically open in the text editor's tabs).
+
+You can then (assuming no mistakes!) visit `https://lab.cs50.io/:owner/:repo/:branch/:path`, where each of those placeholders is [as above](#cs50-lab), to see your lab!
+
+## Configuration
+
+### `.cs50.yaml`
+
+### `README.md`
+
+TODO
+
 ## Examples
 
 ### `.cs50.yaml`
