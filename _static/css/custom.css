@@ -93,6 +93,16 @@ pre, pre span {
     word-wrap: normal;
 }
 
+/* Decrease margins below headings to match paragraphs */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 12px;
+}
+
 /* Don't shrink code in headings */
 .rst-content h1 code,
 .rst-content h2 code,
