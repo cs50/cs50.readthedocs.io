@@ -149,6 +149,10 @@ submit50: true
 A lab's instructions should be written in `README.md` (which must be in the same directory as `.cs50.yaml`), using
 [GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/). Via CS50-specific "tags" can you add interactive features to those instructions. If present, each should appear on a line of its own but might very work in other contexts too (e.g., in ordered or unordered lists).
 
+Your Markdown can also contain, if need, raw HTML, but not [these tags](https://github.github.com/gfm/#disallowed-raw-html-extension-).
+
+Your Markdown can also contain [emoji](https://www.webfx.com/tools/emoji-cheat-sheet/). ![smiley cat](https://assets-cdn.github.com/images/icons/emoji/unicode/1f63a.png ":smiley_cat:")
+
 #### `check`
 
 To provide students with a **Check** button via which they can receive automated feedback on a particular check from [`check50`](check50), using the [slug defined in `.cs50.yaml`](#checks), you can use these tags, between which is an object (e.g., `compiles`) that representing that check's result (and the results of any checks on which that check depends):
