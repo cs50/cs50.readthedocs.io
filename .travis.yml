@@ -2,7 +2,7 @@ language: python
 python: 3.6
 install:
   - pip install --upgrade --requirement requirements.txt
-  - rm --force --recursive /tmp/check50 && git clone --branch v3dev --depth 1 https://github.com/cs50/check50.git /tmp/check50
+  - rm --force --recursive /tmp/check50 && git clone --branch develop --depth 1 https://github.com/cs50/check50.git /tmp/check50
   - pip install /tmp/check50 && mv /tmp/check50/docs/source check50 && rm --force --recursive /tmp/check50
 script:
   - make html && rm --force --recursive _build
