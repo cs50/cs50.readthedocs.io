@@ -114,51 +114,82 @@ lab50:
     - "foo/*.h"
 ```
 
-### `README.md`
+#### `checks`
 
 TODO
 
-## Examples
+### `README.md`
 
-### `.cs50.yaml`
+A lab's instructions should be written in `README.md` (which must be in the same directory as `.cs50.yaml`), using
+[GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/). Via CS50-specific "tags" can you add interactive features to those instructions. If present, each should appear on a line of its own but might very work in other contexts too (e.g., in ordered or unordered lists).
 
-Here are some (non-exhaustive) examples of what your `.cs50.yaml` might look like!
+#### `check`
 
-#### README, Terminal Window, Text Editor
+#### `next`
 
-This configuration is actually the default, so it suffices to use:
-
-```
-lab50: true
-```
-
-Equivalently, you can use:
+To paginate a lab's instructions, inserting a **Next** button and hiding, until clicked, everything below it, you can use this tag:
 
 ```
-lab50:
-  window:
-    - editor
-    - readme
-    - terminal
+{% next %}
 ```
 
-#### Files
+You can override the button's label with a quoted string:
 
 ```
-lab50:
-  files:
-    - foo.c
-    - foo.h
+{% next "Step 2" %}
 ```
 
-#### Globbing
+#### `spoiler`
 
-Asterisks have special meaning in YAML, so take care to quote any strings with wildcards (like `*`):
+To provide students with a spoiler, code or information they should only by clicking a **Spoiler** button, you can use these tags:
 
 ```
-lab50:
-  files:
-    - "foo.*"
+{% spoiler %}
+The Answer to the Great Question... 
+Of Life, the Universe and Everything...
+Is...
+Forty-two.
+{% endspoiler %}
+```
+
+You can override the button's label with a quoted string. Accordingly, via
+
+```
+{% spoiler "Hint" %}
+...
+{% endspoiler %}
+```
+
+could you provide students with a hint. And via 
+
+```
+{% spoiler "Solution" %}
+...
+{% endspoiler %}
+```
+
+could you provide students with a solution.
+
+#### `submit`
+
+To display, via a **Submit** button, the command via which students can submit a lab via `submit50`, you can use this tag, provided your `.cs50.yaml` has a value beneath `lab50` for `submit`:
+
+```
+{% submit %}
+```
+
+You can override the button's label with a quoted string:
+
+```
+{% submit "Ready to submit?" %}
+```
+
+#### `video`
+
+To embed a YouTube video (responsively) in a lab's instructions, you can use this tag, wherein the URL can be any URL of a video on [YouTube](https://www.youtube.com/):
+
+```
+{% video https://www.youtube.com/watch?v=oHg5SJYRHA0 %}
 ```
 
 ## Acknowledgements
