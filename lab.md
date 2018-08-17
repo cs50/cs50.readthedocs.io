@@ -151,7 +151,7 @@ A lab's instructions should be written in `README.md` (which must be in the same
 
 Your Markdown can also contain, if need, raw HTML, but not [these tags](https://github.github.com/gfm/#disallowed-raw-html-extension-).
 
-Your Markdown can also contain [emoji](https://www.webfx.com/tools/emoji-cheat-sheet/). ![smiley cat](https://assets-cdn.github.com/images/icons/emoji/unicode/1f63a.png ":smiley_cat:")
+Your Markdown can also contain [emoji](https://www.webfx.com/tools/emoji-cheat-sheet/). <img alt=":slightly_smiling_face:" height="20" src="https:// assets-cdn.github.com/images/icons/emoji/unicode/1f63a.png" title=":smiley_cat:" width="20"> 
 
 #### `check`
 
