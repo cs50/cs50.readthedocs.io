@@ -50,3 +50,7 @@ When submitted via POST, each value of `file` can be an actual file encoded as `
 ## Related
 
 * [A CS50 Sandbox for Students and Teachers](https://medium.com/@cs50/a-cs50-sandbox-for-students-and-teachers-7331ba257ed6)
+
+## Acknowledgements
+
+Special thanks to CS50's friends at [Next XYZ](https://www.next.xyz/) and [Google](https://www.google.com/) for their support of this app!
