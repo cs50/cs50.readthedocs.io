@@ -82,6 +82,16 @@ pre, pre span {
     word-wrap: normal;
 }
 
+/* Don't shrink code in headings */
+h1 code, h1 .rst-content code,
+h2 code, h2 .rst-content code,
+h3 code, h3 .rst-content code,
+h4 code, h4 .rst-content code,
+h5 code, h5 .rst-content code,
+h6 code, h6 .rst-content code {
+    font-size: inherit;
+}
+
 /* Don't display footer */
 footer [role=contentinfo] {
     display: none;
