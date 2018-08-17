@@ -167,6 +167,9 @@ source_parsers = {
 # http://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_title
 html_title = "CS50 Docs"
 
+# http://www.sphinx-doc.org/en/stable/config.html#confval-highlight_language
+highlight_language = "none"
+
 # https://github.com/rtfd/recommonmark/tree/master/docs
 from recommonmark.transform import AutoStructify
 def setup(app):
