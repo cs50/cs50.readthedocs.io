@@ -30,6 +30,12 @@ nav code {
     color: inherit;
 }
 
+/* Match margins below paragraphs */
+.rst-content pre.literal-block,
+.rst-content div[class^='highlight'] {
+    margin-bottom: 12px;
+}
+
 /* Decrease margins above and below code blocks in lists */
 .rst-content li pre.literal-block,
 .rst-content li div[class^='highlight'] {
