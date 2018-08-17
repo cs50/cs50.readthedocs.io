@@ -73,6 +73,11 @@ article ul {
     margin-bottom: 12px;
 }
 
+/* Increase margins above sections */
+.section {
+    margin-top: 24px;
+}
+
 /* Wrap code */
 code, .rst-content tt, .rst-content code {
     white-space: inherit;

@@ -111,7 +111,7 @@ Globbing is also supported, but asterisks have special meaning in YAML, so take 
 lab50:
   files:
     - "foo/*.c"
-   - "foo/*.h"
+    - "foo/*.h"
 ```
 
 #### `checks`
