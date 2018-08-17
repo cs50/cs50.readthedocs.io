@@ -73,9 +73,12 @@ article ul {
     margin-bottom: 12px;
 }
 
-/* Increase margins above sections */
-.section:not(:first) {
+/* Increase margins above sections (except very first) */
+.section {
     margin-top: 24px;
+}
+.articleBody > .section {
+    margin-top: 0px;
 }
 
 /* Wrap code */

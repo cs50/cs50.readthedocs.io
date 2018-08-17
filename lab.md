@@ -1,6 +1,6 @@
 # CS50 Lab
 
-CS50 is a [scaffolding](https://en.wikipedia.org/wiki/Instructional_scaffolding) programming environment at [lab.cs50.io](https://lab.cs50.io/) that enables
+CS50 is a programming environment at [lab.cs50.io](https://lab.cs50.io/) for [scaffolding](https://en.wikipedia.org/wiki/Instructional_scaffolding) that enables
 
 * teachers to create step-by-step programming lessons (i.e., labs), providing incremental feedback at each step, and
 * students to progress from an empty file (or starter code) to working code, with hints and feedback along the way.
