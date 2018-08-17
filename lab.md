@@ -5,7 +5,7 @@ CS50 is a [scaffolding](https://en.wikipedia.org/wiki/Instructional_scaffolding)
 * teachers to create step-by-step programming lessons (i.e., labs), providing incremental feedback at each step, and
 * students to progress from an empty file (or starter code) to working code, with hints and feedback along the way.
 
-To create a lab as a teacher, all you need is a [GitHub account](https://github.com/join) and a (public or private) [repository](https://help.github.com/articles/create-a-repo/). To log into and work on a lab as a student, all you need is a [GitHub account](https://github.com/join). Neither use case requires familiarity with `git` itself though if or once comfortable with `git`, you can create labs even more quickly via a command line!
+To create a lab as a teacher, all you need is a [GitHub](https://github.com/) account and a (public or private) [repository](https://help.github.com/articles/create-a-repo/). To log into and work on a lab as a student, all you need is the former. Neither use case requires familiarity with `git` itself though if or once comfortable with `git`, you can create labs even more quickly via a command line!
 
 CS50 Lab is essentially an enhanced version of [CS50 Sandbox](sandbox), inspired (and supported!) by our friends at [Next XYZ](https://www.next.xyz/), that allows teachers to embed interactive instructions alongside a sandbox. As such, CS50 Lab is, also, essentially a lightweight version of [CS50 IDE](ide) with problems' specifications embedded in students' actual programming environments.
 
@@ -30,8 +30,8 @@ To create a lab:
 
 1. [Sign up](https://github.com/join) for a (free) GitHub account, if you don't have one already.
 1. [Create a repository](https://github.com/new), if you don't have one (that you'd like to use) already.
-1. [Create a file](https://blog.github.com/2012-12-05-creating-files-on-github/) in that repository called `.cs50.yaml`, optionally [inside of one or more directories](https://github.com/KirstieJane/STEMMRoleModels/wiki/Creating-new-folders-in-GitHub-repository-via-the-browser), using GitHub's website. Or create (and push) the same using `git` itself. Configure `.cs50.yaml` per below.
-1. Optionally create another file in the same directory as `.cs50.yaml` called `README.md`, configured per below. While technically optional, without this file your lab won't have instructions!
+1. [Create a file](https://blog.github.com/2012-12-05-creating-files-on-github/) in that repository called `.cs50.yaml`, optionally [inside of one or more directories](https://github.com/KirstieJane/STEMMRoleModels/wiki/Creating-new-folders-in-GitHub-repository-via-the-browser), using GitHub's website. Or create (and push) the same using `git` itself. Configure `.cs50.yaml` [per below](#cs50-yaml).
+1. Optionally create another file in the same directory as `.cs50.yaml` called `README.md`, configured [per below](#cs50-yaml). While technically optional, without this file your lab won't have instructions!
 1. Optionally create in or [upload](https://blog.github.com/2016-02-18-upload-files-to-your-repositories/) to that directory (or any descendent thereof) any files you'd like to install in a student's environment (and automatically open in the text editor's tabs).
 
 You can then (assuming no mistakes!) visit `https://lab.cs50.io/:owner/:repo/:branch/:path`, where each of those placeholders is [as above](#cs50-lab), to see your lab!
@@ -40,6 +40,80 @@ You can then (assuming no mistakes!) visit `https://lab.cs50.io/:owner/:repo/:br
 
 ### `.cs50.yaml`
 
+To define a lab, it suffices to create a file called `.cs50.yaml` in the root (or subdirectory) of a branch in a repository that contains, minimally, a top-level `lab50` key, the value of which is `true`:
+
+```
+lab50: true
+```
+
+#### `windows`
+
+It turns out [the above](#cs50-yaml) is an abbreviation of (and equivalent to)
+
+```
+lab50:
+  windows:
+    - editor
+    - readme
+    - terminal
+```
+
+wherein
+
+* `editor` signifies that the lab should have an embedded text editor,
+* `readme` signifies that the lab has instructions (written in `README.md`), and
+* `terminal` signifies that the lab should have an embedded terminal window.
+
+Also available as values for `windows` are 
+
+* `browser`, which signifies that the lab should have an embedded browser, and
+* `x11`, which signifies that the lab should have an embedded X window,
+
+but those two values are mutually exclusive.
+
+A lab must have, as the value of `windows`, at least one of these values. 
+
+It's worth noting that a lab without `readme` is functionally similar to [CS50 Sandbox](sandbox). Whereas sandboxes are temporary, cookie-based and thus lost when cookies are cleared or expired, labs are persistent: if a student logs into a lab and makes changes, those changes will persist indefinitely (unless the student resets the lab).
+
+#### `files`
+
+To install files in students' environments (e.g., `foo.c` and `foo.h`), add a key below `lab50` called `files` (as a sibling of `windows`, if explicitly present):
+
+```
+lab50:
+  files:
+    - foo.c
+    - foo.h
+```
+
+If those files exist (in the same directory as `.cs50.yaml`), they will be copied into students' environments and opened automatically (if recognized as text files). If those files don't exist, they will be created as empty files (and opened).
+
+Files (e.g., `bar.c` and `bar.h`) can also be in subdirectories (of whatever directory `.cs50.yaml` is in):
+
+```
+lab50:
+  files:
+    - foo/bar.c
+    - foo/bar.h
+```
+
+Alternatively, you can specify the subdirectory itself:
+
+```
+lab50:
+  files:
+    - foo/
+```
+
+Globbing is also supported, but asterisks have special meaning in YAML, so take care to quote any strings with wildcards:
+
+```
+lab50:
+  files:
+    - "foo/*.c"
+    - "foo/*.h"
+```
+
 ### `README.md`
 
 TODO
@@ -47,6 +121,8 @@ TODO
 ## Examples
 
 ### `.cs50.yaml`
+
+Here are some (non-exhaustive) examples of what your `.cs50.yaml` might look like!
 
 #### README, Terminal Window, Text Editor
 
@@ -84,10 +160,6 @@ lab50:
   files:
     - "foo.*"
 ```
-
-### `README.md`
-
-TODO
 
 ## Acknowledgements
 
