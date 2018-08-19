@@ -22,7 +22,7 @@ Choose **File > Download Project** to download `ide50.zip`, an archived file (in
 
 ## How to restore my work after backing it up?
 
-If you backed up your work per [What's the best way to back up my work?](#whats-the-best-way-to-back-up-my-work), and you would like to restore it in a different (or same) workspace, upload `ide50.zip` to your workspace per [Uploading Files](/ide#uploading-files), then run the following commands in a terminal tab in your workspace:
+If you backed up your work per [What's the best way to back up my work?](#what-s-the-best-way-to-back-up-my-work), and you would like to restore it in a different (or same) workspace, upload `ide50.zip` to your workspace per [Uploading Files](/ide#uploading-files), then run the following commands in a terminal tab in your workspace:
 
 ```
 $ unzip ide50.zip
