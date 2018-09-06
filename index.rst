@@ -41,6 +41,7 @@
    pip
    python
    terminal
+   site
 
 .. toctree::
    :caption: Libraries
