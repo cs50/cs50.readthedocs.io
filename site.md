@@ -8,17 +8,26 @@ This is where all the resources for your CS50 classroom will live for your class
 Within a few minutes your course site should be live at `https://USERNAME.github.io/ap`
 
 ## Structure and Organization of Repository
-Most files you will be interacting with, particularly if you are less comfortable, are markdown (.md) files. [Markdown](https://www.markdownguide.org/basic-syntax) is a lightweight markup language that allows to you to format text that will later be converted to HTML when your site is built. You can also type HTML snippets directly into your .md files. For example if you wanted to include an iframe for a youtube video. You could literally type `<iframe src="https://www.youtube.com/embed/…"></iframe>` and it will create the iframe on your page. 
+Most files you will be interacting with, particularly if you are less comfortable, are markdown (.md) files. [Markdown](https://www.markdownguide.org/basic-syntax) is a lightweight markup language that allows to you to format text that will later be converted to HTML when your site is built. 
 
 ### `_includes/`
+
+Your `_includes` folder is where you will keep files that will be used on more than one page. For example, `nav.md` is included here because we want the navigation bar to appear on every page.
+  
   * `header.md`: This is where you will set the title and subtitle for your own site.
 
   * `nav.md`: This is where you will add menu items to your sidebar. 
 
+![inlcudes directory](/teacher_sites/_includes.png)
+
 Note that `*` creates an item in the navigation bar on the left and `***` creates a horizontal divide.
 
-### `assets/pdfs` 
-This folder contains all the PDFs used in the CS50 AP curriculum. You do not need to edit any of these files. If interested, all of the reference sheets and a few other miscellaneous PDFs live here. 
+### `assets` 
+This folder contains static files, such as PDFs, images, etc.
+
+  * `pdfs/`: This folder contains all the PDFs used in the CS50 AP curriculum. You do not need to edit any of these files. If interested, all of the reference sheets and a few other miscellaneous PDFs live here. 
+  
+  * `css/`: This folder is where you can add custom css to your site. 
 
 ### `periods/`
 If you have multiple CS50 classes running at different paces, this is where each individual period’s content goes. One method for displaying content is to include all of the units and just comment out what you do not want your students to view like in `1.md` or `5.md`. Be sure to link these in `_includes/nav.md` so that they appear in your nav bar. HTML comments, `<!-- like this -->`, work in .md just make sure you have a blank line between the end of your displayed text and the start of your comment. Otherwise Markdown will print out the plaintext `<!-- … -->` on your website.
@@ -27,7 +36,7 @@ If you have multiple CS50 classes running at different paces, this is where each
 The units directory contains an .md file of each unit, which is essential an index of all the specific topics for that unit. Within each unit folder are all of the .md files on the topics for that unit. For example, unit0.md is a list of links to other .md files for all the topics in Unit 0, and within the `unit0/` directory you will find all of those linked .md files for the topics like `computers_and_computing.md` and `how_computers_work.md`.
 
 ### `Gemfile` and `_config.yml`
-These are files that you do not need to edit. Our teacher sites use a tool called Jekyll, which uses a theme and .md files to create static sites. These files are used by Jekyll to determine how the site should be built.
+These are files that you do not need to edit. Our teacher sites use a tool called Jekyll, which uses `_config.yml` to configure the site. `Gemfile` lists the Gems a Ruby project needs to run. For Jekyll specifically, they are used to for [Jekyll plugins](https://jekyllrb.com/docs/plugins/).
 
 ### `index.md`
 This is the markdown file for the homepage of your site, `https://USERNAME.github.io/ap`. You can use this page for most anything including but limited to: course-wide announcements, Twitter feeds, embedded Google Calendars, links to school specific resources etc.
@@ -41,9 +50,15 @@ This page has a lightweight version of our course syllabus along with the fully 
 ## Content Updates
 You are more than welcome to change the files in this repository in whatever way you see fit. If we make updates to the content or add additional resources, we’ll send along the text that you can copy and paste into your markdown files to keep your site up to date with the lastest resources. This will likely be sent via email and be posted to our [AP Discuss Forum](https://groups.google.com/a/cs50.net/forum/#!forum/ap-discuss). If you are among those more comfy, you are certainly welcome to [sync your fork](https://help.github.com/articles/syncing-a-fork/) with ours. 
 
+## Custom Domains
+
+If you would like to serve your site from a different domain, you can visit `https://github.com/USERNAME/ap/settings`, where USERNAME is you own GitHub username. Scroll down to the GitHub Pages section and specify your custom domain, i.e [ap.cs50.school](https://ap.cs50.school). This will create a file in your ap repository called `CNAME` that specifies where this site will be served. 
+
 ## Editing Files
 ### Less Comfy
-If you are among those less comfy, you can do most everything from GitHub’s web UI. To create a new file, simply click create new file and you can specify the file’s path and type the contents of that file directly into the text editor provided. You could also type the contents in some other text editor and upload the file directly with the upload files button. 
+If you are among those less comfy, you can do most everything from GitHub’s web UI. For the most part, you will be creating Markdown files, but keep in mind that you can use raw HTML directly into your .md files. For example if you wanted to include an iframe for a youtube video. You could literally type `<iframe src="https://www.youtube.com/embed/…"></iframe>` and it will create the iframe on your page. 
+
+To create a new file, simply click create new file and you can specify the file’s path and type the contents of that file directly into the text editor provided. You could also type the contents in some other text editor and upload the file directly with the upload files button. 
 
 ![new file](/teacher_sites/github1.png)
 
@@ -57,16 +72,26 @@ Within a few minutes or so, your site should reflect these changes.
 ![commit](/teacher_sites/github3.png)
 
 ### More Comfy
-If you’d like to develop your site locally and run it locally, before committing your changes, you’ll need to do a little setup first.
+If you’d like to develop your site and run it locally, before committing your changes, you’ll need to do a little setup first.
 
 First you’ll need to check if you have ruby as with `ruby -v` in your terminal window. If you do not have ruby, you can find installation instructions [here](https://www.ruby-lang.org/en/documentation/installation/). 
 
-After you’ve successfully installed Ruby, you’ll need to install [Jekyll](https://jekyllrb.com/docs/), a static site generator. You can do that with the command `gem install jekyll bundler`. Once everything is installed and you’ve cloned your GitHub repo to your machine, you’ll be able to build and view your site locally.
+After you’ve successfully installed Ruby, you’ll need to install [Jekyll](https://jekyllrb.com/docs/), the static site generator we use for our teacher sites and [Bundler](https://bundler.io/docs.html), which provides a consistent environment for Ruby projects by tracking and installing the exact gems and versions that are needed. You can install both of these with `gem install jekyll bundler`. Once everything is installed and you’ve cloned your GitHub repo to your machine, you’ll be able to build and view your site locally.
 
-The first time you build your site you will need to run
+First you'll need to run
 `bundle install`
 
-Then to serve up your site you’ll run
+This will install all the dependencies specified in your `Gemfile`. You will only need to do this once, unless you modify your `Gemfile`.
+
+Then to build and serve up your site you’ll run
 `bundle exec jekyll serve`
 
 You can view your site at <http://localhost:4000>. Your page will reflect changes you’ve made to files in real time after saving the file and refreshing the page (it may take a minute or so). From there, you `git add`, `git commit`, and `git push` as normal.
+
+## Additional Documentation
+
+* [Bundler](https://bundler.io/docs.html)
+* [GitHub Pages](https://help.github.com/categories/github-pages-basics/)
+* [Jekyll](https://jekyllrb.com/docs/)
+* [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
+* [Ruby](https://ruby-doc.org/)
