@@ -10,12 +10,12 @@ PDFs can be annotated (for free) with:
 
 ## Installation
 
-1. Install [Docker](docker), if you haven't already.
-1. Install [Python 3.6](python) or later, if you haven't already.
-1. Install [`pip`](pip), if you haven't already.
+1. Install [Docker](/docker), if you haven't already.
+1. Install [Python 3.6](/python) or later, if you haven't already.
+1. Install [`pip`](/pip), if you haven't already.
 1. Install `render50` itself:
     ```
-    pip install render50
+    pip3 install render50
     ```
 1. [Install WeasyPrint's dependencies](http://weasyprint.readthedocs.io/en/latest/install.html).
 
