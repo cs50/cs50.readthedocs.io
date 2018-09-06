@@ -5,11 +5,12 @@
 When you run `submit50`, your files are "pushed" (i.e., uploaded) to CS50's "organization" (also named "submit50") on [GitHub](https://github.com/), a popular service via which developers (like you!) can share code. Your files are stored in a "repository" (a folder, essentially) to which only you and some of CS50's staff have access (and anyone else to whom you grant access). Your work can thus be reviewed and scored in one central place, whether you wrote it in [CS50 IDE](https://cs50.io/) or elsewhere!
 
 ## Installation
-1. Install [Python 3.6](python) or later, if you haven't already.
-1. Install [`pip`](pip), if you haven't already.
+
+1. Install [Python 3.6](/python) or later, if you haven't already.
+1. Install [`pip`](/pip), if you haven't already.
 1. Install `submit50` itself:
     ```
-    pip install submit50
+    pip3 install submit50
     ```
 
 ### Upgrading

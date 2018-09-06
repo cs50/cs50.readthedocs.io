@@ -175,7 +175,7 @@ To install `style50` within that command-line environment:
 1. Execute 
 
    ```
-   sudo pip install style50
+   sudo pip3 install style50
    ```
    to install `style50` itself.
 
