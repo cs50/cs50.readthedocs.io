@@ -82,8 +82,8 @@ To install files in students' environments (e.g., `foo.c` and `foo.h`), add a ke
 ```
 lab50:
   files:
-    - foo.c
-    - foo.h
+    - !include foo.c
+    - !include foo.h
 ```
 
 If those files exist (in the same directory as `.cs50.yaml`), they will be copied into students' environments and opened automatically (if recognized as text files). If those files don't exist, they will be created as empty (and opened).
@@ -93,8 +93,8 @@ Files (e.g., `bar.c` and `bar.h`) can also be in subdirectories (of whatever dir
 ```
 lab50:
   files:
-    - foo/bar.c
-    - foo/bar.h
+    - !include foo/bar.c
+    - !include foo/bar.h
 ```
 
 Alternatively, you can specify subdirectories:
@@ -102,7 +102,7 @@ Alternatively, you can specify subdirectories:
 ```
 lab50:
   files:
-    - foo/
+    - !include foo/
 ```
 
 Globbing is also supported, but asterisks have special meaning in YAML, so take care to quote any strings that have wildcards:
@@ -110,8 +110,8 @@ Globbing is also supported, but asterisks have special meaning in YAML, so take 
 ```
 lab50:
   files:
-    - "foo/*.c"
-    - "foo/*.h"
+    - !include "foo/*.c"
+    - !include "foo/*.h"
 ```
 
 #### `checks`
