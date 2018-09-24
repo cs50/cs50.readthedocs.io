@@ -15,12 +15,12 @@ printf("hello, world\n");
 
 Given that code as input, `style50` will output
 
-<pre>#include &lt;stdio.h&gt;
+<div class="highlight-none notranslate"><div class="highlight"><pre>#include &lt;stdio.h&gt;
 
 int main(void)
 {
-<span class="bg-green p-0">    </span>printf("hello, world\n");
-}</pre>
+<span style="background-color: green">    </span>printf("hello, world\n");
+}</pre></div></div>
 
 wherein highlighted are four spaces that should be added for style's sake.
 
@@ -37,12 +37,12 @@ int main(void)
 
 Given that code as input, `style50` will output
 
-<pre>#include &lt;stdio.h&gt;
+<div class="highlight-none notranslate"><div class="highlight"><pre>#include &lt;stdio.h&gt;
 
 int main(void)
-<span class="bg-red p-0">    </span>{
+<span style="background-color: red">    </span>{
     printf("hello, world\n");
-<span class="bg-red p-0">    </span>}</pre>
+<span style="background-color: red">    </span>}</pre></div></div>
 
 wherein highlighted are four spaces that should be deleted for style's sake.
 
