@@ -16,7 +16,7 @@ printf("hello, world\n");
 Given that code as input, `style50` will output
 
 <div class="highlight-none notranslate"><div class="highlight"><pre>#include &lt;stdio.h&gt;
-
+<br>
 int main(void)
 {
 <span style="background-color: green">    </span>printf("hello, world\n");
@@ -38,7 +38,7 @@ int main(void)
 Given that code as input, `style50` will output
 
 <div class="highlight-none notranslate"><div class="highlight"><pre>#include &lt;stdio.h&gt;
-
+<br>
 int main(void)
 <span style="background-color: red">    </span>{
     printf("hello, world\n");
