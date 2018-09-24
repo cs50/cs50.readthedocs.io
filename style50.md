@@ -18,7 +18,7 @@ Given that code as input, `style50` will output
 <div class="highlight-none notranslate"><div class="highlight"><pre>#include &lt;stdio.h&gt;
 <br>int main(void)
 {
-<span style="background-color: green">    </span>printf("hello, world\n");
+<span style="background-color: #00ff00">    </span>printf("hello, world\n");
 }</pre></div></div>
 
 wherein highlighted are four spaces that should be added for style's sake.
@@ -93,9 +93,9 @@ you would see the below.
 
 <div class="highlight-none notranslate"><div class="highlight"><pre>#include &lt;stdio.h&gt;
 <br>int main(void)
-<span style="background-color: green">{\n</span>
+<span style="background-color: #00ff00">{\n</span>
     <span style="background-color: red">{\n</span>
-<span style="background-color: green">    </span>printf("hello, world\n");
+<span style="background-color: #00ff00">    </span>printf("hello, world\n");
 <span style="background-color: red">    </span>}</pre></div></div>
 
 #### `split`
@@ -116,9 +116,9 @@ you would see the below.
 
 <div class="highlight-none notranslate"><div class="highlight"><pre>#include &lt;stdio.h&gt;               #include &lt;stdio.h&gt;
 <br>int main(void)                   int main(void)
-    <span style="color: red">{</span>                            <span style="color: green">{</span>
-printf("hello, world\n");        <span style="background-color: green">    </span>printf("hello, world\n");
-    <span style="color: red">}</span>                            <span style="color: green">}</span></pre></div></div>
+    <span style="color: red">{</span>                            <span style="color: #00ff00">{</span>
+printf("hello, world\n");        <span style="background-color: #00ff00">    </span>printf("hello, world\n");
+    <span style="color: red">}</span>                            <span style="color: #00ff00">}</span></pre></div></div>
 
 #### `unified`
 
@@ -139,11 +139,11 @@ you would see the below.
 <div class="highlight-none notranslate"><div class="highlight"><pre>  #include &lt;stdio.h&gt;
 <br>  int main(void)
 <span style="color: red">-     {</span>
-<span style="color: green">+ {</span>
+<span style="color: #00ff00">+ {</span>
 <span style="color: red">- printf("hello, world\n");</span>
-<span style="color: green">+     printf("hello, world\n");</span>
+<span style="color: #00ff00">+     printf("hello, world\n");</span>
 <span style="color: red">-     }</span>
-<span style="color: green">+ }</span></pre></div></div>
+<span style="color: #00ff00">+ }</span></pre></div></div>
 
 ## Installation
 
