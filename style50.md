@@ -83,7 +83,7 @@ or just
 style50 -o character hello.c
 ```
 
-or even just 
+or even just
 
 ```
 style50 hello.c
@@ -91,13 +91,12 @@ style50 hello.c
 
 you would see the below.
 
-<pre>#include &lt;stdio.h&gt;
-
-int main(void)
-<span class="bg-green p-0">{\n</span>
-    <span class="bg-red p-0">{\n</span>
-printf("hello, world\n");
-<span class="bg-red p-0">    }</span></pre>
+<div class="highlight-none notranslate"><div class="highlight"><pre>#include &lt;stdio.h&gt;
+<br>int main(void)
+<span style="background-color: green">{\n</span>
+    <span style="background-color: red">{\n</span>
+<span style="background-color: green">    </span>printf("hello, world\n");
+<span style="background-color: red">    </span>}</pre></div></div>
 
 #### `split`
 
@@ -115,12 +114,11 @@ style50 -o split hello.c
 
 you would see the below.
 
-<pre>#include &lt;stdio.h&gt;               #include &lt;stdio.h&gt;
-
-int main(void)                   int main(void)
-    <span class="text-red p-0">{</span>                            <span class="text-green p-0">{</span>
-printf("hello, world\n");        <span class="bg-green p-0">    </span>printf("hello, world\n");
-    <span class="text-red p-0">}</span>                            <span class="text-green p-0">}</span></pre>
+<div class="highlight-none notranslate"><div class="highlight"><pre>#include &lt;stdio.h&gt;               #include &lt;stdio.h&gt;
+<br>int main(void)                   int main(void)
+    <span style="color: red">{</span>                            <span style="color: green">{</span>
+printf("hello, world\n");        <span style="background-color: green">    </span>printf("hello, world\n");
+    <span style="color: red">}</span>                            <span style="color: green">}</span></pre></div></div>
 
 #### `unified`
 
@@ -138,15 +136,14 @@ style50 -o unified hello.c
 
 you would see the below.
 
-<pre>  #include &lt;stdio.h&gt;
-  
-  int main(void)
-<span class="text-red p-0">-     {</span>
-<span class="text-green p-0">+ {</span>
-<span class="text-red p-0">- printf("hello, world\n");</span>
-<span class="text-green p-0">+     printf("hello, world\n");</span>
-<span class="text-red p-0">-     }</span>
-<span class="text-green p-0">+ }</span></pre>
+<div class="highlight-none notranslate"><div class="highlight"><pre>  #include &lt;stdio.h&gt;
+<br>  int main(void)
+<span style="color: red">-     {</span>
+<span style="color: green">+ {</span>
+<span style="color: red">- printf("hello, world\n");</span>
+<span style="color: green">+     printf("hello, world\n");</span>
+<span style="color: red">-     }</span>
+<span style="color: green">+ }</span></pre></div></div>
 
 ## Installation
 
@@ -162,7 +159,7 @@ To install `style50` within that command-line environment:
 
 1. [Install Python](https://www.python.org/downloads/) 2.7 or higher, if not already installed.
 
-1. Install `pip`, as via 
+1. Install `pip`, as via
 
    ```
    sudo easy_install pip
@@ -170,7 +167,7 @@ To install `style50` within that command-line environment:
 
    if not already installed.
 
-1. Execute 
+1. Execute
 
    ```
    sudo pip3 install style50
