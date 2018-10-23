@@ -34,9 +34,6 @@ optional arguments:
   -g, --git             mount .gitconfig
   -l [CONTAINER], --login [CONTAINER]
                         log into container
-  -p [LIST], --publish [LIST]
-                        publish port(s) to ports on host
-  -P, --publish-all     publish exposed ports to random ports on host
   -s, --ssh             mount .ssh
   -S, --stop            stop any containers
   -t TAG, --tag TAG     start cs50/cli:TAG, else cs50/cli:latest
