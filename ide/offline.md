@@ -70,7 +70,7 @@ TIP: If you ever forgot or lost the IP of the Docker machine, you should be able
 
 When you execute the `docker run` step above, the latest IDE base image should be automatically downloaded for you. If you have a very slow or unstable internet connection, the download might fail. The following steps describe how you can download the Docker image seaparately and load it into your Docker setup:
 
-1. Download http://mirror.cs50.net/ide/ide.tar?download (or http://mirror.cs50.net/ide/ide.tar?torrent if you prefer a torrent download).
+1. [Download](http://mirror.cs50.net/ide/ide.tar?download) the image (or [torrent-download](http://mirror.cs50.net/ide/ide.tar?torrent) if you prefer).
 1. Open up a terminal window or Docker QuickStart Terminal and run
 
     ```
