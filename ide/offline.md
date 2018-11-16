@@ -15,7 +15,7 @@ Follow the instructions for your Linux distribution to [install Docker Engine](h
     ```
     docker run --privileged -e "IP=127.0.0.1" -e "PORT=8080" --name ide50 -d -p 5050:5050 -p 8080-8082:8080-8082 cs50/ide
     ```
- 
+
 1. Visit <http://localhost:5050/> in your favorite browser to access CS50 IDE.
 
 ### Mac
@@ -56,7 +56,7 @@ NOTE: You should only follow these instructions if you are a Windows or Mac user
 1. The IP stated in the screenshot above is the IP of the [Docker machine](https://docs.docker.com/machine/overview/). It may be different on your computer. You are going to use this IP to access your CS50 IDE, so you should record it.
 
 1. Run the following command in the Docker QuickStart Terminal to create a new CS50 IDE instance:
- 
+
     ```
     docker run --privileged -e "IP=$(docker-machine ip default)" -e "PORT=8080" --name ide50 -d -p 5050:5050 -p 8080-8082:8080-8082 cs50/ide
     ```
@@ -64,6 +64,19 @@ NOTE: You should only follow these instructions if you are a Windows or Mac user
 1. Visit <http://<machine-ip>:5050/>, in your favorite browser, to access CS50 IDE, after replacing `<machine-ip>` with the actual IP for the Docker machine.
 
 TIP: If you ever forgot or lost the IP of the Docker machine, you should be able to get it back by running `docker-machine ip default` in the Docker QuickStart Terminal.
+
+
+## Downloading the Docker Image
+
+When you execute the `docker run` step above, the latest IDE base image should be automatically downloaded for you. If you have a very slow or unstable internet connection, the download might fail. The following steps describe how you can download the Docker image seaparately and load it into your Docker setup:
+
+1. Download http://mirror.cs50.net/ide/ide.tar?download (or http://mirror.cs50.net/ide/ide.tar?torrent if you prefer a torrent download).
+1. Open up a terminal window or Docker QuickStart Terminal and run
+
+    ```
+    docker load < path/to/ide.tar
+    ```
+1. Try running the `docker run` step from the set of instructions that you followed above again.
 
 
 ## Managing the IDE
