@@ -2,7 +2,7 @@
 
 [Heroku](https://www.heroku.com/) is a "platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud." Heroku even offers a [free plan](https://www.heroku.com/pricing).
 
-Here's how to deploy your implementation of, say, [C$50 Finance](https://docs.cs50.net/2017/fall/psets/7/finance/finance.html) to Heroku from GitHub.
+Here's how to deploy your implementation of, say, [C$50 Finance](https://docs.cs50.net/2018/fall/psets/8/finance/finance.html) to Heroku from GitHub.
 
 1. Watch [Brian's seminar](https://youtu.be/MJUJ4wbFm_A) to learn about `git` and GitHub, if not already familiar.
 
