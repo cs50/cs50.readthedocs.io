@@ -36,7 +36,6 @@
    :maxdepth: 1
 
    docker
-   hackathon
    heroku
    pip
    python
