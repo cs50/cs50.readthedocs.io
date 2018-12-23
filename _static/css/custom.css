@@ -59,6 +59,12 @@ li > p + ul {
     margin-top: -12px;
 }
 
+/* Remove margins in nested lists */
+.rst-content .section ol p,
+.rst-content .section ul p {
+    margin-bottom: 0;
+}
+
 /* Decrease margins below lists */
 .wy-plain-list-decimal,
 .rst-content .section ol,
