@@ -45,9 +45,13 @@ CS50x is perhaps best suited for ages 12 and up. Younger students might need a h
 
 To import scores from previous years, head to [CS50.me/account](https://cs50.me/account), and link your edX account under *Connected Accounts*.
 
+## How do I know if I have completed all requirements for a Verified Certificate?
+
+Your [CS50.me Gradebook](https://cs50.me/gradebook) shows the scores you have received for each submitted problem.  Once you have completed all requirements, you will see a green banner atop that page, confirming your completion.  
+
 ## When are Verified Certificates generated?
 
-At the end of each month, CS50's staff provides edX with a list of students who have satisfied CS50x's requirements (by receiving scores of at least 70% on every required problem submitted as part of the course's nine problem sets as well as on the final project). Within a few days, edX then generates students' Verified Certificates, at which point they should appear automatically on edX's [dashboard](https://courses.edx.org/dashboard).
+At the end of each month, CS50's staff provides edX with a list of students who have satisfied CS50x's requirements (by receiving scores of at least 70% on every required problem submitted as part of the course's nine problem sets as well as on the final project). Within a few days, edX then generates students' Verified Certificates, at which point they should appear automatically on edX's [dashboard](https://courses.edx.org/dashboard).  If it has been more than a month since you met all requirements and you have still not received your certificate, email certificates@cs50.harvard.edu with your details.
 
 ## When are deadlines?
 
