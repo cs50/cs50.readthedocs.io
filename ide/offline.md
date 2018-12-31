@@ -115,4 +115,4 @@ docker rm ide50
 
 ## Where to Go Next?
 
-Read up on on [how to use CS50 IDE itself](/ide50)!
+Read up on on how to use [CS50 IDE](/ide/online/) itself!
