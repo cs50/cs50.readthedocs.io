@@ -176,7 +176,7 @@ def setup(app):
 
     # https://docs.readthedocs.io/en/latest/guides/adding-custom-css.html
     import time
-    app.add_stylesheet('css/custom.css?' + round(time.time()))
+    app.add_stylesheet('css/custom.css?' + str(round(time.time())))
 
     app.add_config_value("recommonmark_config", {
         "enable_auto_toc_tree": True}, True)
