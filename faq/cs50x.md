@@ -29,13 +29,13 @@ You don't get any extra points for doing the "more comfortable" problems. If you
 
 Nope!  If you would like an edX Verified Certificate, you can pay for verification at any point during the year, even after completing all of the coursework.
 
-## If I paid for a verified certificate before 2018, do I need to pay again?
+## If I paid for a verified certificate before 2019, do I need to pay again?
 
 No, you should be able to re-verify yourself via edX's [dashboard](https://courses.edx.org/dashboard).
 
-## If I started CS50x before 2018, can I resume?
+## If I started CS50x before 2019, can I resume?
 
-Yes, any scores you received on past years' problem sets will be imported into CS50x 2018. However, moving forward, you must submit CS50x 2018's problem sets.
+Yes, any scores you received on past years' problem sets have been imported into CS50x 2019. However, moving forward, you must submit CS50x 2019's problem sets.
 
 ## Is my child too young to take CS50x?
 
@@ -55,7 +55,7 @@ At the end of each month, CS50's staff provides edX with a list of students who 
 
 ## When are deadlines?
 
-CS50x does not have deadlines for problem sets or for the final project. You are welcome to work on and submit at your own pace.
+CS50x does not have deadlines for problem sets or for the final project. You are welcome to work on and submit at your own pace.  
 
 ## I registered for edX using my Facebook, Google, or Microsoft account, and can't log in to submit Problem Set 0.  What should I do?
 
