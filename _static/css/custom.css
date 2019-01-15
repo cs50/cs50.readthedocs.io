@@ -36,16 +36,10 @@ nav code {
     margin-bottom: 12px;
 }
 
-/* Decrease margins above and below code blocks in lists */
+/* Decrease margins below code blocks in lists */
 .rst-content li pre.literal-block,
 .rst-content li div[class^='highlight'] {
     margin-bottom: 6px;
-}
-.rst-content .section ol p + pre.literal-block,
-.rst-content .section ol p + div[class^='highlight'],
-.rst-content .section ul p + pre.literal-block,
-.rst-content .section ul p + div[class^='highlight'] {
-    margin-top: -6px;
 }
 
 /* Decrease margins below paragraphs*/
