@@ -92,7 +92,7 @@ You can mount, read-only, a dotfile that's in your `$HOME` (e.g., `~/.vimrc`) in
 cli50 -d .vimrc
 ```
 
-Directories are supported as well:
+Directories (e.g., `~/.vim`) are supported as well:
 
 ```
 cli50 -d .vim
