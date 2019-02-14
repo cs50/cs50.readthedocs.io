@@ -21,8 +21,7 @@ pip install --upgrade cli50
 ## Usage
 
 ```
-usage: cli50 [-h] [-f] [-g] [-l [CONTAINER]] [-p [LIST]] [-P] [-s] [-S]
-             [-t TAG] [-V]
+usage: cli50 [-h] [-f] [-l [CONTAINER]] [-d DOTFILE] [-S] [-t TAG] [-V]
              [DIRECTORY]
 
 positional arguments:
@@ -31,10 +30,11 @@ positional arguments:
 optional arguments:
   -h, --help            show this help message and exit
   -f, --fast            skip autoupdate
-  -g, --git             mount .gitconfig
   -l [CONTAINER], --login [CONTAINER]
                         log into container
-  -s, --ssh             mount .ssh
+  -d DOTFILE, --dotfile DOTFILE
+                        dotfile in your $HOME to mount read-only in
+                        container's $HOME
   -S, --stop            stop any containers
   -t TAG, --tag TAG     start cs50/cli:TAG, else cs50/cli:latest
   -V, --version         show program's version number and exit
@@ -84,20 +84,18 @@ cli50 -l
 
 If multiple containers are running, you'll be asked, yes or no, in reverse-chronological order, into which container you'd like to log in.
 
-### Mount `~/.gitconfig` in container
+### Mount `~/.*` in container's `$HOME`
 
-You can mount your own `~/.gitconfig` file within a container (so that you're not prompted by `git-commit` for your name and email address) as follows:
-
-```
-cli50 -g
-```
-
-### Mount `~/.ssh` in container
-
-You can mount your own `~/.ssh` directory within a container (so that you can access your keys) as follows:
+You can mount, read-only, a dotfile that's in your `$HOME` (e.g., `~/.vimrc`) inside of a container's `$HOME` as follows:
 
 ```
-cli50 -s
+cli50 -d .vimrc
+```
+
+Directories are supported as well:
+
+```
+cli50 -d .vim
 ```
 
 ## Source Code
