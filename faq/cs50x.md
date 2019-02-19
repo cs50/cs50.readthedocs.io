@@ -27,7 +27,7 @@ You don't get any extra points for doing the "more comfortable" problems. If you
 
 ## Do I have to choose Verification before starting the course?
 
-Nope!  If you would like an edX Verified Certificate, you can pay for verification at any point during the year, even after completing all of the coursework.
+Nope!  If you would like an edX Verified Certificate, you can pay for verification at any point, even after completing all of the coursework.
 
 ## If I paid for a verified certificate before 2019, do I need to pay again?
 
