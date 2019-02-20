@@ -3,7 +3,7 @@
 CS50 Sandbox is a web app at [sandbox.cs50.io](https://sandbox.cs50.io/), for students and teachers especially, that allows users to
 
 * create temporary programming environments (sandboxes) quickly, without even logging in, and 
-* share copies (aka clones) of those sandboxes with others.
+* share copies of those sandboxes with others.
 
 For instance, a teacher might
 
@@ -22,14 +22,17 @@ CS50 Sandbox is essentially a lightweight version of [CS50 IDE](https://cs50.io/
 
 CS50 Sandbox supports, via both GET and POST, these HTTP parameters:
 
-* `file`, which, if present, is a file path to pre-create within the sandbox in `/root/sandbox`. If `window` has a value of `editor` (potentially among other values), that file will also be pre-opened in the code editor, unless the value of `file` includes not only a file name but a parent directory as well.
-* `window`, whose value must be at least one of:
+* `file`, which, if present, is a file path to pre-create within the sandbox in `/root/sandbox`. If `window` has a value of `editor` (potentially among other values), that file, if not binary, will also be pre-opened in the code editor.
+* `window`, which must have a value of `terminal` (so that the sandbox will have a terminal window) and may have additional values of
   * `browser`, in which case the sandbox will have an embedded browser, pre-configured with an address of `http://localhost:8080/`,
-  * `editor`, in which case the sandbox will have a code editor,
-  * `terminal`, in which case the sandbox will have a terminal window, and/or
+  * `editor`, in which case the sandbox will have a code editor, and/or
   * `x11`, in which case the sandbox will have an embedded X window.
 
+For GET, then, the shortest supported URL is `https://sandbox.cs50.io/?window=terminal`.
+
 Values of `browser` and `x11` for `window` are mutually exclusive.
+
+Unsupported parameterizations will yield an HTTP status code of 400.
 
 When submitted via POST, each value of `file` can be an actual file encoded as `multipart/form-data`, as via a form like the below:
 
@@ -42,15 +45,10 @@ When submitted via POST, each value of `file` can be an actual file encoded as `
 </form>
 ```
 
-## Notes
-
-* If a user accidentally closes a sandbox and does not recall its unique URL, it can be restarted via a link at the bottom of [sandbox.cs50.io](https://sandbox.cs50.io/).
-* The languages and frameworks atop [sandbox.cs50.io](https://sandbox.cs50.io/) not mutually exclusive. The radio buttons only serve to pre-check checkboxes (corresponding to UI features) appropriate for those languages and frameworks. Any language or framework can be used thereafter in any sandbox.
-
 ## Related
 
 * [A CS50 Sandbox for Students and Teachers](https://medium.com/@cs50/a-cs50-sandbox-for-students-and-teachers-7331ba257ed6)
 
 ## Acknowledgements
 
-Special thanks to CS50's friends at [Next XYZ](https://www.next.xyz/) and [Google](https://www.google.com/) for their support of this app!
+Special thanks to CS50's friends at [Next Tech](https://next.tech/) and [Google](https://www.google.com/) for their support of this app!
