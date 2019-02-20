@@ -1,6 +1,6 @@
 # CS50 Lab
 
-CS50 is a programming environment at [lab.cs50.io](https://lab.cs50.io/) for [scaffolding](https://en.wikipedia.org/wiki/Instructional_scaffolding) that enables
+CS50 is a programming environment at [lab.cs50.io](https://lab.cs50.io/) for scaffolded learning that enables
 
 * teachers to create step-by-step programming lessons (i.e., labs), providing incremental feedback at each step, and
 * students to progress from an empty file (or starter code) to working code, with hints and feedback along the way.
@@ -30,17 +30,17 @@ To create a lab:
 
 1. [Sign up](https://github.com/join) for a (free) GitHub account, if you don't have one already.
 1. [Create a repository](https://github.com/new), if you don't have one (that you'd like to use) already.
-1. [Create a file](https://blog.github.com/2012-12-05-creating-files-on-github/) in that repository called `.cs50.yaml`, optionally [inside of one or more directories](https://github.com/KirstieJane/STEMMRoleModels/wiki/Creating-new-folders-in-GitHub-repository-via-the-browser), using GitHub's website. Or create (and push) the same using `git` itself. Configure `.cs50.yaml` [per below](#cs50-yaml).
-1. Optionally create another file in the same directory as `.cs50.yaml` called `README.md`, configured [per below](#cs50-yaml). While technically optional, without this file your lab won't have instructions!
+1. [Create a file](https://blog.github.com/2012-12-05-creating-files-on-github/) in that repository called `.cs50.yml`, optionally [inside of one or more directories](https://github.com/KirstieJane/STEMMRoleModels/wiki/Creating-new-folders-in-GitHub-repository-via-the-browser), using GitHub's website. Or create (and push) the same using `git` itself. Configure `.cs50.yml` [per below](#cs50-yaml).
+1. Optionally create another file in the same directory as `.cs50.yml` called `README.md`, configured [per below](#cs50-yaml). While technically optional, without this file your lab won't have instructions!
 1. Optionally create in or [upload](https://blog.github.com/2016-02-18-upload-files-to-your-repositories/) to that directory (or any descendent thereof) any files you'd like to install in a student's environment (and automatically open in the text editor's tabs).
 
 You can then (assuming no mistakes!) visit `https://lab.cs50.io/:owner/:repo/:branch/:path`, where each of those placeholders is [as above](#cs50-lab), to see your lab!
 
 ## Configuration
 
-### `.cs50.yaml`
+### `.cs50.yml`
 
-To define a lab, it suffices to create a file called `.cs50.yaml` in the root (or subdirectory) of a branch in a repository that contains, minimally, a top-level `lab50` key, the value of which is `true`:
+To define a lab, it suffices to create a file called `.cs50.yml` in the root (or subdirectory) of a branch in a repository that contains, minimally, a top-level `lab50` key, the value of which is `true`:
 
 ```
 lab50: true
@@ -64,6 +64,8 @@ wherein
 * `readme` signifies that the lab has instructions (written in `README.md`), and
 * `terminal` signifies that the lab should have an embedded terminal window.
 
+A value of `terminal` (implicit or explicit) is required.
+
 Also available as values for `windows` are 
 
 * `browser`, which signifies that the lab should have an embedded browser, and
@@ -71,9 +73,7 @@ Also available as values for `windows` are
 
 but those two values are mutually exclusive.
 
-A lab must have, as the value of `windows`, at least one of these five values. 
-
-It's worth noting that a lab without `readme` is functionally similar to [CS50 Sandbox](sandbox). Whereas sandboxes are temporary, cookie-based and thus lost when cookies are cleared or expired, labs are persistent: if a student logs into a lab and makes changes, those changes will persist indefinitely (unless the student resets the lab).
+It's worth noting that a lab without `readme` is functionally similar to [CS50 Sandbox](sandbox). Whereas sandboxes are intended to be temporary, labs are persistent: if a student logs into a lab and makes changes, those changes will persist indefinitely (unless the student resets the lab).
 
 #### `files`
 
@@ -86,9 +86,11 @@ lab50:
     - !include foo.h
 ```
 
-If those files exist (in the same directory as `.cs50.yaml`), they will be copied into students' environments and opened automatically (if recognized as text files). If those files don't exist, they will be created as empty (and opened).
+That `!include` is a (confusing) feature of [YAML](https://en.wikipedia.org/wiki/YAML); it indeed means "include," not "don't include," as a programmer might otherwise assume.
 
-Files (e.g., `bar.c` and `bar.h`) can also be in subdirectories (of whatever directory `.cs50.yaml` is in):
+If those files exist (in the same directory as `.cs50.yml`), they will be copied into students' environments and opened automatically (if recognized as text files). If those files don't exist, they will be created as empty (and opened).
+
+Files (e.g., `bar.c` and `bar.h`) can also be in subdirectories (of whatever directory `.cs50.yml` is in):
 
 ```
 lab50:
@@ -114,6 +116,17 @@ lab50:
     - !include "foo/*.h"
 ```
 
+You can also exclude files, as with:
+
+```
+lab50:
+  files:
+    - !exclude "*"
+    - !include "foo.*"
+```
+
+The value of `files` is an ordered list, top to bottom, so the above means that all files are excluded by default but `foo.*` is then included, thereby overriding their exclusion.
+
 #### `checks`
 
 To specify checks via which students can receive feedback from [`check50`](check50) on their lab, add a key below `lab50` called `checks`, the value of which is those checks' slug:
@@ -123,7 +136,7 @@ lab50:
   checks: cs50/labs/python/mario
 ```
 
-That slug can defined in the same `.cs50.yaml` file in which the lab itself is defined, as with:
+That slug can defined in the same `.cs50.yml` file in which the lab itself is defined, as with:
 
 ```
 check50: true
@@ -138,7 +151,7 @@ lab50:
   submit: cs50/labs/python/mario
 ```
 
-That slug can defined in the same `.cs50.yaml` file in which the lab itself is defined, as with:
+That slug can defined in the same `.cs50.yml` file in which the lab itself is defined, as with:
 
 ```
 submit50: true
@@ -146,7 +159,7 @@ submit50: true
 
 ### `README.md`
 
-A lab's instructions should be written in `README.md` (which must be in the same directory as `.cs50.yaml`), using
+A lab's instructions should be written in `README.md` (which must be in the same directory as `.cs50.yml`), using
 [GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/). Via CS50-specific "tags" can you add interactive features to those instructions. If present, each should appear on a line of its own but might very work in other contexts too (e.g., in ordered or unordered lists).
 
 Your Markdown can also contain, if need, raw HTML, but not [these tags](https://github.github.com/gfm/#disallowed-raw-html-extension-).
@@ -155,7 +168,7 @@ Your Markdown can also contain [emoji](https://www.webfx.com/tools/emoji-cheat-s
 
 #### `check`
 
-To provide students with a **Check** button via which they can receive automated feedback on a particular check from [`check50`](check50), using the [slug defined in `.cs50.yaml`](#checks), you can use these tags, between which is an object (e.g., `compiles`) that representing that check's result (and the results of any checks on which that check depends):
+To provide students with a **Check** button via which they can receive automated feedback on a particular check from [`check50`](check50), using the [slug defined in `.cs50.yml`](#checks), you can use these tags, between which is an object (e.g., `compiles`) that representing that check's result (and the results of any checks on which that check depends):
 
 ```
 {% check %}
@@ -232,7 +245,7 @@ could you provide students with a solution.
 
 #### `submit`
 
-To display, via a **Submit** button, the command via which students can submit a lab via `submit50`, you can use this tag, provided your `.cs50.yaml` has a value beneath `lab50` for `submit`:
+To display, via a **Submit** button, the command via which students can submit a lab via `submit50`, you can use this tag, provided your `.cs50.yml` has a value beneath `lab50` for `submit`:
 
 ```
 {% submit %}
@@ -254,4 +267,4 @@ To embed a YouTube video (responsively) in a lab's instructions, you can use thi
 
 ## Acknowledgements
 
-Special thanks to CS50's friends at [Next XYZ](https://www.next.xyz/) and [Google](https://www.google.com/) for their support of this app!
+Special thanks to CS50's friends at [Next Tech](https://next.tech/) and [Google](https://www.google.com/) for their support of this app!
