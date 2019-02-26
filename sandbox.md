@@ -42,7 +42,7 @@ When submitted via POST, each value of `file` can be an actual file encoded as `
 
 ```html
 <form action="https://sandbox.cs50.io/" enctype="multipart/form-data" method="post">
-    <input name="file" type="file">
+    <input multiple name="file" type="file">
     <input name="window" type="hidden" value="editor">
     <input name="window" type="hidden" value="terminal">
     <input type="submit">
