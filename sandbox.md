@@ -32,6 +32,8 @@ CS50 Sandbox supports, via both GET and POST, these HTTP parameters:
 
 For GET, then, the shortest supported URL is `https://sandbox.cs50.io/?window=terminal`.
 
+A URL with multiple values for `window`, meanwhile, might be `https://sandbox.cs50.io/?window=editor&window=terminal`.
+
 Values of `browser` and `x` for `window` are mutually exclusive.
 
 Unsupported parameterizations will yield an HTTP status code of 400.
