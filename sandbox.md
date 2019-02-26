@@ -2,7 +2,7 @@
 
 CS50 Sandbox is a web app at [sandbox.cs50.io](https://sandbox.cs50.io/), for students and teachers especially, that allows users to
 
-* create temporary programming environments (sandboxes) quickly, without even logging in, and 
+* create temporary programming environments (sandboxes) quickly and
 * share copies of those sandboxes with others.
 
 For instance, a teacher might
