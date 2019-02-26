@@ -13,7 +13,6 @@ For instance, a teacher might
 
 CS50 Sandbox is essentially a lightweight version of [CS50 IDE](https://cs50.io/), CS50's web-based integrated development environment, but CS50 Sandbox 
 
-* does not offer persistence, insofar as sandboxes are cookie-based and thus lost when cookies are cleared or expired,
 * does not have `debug50`, CS50 IDE's graphical debugger for C and Python,
 * does not offer [file revision history](https://docs.c9.io/docs/file-revision-history), and
 * does not support real-time [collaboration](https://docs.c9.io/docs/share-a-workspace#section-collaboration-features) or chat.
