@@ -69,7 +69,7 @@ A value of `terminal` (implicit or explicit) is required.
 Also available as values for `windows` are 
 
 * `browser`, which signifies that the lab should have an embedded browser, and
-* `x11`, which signifies that the lab should have an embedded X window,
+* `x`, which signifies that the lab should have an embedded X window,
 
 but those two values are mutually exclusive.
 

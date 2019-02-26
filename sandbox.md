@@ -28,11 +28,11 @@ CS50 Sandbox supports, via both GET and POST, these HTTP parameters:
 * `window`, which must have a value of `terminal` (so that the sandbox will have a terminal window) and may have additional values of
   * `browser`, in which case the sandbox will have an embedded browser, pre-configured with an address of `http://localhost:8080/`,
   * `editor`, in which case the sandbox will have a code editor, and/or
-  * `x11`, in which case the sandbox will have an embedded X window.
+  * `x`, in which case the sandbox will have an embedded X window.
 
 For GET, then, the shortest supported URL is `https://sandbox.cs50.io/?window=terminal`.
 
-Values of `browser` and `x11` for `window` are mutually exclusive.
+Values of `browser` and `x` for `window` are mutually exclusive.
 
 Unsupported parameterizations will yield an HTTP status code of 400.
 
