@@ -46,13 +46,13 @@ To define a lab, it suffices to create a file called `.cs50.yml` in the root (or
 lab50: true
 ```
 
-#### `windows`
+#### `window`
 
 It turns out [the above](#cs50-yaml) is an abbreviation of (and equivalent to)
 
 ```
 lab50:
-  windows:
+  window:
     - editor
     - readme
     - terminal
@@ -66,7 +66,7 @@ wherein
 
 A value of `terminal` (implicit or explicit) is required.
 
-Also available as values for `windows` are 
+Also available as values for `window` are 
 
 * `browser`, which signifies that the lab should have an embedded browser, and
 * `x`, which signifies that the lab should have an embedded X window,
@@ -77,7 +77,7 @@ It's worth noting that a lab without `readme` is functionally similar to [CS50 S
 
 #### `files`
 
-To install files in students' environments (e.g., `foo.c` and `foo.h`), add a key below `lab50` called `files` (as a sibling of `windows`, if explicitly present):
+To install files in students' environments (e.g., `foo.c` and `foo.h`), add a key below `lab50` called `files` (as a sibling of `window`, if explicitly present):
 
 ```
 lab50:
