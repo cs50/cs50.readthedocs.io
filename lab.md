@@ -181,20 +181,6 @@ Forty-two.
 
 could you provide students with a solution.
 
-#### `submit`
-
-To display, via a **Submit** button, the command via which students can submit a lab via `submit50`, you can use this tag, provided your `.cs50.yml` has a value beneath `lab50` for `submit`:
-
-```
-{% submit %}
-```
-
-You can override the button's label with a quoted string:
-
-```
-{% submit "Ready to submit?" %}
-```
-
 #### `video`
 
 To embed a YouTube video (responsively) in a lab's instructions, you can use this tag, wherein the URL can be any URL of a video on [YouTube](https://www.youtube.com/):
