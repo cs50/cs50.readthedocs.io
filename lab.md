@@ -127,6 +127,8 @@ lab50:
 
 The value of `files` is an ordered list, top to bottom, so the above means that all files are excluded by default but `foo.*` is then included, thereby overriding their exclusion.
 
+<!--
+
 #### `checks`
 
 To specify checks via which students can receive feedback from [`check50`](check50) on their lab, add a key below `lab50` called `checks`, the value of which is those checks' slug:
@@ -157,6 +159,8 @@ That slug can defined in the same `.cs50.yml` file in which the lab itself is de
 submit50: true
 ```
 
+-->
+
 ### `README.md`
 
 A lab's instructions should be written in `README.md` (which must be in the same directory as `.cs50.yml`), using
@@ -165,6 +169,8 @@ A lab's instructions should be written in `README.md` (which must be in the same
 Your Markdown can also contain, if need, raw HTML, but not [these tags](https://github.github.com/gfm/#disallowed-raw-html-extension-).
 
 Your Markdown can also contain [emoji](https://www.webfx.com/tools/emoji-cheat-sheet/). <img alt=":slightly_smiling_face:" height="20" src="https:// assets-cdn.github.com/images/icons/emoji/unicode/1f63a.png" title=":smiley_cat:" width="20"> 
+
+<!--
 
 #### `check`
 
@@ -197,6 +203,8 @@ Yes! Nicely done.
 ```
 
 Supported logic includes [control flow](https://shopify.github.io/liquid/tags/control-flow/) and [iteration](https://shopify.github.io/liquid/tags/iteration/).
+
+-->
 
 #### `next`
 
