@@ -127,40 +127,6 @@ lab50:
 
 The value of `files` is an ordered list, top to bottom, so the above means that all files are excluded by default but `foo.*` is then included, thereby overriding their exclusion.
 
-<!--
-
-#### `checks`
-
-To specify checks via which students can receive feedback from [`check50`](check50) on their lab, add a key below `lab50` called `checks`, the value of which is those checks' slug:
-
-```
-lab50:
-  checks: cs50/labs/python/mario
-```
-
-That slug can defined in the same `.cs50.yml` file in which the lab itself is defined, as with:
-
-```
-check50: true
-```
-
-#### `submit`
-
-To specify a "slug" via which students can submit a lab via [`submit50`](submit50), add a key below `lab50` called `submit`, the value of which is that slug:
-
-```
-lab50:
-  submit: cs50/labs/python/mario
-```
-
-That slug can defined in the same `.cs50.yml` file in which the lab itself is defined, as with:
-
-```
-submit50: true
-```
-
--->
-
 ### `README.md`
 
 A lab's instructions should be written in `README.md` (which must be in the same directory as `.cs50.yml`), using
@@ -169,42 +135,6 @@ A lab's instructions should be written in `README.md` (which must be in the same
 Your Markdown can also contain, if need, raw HTML, but not [these tags](https://github.github.com/gfm/#disallowed-raw-html-extension-).
 
 Your Markdown can also contain [emoji](https://www.webfx.com/tools/emoji-cheat-sheet/). <img alt=":slightly_smiling_face:" height="20" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f63a.png" title=":slightly_smiling_face:" width="20"> 
-
-<!--
-
-#### `check`
-
-To provide students with a **Check** button via which they can receive automated feedback on a particular check from [`check50`](check50), using the [slug defined in `.cs50.yml`](#checks), you can use these tags, between which is an object (e.g., `compiles`) that representing that check's result (and the results of any checks on which that check depends):
-
-```
-{% check %}
-{{ compiles }}
-{% endcheck %}
-```
-
-You can override the button's label with a quoted string:
-
-```
-{% check "Does your code compile?" %}
-{{ compiles }}
-{% endcheck %}
-```
-
-Between those tags can also be logic that inspects the value of objects' properties (e.g., `passed`):
-
-```
-{% check "Does your code compile?" %}
-{{ if compiles.passed }}
-Yes! Nicely done.
-{% else %}
-{{ compiles }}
-{% endif %}
-{% endcheck %}
-```
-
-Supported logic includes [control flow](https://shopify.github.io/liquid/tags/control-flow/) and [iteration](https://shopify.github.io/liquid/tags/iteration/).
-
--->
 
 #### `next`
 
