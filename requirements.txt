@@ -1,3 +1,4 @@
+git+git://github.com/cs50/check50@develop
 recommonmark
 sphinx
 sphinx-autobuild
