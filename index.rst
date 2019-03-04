@@ -7,7 +7,6 @@
 
    check50/index
    cli50
-   compare50/index
    render50
    style50
    submit50
