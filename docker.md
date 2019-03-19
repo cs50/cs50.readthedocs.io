@@ -1,6 +1,6 @@
 # Docker
 
-[CS50 IDE](ide) and [`cli50`](cli50) (as well as CS50's web apps) are implemented with [containers](https://www.docker.com/what-container), "a lightweight, stand-alone, executable package of a piece of software that includes everything needed to run it: code, runtime, system tools, system libraries, settings."
+[CS50 IDE](/ide) and [`cli50`](/cli50) (as well as CS50's web apps) are implemented with [containers](https://www.docker.com/what-container), "a lightweight, stand-alone, executable package of a piece of software that includes everything needed to run it: code, runtime, system tools, system libraries, settings."
 
 To run containers on your own Mac or PC, you just need to install a container platform like [Docker Community Edition](https://www.docker.com/what-docker) (CE), which is freely available for
 
