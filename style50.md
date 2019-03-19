@@ -1,6 +1,6 @@
 # `style50`
 
-`style50` is a command-line tool with which you can check your code for consistency with [CS50's style guide](/style/c/) (for C). If your code isn't styled consistently, `style50` will summarize the changes you should make to your code, as by highlighting in <span class="bg-green p-1 text-white">green</span> characters you should add and highlighting in <span class="bg-red p-1 text-white">red</span> characters you should delete.
+`style50` is a command-line tool with which you can check your code for consistency with [CS50's style guide](../style/c/) (for C). If your code isn't styled consistently, `style50` will summarize the changes you should make to your code, as by highlighting in <span class="bg-green p-1 text-white">green</span> characters you should add and highlighting in <span class="bg-red p-1 text-white">red</span> characters you should delete.
 
 For instance, consider the code below, wherein the call to `printf` isn't properly indented.
 
