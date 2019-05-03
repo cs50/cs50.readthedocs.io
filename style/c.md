@@ -37,7 +37,7 @@ float c = 5.0 / 9.0 * (f - 32.0);
 ```
 
 Or this:
- 
+
 ```c
 // convert Fahrenheit to Celsius
 float c = 5.0 / 9.0 * (f - 32.0);
@@ -180,7 +180,7 @@ or with:
 ```c
 int main(int argc, char *argv[])
 {
-    
+
 }
 ```
 
@@ -224,7 +224,7 @@ As for your own functions, be sure to define them similiarly, with each curly br
 
 ## Indentation
 
-Indent your code four spaces at a time to make clear which blocks of code are inside of others. If you use your keyboard's Tab key to do so, be sure that your text editor's configured to convert tabs (`\t`) to four spaces, else your code may not print or display properly on someone else's computer, since `\t` renders differently in different editors. (If using [CS50 IDE](https://cs50.io/), it's fine to use Tab for indentation, rather than hitting your keyboard's space bar repeatedly, since we've preconfigured it to convert `\t` to four spaces.) 
+Indent your code four spaces at a time to make clear which blocks of code are inside of others. If you use your keyboard's Tab key to do so, be sure that your text editor's configured to convert tabs (`\t`) to four spaces, else your code may not print or display properly on someone else's computer, since `\t` renders differently in different editors. (If using [CS50 IDE](https://ide.cs50.io/), it's fine to use Tab for indentation, rather than hitting your keyboard's space bar repeatedly, since we've preconfigured it to convert `\t` to four spaces.)
 
 Here's some nicely indented code:
 
