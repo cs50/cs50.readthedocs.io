@@ -2,10 +2,6 @@
 
 For answers to other questions, do just strike up a [discussion](https://cs50.edx.org/communities) with classmates!
 
-## Can I use CS50 IDE offline?
-
-Yes, if you have particularly slow, expensive, or infrequent Internet access, see [CS50 IDE Offline](/ide/offline) for details on how you can run your own copy of CS50 IDE locally on your own computer.
-
 ## Does CS50x have a test or quiz?
 
 Nope! CS50 at Harvard University and Yale University does have a test and quiz, but CS50x does not.

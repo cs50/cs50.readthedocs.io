@@ -5,16 +5,14 @@
 
 ## Introduction
 
-CS50 IDE is a cloud-based Integrated Development Environment powered by [Cloud9](https://c9.io) that features a cloud-based Ubuntu environment. It features a browser-based editor, that supports C syntax highlighting and word completion, a GUI-based GDB debugging, full control over a cloud-based Ubuntu environment, and many more features including themes, customizable layouts, and keyboard shortcuts. Since it's cloud-based, you can continue working on your problem sets even if you use a different computer!
+CS50 IDE is a cloud-based Integrated Development Environment powered by [AWS Cloud9](https://aws.amazon.com/cloud9/) that features a cloud-based Ubuntu environment, a browser-based editor, that supports C syntax highlighting and word completion, a GUI-based GDB debugging, themes, customizable layouts, keyboard shortcuts, and many more features. Since it's cloud-based, you can continue working on your problem sets even if you use a different computer!
 
 ## Getting Started
 
-1. Visit [cs50.io](https://cs50.io).
-1. Use your edX, Harvard, or Yale credentials to log in. 
-1. Once you log in, you will automatically be forwarded to CS50 IDE! Hereafter, you may simply return to cs50.io to log in and return to CS50 IDE, where all your files and settings are preserved.
-1. Ensure your workspace is up-to-date. (See [Updating](#updating)!)
-
-NOTE: Upon logging into CS50 IDE for the first time, you may be prompted (again) for your email address. If so, after providing it, click **Private** under **Hosted workspace**, then click **Create workspace**.
+1. If you don't already have one, create a GitHub account at https://github.com/join.
+1. Visit [cs50.io](https://ide.cs50.io).
+1. Click Sign in with GitHub then login into your GitHub account if prompted.
+1. Once you log in, you will automatically be forwarded to CS50 IDE! Hereafter, you may simply return to ide.cs50.io to log in and return to CS50 IDE, where all your files and settings are preserved.
 
 ## Working with Files
 
@@ -85,17 +83,12 @@ From time to time you will need to clear your terminal so that it's easier to se
 1. Press <kbd>Ctrl</kbd> + <kbd>L</kbd> (on a PC) or <kbd>⌘</kbd> + <kbd>L</kbd> (on a Mac). This way doesn't actually clear the terminal, but rather just scrolls down, so you can always scroll back up and see what got cleared, if you wanted to.
 1. Press <kbd>Ctrl</kbd> + <kbd>K</kbd> (on a PC) or <kbd>⌘</kbd> + <kbd>K</kbd> (on a Mac). This way actually clears the terminal; you won't be able to scroll back up and see what got cleared.
 
-### Restarting Terminals
-
-Sometimes you need to restart your terminals, for example after an update (see *<<updating-ide>>*), to have the new changes reflected on your terminal tabs. While you could go ahead and close any open terminal tabs, then reopen them, there's an easier way by right-clicking (on a PC) or Control-clicking (on a Mac) inside of any terminal tab and choosing *Restart All Terminal Sessions*.
 
 ### Troubleshooting
 
 If you want to force a program to quit, for example because it's stuck in an infinite loop, press <kbd>Ctrl</kbd> + <kbd>C</kbd> (on a PC) or <kbd>⌘</kbd> + <kbd>C</kbd> (on a Mac). It may take several seconds for the program to respond, so do be patient!
 
 As a last resort, in case the program won't stop, you might need to forcibly kill it. Perhaps the easiest way to do that is to just close the terminal tab, clicking *Close* when prompted, and opening a new one.
-
-Alternatively, you can click the stats button (showing memory, CPU, and disk stats) on the upper-right corner, and click *Show Process List*, find your program in the list, select it, and click **Kill**. If it doesn't respond within a few seconds, click *Force Kill* instead.
 
 
 ## Layouts and Themes
@@ -136,9 +129,6 @@ By default, your workspace domain is private. But you may want your workspace do
 
 TIP: The URL next to **Application** is your workspace's fully-qualified domain name, but you can also print it by running `hostname50` or open it in a new browser tab by clicking **CS50 IDE > Web Server**.
 
-## Updating the IDE
-
-To ensure your workspace is up-to-date, click inside any open terminal tab (or open a new one), type `update50` and hit <kbd>Enter</kbd>.
 
 ## Reporting Problems
 

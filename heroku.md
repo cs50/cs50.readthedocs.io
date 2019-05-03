@@ -15,7 +15,7 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://docs.cs
 1. Change to your implementation's directory on CS50 IDE.
 
     ```
-    cd ~/workspace/pset8/finance/
+    cd ~/pset8/finance/
     ```
 
 1. Create a `git` repo therein.
@@ -56,7 +56,7 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://docs.cs
 
 1. At `https://dashboard.heroku.com/apps/app-name/resources`, where `app-name` is your Heroku app's name, click **Heroku Postgres :: Database**. In the tab that opens, click **Settings**, then click **View Credentials...**. Highlight and copy the **URI** that appears.
 
-1. In CS50 IDE, open `application.py` in `~/workspace/pset8/finance/` and find:
+1. In CS50 IDE, open `application.py` in `~/pset8/finance/` and find:
 
     ```py
     db = SQL("sqlite:///finance.db")
@@ -78,7 +78,7 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://docs.cs
 
     and visit the outputted URL. Log in using your database's credentials: at `https://dashboard.heroku.com/apps/app-name/resources`, where `app-name` is your Heroku app's name, click **Heroku Postgres :: Database**. In the tab that opens, click **Settings**, then click **View Credentials...**. 
 
-1. Create a new file in CS50 IDE called `Procfile` in `~/workspace/pset8/finance/` whose contents are:
+1. Create a new file in CS50 IDE called `Procfile` in `~/pset8/finance/` whose contents are:
 
     ```
     web: gunicorn application:app
