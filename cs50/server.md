@@ -104,6 +104,24 @@ CMD passenger start --static-files-dir path/to/directory
 
 ## Notes
 
+### Caching
+
+By default, HTTP responses from apps served by `cs50/server` are not cached by browsers (or proxies) because the image adds
+
+```
+Cache-Control: no-cache, no-store, must-revalidate
+Expires: 0
+Pragma: no-cache
+```
+
+to those responses.
+
+To allow responses to be cached, create a file called `server.conf` in the app's root containing the below, which will remove those headers:
+
+```
+more_clear_headers 'Cache-Control' 'Expires' 'Pragma';
+```
+
 ### HTTPS
 
 If `cs50/server` detects that it's running behind a load balancer, whereby `X-Forwarded-Proto` (an HTTP header) is set, and the value of that header is `http` (the implication of which is that a client's request used HTTP instead of HTTPS), `cs50/server` will redirect the request to use HTTPS.
