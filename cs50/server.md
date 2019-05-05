@@ -107,3 +107,17 @@ CMD passenger start --static-files-dir path/to/directory
 ### HTTPS
 
 If `cs50/server` detects that it's running behind a load balancer, whereby `X-Forwarded-Proto` (an HTTP header) is set, and the value of that header is `http` (the implication of which is that a client's request used HTTP instead of HTTPS), `cs50/server` will redirect the request to use HTTPS.
+
+### Inline Frames
+
+By default, apps based on `cs50/server` cannot be iframed, as the image adds
+
+```
+Content-Security-Policy: frame-ancestors 'none'
+```
+
+to HTTP responses. To allow an app to be iframed, create a file called `server.conf` in the app's root containing the below, which will remove that header:
+
+```
+more_clear_headers 'Content-Security-Policy';
+```
