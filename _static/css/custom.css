@@ -47,12 +47,6 @@ p {
     margin-bottom: 12px;
 }
 
-/* Decrease margins above nested lists */
-li > p + ol,
-li > p + ul {
-    margin-top: -12px;
-}
-
 /* Remove margins in nested lists */
 .rst-content .section ol p,
 .rst-content .section ul p {
