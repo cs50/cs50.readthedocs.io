@@ -128,13 +128,13 @@ If `cs50/server` detects that it's running behind a load balancer, whereby `X-Fo
 
 ### Inline Frames
 
-By default, apps based on `cs50/server` cannot be iframed, as the image adds
+By default, apps based on `cs50/server` cannot be iframed in other sites, as the image adds
 
 ```
-Content-Security-Policy: frame-ancestors 'none'
+Content-Security-Policy: frame-ancestors 'self'
 ```
 
-to HTTP responses. To allow an app to be iframed, create a file called `server.conf` in the app's root containing the below, which will remove that header:
+to HTTP responses. To allow an app to be iframed by another site, create a file called `server.conf` in the app's root containing the below, which will remove that header:
 
 ```
 more_clear_headers 'Content-Security-Policy';
