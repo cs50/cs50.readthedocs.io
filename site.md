@@ -18,7 +18,7 @@ Your `_includes` folder is where you will keep files that will be used on more t
 
   * `nav.md`: This is where you will add menu items to your sidebar. 
 
-![inlcudes directory](/teacher_sites/_includes.png)
+![](/teacher_sites/_includes.png)
 
 Note that `*` creates an item in the navigation bar on the left and `***` creates a horizontal divide.
 
@@ -60,16 +60,16 @@ If you are among those less comfy, you can do most everything from GitHub’s we
 
 To create a new file, simply click create new file and you can specify the file’s path and type the contents of that file directly into the text editor provided. You could also type the contents in some other text editor and upload the file directly with the upload files button. 
 
-![new file](/teacher_sites/github1.png)
+![](/teacher_sites/github1.png)
 
 You can also edit existing files. Once you’ve selected the file you’d like to edit, click on the pencil icon at the top right of the page. You’ll be able to make changes in the text editor provided.
 
-![edit](/teacher_sites/github2.png)
+![](/teacher_sites/github2.png)
  
 Once you’re satisfied with your changes, you’ll want to commit them. Commit is GitHub lingo for saving a file. The top text box is the message for your commit. It could be something like “adds link to period4.md.” These messages are solely for you so don’t worry about being super descriptive. If you’d like to add further text here you can use the second box for a longer explanation but it is optional. Make sure that you have selected “Commit directly to the `master` branch.” Then click “Commit changes.” 
 Within a few minutes or so, your site should reflect these changes.
 
-![commit](/teacher_sites/github3.png)
+![](/teacher_sites/github3.png)
 
 ### More Comfy
 If you’d like to develop your site and run it locally, before committing your changes, you’ll need to do a little setup first.
