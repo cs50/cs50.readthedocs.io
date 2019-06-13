@@ -55,15 +55,7 @@ Atop your .c and .h files should be a comment that summarize what your program (
 // Says hello to the world
 ```
 
-You may also wish to include your name, the date, and any other relevant information in your comments atop your .c and .h files:
-
-```c
-// John Harvard
-// 1 January 2018
-// Problem Set 1
-```
-
-Atop each of your functions (except, perhaps, `main`), there should be a comment that summarize what your function is doing, as in:
+Atop each of your functions (except, perhaps, `main`), meanwhile, should be a comment that summarizes what your function is doing, as in:
 
 ```c
 // Returns the square of n
@@ -150,7 +142,7 @@ Notice how:
 - there's a single space after `switch`;
 - there isn't any space immediately after each `(` or immediately before each `)`;
 - the switch's cases are indented with 4 spaces;
-- the case's bodies are indented further with 4 spaces; and
+- the cases' bodies are indented further with 4 spaces; and
 - each `case` (including `default`) ends with a `break`.
 
 ## Functions
