@@ -70,13 +70,7 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://docs.cs
     pgloader finance.db URI?sslmode=require
     ```
 
-    Thereafter, if you'd like to browse or edit your Postgres database, you can use Adminer (a tool like phpLiteAdmin for Postgres databases), which is installed on CS50 IDE. To launch Adminer, execute
-
-    ```
-    adminer50
-    ```
-
-    and visit the outputted URL. Log in using your database's credentials: at `https://dashboard.heroku.com/apps/app-name/resources`, where `app-name` is your Heroku app's name, click **Heroku Postgres :: Database**. In the tab that opens, click **Settings**, then click **View Credentials...**. 
+    Thereafter, if you'd like to browse or edit your Postgres database, you can use Adminer (a tool like phpLiteAdmin for Postgres databases), at [adminer.cs50.net](https://adminer.cs50.net/). Log in using your database's credentials: at `https://dashboard.heroku.com/apps/app-name/resources`, where `app-name` is your Heroku app's name, click **Heroku Postgres :: Database**. In the tab that opens, click **Settings**, then click **View Credentials...**. 
 
 1. Create a new file in CS50 IDE called `Procfile` in `~/pset8/finance/` whose contents are:
 
