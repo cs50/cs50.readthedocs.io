@@ -55,15 +55,7 @@ Atop your .c and .h files should be a comment that summarize what your program (
 // Says hello to the world
 ```
 
-You may also wish you to include your name, the date, and any other relevant information in your comments atop your .c and .h files:
-
-```c
-// John Harvard
-// 1 January 2018
-// Problem Set 1
-```
-
-Atop each of your functions (except, perhaps, `main`), meanwhile, should be a comment that summarize what your function, as in:
+Atop each of your functions (except, perhaps, `main`), meanwhile, should be a comment that summarizes what your function is doing, as in:
 
 ```c
 // Returns the square of n
@@ -97,10 +89,10 @@ Notice how:
 - the curly braces line up nicely, each on its own line, making perfectly clear what's inside the branch;
 - there's a single space after each `if`;
 - each call to `printf` is indented with 4 spaces;
-- there are single spaces around the `>` and around the `>`; and
+- there are single spaces around the `>` and around the `<`; and
 - there isn't any space immediately after each `(` or immediately before each `)`.
 
-To save space, some programmers like to keep the first curly brace on the same line as the condition itself, but we don't recommend, as it's harder to read, so don't do this:
+To save space, some programmers like to keep the first curly brace on the same line as the condition itself, but we don't recommend that, as it's harder to read, so don't do this:
 
 ```c
 if (x < 0) {
