@@ -61,6 +61,10 @@ Unfortunately, edX's open ID (which we use for authentication) doesn't support l
 
 If it's been a while since you submitted Problem Set 0, but you're still not seeing a grade for it in [CS50.me](https://cs50.me/), be sure you've linked your edX account at [CS50.me/account](https://cs50.me/account)!
 
+## My Style grade is not what I expected.  Why might that be?
+
+Your style grade will be based on the `style50` results for every source code file in your submission.  When you run `submit50`, be sure that your folder includes only those files that are necessary for the problem set.  If you have any extra test files in there, those will be counted towards your grade.  Remove the extra files from the folder and resubmit to get an updated Style score.
+
 ## Why does edX think my grade 0%?
 
 CS50x doesn't use edX's built-in gradebook, so all students' scores appear (in edX's gradebook) as 0%. Not to worry, see [CS50.me](https://cs50.me/) for your actual scores.
