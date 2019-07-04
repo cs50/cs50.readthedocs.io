@@ -92,7 +92,7 @@ Notice how:
 - there are single spaces around the `>` and around the `<`; and
 - there isn't any space immediately after each `(` or immediately before each `)`.
 
-To save space, some programmers like to keep the first curly brace on the same line as the condition itself, but we don't recommend that, as it's harder to read, so don't do this:
+To save space, some programmers like to keep the first curly brace on the same line as the condition itself, but we don't recommend, as it's harder to read, so don't do this:
 
 ```c
 if (x < 0) {
