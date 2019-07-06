@@ -48,7 +48,7 @@ optional arguments:
 cli50
 ```
 
-Your current working directory will be mounted at `~/workspace` within the container.
+Your current working directory will be mounted at `~/environment` within the container.
 
 ### Mount any directory
 
@@ -58,7 +58,7 @@ Assuming `path/to/directory` is that directory's absolute path, you can mount it
 cli50 path/to/directory
 ```
 
-The directory will be mounted at `~/workspace` within the container.
+The directory will be mounted at `~/environment` within the container.
 
 ### Skip autoupdate
 
