@@ -65,31 +65,6 @@ Usage
         string s = "hello, world!";
 
 
-.. function:: void eprintf(const char *format, ...)
-
-    :param format: the :func:`printf`-like format string used to display the prompt
-    :param ...: values to be substituted into the format string a la :func:`printf`
-    
-
-    Prints an error message formatted like :func:`printf` to standard error, prefixing it
-    with file and line number from which the function was called.
-
-    Example usage::
-
-        int main(void)
-        {
-            eprintf("This line of code should be executed\n");
-  
-            int i;
-            for (i = 0; i < 50; i++)
-            {
-                printf("i is %d\n", i);
-            }
-  
-            eprintf("Expected i to be 49 but it is actually %d\n", i);
-        }
-
-
 .. function:: char get_char(const char *format, ...)
     
     :param format: the :func:`printf`-like format string used to display the prompt
