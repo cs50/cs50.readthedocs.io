@@ -21,7 +21,7 @@ pip install --upgrade cli50
 ## Usage
 
 ```
-usage: cli50 [-h] [-f] [-l [CONTAINER]] [-d DOTFILE] [-S] [-t TAG] [-V]
+usage: cli50 [-h] [-d DOTFILE] [-f] [-l [CONTAINER]] [-S] [-t TAG] [-V]
              [DIRECTORY]
 
 positional arguments:
@@ -29,12 +29,12 @@ positional arguments:
 
 optional arguments:
   -h, --help            show this help message and exit
-  -f, --fast            skip autoupdate
-  -l [CONTAINER], --login [CONTAINER]
-                        log into container
   -d DOTFILE, --dotfile DOTFILE
                         dotfile in your $HOME to mount read-only in
                         container's $HOME
+  -f, --fast            skip autoupdate
+  -l [CONTAINER], --login [CONTAINER]
+                        log into CONTAINER
   -S, --stop            stop any containers
   -t TAG, --tag TAG     start cs50/cli:TAG, else cs50/cli:latest
   -V, --version         show program's version number and exit
