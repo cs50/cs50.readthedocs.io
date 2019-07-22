@@ -70,5 +70,3 @@
    lab
    sandbox
    vault
-
-.. image:: 2ep2od.jpg
