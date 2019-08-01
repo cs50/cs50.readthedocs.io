@@ -37,13 +37,13 @@ Yes, any scores you received on past years' problem sets have been imported into
 
 CS50x is perhaps best suited for ages 12 and up. Younger students might need a hand from a parent.
 
-## How to import scores from previous years into CS50.me/gradebook?
+## How to import scores from previous years?
 
-To import scores from previous years, head to [CS50.me/account](https://cs50.me/account), and link your edX account under *Connected Accounts*.
+Your scores should carry forward automatically.  Head to [CS50.me/cs50x](https://cs50.me/cs50x).  If your edX account has not been linked, be sure to follow the prompt to do so.
 
 ## How do I know if I have completed all requirements for a Verified Certificate?
 
-Your [CS50.me Gradebook](https://cs50.me/gradebook) shows the scores you have received for each submitted problem.  Once you have completed all requirements, you will see a green banner atop that page, confirming your completion.  
+Your [CS50.me Gradebook](https://cs50.me/cs50x) shows the scores you have received for each submitted problem.  Once you have completed all requirements, you will see a green banner atop that page, confirming your completion.  
 
 ## When are Verified Certificates generated?
 
@@ -59,7 +59,7 @@ Unfortunately, edX's open ID (which we use for authentication) doesn't support l
 
 ## Why is pset0 not graded yet?
 
-If it's been a while since you submitted Problem Set 0, but you're still not seeing a grade for it in [CS50.me](https://cs50.me/), be sure you've linked your edX account at [CS50.me/account](https://cs50.me/account)!
+If it's been a while since you submitted Problem Set 0, but you're still not seeing a grade for it in [CS50.me](https://cs50.me/), be sure you submitted your project to the correct branch.  Please refer to pset0's [submission instructions](https://docs.cs50.net/2019/x/psets/0/scratch.html#how-to-submit).
 
 ## My Style grade is not what I expected.  Why might that be?
 
@@ -67,4 +67,4 @@ Your style grade will be based on the `style50` results for every source code fi
 
 ## Why does edX think my grade 0%?
 
-CS50x doesn't use edX's built-in gradebook, so all students' scores appear (in edX's gradebook) as 0%. Not to worry, see [CS50.me](https://cs50.me/) for your actual scores.
+CS50x doesn't use edX's built-in gradebook, so all students' scores appear (in edX's gradebook) as 0%. Not to worry, see [CS50.me](https://cs50.me/cs50x) for your actual scores.
