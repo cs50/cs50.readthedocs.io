@@ -1,6 +1,6 @@
 language: python
 env:
-  - CLONE_TOOLS="$CLONE_TOOLS submit50-server"
+  - CLONE_TOOLS="check50 compare50 submit50-server"
   - INSTALL_TOOLS="check50 compare50"
 python: 3.6
 install:
