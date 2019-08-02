@@ -5,7 +5,7 @@ env:
 python: 3.6
 install:
   - pip install --upgrade --requirement requirements.txt
-  - for tool in $CLONE_TOOLS; do rm --force --recursive /tmp/$tool && git clone --branch develop --depth 1 https://github.com/cs50/$tool.git /tmp/$tool; done
+  - for tool in $CLONE_TOOLS; do rm --force --recursive /tmp/$tool && git clone --branch develop --depth 1 https://$GITHUB_TOKEN:x-oauth-basic@github.com/cs50/$tool.git /tmp/$tool; done
   - for tool in $INSTALL_TOOLS; do pip install /tmp/$tool && mv /tmp/$tool/docs/source $tool && rm --force --recursive /tmp/$tool; done
   - pip install -r /tmp/submit50-server/requirements.txt && mv /tmp/submit50-server/docs/source submit50-server && rm -rf /tmp/submit50-server
 script:
