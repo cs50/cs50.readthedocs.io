@@ -39,7 +39,10 @@ release = ''
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
-    'sphinx_markdown_tables'
+    'sphinx_markdown_tables',
+    'sphinxcontrib.httpdomain',
+    'sphinxcontrib.autohttp.flask',
+    'sphinxcontrib.autohttp.flaskqref'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
