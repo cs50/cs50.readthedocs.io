@@ -7,7 +7,7 @@ install:
   - pip install --upgrade --requirement requirements.txt
   - for tool in $CLONE_TOOLS; do rm --force --recursive /tmp/$tool && git clone --branch develop --depth 1 https://$GITHUB_TOKEN:x-oauth-basic@github.com/cs50/$tool.git /tmp/$tool; done
   - for tool in $INSTALL_TOOLS; do pip install /tmp/$tool && mv /tmp/$tool/docs/source $tool && rm --force --recursive /tmp/$tool; done
-  - mv /tmp/submit50-server /tmp/submit && pip install -r /tmp/submit/requirements.txt && mv /tmp/submit/docs/source submit && cat /tmp/submit/docs/requirements.txt >> requirements.txt && rm -rf /tmp/submit
+  - mv /tmp/submit50-server /tmp/submit && pip install -r /tmp/submit{,/docs}/requirements.txt && mv /tmp/submit/docs/source submit && cat /tmp/submit/docs/requirements.txt >> requirements.txt && rm -rf /tmp/submit
 script:
   - make html && rm --force --recursive _build
 deploy:
