@@ -69,7 +69,7 @@
    ide/index
    lab
    sandbox
-   submit50-server
+   submit
    vault
 
 .. image:: 2ep2od.jpg
