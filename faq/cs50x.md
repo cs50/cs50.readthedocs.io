@@ -10,7 +10,6 @@ Nope! CS50 at Harvard University and Yale University does have a test and quiz, 
 
 No, afraid CS50x is too large, but you can still start a [discussion](https://cs50.edx.org/communities) with classmates!
 
-
 ## Does CS50x have sections?
 
 No, afraid CS50x is too large, but you can still start a [discussion](https://cs50.edx.org/communities) with classmates!
@@ -37,13 +36,9 @@ Yes, any scores you received on past years' problem sets have been imported into
 
 CS50x is perhaps best suited for ages 12 and up. Younger students might need a hand from a parent.
 
-## How to import scores from previous years into CS50.me/gradebook?
-
-To import scores from previous years, head to [CS50.me/account](https://cs50.me/account), and link your edX account under *Connected Accounts*.
-
 ## How do I know if I have completed all requirements for a Verified Certificate?
 
-Your [CS50.me Gradebook](https://cs50.me/gradebook) shows the scores you have received for each submitted problem.  Once you have completed all requirements, you will see a green banner atop that page, confirming your completion.  
+[cs50.me/cs50x](https://cs50.me/cs50x) shows the scores you have received for each submitted problem.  Once you have completed all requirements, you will see a green banner atop that page, confirming your completion.  
 
 ## When are Verified Certificates generated?
 
@@ -57,14 +52,10 @@ CS50x does not have deadlines for problem sets or for the final project. You are
 
 Unfortunately, edX's open ID (which we use for authentication) doesn't support logging in with Facebook, Google, or Microsoft accounts yet. To get around this, for now, you should try resetting your password (even though you may have never set any before) from your [Account Settings](https://courses.edx.org/account/settings) page on edX.  Then try the pset0 form again, logging in with the email associated with your Facebook, Google, or Microsoft account you use to log into edX, and the password you just set.
 
-## Why is pset0 not graded yet?
-
-If it's been a while since you submitted Problem Set 0, but you're still not seeing a grade for it in [CS50.me](https://cs50.me/), be sure you've linked your edX account at [CS50.me/account](https://cs50.me/account)!
-
 ## My Style grade is not what I expected.  Why might that be?
 
-Your style grade will be based on the `style50` results for every source code file in your submission.  When you run `submit50`, be sure that your folder includes only those files that are necessary for the problem set.  If you have any extra test files in there, those will be counted towards your grade.  Remove the extra files from the folder and resubmit to get an updated Style score.
+Your style grade will be based on the `style50` results for every source code file in your submission. When you run `submit50`, be sure that your folder includes only those files that are necessary for the problem set.  If you have any extra test files in there, those will be counted towards your grade.  Remove the extra files from the folder and resubmit to get an updated Style score.
 
 ## Why does edX think my grade 0%?
 
-CS50x doesn't use edX's built-in gradebook, so all students' scores appear (in edX's gradebook) as 0%. Not to worry, see [CS50.me](https://cs50.me/) for your actual scores.
+CS50x doesn't use edX's built-in gradebook, so all students' scores appear (in edX's gradebook) as 0%. Not to worry, see [cs50.me/cs50x](https://cs50.me/cs50x) for your actual scores.
