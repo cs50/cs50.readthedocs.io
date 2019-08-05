@@ -7,9 +7,9 @@ install:
   - pip install --upgrade --requirement requirements.txt
   - for tool in $CLONE_TOOLS; do rm --force --recursive /tmp/$tool && git clone --branch develop --depth 1 https://$GITHUB_TOKEN:x-oauth-basic@github.com/cs50/$tool.git /tmp/$tool; done
   - for tool in $INSTALL_TOOLS; do pip install /tmp/$tool && mv /tmp/$tool/docs/source $tool && rm --force --recursive /tmp/$tool; done
-  - mv /tmp/submit50-server /tmp/submit && pip install -r /tmp/submit/requirements.txt -r /tmp/submit/docs/requirements.txt && mv /tmp/submit/docs/source submit && cat /tmp/submit/docs/requirements.txt >> requirements.txt && rm -rf /tmp/submit
+  - mv /tmp/submit50-server /tmp/submit && pip install -r /tmp/submit/requirements.txt -r /tmp/submit/docs/requirements.txt && mv /tmp/submit/docs/source submit && cat /tmp/submit/docs/requirements.txt >> requirements.txt
 script:
-  - make html && rm --force --recursive _build
+  - PYTHONPATH="$PYTHONPATH:/tmp/submit" make html && rm --force --recursive _build
 deploy:
   provider: script
   script: 'git remote set-url origin "https://$USERNAME:$PASSWORD@github.com/cs50/manual50.git" && git branch --delete rel || true && git checkout -b rel && git add --all --force && git commit --allow-empty --message "$(date) [skip ci]" && git push --force origin rel'
