@@ -1,6 +1,14 @@
 .. title:: Home
 
 .. toctree::
+   :caption: APIs
+   :hidden:
+   :maxdepth: 1
+
+   check50 <https://cs50.readthedocs.io/projects/check50/en/latest/>
+   compare50 <https://cs50.readthedocs.io/projects/compare50/en/latest/>
+ 
+.. toctree::
    :caption: Command-Line Tools
    :hidden:
    :maxdepth: 1
