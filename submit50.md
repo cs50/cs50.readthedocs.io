@@ -55,9 +55,9 @@ By default, `submit50` pushes your work to GitHub via HTTPS, which requires your
    ```
 1. Execute 
    ```
-   ssh git@github.com
+   ssh -T -p443 git@ssh.github.com
    ```
-   to add `github.com` to the list of known hosts for `ssh`, answering "yes" if prompted whether you're sure you want to continue connecting. If all goes well, you should see the message
+   to add `ssh.github.com` to the list of known hosts for `ssh`, answering "yes" if prompted whether you're sure you want to continue connecting. If all goes well, you should see the message
 
     ```
     Hi <USERNAME>! You've successfully authenticated, but GitHub does not provide shell access.
