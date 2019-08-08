@@ -110,7 +110,33 @@ CS50 IDE also provides **Presentation Mode** in which the user interface is even
 
 ## Sharing Your Workspace
 
-Coming soon!
+### Adding a Member to Your Workspace
+
+1. Head to your IDE and click **Share** on the top-right corner.
+
+![](share.png)
+
+1. Under **Invite members**, type in the GitHub username of the user you'd like to share your IDE with and click **Invite**.
+
+![](add-member-0.png)
+
+1. Copy your IDE's link and share it with that user. They should now have access to your IDE.
+
+![](add-member-1.png)
+
+### Removing a Member to Your Workspace
+
+1. Head to your IDE and click Share on the top-right corner.
+
+![](share.png)
+
+1. Under **Who has access** find the GitHub username of the user you'd like to remove from your IDE.
+
+![](remove-member-0.png)
+
+1. Click the **x** button to the right of that username. They should no longer have access to your IDE.
+
+![](remove-member-1.png)
 
 ## Reporting Problems
 
