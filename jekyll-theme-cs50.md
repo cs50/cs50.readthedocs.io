@@ -1,3 +1,3 @@
-# Jekyll Theme for CS50
+# CS50 Theme
 
 TODO

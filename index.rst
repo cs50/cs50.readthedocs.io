@@ -52,7 +52,7 @@
    site
 
 .. toctree::
-   :caption: Jekyll Themes
+   :caption: Jekyll
    :hidden:
    :maxdepth: 1
 
