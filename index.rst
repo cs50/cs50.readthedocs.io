@@ -52,6 +52,13 @@
    site
 
 .. toctree::
+   :caption: Jekyll Themes
+   :hidden:
+   :maxdepth: 1
+
+   jekyll-theme-cs50
+
+.. toctree::
    :caption: Libraries
    :hidden:
    :maxdepth: 1

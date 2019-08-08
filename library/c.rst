@@ -2,7 +2,7 @@
 .. highlight:: c
 
 ============================
-libcs50 - CS50 library for C
+CS50 library for C
 ============================
 
 Installation
