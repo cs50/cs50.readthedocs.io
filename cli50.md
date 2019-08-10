@@ -37,6 +37,7 @@ optional arguments:
                         log into CONTAINER
   -S, --stop            stop any containers
   -t TAG, --tag TAG     start cs50/cli:TAG, else cs50/cli:latest
+  -u, --update          update only
   -V, --version         show program's version number and exit
 ```
 
@@ -72,6 +73,20 @@ or
 
 ```
 cli50 --fast
+```
+
+### Update only
+
+You can update (i.e., pull) `cs50/cli`, the Docker image on which `cli50` is based, without actually starting a container as follows:
+
+```
+cli50 -u
+```
+
+or
+
+```
+cli50 --update
 ```
 
 ### Log into running container
