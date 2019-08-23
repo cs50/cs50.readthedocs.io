@@ -48,7 +48,7 @@ You are more than welcome to change the files in this repository in whatever way
 
 If you are among those less comfy and you will want to download your current version of your fork to your machine. You can do this by visiting `https://github.com/USERNAME/ap`, where USERNAME is your own GitHub username and clicking on the green `clone or download` and then select `download ZIP`. This will allow you to keep any changes you've made on your previous version of the site. Then visit `https://github.com/USERNAME/ap/settings`, where USERNAME is your own GitHub username, and scroll down to the bottom and select `Delete this repository`. Only do this after you are sure you've downloaded a copy of it locally, lest you lose any customizations you've made.
 
-Then go ahead and visit [github.com/cs50/ap](https://help.github.com/cs50/ap) and fork the repo per the instructions in the Getting Started Section.
+Then go ahead and visit [github.com/cs50/ap](https://github.com/cs50/ap) and fork the repo per the instructions in the Getting Started Section.
 
 If you are among those more comfy and you already have a fork of the repo you are certainly welcome to [sync your fork](https://help.github.com/articles/syncing-a-fork/) with ours.
 
