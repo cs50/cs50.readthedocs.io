@@ -21,7 +21,8 @@ pip install --upgrade cli50
 ## Usage
 
 ```
-usage: cli50 [-h] [-d DOTFILE] [-f] [-l [CONTAINER]] [-S] [-t TAG] [-V]
+usage: cli50 [-h] [-d DOTFILE] [-f] [-j] [-l [CONTAINER]] [-S] [-t TAG] [-u]
+             [-V]
              [DIRECTORY]
 
 positional arguments:
