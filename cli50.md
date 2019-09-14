@@ -33,6 +33,7 @@ optional arguments:
                         dotfile in your $HOME to mount read-only in
                         container's $HOME
   -f, --fast            skip autoupdate
+  -j, --jekyll          serve Jekyll site
   -l [CONTAINER], --login [CONTAINER]
                         log into CONTAINER
   -S, --stop            stop any containers
@@ -112,6 +113,28 @@ Directories (e.g., `~/.vim`) are supported as well:
 ```
 cli50 -d .vim
 ```
+
+### Serve Jekyll site
+
+When developing a Jekyll site, you can serve (and continually rebuild) it within a container as follows:
+
+```
+cli50 -j
+```
+
+or
+
+```
+cli50 --jekyll
+```
+
+The site will be served at `http://0.0.0.0:8080/` within the container, but port 8080 will be published on pseudorandom port on the host (i.e., your computer). If `cli50` outputs, e.g.,
+
+```
+0.0.0.0:#####->8080/tcp, ...
+```
+
+on startup, you can access the site at `http://0.0.0.0:#####/` on your computer.
 
 ## Source Code
 
