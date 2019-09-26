@@ -100,9 +100,9 @@ You could also move tabs between different panes by dragging and dropping a tab 
 
 ### Themes
 
-By default a theme called **Cloud9 Day** is selected, but if you prefer a dark theme, you can select it via **View > Night Mode**.
+By default a theme called **Cloud9 Day** is selected, but if you prefer a dark theme, you can select it via **View > Dark Mode**.
 
-![](night-mode.png)
+![](dark-mode.png)
 
 ### Presentation Mode
 
