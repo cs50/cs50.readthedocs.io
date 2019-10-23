@@ -41,7 +41,7 @@ To install check50 under Linux / OS X:
 
 .. code-block:: bash
 
-    pip install check50
+    pip3 install check50
 
 Under Windows, please |install_windows_sub|. Then install check50 within the subsystem.
 
