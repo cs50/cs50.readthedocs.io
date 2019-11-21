@@ -32,6 +32,10 @@ No, you should be able to re-verify yourself via edX's [dashboard](https://cours
 
 Yes, any scores you received on past years' problem sets have been imported into CS50x 2019. However, moving forward, you must submit CS50x 2019's problem sets.
 
+## I won't be able to finish the course before 31 December 2019.  What will happen?
+
+After 31 Dec, the course will be updated to the 2020 edition. Your progress from 2019 will be carried forward to the 2020 course.  Moving forward, you must submit CS50x 2020's problem sets.  Please see the chart on the front page of the CS50x course page for your 2019->2020 transition instructions (coming in January 2020).
+
 ## Is my child too young to take CS50x?
 
 CS50x is perhaps best suited for ages 12 and up. Younger students might need a hand from a parent.
