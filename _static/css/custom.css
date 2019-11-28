@@ -77,7 +77,8 @@ article ul {
 
 /* Wrap code */
 code, .rst-content tt, .rst-content code {
-    white-space: inherit;
+    white-space: pre-wrap;
+    word-break: break-word;
 }
 
 /* Wrap long URLs, but don't wrap code blocks */
