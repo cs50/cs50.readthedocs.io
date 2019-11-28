@@ -28,7 +28,7 @@ Source: [medium.com/@darutk/diagrams-of-all-the-openid-connect-flows-6968e399066
 
 ### Web Apps
 
-[response_type=code](1*quwFs1fFCvTvLT80e_QHVA.png)
+[response_type=code](code.png)
 
 1. You'll first redirect the user to a URL like `https://id50.auth0.com/authorize?response_type=code&client_id=CLIENT_ID&redirect_uri=https%3A%2F%2Fexample.com%2Fcallback&scope=openid+profile+email&...`, where `CLIENT_ID` is your Client Identifier, `CLIENT_SECRET` is your Client Secret, and `https://example.com/callback` (URL-encoded as `https%3A%2F%2Fexample.com%2Fcallback`) is your Redirection URI.
 1. The user will be prompted to authenticate, as via HarvardKey or Yale CAS.
@@ -38,7 +38,7 @@ Source: [medium.com/@darutk/diagrams-of-all-the-openid-connect-flows-6968e399066
 
 ## Mobile Apps
 
-[response_type=id_token](1*95aX-M20iBFGB08q_Yep2w.png)
+[response_type=id_token](id_token.png)
 
 1. You'll first open (in an embedded browser) a URL like `https://id50.auth0.com/authorize?response_type=id_token&client_id=CLIENT_ID&redirect_uri=https%3A%2F%2Fexample.com%2Fcallback&scope=openid+profile+email&...`, where `CLIENT_ID` is your Client Identifier, `CLIENT_SECRET` is your Client Secret, and `https://example.com/callback` (URL-encoded as `https%3A%2F%2Fexample.com%2Fcallback`) is your Redirection URI.
 1. The user will be prompted to authenticate, as via HarvardKey or Yale CAS.
