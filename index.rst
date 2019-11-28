@@ -64,9 +64,6 @@
    :maxdepth: 1
 
    C <library/c>
-   C++ <library/cpp>
-   Java <library/java>
-   Python <library/python>
 
 .. toctree::
    :caption: Style Guides
