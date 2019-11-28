@@ -81,6 +81,7 @@
    :maxdepth: 1
 
    forms
+   id/index
    ide/index
    lab
    sandbox
