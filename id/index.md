@@ -26,7 +26,7 @@ wherein the value of `CLIENT_ID` should be your Client Identifier, the value of 
 
 ### QuickStarts
 
-Because CS50 ID is built atop Auth0, a third-party service, you can actually [follow their instructions](https://auth0.com/docs/quickstarts) to get started. **No need to sign up for an Auth0 account, though.** Instead, when directed to use the "Auth0 dashboard," log into [id.cs50.io](https://id.cs50.io/) instead for your Client Identifier, Client Secret, and more. No need to configure a "Logout URL" either.
+Because CS50 ID is built atop Auth0, a third-party service, you can actually [follow their instructions](https://auth0.com/docs/quickstarts) to get started. **No need to sign up for an Auth0 account.** Instead, when directed to use the "Auth0 dashboard," log into [id.cs50.io](https://id.cs50.io/) instead for your Client Identifier, Client Secret, and more. No need to configure a "Logout URL" either.
 
 ## How It Works
 
