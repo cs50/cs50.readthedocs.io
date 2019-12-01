@@ -5,6 +5,8 @@
    :hidden:
    :maxdepth: 1
 
+   api/dining
+
    check50 <https://cs50.readthedocs.io/projects/check50/en/latest/>
    compare50 <https://cs50.readthedocs.io/projects/compare50/en/latest/>
  
