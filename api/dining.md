@@ -17,44 +17,26 @@ On failure, the API returns an HTTP status code of
 
 ## Endpoints
 
-* [`https://api.cs50.io/dining/locations`](https://api.cs50.io/dining/locations), which returns a JSON array of objects, each of which represents a location on campus.
-* `https://api.cs50.io/dining/locations/:id`, where `:id` is the `id` of a location, which returns a JSON object that represents that location.
+### Categories
+
+For a JSON array of objects, each of which represents a category of food, GET [`https://api.cs50.io/dining/locations`](https://api.cs50.io/dining/categories).
+
+For a JSON object that represents a specific category, GET `https://api.cs50.io/dining/category/:id`, where `:id` is that category's `id`.
+
+### Locations
+
+For a JSON array of objects, each of which represents a location on campus, GET [`https://api.cs50.io/dining/locations`](https://api.cs50.io/dining/locations).
+
+For a JSON object that represents a specific location on campus, GET `https://api.cs50.io/dining/locations/:id`, where `:id` is that location's `id`.
+
+### Recipes
+
+For a JSON array of objects, each of which represents a recipe, GET [`https://api.cs50.io/dining/recipes`](https://api.cs50.io/dining/recipes).
+
+For a JSON object that represents a specific recipe, GET `https://api.cs50.io/dining/recipe/:id`, where `:id` is that recipe's `id`.
+<--
 
 * [`https://api.cs50.io/dining/categories`](https://api.cs50.io/dining/categories), which returns a JSON array of objects, each of which represents a category of food.
 * `https://api.cs50.io/dining/categories/:id`, where `:id` is the `id` of a category, which returns a JSON object that represents that category.
 
-### Locations
-
-For all locations, GET [`https://api.cs50.io/dining/locations`](https://api.cs50.io/dining/locations). A JSON array like the below will be returned:
-
-```json
-[
-  ...,
-  {
-    "id": 7,
-    "name": "Dunster and Mather House"
-  },
-  ...
-  {
-    "id": 9, 
-    "name": "Adams House"
-  },
-  ...
-  {
-    "id": 30, 
-    "name": "Annenberg Hall"
-  }, 
-  ...
-]
-```
-
-For a specific location, GET `https://api.cs50.io/dining/locations/:id`, where `:id` is that location's `id`. A JSON object like the below will be returned:
-
-```json
-{
-  "id": 7,
-  "name": "Dunster and Mather House"
-}
-```
-
-Because some dining halls (e.g., Dunster's and Mather's) share kitchens (and thus menus), they also share an `id` and `name` in the API.
+-->
