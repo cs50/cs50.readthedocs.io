@@ -1,3 +1,3 @@
 # APIs
 
-* [Dining API](dining)
+* [Dining API](/api/dining.md)
