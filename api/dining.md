@@ -23,28 +23,38 @@ On failure, the API returns an HTTP status code of
 GET https://api.cs50.io/dining/categories
 ```
 
-Returns a JSON array of objects, each of which represents a category of food. For instance, <https://api.cs50.io/dining/categories>.
+Returns a JSON array of objects, each of which represents a category of food. For example, <https://api.cs50.io/dining/categories>.
 
 ```
 GET https://api.cs50.io/dining/categories/:id
 ```
 
-Returns a JSON object that represents a category, where `:id` is that category's `id`. For example, <https://api.cs50.io/dining/categories/90> represents Fresh Fruit. Yum!
+Returns a JSON object that represents a category, where `:id` is that category's `id`. For example, <https://api.cs50.io/dining/categories/32> represents Fresh Fruit, whereas <https://api.cs50.io/dining/categories/62> represents Daily Soups. Yum!
 
 ### Locations
 
-For a JSON array of objects, each of which represents a location on campus, GET [`https://api.cs50.io/dining/locations`](https://api.cs50.io/dining/locations).
+```
+GET https://api.cs50.io/dining/locations
+```
 
-For a JSON object that represents a specific location on campus, GET `https://api.cs50.io/dining/locations/:id`, where `:id` is that location's `id`.
+Returns a JSON array of objects, each of which represents a location on campus. For example, <https://api.cs50.io/dining/locations>.
+
+```
+GET https://api.cs50.io/dining/locations/:id
+```
+
+Returns a JSON object that represents a location on campus. For example, <https://api.cs50.io/dining/locations/30> represents Annenberg Hall, while <https://api.cs50.io/dining/locations/7> represents Dunster and Mather House. Because some dining halls (e.g., Dunster's and Mather's) share kitchens (and thus menus), they also share an `id` (and `name`) in the API.
 
 ### Recipes
 
-For a JSON array of objects, each of which represents a recipe, GET [`https://api.cs50.io/dining/recipes`](https://api.cs50.io/dining/recipes).
+```
+GET https://api.cs50.io/dining/recipes
+```
 
-For a JSON object that represents a specific recipe, GET `https://api.cs50.io/dining/recipe/:id`, where `:id` is that recipe's `id`.
-<--
+Returns a JSON array of objects, each of which represents a recipe. For example, <https://api.cs50.io/dining/recipes>.
 
-* [`https://api.cs50.io/dining/categories`](https://api.cs50.io/dining/categories), which returns a JSON array of objects, each of which represents a category of food.
-* `https://api.cs50.io/dining/categories/:id`, where `:id` is the `id` of a category, which returns a JSON object that represents that category.
+```
+GET https://api.cs50.io/dining/recipes/:id
+```
 
--->
+Returns a JSON object that represents a recipe. For example, <https://api.cs50.io/dining/recipes/22011> represents Kabocha Squash Soup, whereas <https://api.cs50.io/dining/recipes/22045> represents Wheat Tortillas. Yum!
