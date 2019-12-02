@@ -79,6 +79,8 @@ Any of these parameters can be used together. For example, <https://api.cs50.io/
 
 ## Notes
 
+* Undergraduate dining halls span, of course, multiple [locations](#locations). Accordingly, you can get today's menus for undergraduate dining halls with a (long!) URL like
+  <https://api.cs50.net/dining/menus?category=1&category=2&category=3&category=4&category=5&category=7&category=10&category=11&category=13&category=14&category=15&category=16&category=17&category=18&category=19&category=20&category=22&category=23&category=24&category=25&category=26&category=27&category=29&category=32&category=45&category=46&category=60&category=90&location=5&location=7&location=8&location=9&location=14&location=15&location=16&location=30&location=38>.
 * [Bagged meals](https://dining.harvard.edu/campus-dining/undergraduate-dining/weeks-menu) for undergraduates are only available at some [locations](#locations) (i.e., undergraduate dining halls), and their [recipes](#recipes) are in multiple categories. Accordingly, you can GET them via a (long!) URL like
   <https://api.cs50.io/dining/menus?category=87&category=91&category=92&category=93&category=94&category=95&category=96&category=97&location=5&location=7&location=8&location=9&location=14&location=15&location=16&location=30&location=38>.
 * Fly-By is implemented as a [location](#locations). Accordingly, you can GET today's Fly-By's menu via a URL like <https://api.cs50.io/dining/menus?location=29>.
