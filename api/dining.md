@@ -81,4 +81,4 @@ Any of these parameters can be used together. For example, <https://api.cs50.io/
 
 * [Bagged meals](https://dining.harvard.edu/campus-dining/undergraduate-dining/weeks-menu) for undergraduates are only available at some [locations](#locations) (i.e., undergraduate dining halls), and their [recipes](#recipes) are in multiple categories. Accordingly, you can GET them via a (long!) URL like
   <https://api.cs50.io/dining/menus?category=87&category=91&category=92&category=93&category=94&category=95&category=96&category=97&location=5&location=7&location=8&location=9&location=14&location=15&location=16&location=30&location=38>.
-* [Fly-By is implemented as a [location](#locations). Accordingly, you can GET today's Fly-By's menu via a URL like <https://api.cs50.io/dining/menus?location=29>.
+* Fly-By is implemented as a [location](#locations). Accordingly, you can GET today's Fly-By's menu via a URL like <https://api.cs50.io/dining/menus?location=29>.
