@@ -19,9 +19,17 @@ On failure, the API returns an HTTP status code of
 
 ### Categories
 
-For a JSON array of objects, each of which represents a category of food, GET [`https://api.cs50.io/dining/locations`](https://api.cs50.io/dining/categories).
+```
+GET https://api.cs50.io/dining/categories
+```
 
-For a JSON object that represents a specific category, GET `https://api.cs50.io/dining/category/:id`, where `:id` is that category's `id`.
+Returns a JSON array of objects, each of which represents a category of food. For instance, <https://api.cs50.io/dining/categories>.
+
+```
+GET https://api.cs50.io/dining/categories/:id
+```
+
+Returns a JSON object that represents a category, where `:id` is that category's `id`. For example, <https://api.cs50.io/dining/categories/90> represents Fresh Fruit. Yum!
 
 ### Locations
 
