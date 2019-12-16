@@ -29,7 +29,7 @@ Returns a JSON array of objects, each of which represents a location on campus. 
 GET https://api.cs50.io/dining/locations/:id
 ```
 
-Returns a JSON object that represents a location on campus. For example, <https://api.cs50.io/dining/locations/30> represents Annenberg Hall, while <https://api.cs50.io/dining/locations/7> represents Dunster and Mather House. Because some dining halls (e.g., Dunster's and Mather's) share kitchens (and thus menus), they also share an `id` (and `name`) in the API.
+Returns a JSON object that represents a location on campus, where `:id` is that location's `id`. For example, <https://api.cs50.io/dining/locations/30> represents Annenberg Hall, while <https://api.cs50.io/dining/locations/7> represents Dunster and Mather House. Because some dining halls (e.g., Dunster's and Mather's) share kitchens (and thus menus), they also share an `id` (and `name`) in the API.
 
 ### Categories
 
@@ -57,7 +57,7 @@ Returns a JSON array of objects, each of which represents a recipe. For example,
 GET https://api.cs50.io/dining/recipes/:id
 ```
 
-Returns a JSON object that represents a recipe. For example, <https://api.cs50.io/dining/recipes/22011> represents Kabocha Squash Soup, whereas <https://api.cs50.io/dining/recipes/22045> represents Wheat Tortillas. Yum!
+Returns a JSON object that represents a recipe, where `:id` is that recipe's `id`. For example, <https://api.cs50.io/dining/recipes/22011> represents Kabocha Squash Soup, whereas <https://api.cs50.io/dining/recipes/22045> represents Wheat Tortillas. Yum!
 
 ### Menus
 
@@ -65,7 +65,7 @@ Returns a JSON object that represents a recipe. For example, <https://api.cs50.i
 GET https://api.cs50.io/dining/menus
 ```
 
-Returns a JSON array of objects, each of which represents a menu item (i.e., a recipe being served in some category for some meal at some location(s)). For example, <https://api.cs50.io/dining/menus> represents today's menus. Within each of those objects, the value of `category` is the `id` of a [category](#categories), the value of `location` is the `id` of a [location](#locations), the value of `meal` is the `id` of a [meal](#meals), and the value of `recipe` is the `id` of a [recipe](#recipes).
+Returns a JSON array of objects, each of which represents a menu item (i.e., a recipe being served in some category for some meal at one or more locations). For example, <https://api.cs50.io/dining/menus> represents today's menus. Within each of those objects, the value of `category` is the `id` of a [category](#categories), the value of `location` is the `id` of a [location](#locations), the value of `meal` is the `id` of a [meal](#meals), and the value of `recipe` is the `id` of a [recipe](#recipes).
 
 Supports these parameters, each of which can be multivalued:
 
