@@ -121,3 +121,15 @@ footer [role=contentinfo] {
     font-size: 16px !important;
     text-transform: initial !important;
 }
+
+/* Center image */
+img[alt="All the Docs"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Center footer */
+footer {
+    text-align: center;
+}

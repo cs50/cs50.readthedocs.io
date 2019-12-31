@@ -93,3 +93,4 @@
    vault
 
 .. image:: 2ep2od.jpg
+  :alt: All the Docs
