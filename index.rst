@@ -5,10 +5,20 @@
    :hidden:
    :maxdepth: 1
 
-   api/dining
+    .. toctree::
+       :caption: HTTP
+       :hidden:
+       :maxdepth: 1
+   
+       Dining API <https://cs50.readme.io/reference#dining-api>
 
-   check50 <https://cs50.readthedocs.io/projects/check50/en/latest/>
-   compare50 <https://cs50.readthedocs.io/projects/compare50/en/latest/>
+    .. toctree::
+       :caption: Python
+       :hidden:
+       :maxdepth: 1
+
+       check50 <https://cs50.readthedocs.io/projects/check50/en/latest/>
+       compare50 <https://cs50.readthedocs.io/projects/compare50/en/latest/>
  
 .. toctree::
    :caption: Command-Line Tools
