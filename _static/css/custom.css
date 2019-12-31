@@ -133,3 +133,8 @@ img[alt="All the Docs"] {
 footer {
     text-align: center;
 }
+
+/* Grow title */
+.icon-home {
+    font-size: 150%;
+}
