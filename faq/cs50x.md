@@ -24,29 +24,33 @@ You don't get any extra points for doing the "more comfortable" problems. If you
 
 Nope!  If you would like an edX Verified Certificate, you can pay for verification at any point, even after completing all of the coursework.
 
-## If I paid for a verified certificate before 2019, do I need to pay again?
+## If I paid for a verified certificate before 2020, do I need to pay again?
 
 No, you should be able to re-verify yourself via edX's [dashboard](https://courses.edx.org/dashboard).
 
-## If I started CS50x before 2019, can I resume?
+## If I started CS50x before 2020, can I resume?
 
-Yes, any scores you received on past years' problem sets have been imported into CS50x 2019. However, moving forward, you must submit CS50x 2019's problem sets.
+Yes, any scores you received on past years' problem sets will be imported into CS50x 2020 by the second week of January. However, moving forward, you must submit CS50x 2020's problem sets.  See the chart on the [courses's home page](https://courses.edx.org/courses/course-v1:HarvardX+CS50+X/course/) for instructions on how to transition to the 2020 course.
 
-## I won't be able to finish the course before 31 December 2019. What will happen?
+## I won't be able to finish the course before 31 December 2020. What will happen?
 
-After 31 December 2019, the course will be updated to a 2020 version. Your progress from 2019 will be carried forward to the 2020 version. After 31 December 2019, you must submit the 2020 version's problem sets. See the chart on the [courses's home page](https://courses.edx.org/courses/course-v1:HarvardX+CS50+X/course/) for instructions starting in January 2020.
+After 31 December 2020, the course will be updated to a 2021 version. Your progress from 2020 will be carried forward to the 2021 version. After 31 December 2020, you must submit the 2021 version's problem sets. 
 
 ## Is my child too young to take CS50x?
 
 CS50x is perhaps best suited for ages 12 and up. Younger students might need a hand from a parent.
 
-## How do I know if I have completed all requirements for a Verified Certificate?
+## How do I know if I have completed all requirements for a Certificate?
 
 [cs50.me/cs50x](https://cs50.me/cs50x) shows the scores you have received for each submitted problem.  Once you have completed all requirements, you will see a green banner atop that page, confirming your completion.  
 
-## When are Verified Certificates generated?
+## When are edX Verified Certificates generated?
 
-At the end of each month, CS50's staff provides edX with a list of students who have satisfied CS50x's requirements (by receiving scores of at least 70% on every required problem submitted as part of the course's nine problem sets as well as on the final project). Within a few days, edX then generates students' Verified Certificates, at which point they should appear automatically on edX's [dashboard](https://courses.edx.org/dashboard). **Note that edX will not notify you**, so be sure to check your dashboard. If it has been more than a month since you met all requirements and you have still not received your certificate, email certificates@cs50.harvard.edu with your details.
+At the end of each month, CS50's staff provides edX with a list of students who have satisfied CS50x's requirements (by receiving scores of at least 70% on every required problem submitted as part of the course's nine problem sets as well as on the final project). Within a few days, edX then generates students' Verified Certificates (for students who have active Verification), at which point they should appear automatically on edX's [dashboard](https://courses.edx.org/dashboard). **Note that edX will not notify you**, so be sure to check your dashboard. If it has been more than a month since you met all requirements and you have still not received your certificate, email certificates@cs50.harvard.edu with your details.
+
+## How do I get my free CS50x Certificate?
+
+Once you have completed the course and met all of the requirements, you'll see a link on your [cs50.me/cs50x](https://cs50.me/cs50x) page allowing you to request a free certificate, much like the one [shown here](https://cs50.harvard.edu/x/2020/certificate/).
 
 ## When are deadlines?
 
