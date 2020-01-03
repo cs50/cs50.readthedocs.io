@@ -32,13 +32,6 @@
    cs50/server
 
 .. toctree::
-   :caption: FAQs
-   :hidden:
-   :maxdepth: 1
-
-   CS50x <faq/cs50x>
-
-.. toctree::
    :caption: HOWTOs
    :hidden:
    :maxdepth: 1
