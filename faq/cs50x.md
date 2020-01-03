@@ -30,7 +30,7 @@ No, you should be able to re-verify yourself via edX's [dashboard](https://cours
 
 ## If I started CS50x before 2020, can I resume?
 
-Yes, any scores you received on past years' problem sets will be imported into CS50x 2020 by the second week of January. However, moving forward, you must submit CS50x 2020's problem sets.  See the chart on the [courses's home page](https://courses.edx.org/courses/course-v1:HarvardX+CS50+X/course/) for instructions on how to transition to the 2020 course.
+Yes, any progress you made on past years' problem sets has been carried forward to your CS50x 2020 gradebook. Note that individual problem scores from past years are not shown, but if the corresponding problem *set*  was completed, you'll see it marked with a green circle and included in your progress bar at the top.  Moving forward, though, you must submit CS50x 2020's problem sets.  See the chart on the [courses's home page](https://courses.edx.org/courses/course-v1:HarvardX+CS50+X/course/) for instructions on how to transition to the 2020 course.
 
 ## I won't be able to finish the course before 31 December 2020. What will happen?
 
