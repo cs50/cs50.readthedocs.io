@@ -24,7 +24,6 @@
    :hidden:
    :maxdepth: 1
 
-   cs50/baseimage
    cs50/check
    cs50/cli
    cs50/ide
@@ -64,7 +63,7 @@
 
    check50 <https://cs50.readthedocs.io/projects/check50/en/latest/>
    compare50 <https://cs50.readthedocs.io/projects/compare50/en/latest/>
- 
+
 .. toctree::
    :caption: Style Guides
    :hidden:
