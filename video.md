@@ -21,6 +21,8 @@ where `:id` is the ID of a (main) YouTube video. URLs of that form additionally 
 * `start`, which, if present, is a timecode (in seconds) at which to begin playing a video. It must be non-negative, less than the duraion of the video itself, and less than `end`, if present.
 * `end`, which, if present, is a timecode (in seconds) at which to stop playing a video. It must be non-negative, less than the duration of the video itself, and greater than `start`, if present.
 
+For example, <https://video.cs50.io/5azaK2cBKGw?screen=byyRAKSo_dM&start=438>.
+
 If a (main) video has (English) subtitles, they will be automatically imported from YouTube.
 
 If a (main) video has a table of contents in its description, it will be automatically imported (as chapters) from YouTube. A table of contents is defined as two or more lines in a video's description formatted as
