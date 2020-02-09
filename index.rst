@@ -83,6 +83,7 @@
    sandbox
    submit/index
    vault
+   video
 
 .. image:: 2ep2od.jpg
   :alt: All the Docs
