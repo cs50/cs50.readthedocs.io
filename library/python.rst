@@ -1,4 +1,4 @@
-.. default-domain:: python
+.. default-domain:: py
 .. highlight:: python
 
 ============================
