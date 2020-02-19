@@ -55,6 +55,7 @@
    :maxdepth: 1
 
    C <library/c>
+   Python <library/python>
 
 .. toctree::
    :caption: SDKs
