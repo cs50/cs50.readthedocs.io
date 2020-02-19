@@ -12,13 +12,13 @@ Ubuntu
 -------
 
 .. code-block:: bash
-    
+
     $ sudo pip3 install cs50
 
 
 Fedora
 -------
-.. code-block:: bash 
+.. code-block:: bash
 
     $ sudo pip3 install cs50
 
@@ -31,12 +31,12 @@ Usage
 
 
 .. function:: cs50.get_float(prompt)
-    
-    :param prompt: the :type:`str` with which to prompt the user for input
 
-    :returns: the :type:`float` equivalent to the line read from stdin as precisely as possible, or `None` on error
+    :param prompt: the :py:class:`str` with which to prompt the user for input
 
-    Prompts user for a line of text from standard input and returns the equivalent :type:`float`;
+    :returns: the :py:class:`float` equivalent to the line read from stdin as precisely as possible, or `None` on error
+
+    Prompts user for a line of text from standard input and returns the equivalent :py:class:`float`;
     if text does not represent a floating-point value or would cause overflow or underflow, user is reprompted.
 
     Example usage::
@@ -45,12 +45,12 @@ Usage
 
 
 .. function:: cs50.get_int(prompt)
-    
-    :param prompt: the :type:`str` with which to prompt the user for input
 
-    :returns: the :type:`int` equivalent to the line read from stdin, or `None` on error
+    :param prompt: the :py:class:`str` with which to prompt the user for input
 
-    Prompts user for a line of text from standard input and returns the equivalent :type:`int`;
+    :returns: the :py:class:`int` equivalent to the line read from stdin, or `None` on error
+
+    Prompts user for a line of text from standard input and returns the equivalent :py:class:`int`;
     if text does not represent an integer, user is reprompted.
 
     Example usage::
@@ -60,11 +60,11 @@ Usage
 
 .. function:: cs50.get_string(prompt)
 
-    :param prompt: the :type:`str` with which to prompt the user for input
+    :param prompt: the :py:class:`str` with which to prompt the user for input
 
-    :returns: the read line as a string sans line endings, or `None` on :macro:`EOF`.
+    :returns: the read line as a string sans line endings, or `None` on EOF.
 
-   Prompts user for a line of text from standard input and returns it as a :type:`str`,
+   Prompts user for a line of text from standard input and returns it as a :py:class:`str`,
    sans trailing line ending. Supports CR (``\r``), LF (``\n``), and CRLF (``\r\n``) as line
    endings.
 
@@ -75,7 +75,7 @@ Usage
 
 .. function:: cs50.SQL(url)
 
-    :param url: a :type:`str` that indicates database dialect and connection arguments
+    :param url: a :py:class:`str` that indicates database dialect and connection arguments
 
     :returns: a :class:`cs50.SQL` object that represents a connection to a database
 
@@ -88,15 +88,15 @@ Usage
 
 .. function:: cs50.SQL.execute(sql, *args, **kwargs)
 
-    :param sql: a :type:`str` that represents a single SQL statement, possibly with placeholders, with or without a trailing semicolon
+    :param sql: a :py:class:`str` that represents a single SQL statement, possibly with placeholders, with or without a trailing semicolon
     :param *args: zero or more positional arguments with which any placeholders should be substituted
     :param **kwargs: zero or more named arguments with which any placeholders should be substituted
 
-    :returns: for SELECTs, a :type:`list` of :type:`dict` objects, each of which represents a row in the result set; for INSERTs, the primary key of a newly inserted row (or None if none); for UPDATEs, the number of rows updated; for DELETEs, the number of rows deleted; for CREATEs, `True` on success; on error, a `RuntimeError` is raised
+    :returns: for SELECTs, a :py:class:`list` of :py:class:`dict` objects, each of which represents a row in the result set; for INSERTs, the primary key of a newly inserted row (or None if none); for UPDATEs, the number of rows updated; for DELETEs, the number of rows deleted; for CREATEs, `True` on success; on error, a `RuntimeError` is raised
 
    Example usage::
 
-    
+
        db = cs50.SQL("sqlite:///file.db")
 
        db.execute("SELECT * FROM foo")
