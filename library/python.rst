@@ -83,7 +83,7 @@ Usage
 
        db = cs50.SQL("sqlite:///foo.db")  # For SQLite, foo.db must exist
        db = cs50.SQL("mysql://username:password@host:port/database")  # For MySQL
-       db = cs50.SQL("postgresql://username:password@host:port/database")  # For PostgreSQL
+       db = cs50.SQL("postgres://username:password@host:port/database")  # For PostgreSQL
 
 
 .. function:: cs50.SQL.execute(sql, *args, **kwargs)
