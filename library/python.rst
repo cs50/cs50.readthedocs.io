@@ -41,7 +41,7 @@ Usage
 
     Example usage::
 
-        f = get_float("Enter a floating-point number: ");
+        f = get_float("Enter a floating-point number: ")
 
 
 .. function:: cs50.get_int(prompt)
@@ -55,7 +55,7 @@ Usage
 
     Example usage::
 
-        f = get_int("Enter an integer: ");
+        f = get_int("Enter an integer: ")
 
 
 .. function:: cs50.get_string(prompt)
@@ -70,7 +70,7 @@ Usage
 
    Example usage::
 
-       s = get_string("Enter a string: ");
+       s = get_string("Enter a string: ")
 
 
 .. function:: cs50.SQL(url)
