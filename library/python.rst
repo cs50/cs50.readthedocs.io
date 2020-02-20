@@ -64,13 +64,13 @@ Usage
 
     :returns: the read line as a string sans line endings, or `None` on EOF.
 
-   Prompts user for a line of text from standard input and returns it as a :py:class:`str`,
-   sans trailing line ending. Supports CR (``\r``), LF (``\n``), and CRLF (``\r\n``) as line
-   endings.
+    Prompts user for a line of text from standard input and returns it as a :py:class:`str`,
+    sans trailing line ending. Supports CR (``\r``), LF (``\n``), and CRLF (``\r\n``) as line
+    endings.
 
-   Example usage::
+    Example usage::
 
-       s = get_string("Enter a string: ")
+        s = get_string("Enter a string: ")
 
 
 .. function:: cs50.SQL(url)
@@ -79,11 +79,11 @@ Usage
 
     :returns: a :class:`cs50.SQL` object that represents a connection to a database
 
-   Example usage::
+    Example usage::
 
-       db = cs50.SQL("sqlite:///foo.db")  # For SQLite, foo.db must exist
-       db = cs50.SQL("mysql://username:password@host:port/database")  # For MySQL
-       db = cs50.SQL("postgres://username:password@host:port/database")  # For PostgreSQL
+        db = cs50.SQL("sqlite:///foo.db")  # For SQLite, foo.db must exist
+        db = cs50.SQL("mysql://username:password@host:port/database")  # For MySQL
+        db = cs50.SQL("postgres://username:password@host:port/database")  # For PostgreSQL
 
 
 .. function:: cs50.SQL.execute(sql, *args, **kwargs)
@@ -94,28 +94,28 @@ Usage
 
     :returns: for SELECTs, a :py:class:`list` of :py:class:`dict` objects, each of which represents a row in the result set; for INSERTs, the primary key of a newly inserted row (or None if none); for UPDATEs, the number of rows updated; for DELETEs, the number of rows deleted; for CREATEs, `True` on success; on error, a `RuntimeError` is raised
 
-   Example usage::
+    Example usage::
 
 
-       db = cs50.SQL("sqlite:///file.db")
+        db = cs50.SQL("sqlite:///file.db")
 
-       db.execute("SELECT * FROM foo")
+        db.execute("SELECT * FROM foo")
 
-       rows = db.execute("SELECT * FROM foo WHERE bar = ? AND baz = ?", 1, 2)
-       rows = db.execute("SELECT * FROM foo WHERE bar IN (?) AND baz IN (?)", [1, 2], [3, 4])
+        rows = db.execute("SELECT * FROM foo WHERE bar = ? AND baz = ?", 1, 2)
+        rows = db.execute("SELECT * FROM foo WHERE bar IN (?) AND baz IN (?)", [1, 2], [3, 4])
 
-       rows = db.execute("SELECT * FROM foo WHERE bar = :bar AND baz = :baz", bar=1, baz=2)
-       rows = db.execute("SELECT * FROM foo WHERE bar = :bar AND baz = :baz", {"bar": 1, "baz": 2})
-       rows = db.execute("SELECT * FROM foo WHERE bar IN (:bar) AND baz IN (:baz)", bar=[1, 2], baz=[3, 4])
+        rows = db.execute("SELECT * FROM foo WHERE bar = :bar AND baz = :baz", bar=1, baz=2)
+        rows = db.execute("SELECT * FROM foo WHERE bar = :bar AND baz = :baz", {"bar": 1, "baz": 2})
+        rows = db.execute("SELECT * FROM foo WHERE bar IN (:bar) AND baz IN (:baz)", bar=[1, 2], baz=[3, 4])
 
-       db.execute("INSERT INTO foo (bar, baz) VALUES(?, ?)", 1, 2)
-       db.execute("INSERT INTO foo (bar, baz) VALUES(:bar, :baz)", bar=1, baz=2)
-       db.execute("INSERT INTO foo (bar, baz) VALUES(:bar, :baz)", {"bar": 1, "baz": 2})
+        db.execute("INSERT INTO foo (bar, baz) VALUES(?, ?)", 1, 2)
+        db.execute("INSERT INTO foo (bar, baz) VALUES(:bar, :baz)", bar=1, baz=2)
+        db.execute("INSERT INTO foo (bar, baz) VALUES(:bar, :baz)", {"bar": 1, "baz": 2})
 
-       db.execute("UPDATE foo SET bar = ?, baz = ?", 1, 2)
-       db.execute("UPDATE foo SET bar = :bar, baz = :baz", bar=1, baz=2)
-       db.execute("UPDATE foo SET bar = :bar, baz = :baz", {"bar": 1, "baz": 2})
+        db.execute("UPDATE foo SET bar = ?, baz = ?", 1, 2)
+        db.execute("UPDATE foo SET bar = :bar, baz = :baz", bar=1, baz=2)
+        db.execute("UPDATE foo SET bar = :bar, baz = :baz", {"bar": 1, "baz": 2})
 
-       db.execute("DELETE FROM foo WHERE bar = ? AND baz = ?", 1, 2)
-       db.execute("DELETE FROM foo WHERE bar = :bar AND baz = :baz", bar=1, baz=2)
-       db.execute("DELETE FROM foo WHERE bar = :bar AND baz = :baz", {"bar": 1, "baz": 2})
+        db.execute("DELETE FROM foo WHERE bar = ? AND baz = ?", 1, 2)
+        db.execute("DELETE FROM foo WHERE bar = :bar AND baz = :baz", bar=1, baz=2)
+        db.execute("DELETE FROM foo WHERE bar = :bar AND baz = :baz", {"bar": 1, "baz": 2})
