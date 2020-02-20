@@ -2,7 +2,7 @@
 .. highlight:: python
 
 ============================
-CS50 library for Python
+CS50 Library for Python
 ============================
 
 Installation
