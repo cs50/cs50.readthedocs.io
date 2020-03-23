@@ -155,7 +155,7 @@ If you'd like to install `style50` on your own Mac or PC, so that you can check 
 - If running Mac OS, you already have one! Open **Applications > Utilities > Terminal**.
 - If running Windows, you'll need to install the [Windows Subsystem for Linux](https://msdn.microsoft.com/commandline/wsl/about), which is only supported on Windows 10. Once installed, [run `bash`](https://blogs.windows.com/buildingapps/2016/03/30/run-bash-on-ubuntu-on-windows/).
 
-To install `style50` within that command-line environment:
+To install `style50` on Ubuntu or on Windows Subsystem for Linux and Ubuntu, open a Terminal:
 
 1. [Install Python](https://www.python.org/downloads/) 2.7 or higher, if not already installed.
 
@@ -183,6 +183,38 @@ To install `style50` within that command-line environment:
    ```
 
    to install CS50's own compiled version of `astyle`.
+
+
+To install `style50` on Mac OS X (tested on 10.15.3 Catalina) using HomeBrew, open a Terminal:
+
+1. [Install HomeBrew](https://brew.sh) if not already installed, by running:
+
+   ```
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+   ```
+
+2. Install python and pip using HomeBrew, with the following command:
+
+    ```
+    brew install python
+    ```
+    
+3. Install style50 using pip, with the following command:
+    
+    ```
+    pip3 install style50
+    ```
+
+4. Install [Artistic Style 3.0](http://astyle.sourceforge.net/) using HomeBrew, with the following command:
+    ```
+    brew install astyle
+    ```
+
+5. Install libmagic using HomeBrew, with the following command:
+    ```
+    brew install libmagic
+    ```
+
 
 ## Upgrading
 
