@@ -159,7 +159,7 @@ To install `style50` on Ubuntu or on Windows Subsystem for Linux and Ubuntu, ope
 
 1. [Install Python](https://www.python.org/downloads/) 2.7 or higher, if not already installed.
 
-1. Install `pip`, if you did not install Python via the python.org package or it was not included with your system, as via
+1. Install `pip`, if you did not install Python via the python.org package or pip was not included with your system, as via
 
    ```
    curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
