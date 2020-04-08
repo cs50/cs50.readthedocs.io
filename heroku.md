@@ -83,7 +83,7 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://docs.cs
 1. Add that file to your repository and push it to GitHub.
 
     ```
-    git add -am "added Procfile"
+    git commit -am "added Procfile"
     git push
     ```
 
