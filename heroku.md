@@ -33,10 +33,11 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://docs.cs
 1. Push your code to GitHub.
 
     ```
-    git commit -am "first commit"
+    git add -A
+    git commit -m "first commit"
     git push -u origin master
     ```
-    If you visit `https://github.com/username/finance`, where `username` is your own GitHub username, you should see your code in the repository. 
+    If you visit `https://github.com/username/finance`, where `username` is your own GitHub username, you should see your code in the repository.
 
 1. Sign up for a free Heroku account at <https://signup.heroku.com/>, if you don't have one already.
 
@@ -70,7 +71,7 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://docs.cs
     pgloader finance.db URI?sslmode=require
     ```
 
-    Thereafter, if you'd like to browse or edit your Postgres database, you can use Adminer (a tool like phpLiteAdmin for Postgres databases), at [adminer.cs50.net](https://adminer.cs50.net/). Log in using your database's credentials: at `https://dashboard.heroku.com/apps/app-name/resources`, where `app-name` is your Heroku app's name, click **Heroku Postgres :: Database**. In the tab that opens, click **Settings**, then click **View Credentials...**. 
+    Thereafter, if you'd like to browse or edit your Postgres database, you can use Adminer (a tool like phpLiteAdmin for Postgres databases), at [adminer.cs50.net](https://adminer.cs50.net/). Log in using your database's credentials: at `https://dashboard.heroku.com/apps/app-name/resources`, where `app-name` is your Heroku app's name, click **Heroku Postgres :: Database**. In the tab that opens, click **Settings**, then click **View Credentials...**.
 
 1. Create a new file in CS50 IDE called `Procfile` in `~/pset8/finance/` whose contents are:
 
@@ -83,7 +84,8 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://docs.cs
 1. Add that file to your repository and push it to GitHub.
 
     ```
-    git add -am "added Procfile"
+    git add -A
+    git commit -m "added Procfile"
     git push
     ```
 
