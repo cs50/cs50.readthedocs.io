@@ -2,7 +2,7 @@
 
 CS50 Video Player is a web app at [video.cs50.io](https://video.cs50.io/) that synchronizes instructional videos (e.g., lectures) with screen recordings so that students can toggle between the two. (Videos must be hosted on [YouTube](https://www.youtube.com/).) The player also provides
 
-* a searchable dropdown menu with hyperlinked captions, if the main video has (English) subtitles, and
+* a searchable dropdown menu with hyperlinked captions, if the main video is public and has (English) subtitles, and
 * a dropdown menu with hyperlinked chapters, if the main video's description includes a table of contents.
 
 And whenever the player is paused, the browser's URL bar will be updated with the timecode (in seconds) at which the video was paused, to facilitate linking to specific moments.
