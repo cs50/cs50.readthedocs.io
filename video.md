@@ -5,7 +5,7 @@ CS50 Video Player is a web app at [video.cs50.io](https://video.cs50.io/) that s
 * a searchable dropdown menu with hyperlinked captions, if the main video is public and has (English) subtitles, and
 * a dropdown menu with hyperlinked chapters, if the main video's description includes a table of contents.
 
-And whenever the player is paused, the browser's URL bar will be updated with the timecode (in seconds) at which the video was paused, to facilitate linking to specific moments.
+Whenever the player is paused, the browser's URL bar is updated with the timecode (in seconds) at which the video was paused, to facilitate linking to specific moments. And if a student closes the player's tab before finishing a video, the player remembers where they left off and resumes at that timecode when the video is re-visited (provided its URL does not have an explicit `start` parameter).
 
 ## Configuration
 
