@@ -81,6 +81,7 @@
    id/index
    ide/index
    lab
+   render
    sandbox
    submit/index
    vault

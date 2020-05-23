@@ -27,14 +27,12 @@ pip install --upgrade render50
 ## Usage
 
 ```
-usage: render50 [-h] [-b] [-C] [-i INCLUDE] -o OUTPUT [-r] [-s SIZE]
-                [-x EXCLUDE] [-y] [-V]
-                input [input ...]
+usage: render50 [-h] [-b] [-C] [-i INCLUDE] -o OUTPUT [-P] [-r] [-s SIZE] [-x EXCLUDE] [-y] [-V] [INPUT [INPUT ...]]
 
 A command-line tool that renders source code as a PDF.
 
 positional arguments:
-  input                 file or URL to render
+  INPUT                 file or URL to render
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -44,9 +42,9 @@ optional arguments:
                         pattern to include
   -o OUTPUT, --output OUTPUT
                         file to output
+  -P, --no-path         omit paths in headers
   -r, --recursive       recurse into directories
-  -s SIZE, --size SIZE  size of page, per https://developer.mozilla.org/en-
-                        US/docs/Web/CSS/@page/size
+  -s SIZE, --size SIZE  size of page, per https://developer.mozilla.org/en-US/docs/Web/CSS/@page/size
   -x EXCLUDE, --exclude EXCLUDE
                         pattern to exclude
   -y, --side-by-side    render inputs side by side
