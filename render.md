@@ -14,7 +14,7 @@ PDFs can be annotated (for free) with:
 
 CS50 Render supports, via POST using `multipart/form-data`, these HTTP parameters:
 
-* `file`, which must be an `input` with `type="file"`, which is a file to be rendered.
+* `file`, an `input` with `type="file"`, the value of which is a file to be rendered.
 * `y`, which, if present (with any value), indicates that the files should be rendered side by side.
 
 An HTTP request to CS50 Render must contain one or more values for `file`. But if `y` is present, the request must contain no more than three such values, as only two or three files can be rendered side by side.
