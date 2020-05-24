@@ -19,7 +19,7 @@ CS50 Sandbox is essentially a lightweight version of [CS50 IDE](https://ide.cs50
 
 To use CS50 Sandbox, students and teachers need only have a (free) [GitHub](https://github.com/) account via which to log in.
 
-## Configuration
+## API
 
 CS50 Sandbox supports, via both GET and POST, these HTTP parameters:
 
