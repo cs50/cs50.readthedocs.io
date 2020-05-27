@@ -21,9 +21,7 @@ pip install --upgrade cli50
 ## Usage
 
 ```
-usage: cli50 [-h] [-d DOTFILE] [-f] [-j] [-l [CONTAINER]] [-S] [-t TAG] [-u]
-             [-V]
-             [DIRECTORY]
+usage: cli50 [-h] [-d DOTFILE] [-f] [-i IMAGE] [-j] [-l [CONTAINER]] [-S] [-u] [-V] [DIRECTORY]
 
 positional arguments:
   DIRECTORY             directory to mount, else $PWD
@@ -31,14 +29,14 @@ positional arguments:
 optional arguments:
   -h, --help            show this help message and exit
   -d DOTFILE, --dotfile DOTFILE
-                        dotfile in your $HOME to mount read-only in
-                        container's $HOME
+                        dotfile in your $HOME to mount read-only in container's $HOME
   -f, --fast            skip autoupdate
+  -i IMAGE, --image IMAGE
+                        start IMAGE, else cs50/cli
   -j, --jekyll          serve Jekyll site
   -l [CONTAINER], --login [CONTAINER]
                         log into CONTAINER
   -S, --stop            stop any containers
-  -t TAG, --tag TAG     start cs50/cli:TAG, else cs50/cli:latest
   -u, --update          update only
   -V, --version         show program's version number and exit
 ```
