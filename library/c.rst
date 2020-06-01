@@ -273,8 +273,8 @@ Usage
 
     :returns: the read line as a string sans line endings, or :macro:`NULL` on :macro:`EOF`.
 
-   Prompts user for a line of text from standard input and returns it as a string (char
-   *), sans trailing line ending. Supports CR (``\r``), LF (``\n``), and CRLF (``\r\n``) as line
+   Prompts user for a line of text from standard input and returns it as a string (:macro:`char *`),
+   sans trailing line ending. Supports CR (``\r``), LF (``\n``), and CRLF (``\r\n``) as line
    endings. Stores string on heap, but library’s destructor frees memory on program’s
    exit.
 

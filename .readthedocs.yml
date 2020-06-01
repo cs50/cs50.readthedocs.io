@@ -2,4 +2,8 @@ build:
   image: latest
 
 python:
-  version: 3.6
+  install:
+    - requirements: requirements.txt
+  version: 3.7
+
+version: 2

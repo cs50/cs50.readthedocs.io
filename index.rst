@@ -12,9 +12,9 @@
    :hidden:
    :maxdepth: 1
 
-   check50/index
+   check50 <https://cs50.readthedocs.io/projects/check50/en/latest/>
    cli50
-   compare50/index
+   compare50 <https://cs50.readthedocs.io/projects/compare50/en/latest/>
    render50
    style50
    submit50
@@ -83,7 +83,6 @@
    lab
    render
    sandbox
-   submit/index
    vault
    video
 
