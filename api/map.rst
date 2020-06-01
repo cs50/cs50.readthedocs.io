@@ -26,7 +26,7 @@ Getting Buildings
 
     **Example #1: Getting All Buildings**
 
-    See https://api.cs50.io/map/buildings for response.
+    https://api.cs50.io/map/buildings
 
     .. tabs::
 
@@ -50,7 +50,7 @@ Getting Buildings
 
     **Example #2: Getting All Wigglesworth Buildings**
 
-    See https://api.cs50.io/map/buildings?name=wigglesworth for response.
+    https://api.cs50.io/map/buildings?name=wigglesworth
 
     .. tabs::
 
@@ -74,7 +74,7 @@ Getting Buildings
 
     **Example #3: Getting All Buildings on Oxford Street**
 
-    See https://api.cs50.io/map/buildings?address=oxford%20street for response.
+    https://api.cs50.io/map/buildings?address=oxford%20street
 
     .. tabs::
 
@@ -118,7 +118,7 @@ Getting a Building
 
     **Example #1: Getting Mather House**
 
-    See https://api.cs50.io/map/buildings/1358 for response.
+    https://api.cs50.io/map/buildings/1358
 
     .. tabs::
 
