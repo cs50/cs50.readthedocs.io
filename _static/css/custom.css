@@ -164,3 +164,34 @@ footer {
 .rst-versions {
     display: none;
 }
+
+/* Scroll code blocks */
+.highlight {
+    max-height: 50vh;
+    overflow: auto;
+}
+
+/* Margin below GET DTs */
+dl.get.http > dt {
+    margin-bottom: 24px;
+}
+
+/* Mimic DL */
+.sphinx-tabs {
+    margin-bottom: 24px;
+}
+
+/* Shorten tabs */
+.sphinx-tabs > .menu.tabular p {
+    margin-bottom: 0 !important;
+}
+.sphinx-tabs > .menu.tabular .item {
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Eliminate margin along bottom of tabs */
+.sphinx-tab > :last-child {
+    margin-bottom: 0 !important;
+}
+

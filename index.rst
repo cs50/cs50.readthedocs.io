@@ -6,6 +6,7 @@
    :maxdepth: 1
 
    Dining <https://cs50.readme.io/reference#dining-api>
+   Map <api/map>
 
 .. toctree::
    :caption: Command-Line Tools
