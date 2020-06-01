@@ -18,10 +18,9 @@ Getting Buildings
 
     :>jsonarr string address: A building's (street) address.
     :>jsonarr string city: A building's city (in Massachusetts).
-    :>jsonarr array footprint: An array of arrays, each of which represents a polygon that outlines (part of) a building's footprint. Each polygon is itself represented as an array of arrays, each of which represents a (latitude, longitude) coordinate.
+    :>jsonarr object geometry: An object with two keys: **point**, the value of which is an array with two values, each of which is a ``float``, representing a building's latitude and longitude, respectively; and **polygons**, which is an array of arrays, each of which represents a polygon that outlines (part of) a building's footprint, each of whose values is an array with two values, each of which is a ``float``, representing the latitude and longitude of a vertex of the polygon.
     :>jsonarr integer id: A building's unique identifer. Usable as a primary key in a databse.
     :>jsonarr string image: URL of a building's image, if any.
-    :>jsonarr array location: An array of two values, each of which is a ``float``, representing a building's latitude and longitude, respectively.
     :>jsonarr string name: A building's name, if any.
 
     **Example #1: Getting All Buildings**
