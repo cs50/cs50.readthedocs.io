@@ -2,7 +2,6 @@ import time
 
 extensions = [
     "recommonmark",
-    #"sphinx.ext.autodoc",
     "sphinx_markdown_tables",
     "sphinx_tabs.tabs",
     "sphinxcontrib.httpdomain"

@@ -6,4 +6,7 @@ python:
     - requirements: requirements.txt
   version: 3.7
 
+sphinx:
+  builder: dirhtml
+
 version: 2
