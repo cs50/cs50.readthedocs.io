@@ -1,3 +1,5 @@
+import time
+
 extensions = [
     "recommonmark",
     #"sphinx.ext.autodoc",
@@ -6,7 +8,7 @@ extensions = [
 
 html_static_path = ["_static"]
 
-html_css_files = ["css/custom.css"]
+html_css_files = ["css/custom.css?" + str(round(time.time()))]
 html_theme = "sphinx_rtd_theme"
 html_theme_options = {
     "display_version": False,
