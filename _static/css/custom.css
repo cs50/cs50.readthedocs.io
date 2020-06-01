@@ -1,7 +1,9 @@
 /* Momentum scrolling on iOS */
+/*
 .wy-side-scroll {
     -webkit-overflow-scrolling: touch;
 }
+*/
 
 /* White backgound */
 .wy-nav-content, .wy-nav-content-wrap {
@@ -31,29 +33,38 @@ nav code {
 }
 
 /* Match margins below paragraphs */
+/*
 .rst-content pre.literal-block,
 .rst-content div[class^='highlight'] {
     margin-bottom: 12px;
 }
+*/
 
 /* Decrease margins below code blocks in lists */
+/*
 .rst-content li pre.literal-block,
 .rst-content li div[class^='highlight'] {
     margin-bottom: 6px;
 }
+*/
 
-/* Decrease margins below paragraphs*/
+/* Decrease margins below paragraphs */
+/*
 p {
     margin-bottom: 12px;
 }
+*/
 
 /* Remove margins in nested lists */
+/*
 .rst-content .section ol p,
 .rst-content .section ul p {
     margin-bottom: 0;
 }
+*/
 
 /* Decrease margins below lists */
+/*
 .wy-plain-list-decimal,
 .rst-content .section ol,
 .rst-content ol.arabic,
@@ -66,14 +77,17 @@ article ol {
 article ul {
     margin-bottom: 12px;
 }
+*/
 
 /* Increase margins above sections (except very first) */
+/*
 .section {
     margin-top: 24px;
 }
 .articleBody > .section {
     margin-top: 0px;
 }
+*/
 
 /* Wrap code */
 code, .rst-content tt, .rst-content code {
@@ -82,6 +96,7 @@ code, .rst-content tt, .rst-content code {
 }
 
 /* Wrap long URLs, but don't wrap code blocks */
+/*
 * {
     overflow-wrap: break-word;
     word-wrap: break-word;
@@ -90,8 +105,10 @@ pre, pre span {
     overflow-wrap: normal;
     word-wrap: normal;
 }
+*/
 
 /* Decrease margins below headings to match paragraphs */
+/*
 h1,
 h2,
 h3,
@@ -100,8 +117,10 @@ h5,
 h6 {
     margin-bottom: 12px;
 }
+*/
 
 /* Don't shrink code in headings */
+/*
 .rst-content h1 code,
 .rst-content h2 code,
 .rst-content h3 code,
@@ -110,6 +129,7 @@ h6 {
 .rst-content h6 code {
     font-size: inherit;
 }
+*/
 
 /* Don't display footer */
 footer [role=contentinfo] {
@@ -117,10 +137,12 @@ footer [role=contentinfo] {
 }
 
 /* Override captions */
+/*
 .caption-text {
     font-size: 16px !important;
     text-transform: initial !important;
 }
+*/
 
 /* Center image */
 img[alt="All the Docs"] {
@@ -135,6 +157,7 @@ footer {
 }
 
 /* Grow title */
-.icon-home {
-    font-size: 150%;
+.wy-side-nav-search > a,
+.wy-side-nav-search .wy-dropdown > a {
+    font-size: 200%;
 }
