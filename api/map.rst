@@ -134,3 +134,8 @@ Getting a Building
         .. code-tab:: bash cURL
 
             curl https://api.cs50.io/map/buildings/1358
+
+Acknowledgements
+----------------
+
+Special thanks to CS50's friends at Harvard's `Center for Geographic Analysis <https://gis.harvard.edu/>`_ for this API's data!
