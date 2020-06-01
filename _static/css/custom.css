@@ -161,3 +161,8 @@ footer {
 .wy-side-nav-search .wy-dropdown > a {
     font-size: 200%;
 }
+
+/* Hide version */
+.rst-versions {
+    display: none;
+}
