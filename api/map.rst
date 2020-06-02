@@ -1,7 +1,7 @@
 Map API
 =======
 
-CS50's Dining API provides programmatic access via HTTP to data from `map.harvard.edu <https://map.harvard.edu/>`_.
+CS50's Map API provides programmatic access via HTTP to data from `map.harvard.edu <https://map.harvard.edu/>`_.
 
 Buildings
 ---------
