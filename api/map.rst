@@ -1,6 +1,8 @@
 Map API
 =======
 
+CS50's Dining API provides programmatic access via HTTP to data from `map.harvard.edu <https://map.harvard.edu/>`_.
+
 Buildings
 ---------
 
@@ -100,20 +102,19 @@ Getting a Building
 
 .. http:get:: /map/buildings/(id)
 
-    :synopsis: Returns a JSON object that represents a building. For example, https://api.cs50.io/map/buildings/1358 represents Mather House, while https://api.cs50.io/map/buildings/1145 represents Matthews Hall.
+    :synopsis: Returns a JSON object that represents a building, where **id** is that building's unique identifier. For example, https://api.cs50.io/map/buildings/1358 represents Mather House, while https://api.cs50.io/map/buildings/1145 represents Matthews Hall.
 
     :param id: A building's unique identifier.
 
     :statuscode 200: Returned if a building with **id** exists.
     :statuscode 404: Returned if no building with **id** exists.
 
-    :>json string address: A building's (street) address.
-    :>json string city: A building's city (in Massachusetts).
-    :>json array footprint: An array of arrays, each of which represents a polygon that outlines (part of) a building's footprint. Each polygon is itself represented as an array of arrays, each of which represents a (latitude, longitude) coordinate.
-    :>json integer id: A building's unique identifer. Usable as a primary key in a databse.
-    :>json string image: URL of a building's image, if any.
-    :>json array location: An array of two values, each of which is a ``float``, representing a building's latitude and longitude, respectively.
-    :>json string name: A building's name, if any.
+    :>jsonarr string address: A building's (street) address.
+    :>jsonarr string city: A building's city (in Massachusetts).
+    :>jsonarr object geometry: An object with two keys: **point**, the value of which is an array with two values, each of which is a ``float``, representing a building's latitude and longitude, respectively; and **polygons**, which is an array of arrays, each of which represents a polygon that outlines (part of) a building's footprint, each of whose values is an array with two values, each of which is a ``float``, representing the latitude and longitude of a vertex of the polygon.
+    :>jsonarr integer id: A building's unique identifer. Usable as a primary key in a databse.
+    :>jsonarr string image: URL of a building's image, if any.
+    :>jsonarr string name: A building's name, if any.
 
     **Example #1: Getting Mather House**
 
