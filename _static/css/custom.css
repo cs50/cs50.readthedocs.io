@@ -21,16 +21,20 @@ nav code {
 }
 
 /* Don't display breadcrumbs */
+/*
 .rst-content [role=navigation] {
     display: none;
 }
+*/
 
 /* Match color of non-monospaced anchors */
+/*
 .rst-content a tt.literal,
 .rst-content a tt.literal,
 .rst-content a code.literal {
     color: inherit;
 }
+*/
 
 /* Match margins below paragraphs */
 /*
