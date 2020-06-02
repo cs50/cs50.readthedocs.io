@@ -9,7 +9,7 @@ Getting Buildings
 
 .. http:get:: /map/buildings
 
-    :synopsis: Returns a JSON array of objects, each of which represents a building.
+    :synopsis: Returns a JSON array of objects, each of which represents a building. For example, https://api.cs50.io/map/buildings.
 
     :query address: If provided, any building whose address contains **address** will be returned.
     :query name: If provided, building whose name contains **name** will be returned.
@@ -34,7 +34,7 @@ Getting Buildings
             import requests
 
             # Get buildings
-            response = requests.get(f"https://api.cs50.io/map/buildings")
+            response = requests.get("https://api.cs50.io/map/buildings")
 
             # Convert JSON to list of dicts
             buildings = response.json()
@@ -45,7 +45,7 @@ Getting Buildings
 
         .. code-tab:: bash cURL
 
-            curl https://api.cs50.io/map/buildings
+            curl "https://api.cs50.io/map/buildings"
 
     **Example #2: Getting All Wigglesworth Buildings**
 
@@ -58,7 +58,7 @@ Getting Buildings
             import requests
 
             # Get buildings
-            response = requests.get(f"https://api.cs50.io/map/buildings?name=wigglesworth")
+            response = requests.get("https://api.cs50.io/map/buildings?name=wigglesworth")
 
             # Convert JSON to list of dicts
             buildings = response.json()
@@ -69,7 +69,7 @@ Getting Buildings
 
         .. code-tab:: bash cURL
 
-            curl https://api.cs50.io/map/buildings?name=wigglesworth
+            curl "https://api.cs50.io/map/buildings?name=wigglesworth"
 
     **Example #3: Getting All Buildings on Oxford Street**
 
@@ -82,7 +82,7 @@ Getting Buildings
             import requests
 
             # Get buildings
-            response = requests.get(f"https://api.cs50.io/map/buildings?name=oxford%20street")
+            response = requests.get("https://api.cs50.io/map/buildings?name=oxford%20street")
 
             # Convert JSON to list of dicts
             buildings = response.json()
@@ -93,14 +93,14 @@ Getting Buildings
 
         .. code-tab:: bash cURL
 
-            curl https://api.cs50.io/map/buildings?name=oxford%20street
+            curl "https://api.cs50.io/map/buildings?name=oxford%20street"
 
 Getting a Building
 ^^^^^^^^^^^^^^^^^^
 
 .. http:get:: /map/buildings/(id)
 
-    :synopsis: Returns a JSON object that represents a building.
+    :synopsis: Returns a JSON object that represents a building. For example, https://api.cs50.io/map/buildings/1358 represents Mather House, while https://api.cs50.io/map/buildings/1145 represents Matthews Hall.
 
     :param id: A building's unique identifier.
 
@@ -126,14 +126,14 @@ Getting a Building
             import requests
 
             # Get building
-            response = requests.get(f"https://api.cs50.io/map/buildings/1358")
+            response = requests.get("https://api.cs50.io/map/buildings/1358")
 
             # Print building's name
             print(building["name"])
 
         .. code-tab:: bash cURL
 
-            curl https://api.cs50.io/map/buildings/1358
+            curl "https://api.cs50.io/map/buildings/1358"
 
 Acknowledgements
 ----------------

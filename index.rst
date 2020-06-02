@@ -5,7 +5,7 @@
    :hidden:
    :maxdepth: 1
 
-   Dining <https://cs50.readme.io/reference#dining-api>
+   Dining <api/dining>
    Map <api/map>
 
 .. toctree::
