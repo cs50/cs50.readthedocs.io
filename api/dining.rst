@@ -75,6 +75,9 @@ Getting a Category
             # Get category
             response = requests.get("https://api.cs50.io/dining/categories/32")
 
+            # Convert JSON to dict
+            category = response.json()
+
             # Print category's name
             print(category["name"])
 
@@ -148,6 +151,9 @@ Getting a Location
 
             # Get location
             response = requests.get("https://api.cs50.io/dining/locations/30")
+
+            # Convert JSON to dict
+            location = response.json()
 
             # Print location's name
             print(location["name"])
@@ -270,6 +276,9 @@ Getting a Recipe
 
             # Get recipe
             response = requests.get("https://api.cs50.io/dining/recipes/22011")
+
+            # Convert JSON to dict
+            recipe = response.json()
 
             # Print recipe's name
             print(recipe["name"])

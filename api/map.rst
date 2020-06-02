@@ -128,6 +128,9 @@ Getting a Building
             # Get building
             response = requests.get("https://api.cs50.io/map/buildings/1358")
 
+            # Convert JSON to dict
+            building = response.json()
+
             # Print building's name
             print(building["name"])
 
