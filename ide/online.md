@@ -1,4 +1,4 @@
-# CS50 IDE
+# Online 
 
 * [FAQs](/ide/faqs.md)
 * [Offline](/ide/offline.md)

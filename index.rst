@@ -54,17 +54,11 @@
    :caption: Libraries
    :hidden:
    :maxdepth: 1
-
-   C <library/c>
-   Python <library/python>
-
-.. toctree::
-   :caption: SDKs
-   :hidden:
-   :maxdepth: 1
+   :name: libraries
 
    check50 <https://cs50.readthedocs.io/projects/check50/>
    compare50 <https://cs50.readthedocs.io/projects/compare50/>
+   cs50 <libraries/cs50/index>
    lib50 <https://cs50.readthedocs.io/projects/lib50/>
 
 .. toctree::

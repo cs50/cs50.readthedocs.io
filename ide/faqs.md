@@ -1,4 +1,4 @@
-# CS50 IDE FAQs
+# FAQs
 
 ## How can I open a file in the editor from a terminal tab?
 
