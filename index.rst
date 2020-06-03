@@ -63,8 +63,9 @@
    :hidden:
    :maxdepth: 1
 
-   check50 <https://cs50.readthedocs.io/projects/check50/en/latest/>
-   compare50 <https://cs50.readthedocs.io/projects/compare50/en/latest/>
+   check50 <https://cs50.readthedocs.io/projects/check50/>
+   compare50 <https://cs50.readthedocs.io/projects/compare50/>
+   lib50 <https://cs50.readthedocs.io/projects/lib50/>
 
 .. toctree::
    :caption: Style Guides
