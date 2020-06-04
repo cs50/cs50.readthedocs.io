@@ -7,8 +7,6 @@ extensions = [
     "sphinxcontrib.httpdomain"
 ]
 
-html_static_path = ["_static"]
-
 html_css_files = ["https://cs50.readthedocs.io/custom.css?" + str(round(time.time()))]
 html_js_files = ["https://cs50.readthedocs.io/custom.js?" + str(round(time.time()))]
 html_theme = "sphinx_rtd_theme"
