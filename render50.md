@@ -26,7 +26,7 @@ pip install --upgrade render50
 
 ## Usage
 
-```
+```bash
 usage: render50 [-h] [-b] [-C] [-i INCLUDE] -o OUTPUT [-P] [-r] [-s SIZE] [-x EXCLUDE] [-y] [-V] [INPUT [INPUT ...]]
 
 A command-line tool that renders source code as a PDF.
