@@ -16,7 +16,7 @@
 }
 
 /* Match font size in nav */
-nav code {
+nav code, .wy-breadcrumbs code {
     font-size: inherit;
 }
 

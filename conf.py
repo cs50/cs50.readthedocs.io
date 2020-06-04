@@ -7,8 +7,8 @@ extensions = [
     "sphinxcontrib.httpdomain"
 ]
 
-html_css_files = ["https://cs50.readthedocs.io/custom.css?" + str(round(time.time()))]
-html_js_files = ["https://cs50.readthedocs.io/custom.js?" + str(round(time.time()))]
+html_css_files = ["https://cs50.readthedocs.io/_static/custom.css?" + str(round(time.time()))]
+html_js_files = ["https://cs50.readthedocs.io/_static/custom.js?" + str(round(time.time()))]
 html_theme = "sphinx_rtd_theme"
 html_theme_options = {
     "display_version": False,
@@ -16,7 +16,5 @@ html_theme_options = {
     "sticky_navigation": False
 }
 html_title = "CS50 Docs"
-
-master_doc = "index"
 
 project = "CS50 Docs"
