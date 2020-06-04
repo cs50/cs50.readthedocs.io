@@ -9,8 +9,8 @@ extensions = [
 
 html_static_path = ["_static"]
 
-html_css_files = ["custom.css?" + str(round(time.time()))]
-html_js_files = ["custom.js?" + str(round(time.time()))]
+html_css_files = ["https://cs50.readthedocs.io/custom.css?" + str(round(time.time()))]
+html_js_files = ["https://cs50.readthedocs.io/custom.js?" + str(round(time.time()))]
 html_theme = "sphinx_rtd_theme"
 html_theme_options = {
     "display_version": False,
