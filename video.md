@@ -45,4 +45,4 @@ where `Chapter` is the chapter's title.
 
 ## Acknowledgements
 
-Special thanks to CS50's friends at [Google](https://www.google.com/) for their support of this app!
+Special thanks to CS50's friends at [Google](https://www.google.com/) for their support of this app and to Twitter for its [emojis](https://twemoji.twitter.com/)!
