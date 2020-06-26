@@ -13,9 +13,9 @@
    :hidden:
    :maxdepth: 1
 
-   check50 </check50/>
+   check50 <https://cs50.readthedocs.io/projects/check50/>
    cli50
-   compare50 </compare50/>
+   compare50 <https://cs50.readthedocs.io/projects/compare50/>
    render50
    style50
    submit50
@@ -55,10 +55,10 @@
    :maxdepth: 1
    :name: libraries
 
-   check50 </check50/>
-   compare50 </compare50/>
+   check50 <https://cs50.readthedocs.io/projects/check50/>
+   compare50 <https://cs50.readthedocs.io/projects/compare50/>
    cs50 <libraries/cs50/index>
-   lib50 </lib50/>
+   lib50 <https://cs50.readthedocs.io/projects/lib50/>
 
 .. toctree::
    :caption: Style Guides
