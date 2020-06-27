@@ -16,7 +16,7 @@ When you run `submit50`, your files are "pushed" (i.e., uploaded) to CS50's "org
 ### Upgrading
 
 ```
-pip install --upgrade submit50
+pip3 install --upgrade submit50
 ```
 
 ## Usage
