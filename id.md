@@ -8,7 +8,7 @@ After authenticating a user, CS50 ID will ultimately return an [ID token](https:
 * `name`, the user's full name, if available; and
 * `email`, the user's email address, if available.
 
-If storing users in a SQLite database, you may assume that `sub` will be a `UNIQUE` value of type `TEXT`.
+If storing users in a SQLite database, you may assume that `sub` will be a `UNIQUE` value of type `TEXT` (with no more than 255 characters).
 
 ## How to Use
 
