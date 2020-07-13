@@ -4,7 +4,7 @@ CS50 ID is CS50's authentication service at [id.cs50.io](https://id.cs50.io/) th
 
 After authenticating a user, CS50 ID will ultimately return an [ID token](https://openid.net/specs/openid-connect-core-1_0.html#IDToken), which is a "digitally signed" JSON object (otherwise known as a [JSON Web Token](https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32) or JWT), inside of which will be these keys (otherwise known as [claims](https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims)):
 
-* `sub`, a unique identifier for the user;
+* `sub`, the user's NetID, which can be used as a unique identifier for the user;
 * `name`, the user's full name, if available; and
 * `email`, the user's email address, if available.
 
