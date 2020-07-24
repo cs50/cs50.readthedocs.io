@@ -3,6 +3,6 @@ CS50 IDE
 
 .. toctree::
 
-    FAQs <faqs>
-    Offline <offline>
-    Online <online>
+    FAQs <faqs.md>
+    Offline <offline.md>
+    Online <online.md>

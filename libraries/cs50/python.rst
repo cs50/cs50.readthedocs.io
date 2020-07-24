@@ -77,7 +77,7 @@ Usage
 
     :param url: a :py:class:`str` that indicates database dialect and connection arguments
 
-    :returns: a :class:`cs50.SQL` object that represents a connection to a database
+    :returns: a :py:class:`cs50.SQL` object that represents a connection to a database
 
     Example usage::
 

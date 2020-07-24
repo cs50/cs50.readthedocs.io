@@ -73,7 +73,7 @@
    :maxdepth: 1
 
    forms
-   id/index
+   id
    ide/index
    lab
    render

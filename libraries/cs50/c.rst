@@ -70,7 +70,7 @@ Usage
 
 .. type:: string
 
-    Type representing a C string. Aliased to :type:`char *`.
+    Type representing a C string. Aliased to :code:`char *`.
 
     Example usage::
 
@@ -81,9 +81,9 @@ Usage
     
     :param format: the :func:`printf`-like format string used to display the prompt
     :param ...: values to be substituted into the format string a la :func:`printf`
-    :returns: the :type:`char` equivalent to the line read from stdin, or :macro:`CHAR_MAX` on error
+    :returns: the :code:`char` equivalent to the line read from stdin, or :macro:`CHAR_MAX` on error
 
-    Prompts user for a line of text from standard input and returns the equivalent :type:`char`;
+    Prompts user for a line of text from standard input and returns the equivalent :code:`char`;
     if text does not represent a single char, user is reprompted.
 
     Example usage::
@@ -119,9 +119,9 @@ Usage
     :param format: the :func:`printf`-like format string used to display the prompt
     :param ...: values to be substituted into the format string a la :func:`printf`
 
-    :returns: the :type:`double` equivalent to the line read from stdin in [:macro:`DBL_MIN`, :macro:`DBL_MAX`), as precisely as possible, or :macro:`DBL_MAX` on error
+    :returns: the :code:`double` equivalent to the line read from stdin in [:macro:`DBL_MIN`, :macro:`DBL_MAX`), as precisely as possible, or :macro:`DBL_MAX` on error
 
-    Prompts user for a line of text from standard input and returns the equivalent :type:`double`;
+    Prompts user for a line of text from standard input and returns the equivalent :code:`double`;
     if text does not represent a double or would cause overflow or underflow, user is reprompted.
 
     Example usage::
@@ -156,9 +156,9 @@ Usage
     :param format: the :func:`printf`-like format string used to display the prompt
     :param ...: values to be substituted into the format string a la :func:`printf`
 
-    :returns: the :type:`int` equivalent to the line read from stdin in [:macro:`INT_MIN`, :macro:`INT_MAX`) or :macro:`INT_MAX` on error
+    :returns: the :code:`int` equivalent to the line read from stdin in [:macro:`INT_MIN`, :macro:`INT_MAX`) or :macro:`INT_MAX` on error
 
-    Prompts user for a line of text from standard input and returns the equivalent :type:`int`;
+    Prompts user for a line of text from standard input and returns the equivalent :code:`int`;
     if text does not represent an int or would cause overflow, user is reprompted.
 
     Example usage::
@@ -196,7 +196,7 @@ Usage
     :param format: the :func:`printf`-like format string used to display the prompt
     :param ...: values to be substituted into the format string a la :func:`printf`
 
-    :returns: the :type:`float` equivalent to the line read from stdin in [:macro:`FLT_MIN`, :macro:`FLT_MAX`), as precisely as possible, or :macro:`FLT_MAX` on error
+    :returns: the :code:`float` equivalent to the line read from stdin in [:macro:`FLT_MIN`, :macro:`FLT_MAX`), as precisely as possible, or :macro:`FLT_MAX` on error
 
     Prompts user for a line of text from standard input and returns the equivalent float;
     if text does not represent a float or would cause overflow or underflow, user is reprompted.
@@ -232,9 +232,9 @@ Usage
     :param format: the :func:`printf`-like format string used to display the prompt
     :param ...: values to be substituted into the format string a la :func:`printf`
 
-    :returns: the :type:`long` equivalent to the line read from stdin in [:macro:`LONG_MIN`, :macro:`LONG_MAX`) or :macro:`LONG_MAX` on error
+    :returns: the :code:`long` equivalent to the line read from stdin in [:macro:`LONG_MIN`, :macro:`LONG_MAX`) or :macro:`LONG_MAX` on error
 
-    Prompts user for a line of text from standard input and returns the equivalent :type:`long`; if text does not represent an int or would cause overflow, user is reprompted.
+    Prompts user for a line of text from standard input and returns the equivalent :code:`long`; if text does not represent an int or would cause overflow, user is reprompted.
 
     Example usage::
 
@@ -273,7 +273,7 @@ Usage
 
     :returns: the read line as a string sans line endings, or :macro:`NULL` on :macro:`EOF`.
 
-   Prompts user for a line of text from standard input and returns it as a string (:macro:`char *`),
+   Prompts user for a line of text from standard input and returns it as a string (:code:`char *`),
    sans trailing line ending. Supports CR (``\r``), LF (``\n``), and CRLF (``\r\n``) as line
    endings. Stores string on heap, but library’s destructor frees memory on program’s
    exit.
