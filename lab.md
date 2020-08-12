@@ -7,7 +7,7 @@ CS50 is a programming environment at [lab.cs50.io](https://lab.cs50.io/) for sca
 
 To create a lab as a teacher, all you need is a [GitHub](https://github.com/) account and a (public or private) [repository](https://help.github.com/articles/create-a-repo/). To log into and work on a lab as a student, all you need is the former. Neither use case requires familiarity with `git` itself though if or once comfortable with `git`, you can create labs even more quickly via a command line!
 
-CS50 Lab is essentially an extension of [CS50 Sandbox](sandbox) that allows teachers to embed interactive instructions alongside a sandbox. As such, CS50 Lab is, also, essentially a lightweight version of [CS50 IDE](/ide) with problems' specifications embedded in students' actual programming environments.
+CS50 Lab is essentially an extension of [CS50 Sandbox](sandbox) that allows teachers to embed interactive instructions alongside a sandbox. As such, CS50 Lab is, also, essentially a lightweight version of [CS50 IDE](ide/index) with problems' specifications embedded in students' actual programming environments.
 
 URLs of labs are of the form `https://lab.cs50.io/:owner/:repo/:branch/:path`, where 
 

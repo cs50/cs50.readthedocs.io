@@ -77,7 +77,7 @@ Usage
 
     :param url: a :py:class:`str` that indicates database dialect and connection arguments
 
-    :returns: a :class:`cs50.SQL` object that represents a connection to a database
+    :returns: a :py:class:`cs50.SQL` object that represents a connection to a database
 
     Example usage::
 
@@ -89,8 +89,8 @@ Usage
 .. function:: cs50.SQL.execute(sql, *args, **kwargs)
 
     :param sql: a :py:class:`str` that represents a single SQL statement, possibly with placeholders, with or without a trailing semicolon
-    :param *args: zero or more positional arguments with which any placeholders should be substituted
-    :param **kwargs: zero or more named arguments with which any placeholders should be substituted
+    :param \*args: zero or more positional arguments with which any placeholders should be substituted
+    :param \*\*kwargs: zero or more named arguments with which any placeholders should be substituted
 
     :returns: for SELECTs, a :py:class:`list` of :py:class:`dict` objects, each of which represents a row in the result set; for INSERTs, the primary key of a newly inserted row (or None if none); for UPDATEs, the number of rows updated; for DELETEs, the number of rows deleted; for CREATEs, `True` on success; on error, a `RuntimeError` is raised
 
