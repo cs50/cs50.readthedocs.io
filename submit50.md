@@ -1,6 +1,6 @@
 # `submit50`
 
-`submit50` is a command-line tool with which you can submit work (e.g., problem sets) to a course (e.g., CS50). It's based on `git`, a "distributed version control system" that allows you to save different versions of files without having to give each version a unique filename (as you might want to do on your own Mac or PC!). Via `submit50` and, in turn, `git` can you thus submit work multiple times (i.e., multiple versions thereof).
+`submit50` is a command-line tool with which you can submit work (e.g., problem sets) to a course (e.g., CS50). It's based on `git`, a "distributed version control system" that allows you to save different versions of files without having to give each version a unique filename (as you might be wont to do on your own Mac or PC!). Via `submit50` and, in turn, `git` can you thus submit work multiple times (i.e., multiple versions thereof).
 
 When you run `submit50`, your files are "pushed" (i.e., uploaded) to CS50's "organization" (also named "submit50") on [GitHub](https://github.com/), a popular service via which developers (like you!) can share code. Your files are stored in a "repository" (a folder, essentially) to which only you and some of CS50's staff have access (and anyone else to whom you grant access). Your work can thus be reviewed and stored in one central place, whether you wrote it in [CS50 IDE](https://ide.cs50.io/) or elsewhere!
 
