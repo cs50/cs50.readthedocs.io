@@ -52,7 +52,6 @@ By default, `submit50` pushes your work to GitHub via HTTPS, which requires your
 
 1. [Generate an SSH key and add it to `ssh-agent`](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/).
 1. [Add the SSH key to your GitHub account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/).
-   ```
 1. Execute 
    ```
    ssh -T -p443 git@ssh.github.com
