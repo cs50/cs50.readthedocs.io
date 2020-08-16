@@ -18,8 +18,8 @@ https://video.cs50.io/:id
 where `:id` is the ID of a (main) YouTube video. URLs of that form additionally support, via GET, these HTTP parameters:
 
 * `screen`, which, if present, is the ID of a screen recording to synchronize with the main video. The screen recording and main video must have identical durations (in seconds) and audio tracks.
-* `start`, which, if present, is a timecode (in seconds or HH:MM:SS format) at which to begin playing a video. It must be non-negative, less than the duration of the video itself, and less than `end`, if present.
-* `end`, which, if present, is a timecode (in seconds or HH:MM:SS format) at which to stop playing a video. It must be non-negative, less than the duration of the video itself, and greater than `start`, if present.
+* `start`, which, if present, is a timecode (in seconds or HH:MM:SS format) at which to start playback. It must be non-negative, less than the duration of the video itself, and less than `end`, if present.
+* `end`, which, if present, is a timecode (in seconds or HH:MM:SS format) at which to end playback (by pausing). It must be non-negative, less than the duration of the video itself, and greater than `start`, if present.
 
 For example, <https://video.cs50.io/5azaK2cBKGw?screen=byyRAKSo_dM&start=438>.
 
