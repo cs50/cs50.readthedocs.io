@@ -68,9 +68,11 @@ Thereafter, you should be able to run `submit50` without ever being prompted for
 
 ### Submitting without `submit50`
 
-If comfortable with `git`, you can submit work without `submit50`. Simply push your work to the expected branch (i.e., the work's prescribed slug) of `https://github.com/submit50/jharvard` (or `git@github.com:submit50/jharvard.git`), where `jharvard` is your own GitHub username. To get started, either clone that repository or add it to an existing repository as a remote.
+If comfortable with `git`, you can submit work without `submit50`. Simply push your work to the expected branch (i.e., the work's prescribed slug which is found in the "How to Submit" section of each project and looks something like `your_class_name/projects/the_year/the_semester/project_name` where the placeholders are filled in with the relevant details for your class) of `https://github.com/submit50/jharvard` (or `git@github.com:submit50/jharvard.git`), where `jharvard` is your own GitHub username. To get started, either clone that repository or add it to an existing repository as a remote.
 
 On each such branch, take care to create a `.gitignore` file based on `https://github.com/cs50/checks/raw/master/slug/submit50/exclude`, where `slug` is as before, so that you don't submit files that `submit50` would otherwise ignore.
+
+Note again that the branch name should not be `master` or the like and instead be `your_class_name/projects/the_year/the_semester/project_name` where the placeholders are filled in with the relevant details for your class.
 
 ## Implementation Details
 
