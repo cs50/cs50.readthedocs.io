@@ -61,6 +61,26 @@ cli50 path/to/directory
 
 The directory will be mounted in `/mnt` within the container.
 
+### Mount dotfile
+
+You can additionally mount a dotfile (or any other file or directory) read-only in `$HOME` within the container as follows:
+
+```
+cli50 ~/.file
+```
+
+For instance, it might be useful to mount one's own `.bashrc`:
+
+```
+cli50 -d ~/.bashrc
+```
+
+Or one's `.ssh` directory, so that you can use your own SSH keys within the container:
+
+```
+cli50 -d ~/.ssh
+```
+
 ### Skip autoupdate
 
 By default, `cli50` autoupdates (i.e., pulls) `cs50/cli`, the Docker image on which it's based, which can be time-consuming on slow internet connections. You can skip autoupdate as follows:
@@ -69,24 +89,12 @@ By default, `cli50` autoupdates (i.e., pulls) `cs50/cli`, the Docker image on wh
 cli50 -f
 ```
 
-or
-
-```
-cli50 --fast
-```
-
 ### Update only
 
 You can update (i.e., pull) `cs50/cli`, the Docker image on which `cli50` is based, without actually starting a container as follows:
 
 ```
 cli50 -u
-```
-
-or
-
-```
-cli50 --update
 ```
 
 ### Log into running container
@@ -119,12 +127,6 @@ When developing a Jekyll site, you can serve (and continually rebuild) it within
 
 ```
 cli50 -j
-```
-
-or
-
-```
-cli50 --jekyll
 ```
 
 The site will be served at `http://0.0.0.0:8080/` within the container, but port 8080 will be published on pseudorandom port on the host (i.e., your computer). If `cli50` outputs, e.g.,
