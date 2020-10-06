@@ -13,7 +13,7 @@ CS50 IDE Offline is a containerized app. In order to run it, you need to install
 Once you have installed Docker, you can create a new CS50 IDE by opening up your command prompt or terminal app, and running the following command:
 
 ```
-$ docker run --detach --name ide50 --publish 1337:1337 --publish 8080-8082:8080-8082 --volume path/to/folder:/home/ubuntu/workspace cs50/ide:offline
+$ docker run --detach --env C9_HOSTNAME=0.0.0.0 --env CS50_IDE_TYPE=offline --name ide50 --publish 1337:1337 --publish 8080-8082:8080-8082 --volume path/to/folder:/home/ubuntu/workspace cs50/ide:offline
 ```
 
 where `path/to/folder` is the path to a folder on your computer where you would like your files and folders inside the IDE to persist, then visit [http://localhost:1337/](http://localhost:1337/) in your web browser to start using your IDE.
