@@ -774,19 +774,3 @@ Check this box in Zoom for privacy's sake, so that others don't see your private
 </li>
 
 </ul>
-
-### Accessibility
-
-<ul class="fa-ul">
-
-<li>
-<span class="fa-li"><i class="fas fa-check-square"></i></span>
-<strong>
-Always show meeting controls
-</strong>
-<p>
-Check this box in Zoom so that buttons don't disappear on you.
-</p>
-</li>
-
-</ul>
