@@ -199,3 +199,7 @@ dl.get.http > dt {
     margin-bottom: 0 !important;
 }
 
+/* Ensure "Edit on GitHub" isn't serif */
+a.fa.fa-github {
+    font-family: inherit;
+}
