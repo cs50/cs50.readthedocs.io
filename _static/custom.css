@@ -1,10 +1,3 @@
-/* Momentum scrolling on iOS */
-/*
-.wy-side-scroll {
-    -webkit-overflow-scrolling: touch;
-}
-*/
-
 /* White backgound */
 .wy-nav-content, .wy-nav-content-wrap {
     background-color: #fff !important;
@@ -20,76 +13,11 @@ nav code, .wy-breadcrumbs code {
     font-size: inherit;
 }
 
-/* Don't display breadcrumbs */
-/*
-.rst-content [role=navigation] {
-    display: none;
-}
-*/
-
-/* Match color of non-monospaced anchors */
-/*
-.rst-content a tt.literal,
-.rst-content a tt.literal,
-.rst-content a code.literal {
-    color: inherit;
-}
-*/
-
-/* Match margins below paragraphs */
-/*
-.rst-content pre.literal-block,
-.rst-content div[class^='highlight'] {
-    margin-bottom: 12px;
-}
-*/
-
-/* Decrease margins below code blocks in lists */
-/*
-.rst-content li pre.literal-block,
-.rst-content li div[class^='highlight'] {
-    margin-bottom: 6px;
-}
-*/
-
-/* Decrease margins below paragraphs */
-/*
-p {
-    margin-bottom: 12px;
-}
-*/
-
 /* Remove margins in nested lists */
 .rst-content .section ol p,
 .rst-content .section ul p {
     margin-bottom: 0;
 }
-
-/* Decrease margins below lists */
-/*
-.wy-plain-list-decimal,
-.rst-content .section ol,
-.rst-content ol.arabic,
-article ol {
-    margin-bottom: 12px;
-}
-.wy-plain-list-disc,
-.rst-content .section ul,
-.rst-content .toctree-wrapper ul,
-article ul {
-    margin-bottom: 12px;
-}
-*/
-
-/* Increase margins above sections (except very first) */
-/*
-.section {
-    margin-top: 24px;
-}
-.articleBody > .section {
-    margin-top: 0px;
-}
-*/
 
 /* Wrap code */
 code, .rst-content tt, .rst-content code {
@@ -97,54 +25,10 @@ code, .rst-content tt, .rst-content code {
     word-break: break-word;
 }
 
-/* Wrap long URLs, but don't wrap code blocks */
-/*
-* {
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-}
-pre, pre span {
-    overflow-wrap: normal;
-    word-wrap: normal;
-}
-*/
-
-/* Decrease margins below headings to match paragraphs */
-/*
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin-bottom: 12px;
-}
-*/
-
-/* Don't shrink code in headings */
-/*
-.rst-content h1 code,
-.rst-content h2 code,
-.rst-content h3 code,
-.rst-content h4 code,
-.rst-content h5 code,
-.rst-content h6 code {
-    font-size: inherit;
-}
-*/
-
 /* Don't display footer */
 footer [role=contentinfo] {
     display: none;
 }
-
-/* Override captions */
-/*
-.caption-text {
-    font-size: 16px !important;
-    text-transform: initial !important;
-}
-*/
 
 /* Center image */
 img[alt="All the Docs"] {
