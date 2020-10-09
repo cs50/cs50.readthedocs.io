@@ -41,6 +41,7 @@
    pip
    python
    terminal
+   zoom
 
 .. toctree::
    :caption: Jekyll
