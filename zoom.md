@@ -33,7 +33,7 @@ To access these settings after launching Zoom, select Zoom's **Home** tab, then 
 Enter full screen automatically when starting or joining a meeting
 </strong>
 <p>
-Uncheck this box, else it's harder to access other windows during class.
+Uncheck this box in Zoom, else it's harder to access other windows during class.
 </p>
 </li>
 
@@ -43,7 +43,7 @@ Uncheck this box, else it's harder to access other windows during class.
 Ask me to confirm when I leave a meeting
 </strong>
 <p>
-Check this box, lest you accidentally leave class!
+Check this box in Zoom, lest you accidentally leave class!
 </p>
 </li>
 
@@ -53,7 +53,7 @@ Check this box, lest you accidentally leave class!
 Stop my video and audio when my display is off or screen saver begins
 </strong>
 <p>
-Check this box for privacy's sake, lest you continue live-streaming during a break.
+Check this box in Zoom for privacy's sake, lest you continue live-streaming during a break.
 </p>
 </li>
 
@@ -69,7 +69,7 @@ Check this box for privacy's sake, lest you continue live-streaming during a bre
 16:9 (Widescreen)
 </strong>
 <p>
-Check this box to ensure your video is widescreen.
+Check this box in Zoom to ensure your video is widescreen.
 </p>
 </li>
 
@@ -79,7 +79,7 @@ Check this box to ensure your video is widescreen.
 Enable HD
 </strong>
 <p>
-Check this box to ensure your video is of high quality.
+Check this box in Zoom to ensure your video is of high quality.
 </p>
 </li>
 
@@ -89,7 +89,7 @@ Check this box to ensure your video is of high quality.
 Mirror my video
 </strong>
 <p>
-Check this box so that you appear mirrored (to yourself only) so that you can gesture right and left without confusing yourself.
+Check this box in Zoom so that you appear mirrored (to yourself only) so that you can gesture right and left without confusing yourself.
 </p>
 </li>
 
@@ -99,7 +99,7 @@ Check this box so that you appear mirrored (to yourself only) so that you can ge
 Adjust for low light
 </strong>
 <p>
-Check this box to improve your lighting.
+Check this box in Zoom to improve your lighting.
 </p>
 </li>
 
@@ -109,7 +109,7 @@ Check this box to improve your lighting.
 Always display participant names on their video
 </strong>
 <p>
-Check this box so that you always see names.
+Check this box in Zoom so that you always see names.
 </p>
 </li>
 
@@ -119,7 +119,7 @@ Check this box so that you always see names.
 Turn off my video when joining meeting
 </strong>
 <p>
-Check this box for privacy's sake, so that your camera stays off until you're ready to turn it on.
+Check this box in Zoom for privacy's sake, so that your camera stays off until you're ready to turn it on.
 </p>
 </li>
 
@@ -129,7 +129,7 @@ Check this box for privacy's sake, so that your camera stays off until you're re
 Always show video preview dialog when joining a video meeting
 </strong>
 <p>
-Check this box so that you can test your video before joining a class.
+Check this box in Zoom so that you can test your video before joining a class.
 </p>
 </li>
 
@@ -139,7 +139,7 @@ Check this box so that you can test your video before joining a class.
 Hide Non-Video participants
 </strong>
 <p>
-Uncheck this box so that you know who's in the class.
+Uncheck this box in Zoom so that you know who's in the class.
 </p>
 </li>
 
@@ -149,7 +149,7 @@ Uncheck this box so that you know who's in the class.
 Spotlight my video when I speak
 </strong>
 <p>
-Uncheck this box so that you still see others when speaking.
+Uncheck this box in Zoom so that you still see others when speaking.
 </p>
 </li>
 
@@ -159,7 +159,7 @@ Uncheck this box so that you still see others when speaking.
 Display up to 49 participants per screen in Gallery View
 </strong>
 <p>
-Check this box so that you can see more participants at once.
+Check this box in Zoom so that you can see more participants at once.
 </p>
 </li>
 
@@ -177,7 +177,7 @@ Automatically adjust microphone volume
 Suppress background noise <select disabled><option>Auto</option></select>
 </strong>
 <p>
-Check this box to improve your audio.
+Check this box in Zoom to improve your audio.
 </p>
 </li>
 
@@ -187,7 +187,7 @@ Check this box to improve your audio.
 Automatically join audio by computer when joining a meeting
 </strong>
 <p>
-Check this box to avoid having to click a button before every class.
+Check this box in Zoom to avoid having to click a button before every class.
 </p>
 </li>
 
@@ -197,7 +197,7 @@ Check this box to avoid having to click a button before every class.
 Mute my microphone when joining a meeting
 </strong>
 <p>
-Check this box for privacy's sake, so that your microphone stays muted until you're ready to unmute it.
+Check this box in Zoom for privacy's sake, so that your microphone stays muted until you're ready to unmute it.
 </p>
 </li>
 
@@ -213,7 +213,7 @@ Check this box for privacy's sake, so that your microphone stays muted until you
 Enter full screen when a participant shares screen
 </strong>
 <p>
-Uncheck this box so that your screen isn't reconfigured when someone else shares their screen.
+Uncheck this box in Zoom so that your screen isn't reconfigured when someone else shares their screen.
 </p>
 </li>
 
@@ -223,7 +223,7 @@ Uncheck this box so that your screen isn't reconfigured when someone else shares
 Scale to fit shared content to Zoom window
 </strong>
 <p>
-Check this box so that you can see everything at once.
+Check this box in Zoom so that you can see everything at once.
 </p>
 </li>
 
@@ -233,7 +233,7 @@ Check this box so that you can see everything at once.
 Side-by-side mode
 </strong>
 <p>
-Check this box so that you still see participants when someone's screen is shared.
+Check this box in Zoom so that you still see participants when someone's screen is shared.
 </p>
 </li>
 
@@ -249,7 +249,7 @@ Check this box so that you still see participants when someone's screen is share
 Always Show Meeting Controls
 </strong>
 <p>
-Check this box so that buttons don't disappear on you.
+Check this box in Zoom so that buttons don't disappear on you.
 </p>
 </li>
 
@@ -271,7 +271,7 @@ To access these settings after launching Zoom, select Zoom's **Home** tab, then 
 Enter full screen when starting or joining a meeting
 </strong>
 <p>
-Uncheck this box, else it's harder to access other windows during class.
+Uncheck this box in Zoom, else it's harder to access other windows during class.
 </p>
 </li>
 
@@ -281,7 +281,7 @@ Uncheck this box, else it's harder to access other windows during class.
 Always show meeting controls
 </strong>
 <p>
-Check this box so that buttons don't disappear on you.
+Check this box in Zoom so that buttons don't disappear on you.
 </p>
 </li>
 
@@ -291,7 +291,7 @@ Check this box so that buttons don't disappear on you.
 Ask me to confirm when I leave a meeting
 </strong>
 <p>
-Check this box, lest you accidentally leave class!
+Check this box in Zoom, lest you accidentally leave class!
 </p>
 </li>
 
@@ -301,7 +301,7 @@ Check this box, lest you accidentally leave class!
 Stop my video and audio when my display is off or screen saver begins
 </strong>
 <p>
-Check this box for privacy's sake, lest you continue live-streaming during a break.
+Check this box in Zoom for privacy's sake, lest you continue live-streaming during a break.
 </p>
 </li>
 
@@ -317,7 +317,7 @@ Check this box for privacy's sake, lest you continue live-streaming during a bre
 Original ratio
 </strong>
 <p>
-Uncheck this box to ensure your video is widescreen.
+Uncheck this box in Zoom to ensure your video is widescreen.
 </p>
 </li>
 
@@ -327,7 +327,7 @@ Uncheck this box to ensure your video is widescreen.
 Enable HD
 </strong>
 <p>
-Check this box to ensure your video is of high quality.
+Check this box in Zoom to ensure your video is of high quality.
 </p>
 </li>
 
@@ -337,7 +337,7 @@ Check this box to ensure your video is of high quality.
 Mirror my video
 </strong>
 <p>
-Check this box so that you appear mirrored (to yourself only) so that you can gesture right and left without confusing yourself.
+Check this box in Zoom so that you appear mirrored (to yourself only) so that you can gesture right and left without confusing yourself.
 </p>
 </li>
 
@@ -347,7 +347,7 @@ Check this box so that you appear mirrored (to yourself only) so that you can ge
 Adjust for low light <select disabled><option>Auto</option></select>
 </strong>
 <p>
-Check this box to improve your lighting.
+Check this box in Zoom to improve your lighting.
 </p>
 </li>
 
@@ -357,7 +357,7 @@ Check this box to improve your lighting.
 Always display participant name on their videos
 </strong>
 <p>
-Check this box so that you always see names.
+Check this box in Zoom so that you always see names.
 </p>
 </li>
 
@@ -367,7 +367,7 @@ Check this box so that you always see names.
 Turn off my video when joining a meeting
 </strong>
 <p>
-Check this box for privacy's sake, so that your camera stays off until you're ready to turn it on.
+Check this box in Zoom for privacy's sake, so that your camera stays off until you're ready to turn it on.
 </p>
 </li>
 
@@ -377,7 +377,7 @@ Check this box for privacy's sake, so that your camera stays off until you're re
 Always show video preview dialog when joining a video meeting
 </strong>
 <p>
-Check this box so that you can test your video before joining a class.
+Check this box in Zoom so that you can test your video before joining a class.
 </p>
 </li>
 
@@ -387,7 +387,7 @@ Check this box so that you can test your video before joining a class.
 Hide non-video participants
 </strong>
 <p>
-Uncheck this box so that you know who's in the class.
+Uncheck this box in Zoom so that you know who's in the class.
 </p>
 </li>
 
@@ -397,7 +397,7 @@ Uncheck this box so that you know who's in the class.
 Spotlight my video when speaking
 </strong>
 <p>
-Uncheck this box so that you still see others when speaking.
+Uncheck this box in Zoom so that you still see others when speaking.
 </p>
 </li>
 
@@ -407,7 +407,7 @@ Uncheck this box so that you still see others when speaking.
 Display up to 49 participants per screen in Gallery View
 </strong>
 <p>
-Check this box so that you can see more participants at once.
+Check this box in Zoom so that you can see more participants at once.
 </p>
 </li>
 
@@ -425,7 +425,7 @@ Automatically adjust microphone volume
 Suppress background noise <select disabled><option>Auto</option></select>
 </strong>
 <p>
-Check this box to improve your audio.
+Check this box in Zoom to improve your audio.
 </p>
 </li>
 
@@ -435,7 +435,7 @@ Check this box to improve your audio.
 Automatically join computer audio when joining a meeting
 </strong>
 <p>
-Check this box to avoid having to click a button before every class.
+Check this box in Zoom to avoid having to click a button before every class.
 </p>
 </li>
 
@@ -445,7 +445,7 @@ Check this box to avoid having to click a button before every class.
 Mute my mic when joining a meeting
 </strong>
 <p>
-Check this box for privacy's sake, so that your microphone stays muted until you're ready to unmute it.
+Check this box in Zoom for privacy's sake, so that your microphone stays muted until you're ready to unmute it.
 </p>
 </li>
 
@@ -461,7 +461,7 @@ Check this box for privacy's sake, so that your microphone stays muted until you
 Enter full screen when a participant shares screen
 </strong>
 <p>
-Uncheck this box so that your screen isn't reconfigured when someone else shares their screen.
+Uncheck this box in Zoom so that your screen isn't reconfigured when someone else shares their screen.
 </p>
 </li>
 
@@ -471,7 +471,7 @@ Uncheck this box so that your screen isn't reconfigured when someone else shares
 Maximize Zoom window when a participant shares screen
 </strong>
 <p>
-Uncheck this box so that your screen isn't reconfigured when someone else shares their screen.
+Uncheck this box in Zoom so that your screen isn't reconfigured when someone else shares their screen.
 </p>
 </li>
 
@@ -481,7 +481,7 @@ Uncheck this box so that your screen isn't reconfigured when someone else shares
 Scale to fit shared content to Zoom window
 </strong>
 <p>
-Check this box so that you can see everything at once.
+Check this box in Zoom so that you can see everything at once.
 </p>
 </li>
 
@@ -491,7 +491,7 @@ Check this box so that you can see everything at once.
 Side-by-side Mode
 </strong>
 <p>
-Check this box so that you still see participants when someone's screen is shared.
+Check this box in Zoom so that you still see participants when someone's screen is shared.
 </p>
 </li>
 
@@ -501,7 +501,7 @@ Check this box so that you still see participants when someone's screen is share
 Silence system notifications when sharing desktop
 </strong>
 <p>
-Check this box for privacy's sake, so that others don't see your private notifications.
+Check this box in Zoom for privacy's sake, so that others don't see your private notifications.
 </p>
 </li>
 
@@ -517,7 +517,7 @@ Check this box for privacy's sake, so that others don't see your private notific
 Always show meeting controls
 </strong>
 <p>
-Check this box so that buttons don't disappear on you.
+Check this box in Zoom so that buttons don't disappear on you.
 </p>
 </li>
 
@@ -539,7 +539,7 @@ To access these settings after launching Zoom, select Zoom's **Home** tab, then 
 Enter full screen automatically when starting or joining a meeting
 </strong>
 <p>
-Uncheck this box, else it's harder to access other windows during class.
+Uncheck this box in Zoom, else it's harder to access other windows during class.
 </p>
 </li>
 
@@ -549,7 +549,7 @@ Uncheck this box, else it's harder to access other windows during class.
 Always show meeting controls
 </strong>
 <p>
-Check this box so that buttons don't disappear on you.
+Check this box in Zoom so that buttons don't disappear on you.
 </p>
 </li>
 
@@ -559,7 +559,7 @@ Check this box so that buttons don't disappear on you.
 Ask me to confirm when I leave a meeting
 </strong>
 <p>
-Check this box, lest you accidentally leave class!
+Check this box in Zoom, lest you accidentally leave class!
 </p>
 </li>
 
@@ -569,7 +569,7 @@ Check this box, lest you accidentally leave class!
 Stop my video and audio when my display is off or screen saver begins
 </strong>
 <p>
-Check this box for privacy's sake, lest you continue live-streaming during a break.
+Check this box in Zoom for privacy's sake, lest you continue live-streaming during a break.
 </p>
 </li>
 
@@ -585,7 +585,7 @@ Check this box for privacy's sake, lest you continue live-streaming during a bre
 Original ratio
 </strong>
 <p>
-Uncheck this box to ensure your video is widescreen.
+Uncheck this box in Zoom to ensure your video is widescreen.
 </p>
 </li>
 
@@ -595,7 +595,7 @@ Uncheck this box to ensure your video is widescreen.
 HD
 </strong>
 <p>
-Check this box to ensure your video is of high quality.
+Check this box in Zoom to ensure your video is of high quality.
 </p>
 </li>
 
@@ -605,7 +605,7 @@ Check this box to ensure your video is of high quality.
 Mirror my video
 </strong>
 <p>
-Check this box so that you appear mirrored (to yourself only) so that you can gesture right and left without confusing yourself.
+Check this box in Zoom so that you appear mirrored (to yourself only) so that you can gesture right and left without confusing yourself.
 </p>
 </li>
 
@@ -615,7 +615,7 @@ Check this box so that you appear mirrored (to yourself only) so that you can ge
 Adjust for low light
 </strong>
 <p>
-Check this box to improve your lighting.
+Check this box in Zoom to improve your lighting.
 </p>
 </li>
 
@@ -625,7 +625,7 @@ Check this box to improve your lighting.
 Always display participant names on their videos
 </strong>
 <p>
-Check this box so that you always see names.
+Check this box in Zoom so that you always see names.
 </p>
 </li>
 
@@ -635,7 +635,7 @@ Check this box so that you always see names.
 Turn off my video when joining meeting
 </strong>
 <p>
-Check this box for privacy's sake, so that your camera stays off until you're ready to turn it on.
+Check this box in Zoom for privacy's sake, so that your camera stays off until you're ready to turn it on.
 </p>
 </li>
 
@@ -645,7 +645,7 @@ Check this box for privacy's sake, so that your camera stays off until you're re
 Always show video preview dialog when joining a video meeting
 </strong>
 <p>
-Check this box so that you can test your video before joining a class.
+Check this box in Zoom so that you can test your video before joining a class.
 </p>
 </li>
 
@@ -655,7 +655,7 @@ Check this box so that you can test your video before joining a class.
 Hide non-video participants
 </strong>
 <p>
-Uncheck this box so that you know who's in the class.
+Uncheck this box in Zoom so that you know who's in the class.
 </p>
 </li>
 
@@ -665,7 +665,7 @@ Uncheck this box so that you know who's in the class.
 Spotlight my video when I speak
 </strong>
 <p>
-Uncheck this box so that you still see others when speaking.
+Uncheck this box in Zoom so that you still see others when speaking.
 </p>
 </li>
 
@@ -675,7 +675,7 @@ Uncheck this box so that you still see others when speaking.
 Display up to 49 participants per screen in Gallery View
 </strong>
 <p>
-Check this box so that you can see more participants at once.
+Check this box in Zoom so that you can see more participants at once.
 </p>
 </li>
 
@@ -693,7 +693,7 @@ Automatically adjust microphone volume
 Suppress background noise <select disabled><option>Auto</option></select>
 </strong>
 <p>
-Check this box to improve your audio.
+Check this box in Zoom to improve your audio.
 </p>
 </li>
 
@@ -703,7 +703,7 @@ Check this box to improve your audio.
 Automatically join audio by computer when joining a meeting
 </strong>
 <p>
-Check this box to avoid having to click a button before every class.
+Check this box in Zoom to avoid having to click a button before every class.
 </p>
 </li>
 
@@ -713,7 +713,7 @@ Check this box to avoid having to click a button before every class.
 Mute my microphone when joining a meeting
 </strong>
 <p>
-Check this box for privacy's sake, so that your microphone stays muted until you're ready to unmute it.
+Check this box in Zoom for privacy's sake, so that your microphone stays muted until you're ready to unmute it.
 </p>
 </li>
 
@@ -729,7 +729,7 @@ Check this box for privacy's sake, so that your microphone stays muted until you
 Enter full screen when a participant shares screen
 </strong>
 <p>
-Uncheck this box so that your screen isn't reconfigured when someone else shares their screen.
+Uncheck this box in Zoom so that your screen isn't reconfigured when someone else shares their screen.
 </p>
 </li>
 
@@ -739,7 +739,7 @@ Uncheck this box so that your screen isn't reconfigured when someone else shares
 Maximize Zoom window when a participant shares screen
 </strong>
 <p>
-Uncheck this box so that your screen isn't reconfigured when someone else shares their screen.
+Uncheck this box in Zoom so that your screen isn't reconfigured when someone else shares their screen.
 </p>
 </li>
 
@@ -749,7 +749,7 @@ Uncheck this box so that your screen isn't reconfigured when someone else shares
 Scale to fit shared content to Zoom window
 </strong>
 <p>
-Check this box so that you can see everything at once.
+Check this box in Zoom so that you can see everything at once.
 </p>
 </li>
 
@@ -759,7 +759,7 @@ Check this box so that you can see everything at once.
 Side-by-side mode
 </strong>
 <p>
-Check this box so that you still see participants when someone's screen is shared.
+Check this box in Zoom so that you still see participants when someone's screen is shared.
 </p>
 </li>
 
@@ -769,7 +769,7 @@ Check this box so that you still see participants when someone's screen is share
 Silence system notifications when sharing desktop
 </strong>
 <p>
-Check this box for privacy's sake, so that others don't see your private notifications.
+Check this box in Zoom for privacy's sake, so that others don't see your private notifications.
 </p>
 </li>
 
@@ -785,7 +785,7 @@ Check this box for privacy's sake, so that others don't see your private notific
 Always show meeting controls
 </strong>
 <p>
-Check this box so that buttons don't disappear on you.
+Check this box in Zoom so that buttons don't disappear on you.
 </p>
 </li>
 
