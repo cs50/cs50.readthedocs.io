@@ -17,11 +17,13 @@
 
 Here are CS50's recommended settings for Zoom for [Linux](#linux), [macOS](#macos), and [Windows](#windows), for students and teachers alike. Settings not mentioned here are up to you!
 
+***
+
 ## Linux
 
 To access these settings after launching Zoom, select Zoom's **Home** tab, then click the gear (<i class="fas fa-cog"></i>) icon in Zoom's top-right corner. Or click Zoom's status icon in your system tray, then select <strong>Settings...</strong>.
 
-## General
+### General
 
 <ul class="fa-ul">
 
@@ -523,11 +525,11 @@ Check this box so that buttons don't disappear on you.
 
 ***
 
-# Windows
+## Windows
 
 To access these settings after launching Zoom, select Zoom's **Home** tab, then click the gear (<i class="fas fa-cog"></i>) icon in Zoom's top-right corner. Or right-click Zoom's icon in your taskbar, then select <strong>Settings...</strong>.
 
-## General
+### General
 
 <ul class="fa-ul">
 
