@@ -1,6 +1,7 @@
 <style>
 
 /* https://stackoverflow.com/a/39145674 */
+.fa-ul li > a,
 .fa-ul li > strong {
     display: inline-block;
     vertical-align: middle;
@@ -15,7 +16,28 @@
 
 # Zoom
 
-Here are CS50's recommended settings for Zoom for [Linux](#linux), [macOS](#macos), and [Windows](#windows), for students and teachers alike. Settings not mentioned here are up to you!
+Here are CS50's recommended settings for Zoom, for students and teachers alike, for:
+
+<ul class="fa-ul">
+
+<li>
+<span class="fa-li"><i class="fab fa-linux"></i></span>
+<a href="#linux">Linux</a>
+</li>
+
+<li>
+<span class="fa-li"><i class="fab fa-apple"></i></span>
+<a href="#macos">macOS</a>
+</li>
+
+<li>
+<span class="fa-li"><i class="fab fa-windows"></i></span>
+<a href="#windows">Windows</a>
+</li>
+
+</ul>
+
+Settings not specified here are up to you!
 
 ***
 
