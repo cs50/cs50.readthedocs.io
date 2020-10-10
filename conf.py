@@ -4,7 +4,8 @@ extensions = [
     "recommonmark",
     "sphinx_markdown_tables",
     "sphinx_tabs.tabs",
-    "sphinxcontrib.httpdomain"
+    "sphinxcontrib.httpdomain",
+    "sphinxext.opengraph"
 ]
 
 html_css_files = [
@@ -18,5 +19,9 @@ html_theme_options = {
     "sticky_navigation": False
 }
 html_title = "CS50 Docs"
+
+ogp_image = "https://cs50.readthedocs.io/_images/2ep2od.jpg"
+ogp_image_alt = "ALL THE DOCS"
+ogp_site_url = "https://cs50.readthedocs.io/"
 
 project = "CS50 Docs"
