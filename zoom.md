@@ -300,16 +300,6 @@ Uncheck this box in Zoom, else it's harder to access other windows during class.
 <li>
 <span class="fa-li"><i class="fas fa-check-square"></i></span>
 <strong>
-Always show meeting controls
-</strong>
-<p>
-Check this box in Zoom so that buttons don't disappear on you.
-</p>
-</li>
-
-<li>
-<span class="fa-li"><i class="fas fa-check-square"></i></span>
-<strong>
 Ask me to confirm when I leave a meeting
 </strong>
 <p>
