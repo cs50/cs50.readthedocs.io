@@ -165,26 +165,6 @@ Uncheck this box in Zoom so that you know who's in the class.
 </p>
 </li>
 
-<li>
-<span class="fa-li"><i class="far fa-square"></i></span>
-<strong>
-Spotlight my video when I speak
-</strong>
-<p>
-Uncheck this box in Zoom so that you still see others when speaking.
-</p>
-</li>
-
-<li>
-<span class="fa-li"><i class="fas fa-check-square"></i></span>
-<strong>
-Display up to 49 participants per screen in Gallery View
-</strong>
-<p>
-Check this box in Zoom so that you can see more participants at once.
-</p>
-</li>
-
 </ul>
 
 ### Audio
@@ -194,9 +174,7 @@ Check this box in Zoom so that you can see more participants at once.
 <li>
 <span class="fa-li"><i class="fas fa-check-square"></i></span>
 <strong>
-Automatically adjust microphone volume
-<br>
-Suppress background noise <select disabled><option>Auto</option></select>
+Automatically adjust volume
 </strong>
 <p>
 Check this box in Zoom to improve your audio.
