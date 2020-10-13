@@ -91,3 +91,29 @@ dl.get.http > dt {
 a.fa.fa-github {
     font-family: inherit;
 }
+
+/* Align checkboxes with paragraphs */
+/* https://stackoverflow.com/a/39145674 */
+.fa-ul li > a,
+.fa-ul li > strong {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Separate checkboxes vertically */
+.rst-content .section ul.fa-ul li {
+    padding-bottom: 6px;
+}
+
+/* Ensure only Font Awesome's checkboxes appear */
+.rst-content .section ul.fa-ul li {
+    list-style-type: none;
+}
+
+/* Match Zoom's switches */
+.rst-content .section ul.fa-ul li .fa-toggle-off {
+    color: #747487;
+}
+.rst-content .section ul.fa-ul li .fa-toggle-on {
+    color: #0E71EB;
+}
