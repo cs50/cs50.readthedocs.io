@@ -1,22 +1,6 @@
-<style>
-
-/* https://stackoverflow.com/a/39145674 */
-.fa-ul li > a,
-.fa-ul li > strong {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.rst-content .section ul.fa-ul li {
-    list-style-type: none;
-    padding-bottom: 6px;
-}
-
-</style>
-
 # Zoom
 
-Here are CS50's recommended settings for Zoom, for students and teachers alike, for:
+Here are CS50's recommended [client-side settings](#client-side-settings) for Zoom, for students and teachers alike, for:
 
 <ul class="fa-ul">
 
@@ -37,15 +21,19 @@ Here are CS50's recommended settings for Zoom, for students and teachers alike, 
 
 </ul>
 
+And here are CS50's recommended [server-side settings](#server-side-settings) for Zoom, for teachers alone.
+
 Settings not specified here are up to you!
 
 ***
 
-## Linux
+## Client-Side Settings
+
+### Linux
 
 To access these settings after launching Zoom, select Zoom's **Home** tab, then click the gear (<i class="fas fa-cog"></i>) icon in Zoom's top-right corner. Or click Zoom's status icon in your system tray, then select <strong>Settings...</strong>.
 
-### General
+#### General
 
 <ul class="fa-ul">
 
@@ -81,7 +69,7 @@ Check this box in Zoom for privacy's sake, lest you continue live-streaming duri
 
 </ul>
 
-### Video
+#### Video
 
 <ul class="fa-ul">
 
@@ -167,7 +155,7 @@ Uncheck this box in Zoom so that you know who's in the class.
 
 </ul>
 
-### Audio
+#### Audio
 
 <ul class="fa-ul">
 
@@ -203,7 +191,7 @@ Check this box in Zoom for privacy's sake, so that your microphone stays muted u
 
 </ul>
 
-### Share Screen
+#### Share Screen
 
 <ul class="fa-ul">
 
@@ -239,7 +227,7 @@ Check this box in Zoom so that you still see participants when someone's screen 
 
 </ul>
 
-### Accessibility
+#### Accessibility
 
 <ul class="fa-ul">
 
@@ -257,11 +245,11 @@ Check this box in Zoom so that buttons don't disappear on you.
 
 ***
 
-## macOS
+### macOS
 
 To access these settings after launching Zoom, select Zoom's **Home** tab, then click the gear (<i class="fas fa-cog"></i>) icon in Zoom's top-right corner. Or click the <strong>zoom.us</strong> menu in your display's top-left corner, then select <strong>Preferences...</strong>.
 
-### General
+#### General
 
 <ul class="fa-ul">
 
@@ -297,7 +285,7 @@ Check this box in Zoom for privacy's sake, lest you continue live-streaming duri
 
 </ul>
 
-### Video
+#### Video
 
 <ul class="fa-ul">
 
@@ -403,7 +391,7 @@ Check this box in Zoom so that you can see more participants at once.
 
 </ul>
 
-### Audio
+#### Audio
 
 <ul class="fa-ul">
 
@@ -441,7 +429,7 @@ Check this box in Zoom for privacy's sake, so that your microphone stays muted u
 
 </ul>
 
-### Share Screen
+#### Share Screen
 
 <ul class="fa-ul">
 
@@ -497,7 +485,7 @@ Check this box in Zoom for privacy's sake, so that others don't see your private
 
 </ul>
 
-### Accessibility
+#### Accessibility
 
 <ul class="fa-ul">
 
@@ -515,11 +503,11 @@ Check this box in Zoom so that buttons don't disappear on you.
 
 ***
 
-## Windows
+### Windows
 
 To access these settings after launching Zoom, select Zoom's **Home** tab, then click the gear (<i class="fas fa-cog"></i>) icon in Zoom's top-right corner. Or right-click Zoom's icon in your taskbar, then select <strong>Settings...</strong>.
 
-### General
+#### General
 
 <ul class="fa-ul">
 
@@ -565,7 +553,7 @@ Check this box in Zoom for privacy's sake, lest you continue live-streaming duri
 
 </ul>
 
-### Video
+#### Video
 
 <ul class="fa-ul">
 
@@ -671,7 +659,7 @@ Check this box in Zoom so that you can see more participants at once.
 
 </ul>
 
-### Audio
+#### Audio
 
 <ul class="fa-ul">
 
@@ -709,7 +697,7 @@ Check this box in Zoom for privacy's sake, so that your microphone stays muted u
 
 </ul>
 
-### Share Screen
+#### Share Screen
 
 <ul class="fa-ul">
 
@@ -760,6 +748,255 @@ Silence system notifications when sharing desktop
 </strong>
 <p>
 Check this box in Zoom for privacy's sake, so that others don't see your private notifications.
+</p>
+</li>
+
+</ul>
+
+***
+
+## Server-Side Settings
+
+To access these settings, visit <https://zoom.us/profile/setting>.
+
+### Meeting
+
+#### Security
+
+<ul class="fa-ul">
+
+<li>
+<strong>Waiting Room</strong>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
+<p>
+Enable this setting so that you can get settled before class begins (and optionally admit only names that you recognize).
+</p>
+</li>
+
+<li>
+<strong>Waiting Room Options</strong>
+<p>
+<i class="fas fa-check"></i>
+<strong>Everyone will go in the waiting room</strong>
+</p>
+<p>
+Also enable this setting so that you can get settled before class begins (and optionally admit only names that you recognize).
+</p>
+</li>
+
+<li>
+<strong>Meeting Passcode</strong>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
+<p>
+Enable this setting so that someone can't join the class just by knowing (or guessing) a meeting's ID alone.
+</p>
+</li>
+
+<li>
+<strong>Require passcode for participants joining by phone</strong>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
+<p>
+Enable this setting so that someone can't join the class (by phone) just by knowing (or guessing) a meeting's ID alone.
+</p>
+</li>
+
+<li>
+<strong>Embed passcode in invite link for one-click join</strong>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
+<p>
+Enable this setting so that students don't need to input passcodes manually.
+</p>
+</li>
+
+</ul>
+
+#### Schedule Meeting
+
+<ul class="fa-ul">
+
+<li>
+<strong>Host video</strong>
+<span class="fa-li"><i class="fas fa-toggle-off"></i></span>
+<p>
+Disable this setting for privacy's sake, so that your camera stays off until you're ready to turn it on.
+</p>
+</li>
+
+<li>
+<strong>Audio Type</strong>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
+<p>
+Enable this setting so that participants can resort to their phones if having microphone issues.
+</p>
+</li>
+
+<li>
+<strong>Join before host</strong>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
+<p>
+Enable this setting so that participants can join the waiting room right away.
+</p>
+</li>
+
+<li>
+<strong>Mute participants upon entry</strong>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
+<p>
+Enable this setting for privacy's sake so that everyone's microphone is off by default.
+</p>
+</li>
+
+</ul>
+
+#### In Meeting (Basic)
+
+<ul class="fa-ul">
+
+<li>
+<strong>Chat</strong>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
+<p>
+Enable this setting so that students can ask questions via chat and so that you, e.g., can share links via chat.
+</p>
+</li>
+
+<li>
+<strong>Sound notification when someone joins or leaves</strong>
+<span class="fa-li"><i class="fas fa-toggle-off"></i></span>
+<p>
+Disable this setting so that class isn't interrupted if someone joins late (or rejoins after being disconnected).
+</p>
+</li>
+
+<li>
+<strong>Co-host</strong>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
+<p>
+Enable this setting so that you can promote others (e.g., teaching assistants) to co-hosts.
+</p>
+</li>
+
+<li>
+<strong>Polling</strong>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
+<p>
+Enable this setting so that you can poll the class.
+</p>
+</li>
+
+<li>
+<strong>Always show meeting control toolbar</strong>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
+<p>
+Enable this setting so that buttons don't disappear on you.
+</p>
+</li>
+
+<li>
+<strong>Show Zoom windows during screen share</strong>
+<span class="fa-li"><i class="fas fa-toggle-off"></i></span>
+<p>
+Disable this setting to avoid Zoomception.
+</p>
+</li>
+
+<li>
+<strong>Screen sharing</strong>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
+<p>
+Enable this setting so that screens can be shared.
+</p>
+</li>
+
+<li>
+<strong>Who can share?</strong>
+<p>
+<i class="fas fa-dot-circle"></i>
+<strong>Host Only</strong>
+</p>
+<p>
+Enable this setting so that only you can share your screen until you grant others permission during class itself.
+</p>
+</li>
+
+<li>
+<strong>Disable desktop/screen share for users</strong>
+<span class="fa-li"><i class="fas fa-toggle-off"></i></span>
+<p>
+Disable this setting so that screens can be shared.
+</p>
+</li>
+
+<li>
+<strong>Annotation</strong>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
+<p>
+Enable this setting so that you can annotate your shared screen.
+</p>
+</li>
+
+<li>
+<strong>Only the user who is sharing can annotate</strong>
+<p>
+<i class="far fa-square"></i>
+<strong>Only the user who is sharing can annotate</strong>
+</p>
+<p>
+Enable this setting so that students can't annotate your (or another student's) shared screen.
+</p>
+</li>
+
+<li>
+<strong>Whiteboard</strong>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
+<p>
+Enable this setting so that you can use a whiteboard during class.
+</p>
+</li>
+
+<li>
+<strong>Remote control</strong>
+<span class="fa-li"><i class="fas fa-toggle-off"></i></span>
+<p>
+Disable this setting for privacy's sake, so that students can't control your (or another student's) shared screen.
+</p>
+</li>
+
+<li>
+<strong>Nonverbal feedback</strong>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
+<p>
+Enable this setting so that students can answer questions nonverbally, as via icons for "yes" and "no".
+</p>
+</li>
+
+<li>
+<strong>Allow removed participants to rejoin</strong>
+<span class="fa-li"><i class="fas fa-toggle-off"></i></span>
+<p>
+Disable this setting so that unexpected guests can't rejoin (as easily).
+</p>
+</li>
+
+</ul>
+
+#### In Meeting (Advanced)
+
+<ul class="fa-ul">
+
+<li>
+<strong>Breakout room</strong>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
+<p>
+Enable this setting so that you can use breakout rooms.
+</p>
+</li>
+
+<li>
+<strong>Remote support</strong>
+<span class="fa-li"><i class="fas fa-toggle-off"></i></span>
+<p>
+Disable this setting for privacy's sake, so that students can't control your (or another student's) computer.
 </p>
 </li>
 
