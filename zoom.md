@@ -933,10 +933,6 @@ Disable this setting so that screens can be shared.
 <p>
 Enable this setting so that you can annotate your shared screen.
 </p>
-</li>
-
-<li>
-<strong>Only the user who is sharing can annotate</strong>
 <p>
 <i class="far fa-square"></i>
 <strong>Only the user who is sharing can annotate</strong>
