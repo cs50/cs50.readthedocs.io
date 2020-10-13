@@ -13,21 +13,11 @@ CS50 IDE Offline is a containerized app. In order to run it, you need to install
 Once you have installed Docker, you can create a new CS50 IDE by opening up your command prompt or terminal app, and running the following command:
 
 ```
-$ docker run --detach --env C9_HOSTNAME=0.0.0.0 --env CS50_IDE_TYPE=offline --name ide50 --publish 1337:1337 --publish 8080-8082:8080-8082 --volume path/to/folder:/home/ubuntu/workspace cs50/ide:offline
+$ docker run --detach --env C9_HOSTNAME=0.0.0.0 --env CS50_IDE_TYPE=offline --name ide50 --publish 1337:1337 --publish 8080-8082:8080-8082 --rm --volume path/to/folder:/home/ubuntu/workspace cs50/ide:offline
 ```
 
 where `path/to/folder` is the path to a folder on your computer where you would like your files and folders inside the IDE to persist, then visit [http://localhost:1337/](http://localhost:1337/) in your web browser to start using your IDE.
 
-
-## Managing your IDE
-
-### Starting your IDE
-
-If you can't access your CS50 IDE at [http://localhost:1337/](http://localhost:1337/) (e.g., after restarting your computer), your IDE may be stopped. To start it again, open up your command prompt or terminal app and run the following command:
-
-```
-docker start ide50
-```
 
 ### Updating your IDE
 
@@ -37,15 +27,8 @@ Unlike the online version of CS50 IDE, the offline version needs to be manually 
 docker pull cs50/ide:offline
 ```
 
-then follow the instructions for [Stopping your IDE](#stopping-your-ide), [Removing your IDE](#removing-your-ide), and [Creating a new IDE](#creating-a-new-ide) to create an IDE based on the new image.
+then follow the instructions for [Stopping your IDE](#stopping-your-ide) and [Creating a new IDE](#creating-a-new-ide) to create an IDE based on the new image.
 
-### Restarting your IDE
-
-Normally, you shouldn't need to restart your IDE. But if you ever do, open up your command prompt or terminal app and run the following command:
-
-```
-docker restart ide50
-```
 
 ### Stopping your IDE
 
@@ -55,13 +38,6 @@ To stop your IDE, open up your command prompt or terminal app and run the follow
 docker stop ide50
 ```
 
-### Removing your IDE
-
-To remove your IDE (e.g., to create a new one from scratch or when updating), open up your command prompt or terminal app and run:
-
-```
-docker rm ide50
-```
 
 ## Where to Go Next?
 
