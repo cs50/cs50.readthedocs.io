@@ -937,7 +937,7 @@ Enable this setting so that you can annotate your shared screen.
 
 <li>
 <p>
-<i class="far fa-check-square"></i>
+<i class="fas fa-check-square"></i>
 <strong>Only the user who is sharing can annotate</strong>
 </p>
 <p>
