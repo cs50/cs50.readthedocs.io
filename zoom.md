@@ -21,7 +21,7 @@ Here are CS50's recommended [client-side settings](#client-side-settings) for Zo
 
 </ul>
 
-And here are CS50's recommended [server-side settings](#server-side-settings) for Zoom, for teachers alone.
+And here are CS50's recommended [server-side settings](#server-side-settings) for Zoom, for teachers alone. Also helpful might be [this blog post](https://medium.com/@cs50/teaching-from-home-via-zoom-c3b336446fbc) on teaching from home via Zoom.
 
 Settings not specified here are up to you!
 
