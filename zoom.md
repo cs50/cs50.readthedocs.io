@@ -21,9 +21,11 @@ Here are CS50's recommended [client-side settings](#client-side-settings) for Zo
 
 </ul>
 
-And here are CS50's recommended [server-side settings](#server-side-settings) for Zoom, for teachers alone. Also helpful might be [this blog post](https://medium.com/@cs50/teaching-from-home-via-zoom-c3b336446fbc) on teaching from home via Zoom.
+And here are CS50's recommended [server-side settings](#server-side-settings) for Zoom, for teachers alone. 
 
 Settings not specified here are up to you!
+
+Also helpful for teachers might be [this blog post](https://medium.com/@cs50/teaching-from-home-via-zoom-c3b336446fbc) on teaching from home via Zoom and [these instructions](https://www.notion.so/cs50/OBS-73982818b3864b8f9da4b5fd0cb4e7e9) for using Open Broadcaster Software (OBS).
 
 ***
 
