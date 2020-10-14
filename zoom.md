@@ -757,9 +757,9 @@ Check this box in Zoom for privacy's sake, so that others don't see your private
 
 ## Server-Side Settings
 
-To access these settings, visit <https://zoom.us/profile/setting>.
-
 ### Meeting
+
+To access these settings, visit <https://zoom.us/profile/setting?tab=meeting>.
 
 #### Security
 
@@ -999,6 +999,70 @@ Enable this setting so that you can use breakout rooms.
 <span class="fa-li"><i class="fas fa-toggle-off"></i></span>
 <p>
 Disable this setting for privacy's sake, so that students can't control your (or another student's) computer.
+</p>
+</li>
+
+</ul>
+
+### Recording
+
+To access these settings, if planning to record classes, visit <https://zoom.us/profile/setting?tab=recording>.
+
+#### Recording
+
+<ul class="fa-ul">
+
+<li>
+<strong>Local recording</strong>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
+<p>
+Enable this setting so that you can record locally as needed.
+</p>
+</li>
+
+<li>
+<p>
+<i class="far fa-square"></i>
+<strong>Hosts can give participants the permission to record locally</strong>
+</p>
+<p>
+Uncheck this box for privacy's sake, so that students can't record locally.
+</p>
+</li>
+
+<li>
+<strong>Cloud recording</strong>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
+<p>
+Enable this setting so that you can record to the cloud as needed.
+</p>
+</li>
+
+<li>
+<p>
+<i class="fas fa-check-square"></i>
+<strong>Record active speaker with shared screen</strong>
+</p>
+<p>
+Check this box so that you record, at least, each active speaker and any shared screens.
+</p>
+</li>
+
+<li>
+<strong>Automatic recording</strong>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
+<p>
+Enable this setting so that you don't forget to record a class.
+</p>
+</li>
+
+<li>
+<p>
+<i class="fas fa-dot-circle"></i>
+<strong>Record in the cloud</strong>
+</p>
+<p>
+Enable this setting so that you can easily share a recording after class as needed.
 </p>
 </li>
 
