@@ -824,7 +824,10 @@ Disable this setting for privacy's sake, so that your camera stays off until you
 
 <li>
 <strong>Audio Type</strong>
-<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
+<p>
+<i class="fas fa-dot-circle"></i>
+<strong>Telephone and Computer Audio</strong>
+</p>
 <p>
 Enable this setting so that participants can resort to their phones if having microphone issues.
 </p>
