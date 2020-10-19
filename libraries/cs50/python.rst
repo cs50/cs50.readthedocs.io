@@ -99,7 +99,7 @@ Usage
 
         db = cs50.SQL("sqlite:///file.db")
 
-        db.execute("SELECT * FROM foo")
+        rows = db.execute("SELECT * FROM foo")
 
         rows = db.execute("SELECT * FROM foo WHERE bar = ? AND baz = ?", 1, 2)
         rows = db.execute("SELECT * FROM foo WHERE bar IN (?) AND baz IN (?)", [1, 2], [3, 4])
@@ -108,14 +108,14 @@ Usage
         rows = db.execute("SELECT * FROM foo WHERE bar = :bar AND baz = :baz", {"bar": 1, "baz": 2})
         rows = db.execute("SELECT * FROM foo WHERE bar IN (:bar) AND baz IN (:baz)", bar=[1, 2], baz=[3, 4])
 
-        db.execute("INSERT INTO foo (bar, baz) VALUES(?, ?)", 1, 2)
-        db.execute("INSERT INTO foo (bar, baz) VALUES(:bar, :baz)", bar=1, baz=2)
-        db.execute("INSERT INTO foo (bar, baz) VALUES(:bar, :baz)", {"bar": 1, "baz": 2})
+        id = db.execute("INSERT INTO foo (bar, baz) VALUES(?, ?)", 1, 2)
+        id = db.execute("INSERT INTO foo (bar, baz) VALUES(:bar, :baz)", bar=1, baz=2)
+        id = db.execute("INSERT INTO foo (bar, baz) VALUES(:bar, :baz)", {"bar": 1, "baz": 2})
 
-        db.execute("UPDATE foo SET bar = ?, baz = ?", 1, 2)
-        db.execute("UPDATE foo SET bar = :bar, baz = :baz", bar=1, baz=2)
-        db.execute("UPDATE foo SET bar = :bar, baz = :baz", {"bar": 1, "baz": 2})
+        n = db.execute("UPDATE foo SET bar = ?, baz = ?", 1, 2)
+        n = db.execute("UPDATE foo SET bar = :bar, baz = :baz", bar=1, baz=2)
+        n = db.execute("UPDATE foo SET bar = :bar, baz = :baz", {"bar": 1, "baz": 2})
 
-        db.execute("DELETE FROM foo WHERE bar = ? AND baz = ?", 1, 2)
-        db.execute("DELETE FROM foo WHERE bar = :bar AND baz = :baz", bar=1, baz=2)
-        db.execute("DELETE FROM foo WHERE bar = :bar AND baz = :baz", {"bar": 1, "baz": 2})
+        n = db.execute("DELETE FROM foo WHERE bar = ? AND baz = ?", 1, 2)
+        n = db.execute("DELETE FROM foo WHERE bar = :bar AND baz = :baz", bar=1, baz=2)
+        n = db.execute("DELETE FROM foo WHERE bar = :bar AND baz = :baz", {"bar": 1, "baz": 2})
