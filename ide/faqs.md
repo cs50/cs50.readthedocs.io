@@ -23,3 +23,14 @@ The CS50 IDE isn't available yet to all AWS accounts.
 ## How to restore files that I have accidentally deleted?
 
 Please follow the instructions at **[How do I recover a deleted file?](https://community.c9.io/t/how-do-i-recover-a-deleted-file/17/2)**. Let sysadmins@cs50.harvard.edu know if you need further assistance!
+
+
+## How do I free up disk space?
+
+You can free up disk space in your IDE by removing the files that are big in size. To list your files and their sizes, run the following command in the IDE's terminal:
+
+```
+du -h /home/ubuntu | grep -v \.c9 | sort -h
+```
+
+then (optionally) download copies of these files to your own computer and remove them from your IDE by right- or control-clicking on them and choosing Delete or using the `rm` command in the terminal.
