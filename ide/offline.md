@@ -8,36 +8,53 @@ Normally, CS50 IDE requires a constant connection to the internet. This may not 
 CS50 IDE Offline is a containerized app. In order to run it, you need to install a tool called [Docker](https://www.docker.com/). See [Get Docker](https://docs.docker.com/get-docker/) for instructions on how to install Docker for your operating system!
 
 
-## Creating a new IDE
+### `ide50`
 
-Once you have installed Docker, you can create a new CS50 IDE by opening up your command prompt or terminal app, and running the following command:
-
-```
-docker run --detach --env C9_HOSTNAME=0.0.0.0 --env CS50_IDE_TYPE=offline --name ide50 --publish 1337:1337 --publish 8080-8082:8080-8082 --rm --security-opt seccomp=unconfined --volume path/to/folder:/home/ubuntu/workspace cs50/ide:offline
-```
-
-where `path/to/folder` is the path to a folder on your computer where you would like your files and folders inside the IDE to persist, then visit [http://localhost:1337/](http://localhost:1337/) in your web browser to start using your IDE.
-
-
-### Updating your IDE
-
-Unlike the online version of CS50 IDE, the offline version needs to be manually updated. To update your IDE, you need to pull the latest version the `cs50/ide:offline` image, stop and remove your IDE, then create a new one based on the new image. To do that, open your command prompt or terminal app and run the following command:
+Instead of using Docker commands to manage your IDE, you may use `ide50`, a command-line script that facilitates using CS50 IDE Offline. To install `ide50`, open up your command prompt or terminal app and run the following command:
 
 ```
-docker pull cs50/ide:offline
+pip3 install ide50
 ```
 
-then follow the instructions for [Stopping your IDE](#stopping-your-ide) and [Creating a new IDE](#creating-a-new-ide) to create an IDE based on the new image.
+Run `ide50 -h` to verify that the installation was successful and see usage information.
+
+You may need to install [Python 3](https://www.python.org/downloads/) and [pip](https://pip.pypa.io/en/stable/installing/) first, if not already installed on your system.
 
 
-### Stopping your IDE
+## Starting Your IDE
+
+Once you have installed Docker and `ide50`, you can start your IDE by opening up your command prompt or terminal app, and running the following command:
+
+```
+ide50 start
+```
+
+## Stopping your IDE
 
 To stop your IDE, open up your command prompt or terminal app and run the following command:
 
 ```
-docker stop ide50
+ide50 stop
 ```
 
+## Updating Your IDE
+
+Unlike the online version of CS50 IDE, the offline version needs to be manually updated. To update your IDE, open up your command prompt or terminal app and run:
+
+```
+ide50 update
+```
+
+then follow the instructions for [Stopping Your IDE](#stopping-your-ide) and [Starting Your IDE](#starting-your-ide) to start an IDE based on the updated image.
+
+
+## Checking the Status of Your IDE
+
+To check whether or not your IDE is running, open up your command prompt or terminal app and run:
+
+```
+ide50 status
+```
 
 ## Where to Go Next?
 
