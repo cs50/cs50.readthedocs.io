@@ -81,7 +81,7 @@ Usage
 
     Example usage::
 
-        db = cs50.SQL("sqlite:///foo.db")  # For SQLite, foo.db must exist
+        db = cs50.SQL("sqlite:///file.db")  # For SQLite, file.db must exist
         db = cs50.SQL("mysql://username:password@host:port/database")  # For MySQL
         db = cs50.SQL("postgres://username:password@host:port/database")  # For PostgreSQL
 
@@ -92,10 +92,11 @@ Usage
     :param \*args: zero or more positional arguments with which any placeholders should be substituted
     :param \*\*kwargs: zero or more named arguments with which any placeholders should be substituted
 
-    :returns: for SELECTs, a :py:class:`list` of :py:class:`dict` objects, each of which represents a row in the result set; for INSERTs, the primary key of a newly inserted row (or None if none); for UPDATEs, the number of rows updated; for DELETEs, the number of rows deleted; for CREATEs, `True` on success; on error, a `RuntimeError` is raised
+    Any argument whose value is a `list` or `tuple` of other values is converted to a comma-separated list of those values, formatted for SQL's `IN` operator.
+
+    :returns: for SELECTs, a :py:class:`list` of :py:class:`dict` objects, each of which represents a row in the result set; for INSERTs, the primary key of a newly inserted row (or None if none); for UPDATEs, the number of rows updated; for DELETEs, the number of rows deleted; for CREATEs, `True` on success; on integrity errors, a `ValueError` is raised, on other errors, a `RuntimeError` is raised
 
     Example usage::
-
 
         db = cs50.SQL("sqlite:///file.db")
 
