@@ -8,26 +8,15 @@ CS50 Library for Python
 Installation
 ============
 
-Ubuntu
--------
-
 .. code-block:: bash
 
-    $ sudo pip3 install cs50
-
-
-Fedora
--------
-.. code-block:: bash
-
-    $ sudo pip3 install cs50
-
+    $ pip3 install cs50
 
 Usage
 =====
 
 .. note::
-    To use these functions, make sure to include ``import cs50`` atop your file.
+    To use these functions, be sure to include ``import cs50`` atop your file.
 
 
 .. function:: cs50.get_float(prompt)
@@ -41,7 +30,7 @@ Usage
 
     Example usage::
 
-        f = get_float("Enter a floating-point number: ")
+        f = get_float("Input a floating-point number: ")
 
 
 .. function:: cs50.get_int(prompt)
@@ -55,7 +44,7 @@ Usage
 
     Example usage::
 
-        f = get_int("Enter an integer: ")
+        f = get_int("Input an integer: ")
 
 
 .. function:: cs50.get_string(prompt)
@@ -70,7 +59,7 @@ Usage
 
     Example usage::
 
-        s = get_string("Enter a string: ")
+        s = get_string("Input a string: ")
 
 
 .. function:: cs50.SQL(url)
@@ -122,3 +111,13 @@ Usage
         n = db.execute("DELETE FROM foo WHERE bar = ? AND baz = ?", 1, 2)
         n = db.execute("DELETE FROM foo WHERE bar = :bar AND baz = :baz", bar=1, baz=2)
         n = db.execute("DELETE FROM foo WHERE bar = :bar AND baz = :baz", {"bar": 1, "baz": 2})
+
+FAQs
+====
+
+How can I use ``%`` with ``LIKE``?
+----------------------------------
+
+If ``s`` is a :py:class:`str`, you can prepend and/or append ``%`` to it as follows:
+
+    db.execute("SELECT * FROM foo WHERE bar LIKE ?", "%" + s + "%")
