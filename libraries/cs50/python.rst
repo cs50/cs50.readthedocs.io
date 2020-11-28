@@ -88,13 +88,13 @@ Usage
 
 .. function:: cs50.SQL.execute(sql, *args, **kwargs)
 
-    :param sql: a :py:class:`str` that represents a single SQL statement, possibly with [parameter markers](https://www.python.org/dev/peps/pep-0249/#paramstyle), with or without a trailing semicolon
+    :param sql: a :py:class:`str` that represents a single SQL statement, possibly with `parameter markers <https://www.python.org/dev/peps/pep-0249/#paramstyle>`_, with or without a trailing semicolon
     :param \*args: zero or more positional arguments with which any parameter markers should be substituted
     :param \*\*kwargs: zero or more named arguments with which any parameter markers should be substituted
 
-    Any argument whose value is a `list` or `tuple` of other values is converted to a comma-separated list of those values, formatted for SQL's `IN` operator.
+    Any argument whose value is a ``list`` or ``tuple`` of other values is converted to a comma-separated list of those values, formatted for SQL's `IN` operator.
 
-    :returns: for SELECTs, a :py:class:`list` of :py:class:`dict` objects, each of which represents a row in the result set; for INSERTs, the primary key of a newly inserted row (or None if none); for UPDATEs, the number of rows updated; for DELETEs, the number of rows deleted; for CREATEs, `True` on success; on integrity errors, a `ValueError` is raised, on other errors, a `RuntimeError` is raised
+    :returns: for ``SELECT``, a :py:class:`list` of :py:class:`dict` objects, each of which represents a row in the result set; for INSERTs, the primary key of a newly inserted row (or ``None`` if none); for ``UPDATE``, the number of rows updated; for ``DELETE``, the number of rows deleted; for ``CREATE``, ``True`` on success or ``False`` on failure; on integrity errors, a ``ValueError`` is raised, on other errors, a ``RuntimeError`` is raised
 
     Example usage::
 
