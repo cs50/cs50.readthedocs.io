@@ -131,5 +131,5 @@ Parameter markers (e.g., ``?``) can only be used as placeholders for "literals" 
 
     .. code-block::
 
-        if column in ["foo", "bar", baz"]:
+        if column in ["foo", "bar", "baz"]:
             rows = db.execute(f"SELECT * FROM {column}")
