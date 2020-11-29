@@ -120,12 +120,16 @@ How can I use ``%`` with ``LIKE``?
 
 If ``s`` is a :py:class:`str`, you can prepend and/or append ``%`` to it as follows:
 
+    .. code-block::
+
         rows = db.execute("SELECT * FROM foo WHERE bar LIKE ?", "%" + s + "%")
 
 How come I can't use parameter markers as placeholders for tables' or columns' names?
 -------------------------------------------------------------------------------------
 
 Parameter markers (e.g., ``?``) can only be used as placeholders for "literals" like integers and strings, not for "identifiers" like tables' and columns' names. If a user's input will determine the table or column on which you execute a statement, you can use a format string (f-string) instead, but **you must validate the user's input first, to ensure the table or column exists, lest you risk a SQL-injection attack**, as in the below:
+
+    .. code-block::
 
         if column in ["foo", "bar", baz"]:
             rows = db.execute(f"SELECT * FROM {column}")
