@@ -17,10 +17,20 @@ nav code, .wy-breadcrumbs code {
     padding-top: 12px;
 }
 
-/* Remove margins in nested lists */
+/* Remove bottom margins in nested lists */
 .rst-content .section ol p,
-.rst-content .section ul p {
+.rst-content .section ol div[class^='highlight'],
+.rst-content .section ul p,
+.rst-content .section ul div[class^='highlight'] {
     margin-bottom: 0;
+}
+
+/* Add margins between list items */
+.rst-content .section ol li:first-child,
+.rst-content .section ol li + li,
+.rst-content .section ul li:first-child,
+.rst-content .section ul li + li {
+    margin-top: 6px;
 }
 
 /* Wrap code */
