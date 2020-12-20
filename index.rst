@@ -32,18 +32,6 @@
    cs50/server
 
 .. toctree::
-   :caption: HOWTOs
-   :hidden:
-   :maxdepth: 1
-
-   docker
-   heroku
-   pip
-   python
-   terminal
-   zoom
-
-.. toctree::
    :caption: Jekyll
    :hidden:
    :maxdepth: 1
@@ -67,6 +55,18 @@
    :maxdepth: 1
 
    C <style/c>
+
+.. toctree::
+   :caption: Third-Party Software
+   :hidden:
+   :maxdepth: 1
+
+   docker
+   heroku
+   pip
+   python
+   terminal
+   zoom
 
 .. toctree::
    :caption: Web Apps

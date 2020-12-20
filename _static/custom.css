@@ -19,9 +19,9 @@ nav code, .wy-breadcrumbs code {
 
 /* Remove bottom margins in nested lists */
 .rst-content .section ol p,
-.rst-content .section ol div[class^='highlight'],
+.rst-content .section ol div[class^='highlight-'],
 .rst-content .section ul p,
-.rst-content .section ul div[class^='highlight'] {
+.rst-content .section ul div[class^='highlight-'] {
     margin-bottom: 6px;
 }
 
