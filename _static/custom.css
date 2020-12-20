@@ -22,7 +22,7 @@ nav code, .wy-breadcrumbs code {
 .rst-content .section ol div[class^='highlight'],
 .rst-content .section ul p,
 .rst-content .section ul div[class^='highlight'] {
-    margin-bottom: 0;
+    margin-bottom: 6px;
 }
 
 /* Add margins between list items */
