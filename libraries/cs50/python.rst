@@ -129,3 +129,21 @@ Parameter markers (e.g., ``?``) can only be used as placeholders for "literals" 
 
         if column in ["foo", "bar", "baz"]:
             rows = db.execute(f"SELECT * FROM {column}")
+
+Troubleshooting
+===============
+
+ModuleNotFoundError: No module named '_sqlite3'
+-----------------------------------------------
+
+If on an ``apt``-based system, try:
+
+    .. code-block::
+
+        apt install libsqlite3-dev
+
+If on a ``yum``-based system, try:
+
+    .. code-block::
+
+        yum install sqlite-devel
