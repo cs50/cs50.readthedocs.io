@@ -12,11 +12,7 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://cs50.ha
 
 1. Take note of the **HTTPS** URL of the repository (e.g., `https://github.com/username/finance.git`, where `username` is your own GitHub username).
 
-1. Change to your implementation's directory on CS50 IDE.
-
-    ```
-    cd ~/finance/
-    ```
+1. Change to your `finance` directory in CS50 IDE, as via `cd`.
 
 1. Create a `git` repo therein.
 
@@ -59,23 +55,29 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://cs50.ha
 
 1. At `https://dashboard.heroku.com/apps/app-name/resources`, where `app-name` is your Heroku app's name, click **Heroku Postgres :: Database**. In the tab that opens, click **Settings**, then click **View Credentials...**. Highlight and copy the **URI** that appears.
 
-1. In CS50 IDE, open `application.py` in `~/finance/` and find:
+1. In CS50 IDE, open `application.py` in `finance/` and replace
 
     ```py
     db = SQL("sqlite:///finance.db")
     ```
 
-    Replace `sqlite:///finance.db` with that URI (so that the CS50 Library will connect to your Postgres database instead of your SQLite database).
+    with
 
-1. In CS50 IDE, execute the below to import `finance.db` into your Postgres database, where `URI` is that same URI. Be sure to append `?sslmode=require` to the URI.
+    ```py
+    db = SQL(os.getenv("DATABASE_URL"))
+    ```
+
+    so that the CS50 Library will connect to your PostgreSQL database instead of your SQLite database.
+
+1. In CS50 IDE, execute the below to import `finance.db` into your PostgreSQL database, where `URI` is that same URI. Be sure to append `?sslmode=require` to the URI.
 
     ```
     pgloader finance.db URI?sslmode=require
     ```
 
-    Thereafter, if you'd like to browse or edit your Postgres database, you can use Adminer (a tool like phpLiteAdmin for Postgres databases), at [adminer.cs50.net](https://adminer.cs50.net/). Log in using your database's credentials: at `https://dashboard.heroku.com/apps/app-name/resources`, where `app-name` is your Heroku app's name, click **Heroku Postgres :: Database**. In the tab that opens, click **Settings**, then click **View Credentials...**.
+    Thereafter, if you'd like to browse or edit your PostgreSQL database, you can use Adminer (a tool like phpLiteAdmin for PostgreSQL databases), at [adminer.cs50.net](https://adminer.cs50.net/). Log in using your database's credentials: at `https://dashboard.heroku.com/apps/app-name/resources`, where `app-name` is your Heroku app's name, click **Heroku Postgres :: Database**. In the tab that opens, click **Settings**, then click **View Credentials...**.
 
-1. Create a new file in CS50 IDE called `Procfile` in `~/finance/` whose contents are:
+1. Create a new file in CS50 IDE called `Procfile` in `finance/` whose contents are:
 
     ```
     web: gunicorn application:app
