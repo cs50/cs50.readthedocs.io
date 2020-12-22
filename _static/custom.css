@@ -33,6 +33,14 @@ nav code, .wy-breadcrumbs code {
     margin-top: 6px;
 }
 
+/* Match highlighted blocks */
+.rst-content code.literal,
+.rst-content tt.literal,
+.rst-content tt.literal {
+    color: inherit;
+    background-color: rgb(248, 248, 248);
+}
+
 /* Wrap code */
 code, .rst-content tt, .rst-content code {
     white-space: pre-wrap;
