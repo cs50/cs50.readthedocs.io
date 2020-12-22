@@ -67,7 +67,13 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://cs50.ha
     db = SQL(os.getenv("DATABASE_URL"))
     ```
 
-    so that the CS50 Library will connect to your PostgreSQL database instead of your SQLite database.
+    so that the CS50 Library will connect to your PostgreSQL database instead of your SQLite database. Be sure to add
+
+    ```py
+    import os
+    ```
+
+    atop `application.py`, if not there already.
 
 1. In CS50 IDE, execute the below to import `finance.db` into your PostgreSQL database, where `URI` is that same URI. Be sure to append `?sslmode=require` to the URI.
 
