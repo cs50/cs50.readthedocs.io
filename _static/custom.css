@@ -135,3 +135,8 @@ a.fa.fa-github {
 .rst-content .section ul.fa-ul li .fa-toggle-on {
     color: #0E71EB;
 }
+
+/* Match nested unordered lists */
+.rst-content .section li ol {
+    margin-bottom: 0;
+}
