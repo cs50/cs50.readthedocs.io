@@ -51,13 +51,11 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://cs50.ha
 
     * **Automatic deploys:** Click **Enable Automatic Deploys**.
 
-1. Configure your app at `https://dashboard.heroku.com/apps/app-name/settings`, where `app-name` is your Heroku app's name.
+1. Configure your app at <https://dashboard.heroku.com/apps/app-name/settings>, where `app-name` is your Heroku app's name.
 
-    * Click **Reveal Config Vars**.
+    1. Click **Reveal Config Vars**.
 
-    * Add a new variable called **API_KEY**, and its value will be your IEX API Token.
-
-    * To obtain an IEX API Token, you can register for an IEX developer account at `https://iexcloud.io/`. The API Token we are using here is of type **PUBLISHABLE** listed in the IEX console under **API Tokens** section.
+    1. Add a new variable called **API_KEY**, the value of which is your API token for IEX. Recall that, after registering for a developer account at <https://iexcloud.io/>, you can obtain your API token under **API Tokens**. Be sure to use your **PUBLISHABLE** token as the value for **API_KEY**, not your **SECRET** token.
 
 1. Search for and provision **Heroku Postgres** at `https://dashboard.heroku.com/apps/app-name/resources`, where `app-name` is your Heroku app's name; select a **Plan name** of **Hobby Dev — Free**.
 
