@@ -51,7 +51,7 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://cs50.ha
 
     * **Automatic deploys:** Click **Enable Automatic Deploys**.
 
-1. Configure your app at <https://dashboard.heroku.com/apps/app-name/settings>, where `app-name` is your Heroku app's name.
+1. Configure your app at `https://dashboard.heroku.com/apps/app-name/settings`, where `app-name` is your Heroku app's name.
 
     1. Click **Reveal Config Vars**.
 
