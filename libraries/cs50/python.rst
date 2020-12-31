@@ -83,7 +83,7 @@ Usage
 
     Any argument whose value is a :py:class:`list` or :py:class:`tuple` of other values is converted to a comma-separated list of those values, formatted for SQL's ``IN`` operator.
 
-    :returns: for ``SELECT``, a :py:class:`list` of :py:class:`dict` objects, each of which represents a row in the result set; for INSERTs, the primary key of a newly inserted row (or ``None`` if none); for ``UPDATE``, the number of rows updated; for ``DELETE``, the number of rows deleted; for ``CREATE``, ``True`` on success or ``False`` on failure; on integrity errors, a :py:class:`ValueError` is raised, on other errors, a :py:class:`RuntimeError` is raised
+    :returns: for ``SELECT``, a :py:class:`list` of :py:class:`dict` objects, each of which represents a row in the result set; for ``INSERT``, the primary key of a newly inserted row (or ``None`` if none); for ``UPDATE``, the number of rows updated; for ``DELETE``, the number of rows deleted; for ``CREATE``, ``True`` on success or ``False`` on failure; on integrity errors, a :py:class:`ValueError` is raised, on other errors, a :py:class:`RuntimeError` is raised
 
     Example usage::
 
