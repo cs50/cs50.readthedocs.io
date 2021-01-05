@@ -84,7 +84,7 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://cs50.ha
 1. In CS50 IDE, execute the below to import `finance.db` into your PostgreSQL database, where `URI` is that same URI. Be sure to append `?sslmode=require` to the URI.
 
     ```
-    pgloader finance.db URI?sslmode=require
+    pgloader --no-ssl-cert-verification finance.db URI?sslmode=require
     ```
 
     Thereafter, if you'd like to browse or edit your PostgreSQL database, you can use Adminer (a tool like phpLiteAdmin for PostgreSQL databases), at [adminer.cs50.net](https://adminer.cs50.net/). Log in using your database's credentials: at `https://dashboard.heroku.com/apps/app-name/resources`, where `app-name` is your Heroku app's name, click **Heroku Postgres :: Database**. In the tab that opens, click **Settings**, then click **View Credentials...**.
