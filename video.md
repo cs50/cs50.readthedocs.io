@@ -27,9 +27,13 @@ where `:id` is the ID of an instructional YouTube video. URLs of that form addit
 
 For example, <https://video.cs50.io/5azaK2cBKGw?screen=byyRAKSo_dM&start=438>.
 
-If an instructional video has (English) subtitles, they will be automatically imported from YouTube.
+## Captions
 
-If an instructional video has a table of contents in its description, it will be automatically imported (as chapters) from YouTube. A table of contents is defined as two or more lines in a video's description formatted as
+If an instructional video has (English) captions, they will be automatically imported from YouTube.
+
+## Chapters
+
+If an instructional video has a table of contents in its description, it will be automatically imported as chapters from YouTube. A table of contents is defined as two or more lines in a video's description formatted as
 
 ```
 00:00 - Chapter
@@ -54,6 +58,8 @@ Per [YouTube](https://support.google.com/youtube/answer/9884579),
 * the first timestamp must be 00:00 (or 00:00:00),
 * there should be at least three timestamps in ascending order, and
 * the minimum length for chapters is 10 seconds.
+
+The chapters will not appear along the player's timeline, as they do on YouTube itself, as YouTube does not (yet!) support chapters for embedded videos.
 
 ## Acknowledgements
 
