@@ -622,7 +622,7 @@ Uncheck this box in Zoom so that you know who's in the class.
 <li>
 <span class="fa-li"><i class="far fa-square"></i></span>
 <strong>
-Spotlight my video when I speak
+See myself as the active speaker while speaking
 </strong>
 <p>
 Uncheck this box in Zoom so that you still see others when speaking.
@@ -632,7 +632,7 @@ Uncheck this box in Zoom so that you still see others when speaking.
 <li>
 <span class="fa-li"><i class="fas fa-check-square"></i></span>
 <strong>
-Display up to 49 participants per screen in Gallery View
+Maximum participants displayed per screen in Gallery View: <span><input type="radio" checked><label>49 participants</label></span>
 </strong>
 <p>
 Check this box in Zoom so that you can see more participants at once.
@@ -650,10 +650,10 @@ Check this box in Zoom so that you can see more participants at once.
 <strong>
 Automatically adjust microphone volume
 <br>
-Suppress background noise <select disabled><option>Auto</option></select>
+Suppress background noise <span><input type="radio" checked><label>Auto</label></span>
 </strong>
 <p>
-Check this box in Zoom to improve your audio.
+Check this radio button in Zoom to improve your audio.
 </p>
 </li>
 
@@ -686,20 +686,10 @@ Check this box in Zoom for privacy's sake, so that your microphone stays muted u
 <li>
 <span class="fa-li"><i class="far fa-square"></i></span>
 <strong>
-Enter full screen when a participant shares screen
+Window size when screen sharing: <span><input type="radio" checked><label>Maintain current size</label></span>
 </strong>
 <p>
-Uncheck this box in Zoom so that your screen isn't reconfigured when someone else shares their screen.
-</p>
-</li>
-
-<li>
-<span class="fa-li"><i class="far fa-square"></i></span>
-<strong>
-Maximize Zoom window when a participant shares screen
-</strong>
-<p>
-Uncheck this box in Zoom so that your screen isn't reconfigured when someone else shares their screen.
+Check this radio button in Zoom so that your screen isn't reconfigured when someone else shares their screen.
 </p>
 </li>
 
