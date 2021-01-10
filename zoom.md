@@ -310,7 +310,7 @@ Uncheck this box in Zoom to ensure your video is widescreen.
 <li>
 <span class="fa-li"><i class="fas fa-check-square"></i></span>
 <strong>
-Enable HD
+HD
 </strong>
 <p>
 Check this box in Zoom to ensure your video is of high quality.
@@ -572,7 +572,7 @@ Check this box in Zoom so that you appear mirrored (to yourself only) so that yo
 <li>
 <span class="fa-li"><i class="fas fa-check-square"></i></span>
 <strong>
-Adjust for low light
+Adjust for low light <select disabled><option>Auto</option></select>
 </strong>
 <p>
 Check this box in Zoom to improve your lighting.
