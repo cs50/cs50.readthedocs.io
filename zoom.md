@@ -852,7 +852,7 @@ Enable this setting so that you can promote others (e.g., teaching assistants) t
 </li>
 
 <li>
-<strong>Polling</strong>
+<strong>Meeting Polls</strong>
 <span class="fa-li"><i class="fas fa-toggle-on"></i></span>
 <p>
 Enable this setting so that you can poll the class.
@@ -937,7 +937,7 @@ Disable this setting for privacy's sake, so that students can't control your (or
 </li>
 
 <li>
-<strong>Nonverbal feedback</strong>
+<strong>Non-verbal feedback</strong>
 <span class="fa-li"><i class="fas fa-toggle-on"></i></span>
 <p>
 Enable this setting so that students can answer questions nonverbally, as via icons for "yes" and "no".
