@@ -29,7 +29,7 @@ Also helpful for teachers might be [this blog post](https://medium.com/@cs50/tea
 
 ***
 
-## Client-Side Settings
+## Client-Side Settings (Version 5.4.7)
 
 ### Linux
 
