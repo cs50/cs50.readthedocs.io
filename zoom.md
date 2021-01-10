@@ -390,7 +390,7 @@ Uncheck this box in Zoom so that you still see others when speaking.
 <li>
 <span class="fa-li"><i class="fas fa-check-square"></i></span>
 <strong>
-Maximum participants displayed per screen in Gallery View: 49 participants
+Maximum participants displayed per screen in Gallery View: <span><input type="radio" checked><label>49 participants</label></span>
 </strong>
 <p>
 Check this box in Zoom so that you can see more participants at once.
