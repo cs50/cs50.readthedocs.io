@@ -21,7 +21,7 @@ Here are CS50's recommended [client-side settings](#client-side-settings) for Zo
 
 </ul>
 
-And here are CS50's recommended [server-side settings](#server-side-settings) for Zoom, for teachers alone. 
+And here are CS50's recommended [server-side settings](#server-side-settings) for Zoom, for teachers alone.
 
 Settings not specified here are up to you!
 
@@ -29,7 +29,7 @@ Also helpful for teachers might be [this blog post](https://medium.com/@cs50/tea
 
 ***
 
-## Client-Side Settings
+## Client-Side Settings (Version 5.4.7)
 
 ### Linux
 
@@ -46,6 +46,16 @@ Enter full screen automatically when starting or joining a meeting
 </strong>
 <p>
 Uncheck this box in Zoom, else it's harder to access other windows during class.
+</p>
+</li>
+
+<li>
+<span class="fa-li"><i class="far fa-square"></i></span>
+<strong>
+Always show meeting controls
+</strong>
+<p>
+Check this box in Zoom so that buttons don't disappear on you.
 </p>
 </li>
 
@@ -78,17 +88,7 @@ Check this box in Zoom for privacy's sake, lest you continue live-streaming duri
 <li>
 <span class="fa-li"><i class="fas fa-check-square"></i></span>
 <strong>
-16:9 (Widescreen)
-</strong>
-<p>
-Check this box in Zoom to ensure your video is widescreen.
-</p>
-</li>
-
-<li>
-<span class="fa-li"><i class="fas fa-check-square"></i></span>
-<strong>
-Enable HD
+HD
 </strong>
 <p>
 Check this box in Zoom to ensure your video is of high quality.
@@ -108,7 +108,7 @@ Check this box in Zoom so that you appear mirrored (to yourself only) so that yo
 <li>
 <span class="fa-li"><i class="fas fa-check-square"></i></span>
 <strong>
-Adjust for low light
+Adjust for low light <select><option>Auto</option></select>
 </strong>
 <p>
 Check this box in Zoom to improve your lighting.
@@ -155,6 +155,16 @@ Uncheck this box in Zoom so that you know who's in the class.
 </p>
 </li>
 
+<li>
+<span class="fa-li"><i class="far fa-square"></i></span>
+<strong>
+See myself as the active speaker while speaking
+</strong>
+<p>
+Uncheck this box in Zoom so that you still see others when speaking.
+</p>
+</li>
+
 </ul>
 
 #### Audio
@@ -164,7 +174,9 @@ Uncheck this box in Zoom so that you know who's in the class.
 <li>
 <span class="fa-li"><i class="fas fa-check-square"></i></span>
 <strong>
-Automatically adjust volume
+Automatically adjust microphone volume
+<br>
+Suppress background noise <select><option>Auto</option></select>
 </strong>
 <p>
 Check this box in Zoom to improve your audio.
@@ -229,22 +241,6 @@ Check this box in Zoom so that you still see participants when someone's screen 
 
 </ul>
 
-#### Accessibility
-
-<ul class="fa-ul">
-
-<li>
-<span class="fa-li"><i class="fas fa-check-square"></i></span>
-<strong>
-Always Show Meeting Controls
-</strong>
-<p>
-Check this box in Zoom so that buttons don't disappear on you.
-</p>
-</li>
-
-</ul>
-
 ***
 
 ### macOS
@@ -262,6 +258,16 @@ Enter full screen when starting or joining a meeting
 </strong>
 <p>
 Uncheck this box in Zoom, else it's harder to access other windows during class.
+</p>
+</li>
+
+<li>
+<span class="fa-li"><i class="far fa-square"></i></span>
+<strong>
+Always show meeting controls
+</strong>
+<p>
+Check this box in Zoom so that buttons don't disappear on you.
 </p>
 </li>
 
@@ -304,7 +310,7 @@ Uncheck this box in Zoom to ensure your video is widescreen.
 <li>
 <span class="fa-li"><i class="fas fa-check-square"></i></span>
 <strong>
-Enable HD
+HD
 </strong>
 <p>
 Check this box in Zoom to ensure your video is of high quality.
@@ -374,7 +380,7 @@ Uncheck this box in Zoom so that you know who's in the class.
 <li>
 <span class="fa-li"><i class="far fa-square"></i></span>
 <strong>
-Spotlight my video when speaking
+See myself as the active speaker while speaking
 </strong>
 <p>
 Uncheck this box in Zoom so that you still see others when speaking.
@@ -384,7 +390,7 @@ Uncheck this box in Zoom so that you still see others when speaking.
 <li>
 <span class="fa-li"><i class="fas fa-check-square"></i></span>
 <strong>
-Display up to 49 participants per screen in Gallery View
+Maximum participants displayed per screen in Gallery View: <span><input type="radio" checked><label>49 participants</label></span>
 </strong>
 <p>
 Check this box in Zoom so that you can see more participants at once.
@@ -402,10 +408,10 @@ Check this box in Zoom so that you can see more participants at once.
 <strong>
 Automatically adjust microphone volume
 <br>
-Suppress background noise <select disabled><option>Auto</option></select>
+Suppress background noise <span><input type="radio" checked><label>Auto</label></span>
 </strong>
 <p>
-Check this box in Zoom to improve your audio.
+Check this radio button in Zoom to improve your audio.
 </p>
 </li>
 
@@ -438,20 +444,10 @@ Check this box in Zoom for privacy's sake, so that your microphone stays muted u
 <li>
 <span class="fa-li"><i class="far fa-square"></i></span>
 <strong>
-Enter full screen when a participant shares screen
+Window size when screen sharing: <span><input type="radio" checked><label>Maintain current size</label></span>
 </strong>
 <p>
-Uncheck this box in Zoom so that your screen isn't reconfigured when someone else shares their screen.
-</p>
-</li>
-
-<li>
-<span class="fa-li"><i class="far fa-square"></i></span>
-<strong>
-Maximize Zoom window when a participant shares screen
-</strong>
-<p>
-Uncheck this box in Zoom so that your screen isn't reconfigured when someone else shares their screen.
+Check this radio button in Zoom so that your screen isn't reconfigured when someone else shares their screen.
 </p>
 </li>
 
@@ -482,22 +478,6 @@ Silence system notifications when sharing desktop
 </strong>
 <p>
 Check this box in Zoom for privacy's sake, so that others don't see your private notifications.
-</p>
-</li>
-
-</ul>
-
-#### Accessibility
-
-<ul class="fa-ul">
-
-<li>
-<span class="fa-li"><i class="fas fa-check-square"></i></span>
-<strong>
-Always show meeting controls
-</strong>
-<p>
-Check this box in Zoom so that buttons don't disappear on you.
 </p>
 </li>
 
@@ -592,7 +572,7 @@ Check this box in Zoom so that you appear mirrored (to yourself only) so that yo
 <li>
 <span class="fa-li"><i class="fas fa-check-square"></i></span>
 <strong>
-Adjust for low light
+Adjust for low light <select disabled><option>Auto</option></select>
 </strong>
 <p>
 Check this box in Zoom to improve your lighting.
@@ -642,7 +622,7 @@ Uncheck this box in Zoom so that you know who's in the class.
 <li>
 <span class="fa-li"><i class="far fa-square"></i></span>
 <strong>
-Spotlight my video when I speak
+See myself as the active speaker while speaking
 </strong>
 <p>
 Uncheck this box in Zoom so that you still see others when speaking.
@@ -652,7 +632,7 @@ Uncheck this box in Zoom so that you still see others when speaking.
 <li>
 <span class="fa-li"><i class="fas fa-check-square"></i></span>
 <strong>
-Display up to 49 participants per screen in Gallery View
+Maximum participants displayed per screen in Gallery View: <span><input type="radio" checked><label>49 participants</label></span>
 </strong>
 <p>
 Check this box in Zoom so that you can see more participants at once.
@@ -670,10 +650,10 @@ Check this box in Zoom so that you can see more participants at once.
 <strong>
 Automatically adjust microphone volume
 <br>
-Suppress background noise <select disabled><option>Auto</option></select>
+Suppress background noise <span><input type="radio" checked><label>Auto</label></span>
 </strong>
 <p>
-Check this box in Zoom to improve your audio.
+Check this radio button in Zoom to improve your audio.
 </p>
 </li>
 
@@ -706,20 +686,10 @@ Check this box in Zoom for privacy's sake, so that your microphone stays muted u
 <li>
 <span class="fa-li"><i class="far fa-square"></i></span>
 <strong>
-Enter full screen when a participant shares screen
+Window size when screen sharing: <span><input type="radio" checked><label>Maintain current size</label></span>
 </strong>
 <p>
-Uncheck this box in Zoom so that your screen isn't reconfigured when someone else shares their screen.
-</p>
-</li>
-
-<li>
-<span class="fa-li"><i class="far fa-square"></i></span>
-<strong>
-Maximize Zoom window when a participant shares screen
-</strong>
-<p>
-Uncheck this box in Zoom so that your screen isn't reconfigured when someone else shares their screen.
+Check this radio button in Zoom so that your screen isn't reconfigured when someone else shares their screen.
 </p>
 </li>
 
@@ -882,7 +852,7 @@ Enable this setting so that you can promote others (e.g., teaching assistants) t
 </li>
 
 <li>
-<strong>Polling</strong>
+<strong>Meeting Polls</strong>
 <span class="fa-li"><i class="fas fa-toggle-on"></i></span>
 <p>
 Enable this setting so that you can poll the class.
@@ -967,7 +937,7 @@ Disable this setting for privacy's sake, so that students can't control your (or
 </li>
 
 <li>
-<strong>Nonverbal feedback</strong>
+<strong>Non-verbal feedback</strong>
 <span class="fa-li"><i class="fas fa-toggle-on"></i></span>
 <p>
 Enable this setting so that students can answer questions nonverbally, as via icons for "yes" and "no".
