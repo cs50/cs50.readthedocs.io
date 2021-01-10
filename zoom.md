@@ -50,6 +50,16 @@ Uncheck this box in Zoom, else it's harder to access other windows during class.
 </li>
 
 <li>
+<span class="fa-li"><i class="far fa-square"></i></span>
+<strong>
+Always show meeting controls
+</strong>
+<p>
+Check this box in Zoom so that buttons don't disappear on you.
+</p>
+</li>
+
+<li>
 <span class="fa-li"><i class="fas fa-check-square"></i></span>
 <strong>
 Ask me to confirm when I leave a meeting
@@ -78,17 +88,7 @@ Check this box in Zoom for privacy's sake, lest you continue live-streaming duri
 <li>
 <span class="fa-li"><i class="fas fa-check-square"></i></span>
 <strong>
-16:9 (Widescreen)
-</strong>
-<p>
-Check this box in Zoom to ensure your video is widescreen.
-</p>
-</li>
-
-<li>
-<span class="fa-li"><i class="fas fa-check-square"></i></span>
-<strong>
-Enable HD
+HD
 </strong>
 <p>
 Check this box in Zoom to ensure your video is of high quality.
@@ -108,7 +108,7 @@ Check this box in Zoom so that you appear mirrored (to yourself only) so that yo
 <li>
 <span class="fa-li"><i class="fas fa-check-square"></i></span>
 <strong>
-Adjust for low light
+Adjust for low light <select><option>Auto</option></select>
 </strong>
 <p>
 Check this box in Zoom to improve your lighting.
@@ -155,6 +155,16 @@ Uncheck this box in Zoom so that you know who's in the class.
 </p>
 </li>
 
+<li>
+<span class="fa-li"><i class="far fa-square"></i></span>
+<strong>
+See myself as the active speaker while speaking
+</strong>
+<p>
+Uncheck this box in Zoom so that you still see others when speaking.
+</p>
+</li>
+
 </ul>
 
 #### Audio
@@ -164,7 +174,9 @@ Uncheck this box in Zoom so that you know who's in the class.
 <li>
 <span class="fa-li"><i class="fas fa-check-square"></i></span>
 <strong>
-Automatically adjust volume
+Automatically adjust microphone volume
+<br>
+Suppress background noise <select><option>Auto</option></select>
 </strong>
 <p>
 Check this box in Zoom to improve your audio.
@@ -224,22 +236,6 @@ Side-by-side mode
 </strong>
 <p>
 Check this box in Zoom so that you still see participants when someone's screen is shared.
-</p>
-</li>
-
-</ul>
-
-#### Accessibility
-
-<ul class="fa-ul">
-
-<li>
-<span class="fa-li"><i class="fas fa-check-square"></i></span>
-<strong>
-Always Show Meeting Controls
-</strong>
-<p>
-Check this box in Zoom so that buttons don't disappear on you.
 </p>
 </li>
 
