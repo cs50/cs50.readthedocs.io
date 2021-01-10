@@ -21,7 +21,7 @@ Here are CS50's recommended [client-side settings](#client-side-settings) for Zo
 
 </ul>
 
-And here are CS50's recommended [server-side settings](#server-side-settings) for Zoom, for teachers alone. 
+And here are CS50's recommended [server-side settings](#server-side-settings) for Zoom, for teachers alone.
 
 Settings not specified here are up to you!
 
@@ -266,6 +266,16 @@ Uncheck this box in Zoom, else it's harder to access other windows during class.
 </li>
 
 <li>
+<span class="fa-li"><i class="far fa-square"></i></span>
+<strong>
+Always show meeting controls
+</strong>
+<p>
+Check this box in Zoom so that buttons don't disappear on you.
+</p>
+</li>
+
+<li>
 <span class="fa-li"><i class="fas fa-check-square"></i></span>
 <strong>
 Ask me to confirm when I leave a meeting
@@ -374,7 +384,7 @@ Uncheck this box in Zoom so that you know who's in the class.
 <li>
 <span class="fa-li"><i class="far fa-square"></i></span>
 <strong>
-Spotlight my video when speaking
+See myself as the active speaker while speaking
 </strong>
 <p>
 Uncheck this box in Zoom so that you still see others when speaking.
@@ -384,7 +394,7 @@ Uncheck this box in Zoom so that you still see others when speaking.
 <li>
 <span class="fa-li"><i class="fas fa-check-square"></i></span>
 <strong>
-Display up to 49 participants per screen in Gallery View
+Maximum participants displayed per screen in Gallery View: 49 participants
 </strong>
 <p>
 Check this box in Zoom so that you can see more participants at once.
@@ -402,10 +412,10 @@ Check this box in Zoom so that you can see more participants at once.
 <strong>
 Automatically adjust microphone volume
 <br>
-Suppress background noise <select disabled><option>Auto</option></select>
+Suppress background noise <span><input type="radio" checked><label>Auto</label></span>
 </strong>
 <p>
-Check this box in Zoom to improve your audio.
+Check this radio button in Zoom to improve your audio.
 </p>
 </li>
 
@@ -438,20 +448,10 @@ Check this box in Zoom for privacy's sake, so that your microphone stays muted u
 <li>
 <span class="fa-li"><i class="far fa-square"></i></span>
 <strong>
-Enter full screen when a participant shares screen
+Window size when screen sharing: <span><input type="radio" checked><label>Maintain current size</label></span>
 </strong>
 <p>
-Uncheck this box in Zoom so that your screen isn't reconfigured when someone else shares their screen.
-</p>
-</li>
-
-<li>
-<span class="fa-li"><i class="far fa-square"></i></span>
-<strong>
-Maximize Zoom window when a participant shares screen
-</strong>
-<p>
-Uncheck this box in Zoom so that your screen isn't reconfigured when someone else shares their screen.
+Check this radio button in Zoom so that your screen isn't reconfigured when someone else shares their screen.
 </p>
 </li>
 
@@ -482,22 +482,6 @@ Silence system notifications when sharing desktop
 </strong>
 <p>
 Check this box in Zoom for privacy's sake, so that others don't see your private notifications.
-</p>
-</li>
-
-</ul>
-
-#### Accessibility
-
-<ul class="fa-ul">
-
-<li>
-<span class="fa-li"><i class="fas fa-check-square"></i></span>
-<strong>
-Always show meeting controls
-</strong>
-<p>
-Check this box in Zoom so that buttons don't disappear on you.
 </p>
 </li>
 
