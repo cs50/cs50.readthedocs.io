@@ -392,10 +392,14 @@ Uncheck this box in Zoom so that you still see others when speaking.
 <li>
 <span class="fa-li"><i class="fas fa-check-square"></i></span>
 <strong>
-Maximum participants displayed per screen in Gallery View: <i class="fas fa-dot-circle"></i> 49 participants
+Maximum participants displayed per screen in Gallery View:
+<p>
+<i class="fas fa-dot-circle"></i>
+49 participants
+</p>
 </strong>
 <p>
-Check this box in Zoom so that you can see more participants at once.
+Check this radio button in Zoom so that you can see more participants at once.
 </p>
 </li>
 
@@ -410,7 +414,11 @@ Check this box in Zoom so that you can see more participants at once.
 <strong>
 Automatically adjust microphone volume
 <br>
-Suppress background noise <i class="fas fa-dot-circle"></i> Auto
+Suppress background noise
+<p>
+<i class="fas fa-dot-circle"></i>
+Auto
+</p>
 </strong>
 <p>
 Check this radio button in Zoom to improve your audio.
@@ -634,10 +642,14 @@ Uncheck this box in Zoom so that you still see others when speaking.
 <li>
 <span class="fa-li"><i class="fas fa-check-square"></i></span>
 <strong>
-Maximum participants displayed per screen in Gallery View: <i class="fas fa-dot-circle"></i> 49 participants
+Maximum participants displayed per screen in Gallery View:
+<p>
+<i class="fas fa-dot-circle"></i>
+49 participants
+</p>
 </strong>
 <p>
-Check this box in Zoom so that you can see more participants at once.
+Check this radio button in Zoom so that you can see more participants at once.
 </p>
 </li>
 
@@ -652,7 +664,11 @@ Check this box in Zoom so that you can see more participants at once.
 <strong>
 Automatically adjust microphone volume
 <br>
-Suppress background noise <i class="fas fa-dot-circle"></i> Auto
+Suppress background noise
+<p>
+<i class="fas fa-dot-circle"></i>
+Auto
+</p>
 </strong>
 <p>
 Check this radio button in Zoom to improve your audio.
