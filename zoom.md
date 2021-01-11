@@ -392,7 +392,7 @@ Uncheck this box in Zoom so that you still see others when speaking.
 <li>
 <span class="fa-li"><i class="fas fa-check-square"></i></span>
 <strong>
-Maximum participants displayed per screen in Gallery View: <span><input type="radio" checked><label>49 participants</label></span>
+Maximum participants displayed per screen in Gallery View: <label><input type="radio" checked> 49 participants</label>
 </strong>
 <p>
 Check this box in Zoom so that you can see more participants at once.
@@ -410,7 +410,7 @@ Check this box in Zoom so that you can see more participants at once.
 <strong>
 Automatically adjust microphone volume
 <br>
-Suppress background noise <span><input type="radio" checked><label>Auto</label></span>
+Suppress background noise <label><input type="radio" checked> Auto</label>
 </strong>
 <p>
 Check this radio button in Zoom to improve your audio.
@@ -446,7 +446,7 @@ Check this box in Zoom for privacy's sake, so that your microphone stays muted u
 <li>
 <span class="fa-li"><i class="far fa-square"></i></span>
 <strong>
-Window size when screen sharing: <span><input type="radio" checked><label>Maintain current size</label></span>
+Window size when screen sharing: <label><input type="radio" checked> Maintain current size</label>
 </strong>
 <p>
 Check this radio button in Zoom so that your screen isn't reconfigured when someone else shares their screen.
@@ -634,7 +634,7 @@ Uncheck this box in Zoom so that you still see others when speaking.
 <li>
 <span class="fa-li"><i class="fas fa-check-square"></i></span>
 <strong>
-Maximum participants displayed per screen in Gallery View: <span><input type="radio" checked><label>49 participants</label></span>
+Maximum participants displayed per screen in Gallery View: <label><input type="radio" checked> 49 participants</label>
 </strong>
 <p>
 Check this box in Zoom so that you can see more participants at once.
@@ -652,7 +652,7 @@ Check this box in Zoom so that you can see more participants at once.
 <strong>
 Automatically adjust microphone volume
 <br>
-Suppress background noise <span><input type="radio" checked><label>Auto</label></span>
+Suppress background noise <label><input type="radio" checked> Auto</label>
 </strong>
 <p>
 Check this radio button in Zoom to improve your audio.
@@ -688,7 +688,7 @@ Check this box in Zoom for privacy's sake, so that your microphone stays muted u
 <li>
 <span class="fa-li"><i class="far fa-square"></i></span>
 <strong>
-Window size when screen sharing: <span><input type="radio" checked><label>Maintain current size</label></span>
+Window size when screen sharing: <label><input type="radio" checked> Maintain current size</label>
 </strong>
 <p>
 Check this radio button in Zoom so that your screen isn't reconfigured when someone else shares their screen.
