@@ -13,6 +13,7 @@ CS50 Time Converter's landing page supports inputs in these (and other) formats:
 * Thu, 01 Jan 1970 00:00:00 +0000
 * Thu, 01 Jan 1970 00:00:00 GMT
 
+* 1969-12-31 19:00
 * 19691231T190000-0500
 * 1969-12-31T19:00:00-05:00
 
