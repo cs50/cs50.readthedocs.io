@@ -4,7 +4,7 @@ CS50 Time Converter is a web app at [time.cs50.io](https://time.cs50.io/) that c
 
 ## Formats
 
-CS50 Time Converter's landing page supports inputs in these (and other) formats:
+CS50 Time Converter's landing page supports inputs in these (and other) formats (and languages):
 
 * 19700101T000000Z
 * 19700101T000000+0000
@@ -13,17 +13,17 @@ CS50 Time Converter's landing page supports inputs in these (and other) formats:
 * Thu, 01 Jan 1970 00:00:00 +0000
 * Thu, 01 Jan 1970 00:00:00 GMT
 
-* 1969-12-31 19:00
-* 19691231T190000-0500
-* 1969-12-31T19:00:00-05:00
+- 1969-12-31 19:00
+- 19691231T190000-0500
+- 1969-12-31T19:00:00-05:00
 
 * Wed, 31 Dec 1969 19:00:00 -0500
 * Wed, 31 Dec 1969 19:00:00 EST
 * Wednesday, December 31, 1969, 7:00 PM EST
 
-* tomorrow at 1pm
-* tomorrow at 1:00 PM
-* tomorrow at 13:00
+- tomorrow at 1pm
+- tomorrow at 1:00 PM
+- tomorrow at 13:00
 
 ## API
 
