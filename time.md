@@ -34,7 +34,7 @@ CS50 Time Converter supports URLs of the forms
 * `https://time.cs50.io/:start/:duration`
 * `https://time.cs50.io/:duration/:end`
 
-where each of `:start` and `:end` is a [combined date and time](https://en.wikipedia.org/wiki/ISO_8601#Combined_date_and_time_representations) in ISO 8601 format, and `:duration` is a [duration](https://en.wikipedia.org/wiki/ISO_8601#Durations) in ISO 8601 format.
+where each of `:start` and `:end` is a [combined date and time](https://en.wikipedia.org/wiki/ISO_8601#Combined_date_and_time_representations) in ISO 8601 format, and `:duration` is a [duration](https://en.wikipedia.org/wiki/ISO_8601#Durations) in ISO 8601 format. It is not necessary to encode any `+` therein as `%2B`.
 
 A deadline or an event with no end time might thus use the form `https://time.cs50.io/:start`.
 
