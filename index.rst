@@ -79,6 +79,7 @@
    lab
    render
    sandbox
+   time
    vault
    video
 
