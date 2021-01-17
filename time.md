@@ -21,9 +21,9 @@ CS50 Time Converter's landing page supports inputs in these (and other) formats 
 * Wed, 31 Dec 1969 19:00:00 EST
 * Wednesday, December 31, 1969, 7:00 PM EST
 
-- tomorrow at 1pm
-- tomorrow at 1:00 PM
-- tomorrow at 13:00
+- tomorrow at 1:37pm
+- tomorrow at 1:37 PM
+- tomorrow at 13:37
 
 ## API
 
