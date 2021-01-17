@@ -64,4 +64,4 @@ For instance, all of the below represent an interval from Thu, 01 Jan 1970 00:00
 
 Combined dates and times without an offset are assumed to be in US/Eastern.
 
-Times converted via CS50 Time Converter's landing page at <https://time.cs50.io/> standardize on the shortest of these forms, omitting hyphens (`-`) and colons (`:`). 
+Times converted via CS50 Time Converter's landing page standardize on the shortest of these forms, omitting hyphens (`-`) and colons (`:`). 
