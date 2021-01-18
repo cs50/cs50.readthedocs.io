@@ -4,7 +4,7 @@ CS50 Time Converter is a web app at [time.cs50.io](https://time.cs50.io/) that c
 
 ## Formats
 
-CS50 Time Converter's landing page supports inputs in these (and other) formats (and languages):
+CS50 Time Converter's landing page supports inputs [in over 200 language locales plus numerous formats](https://dateparser.readthedocs.io/en/latest/introduction.html), among them:
 
 * 19700101T000000Z
 * 19700101T000000+0000
@@ -62,6 +62,6 @@ For instance, all of the below represent an interval from Thu, 01 Jan 1970 00:00
 * <https://time.cs50.io/19700101T000000Z/P24855DT3H14M>
 * <https://time.cs50.io/P24855DT3H14M/20380119T031407Z>
 
-Combined dates and times without an offset are assumed to be in US/Eastern.
+Combined dates and times without an offset are assumed to be in America/New_York (i.e., Cambridge, Massachusetts, USA).
 
 Times converted via CS50 Time Converter's landing page standardize on the shortest of these forms, omitting hyphens (`-`) and colons (`:`). 
