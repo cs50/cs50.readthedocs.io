@@ -178,7 +178,7 @@ Uncheck this box in Zoom so that you still see others when speaking.
 <strong>
 Automatically adjust microphone volume
 <br>
-Suppress background noise <select><option>Auto</option></select>
+Suppress background noise <select disabled><option>Auto</option></select>
 </strong>
 <p>
 Check this box in Zoom to improve your audio.
