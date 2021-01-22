@@ -1,6 +1,6 @@
 # CS50 Time Converter
 
-CS50 Time Converter is a web app at [time.cs50.io](https://time.cs50.io/) that converts (dates and) times to users' own time zones, as might be helpful for students online for deadlines and events. Its landing page supports manual input in numerous [formats](#formats), and its [API](#api) allows for links to specific (dates and) times. It guesses a user's time zone on a user's first visit but allows for manual override, remembering a user's selection thereafter.
+CS50 Time Converter is a web app at [time.cs50.io](https://time.cs50.io/) that converts (dates and) times to users' own time zones, as might be helpful for deadlines and events for teachers and students in different time zones. Its landing page supports manual input in numerous [formats](#formats), and its [API](#api) allows for links to specific (dates and) times. It guesses a user's time zone on a user's first visit but allows for manual override, remembering a user's selection thereafter.
 
 ## Formats
 
