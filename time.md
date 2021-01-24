@@ -24,6 +24,8 @@ CS50 Time Converter's landing page supports inputs [in over 200 language locales
 - tomorrow at 1:37pm
 - tomorrow at 1:37 PM
 - tomorrow at 13:37
+- tuesday at 13:37
+- tue at 13:37
 
 ## API
 
@@ -65,3 +67,10 @@ For instance, all of the below represent an interval from Thu, 01 Jan 1970 00:00
 Combined dates and times without an offset are assumed to be in America/New_York (i.e., Cambridge, Massachusetts, USA).
 
 Times converted via CS50 Time Converter's landing page standardize on the shortest of these forms, omitting hyphens (`-`) and colons (`:`). 
+
+CS50 Time Converter also supports URLs of the forms
+
+* `https://time.cs50.io/?start=START`
+* `https://time.cs50.io/?start=START&end=END`
+
+where `START` and `END` are in any of the [formats](#formats) supported by CS50 Time Converter's landing page.
