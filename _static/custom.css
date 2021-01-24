@@ -61,16 +61,20 @@ footer [role=contentinfo] {
     display: none;
 }
 
+/* Else too much space between h{i} and h{i+1} if latter immediately follows former */
+h1 + .rst-content .section,
+h2 + .rst-content .section,
+h3 + .rst-content .section,
+h4 + .rst-content .section,
+h5 + .rst-content .section {
+    padding-top: 0;
+}
+
 /* Center image */
 img[alt="All the Docs"] {
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-
-/* Center footer */
-footer {
-    text-align: center;
 }
 
 /* Grow title */
