@@ -80,4 +80,4 @@ CS50 Time Converter also supports URLs of the forms
 * `https://time.cs50.io/?start=START&end=END`
 * `https://time.cs50.io/?start=START&end=END&zone=ZONE`
 
-where `START` and `END` are in any of the [formats](#formats) supported by CS50 Time Converter's landing page, and `ZONE` is any of the time zones supported by the same.
+where `START` and `END` are in any of the [formats](#formats) supported by CS50 Time Converter's landing page, and `ZONE` is any of the time zones supported by the same. Each of `START` and `END` will be assumed to be in `ZONE` unless a time zone or offset is specified in `START` or `END` itself.
