@@ -62,11 +62,11 @@ footer [role=contentinfo] {
 }
 
 /* Else too much space between h{i} and h{i+1} if latter immediately follows former */
-h1 + .section,
-h2 + .section,
-h3 + .section,
-h4 + .section,
-h5 + .section {
+.rst-content h1 + .section,
+.rst-content h2 + .section,
+.rst-content h3 + .section,
+.rst-content h4 + .section,
+.rst-content h5 + .section {
     padding-top: 0;
 }
 
