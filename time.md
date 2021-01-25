@@ -6,27 +6,27 @@ CS50 Time Converter is a web app at [time.cs50.io](https://time.cs50.io/) that c
 
 CS50 Time Converter's landing page supports inputs [in over 200 language locales plus numerous formats](https://dateparser.readthedocs.io/en/latest/introduction.html), among them:
 
+* Wednesday, December 31, 1969, 7:00 PM EST
+* Wed, 31 Dec 1969 19:00:00 EST
+* Wed, 31 Dec 1969 19:00:00 -0500
+
+- 1969-12-31 19:00
+- 19691231T190000-0500
+- 1969-12-31T19:00:00-05:00
+
+* tomorrow at 1:37 PM
+* tomorrow at 1:37pm
+* tomorrow at 13:37
+
+- tuesday at noon
+- tue at noon
+
 * 19700101T000000Z
 * 19700101T000000+0000
 * 1970-01-01T00:00:00Z
 * 1970-01-01T00:00:00+00:00
 * Thu, 01 Jan 1970 00:00:00 +0000
 * Thu, 01 Jan 1970 00:00:00 GMT
-
-- 1969-12-31 19:00
-- 19691231T190000-0500
-- 1969-12-31T19:00:00-05:00
-
-* Wed, 31 Dec 1969 19:00:00 -0500
-* Wed, 31 Dec 1969 19:00:00 EST
-* Wednesday, December 31, 1969, 7:00 PM EST
-
-- tomorrow at 1:37pm
-- tomorrow at 1:37 PM
-- tomorrow at 13:37
-
-* tuesday at noon
-* tue at noon
 
 ## API
 
@@ -80,4 +80,4 @@ CS50 Time Converter also supports URLs of the forms
 * `https://time.cs50.io/?start=START&end=END`
 * `https://time.cs50.io/?start=START&end=END&zone=ZONE`
 
-where `START` and `END` are in any of the [formats](#formats) supported by CS50 Time Converter's landing page, and `ZONE` is any of the time zones supported by the same. Each of `START` and `END` will be assumed to be in `ZONE` unless a time zone or offset is specified in `START` or `END` itself.
+where `START` and `END` are in any of the [formats](#formats) supported by CS50 Time Converter's landing page, and `ZONE` is any of the time zones supported by the same. Each of `START` and `END` will be assumed to be in `ZONE` unless a time zone or offset is specified in `START` or `END` itself. Values of `START` and `END` without a specified time zone or offset are assumed to be in America/New_York if no `ZONE` is provided.
