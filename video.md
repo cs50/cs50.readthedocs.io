@@ -21,8 +21,8 @@ where `:id` is the ID of an instructional YouTube video. URLs of that form addit
 * `start`, which, if present, is a time, in seconds, at which to start playback. It must be non-negative, less than the duration of the video itself, and less than `end`, if present.
 * `end`, which, if present, is a time, in seconds, at which to end playback (by pausing). It must be non-negative, less than the duration of the video itself, and greater than `start`, if present.
 * `offset`, which, if present, is a time, in milliseconds, with an optional plus sign or negative sign, by which to offset the screen recording from the instructional video.
-    * If you started recording the screen before you started recording the instructional video, `offset` should be negative. For instance, if you started recording the screen at 12:00, and you started recording the instructional video at 12:01, then `offset` should be `-1000`.
-    * If you started recording the screen after you started recording the instructional video, `offset` should be positive. For instance, if you started recording the instructional video at 12:00, and you started recording the screen at 12:01, then `offset` should be `1000` (or `+1000`).
+    * If you started recording the screen before you started recording the instructional video, `offset` should be negative. For instance, if you started recording the screen at 12:00 PM, and you started recording the instructional video at 12:01 PM, then `offset` should be `-1000`.
+    * If you started recording the screen after you started recording the instructional video, `offset` should be positive. For instance, if you started recording the instructional video at 12:00 PM, and you started recording the screen at 12:01 PM, then `offset` should be `1000` (or `+1000`).
 * `mute`, which, if present with a value of `1`, will mute the instructional video (and screen recording, if any) by default.
 
 For example, <https://video.cs50.io/5azaK2cBKGw?screen=byyRAKSo_dM&start=438>.
@@ -51,7 +51,7 @@ HH:MM:SS - Chapter
 ...
 ```
 
-where `Chapter` is the chapter's title.
+where `Chapter` is the chapter's title; the hyphens are optional.
 
 Per [YouTube](https://support.google.com/youtube/answer/9884579),
 
