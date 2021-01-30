@@ -70,9 +70,9 @@ For instance, all of the below represent an interval from Thu, 01 Jan 1970 00:00
 * <https://time.cs50.io/19700101T000000Z/P24855DT3H14M>
 * <https://time.cs50.io/P24855DT3H14M/20380119T031407Z>
 
-Combined dates and times without an offset are assumed to be in America/New_York.
-
 Times converted via CS50 Time Converter's landing page standardize on the shortest of these forms, omitting hyphens (`-`) and colons (`:`). 
+
+Combined dates and times without an offset are assumed to be in America/New_York.
 
 ### Queries
 
