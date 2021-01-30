@@ -10,8 +10,8 @@ CS50 Time Converter's landing page supports inputs [in over 200 language locales
 * Wed, 31 Dec 1969 19:00:00 EST
 * Wed, 31 Dec 1969 19:00:00 -0500
 
-- Dec 31, 1969 12:00 PM in Eastern Time (US and Canada)
-- Dec 31, 1969 12:00 PM Eastern Time (US and Canada)
+- Dec 31, 1969 7:00 PM in Eastern Time (US and Canada)
+- Dec 31, 1969 7:00 PM Eastern Time (US and Canada)
 
 * 1969-12-31 19:00
 * 19691231T190000-0500
