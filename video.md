@@ -59,8 +59,6 @@ Per [YouTube](https://support.google.com/youtube/answer/9884579),
 * there should be at least three timestamps in ascending order, and
 * the minimum length for chapters is 10 seconds.
 
-The chapters will not appear along the player's timeline, as they do on YouTube itself, as YouTube does not (yet!) support chapters for embedded videos.
-
 ## Acknowledgements
 
 Special thanks to CS50's friends at [Google](https://www.google.com/) for their support of this app and to Twitter for its [emojis](https://twemoji.twitter.com/)!
