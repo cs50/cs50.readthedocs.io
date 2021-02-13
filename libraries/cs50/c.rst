@@ -59,6 +59,9 @@ If when compiling your program, you see:
     
     ``cannot open shared object file: No such file or directory``:
         Add ``export LD_LIBRARY_PATH=/usr/local/lib`` to your ``.bashrc``.
+        
+    ``ld: library not found for -lcrypt``:
+        Remove ``-lcrypt`` from ``LDLIBS``.
 
 
 Usage
