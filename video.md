@@ -27,6 +27,27 @@ where `:id` is the ID of an instructional YouTube video. URLs of that form addit
 
 For example, <https://video.cs50.io/5azaK2cBKGw?screen=byyRAKSo_dM&start=438>.
 
+## Embedding
+
+CS50 Video Player can be embedded in other sites using an `iframe`. For example:
+
+```
+<iframe src="https://video.cs50.io/5azaK2cBKGw?screen=byyRAKSo_dM&start=438"></iframe>
+```
+
+To avoid [letterboxing](https://en.wikipedia.org/wiki/Letterboxing_(filming)) and [pillarboxing](https://en.wikipedia.org/wiki/Pillarbox), CS50 Video Player supports [iFrame Resizer](https://davidjbradshaw.github.io/iframe-resizer/), whereby you can set the player's width yourself, as with CSS, and then use code like the below in order to set the player's height dynamically:
+
+```
+<script src="https://cdn.jsdelivr.net/npm/iframe-resizer/js/iframeResizer.min.js"></script>
+<script>
+    document.querySelectorAll('iframe[src^="https://video.cs50.io/"]').forEach(function(element) {
+        element.addEventListener('load', function() {
+            iFrameResize(element);
+        });
+    });
+</script>
+```
+
 ## Captions
 
 If an instructional video has (English) captions, they will be automatically imported from YouTube.
