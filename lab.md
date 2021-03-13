@@ -191,4 +191,4 @@ To embed a YouTube video (responsively) in a lab's instructions, you can use thi
 
 ## Acknowledgements
 
-Special thanks to CS50's friends at [Next Tech](https://next.tech/) and [Google](https://www.google.com/) for their support of this app!
+Special thanks to CS50's friends at [Google](https://www.google.com/) and [Pluralsight](https://www.pluralsight.com/) for their support of this app!
