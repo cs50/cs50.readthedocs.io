@@ -23,6 +23,7 @@ To use CS50 Sandbox, students and teachers need only have a (free) [GitHub](http
 
 CS50 Sandbox supports, via both GET and POST, these HTTP parameters:
 
+* `cmd`, which, if present, specifies the command to be run in the sandbox's terminal window (if not `bash`, the default).
 * `file`, which, if present, is a file path to pre-create within the sandbox in `/root/sandbox`. If `window` has a value of `editor` (potentially among other values), that file, if not binary, will also be pre-opened in the code editor.
 * `window`, which must have a value of `terminal` (so that the sandbox will have a terminal window) and may have additional values of
   * `browser`, in which case the sandbox will have an embedded browser, pre-configured with an address of `http://localhost:8080/`,

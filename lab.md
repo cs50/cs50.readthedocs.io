@@ -127,6 +127,22 @@ lab50:
 
 The value of `files` is an ordered list, top to bottom, so the above means that all files are excluded by default but `foo.*` is then included, thereby overriding their exclusion.
 
+#### `cmd`
+
+To specify a command to be run in the sandbox's terminal window (e.g., `python`), add a key below `lab50` called `cmd`:
+
+```
+lab50:
+  cmd: python
+```
+
+The (implicit) default is:
+
+```
+lab50:
+  cmd: bash
+```
+
 ### `README.md`
 
 A lab's instructions should be written in `README.md` (which must be in the same directory as `.cs50.yml`), using
