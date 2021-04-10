@@ -26,8 +26,8 @@ pip install --upgrade render50
 
 ## Usage
 
-```
-usage: render50 [-h] [-b] [-C] [-i INCLUDE] -o OUTPUT [-P] [-r] [-s SIZE] [-x EXCLUDE] [-y] [-V] [INPUT [INPUT ...]]
+```txt
+usage: render50 [-h] [-b] [-f] [-i INCLUDE] -o OUTPUT [-P] [-r] [-s SIZE] [-S STYLE] [-x EXCLUDE] [-y] [-V] [INPUT ...]
 
 A command-line tool that renders source code as a PDF.
 
@@ -37,7 +37,7 @@ positional arguments:
 optional arguments:
   -h, --help            show this help message and exit
   -b, --browser         render as a browser would
-  -C, --no-color        disable syntax highlighting
+  -f, --force           overwrite existing files without prompting
   -i INCLUDE, --include INCLUDE
                         pattern to include
   -o OUTPUT, --output OUTPUT
@@ -45,6 +45,8 @@ optional arguments:
   -P, --no-path         omit paths in headers
   -r, --recursive       recurse into directories
   -s SIZE, --size SIZE  size of page, per https://developer.mozilla.org/en-US/docs/Web/CSS/@page/size
+  -S STYLE, --style STYLE
+                        style of syntax highlighting, per https://pygments.org/demo/#try
   -x EXCLUDE, --exclude EXCLUDE
                         pattern to exclude
   -y, --side-by-side    render inputs side by side
@@ -103,9 +105,27 @@ render50 -o foo.pdf -y bar.c baz.c
 
 To recurse into directories, invoke `render50` with `-r`.
 
-### Disable syntax highlighting
+### Override syntax highlighting
 
-To disable syntax highlighting, invoke `render50` with `-C`.
+By default, `render50` uses [Pygments](https://pygments.org/)'s `default` stylesheet to for syntax highlighting but also supports all of the styles demonstrated at <https://pygments.org/demo/#try>. You can specify a style with `-S` as follows:
+
+```
+render50 -o foo.pdf -S emacs foo.c
+```
+
+#### Disable color
+
+To disable color (e.g., for a black-and-white printer), you can use [Pygments](https://pygments.org/)'s `bw` style as follows:
+
+```
+render50 -o foo.pdf -S bw foo.c
+```
+
+However, that style might still boldface some keywords. You can further disable boldfacing (and color) as follows:
+
+```
+render50 -o foo.pdf --style= foo.c
+```
 
 ### Rendering URLs
 
