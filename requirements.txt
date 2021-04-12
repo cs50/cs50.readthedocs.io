@@ -1,8 +1,8 @@
 recommonmark==0.6.0
-sphinx==3.0.4
+sphinx==3.5.4
 sphinx-autobuild==0.7.1
 sphinx-markdown-tables==0.0.14
 sphinx-tabs==1.1.13
-sphinx_rtd_theme==0.4.3
+sphinx_rtd_theme==0.5.2
 sphinxcontrib-httpdomain==1.7.0
 sphinxext-opengraph==0.3.1
