@@ -1,3 +1,4 @@
+docutils==0.17
 recommonmark==0.6.0
 sphinx==3.5.4
 sphinx-autobuild==0.7.1
