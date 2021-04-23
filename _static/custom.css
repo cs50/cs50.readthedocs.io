@@ -130,6 +130,13 @@ a.fa.fa-github {
     display: inline-block;
     vertical-align: middle;
 }
+.rst-content .section ul.fa-ul li > :first-child {
+    margin-top: 0;
+}
+.rst-content .section ul.fa-ul li > * {
+    margin-bottom: 0;
+    margin-top: 0;
+}
 
 /* Separate checkboxes vertically */
 .rst-content .section ul.fa-ul li {
