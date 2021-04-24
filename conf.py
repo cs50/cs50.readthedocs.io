@@ -11,9 +11,9 @@ extensions = [
 ]
 
 html_css_files = [
-        "https://cs50.readthedocs.io/_static/custom.css?" + str(round(time.time())),
+        "/_static/custom.css?" + str(round(time.time())),
     "https://use.fontawesome.com/releases/v5.13.0/css/all.css"]
-html_js_files = ["https://cs50.readthedocs.io/_static/custom.js?" + str(round(time.time()))]
+html_js_files = ["/_static/custom.js?" + str(round(time.time()))]
 html_static_path = ["_static"]
 html_theme = "sphinx_rtd_theme"
 html_theme_options = {

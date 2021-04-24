@@ -3,6 +3,9 @@ SOURCEDIR = .
 SPHINXBUILD = sphinx-build
 SPHINXOPTS =
 
+.PHONY: all
+all: depends dirhtml serve
+
 .PHONY: depends
 depends:
 	pip install -r requirements.txt
