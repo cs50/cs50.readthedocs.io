@@ -3,13 +3,17 @@ SOURCEDIR = .
 SPHINXBUILD = sphinx-build
 SPHINXOPTS =
 
+.PHONY: depends
+depends:
+	pip install -r requirements.txt
+
 .PHONY: help
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
-.PHONY: depends
-depends:
-	pip install -r requirements.txt
+.PHONY: serve
+serve:
+	http-server -i 0 _build/dirhtml/
 
 .PHONY: Makefile
 %: Makefile
