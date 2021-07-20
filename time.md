@@ -95,9 +95,9 @@ Among the formats recognized by CS50 Time Converter's landing page is
 Dec 31, 1969 12:00 AM Eastern Time (US and Canada)
 ```
 
-which is the format used in Zoom's registration emails, which means you can even link to CS50 Time Converter in those by editing the template for your **Registrants Confirmation Email** at <https://zoom.us/account/branding#/emails> to include HTML like the below:
+which is the format used in Zoom's registration emails, which means you can even link to CS50 Time Converter in those by editing the template for your **Registrants Confirmation Email** at <https://zoom.us/account/branding#/emails> to include something like the below:
 
-```html
+```text
 <#if meetingTime??>
 ${meetingTime}
 <a href="https://time.cs50.io/?start=${meetingTime}">convert to your own time zone</a>
