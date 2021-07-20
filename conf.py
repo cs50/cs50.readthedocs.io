@@ -3,7 +3,7 @@ import time
 exclude_patterns = ["README.md"]
 
 extensions = [
-    "recommonmark",
+    "myst_parser",
     "sphinx_markdown_tables",
     "sphinx_tabs.tabs",
     "sphinxcontrib.httpdomain",
