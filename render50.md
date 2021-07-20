@@ -77,7 +77,7 @@ The source files will be rendered in the order in which they're specified on the
 
 To generate a PDF (e.g., `foo.pdf`) from multiple source files, including only those that match some pattern (e.g., `*.c`), execute:
 
-```
+```text
 render50 -i "*.c" -o foo.pdf *
 ```
 
@@ -87,7 +87,7 @@ Take care to quote (or escape with `\`) any patterns with wildcards, lest your s
 
 To generate a PDF (e.g., `foo.pdf`) from multiple source files, excluding those that match some pattern (e.g., `*.h`), execute:
 
-```
+```text
 render50 -x "*.h" -o foo.pdf *
 ```
 
