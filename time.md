@@ -31,6 +31,8 @@ CS50 Time Converter's landing page supports inputs [in over 200 language locales
 - Thu, 01 Jan 1970 00:00:00 +0000
 - Thu, 01 Jan 1970 00:00:00 GMT
 
+* Dec 31, 1969 12:00 AM Eastern Time (US and Canada) 
+
 ## API
 
 ### Paths
@@ -84,3 +86,20 @@ CS50 Time Converter also supports URLs of the forms
 * `https://time.cs50.io/?start=START&end=END&zone=ZONE`
 
 where `START` and `END` are in any of the [formats](#formats) supported by CS50 Time Converter's landing page, and `ZONE` is any of the time zones supported by the same. Each of `START` and `END` will be assumed to be in `ZONE` unless a time zone or offset is specified in `START` or `END` itself. Values of `START` and `END` without a specified time zone or offset are assumed to be in America/New_York if no `ZONE` is provided.
+
+#### Zoom
+
+Among the formats recognized by CS50 Time Converter's landing page is
+
+```text
+Dec 31, 1969 12:00 AM Eastern Time (US and Canada)
+```
+
+which is the format used in Zoom's registration emails, which means you can even link to CS50 Time Converter in those by editing the template for your **Registrants Confirmation Email** at <https://zoom.us/account/branding#/emails> to include HTML like the below:
+
+```html
+<#if meetingTime??>
+${meetingTime}
+<a href="https://time.cs50.io/?start=${meetingTime}">convert to your own time zone</a>
+</#if>
+```
