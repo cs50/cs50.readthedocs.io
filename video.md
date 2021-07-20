@@ -11,7 +11,7 @@ Whenever the player is paused, the browser's URL bar is updated with the timecod
 
 CS50 Video Player supports URLs of the form
 
-```
+```text
 https://video.cs50.io/:id
 ```
 
@@ -31,13 +31,13 @@ For example, <https://video.cs50.io/5azaK2cBKGw?screen=byyRAKSo_dM&start=438>.
 
 CS50 Video Player can be embedded in other sites using an `iframe`. For example:
 
-```
+```html
 <iframe src="https://video.cs50.io/5azaK2cBKGw?screen=byyRAKSo_dM&start=438"></iframe>
 ```
 
 To avoid [letterboxing](https://en.wikipedia.org/wiki/Letterboxing_(filming)) and [pillarboxing](https://en.wikipedia.org/wiki/Pillarbox), CS50 Video Player supports [iFrame Resizer](https://davidjbradshaw.github.io/iframe-resizer/), whereby you can set the player's width yourself, as with CSS, and then use code like the below in order to set the player's height dynamically:
 
-```
+```html
 <script src="https://cdn.jsdelivr.net/npm/iframe-resizer/js/iframeResizer.min.js"></script>
 <script>
     document.querySelectorAll('iframe[src^="https://video.cs50.io/"]').forEach(function(element) {
@@ -56,7 +56,7 @@ If an instructional video has (English) captions, they will be automatically imp
 
 If an instructional video has a table of contents in its description, it will be automatically imported as chapters from YouTube. A table of contents is defined as two or more lines in a video's description formatted as
 
-```
+```text
 00:00 - Chapter
 MM:SS - Chapter
 MM:SS - Chapter
@@ -65,7 +65,7 @@ MM:SS - Chapter
 
 or
 
-```
+```text
 00:00:00 - Chapter
 HH:MM:SS - Chapter
 HH:MM:SS - Chapter

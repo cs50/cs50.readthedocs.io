@@ -32,13 +32,13 @@ A request can be submitted via HTML with:
 
 A request (with files like `hello.c` and `hello.py`) can be submitted via cURL with:
 
-```
+```text
 curl -F "file=@hello.c" -F "file=@hello.py" -o output.pdf https://render.cs50.io/
 ```
 
 Or, in side-by-side mode, with:
 
-```
+```text
 curl -F "file=@hello.c" -F "file=@hello.py" -F "y=" -o output.pdf https://render.cs50.io/
 ```
 

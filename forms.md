@@ -7,7 +7,7 @@ CS50 Forms is a web app at [forms.cs50.io](https://forms.cs50.io/) that allows y
 
 Upon authenticating, a respondent will be redirected to a "[pre-filled link](https://support.google.com/docs/answer/2839588?hl=en)" like
 
-```
+```text
 https://docs.google.com/forms/d/e/1FAIpQLSeaFUWMKeKJo5225POeCeJXHktJecyStal_sn6nYEb0rOEgYw/viewform?entry.1142694446=username%40example.com&entry.164044587=Full+Name
 ```
 

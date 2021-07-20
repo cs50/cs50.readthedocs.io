@@ -4,7 +4,7 @@
 
 For instance, consider the code below, wherein the call to `printf` isn't properly indented.
 
-```
+```text
 #include <stdio.h>
 
 int main(void)
@@ -25,7 +25,7 @@ wherein highlighted are four spaces that should be added for style's sake.
 
 On the other hand, consider the code below, wherein the curly braces are unnecessarily indented.
 
-```
+```text
 #include <stdio.h>
 
 int main(void)
@@ -48,7 +48,7 @@ wherein highlighted are four spaces that should be deleted for style's sake.
 
 To check your code's style, execute
 
-```
+```text
 style50 file
 ```
 
@@ -60,7 +60,7 @@ By default, `style50` operates in [`character`](#character) mode, but you can sp
 
 Consider the (poorly styled) file below, `hello.c`, for a look at these modes.
 
-```
+```text
 #include <stdio.h>
 
 int main(void)
@@ -73,19 +73,19 @@ printf("hello, world\n");
 
 In `character` mode, `style50` compares its input against CS50's style guide character by character. Were you to run
 
-```
+```text
 style50 --output character hello.c
 ```
 
 or just
 
-```
+```text
 style50 -o character hello.c
 ```
 
 or even just
 
-```
+```text
 style50 hello.c
 ```
 
@@ -102,13 +102,13 @@ you would see the below.
 
 In `split` mode, `style50` displays its input and output side by side. Were you to run
 
-```
+```text
 style50 --output split hello.c
 ```
 
 or just
 
-```
+```text
 style50 -o split hello.c
 ```
 
@@ -124,13 +124,13 @@ printf("hello, world\n");        <span style="background-color: #00cc00">    </s
 
 In `unified` mode, `style50` displays its output line by line, akin to [`git-diff`](https://git-scm.com/docs/git-diff). Were you to run
 
-```
+```text
 style50 --output unified hello.c
 ```
 
 or just
 
-```
+```text
 style50 -o unified hello.c
 ```
 
@@ -161,7 +161,7 @@ To install `style50` within that command-line environment:
 
 1. Install `pip`, as via
 
-   ```
+   ```text
    sudo easy_install pip
    ```
 
@@ -169,14 +169,14 @@ To install `style50` within that command-line environment:
 
 1. Execute
 
-   ```
+   ```text
    sudo pip3 install style50
    ```
    to install `style50` itself.
 
 1. Install [Artistic Style 3.0](http://astyle.sourceforge.net/). If running a Debian-based operating system (e.g., Ubuntu Linux), simply run
 
-   ```
+   ```text
    add-apt-repository ppa:cs50/ppa
    apt-get update
    apt-get install astyle
@@ -188,7 +188,7 @@ To install `style50` within that command-line environment:
 
 Execute
 
-```
+```text
 sudo pip install --upgrade style50
 ```
 

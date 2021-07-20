@@ -9,19 +9,19 @@ When you run `submit50`, your files are "pushed" (i.e., uploaded) to CS50's "org
 1. Install [Python 3.6](/python) or later, if you haven't already.
 1. Install [`pip`](/pip), if you haven't already.
 1. Install `submit50` itself:
-    ```
+    ```text
     pip3 install submit50
     ```
 
 ### Upgrading
 
-```
+```text
 pip3 install --upgrade submit50
 ```
 
 ## Usage
 
-```
+```text
 usage: submit50 [-h] [--logout] [-v] [-V] slug
 
 positional arguments:
@@ -40,7 +40,7 @@ optional arguments:
 
 To submit work with `submit50`, `cd` to the work's directory and execute
 
-```
+```text
 submit50 slug
 ```
 
@@ -53,12 +53,12 @@ By default, `submit50` pushes your work to GitHub via HTTPS, which requires your
 1. [Generate an SSH key and add it to `ssh-agent`](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/).
 1. [Add the SSH key to your GitHub account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/).
 1. Execute 
-   ```
+   ```text
    ssh -T -p443 git@ssh.github.com
    ```
    to add `ssh.github.com` to the list of known hosts for `ssh`, answering "yes" if prompted whether you're sure you want to continue connecting. If all goes well, you should see the message
 
-    ```
+    ```text
     Hi <USERNAME>! You've successfully authenticated, but GitHub does not provide shell access.
     Connection to github.com closed.
     ```
@@ -77,11 +77,13 @@ Note again that the branch should not be `master`, `main`, or the like, and inst
 ## Implementation Details
 
 To see how `submit50` uses `git` underneath the hood, execute
-```
+
+```text
 submit50 -v slug
 ```
 or
-```
+
+```text
 submit50 --verbose slug
 ```
 where `slug` is the unique identifier for the work you're submitting.

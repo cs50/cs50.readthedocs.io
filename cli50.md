@@ -8,20 +8,20 @@
 1. Install [Python 3.6](/python) or later, if you haven't already.
 1. Install [`pip`](/pip), if you haven't already.
 1. Install `cli50` itself:
-    ```
+    ```text
     pip3 install cli50
     ```
 
 ### Upgrading
 
-```
+```text
 pip install --upgrade cli50
 ```
 
 ## Usage
 
-```
-usage: __main__.py [-h] [-d DOTFILE] [-f] [-j] [-l [CONTAINER]] [-S] [-t TAG] [-u] [-V] [DIRECTORY]
+```text
+usage: cli50 [-h] [-d DOTFILE] [-f] [-j] [-l [CONTAINER]] [-S] [-t TAG] [-u] [-V] [DIRECTORY]
 
 positional arguments:
   DIRECTORY             directory to mount, else $PWD
@@ -44,7 +44,7 @@ optional arguments:
 
 ### Mount current working directory
 
-```
+```text
 cli50
 ```
 
@@ -54,7 +54,7 @@ Your current working directory will be mounted in `/mnt` within the container.
 
 Assuming `path/to/directory` is that directory's absolute path, you can mount it within the container as follows:
 
-```
+```text
 cli50 path/to/directory
 ```
 
@@ -64,19 +64,19 @@ The directory will be mounted in `/mnt` within the container.
 
 You can additionally mount a dotfile (or any other file or directory) read-only in `$HOME` within the container as follows:
 
-```
+```text
 cli50 ~/.file
 ```
 
 For instance, it might be useful to mount one's own `.bashrc`:
 
-```
+```text
 cli50 -d ~/.bashrc
 ```
 
 Or one's `.ssh` directory, so that you can use your own SSH keys within the container:
 
-```
+```text
 cli50 -d ~/.ssh
 ```
 
@@ -84,7 +84,7 @@ cli50 -d ~/.ssh
 
 By default, `cli50` autoupdates (i.e., pulls) `cs50/cli`, the Docker image on which it's based, which can be time-consuming on slow internet connections. You can skip autoupdate as follows:
 
-```
+```text
 cli50 -f
 ```
 
@@ -92,7 +92,7 @@ cli50 -f
 
 You can update (i.e., pull) `cs50/cli`, the Docker image on which `cli50` is based, without actually starting a container as follows:
 
-```
+```text
 cli50 -u
 ```
 
@@ -100,7 +100,7 @@ cli50 -u
 
 If a container (based on any Docker image, [`cs50/cli`](cs50/cli) or otherwise) is already running, you can spawn a login shell within it as follows:
 
-```
+```text
 cli50 -l
 ```
 
@@ -110,13 +110,13 @@ If multiple containers are running, you'll be asked, yes or no, in reverse-chron
 
 You can mount, read-only, a dotfile that's in your `$HOME` (e.g., `~/.vimrc`) inside of a container's `$HOME` as follows:
 
-```
+```text
 cli50 -d .vimrc
 ```
 
 Directories (e.g., `~/.vim`) are supported as well:
 
-```
+```text
 cli50 -d .vim
 ```
 
@@ -124,13 +124,13 @@ cli50 -d .vim
 
 When developing a Jekyll site, you can serve (and continually rebuild) it within a container as follows:
 
-```
+```text
 cli50 -j
 ```
 
 The site will be served at `http://0.0.0.0:8080/` within the container, but port 8080 will be published on pseudorandom port on the host (i.e., your computer). If `cli50` outputs, e.g.,
 
-```
+```text
 0.0.0.0:#####->8080/tcp, ...
 ```
 

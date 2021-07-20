@@ -30,7 +30,7 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://cs50.ha
 
 1. Push your code to GitHub.
 
-    ```
+    ```text
     git add -A
     git commit -m "first commit"
     git push -u origin master
@@ -99,7 +99,7 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://cs50.ha
 
 1. Add that file to your repository and push it to GitHub.
 
-    ```
+    ```text
     git add -A
     git commit -m "added Procfile"
     git push

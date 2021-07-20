@@ -42,7 +42,7 @@ You can then (assuming no mistakes!) visit `https://lab.cs50.io/:owner/:repo/:br
 
 To define a lab, it suffices to create a file called `.cs50.yml` in the root (or subdirectory) of a branch in a repository that contains, minimally, a top-level `lab50` key, the value of which is `true`:
 
-```
+```text
 lab50: true
 ```
 
@@ -50,7 +50,7 @@ lab50: true
 
 It turns out [the above](#cs50-yaml) is an abbreviation of (and equivalent to)
 
-```
+```text
 lab50:
   window:
     - editor
@@ -79,7 +79,7 @@ It's worth noting that a lab without `readme` is functionally similar to [CS50 S
 
 To install files in students' environments (e.g., `foo.c` and `foo.h`), add a key below `lab50` called `files` (as a sibling of `window`, if explicitly present):
 
-```
+```text
 lab50:
   files:
     - !include foo.c
@@ -92,7 +92,7 @@ If those files exist (in the same directory as `.cs50.yml`), they will be copied
 
 Files (e.g., `bar.c` and `bar.h`) can also be in subdirectories (of whatever directory `.cs50.yml` is in):
 
-```
+```text
 lab50:
   files:
     - !include foo/bar.c
@@ -101,7 +101,7 @@ lab50:
 
 Alternatively, you can specify subdirectories:
 
-```
+```text
 lab50:
   files:
     - !include foo/
@@ -109,7 +109,7 @@ lab50:
 
 Globbing is also supported, but asterisks have special meaning in YAML, so take care to quote any strings that have wildcards:
 
-```
+```text
 lab50:
   files:
     - !include "foo/*.c"
@@ -118,7 +118,7 @@ lab50:
 
 You can also exclude files, as with:
 
-```
+```text
 lab50:
   files:
     - !exclude "*"
@@ -131,14 +131,14 @@ The value of `files` is an ordered list, top to bottom, so the above means that 
 
 To specify a command to be run in the sandbox's terminal window (e.g., `python`), add a key below `lab50` called `cmd`:
 
-```
+```text
 lab50:
   cmd: python
 ```
 
 The (implicit) default is:
 
-```
+```text
 lab50:
   cmd: bash
 ```
@@ -156,13 +156,13 @@ Your Markdown can also contain [emoji](https://www.webfx.com/tools/emoji-cheat-s
 
 To paginate a lab's instructions, inserting a **Next** button and hiding, until clicked, everything below it, you can use this tag:
 
-```
+```text
 {% next %}
 ```
 
 You can override the button's label with a quoted string:
 
-```
+```text
 {% next "Step 2" %}
 ```
 
@@ -170,7 +170,7 @@ You can override the button's label with a quoted string:
 
 To provide students with a spoiler, code or information they should only by clicking a **Spoiler** button, you can use these tags:
 
-```
+```text
 {% spoiler %}
 The Answer to the Great Question... 
 Of Life, the Universe and Everything...
@@ -181,7 +181,7 @@ Forty-two.
 
 You can override the button's label with a quoted string. Accordingly, via
 
-```
+```text
 {% spoiler "Hint" %}
 You're really not going to like it.
 {% endspoiler %}
@@ -189,7 +189,7 @@ You're really not going to like it.
 
 could you provide students with a hint. And via 
 
-```
+```text
 {% spoiler "Solution" %}
 Forty-two.
 {% endspoiler %}
@@ -201,7 +201,7 @@ could you provide students with a solution.
 
 To embed a YouTube video (responsively) in a lab's instructions, you can use this tag, wherein the URL can be any URL of a video on [YouTube](https://www.youtube.com/):
 
-```
+```text
 {% video https://www.youtube.com/watch?v=oHg5SJYRHA0 %}
 ```
 

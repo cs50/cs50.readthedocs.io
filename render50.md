@@ -13,14 +13,14 @@ PDFs can be annotated (for free) with:
 1. Install [Python 3.6](/python) or later, if you haven't already.
 1. Install [`pip`](/pip), if you haven't already.
 1. Install `render50` itself:
-    ```
+    ```text
     pip3 install render50
     ```
 1. [Install WeasyPrint's dependencies](http://weasyprint.readthedocs.io/en/latest/install.html).
 
 ### Upgrading
 
-```
+```text
 pip install --upgrade render50
 ```
 
@@ -59,7 +59,7 @@ optional arguments:
 
 To generate a PDF (e.g., `foo.pdf`) from a source file (e.g., `bar.c`), execute:
 
-```
+```text
 render50 -o foo.pdf bar.c
 ```
 
@@ -67,7 +67,7 @@ render50 -o foo.pdf bar.c
 
 To generate a PDF (e.g., `foo.pdf`) from multiple source files (e.g., `bar.c` and `baz.c`), execute:
 
-```
+```text
 render50 -o foo.pdf bar.c baz.c
 ```
 
@@ -97,7 +97,7 @@ As before, take care to quote (or escape with `\`) any patterns with wildcards, 
 
 To generate a PDF (e.g., `foo.pdf`) with two source files (e.g., `bar.c` and `baz.c`) side by side, execute:
 
-```
+```text
 render50 -o foo.pdf -y bar.c baz.c
 ```
 
@@ -111,7 +111,7 @@ To recurse into directories, invoke `render50` with `-r`.
 
 By default, `render50` uses [Pygments](https://pygments.org/)'s `default` stylesheet to for syntax highlighting but also supports all of the styles demonstrated at <https://pygments.org/demo/#try>. You can specify a style with `-S` as follows:
 
-```
+```text
 render50 -o foo.pdf -S emacs foo.c
 ```
 
@@ -119,13 +119,13 @@ render50 -o foo.pdf -S emacs foo.c
 
 To disable color (e.g., for a black-and-white printer), you can use [Pygments](https://pygments.org/)'s `bw` style as follows:
 
-```
+```text
 render50 -o foo.pdf -S bw foo.c
 ```
 
 However, that style might still boldface some keywords. You can further disable boldfacing (and color) as follows:
 
-```
+```text
 render50 -o foo.pdf --style= foo.c
 ```
 
@@ -133,7 +133,7 @@ render50 -o foo.pdf --style= foo.c
 
 To generate a PDF (e.g., `foo.pdf`) with a source file at a URL (e.g., https://github.com/cs50/render50/blob/master/render50), execute:
 
-```
+```text
 render50 -o foo.pdf https://github.com/cs50/render50/blob/master/render50
 ```
 
