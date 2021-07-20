@@ -101,6 +101,8 @@ To generate a PDF (e.g., `foo.pdf`) with two source files (e.g., `bar.c` and `ba
 render50 -o foo.pdf -y bar.c baz.c
 ```
 
+To facilitate discussion thereof, the lefthand file's line numbers will be prefixed with `L` while the righthand file's line numbers will be prefixed with `R`.
+
 ### Render files recursively
 
 To recurse into directories, invoke `render50` with `-r`.
