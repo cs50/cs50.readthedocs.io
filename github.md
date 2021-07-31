@@ -7,6 +7,7 @@ But you can still use `check50` and `submit50`! You just need to log in a bit di
 ## SSH
 
 1. Open a terminal window (as in CS50 IDE).
+1. Execute `ssh -p443 -T git@ssh.github.com`. If asked whether you're "sure you want to continue connecting," input `yes`, then hit Enter.
 1. Execute `ssh-keygen`. When prompted to "save the key," just hit Enter, without typing anything.
 1. When prompted to enter a "passphrase," optionally input a passphrase (i.e., password) that you won't forget, then hit Enter, then input it again, then hit Enter again. For security's sake, you won't see what you type. You'll then see a "randomart image" that you can ignore.
 1. Execute `cat ~/.ssh/id_rsa.pub`. You'll then see your "public key," multiple lines of seemingly random text. Highlight and copy all of those lines, from `ssh-rsa` to the end. **But don't highlight your terminal window's prompts (which contain `$`) before or after those lines.**
