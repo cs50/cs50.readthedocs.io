@@ -18,6 +18,11 @@ But you can still use `check50` and `submit50`! You just need to log in a bit di
 
 You should now be able to use `check50` and `submit50` (and `git`) without GitHub username and password. But if you created a passphrase, you might still be prompted for that.
 
+### If you created a passphrase but forgot it
+
+1. Visit [https://github.com/settings/keys](https://github.com/settings/keys), click **Delete** next to your old SSH key, then click **I understand, please delete this SSH key**.
+1. Follow all of the same [SSH](#ssh) steps, above, again. When prompted to "overwrite" (your old key), input `y`, then hit Enter.
+
 ## Personal Access Token
 
 1. Visit [https://github.com/settings/tokens](https://github.com/settings/tokens), logging in with your GitHub username and password as usual.
@@ -30,3 +35,8 @@ You should now be able to use `check50` and `submit50` (and `git`) without GitHu
 1. Paste that personal access token somewhere safe (e.g., in a password manager).
 
 You should now be able to use `check50` and `submit50` (and `git`) without GitHub username and password. When prompted to log in, use your GitHub username and that personal access token instead of your password.
+
+### If you created a personal access token but forgot it (or it expired)
+
+1. Visit [https://github.com/settings/tokens](https://github.com/settings/tokens), click **Delete** next to your old personal access token, then click **I understand, delete this token**.
+1. Follow all of the same [Personal Access Token](#personal-access-token) steps, above, again.
