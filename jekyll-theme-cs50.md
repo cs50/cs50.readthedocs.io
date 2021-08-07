@@ -1,6 +1,31 @@
 # CS50 Theme
 
-## `alert`
+## Configuration
+
+### `Gemfile`
+
+```text
+source "https://rubygems.org/"
+
+gem "jekyll-theme-cs50", group: :jekyll_plugins, git: "https://github.com/cs50/jekyll-theme-cs50", branch: "develop"
+```
+
+### `_config.yml`
+
+CS50's theme 
+
+```text
+cs50:
+  alert: 
+  assign:
+    college: true
+  description: 
+  title: 
+```
+
+## Plugins
+
+### `alert`
 
 An `alert` block can be used to render an [alert](https://getbootstrap.com/docs/5.1/components/alerts/). The block expects one argument, the type of alert to render, which can be any of:
 
@@ -15,7 +40,7 @@ An `alert` block can be used to render an [alert](https://getbootstrap.com/docs/
 
 The content of the block can be HTML, Markdown, or text.
 
-### Fixed top
+#### Fixed top
 
 To position an alert at the top of every page in a site (so as to catch users' attention), configure `_config.yml` with YAML like
 
@@ -35,7 +60,7 @@ cs50:
 
 instead. A user's `localStorage` will be used to remember which alerts the user has dismissed.
 
-## `local`
+### `local`
 
 A `local` tag can be used to render a date and time in the user's own time zone, based on their computer's clock. The block expects one argument, a quoted date and time in `YYYY-MM-DD HH:MM` format, which is assumed to be in the time zone specified by `site.cs50.tz`, the value of which is a [TZ database name](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones), the default value of which is `America/New_York`.
 
@@ -54,7 +79,7 @@ cs50:
   tz: America/Los_Angeles
 ```
 
-## `spoiler`
+### `spoiler`
 
 A `spoiler` block can be used to present a spoiler (e.g., a hint) on which a user must click in order to see more. The block expects one argument, a string on which the user can click; the content of the block can be HTML, Markdown, or text that the user will then see.
 
