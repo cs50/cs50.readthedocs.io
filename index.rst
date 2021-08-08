@@ -54,7 +54,7 @@
    :hidden:
    :maxdepth: 1
 
-   Jekyll <jekyll>
+   Jekyll <themes/jekyll>
 
 .. toctree::
    :caption: Third-Party Software

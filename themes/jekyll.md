@@ -148,6 +148,10 @@ The value of `tz` is used by CS50's [`local`](#local) tag.
 
 ## Plugins
 
+### `after
+
+TODO
+
 ### `alert`
 
 An `alert` block can be used to render an [alert](https://getbootstrap.com/docs/5.1/components/alerts/). The block expects one argument, the type of alert to render, which can be any of:
@@ -162,6 +166,14 @@ An `alert` block can be used to render an [alert](https://getbootstrap.com/docs/
 * `dark`
 
 The content of the block can be HTML, Markdown, or text.
+
+### `before`
+
+TODO
+
+### `calendar`
+
+TODO
 
 ### `local`
 
@@ -182,6 +194,10 @@ cs50:
   tz: America/Los_Angeles
 ```
 
+### `next`
+
+TODO
+
 ### `spoiler`
 
 A `spoiler` block can be used to present a spoiler (e.g., a hint) on which a user must click in order to see more. The block expects one argument, a string on which the user can click; the content of the block can be HTML, Markdown, or text that the user will then see.
@@ -195,3 +211,7 @@ For instance,
 ```
 
 would be rendered in such a way that a user has to click "Hint" in order to see "42".
+
+### `video`
+
+TODO
