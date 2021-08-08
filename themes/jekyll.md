@@ -329,3 +329,7 @@ So that pages can have not only titles but subtitles, CS50's interprets a `##` t
 ```
 
 would be rendered in such a way that "Subtitle" is clearly a subtitle.
+
+## Acknowledgements
+
+CS50's theme is inspired by [Hyde](https://github.com/poole/hyde).
