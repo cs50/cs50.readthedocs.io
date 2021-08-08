@@ -148,7 +148,7 @@ The value of `tz` is used by CS50's [`local`](#local) tag.
 
 ## Plugins
 
-### `after
+### `after`
 
 TODO
 
