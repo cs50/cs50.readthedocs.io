@@ -1,8 +1,6 @@
 # Jekyll
 
-## Configuration
-
-### `Gemfile`
+[Jekyll](https://jekyllrb.com/) is a static site generator for which CS50 has its own [theme](https://jekyllrb.com/docs/themes/), which comes with a number of [configuration options](#configuration-options), [plugins](#plugins), and even some custom [syntax](#syntax).
 
 To use CS50's theme, it suffices to configure your `Gemfile` as follows:
 
@@ -12,7 +10,7 @@ source "https://rubygems.org/"
 gem "jekyll-theme-cs50", group: :jekyll_plugins, git: "https://github.com/cs50/jekyll-theme-cs50", branch: "develop"
 ```
 
-### `_config.yml`
+## Configuration Options
 
 CS50's theme can be configured via a `cs50` key in `_config.yml` (or another YAML file), the value of which is an object with any of the following keys.
 
@@ -25,7 +23,7 @@ TOD: DEFAULTS, OVERRIDES, PLUGINS
 * [`title`](#alert)
 * [`tz`](#alert)
 
-#### `alert`
+### alert
 
 To position an alert at the top of every page in a site (so as to catch users' attention), use an `alert` key like
 
@@ -45,7 +43,7 @@ cs50:
 
 instead. A user's `localStorage` will be used to remember which alerts the user has dismissed.
 
-#### `assign`
+### assign
 
 To define a global variable (e.g., `foo`) with some value (e.g., `bar`), user an `assign` key like:
 
@@ -107,7 +105,7 @@ and:
 bundle exec jekyll build --config _config.yml,_extension.yml --destination _site/extension/
 ```
 
-#### `description`
+### `description`
 
 To define the site's description, use a `description` key like:
 
@@ -118,7 +116,7 @@ cs50:
 
 The value of `description` will then be used as the site's `og:description` value.
 
-#### `locale`
+### `locale`
 
 To define the site's locale (e.g., French), use a `locale` key like:
 
@@ -129,7 +127,7 @@ cs50:
 
 wherein the value of `locale` is a [language subtag](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry). By default, the value of `locale` is assumed to be `en`.
 
-#### `title`
+### `title`
 
 To define the site's title, use a `title` key like:
 
@@ -140,7 +138,7 @@ cs50:
 
 The value of `title` will then be used in the site's `title` tags and `og:title` values, prefixed with each page's own title.
 
-#### `tz`
+### `tz`
 
 To define the site's time zone (e.g., Pacific Time), use a `tz` key like
 
@@ -231,3 +229,11 @@ would be rendered in such a way that a user has to click "Hint" in order to see 
 ### `video`
 
 TODO
+
+## Syntax
+
+### Links
+
+### Lists
+
+### Subtitle
