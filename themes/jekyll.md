@@ -10,18 +10,22 @@ source "https://rubygems.org/"
 gem "jekyll-theme-cs50", group: :jekyll_plugins, git: "https://github.com/cs50/jekyll-theme-cs50", branch: "develop"
 ```
 
+CS50's theme automatically enables some third-party plugins as well, per `PLUGINS` in [https://github.com/cs50/jekyll-theme-cs50/blob/develop/lib/jekyll-theme-cs50/constants.rb](https://github.com/cs50/jekyll-theme-cs50/blob/develop/lib/jekyll-theme-cs50/constants.rb). You can enable other plugins in the `Gemfile` itself.
+
 ## Configuration Options
 
-CS50's theme can be configured via a `cs50` key in `_config.yml` (or another YAML file), the value of which is an object with any of the following keys.
+CS50's theme can be configured via a `cs50` key in `_config.yml` (or another YAML file), the value of which is an object with these keys:
 
-TOD: DEFAULTS, OVERRIDES, PLUGINS
+* [alert](#alert)
+* [assign](#alert)
+* [description](#alert)
+* [locale](#alert)
+* [title](#alert)
+* [tz](#alert)
 
-* [`alert`](#alert)
-* [`assign`](#alert)
-* [`description`](#alert)
-* [`locale`](#alert)
-* [`title`](#alert)
-* [`tz`](#alert)
+Some of those keys have default values, as do other top-level keys, per `DEFAULTS` in [https://github.com/cs50/jekyll-theme-cs50/blob/develop/lib/jekyll-theme-cs50/constants.rb](https://github.com/cs50/jekyll-theme-cs50/blob/develop/lib/jekyll-theme-cs50/constants.rb).
+
+And some top-level keys have fixed values that cannot be changed in `_config.yml` (or another YAML file), per `OVERRIDES` in [https://github.com/cs50/jekyll-theme-cs50/blob/develop/lib/jekyll-theme-cs50/constants.rb](https://github.com/cs50/jekyll-theme-cs50/blob/develop/lib/jekyll-theme-cs50/constants.rb).
 
 ### alert
 
@@ -105,7 +109,7 @@ and:
 bundle exec jekyll build --config _config.yml,_extension.yml --destination _site/extension/
 ```
 
-### `description`
+### description
 
 To define the site's description, use a `description` key like:
 
@@ -116,7 +120,7 @@ cs50:
 
 The value of `description` will then be used as the site's `og:description` value.
 
-### `locale`
+### locale
 
 To define the site's locale (e.g., French), use a `locale` key like:
 
@@ -127,7 +131,7 @@ cs50:
 
 wherein the value of `locale` is a [language subtag](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry). By default, the value of `locale` is assumed to be `en`.
 
-### `title`
+### title
 
 To define the site's title, use a `title` key like:
 
@@ -138,7 +142,7 @@ cs50:
 
 The value of `title` will then be used in the site's `title` tags and `og:title` values, prefixed with each page's own title.
 
-### `tz`
+### tz
 
 To define the site's time zone (e.g., Pacific Time), use a `tz` key like
 
@@ -153,20 +157,31 @@ The value of `tz` is used by CS50's [`local`](#local) tag.
 
 ## Plugins
 
-* [`after`](#after)
-* [`alert`](#alert)
-* [`before`](#before)
-* [`calendar`](#calendar)
-* [`local`](#local)
-* [`next`](#next)
-* [`spoiler`](#spoiler)
-* [`video`](#video)
+* [after](#after)
+* [alert](#alert)
+* [before](#before)
+* [calendar](#calendar)
+* [local](#local)
+* [spoiler](#spoiler)
+* [video](#video)
 
-### `after`
+### after
 
-TODO
+An `after` block can be used to hide content until a specific date and time. The content of the block can be HTML, Markdown, or text.
 
-### `alert`
+For instance,
+
+```text
+{% after "2001-01-01 00:00:00" %}
+    It is the 21st century
+{% endafter %}
+```
+
+would not display "It is the 21st century" until it is the 21st century (in the site's time zone).
+
+Note that the content of the block is always present in the browser's DOM and is only hidden via CSS, so this block should not be used to hide sensitive content (e.g., a link to an otherwise accessible exam).
+
+### alert
 
 An `alert` block can be used to render an [alert](https://getbootstrap.com/docs/5.1/components/alerts/). The block expects one argument, the type of alert to render, which can be any of:
 
@@ -181,15 +196,33 @@ An `alert` block can be used to render an [alert](https://getbootstrap.com/docs/
 
 The content of the block can be HTML, Markdown, or text.
 
-### `before`
+### before
 
-TODO
+A `before` block can be used to show content until a specific date and time. The content of the block can be HTML, Markdown, or text.
 
-### `calendar`
+For instance,
 
-TODO
+```text
+{% after "2001-01-01 00:00:00" %}
+    It is the 20th century
+{% endafter %}
+```
 
-### `local`
+would display "It is the 20th century" until it is no longer the 20th century (in the site's time zone).
+
+Note that the content of the block is always present in the browser's DOM and is only hidden via CSS, so this block should not be used to hide sensitive content (e.g., a link to an otherwise accessible exam).
+
+### calendar
+
+A `calendar` tag can be used to embed a Google Calendar in "agenda" mode. The tag expects one argument, the "Calendar ID" (i.e., `src`) of a Google Calendar, which appears under "Integrate calendar" in [calendar settings](https://support.google.com/calendar/answer/41207). The calendar must be [public](https://support.google.com/calendar/answer/37083). For instance,
+
+```text
+{% calendar en.usa%23holiday@group.v.calendar.google.com %}
+```
+
+would embed the Google Calendar whose Calendar ID is `en.usa%23holiday@group.v.calendar.google.com`.
+
+### local
 
 A `local` tag can be used to render a date and time in the user's own time zone, based on their computer's clock. The block expects one argument, a quoted date and time in `YYYY-MM-DD HH:MM` format, which is assumed to be in the time zone specified by `site.cs50.tz`, the value of which is a [TZ database name](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones), the default value of which is `America/New_York`.
 
@@ -208,11 +241,7 @@ cs50:
   tz: America/Los_Angeles
 ```
 
-### `next`
-
-TODO
-
-### `spoiler`
+### spoiler
 
 A `spoiler` block can be used to present a spoiler (e.g., a hint) on which a user must click in order to see more. The block expects one argument, a string on which the user can click; the content of the block can be HTML, Markdown, or text that the user will then see.
 
@@ -226,14 +255,75 @@ For instance,
 
 would be rendered in such a way that a user has to click "Hint" in order to see "42".
 
-### `video`
+### video
 
-TODO
+A `video` tag can be used to embed a YouTube video. The tag expects one argument, the URL of the video to embed. For instance,
+
+```text
+{% video https://www.youtube.com/watch?v=xvFZjo5PgG0 %}
+```
+
+would embed [https://www.youtube.com/watch?v=xvFZjo5PgG0](https://www.youtube.com/watch?v=xvFZjo5PgG0). 
+
+The tag can also be used to embed the same video using [CS50 Video Player](/video/) instead. For instance,
+
+```text
+{% video https://video.cs50.io/xvFZjo5PgG0 %}
+```
+
+would embed [hhttps://video.cs50.io/xvFZjo5PgG0](https://video.cs50.io/xvFZjo5PgG0) instead.
 
 ## Syntax
 
+CS50's theme supports all of [Jekyll](https://jekyllrb.com/docs/)'s and [Kramdown](https://kramdown.gettalong.org/syntax.html)'s own syntax and also some of its own for:
+
+* [links](#links)
+* [lists](#lists)
+* [subtitles](#subtitles)
+
 ### Links
+
+So that Jekyll sites can be deployed to subdirectories on web servers, CS50's theme assumes that absolute paths like `/baz/` refers to a directory called `baz` in the base directory of the Jekyll site, not the web server itself. For instance, if a Jekyll site is deployed to `http://example.com/foo/bar/`, then a Markdown link like
+
+```text
+[baz](/baz/)
+```
+
+would ultimately link to `http://example.com/foo/bar/baz/` relatively, not to `http://example.com/baz/` absolutely.
+
+To link to a directory in the root of the web server itself, use Markdown like
+
+```text
+[baz](http://example.com/baz/)
+```
+
+instead.
 
 ### Lists
 
+Normally, (unordered) lists can be implemented in Markdown with any of `*`, `+`, and `-`, but CS50's theme treats those symbols as distinct:
+
+* a `*` will be rendered as a bullet as usual
+* a `+` will be rendered as a subtree that's collapsed by default
+* a `-` will be rendered as a subtree that's expanded by default
+
+For instance, Markdown like
+
+```text
+* foo
++ bar
+    * baz
+```
+
+would be appear initially has having two bullets, foo and bar, but if bar were clicked, a third bullet, baz, would appear.
+
 ### Subtitle
+
+So that pages can have not only titles but subtitles, CS50's interprets a `##` that immediately follows a `#` heading, with no content in between, as representing a subtitle. For instance, Markdown like
+
+```text
+# Title
+## Subtitle
+```
+
+would be rendered in such a way that "Subtitle" is clearly a subtitle.
