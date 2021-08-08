@@ -1,4 +1,4 @@
-# CS50 Theme
+# Jekyll
 
 ## Configuration
 

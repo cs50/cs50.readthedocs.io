@@ -32,13 +32,6 @@
    cs50/server
 
 .. toctree::
-   :caption: Jekyll
-   :hidden:
-   :maxdepth: 1
-
-   jekyll-theme-cs50
-
-.. toctree::
    :caption: Libraries
    :hidden:
    :maxdepth: 1
@@ -55,6 +48,13 @@
    :maxdepth: 1
 
    C <style/c>
+
+.. toctree::
+   :caption: Themes
+   :hidden:
+   :maxdepth: 1
+
+   Jekyll <jekyll>
 
 .. toctree::
    :caption: Third-Party Software
