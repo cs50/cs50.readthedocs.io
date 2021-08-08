@@ -1,6 +1,6 @@
 # Jekyll
 
-[Jekyll](https://jekyllrb.com/) is a static site generator for which CS50 has its own [theme](https://jekyllrb.com/docs/themes/), which comes with a number of [configuration options](#configuration-options), [plugins](#plugins), and even some custom [syntax](#syntax).
+[Jekyll](https://jekyllrb.com/) is a static site generator for which CS50 has its own [theme](https://jekyllrb.com/docs/themes/), which comes with its own [layout](#layout), [includes](#includes), [configuration options](#configuration-options), [plugins](#plugins), and custom [syntax](#syntax).
 
 To use CS50's theme, it suffices to configure your `Gemfile` as follows:
 
@@ -11,6 +11,97 @@ gem "jekyll-theme-cs50", group: :jekyll_plugins, git: "https://github.com/cs50/j
 ```
 
 CS50's theme automatically enables some third-party plugins as well, per `PLUGINS` in [https://github.com/cs50/jekyll-theme-cs50/blob/develop/lib/jekyll-theme-cs50/constants.rb](https://github.com/cs50/jekyll-theme-cs50/blob/develop/lib/jekyll-theme-cs50/constants.rb). You can enable other plugins in the `Gemfile` itself.
+
+## Layout
+
+On larger screens (e.g., laptops and desktops), CS50's theme lays out pages as follows, wherein `aside` represents the site's sidebar, `main` represent's a page's content, and `alert` represents an optional alert:
+
+```text
++------------------------+
+| alert                  |
++------------------------+
+|        |               |
+|        |               |
+| aside  | main          |
+|        |               |
+|        |               |
++------------------------+
+```
+
+Within each `aside` is a `header`, a `nav`, and a `footer`:
+
+```text
++------------------------+
+|                        |
++------------------------+
+| header |               |
+|        |               |
+| nav    |               |
+|        |               |
+| footer |               |
++------------------------+
+```
+
+On smaller screens (e.g., phones), the `aside` is collapsed and relocated up top:
+
+```text
++---------------+
+| alert         |
++---------------+
+| aside         |
++---------------+
+|               |
+|               |
+| main          |
+|               |
+|               |
++---------------+
+```
+
+When the `aside` is collapsed, only the site's `header` is visible:
+
+```text
++---------------+
+|               |
++---------------+
+| header        |
++---------------+
+|               |
+|               |
+|               |
+|               |
+|               |
++---------------+
+```
+
+But a button, when clicked, reveals the `nav` and `footer`:
+
+```text
++---------------+
+|               |
++---------------+
+| header        |
+|               |
+| nav           |
+|               |
+| footer        |
++---------------+
+|               |
+|               |
+|               |
+|               |
+|               |
++---------------+
+```
+
+## Includes
+
+CS50's layout automatically includes these files if they exist in `_includes`:
+
+* `alert.md`, the content of which will appear in a top-level [alert](#alert), if `site.cs50.alert` is configured
+* `header.md`, the content of which will appear at the top of the theme's `aside`
+* `nav.md`, the content of which will appear in the middle of the theme's `aside`
+* `footer.md`, the content of which will appear at the bottom of the theme's `aside`
 
 ## Configuration Options
 
