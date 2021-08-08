@@ -1,6 +1,6 @@
 # Jekyll
 
-[Jekyll](https://jekyllrb.com/) is a static site generator for which CS50 has its own [theme](https://jekyllrb.com/docs/themes/), which comes with its own [layout](#layout), [includes](#includes), [configuration options](#configuration-options), [plugins](#plugins), and custom [syntax](#syntax).
+[Jekyll](https://jekyllrb.com/) is a static site generator for which CS50 has its own [theme](https://jekyllrb.com/docs/themes/), which comes with its own [layout](#layout), [includes](#includes), [configuration options](#configuration-options), [plugins](#plugins), and custom [syntax](#syntax). It also supports custom CSS via [Sass](#sass).
 
 The theme uses [Bootstrap](https://getbootstrap.com/) as well as other third-party libraries.
 
@@ -422,6 +422,32 @@ So that pages can have not only titles but subtitles, CS50's interprets a `##` t
 ```
 
 would be rendered in such a way that "Subtitle" is clearly a subtitle.
+
+## CSS
+
+CS50's theme uses [Sass](https://sass-lang.com/), which means you can customize Bootstrap as well as CS50's own CSS by creating `assets/page.scss` with, at least, these lines, along with your own:
+
+```text
+---
+---
+
+@import "page";
+```
+
+For instance, to override the theme's crimson colors with shades of blue, you could use:
+
+```text
+---
+---
+
+$link-color: #286dc0;
+
+@import "page";
+
+aside {
+    background-color: #00356b;
+}
+```
 
 ## Acknowledgements
 
