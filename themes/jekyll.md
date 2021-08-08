@@ -224,7 +224,7 @@ would embed the Google Calendar whose Calendar ID is `en.usa%23holiday@group.v.c
 
 ### local
 
-A `local` tag can be used to render a date and time in the user's own time zone, based on their computer's clock. The block expects one argument, a quoted date and time in `YYYY-MM-DD HH:MM` format, which is assumed to be in the time zone specified by `site.cs50.tz`, the value of which is a [TZ database name](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones), the default value of which is `America/New_York`.
+A `local` tag can be used to render a date and time in the user's own time zone, based on their device's clock. The block expects one argument, a quoted date and time in `YYYY-MM-DD HH:MM` format, which is assumed to be in the time zone specified by `site.cs50.tz`, the value of which is a [TZ database name](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones), the default value of which is `America/New_York`.
 
 For instance, if the value of `site.cs50.tz` is `America/New_York` (by default or otherwise), then
 
@@ -271,7 +271,7 @@ The tag can also be used to embed the same video using [CS50 Video Player](/vide
 {% video https://video.cs50.io/xvFZjo5PgG0 %}
 ```
 
-would embed [hhttps://video.cs50.io/xvFZjo5PgG0](https://video.cs50.io/xvFZjo5PgG0) instead.
+would embed [https://video.cs50.io/xvFZjo5PgG0](https://video.cs50.io/xvFZjo5PgG0) instead.
 
 ## Syntax
 
