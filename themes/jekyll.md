@@ -423,7 +423,7 @@ So that pages can have not only titles but subtitles, CS50's interprets a `##` t
 
 would be rendered in such a way that "Subtitle" is clearly a subtitle.
 
-## CSS
+## Sass
 
 CS50's theme uses [Sass](https://sass-lang.com/), which means you can customize Bootstrap as well as CS50's own CSS by creating `assets/page.scss` with, at least, these lines, along with your own:
 
