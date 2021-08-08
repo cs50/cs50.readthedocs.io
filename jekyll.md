@@ -16,6 +16,8 @@ gem "jekyll-theme-cs50", group: :jekyll_plugins, git: "https://github.com/cs50/j
 
 CS50's theme can be configured via a `cs50` key in `_config.yml` (or another YAML file), the value of which is an object with any of the following keys.
 
+DEFAULTS, OVERRIDES, PLUGINS
+
 #### `alert`
 
 To position an alert at the top of every page in a site (so as to catch users' attention), use an `alert` key like
@@ -38,12 +40,12 @@ instead. A user's `localStorage` will be used to remember which alerts the user 
 
 #### `assign`
 
-To define a global variable (e.g., `foo`) with some value (e.g., `"bar"`), user an `assign` key like:
+To define a global variable (e.g., `foo`) with some value (e.g., `bar`), user an `assign` key like:
 
 ```text
 cs50:
   assign:
-    foo: "bar"
+    foo: bar
 ```
 
 You can then access that variable in pages with syntax like:
@@ -76,7 +78,7 @@ cs50:
     extension: true
 ```
 
-if another configuration file (e.g., `_extension.yml`) and then using conditional logic in pages like:
+in another configuration file (e.g., `_extension.yml`) and then using conditional logic in pages like:
 
 ```text
 {% if college %}
@@ -100,7 +102,49 @@ bundle exec jekyll build --config _config.yml,_extension.yml --destination _site
 
 #### `description`
 
+To define the site's description, use a `description` key like:
+
+```text
+cs50:
+  description: Introduction to Computer Science
+```
+
+The value of `description` will then be used as the site's `og:description` value.
+
+#### `locale`
+
+To define the site's locale (e.g., French), use a `locale` key like:
+
+```text
+cs50:
+  locale: fr
+```
+
+wherein the value of `locale` is a [language subtag](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry). By default, the value of `locale` is assumed to be `en`.
+
 #### `title`
+
+To define the site's title, use a `title` key like:
+
+```text
+cs50:
+  title: CS50
+```
+
+The value of `title` will then be used in the site's `title` tags and `og:title` values, prefixed with each page's own title.
+
+#### `tz`
+
+To define the site's time zone (e.g., Pacific Time), use a `tz` key like
+
+```text
+cs50:
+  tz: America/Los_Angeles
+```
+
+wherein the value is a [TZ database name](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). By default, the value of `tz` is assumed to be `America/New_York`.
+
+The value of `tz` is used by CS50's [`local`](#local) tag.
 
 ## Plugins
 
