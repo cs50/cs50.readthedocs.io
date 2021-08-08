@@ -311,11 +311,13 @@ For instance, Markdown like
 
 ```text
 * foo
-+ bar
-    * baz
+- bar
+    * qux
++ baz
+    * quux
 ```
 
-would be appear initially has having two bullets, foo and bar, but if bar were clicked, a third bullet, baz, would appear.
+would be appear initially has having three top-level bullets (foo, bar, and baz), with qux also visible, but if baz were clicked, quux would appear too.
 
 ### Subtitle
 
