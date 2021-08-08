@@ -16,7 +16,14 @@ gem "jekyll-theme-cs50", group: :jekyll_plugins, git: "https://github.com/cs50/j
 
 CS50's theme can be configured via a `cs50` key in `_config.yml` (or another YAML file), the value of which is an object with any of the following keys.
 
-DEFAULTS, OVERRIDES, PLUGINS
+TOD: DEFAULTS, OVERRIDES, PLUGINS
+
+* [`alert`](#alert)
+* [`assign`](#alert)
+* [`description`](#alert)
+* [`locale`](#alert)
+* [`title`](#alert)
+* [`tz`](#alert)
 
 #### `alert`
 
@@ -147,6 +154,15 @@ wherein the value is a [TZ database name](https://en.wikipedia.org/wiki/List_of_
 The value of `tz` is used by CS50's [`local`](#local) tag.
 
 ## Plugins
+
+* [`after`](#after)
+* [`alert`](#alert)
+* [`before`](#before)
+* [`calendar`](#calendar)
+* [`local`](#local)
+* [`next`](#next)
+* [`spoiler`](#spoiler)
+* [`video`](#video)
 
 ### `after`
 
