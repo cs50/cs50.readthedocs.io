@@ -24,8 +24,8 @@ You should now be able to use `check50` and `submit50` (and `git`) without GitHu
 
 ## Personal Access Token
 
-1. Visit [https://github.com/settings/security](https://github.com/settings/security) and enable two-factor authentication for your GitHub account. Enabling two-factor authentication is needed in order to use the personal access token in the command-line.
-1. Visit [https://github.com/settings/tokens](https://github.com/settings/tokens), logging in with your GitHub username and password as usual.
+1. Visit [https://github.com/settings/security](https://github.com/settings/security), logging in with your GitHub username and password as usual, and [configure two-factor authentication](https://docs.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication).
+1. Visit [https://github.com/settings/tokens](https://github.com/settings/tokens).
 1. Click **Generate new token**.
 1. Input a note under **Note** (e.g., `CS50 IDE` if using CS50 IDE).
 1. Select **No expiration** (or something shorter) via the drop-down menu under **Note**.
