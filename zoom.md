@@ -110,7 +110,7 @@ Check this box in Zoom so that you appear mirrored (to yourself only) so that yo
 <li>
 <span class="fa-li"><i class="fas fa-check-square"></i></span>
 <strong>
-Adjust for low light <select><option>Auto</option></select>
+Adjust for low light <select disabled><option>Auto</option></select>
 </strong>
 <p>
 Check this box in Zoom to improve your lighting.
