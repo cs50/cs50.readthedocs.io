@@ -62,6 +62,7 @@
    :maxdepth: 1
 
    docker
+   github
    heroku
    pip
    python
