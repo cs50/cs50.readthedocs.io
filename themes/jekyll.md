@@ -251,7 +251,7 @@ The value of `tz` is used by CS50's [`local`](#local) tag.
 ## Plugins
 
 * [after](#after)
-* [alert](#alert)
+* [alert](#plugins-alert)
 * [before](#before)
 * [calendar](#calendar)
 * [local](#local)
@@ -274,7 +274,7 @@ would not display "It is the 21st century" until it is the 21st century (in the 
 
 Note that the content of the block is always present in the browser's DOM and is only hidden via CSS, so this block should not be used to hide sensitive content (e.g., a link to an otherwise accessible exam).
 
-### alert
+### <plugins/>alert
 
 An `alert` block can be used to render an [alert](https://getbootstrap.com/docs/5.1/components/alerts/). The block expects one argument, the type of alert to render, which can be any of:
 
