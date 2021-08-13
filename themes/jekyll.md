@@ -110,11 +110,11 @@ CS50's layout automatically includes these files if they exist in `_includes`:
 CS50's theme can be configured via a `cs50` key in `_config.yml` (or another YAML file), the value of which is an object with these keys:
 
 * [alert](#alert)
-* [assign](#alert)
-* [description](#alert)
-* [locale](#alert)
-* [title](#alert)
-* [tz](#alert)
+* [assign](#assign)
+* [description](#description)
+* [locale](#locale)
+* [title](#title)
+* [tz](#tz)
 
 Some of those keys have default values, as do other top-level keys, per `DEFAULTS` in [https://github.com/cs50/jekyll-theme-cs50/blob/develop/lib/jekyll-theme-cs50/constants.rb](https://github.com/cs50/jekyll-theme-cs50/blob/develop/lib/jekyll-theme-cs50/constants.rb).
 
@@ -356,7 +356,7 @@ A `video` tag can be used to embed a YouTube video. The tag expects one argument
 {% video https://www.youtube.com/watch?v=xvFZjo5PgG0 %}
 ```
 
-would embed [https://www.youtube.com/watch?v=xvFZjo5PgG0](https://www.youtube.com/watch?v=xvFZjo5PgG0). 
+would embed [https://www.youtube.com/watch?v=xvFZjo5PgG0](https://www.youtube.com/watch?v=xvFZjo5PgG0).
 
 The tag can also be used to embed the same video using [CS50 Video Player](/video/) instead. For instance,
 
