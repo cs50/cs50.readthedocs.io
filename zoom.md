@@ -536,7 +536,7 @@ Check this box in Zoom, lest you accidentally leave class!
 <li>
 <span class="fa-li"><i class="fas fa-check-square"></i></span>
 <strong>
-Stop my video and audio when my display is off or screen saver begins
+Stop my video and audio when my device is locked
 </strong>
 <p>
 Check this box in Zoom for privacy's sake, lest you continue live-streaming during a break.
