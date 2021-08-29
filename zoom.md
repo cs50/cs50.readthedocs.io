@@ -823,6 +823,14 @@ Disable this setting for privacy's sake, so that your camera stays off until you
 </li>
 
 <li>
+<strong>Participants video</strong>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
+<p>
+Enable this to start meetings with participant video on. Participants can change this during the meeting.
+</p>
+</li>
+
+<li>
 <strong>Audio Type</strong>
 <p>
 <i class="fas fa-dot-circle"></i>
@@ -834,7 +842,7 @@ Enable this setting so that participants can resort to their phones if having mi
 </li>
 
 <li>
-<strong>Join before host</strong>
+<strong>Allow participants to join before host</strong>
 <span class="fa-li"><i class="fas fa-toggle-on"></i></span>
 <p>
 Enable this setting so that participants can join the waiting room right away.
@@ -880,7 +888,7 @@ Enable this setting so that you can promote others (e.g., teaching assistants) t
 </li>
 
 <li>
-<strong>Meeting Polls</strong>
+<strong>Meeting Polls/Quizzes</strong>
 <span class="fa-li"><i class="fas fa-toggle-on"></i></span>
 <p>
 Enable this setting so that you can poll the class.
