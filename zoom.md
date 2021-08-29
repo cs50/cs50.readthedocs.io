@@ -88,6 +88,16 @@ Check this box in Zoom for privacy's sake, lest you continue live-streaming duri
 <ul class="fa-ul">
 
 <li>
+<span class="fa-li"><i class="far fa-square"></i></span>
+<strong>
+Original ratio
+</strong>
+<p>
+Uncheck this box in Zoom to ensure your video is widescreen.
+</p>
+</li>
+
+<li>
 <span class="fa-li"><i class="fas fa-check-square"></i></span>
 <strong>
 HD
