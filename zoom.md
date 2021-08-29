@@ -352,7 +352,7 @@ Check this box in Zoom so that you always see names.
 <li>
 <span class="fa-li"><i class="fas fa-check-square"></i></span>
 <strong>
-Turn off my video when joining a meeting
+Stop my video when joining a meeting
 </strong>
 <p>
 Check this box in Zoom for privacy's sake, so that your camera stays off until you're ready to turn it on.
