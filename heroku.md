@@ -92,7 +92,7 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://cs50.ha
 1. Create a new file in CS50 IDE called `Procfile` in `finance/` whose contents are:
 
     ```
-    web: gunicorn application:app
+    web: gunicorn application:app --preload
     ```
 
    That file will tell Heroku to look in a file called `application.py` for a variable called `app` and serve it with [Gunicorn](http://gunicorn.org/), a production-quality web server. (Flask's built-in web server is "good enough for testing but probably not what you want to use in production.")
