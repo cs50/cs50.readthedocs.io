@@ -31,7 +31,7 @@ Also helpful for teachers might be [this blog post](https://medium.com/@cs50/tea
 
 ## Client-Side Settings
 
-*as of version 5.4.7*
+*as of version 5.7.6*
 
 ### Linux
 
@@ -86,6 +86,16 @@ Check this box in Zoom for privacy's sake, lest you continue live-streaming duri
 #### Video
 
 <ul class="fa-ul">
+
+<li>
+<span class="fa-li"><i class="far fa-square"></i></span>
+<strong>
+Original ratio
+</strong>
+<p>
+Uncheck this box in Zoom to ensure your video is widescreen.
+</p>
+</li>
 
 <li>
 <span class="fa-li"><i class="fas fa-check-square"></i></span>
@@ -352,7 +362,7 @@ Check this box in Zoom so that you always see names.
 <li>
 <span class="fa-li"><i class="fas fa-check-square"></i></span>
 <strong>
-Turn off my video when joining a meeting
+Stop my video when joining a meeting
 </strong>
 <p>
 Check this box in Zoom for privacy's sake, so that your camera stays off until you're ready to turn it on.
@@ -536,7 +546,7 @@ Check this box in Zoom, lest you accidentally leave class!
 <li>
 <span class="fa-li"><i class="fas fa-check-square"></i></span>
 <strong>
-Stop my video and audio when my display is off or screen saver begins
+Stop my video and audio when my device is locked
 </strong>
 <p>
 Check this box in Zoom for privacy's sake, lest you continue live-streaming during a break.
@@ -813,6 +823,14 @@ Disable this setting for privacy's sake, so that your camera stays off until you
 </li>
 
 <li>
+<strong>Participants video</strong>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
+<p>
+Enable this to start meetings with participant video on. Participants can change this during the meeting.
+</p>
+</li>
+
+<li>
 <strong>Audio Type</strong>
 <p>
 <i class="fas fa-dot-circle"></i>
@@ -824,7 +842,7 @@ Enable this setting so that participants can resort to their phones if having mi
 </li>
 
 <li>
-<strong>Join before host</strong>
+<strong>Allow participants to join before host</strong>
 <span class="fa-li"><i class="fas fa-toggle-on"></i></span>
 <p>
 Enable this setting so that participants can join the waiting room right away.
@@ -870,7 +888,7 @@ Enable this setting so that you can promote others (e.g., teaching assistants) t
 </li>
 
 <li>
-<strong>Meeting Polls</strong>
+<strong>Meeting Polls/Quizzes</strong>
 <span class="fa-li"><i class="fas fa-toggle-on"></i></span>
 <p>
 Enable this setting so that you can poll the class.
