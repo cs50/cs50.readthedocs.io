@@ -2,11 +2,13 @@
 
 Tools like [check50](https://cs50.readthedocs.io/projects/check50/en/latest/) and [submit50](/submit50/) rely on `git`, a popular tool for saving different versions of code, and [GitHub](https://github.com/), a popular website for saving those versions in the cloud. To push (i.e., save) your code to GitHub using `git`, it used to be possible to log into GitHub via a command line (as in a terminal window) using a GitHub username and password. As of [August 13, 2021](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/), that's no longer possible, which means you can no longer use `check50` or `submit50` using your GitHub username and password either.
 
-But you can still use `check50` and `submit50`! You just need to log in a bit differently, either using [SSH](#ssh) or a [personal access token](#personal-access-token). Odds are you'll find SSH more convenient for [CS50 IDE](/ide/index) and [Visual Studio Code](/code/), and personal access tokens more convenient for [CS50 Sandbox](/sandbox/) and [CS50 Lab](/lab/).
+But you can still use `check50` and `submit50`! You just need to log in a bit differently, either using [SSH](#ssh) or a [personal access token](#personal-access-token). Odds are you'll find SSH more convenient for [Visual Studio Code](/code/) and [CS50 IDE](/ide/index), and personal access tokens more convenient for [CS50 Sandbox](/sandbox/) and [CS50 Lab](/lab/).
+
+***
 
 ## SSH
 
-1. Open a terminal window, if not open already.
+1. Open a terminal window, if not open already, within [Visual Studio Code](/code/), [CS50 IDE](/ide/index), [CS50 Sandbox](/sandbox/), or [CS50 Lab](/lab/), not on your own Mac or PC.
 1. Execute `ssh-keygen`. When prompted to "save the key," just hit Enter, without typing anything.
 1. You'll then be prompted for a "passphrase" (i.e., password). If you only use your GitHub account for CS50, no need to input a passphrase; just hit Enter. Otherwise, input a passphrase (that you won't forget!), then hit Enter, then input it again, then hit Enter again. For security's sake, you won't see what you type. You'll then see a "randomart image" that you can ignore.
 1. Execute `cat ~/.ssh/id_rsa.pub`. You'll then see your "public key," multiple lines of seemingly random text. Highlight and copy all of those lines, from `ssh-rsa` to the end. **But don't highlight your terminal window's prompts (which contain `$`) before or after those lines.**
@@ -21,6 +23,8 @@ You should now be able to use `check50` and `submit50` (and `git`) without GitHu
 
 1. Visit [https://github.com/settings/keys](https://github.com/settings/keys), click **Delete** next to your old SSH key, then click **I understand, please delete this SSH key**.
 1. Follow all of the same [SSH](#ssh) steps, above, again. When prompted to "overwrite" (your old key), input `y`, then hit Enter.
+
+***
 
 ## Personal Access Token
 
