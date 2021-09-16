@@ -1,6 +1,6 @@
 # `cs50/server`
 
-`cs50/server` is a [Docker](../../docker) image on [Docker Hub](https://hub.docker.com/r/cs50/server/) with which you can (easily!) serve websites with, optionally, back ends implemented in JavaScript, PHP, Python, or Ruby. (We use it to serve CS50's own apps on [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)!) Essentially, it's a lightly customized installation of [Passenger](https://www.phusionpassenger.com/library/), an app server, to which we've added support for PHP (for some of CS50's older web apps). It also facilitates configuration of Nginx, the web server used by Passenger in in [Standalone mode](https://www.phusionpassenger.com/library/config/standalone/intro.html), via two files, `httpd.conf` and `server.conf`. The image itself is based on [`cs50/cli`](cli), which, in turn, is based on [Ubuntu 18.04](https://hub.docker.com/_/ubuntu/), a popular distribution of Linux.
+`cs50/server` is a [Docker](../../docker) image on [Docker Hub](https://hub.docker.com/r/cs50/server/) with which you can (easily!) serve websites with, optionally, back ends implemented in JavaScript, PHP, Python, or Ruby. (We use it to serve CS50's own apps on [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)!) Essentially, it's a lightly customized installation of [Passenger](https://www.phusionpassenger.com/library/), an app server, to which we've added support for PHP (for some of CS50's older web apps). It also facilitates configuration of Nginx, the web server used by Passenger in in [Standalone mode](https://www.phusionpassenger.com/library/config/standalone/intro.html), via two files, `httpd.conf` and `server.conf`. The image itself is based on [`cs50/cli`](cli), which, in turn, is based on [Ubuntu 20.04](https://hub.docker.com/_/ubuntu/), a popular distribution of Linux.
 
 ## Usage
 
@@ -13,14 +13,16 @@ EXPOSE 8080
 
 Then ensure your app is structured as follows.
 
-- If your app's back end is implemented in **Meteor**
-    - in bundled/packaged mode, ensure you have a file called `app.js` (your app's entry point file) in the same directory as your `Dockerfile`.
-    - in non-bundled/packaged mode, ensure you have a file called `.meteor` in the same directory as your `Dockerfile`.
-- If your app's back end is implemented in **Node.js**, ensure you have a file called `app.js` (your app's entry point file) in the same directory as your `Dockerfile`.
-- If your website's back end is implemented in **PHP**, ensure that you have a directory called `public` in the same directory as your `Dockerfile`, inside of which are any PHP files meant to be served publicly.
-- If your website's back end is implemented in **Python**, ensure you have a (WSGI) file called `passenger_wsgi.py`, formatted [as prescribed](https://www.phusionpassenger.com/library/walkthroughs/start/python.html#the-passenger-wsgi-file), in the same directory as your `Dockerfile`.
-- If your website's back end is implemented in **Ruby** (or **Ruby on Rails**), ensure you have a file called `config.ru`, formatted [as prescribed](https://www.phusionpassenger.com/library/deploy/config_ru.html), in the same directory as your `Dockerfile`.
-- If your website does not have a back end, only a front end implemented in **HTML** (presumably with CSS and/or JavaScript), ensure that you have a directory called `public` in the same directory as your `Dockerfile`, inside of which are any HTML (and CSS and/or JavaScript) files meant to be served publicly.
+* If your app's back end is implemented in **Meteor**
+    * in bundled/packaged mode, ensure you have a file called `app.js` (your app's entry point file) in the same directory as your `Dockerfile`.
+    * in non-bundled/packaged mode, ensure you have a file called `.meteor` in the same directory as your `Dockerfile`.
+* If your app's back end is implemented in **Node.js**, ensure you have a file called `app.js` (your app's entry point file) in the same directory as your `Dockerfile`.
+    * If you have a file called `package.json` in the same directory as your `Dockerfile`, `npm install` will be run automatically when your image is built.
+* If your website's back end is implemented in **PHP**, ensure that you have a directory called `public` in the same directory as your `Dockerfile`, inside of which are any PHP files meant to be served publicly.
+* If your website's back end is implemented in **Python**, ensure you have a (WSGI) file called `passenger_wsgi.py`, formatted [as prescribed](https://www.phusionpassenger.com/library/walkthroughs/start/python.html#the-passenger-wsgi-file), in the same directory as your `Dockerfile`.
+    * If you have a file called `requirements.txt` in the same directory as your `Dockerfile`, `pip install -r requirements.txt` will be run automatically when your image is built.
+* If your website's back end is implemented in **Ruby** (or **Ruby on Rails**), ensure you have a file called `config.ru`, formatted [as prescribed](https://www.phusionpassenger.com/library/deploy/config_ru.html), in the same directory as your `Dockerfile`.
+* If your website does not have a back end, only a front end implemented in **HTML** (presumably with CSS and/or JavaScript), ensure that you have a directory called `public` in the same directory as your `Dockerfile`, inside of which are any HTML (and CSS and/or JavaScript) files meant to be served publicly.
 
 ## Configuration
 
@@ -43,9 +45,9 @@ CMD passenger start --app-type app_type --startup-file startup_file
 
 You can customize `cs50/server`'s installation of Nginx by adding [directives](http://nginx.org/en/docs/dirindex.html) as follows.
 
-- To add directives to Nginix's `http` context, put them in a file called `http.conf` in the same directory as your `Dockerfile`.
+* To add directives to Nginix's `http` context, put them in a file called `http.conf` in the same directory as your `Dockerfile`.
  Do not surround them with `http {` and `}`.
-- To add directives to Nginix's `server` context, put them in a file called `server.conf` in the same directory as your `Dockerfile`. Do not surround them with `server {` and `}`.
+* To add directives to Nginix's `server` context, put them in a file called `server.conf` in the same directory as your `Dockerfile`. Do not surround them with `server {` and `}`.
 
 #### `rewrite`
 
