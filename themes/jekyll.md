@@ -334,6 +334,32 @@ cs50:
   tz: America/Los_Angeles
 ```
 
+The format in which a date and time should be rendered can be configured with YAML like:
+
+```yaml
+cs50:
+  local:
+    day: numeric
+    hour: numeric
+    minute: numeric
+    month: short
+    timeZoneName: short
+    weekday: short
+    year: numeric
+```
+
+Default values for those keys are defined in [https://github.com/cs50/jekyll-theme-cs50/blob/develop/lib/jekyll-theme-cs50/constants.rb](https://github.com/cs50/jekyll-theme-cs50/blob/develop/lib/jekyll-theme-cs50/constants.rb). Other possible values for those keys are defined by the [ECMAScript Internationalization API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat). 
+
+Setting the value of a key to `null` will remove the key from the plugin's output. For instance,
+
+```yaml
+cs50:
+  local:
+    year: null
+```
+
+would remove the year from the default format for dates and times.
+
 ### spoiler
 
 A `spoiler` block can be used to present a spoiler (e.g., a hint) on which a user must click in order to see more. The block expects one argument, a string on which the user can click; the content of the block can be HTML, Markdown, or text that the user will then see.
