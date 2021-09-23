@@ -14,7 +14,14 @@ If storing users in a SQLite database, you may assume that `sub` will be a `UNIQ
 
 To integrate CS50 ID into an app, you'll first want to create a client (i.e., register your app) at [id.cs50.io](https://id.cs50.io/). You'll need to provide a **Description** for your app as well as a **Redirection URI**, a URL to which CS50 ID should redirect users after authenticating them. Upon creating a client, you'll be provided with a **Client Identifier** and **Client Secret**. CS50 ID will also provide you with some **OpenID Provider Metadata**, which includes a list of endpoints (i.e., URLs). Those values should be all you need to add authentication to your app, particularly if using a library that supports OpenID Connect.
 
-For instance, here's [sample Flask app](https://github.com/cs50/id/tree/master/flask) that uses [Authlib](https://docs.authlib.org/en/latest/client/flask.html#flask-openid-connect-client). That app assumes that you've defined three "environment variables", as via the commands below
+### Python
+
+For instance, here are some sample apps for Python, both of which use [Authlib](https://docs.authlib.org/): 
+
+* [Flask](https://github.com/cs50/id/tree/main/flask), which uses Authlib's [Flask OpenID Connect Client](https://docs.authlib.org/en/latest/client/flask.html#flask-openid-connect-client)
+* [Django](https://github.com/cs50/id/tree/main/django), which uses Authlib's [Django OpenID Connect Client](https://docs.authlib.org/en/latest/client/django.html#django-openid-connect-client)
+
+Both apps assume that you've defined three "environment variables", as via the commands below
 
 ```text
 export CLIENT_ID=...
