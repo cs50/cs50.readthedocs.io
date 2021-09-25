@@ -1,3 +1,0 @@
-# `cs50/codespace`
-
-`cs50/codespace` is the [Docker](../../docker) image on [Docker Hub](https://hub.docker.com/r/cs50/code/) and [GitHub Packages](https://github.com/cs50/codespace/pkgs/container/codespace) used by CS50's adaptation of [Visual Studio Code](/code/).

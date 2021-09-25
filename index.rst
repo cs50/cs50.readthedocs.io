@@ -15,7 +15,6 @@
 
    check50 <https://cs50.readthedocs.io/projects/check50/>
    cli50
-   codespace
    compare50 <https://cs50.readthedocs.io/projects/compare50/>
    render50
    style50
@@ -28,6 +27,7 @@
 
    cs50/check
    cs50/cli
+   cs50/codespace
    cs50/ide
    cs50/sandbox
    cs50/server
