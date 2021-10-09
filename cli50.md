@@ -21,7 +21,7 @@ pip install --upgrade cli50
 ## Usage
 
 ```text
-usage: cli50 [-h] [-d DOTFILE] [-j] [-l [CONTAINER]] [-S] [-t TAG] [-V] [DIRECTORY]
+usage: cli50 [-h] [-d DOTFILE] [-f] [-j] [-l [CONTAINER]] [-S] [-t TAG] [-V] [DIRECTORY]
 
 positional arguments:
   DIRECTORY             directory to mount, else $PWD
@@ -30,6 +30,7 @@ optional arguments:
   -h, --help            show this help message and exit
   -d DOTFILE, --dotfile DOTFILE
                         dotfile in your $HOME to mount read-only in container's $HOME
+  -f, --fast            don't check for updates
   -j, --jekyll          serve Jekyll site
   -l [CONTAINER], --login [CONTAINER]
                         log into CONTAINER
