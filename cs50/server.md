@@ -22,6 +22,7 @@ Then ensure your app is structured as follows.
 * If your website's back end is implemented in **Python**, ensure you have a (WSGI) file called `passenger_wsgi.py`, formatted [as prescribed](https://www.phusionpassenger.com/library/walkthroughs/start/python.html#the-passenger-wsgi-file), in the same directory as your `Dockerfile`.
     * If you have a file called `requirements.txt` in the same directory as your `Dockerfile`, `pip install -r requirements.txt` will be run automatically when your image is built.
 * If your website's back end is implemented in **Ruby** (or **Ruby on Rails**), ensure you have a file called `config.ru`, formatted [as prescribed](https://www.phusionpassenger.com/library/deploy/config_ru.html), in the same directory as your `Dockerfile`.
+    * If you have a file called `Gemfile` in the same directory as your `Dockerfile`, `bundle install` will be run automatically when your image is built.
 * If your website does not have a back end, only a front end implemented in **HTML** (presumably with CSS and/or JavaScript), ensure that you have a directory called `public` in the same directory as your `Dockerfile`, inside of which are any HTML (and CSS and/or JavaScript) files meant to be served publicly.
 
 ## Configuration
