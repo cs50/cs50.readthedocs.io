@@ -21,7 +21,7 @@ pip install --upgrade cli50
 ## Usage
 
 ```text
-usage: cli50 [-h] [-d DOTFILE] [-f] [-j] [-l [CONTAINER]] [-S] [-t TAG] [-u] [-V] [DIRECTORY]
+usage: cli50 [-h] [-d DOTFILE] [-j] [-l [CONTAINER]] [-S] [-t TAG] [-V] [DIRECTORY]
 
 positional arguments:
   DIRECTORY             directory to mount, else $PWD
@@ -30,13 +30,11 @@ optional arguments:
   -h, --help            show this help message and exit
   -d DOTFILE, --dotfile DOTFILE
                         dotfile in your $HOME to mount read-only in container's $HOME
-  -f, --fast            skip autoupdate
   -j, --jekyll          serve Jekyll site
   -l [CONTAINER], --login [CONTAINER]
                         log into CONTAINER
   -S, --stop            stop any containers
   -t TAG, --tag TAG     start cs50/cli:TAG, else cs50/cli:latest
-  -u, --update          update only
   -V, --version         show program's version number and exit
 ```
 
@@ -80,20 +78,12 @@ Or one's `.ssh` directory, so that you can use your own SSH keys within the cont
 cli50 -d ~/.ssh
 ```
 
-### Skip autoupdate
+### Don't check for updates
 
-By default, `cli50` autoupdates (i.e., pulls) `cs50/cli`, the Docker image on which it's based, which can be time-consuming on slow internet connections. You can skip autoupdate as follows:
+By default, `cli50` checks for updates to itself as well as `cs50/cli`, the Docker image on which it's based. You can skip those checks as follows:
 
 ```text
 cli50 -f
-```
-
-### Update only
-
-You can update (i.e., pull) `cs50/cli`, the Docker image on which `cli50` is based, without actually starting a container as follows:
-
-```text
-cli50 -u
 ```
 
 ### Log into running container
