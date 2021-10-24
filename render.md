@@ -2,7 +2,7 @@
 
 CS50 Render is a web app at [render.cs50.io](https://render.cs50.io/) that allows you to render syntax-highlighted PDFs of source code, just as [`render50`](/render50/) allows at a command line. Here's an [example](https://render.cs50.io/hello.pdf). Unlike `render50`, though, you can use CS50 Render without installing any dependencies on your own computer.
 
-You can even render two or three files side by side for comparison's sake. Here's an [example](https://render.cs50.io/hellos.pdf). When documenting cases of [academic dishonesty in CS50](https://cs.harvard.edu/malan/publications/Teaching_Academic_Honesty_in_CS50.pdf), for instance, we render the cases' files side by side and then annotate the PDFs for [Harvard's Honor Council](https://honorcouncil.fas.harvard.edu/).
+You can even render two or three files side by side for comparison's sake. Here's an [example](https://render.cs50.io/hellos.pdf). When documenting cases of [academic dishonesty in CS50](https://cs.harvard.edu/malan/publications/Teaching_Academic_Honesty_in_CS50.pdf), for instance, we render the cases' files side by side and then annotate the PDFs for Harvard's Administrative Boards and Honor Council.
 
 PDFs can be annotated (for free) with:
 
