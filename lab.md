@@ -9,19 +9,19 @@ To create a lab as a teacher, all you need is a [GitHub](https://github.com/) ac
 
 CS50 Lab is essentially an extension of [CS50 Sandbox](sandbox) that allows teachers to embed interactive instructions alongside a sandbox. As such, CS50 Lab is, also, essentially a lightweight version of [CS50 IDE](ide/index) with problems' specifications embedded in students' actual programming environments.
 
-URLs of labs are of the form `https://lab.cs50.io/:owner/:repo/:branch/:path`, where 
+URLs of labs are of the form `https://lab.cs50.io/{owner}/{repo}/{branch}/{path}`, where 
 
-* `:owner` is the lab's owner, a GitHub user or [organization](https://help.github.com/articles/about-organizations/), on [github.com](https://github.com/),
-* `:repo` is that owner's repository in which the lab's source can be found,
-* `:branch` is the branch on which the lab's source can be found in that repository, and
-* `:path` is the path to the lab's source on that branch.
+* `owner` is the lab's owner, a GitHub user or [organization](https://help.github.com/articles/about-organizations/), on [github.com](https://github.com/),
+* `repo` is that owner's repository in which the lab's source can be found,
+* `branch` is the branch on which the lab's source can be found in that repository, and
+* `path` is the path to the lab's source on that branch.
 
 The source for a lab like [lab.cs50.io/cs50/labs/2019/fall/mario/less/](https://lab.cs50.io/cs50/labs/2019/fall/mario/less/) can thus be found in [https://github.com/cs50/labs/tree/2019/fall/mario/less/](https://github.com/cs50/labs/tree/2019/fall/mario/less/), wherein
 
 * `cs50` is the lab's owner (hey, that's us),
 * `labs` is the lab's repository,
-* `python` is the lab's branch,
-* `loops` is the lab's path, and heretofore unmentioned,
+* `2019/fall` is the lab's branch,
+* `mario/less` is the lab's path, and
 * `tree` is just a GitHub-specific trick, sandwiched between `:repo` and `:branch`, via which you can browse that branch and path.
 
 ## Creation
