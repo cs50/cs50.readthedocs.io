@@ -16,7 +16,7 @@ URLs of labs are of the form `https://lab.cs50.io/:owner/:repo/:branch/:path`, w
 * `:branch` is the branch on which the lab's source can be found in that repository, and
 * `:path` is the path to the lab's source on that branch.
 
-The source for a lab like [https://lab.cs50.io/cs50/labs/python/loops/](https://lab.cs50.io/cs50/labs/python/loops/) can thus be found in [https://github.com/cs50/labs/tree/python/loops/](https://github.com/cs50/labs/tree/python/loops/), wherein
+The source for a lab like [lab.cs50.io/cs50/labs/2019/fall/mario/less/](https://lab.cs50.io/cs50/labs/2019/fall/mario/less/) can thus be found in [https://github.com/cs50/labs/tree/2019/fall/mario/less/](https://github.com/cs50/labs/tree/2019/fall/mario/less/), wherein
 
 * `cs50` is the lab's owner (hey, that's us),
 * `labs` is the lab's repository,
