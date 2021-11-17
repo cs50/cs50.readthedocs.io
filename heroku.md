@@ -12,7 +12,7 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://cs50.ha
 
 1. Take note of the **HTTPS** URL of the repository (e.g., `https://github.com/username/finance.git`, where `username` is your own GitHub username).
 
-1. Change to your `finance` directory in CS50 IDE, as via `cd`.
+1. Change to your `finance` directory in [Visual Studio Code](https://cs50.readthedocs.io/code/) or [CS50 IDE](https://cs50.readthedocs.io/ide/), as via `cd`.
 
 1. Create a `git` repo therein.
 
@@ -26,14 +26,15 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://cs50.ha
     git remote add origin https://github.com/username/finance.git
     ```
 
-1. In the `requirements.txt` file inside of your `finance` directory, add `gunicorn` and `psycopg2`, each on separate lines.
+1. In the `requirements.txt` file inside of your `finance` directory, add `gunicorn`, `psycopg2` and `requests` each on separate lines.
 
 1. Push your code to GitHub.
 
     ```text
     git add -A
     git commit -m "first commit"
-    git push -u origin master
+    git branch -M main
+    git push -u origin main
     ```
     If you visit `https://github.com/username/finance`, where `username` is your own GitHub username, you should see your code in the repository.
 
@@ -47,7 +48,7 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://cs50.ha
 
     * **Deployment method:** Select **GitHub**, then click **Connect to GitHub**. If prompted to log into GitHub, click **Authorize heroku**.
 
-    * **App connected to GitHub:** Search for your app's repository (e.g., `username/finance`, where `username` is your own GitHub username), then click **Connect**.
+    * **Connected to GitHub:** Search for your app's repository (e.g., `username/finance`, where `username` is your own GitHub username), then click **Connect**.
 
     * **Automatic deploys:** Click **Enable Automatic Deploys**.
 
@@ -57,11 +58,11 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://cs50.ha
 
     1. Add a new variable called **API_KEY**, the value of which is your API token for IEX. Recall that, after registering for a developer account at <https://iexcloud.io/>, you can obtain your API token under **API Tokens**. Be sure to use your **PUBLISHABLE** token as the value for **API_KEY**, not your **SECRET** token.
 
-1. Search for and provision **Heroku Postgres** at `https://dashboard.heroku.com/apps/app-name/resources`, where `app-name` is your Heroku app's name; select a **Plan name** of **Hobby Dev — Free**.
+1. Search for and provision **Heroku Postgres** add-ons at `https://dashboard.heroku.com/apps/app-name/resources`, where `app-name` is your Heroku app's name; select a **Plan name** of **Hobby Dev — Free**.
 
-1. At `https://dashboard.heroku.com/apps/app-name/resources`, where `app-name` is your Heroku app's name, click **Heroku Postgres :: Database**. In the tab that opens, click **Settings**, then click **View Credentials...**. Highlight and copy the **URI** that appears.
+1. At `https://dashboard.heroku.com/apps/app-name/resources`, where `app-name` is your Heroku app's name, click **Heroku Postgres**. In the tab that opens, click **Settings**, then click **View Credentials...**. Highlight and copy the **URI** that appears.
 
-1. In CS50 IDE, open `application.py` in `finance/` and replace
+1. In Visual Studio Code or CS50 IDE, open `app.py` in `finance/` and replace
 
     ```py
     db = SQL("sqlite:///finance.db")
@@ -79,23 +80,23 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://cs50.ha
     import os
     ```
 
-    atop `application.py`, if not there already.
+    atop `app.py`, if not there already.
 
-1. In CS50 IDE, execute the below to import `finance.db` into your PostgreSQL database, where `URI` is that same URI. Be sure to append `?sslmode=require` to the URI. Note that disabling SSL's certification verification with `--no-ssl-cert-verification` is not recommended in general but seems to be a [temporary workaround](https://github.com/dimitri/pgloader/commit/16dda01f371f033e0df75d80127643605df7830f).
+1. In Visual Studio Code or CS50 IDE, execute the below to import `finance.db` into your PostgreSQL database, where `URI` is that same URI. Be sure to append `?sslmode=require` to the URI. Note that disabling SSL's certification verification with `--no-ssl-cert-verification` is not recommended in general but seems to be a [temporary workaround](https://github.com/dimitri/pgloader/commit/16dda01f371f033e0df75d80127643605df7830f).
 
     ```
     pgloader --no-ssl-cert-verification finance.db URI?sslmode=require
     ```
 
-    Thereafter, if you'd like to browse or edit your PostgreSQL database, you can use Adminer (a tool like phpLiteAdmin for PostgreSQL databases), at [adminer.cs50.net](https://adminer.cs50.net/). Log in using your database's credentials: at `https://dashboard.heroku.com/apps/app-name/resources`, where `app-name` is your Heroku app's name, click **Heroku Postgres :: Database**. In the tab that opens, click **Settings**, then click **View Credentials...**.
+    Thereafter, if you'd like to browse or edit your PostgreSQL database, you can use Adminer (a tool like phpLiteAdmin for PostgreSQL databases), at [adminer.cs50.net](https://adminer.cs50.net/). Log in using your database's credentials: at `https://dashboard.heroku.com/apps/app-name/resources`, where `app-name` is your Heroku app's name, click **Heroku Postgres**. In the tab that opens, click **Settings**, then click **View Credentials...**.
 
-1. Create a new file in CS50 IDE called `Procfile` in `finance/` whose contents are:
+1. Create a new file in Visual Studio Code or CS50 IDE called `Procfile` in `finance/` whose contents are:
 
     ```
-    web: gunicorn application:app
+    web: gunicorn app:app
     ```
 
-   That file will tell Heroku to look in a file called `application.py` for a variable called `app` and serve it with [Gunicorn](http://gunicorn.org/), a production-quality web server. (Flask's built-in web server is "good enough for testing but probably not what you want to use in production.")
+   That file will tell Heroku to look in a file called `app.py` for a variable called `app` and serve it with [Gunicorn](http://gunicorn.org/), a production-quality web server. (Flask's built-in web server is "good enough for testing but probably not what you want to use in production.")
 
 1. Add that file to your repository and push it to GitHub.
 
