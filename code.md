@@ -24,6 +24,20 @@ VS Code supports quite a few [settings](https://code.visualstudio.com/docs/getst
 
 If you use VS Code outside of CS50, you might thus want to store most of your settings in User settings (and enable Settings Sync). And if there are any Remote settings set by CS50 that you would like to override, you can do so via Workspace settings.
 
+## Using Git
+
+Because your codespace is already associated with a Git repository in CS50's `code50` organization at <https://github.com/code50>, which is used for automated backups, CS50 effectively disables `git` anytime you're inside of `/workspaces/$RepositoryName` (which is your codespace's default directory, wherein `$RepositoryName` is your GitHub ID. 
+
+However, you can still use `git` outside of that directory, as by cloning other repositories into `/workspaces` itself. For instance, if you'd like to clone <https://github.com/octocat/Hello-World>, you could execute
+
+```
+cd /workspaces
+git clone https://github.com/octocat/Hello-World
+cd Hello-World
+```
+
+at which point you could use `git` within that `/workspaces/Hello-World` directory as usual. Note that only `/workspaces/$RepositoryName` will be automatically backed up to CS50's `code50` organization; repositories that you clone into `/workspaces` will not.
+
 ## Deleting a Codespace
 
 **Deleting a codespace will delete all files and folders therein.** If you are sure you want to delete a codespace:
