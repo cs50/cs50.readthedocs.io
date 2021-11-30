@@ -28,7 +28,7 @@ If you use VS Code outside of CS50, you might thus want to store most of your se
 
 Because your codespace is already associated with a Git repository in CS50's `code50` organization at <https://github.com/code50>, which is used for automated backups, CS50 effectively disables `git` anytime you're inside of `/workspaces/$RepositoryName` (which is your codespace's default directory), wherein `$RepositoryName` is your (numeric) GitHub ID. 
 
-However, you can still use `git` outside of that directory, as by cloning other repositories into `/workspaces` itself. For instance, if you'd like to clone <https://github.com/octocat/Hello-World>, you could execute
+However, you can still use `git` outside of that directory, as by cloning other repositories into `/workspaces` itself. For instance, if you'd like to clone <https://github.com/octocat/Hello-World> into your codespace, you could execute
 
 ```
 cd /workspaces
