@@ -127,6 +127,37 @@ If ``s`` is a :py:class:`str`, you can prepend and/or append ``%`` to it as foll
 
         rows = db.execute("SELECT * FROM foo WHERE bar LIKE ?", "%" + s + "%")
 
+How can I add optional clauses to a query?
+------------------------------------------
+
+Based on user input, you might want to include or not include some clauses in a query. For instance, you might want to include `bar` and `baz` in a query only if they have values, in which case the number of placeholders you have in your query might vary. You could thus construct your query dynamically by joining the clauses and unpacking the placeholders' values as follows:
+
+    .. code-block::
+
+        query = "SELECT * FROM foo"
+
+        clauses = []
+        values = []
+
+        if bar:
+            clauses.append("bar = ?")
+            values.append(bar)
+        if baz:
+            clauses.append("baz = ?")
+            values.append(baz)
+
+        if clauses:
+            query = query + " WHERE " + " AND ".join(clauses)
+        rows = db.execute(sql, *values)
+
+The end result is equivalent to:
+
+    .. code-block::
+
+        rows = db.execute("SELECT * FROM foo WHERE bar = ? AND baz = ?", bar, baz)
+
+But you don't need to know in advance if `bar` and `baz` will have values.
+
 How come I can't use parameter markers as placeholders for tables' or columns' names?
 -------------------------------------------------------------------------------------
 
