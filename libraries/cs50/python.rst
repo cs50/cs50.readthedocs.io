@@ -148,7 +148,7 @@ Based on user input, you might want to include or not include some clauses in a 
 
         if clauses:
             query = query + " WHERE " + " AND ".join(clauses)
-        rows = db.execute(sql, *values)
+        rows = db.execute(query, *values)
 
 The end result is equivalent to:
 
