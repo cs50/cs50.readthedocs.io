@@ -507,7 +507,7 @@ Check this box in Zoom for privacy's sake, so that others don't see your private
 
 ### Windows
 
-To access these settings after launching Zoom, select Zoom's **Home** tab, then click the gear (<i class="fas fa-cog"></i>) icon in Zoom's top-right corner. Or right-click Zoom's icon in your taskbar, then select <strong>Settings...</strong>.
+To access these settings after launching Zoom, right-click Zoom's icon in your taskbar, then select <strong>Settings...</strong>.
 
 #### General
 
