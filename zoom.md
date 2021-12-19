@@ -35,7 +35,7 @@ Also helpful for teachers might be [this blog post](https://medium.com/@cs50/tea
 
 ### Linux
 
-To access these settings after launching Zoom, select Zoom's **Home** tab, then click the gear (<i class="fas fa-cog"></i>) icon in Zoom's top-right corner. Or click Zoom's status icon in your system tray, then select <strong>Settings...</strong>.
+To access these settings after launching and signing in Zoom, click the gear (<i class="fas fa-cog"></i>) icon in Zoom's top-right corner.
 
 #### General
 
