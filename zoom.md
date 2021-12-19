@@ -31,11 +31,11 @@ Also helpful for teachers might be [this blog post](https://medium.com/@cs50/tea
 
 ## Client-Side Settings
 
-*as of version 5.7.6*
+*as of version 5.8.6*
 
 ### Linux
 
-To access these settings after launching Zoom, select Zoom's **Home** tab, then click the gear (<i class="fas fa-cog"></i>) icon in Zoom's top-right corner. Or click Zoom's status icon in your system tray, then select <strong>Settings...</strong>.
+To access these settings after launching and signing in Zoom, click the gear (<i class="fas fa-cog"></i>) icon in Zoom's top-right corner.
 
 #### General
 
@@ -507,7 +507,7 @@ Check this box in Zoom for privacy's sake, so that others don't see your private
 
 ### Windows
 
-To access these settings after launching Zoom, select Zoom's **Home** tab, then click the gear (<i class="fas fa-cog"></i>) icon in Zoom's top-right corner. Or right-click Zoom's icon in your taskbar, then select <strong>Settings...</strong>.
+To access these settings after launching Zoom, right-click Zoom's icon in your taskbar, then select <strong>Settings...</strong>.
 
 #### General
 
@@ -850,7 +850,7 @@ Enable this setting so that participants can join the waiting room right away.
 </li>
 
 <li>
-<strong>Mute participants upon entry</strong>
+<strong>Mute all participants when they join a meeting</strong>
 <span class="fa-li"><i class="fas fa-toggle-on"></i></span>
 <p>
 Enable this setting for privacy's sake so that everyone's microphone is off by default.
