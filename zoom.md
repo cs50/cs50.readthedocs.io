@@ -850,7 +850,7 @@ Enable this setting so that participants can join the waiting room right away.
 </li>
 
 <li>
-<strong>Mute participants upon entry</strong>
+<strong>Mute all participants when they join a meeting</strong>
 <span class="fa-li"><i class="fas fa-toggle-on"></i></span>
 <p>
 Enable this setting for privacy's sake so that everyone's microphone is off by default.
