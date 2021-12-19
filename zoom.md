@@ -31,7 +31,7 @@ Also helpful for teachers might be [this blog post](https://medium.com/@cs50/tea
 
 ## Client-Side Settings
 
-*as of version 5.7.6*
+*as of version 5.8.6*
 
 ### Linux
 
