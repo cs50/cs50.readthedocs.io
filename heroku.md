@@ -26,7 +26,7 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://cs50.ha
     git remote add origin https://github.com/username/finance.git
     ```
 
-1. In the `requirements.txt` file inside of your `finance` directory, add `gunicorn`, `psycopg2`, `requests` and `SQLAlchemy==1.3.23` each on separate lines.
+1. In the `requirements.txt` file inside of your `finance` directory, add `gunicorn`, `psycopg2`, `requests` and `SQLAlchemy==1.3.23`, each on separate lines. Your file should then resemble:
 
 ```
 cs50
