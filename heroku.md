@@ -28,14 +28,14 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://cs50.ha
 
 1. In the `requirements.txt` file inside of your `finance` directory, add `gunicorn`, `psycopg2`, and `requests`, each on separate lines. Your file should then resemble:
 
-```
-cs50
-Flask
-Flask-Session
-gunicorn
-psycopg2
-requests
-```
+    ```
+    cs50
+    Flask
+    Flask-Session
+    gunicorn
+    psycopg2
+    requests
+    ```
 
 1. Push your code to GitHub.
 
@@ -82,7 +82,7 @@ requests
     ```py
     uri = os.getenv("DATABASE_URL")
     if uri.startswith("postgres://"):
-        uri = uri.replace("postgres://", "postgresql://", 1)
+        uri = uri.replace("postgres://", "postgresql://")
     db = SQL(uri)
     ```
 
