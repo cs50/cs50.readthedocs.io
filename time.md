@@ -76,7 +76,7 @@ Times converted via CS50 Time Converter's landing page standardize on the shorte
 
 Combined dates and times without an offset are assumed to be in America/New_York.
 
-### Queries
+### Query Strings
 
 CS50 Time Converter also supports URLs of the forms
 
@@ -86,6 +86,15 @@ CS50 Time Converter also supports URLs of the forms
 * `https://time.cs50.io/?start=START&end=END&zone=ZONE`
 
 where `START` and `END` are in any of the [formats](#formats) supported by CS50 Time Converter's landing page, and `ZONE` is any of the time zones supported by the same. Each of `START` and `END` will be assumed to be in `ZONE` unless a time zone or offset is specified in `START` or `END` itself. Values of `START` and `END` without a specified time zone or offset are assumed to be in America/New_York if no `ZONE` is provided.
+
+CS50 Time Converter also supports URLs of the form
+
+* `https://time.cs50.io/:start?title=TITLE`
+* `https://time.cs50.io/:start/:end?title=TITLE`
+* `https://time.cs50.io/:start/:duration?title=TITLE`
+* `https://time.cs50.io/:duration/:end?title=TITLE`
+
+where `TITLE` is a title for a deadline or event. Not only will the title be displayed to users, it will also be embedded in **Add to Calendar** URLs so that it, too, can be added to users' calendars.
 
 #### Zoom
 
