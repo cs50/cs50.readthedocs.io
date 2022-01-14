@@ -317,7 +317,12 @@ would embed the Google Calendar whose Calendar ID is `en.usa%23holiday@group.v.c
 
 ### local
 
-A `local` tag can be used to render a date and time in the user's own time zone, based on their device's clock. The block expects one argument, a quoted date and time in `YYYY-MM-DD HH:MM` format, which is assumed to be in the time zone specified by `site.cs50.tz`, the value of which is a [TZ database name](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones), the default value of which is `America/New_York`.
+A `local` tag can be used to render dates and times in the user's own time zone, based on their device's clock. The tag can be passed
+
+* one argument, a quoted date and time in `YYYY-MM-DD HH:MM` format, or 
+* two arguments, a quoted start date and time in `YYYY-MM-DD HH:MM` format followed by a quoted end date and time in `YYYY-MM-DD HH:MM` format or, if the end time is within 24 hours of the start time, a quoted time in `HH:MM` format, repesenting a range.
+
+Dates and times are assumed to be in the time zone specified by `site.cs50.tz`, the value of which is a [TZ database name](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones), the default value of which is `America/New_York`.
 
 For instance, if the value of `site.cs50.tz` is `America/New_York` (by default or otherwise), then
 
@@ -325,7 +330,19 @@ For instance, if the value of `site.cs50.tz` is `America/New_York` (by default o
 {% local "1970-01-01 00:00" %}
 ```
 
-would be parsed as representing midnight, Eastern Time, on January 1, 1970. But it would be rendered for users in their own time zone.
+would be parsed as representing midnight, Eastern Time, on January 1, 1970. But it would be rendered for users in their own time zone. Similarly,
+
+```text
+{% local "1970-01-01 00:00" "1970-01-01 23:59" %}
+```
+
+and
+
+```text
+{% local "1970-01-01 00:00" "23:59" %}
+```
+
+would both be parsed as representing a range that begins at midnight, Eastern Time, on January 1, 1970, and ends at 23:59 on the same. But it, too, would be rendered for users in their own time zone. If the value of `site.cs50.locale` is `en`, the range's times will be rendered, when possible, with an n-dash (–).
 
 If tags should be assumed to be in some other time zone (e.g., Pacific Time), then `_config.yml` should be configured with YAML like:
 
@@ -334,7 +351,7 @@ cs50:
   tz: America/Los_Angeles
 ```
 
-The format in which a date and time should be rendered can be configured with YAML like:
+The format in which dates and times should be rendered can be configured with YAML like:
 
 ```yaml
 cs50:
