@@ -14,6 +14,28 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://cs50.ha
 
 1. Change to your `finance` directory in [Visual Studio Code](https://cs50.readthedocs.io/code/) or [CS50 IDE](https://cs50.readthedocs.io/ide/), as via `cd`.
 
+1. (Codespace users only) Copy your finance project files to `workspaces/finance`.
+
+Create a folder named `finance` under `workspaces` directory by running
+
+```
+mkdir /workspaces/finance
+```
+
+Copy your finance project files to `/workspaces/finance` by running
+
+```
+cp -r * /workspaces/finance
+```
+
+Then change your directory to `/workspaces/finance` by running
+
+```
+cd /workspaces/finance
+```
+
+Run `ls` to ensure all files have been copied over successfully.
+
 1. Create a `git` repo therein.
 
     ```
