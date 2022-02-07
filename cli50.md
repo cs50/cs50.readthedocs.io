@@ -21,7 +21,7 @@ pip install --upgrade cli50
 ## Usage
 
 ```text
-usage: cli50 [-h] [-d DOTFILE] [-f] [-j] [-l [CONTAINER]] [-S] [-t TAG] [-V] [DIRECTORY]
+usage: cli50 [-h] [-d DOTFILE] [-f] [-j] [-l [CONTAINER]] [-p PORT] [-S] [-t TAG] [-V] [DIRECTORY]
 
 positional arguments:
   DIRECTORY             directory to mount, else $PWD
@@ -34,6 +34,7 @@ optional arguments:
   -j, --jekyll          serve Jekyll site
   -l [CONTAINER], --login [CONTAINER]
                         log into CONTAINER
+  -p PORT, --port PORT  publish PORT
   -S, --stop            stop any containers
   -t TAG, --tag TAG     start cs50/cli:TAG, else cs50/cli:latest
   -V, --version         show program's version number and exit
@@ -111,21 +112,21 @@ Directories (e.g., `~/.vim`) are supported as well:
 cli50 -d .vim
 ```
 
-### Serve Jekyll site
+### Exposing a port
 
-When developing a Jekyll site, you can serve (and continually rebuild) it within a container as follows:
+By default, `cli50` exposes TCP ports 5000 and 8080, whereby those ports in the container will be mapped to the same on the host (or, if already in use, to pseudorandom ports). You can expose other ports (between 1024 and 65535, inclusive) instead too.
 
-```text
-cli50 -j
-```
-
-The site will be served at `http://0.0.0.0:8080/` within the container, but port 8080 will be published on pseudorandom port on the host (i.e., your computer). If `cli50` outputs, e.g.,
+You can expose a single port (e.g., 1024) as follows:
 
 ```text
-0.0.0.0:#####->8080/tcp, ...
+cli50 -p 1024
 ```
 
-on startup, you can access the site at `http://0.0.0.0:#####/` on your computer.
+Or you can expose multiple ports (e.g., 1024 and 65535) as follows:
+
+```text
+cli50 -p 1024 -p 65535
+```
 
 ## Source Code
 
