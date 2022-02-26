@@ -1,4 +1,0 @@
-:orphan:
-
-.. toctree::
-   site

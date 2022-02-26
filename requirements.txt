@@ -1,7 +1,0 @@
-myst-parser==0.15.2
-sphinx==4.2.0
-sphinx-markdown-tables==0.0.15
-sphinx-tabs==3.2.0
-sphinx_rtd_theme==1.0.0
-sphinxcontrib-httpdomain==1.8.0
-sphinxext-opengraph==0.4.2
