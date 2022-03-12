@@ -39,14 +39,14 @@ CS50 Time Converter's landing page supports inputs [in over 200 language locales
 
 CS50 Time Converter supports URLs of the forms
 
-* `https://time.cs50.io/:start`
-* `https://time.cs50.io/:start/:end`
-* `https://time.cs50.io/:start/:duration`
-* `https://time.cs50.io/:duration/:end`
+* `https://time.cs50.io/{start}`
+* `https://time.cs50.io/{start}/{end}`
+* `https://time.cs50.io/{start}/{duration}`
+* `https://time.cs50.io/{duration}/{end}`
 
-where each of `:start` and `:end` is a [combined date and time](https://en.wikipedia.org/wiki/ISO_8601#Combined_date_and_time_representations) in ISO 8601 format, and `:duration` is a [duration](https://en.wikipedia.org/wiki/ISO_8601#Durations) in ISO 8601 format. It is not necessary to encode any `+` therein as `%2B`.
+where each of `{start}` and `{end}` is a [combined date and time](https://en.wikipedia.org/wiki/ISO_8601#Combined_date_and_time_representations) in ISO 8601 format, and `{duration}` is a [duration](https://en.wikipedia.org/wiki/ISO_8601#Durations) in ISO 8601 format. It is not necessary to encode any `+` therein as `%2B`.
 
-A deadline or an event with no end time might thus use the form `https://time.cs50.io/:start`.
+A deadline or an event with no end time might thus use the form `https://time.cs50.io/{start}`.
 
 For instance, all of the below represent Tue, 19 Jan 2038 03:14:07 +0000, using UTC:
 
@@ -61,7 +61,7 @@ And all of the below represent the same, Mon, 18 Jan 2038 10:14:07 -0500, using 
 * <https://time.cs50.io/2038-01-18T10:14:07-0500>
 * <https://time.cs50.io/2038-01-18T10:14:07-05:00>
 
-An event with an end time might use any of `https://time.cs50.io/:start/:end`, `https://time.cs50.io/:start/:duration`, and `https://time.cs50.io/:duration/:end`.
+An event with an end time might use any of `https://time.cs50.io/{start}/{end}`, `https://time.cs50.io/{start}/{duration}`, and `https://time.cs50.io/{duration}/{end}`.
 
 For instance, all of the below represent an interval from Thu, 01 Jan 1970 00:00:00 +0000 until Tue, 19 Jan 2038 03:14:07 +0000:
 
@@ -82,34 +82,34 @@ Combined dates and times without an offset are assumed to be in America/New_York
 
 CS50 Time Converter also supports URLs of the forms
 
-* `https://time.cs50.io/?start=START`
-* `https://time.cs50.io/?start=START&zone=ZONE`
-* `https://time.cs50.io/?start=START&end=END`
-* `https://time.cs50.io/?start=START&end=END&zone=ZONE`
+* `https://time.cs50.io/?start={start}`
+* `https://time.cs50.io/?start={start}&zone={zone}`
+* `https://time.cs50.io/?start={start}&end={end}`
+* `https://time.cs50.io/?start={start}&end={end}&zone={zone}`
 
-where `START` and `END` are in any of the [formats](#formats) supported by CS50 Time Converter's landing page, and `ZONE` is any of the time zones supported by the same. Each of `START` and `END` will be assumed to be in `ZONE` unless a time zone or offset is specified in `START` or `END` itself. Values of `START` and `END` without a specified time zone or offset are assumed to be in America/New_York if no `ZONE` is provided.
+where `start` and `end` are in any of the [formats](#formats) supported by CS50 Time Converter's landing page, and `zone` is any of the time zones supported by the same. Each of `{start}` and `{end}` will be assumed to be in `zone` unless a time zone or offset is specified in `{start}` or `{end}` itself. Values of `{start}` and `{end}` without a specified time zone or offset are assumed to be in America/New_York if no `zone` is provided.
 
 #### title
 
 CS50 Time Converter also supports URLs of the form
 
-* `https://time.cs50.io/:start?title=TITLE`
-* `https://time.cs50.io/:start/:end?title=TITLE`
-* `https://time.cs50.io/:start/:duration?title=TITLE`
-* `https://time.cs50.io/:duration/:end?title=TITLE`
+* `https://time.cs50.io/{start}?title={title}`
+* `https://time.cs50.io/{start}/{end}?title={title}`
+* `https://time.cs50.io/{start}/{duration}?title={title}`
+* `https://time.cs50.io/{duration}/{end}?title={title}`
 
-where `TITLE` is a title for a deadline or event. Not only will the title be displayed to users, it will also be embedded in **Add to Calendar** URLs so that it, too, can be added to users' calendars.
+where `title` is a title for a deadline or event. Not only will the title be displayed to users, it will also be embedded in **Add to Calendar** URLs so that it, too, can be added to users' calendars.
 
 #### location
 
 CS50 Time Converter also supports URLs of the form
 
-* `https://time.cs50.io/:start?location=LOCATION`
-* `https://time.cs50.io/:start/:end?location=LOCATION`
-* `https://time.cs50.io/:start/:duration?location=LOCATION`
-* `https://time.cs50.io/:duration/:end?location=LOCATION`
+* `https://time.cs50.io/{start}?location={location}`
+* `https://time.cs50.io/{start}/{end}?location={location}`
+* `https://time.cs50.io/{start}/{duration}?location={location}`
+* `https://time.cs50.io/{duration}/{end}?location={location}`
 
-where `LOCATION` is a location for a deadline or event. Not only will the location be displayed to users, it will also be embedded in **Add to Calendar** URLs so that it, too, can be added to users' calendars.
+where `location` is a location for a deadline or event. Not only will the location be displayed to users, it will also be embedded in **Add to Calendar** URLs so that it, too, can be added to users' calendars.
 
 #### Zoom
 

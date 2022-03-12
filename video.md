@@ -12,10 +12,10 @@ Whenever the player is paused, the browser's URL bar is updated with the timecod
 CS50 Video Player supports URLs of the form
 
 ```text
-https://video.cs50.io/:id
+https://video.cs50.io/{id}
 ```
 
-where `:id` is the ID of an instructional YouTube video. URLs of that form additionally support, via GET, these HTTP parameters:
+where `id` is the ID of an instructional YouTube video. URLs of that form additionally support, via GET, these HTTP parameters:
 
 * `screen`, which, if present, is the ID of a screen recording to synchronize with the instructional video.
 * `start`, which, if present, is a time, in seconds, at which to start playback. It must be non-negative, less than the duration of the video itself, and less than `end`, if present.
@@ -82,4 +82,4 @@ Per [YouTube](https://support.google.com/youtube/answer/9884579),
 
 ## Acknowledgements
 
-Special thanks to CS50's friends at [Google](https://www.google.com/) for their support of this app and to Twitter for its [emojis](https://twemoji.twitter.com/)!
+Special thanks to CS50's friends at [Google](https://www.google.com/) for their support of this app and to Twitter for its [emoji](https://twemoji.twitter.com/)!
