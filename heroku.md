@@ -42,10 +42,10 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://cs50.ha
     git init
     ```
 
-1. Add the GitHub repository as a "remote," where `username` is your own GitHub username.
+1. Add the GitHub repository as a "remote," where `USERNAME` is your own GitHub username.
 
     ```
-    git remote add origin https://github.com/username/finance.git
+    git remote add origin git@github.com:USERNAME/finance.git
     ```
 
 1. In the `requirements.txt` file inside of your `finance` directory, add `gunicorn` and `psycopg2`, each on separate lines. Your file should then resemble:
