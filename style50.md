@@ -177,7 +177,6 @@ To install `style50` within that command-line environment:
 1. Install [Artistic Style 3.0](http://astyle.sourceforge.net/). If running a Debian-based operating system (e.g., Ubuntu Linux), simply run
 
    ```text
-   add-apt-repository ppa:cs50/ppa
    apt-get update
    apt-get install astyle
    ```
