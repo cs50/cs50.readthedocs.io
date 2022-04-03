@@ -27,7 +27,7 @@ pip install --upgrade render50
 ## Usage
 
 ```text
-usage: render50 [-h] [-b] [-f] [-i INCLUDE] -o OUTPUT [-p PAGE] [-P] [-r] [-s [SCREEN]] [-S STYLE] [-x EXCLUDE] [-y] [-V]
+usage: render50 [-h] [-b] [-f] [-i INCLUDE] -o OUTPUT [-p [SIZE]] [-P] [-r] [-s [SIZE]] [-S STYLE] [-x EXCLUDE] [-y] [-V]
                 [INPUT ...]
 
 A command-line tool that renders source code as a PDF.
@@ -43,11 +43,12 @@ options:
                         pattern to include
   -o OUTPUT, --output OUTPUT
                         file to output
-  -p PAGE, --page PAGE  size for page, per https://developer.mozilla.org/en-US/docs/Web/CSS/@page/size
+  -p [SIZE], --print [SIZE]
+                        size of page, formatted for print, per https://developer.mozilla.org/en-US/docs/Web/CSS/@page/size
   -P, --no-path         omit paths in headers
   -r, --recursive       recurse into directories
-  -s [SCREEN], --screen [SCREEN]
-                        size for screen
+  -s [SIZE], --screen [SIZE]
+                        size of page, formatted for screen
   -S STYLE, --style STYLE
                         style of syntax highlighting, per https://pygments.org/demo/#try
   -x EXCLUDE, --exclude EXCLUDE
@@ -129,7 +130,7 @@ render50 -o foo.pdf -S bw foo.c
 However, that style might still boldface some keywords. You can further disable boldfacing (and color) as follows:
 
 ```text
-render50 -o foo.pdf --style= foo.c
+render50 -o foo.pdf -S "" foo.c
 ```
 
 ### Rendering URLs
@@ -144,7 +145,7 @@ Note that URLs on `github.com` are handled specially: URLs of the form `https://
 
 ### Overriding page size
 
-By default, `render50` outputs letter-sized (8.5" × 11") pages in landscape orientation. To override that default, invoke `render50` with `--print SIZE`, where `SIZE` is [as prescribed by CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/@page/size). Supported values for `SIZE` thus include:
+By default, `render50` outputs letter-sized (8.5" × 11") pages in landscape orientation. To override that default, invoke `render50` with `-p SIZE`, where `SIZE` is [as prescribed by CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/@page/size). Supported values for `SIZE` thus include:
 
 * `letter landscape`
 * `letter portrait`
@@ -155,7 +156,7 @@ Files' paths will be right-aligned atop each page (to allow for staples in top-l
 
 ### Formatting for screen
 
-To format output for screens (e.g., to display on a projector), invoke `render50` with `--screen [SIZE]`, where `SIZE` is any of:
+To format output for screens (e.g., to display on a projector), invoke `render50` with `-s [SIZE]`. Supported values for `SIZE` include:
 
 * `480p`
 * `720p`
@@ -163,6 +164,8 @@ To format output for screens (e.g., to display on a projector), invoke `render50
 * `4K`
 
 Files' paths will be left-aligned atop each page.
+
+If invoked without a value for `SIZE`, `render50 -s` alone will render pages at 480p (for visibility's sake on projectors).
 
 ## Source Code
 
