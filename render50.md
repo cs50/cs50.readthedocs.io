@@ -27,14 +27,15 @@ pip install --upgrade render50
 ## Usage
 
 ```text
-usage: render50 [-h] [-b] [-f] [-i INCLUDE] -o OUTPUT [-P] [-r] [-s SIZE] [-S STYLE] [-x EXCLUDE] [-y] [-V] [INPUT ...]
+usage: render50 [-h] [-b] [-f] [-i INCLUDE] -o OUTPUT [-p PAGE] [-P] [-r] [-s [SCREEN]] [-S STYLE] [-x EXCLUDE] [-y] [-V]
+                [INPUT ...]
 
 A command-line tool that renders source code as a PDF.
 
 positional arguments:
   INPUT                 file or URL to render
 
-optional arguments:
+options:
   -h, --help            show this help message and exit
   -b, --browser         render as a browser would
   -f, --force           overwrite existing files without prompting
@@ -42,9 +43,11 @@ optional arguments:
                         pattern to include
   -o OUTPUT, --output OUTPUT
                         file to output
+  -p PAGE, --page PAGE  size for page, per https://developer.mozilla.org/en-US/docs/Web/CSS/@page/size
   -P, --no-path         omit paths in headers
   -r, --recursive       recurse into directories
-  -s SIZE, --size SIZE  size of page, per https://developer.mozilla.org/en-US/docs/Web/CSS/@page/size
+  -s [SCREEN], --screen [SCREEN]
+                        size for screen
   -S STYLE, --style STYLE
                         style of syntax highlighting, per https://pygments.org/demo/#try
   -x EXCLUDE, --exclude EXCLUDE
@@ -141,12 +144,25 @@ Note that URLs on `github.com` are handled specially: URLs of the form `https://
 
 ### Overriding page size
 
-By default, `render50` outputs letter-sized (8.5" × 11") pages in landscape orientation. To override that default, invoke `render50` with `--size SIZE`, where `SIZE` is [as prescribed by CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/@page/size). Supported values for `SIZE` thus include:
+By default, `render50` outputs letter-sized (8.5" × 11") pages in landscape orientation. To override that default, invoke `render50` with `--print SIZE`, where `SIZE` is [as prescribed by CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/@page/size). Supported values for `SIZE` thus include:
 
-- `letter landscape`
-- `letter portrait`
-- `A4 landscape`
-- `A4 portrait`
+* `letter landscape`
+* `letter portrait`
+* `A4 landscape`
+* `A4 portrait`
+
+Files' paths will be right-aligned atop each page (to allow for staples in top-left corners).
+
+### Formatting for screen
+
+To format output for screens (e.g., to display on a projector), invoke `render50` with `--screen [SIZE]`, where `SIZE` is any of:
+
+* `480p`
+* `720p`
+* `1080p`
+* `4K`
+
+Files' paths will be left-aligned atop each page.
 
 ## Source Code
 
