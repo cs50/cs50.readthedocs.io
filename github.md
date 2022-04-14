@@ -16,7 +16,15 @@ But you can still use `check50` and `submit50`! You just need to log in a bit di
 1. Click **New SSH Key**.
 1. Paste your public key into the text box under **Key**. Optionally input a title under **Title** (e.g., `CS50`).
 1. Click **Add SSH Key**.
-1. Execute `ssh -T git@ssh.github.com -p 443`.  You should be greeted with "Hi USERNAME! You've successfully authenticated, but GitHub does not provide shell access."  If you don't see that, review the above steps to verify you didn't skip something.
+1. Execute `ssh -T git@ssh.github.com -p 443`.
+1. Enter "yes" and press enter if you see the following prompt (the IP address might be different):
+    ```
+    The authenticity of host '[ssh.github.com]:443 ([140.82.113.35]:443)' can't be established.
+    ED25519 key fingerprint is SHA256:7KMZvJiITZ+HbOyqjKJV2AeC5As3GSZES5abcd1NIe4.
+    This key is not known by any other names
+    Are you sure you want to continue connecting (yes/no/[fingerprint])?
+    ```
+1. You should be greeted with `"Hi USERNAME! You've successfully authenticated, but GitHub does not provide shell access."`  If you don't see that, review the above steps to verify you didn't skip something.
 
 You should now be able to use `check50` and `submit50` (and `git`) without GitHub username and password. But if you created a passphrase, you might still be prompted for that.
 
