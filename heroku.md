@@ -6,8 +6,6 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://cs50.ha
 
 1. Watch [Brian's seminar](https://youtu.be/MJUJ4wbFm_A) to learn about `git` and GitHub, if not already familiar.
 
-1. Sign up for free, private GitHub repositories at <https://education.github.com/discount_requests/new>, if you haven't already.
-
 1. Create a new **private** repository at <https://github.com/new> (called, e.g., `finance`).
 
 1. Take note of the **HTTPS** URL of the repository (e.g., `https://github.com/username/finance.git`, where `username` is your own GitHub username).
