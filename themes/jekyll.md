@@ -417,7 +417,21 @@ CS50's theme supports all of [Jekyll](https://jekyllrb.com/docs/)'s and [Kramdow
 * [lists](#lists)
 * [subtitles](#subtitles)
 
-It also supports [Mermaid](https://mermaid-js.github.io/)'s syntax, [just as GitHub does](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/).
+It also supports [Mermaid](https://mermaid-js.github.io/)'s syntax via fenced code blocks like:
+
+````
+```mermaid
+
+```
+````
+
+And it supports [scratchblocks](https://en.scratch-wiki.info/wiki/Block_Plugin/Syntax) via fenced code blocks like:
+
+````
+```scratch
+
+```
+````
 
 ### Links
 
