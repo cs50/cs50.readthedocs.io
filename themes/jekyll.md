@@ -2,7 +2,7 @@
 
 [Jekyll](https://jekyllrb.com/) is a static site generator for which CS50 has its own [theme](https://jekyllrb.com/docs/themes/), which comes with its own [layout](#layout), [includes](#includes), [configuration options](#configuration-options), [plugins](#plugins), and custom [syntax](#syntax). It also supports custom CSS via [Sass](#sass).
 
-The theme uses [Bootstrap](https://getbootstrap.com/) as well as other third-party libraries.
+The theme uses [Bootstrap](https://getbootstrap.com/) as well as other third-party libraries. In addition to [Kramdown](https://kramdown.gettalong.org/quickref.html), it also supports [Mermaid](https://mermaid-js.github.io/), [just as GitHub does](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/).
 
 To use CS50's theme, it suffices to configure your `Gemfile` as follows:
 
