@@ -61,6 +61,7 @@ You can alternatively use VS Code locally:
 To use VS Code locally without Docker, but with internet access, connecting to your codespace remotely:
 
 1. Download and install [VS Code](https://code.visualstudio.com/download) itself on your computer.
+1. Install VS Code's [GitHub Codespaces](https://marketplace.visualstudio.com/items?itemName=GitHub.codespaces) extension.
 1. Visit [code.cs50.io/connect](https://code.cs50.io/connect), following any on-screen prompts thereafter. Or, visit [code.cs50.io](https://code.cs50.io/) itself, check **Open in VS Code desktop**, and then log in as usual.
 
 ### With Docker
