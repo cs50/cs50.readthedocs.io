@@ -1,6 +1,8 @@
 # Visual Studio Code for CS50
 
-Visual Studio Code for CS50 is a web app at [code.cs50.io](https://code.cs50.io/) that adapts [GitHub Codespaces](https://github.com/features/codespaces) for students and teachers. It automates the process of creating a [repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories) inside of CS50's [GitHub organization](https://github.com/code50), pushing to it an initial [`.devcontainer.json`](https://docs.github.com/en/codespaces/customizing-your-codespace/configuring-codespaces-for-your-project), and creating a codespace. Ultimately, it allows students to start programming with just a browser, without needing to install or configure anything locally on their own computer. Within their browser is a full-fledged version of [Visual Studio Code](https://code.visualstudio.com/), aka VS Code, including a tabbed text editor, terminal window (connected to a Docker container running [`cs50/codespace`](https://cs50.readthedocs.io/cs50/codespace/)), and graphical file explorer.
+Visual Studio Code for CS50 is a web app at [code.cs50.io](https://code.cs50.io/) that adapts [GitHub Codespaces](https://github.com/features/codespaces) for students and teachers. It automates the process of creating a [repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories) inside of CS50's [GitHub organization](https://github.com/code50), pushing to it an initial [`.devcontainer.json`](https://docs.github.com/en/codespaces/customizing-your-codespace/configuring-codespaces-for-your-project), and creating a "codespace," which is a [Docker](https://en.wikipedia.org/wiki/Docker_(software)) "container" in the cloud (akin to your very own virtual server). Ultimately, it allows students to start programming with just a browser, without needing to install or configure anything locally on their own computer. Within their browser is a full-fledged version of [Visual Studio Code](https://code.visualstudio.com/), aka VS Code, including a tabbed text editor, terminal window (connected to a Docker container running [`cs50/codespace`](https://cs50.readthedocs.io/cs50/codespace/)), and graphical file explorer.
+
+You can also [use VS Code locally](#using-vs-code-locally), even offline without internet, particularly if feeling more comfortable.
 
 ## Getting Started
 
@@ -46,6 +48,33 @@ at which point you could use `git` within that `/workspaces/Hello-World` directo
 2. Under **Your codespaces**, to the right of `main`, click ***...***, select **Delete**, and click **OK**.
 
 You can then create a new codespace by logging back into [code.cs50.io](https://code.cs50.io/).
+
+## Using VS Code Locally
+
+You can alternatively use VS Code locally: 
+
+* [without Docker](#without-docker), but with internet access, so that you can connect to your codespace remotely
+* [with Docker](#with-docker), via which you'd run a codespace-like container on your own computer, even without internet access
+
+### Without Docker
+
+To use VS Code locally without Docker, but with internet access, connecting to your codespace remotely:
+
+1. Download and install [VS Code](https://code.visualstudio.com/download) itself on your computer.
+1. Install VS Code's [GitHub Codespaces](https://marketplace.visualstudio.com/items?itemName=GitHub.codespaces) extension.
+1. Visit [code.cs50.io/connect](https://code.cs50.io/connect), following any on-screen prompts thereafter. Or, visit [code.cs50.io](https://code.cs50.io/) itself, check **Open in VS Code desktop**, and then log in as usual.
+
+### With Docker
+
+To use VS Code locally with Docker, running a [codespace-like container](https://code.visualstudio.com/docs/remote/containers) on your own computer and opening a folder like `foo` therein:
+
+1. Download CS50's latest `.devcontainer.json` file from [raw.githubusercontent.com/cs50/codespace/main/.devcontainer.json](https://raw.githubusercontent.com/cs50/codespace/main/.devcontainer.json), saving it in `foo`. Because the file's name starts with a dot (i.e., period), it might seem to "disappear" when you download it. But, in a terminal window on Linux or macOS, you should see it with `ls -a`, and at a command prompt in Windows, you should see it with `dir /a`.
+1. Download, install, and start [Docker](/docker/) on your computer.
+1. Download and install [VS Code](https://code.visualstudio.com/download) itself on your computer.
+1. Install VS Code's [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension.
+1. Open VS Code's [command palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette), as via **Ctrl+Shift+P** on Linux, **⇧⌘P** on macOS, and **Ctrl+Shift+P** on Windows, select **>Remote Containers - Open Folder in Container...**, and open `foo`. Alternatively, select **>Remote Containers: Install devcontainer CLI**, and then, in VS Code's terminal window, `cd` to `foo` and execute `devcontainer open .`.
+
+Once the container finishes building and starting, you should find that `foo` is mounted within the container at `/workspaces/foo`.
 
 ## Acknowledgements
 
