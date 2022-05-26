@@ -73,6 +73,8 @@ To use VS Code locally with Docker, running a codespace-like container on your o
 1. Install VS Code's [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension.
 1. Open VS Code's [command palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette), as via **Ctrl+Shift+P** on Linux, **⇧⌘P** on macOS, and **Ctrl+Shift+P** on Windows, select **>Remote Containers - Open Folder in Container...**, and open `foo`.
 
+Once the container finishes building and starting, you should find that `foo` is mounted within the container at `/workspaces/foo`.
+
 ## Acknowledgements
 
 Special thanks to CS50's friends at [GitHub](https://github.com/) and [Microsoft](https://www.microsoft.com/) for their support of this app!
