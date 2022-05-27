@@ -51,7 +51,7 @@ You can then create a new codespace by logging back into [code.cs50.io](https://
 
 ## Using VS Code Locally
 
-You can alternatively use VS Code locally: 
+If feeling more comfortable, you can also use VS Code locally: 
 
 * [without Docker](#without-docker), but with internet access, so that you can connect to a codespace remotely
 * [with Docker](#with-docker), via which you'd run a codespace-like container on your own computer, even without internet access
