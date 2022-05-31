@@ -11,8 +11,9 @@ extensions = [
 ]
 
 html_css_files = [
-        "/_static/custom.css?" + str(round(time.time())),
-    "https://use.fontawesome.com/releases/v5.13.0/css/all.css"]
+    "/_static/custom.css?" + str(round(time.time())),
+    "https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+]
 html_js_files = ["/_static/custom.js?" + str(round(time.time()))]
 html_static_path = ["_static"]
 html_theme = "sphinx_rtd_theme"
@@ -22,6 +23,8 @@ html_theme_options = {
     "sticky_navigation": False
 }
 html_title = "CS50 Docs"
+
+myst_heading_anchors = 6
 
 ogp_image = "https://cs50.readthedocs.io/_images/2ep2od.jpg"
 ogp_image_alt = "ALL THE DOCS"
