@@ -251,7 +251,7 @@ The value of `tz` is used by CS50's [`local`](#local) tag.
 ## Plugins
 
 * [after](#after)
-* [alert](#plugins-alert)
+* [alert](#alert-1)
 * [before](#before)
 * [calendar](#calendar)
 * [local](#local)
@@ -415,7 +415,7 @@ CS50's theme supports all of [Jekyll](https://jekyllrb.com/docs/)'s and [Kramdow
 
 * [links](#links)
 * [lists](#lists)
-* [subtitles](#subtitles)
+* [subtitles](#subtitle)
 
 It also supports [Mermaid](https://mermaid-js.github.io/)'s syntax via fenced code blocks like:
 

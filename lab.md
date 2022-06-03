@@ -30,8 +30,8 @@ To create a lab:
 
 1. [Sign up](https://github.com/join) for a (free) GitHub account, if you don't have one already.
 1. [Create a repository](https://github.com/new), if you don't have one (that you'd like to use) already.
-1. [Create a file](https://blog.github.com/2012-12-05-creating-files-on-github/) in that repository called `.cs50.yml`, optionally [inside of one or more directories](https://github.com/KirstieJane/STEMMRoleModels/wiki/Creating-new-folders-in-GitHub-repository-via-the-browser), using GitHub's website. Or create (and push) the same using `git` itself. Configure `.cs50.yml` [per below](#cs50-yaml).
-1. Optionally create another file in the same directory as `.cs50.yml` called `README.md`, configured [per below](#cs50-yaml). While technically optional, without this file your lab won't have instructions!
+1. [Create a file](https://blog.github.com/2012-12-05-creating-files-on-github/) in that repository called `.cs50.yml`, optionally [inside of one or more directories](https://github.com/KirstieJane/STEMMRoleModels/wiki/Creating-new-folders-in-GitHub-repository-via-the-browser), using GitHub's website. Or create (and push) the same using `git` itself. Configure `.cs50.yml` [per below](#cs50yml).
+1. Optionally create another file in the same directory as `.cs50.yml` called `README.md`, configured [per below](#cs50yml). While technically optional, without this file your lab won't have instructions!
 1. Optionally create in or [upload](https://blog.github.com/2016-02-18-upload-files-to-your-repositories/) to that directory (or any descendent thereof) any files you'd like to install in a student's environment (and automatically open in the text editor's tabs).
 
 You can then (assuming no mistakes!) visit `https://lab.cs50.io/:owner/:repo/:branch/:path`, where each of those placeholders is [as above](#cs50-lab), to see your lab!
@@ -48,7 +48,7 @@ lab50: true
 
 #### `window`
 
-It turns out [the above](#cs50-yaml) is an abbreviation of (and equivalent to)
+It turns out [the above](#cs50yml) is an abbreviation of (and equivalent to)
 
 ```text
 lab50:
