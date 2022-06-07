@@ -168,6 +168,30 @@ Parameter markers (e.g., ``?``) can only be used as placeholders for "literals" 
         if column in ["foo", "bar", "baz"]:
             rows = db.execute(f"SELECT * FROM {column}")
 
+How can I enable logging of SQL statements?
+-------------------------------------------
+
+By default, logging of SQL statements is disabled unless you have an environment variable called ``FLASK_ENV``, the value of which is ``development``, as is the case in `Visual Studio Code for CS50 <https://cs50.readthedocs.io/code/>`_. You can enable logging of SQL statements with code like:
+
+    .. code-block::
+
+        import logging
+
+        logging.getLogger("cs50").disabled = False
+
+Statements that succeed will be prefixed with ``INFO``. Statements that fail will be prefixed with ``ERROR``.
+
+How can I disable logging of SQL statements?
+--------------------------------------------
+
+To disable logging of SQL statements, even if you have an environment variable called ``FLASK_ENV``, the value of which is ``development``, as is the case in `Visual Studio Code for CS50 <https://cs50.readthedocs.io/code/>`_, you can use code like:
+
+    .. code-block::
+
+        import logging
+
+        logging.getLogger("cs50").setLevel("CRITICAL")
+
 Troubleshooting
 ===============
 
