@@ -81,7 +81,7 @@ Usage
     :param \*args: zero or more positional arguments with which any parameter markers should be substituted
     :param \*\*kwargs: zero or more named arguments with which any parameter markers should be substituted
 
-    Any argument whose value is a :py:class:`list` or :py:class:`tuple` of other values is converted to a comma-separated list of those values, formatted for SQL's ``IN`` operator.
+    Any argument whose value is a :py:class:`list` or :py:class:`tuple` of other values is converted to a comma-separated list of those values, formatted for SQL's ``IN`` operator. Any argument whose value is `None` is converted to `NULL` for SQL.
 
     :returns: 
         - for ``CREATE``, ``True`` on success or ``False`` on failure
