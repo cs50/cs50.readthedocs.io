@@ -18,7 +18,6 @@ html_js_files = ["/_static/custom.js?" + str(round(time.time()))]
 html_static_path = ["_static"]
 html_theme = "sphinx_rtd_theme"
 html_theme_options = {
-    "canonical_url": True,
     "display_version": False,
     "prev_next_buttons_location": False,
     "sticky_navigation": False
