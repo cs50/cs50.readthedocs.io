@@ -12,6 +12,7 @@ When you run `submit50`, your files are "pushed" (i.e., uploaded) to CS50's "org
     ```text
     pip3 install submit50
     ```
+    Under Windows, please [install the Linux subsystem](https://docs.microsoft.com/en-us/windows/wsl/install-win10). Then install `submit50` within the subsystem.
 
 ### Upgrading
 
@@ -22,16 +23,20 @@ pip3 install --upgrade submit50
 ## Usage
 
 ```text
-usage: submit50 [-h] [--logout] [-v] [-V] slug
+usage: submit50 [-h] [--logout] [--log-level {debug,info,warning,error}] [-V]
+                slug
 
 positional arguments:
-  slug           prescribed identifier of work to submit
+  slug                  prescribed identifier of work to submit
 
-optional arguments:
-  -h, --help     show this help message and exit
-  --logout       logout of submit50
-  -v, --verbose  show commands being executed
-  -V, --version  show program's version number and exit
+options:
+  -h, --help            show this help message and exit
+  --logout              logout of submit50
+  --log-level {debug,info,warning,error}
+                        warning: displays usage warnings. info: adds all
+                        commands run. debug: adds the output of all commands
+                        run.
+  -V, --version         show program's version number and exit
 ```
 
 ## Examples
@@ -79,12 +84,12 @@ Note again that the branch should not be `master`, `main`, or the like, and inst
 To see how `submit50` uses `git` underneath the hood, execute
 
 ```text
-submit50 -v slug
+submit50 --log-level info slug
 ```
 or
 
 ```text
-submit50 --verbose slug
+submit50 --log-level debug slug
 ```
 where `slug` is the unique identifier for the work you're submitting.
 
