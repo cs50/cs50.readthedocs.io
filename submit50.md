@@ -12,6 +12,7 @@ When you run `submit50`, your files are "pushed" (i.e., uploaded) to CS50's "org
     ```text
     pip3 install submit50
     ```
+  Note: If on Windows, please first install [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/install-win10). We recommend choosing the `Ubuntu` distribution. Then within WSL, follow the above steps to install `submit50`.
 
 ### Upgrading
 
@@ -22,16 +23,22 @@ pip3 install --upgrade submit50
 ## Usage
 
 ```text
-usage: submit50 [-h] [--logout] [-v] [-V] slug
+usage: submit50 [-h] [--logout] [--log-level {debug,info,warning,error}] [-V] slug
 
 positional arguments:
-  slug           prescribed identifier of work to submit
+  slug                  prescribed identifier of work to submit
 
 optional arguments:
-  -h, --help     show this help message and exit
-  --logout       logout of submit50
-  -v, --verbose  show commands being executed
-  -V, --version  show program's version number and exit
+  -h, --help            show this help message and exit
+
+  --logout              logout of submit50
+
+  --log-level {debug,info,warning,error}
+                        warning: displays usage warnings.
+                        info: adds all commands run.
+                        debug: adds the output of all commands run.
+
+  -V, --version         show program's version number and exit
 ```
 
 ## Examples
@@ -52,7 +59,7 @@ By default, `submit50` pushes your work to GitHub via HTTPS, which requires your
 
 1. [Generate an SSH key and add it to `ssh-agent`](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/).
 1. [Add the SSH key to your GitHub account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/).
-1. Execute 
+1. Execute
    ```text
    ssh -T -p443 git@ssh.github.com
    ```
@@ -64,7 +71,7 @@ By default, `submit50` pushes your work to GitHub via HTTPS, which requires your
     ```
   (where `<USERNAME>` is your GitHub username).
 
-Thereafter, you should be able to run `submit50` without ever being prompted for your GitHub username or password. 
+Thereafter, you should be able to run `submit50` without ever being prompted for your GitHub username or password.
 
 ### Submitting without `submit50`
 
@@ -79,12 +86,12 @@ Note again that the branch should not be `master`, `main`, or the like, and inst
 To see how `submit50` uses `git` underneath the hood, execute
 
 ```text
-submit50 -v slug
+submit50 --log-level info slug
 ```
 or
 
 ```text
-submit50 --verbose slug
+submit50 --log-level debug slug
 ```
 where `slug` is the unique identifier for the work you're submitting.
 
