@@ -116,10 +116,10 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://cs50.ha
 
 1. Ensure that any column that's a primary key has the `AUTOINCREMENT` keyword, [re-creating it if need be](https://stackoverflow.com/a/10464323/5156190).
 
-1. In Visual Studio Code or CS50 IDE, execute the below to import `finance.db` into your PostgreSQL database, where `URI` is that same URI. Be sure to append `?sslmode=require` to the URI. Note that disabling SSL's certification verification with `--no-ssl-cert-verification` is not recommended in general but seems to be a [temporary workaround](https://github.com/dimitri/pgloader/commit/16dda01f371f033e0df75d80127643605df7830f).
+1. In Visual Studio Code or CS50 IDE, execute the below to import `finance.db` into your PostgreSQL database, where `URI` is that same URI. Be sure to append `?sslmode=allow` to the URI. Note that disabling SSL's certification verification with `--no-ssl-cert-verification` is not recommended in general but seems to be a [temporary workaround](https://github.com/dimitri/pgloader/commit/16dda01f371f033e0df75d80127643605df7830f).
 
     ```
-    pgloader --no-ssl-cert-verification finance.db URI?sslmode=require
+    pgloader --no-ssl-cert-verification finance.db URI?sslmode=allow
     ```
 
     Thereafter, if you'd like to browse or edit your PostgreSQL database, you can use Adminer (a tool like phpLiteAdmin for PostgreSQL databases), at [adminer.cs50.net](https://adminer.cs50.net/). Log in using your database's credentials: at `https://dashboard.heroku.com/apps/app-name/resources`, where `app-name` is your Heroku app's name, click **Heroku Postgres**. In the tab that opens, click **Settings**, then click **View Credentials...**.
