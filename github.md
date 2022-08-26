@@ -24,6 +24,7 @@ But you can still use `check50` and `submit50`! You just need to log in a bit di
     This key is not known by any other names
     Are you sure you want to continue connecting (yes/no/[fingerprint])?
     ```
+1. If you input a "passphrase" (i.e., password) earlier, enter the passphrase and press Enter when you see the following prompt  `"Enter passphrase for key 'home/ubuntu/.ssh/id_rsa':"`
 1. You should be greeted with `"Hi USERNAME! You've successfully authenticated, but GitHub does not provide shell access."`  If you don't see that, review the above steps to verify you didn't skip something.
 
 You should now be able to use `check50` and `submit50` (and `git`) without GitHub username and password. But if you created a passphrase, you might still be prompted for that.
