@@ -1,5 +1,14 @@
 # CS50 Lab
 
+<div class="admonition note">
+<p class="first admonition-title">
+Note
+</p>
+<p class="last">
+CS50 Lab will be decommissioned on July 1, 2023. A new-and-improved version will be built into <a href="/code">Visual Studio Code for CS50</a> instead! Documentation coming soon.
+</p>
+</div>
+
 CS50 is a programming environment at [lab.cs50.io](https://lab.cs50.io/) for scaffolded learning that enables
 
 * teachers to create step-by-step programming lessons (labs), providing incremental feedback at each step, and

@@ -1,5 +1,14 @@
 # CS50 Sandbox
 
+<div class="admonition note">
+<p class="first admonition-title">
+Note
+</p>
+<p class="last">
+CS50 Sandbox will be decommissioned on July 1, 2023. A free alternative is <a href="https://replit.com/">Replit</a>!
+</p>
+</div>
+
 CS50 Sandbox is a web app at [sandbox.cs50.io](https://sandbox.cs50.io/), for students and teachers especially, that allows users to
 
 * create temporary programming environments (sandboxes) quickly and
