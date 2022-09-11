@@ -40,9 +40,13 @@ See [code.visualstudio.com/docs/getstarted/userinterface](https://code.visualstu
 
 ## Troubleshooting
 
+* Visit [code.cs50.io/.devcontainer.json](https://code.cs50.io/update50.sh) for the latest version of `.devcontainer.json` (without your time zone).
 * Visit [code.cs50.io/codespaces](https://code.cs50.io/codespaces) to access your codespaces in CS50's GitHub organization.
 * Visit [code.cs50.io/commits](https://code.cs50.io/commits) to access all of the commits that have been pushed to your repository in CS50's GitHub organization.
 * Visit [code.cs50.io/repo](https://code.cs50.io/repo) to access your repository in CS50's GitHub organization.
+* Visit [code.cs50.io/restart](https://code.cs50.io/restart) to restart your codespace.
+* Visit [code.cs50.io/stop](https://code.cs50.io/stop) to stop your codespace.
+* Visit [code.cs50.io/update50.sh](https://code.cs50.io/update50.sh) for the latest version of `update50`.
 
 ### Deleting a Codespace
 
