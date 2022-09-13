@@ -102,6 +102,18 @@ Alternatively, select **>Remote-Containers: Install devcontainer CLI**, and then
 
 Once the container finishes building and starting, you should find that `foo` is mounted within the container at `/workspaces/foo`.
 
+## Authorization
+
+Visual Studio Code for CS50 is implemented as an [OAuth App](https://docs.github.com/en/developers/apps/getting-started-with-apps/about-apps#about-oauth-apps) that "lets external applications request authorization to private details in a user's GitHub account without accessing their password." When you log into Visual Studio Code for CS50 using your GitHub account, CS50 receives, via a [web application flow](https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps#web-application-flow), an "access token" from GitHub (but not your password) via which CS50 can execute certain operations (i.e., API calls) on your behalf.
+
+But you'll first be prompted to "authorize" CS50. Only then will that access token have certain permissions, limited by [scopes](https://docs.github.com/en/developers/apps/building-oauth-apps/scopes-for-oauth-apps). CS50 currently requests these scopes:
+
+* `codespace`, via which CS50 can create and manage [codespaces](https://github.com/features/codespaces) on your behalf
+* `repo`, via which CS50 can manage a [repository](https://docs.github.com/en/repositories) for you and accept your invitation thereto
+* `user:email`, via which CS50 can access the email address with which you've registered for GitHub, but not your actual emails
+
+Note that scopes are not as granular as would be ideal. The `codespace` scope technically allows CS50 to manage any of your codespaces, not just the one(s) you use for C550. And the `repo` scope technically allows CS50 to access any of your repositories, not just the one(s) you use for CS50. In practice, CS50 only uses those scopes to manage CS50-specific resources. But if you have any concerns, you are welcome to create a (separate) GitHub account that you only use for CS50!
+
 ## Acknowledgements
 
 Special thanks to CS50's friends at [GitHub](https://github.com/) and [Microsoft](https://www.microsoft.com/) for their support of this app!
