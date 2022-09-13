@@ -40,6 +40,18 @@ See [code.visualstudio.com/docs/getstarted/userinterface](https://code.visualstu
 
 ## Troubleshooting
 
+### Error Messages
+
+#### Could not register service workers
+
+If using Firefox, [disable Enhanced Tracking Protection](https://support.mozilla.org/en-US/kb/report-breakage-due-blocking), or use a different browser.
+
+#### The workbench failed to connect to the server
+
+If using Firefox, [disable Enhanced Tracking Protection](https://support.mozilla.org/en-US/kb/report-breakage-due-blocking), or use a different browser.
+
+### Shortcuts
+
 * Visit [code.cs50.io/.devcontainer.json](https://code.cs50.io/update50.sh) for the latest version of `.devcontainer.json` (without your time zone).
 * Visit [code.cs50.io/codespaces](https://code.cs50.io/codespaces) to access your codespaces in CS50's GitHub organization.
 * Visit [code.cs50.io/commits](https://code.cs50.io/commits) to access all of the commits that have been pushed to your repository in CS50's GitHub organization.
