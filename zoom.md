@@ -31,7 +31,7 @@ Also helpful for teachers might be [this blog post](https://medium.com/@cs50/tea
 
 ## Client-Side Settings
 
-*as of version 5.8.6*
+*as of version 5.12.2*
 
 ### Linux
 
@@ -423,8 +423,17 @@ Check this radio button in Zoom so that you can see more participants at once.
 <span class="fa-li"><i class="fas fa-check-square"></i></span>
 <strong>
 Automatically adjust microphone volume
+</strong>
+</li>
+
+<li>
+<span class="fa-li"><i class="fas fa-dot-circle"></i></span>
+<strong>
+Zoom optimized audio
+</strong>
 <br>
-Suppress background noise
+<strong>
+Background noise suppression
 <p>
 <i class="fas fa-dot-circle"></i>
 Auto
@@ -488,16 +497,6 @@ Side-by-side Mode
 </strong>
 <p>
 Check this box in Zoom so that you still see participants when someone's screen is shared.
-</p>
-</li>
-
-<li>
-<span class="fa-li"><i class="fas fa-check-square"></i></span>
-<strong>
-Silence system notifications when sharing desktop
-</strong>
-<p>
-Check this box in Zoom for privacy's sake, so that others don't see your private notifications.
 </p>
 </li>
 
@@ -673,8 +672,17 @@ Check this radio button in Zoom so that you can see more participants at once.
 <span class="fa-li"><i class="fas fa-check-square"></i></span>
 <strong>
 Automatically adjust microphone volume
+</strong>
+</li>
+
+<li>
+<span class="fa-li"><i class="fas fa-dot-circle"></i></span>
+<strong>
+Zoom optimized audio
+</strong>
 <br>
-Suppress background noise
+<strong>
+Background noise suppression
 <p>
 <i class="fas fa-dot-circle"></i>
 Auto
