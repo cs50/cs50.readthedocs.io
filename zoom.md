@@ -872,7 +872,7 @@ Enable this setting for privacy's sake so that everyone's microphone is off by d
 <ul class="fa-ul">
 
 <li>
-<strong>Chat</strong>
+<strong>Meeting chat</strong>
 <span class="fa-li"><i class="fas fa-toggle-on"></i></span>
 <p>
 Enable this setting so that students can ask questions via chat and so that you, e.g., can share links via chat.
@@ -939,7 +939,7 @@ Enable this setting so that only you can share your screen until you grant other
 </li>
 
 <li>
-<strong>Disable desktop/screen share for users</strong>
+<strong>Disable desktop screen sharing for meetings you host</strong>
 <span class="fa-li"><i class="fas fa-toggle-off"></i></span>
 <p>
 Disable this setting so that screens can be shared.
@@ -965,7 +965,7 @@ Enable this setting so that students can't annotate your (or another student's) 
 </li>
 
 <li>
-<strong>Whiteboard</strong>
+<strong>Whiteboard (Classic)</strong>
 <span class="fa-li"><i class="fas fa-toggle-on"></i></span>
 <p>
 Enable this setting so that you can use a whiteboard during class.
@@ -1065,20 +1065,18 @@ Check this box so that you record, at least, each active speaker and any shared 
 </li>
 
 <li>
-<strong>Automatic recording</strong>
+<strong>Allow cloud recording sharing</strong>
 <span class="fa-li"><i class="fas fa-toggle-on"></i></span>
 <p>
-Enable this setting so that you don't forget to record a class.
+Enable this setting so that you can easily share a recording after class as needed.
 </p>
 </li>
 
 <li>
+<strong>Automatic recording</strong>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
 <p>
-<i class="fas fa-dot-circle"></i>
-<strong>Record in the cloud</strong>
-</p>
-<p>
-Enable this setting so that you can easily share a recording after class as needed.
+Enable this setting so that you don't forget to record a class.
 </p>
 </li>
 
