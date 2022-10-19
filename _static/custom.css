@@ -13,24 +13,24 @@ nav code, .wy-breadcrumbs code {
     font-size: inherit;
 }
 
-.rst-content .section {
+.rst-content section {
     padding-top: 12px;
 }
 
 /* Remove bottom margins in nested lists */
-.rst-content .section ol p,
-.rst-content .section ol div[class^='highlight-'],
-.rst-content .section ul p,
-.rst-content .section ul div[class^='highlight-'] {
+.rst-content section ol p,
+.rst-content section ol div[class^='highlight-'],
+.rst-content section ul p,
+.rst-content section ul div[class^='highlight-'] {
     margin-bottom: 6px !important;
     margin-top: 6px !important;
 }
 
 /* Add margins between list items */
-.rst-content .section ol li:first-child,
-.rst-content .section ol li + li,
-.rst-content .section ul li:first-child,
-.rst-content .section ul li + li {
+.rst-content section ol li:first-child,
+.rst-content section ol li + li,
+.rst-content section ul li:first-child,
+.rst-content section ul li + li {
     margin-top: 6px;
 }
 
@@ -63,11 +63,11 @@ footer [role=contentinfo] {
 }
 
 /* Else too much space between h{i} and h{i+1} if latter immediately follows former */
-.rst-content h1 + .section,
-.rst-content h2 + .section,
-.rst-content h3 + .section,
-.rst-content h4 + .section,
-.rst-content h5 + .section {
+.rst-content h1 + section,
+.rst-content h2 + section,
+.rst-content h3 + section,
+.rst-content h4 + section,
+.rst-content h5 + section {
     padding-top: 0;
 }
 
@@ -131,33 +131,33 @@ a.fa.fa-github {
     display: inline-block;
     vertical-align: middle;
 }
-.rst-content .section ul.fa-ul li > :first-child {
+.rst-content section ul.fa-ul li > :first-child {
     margin-top: 0;
 }
-.rst-content .section ul.fa-ul li > * {
+.rst-content section ul.fa-ul li > * {
     margin-bottom: 0;
     margin-top: 0;
 }
 
 /* Separate checkboxes vertically */
-.rst-content .section ul.fa-ul li {
+.rst-content section ul.fa-ul li {
     padding-bottom: 6px;
 }
 
 /* Ensure only Font Awesome's checkboxes appear */
-.rst-content .section ul.fa-ul li {
+.rst-content section ul.fa-ul li {
     list-style-type: none;
 }
 
 /* Match Zoom's switches */
-.rst-content .section ul.fa-ul li .fa-toggle-off {
+.rst-content section ul.fa-ul li .fa-toggle-off {
     color: #747487;
 }
-.rst-content .section ul.fa-ul li .fa-toggle-on {
+.rst-content section ul.fa-ul li .fa-toggle-on {
     color: #0E71EB;
 }
 
 /* Match nested unordered lists */
-.rst-content .section li ol {
+.rst-content section li ol {
     margin-bottom: 0;
 }
