@@ -1,6 +1,5 @@
 .*
 !.gitignore
-!.travis.yml
 !.readthedocs.yml
 _build/
 check50/
