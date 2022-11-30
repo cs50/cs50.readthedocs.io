@@ -1,6 +1,6 @@
 # Heroku
 
-[Heroku](https://www.heroku.com/) is a "platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud." Heroku even offers a [free plan](https://www.heroku.com/pricing).
+[Heroku](https://www.heroku.com/) is a "platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud."
 
 Here's how to deploy your implementation of, say, [C$50 Finance](https://cs50.harvard.edu/x/2020/tracks/web/finance/) to Heroku from GitHub.
 
