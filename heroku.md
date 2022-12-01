@@ -67,7 +67,7 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://cs50.ha
     ```
     If you visit `https://github.com/username/finance`, where `username` is your own GitHub username, you should see your code in the repository.
 
-1. Sign up for a free Heroku account at <https://signup.heroku.com/>, if you don't have one already.
+1. Sign up for a Heroku account at <https://signup.heroku.com/>, if you don't have one already.
 
 1. Create a new app at <https://dashboard.heroku.com/new-app>.
 
@@ -87,7 +87,7 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://cs50.ha
 
     1. Add a new variable called **API_KEY**, the value of which is your API token for IEX. Recall that, after registering for a developer account at <https://iexcloud.io/>, you can obtain your API token under **API Tokens**. Be sure to use your **PUBLISHABLE** token as the value for **API_KEY**, not your **SECRET** token.
 
-1. Search for and provision **Heroku Postgres** add-ons at `https://dashboard.heroku.com/apps/app-name/resources`, where `app-name` is your Heroku app's name; select a **Plan name** of **Hobby Dev — Free**.
+1. Search for and provision **Heroku Postgres** add-ons at `https://dashboard.heroku.com/apps/app-name/resources`, where `app-name` is your Heroku app's name; select a [**Plan name**](https://elements.heroku.com/addons/heroku-postgresql) that best suits your project.
 
 1. At `https://dashboard.heroku.com/apps/app-name/resources`, where `app-name` is your Heroku app's name, click **Heroku Postgres**. In the tab that opens, click **Settings**, then click **View Credentials...**. Highlight and copy the **URI** that appears.
 
