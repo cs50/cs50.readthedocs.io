@@ -16,6 +16,8 @@ But you can still use `check50` and `submit50`! You just need to log in a bit di
 1. Click **New SSH Key**.
 1. Paste your public key into the text box under **Key**. Optionally input a title under **Title** (e.g., `CS50`).
 1. Click **Add SSH Key**.
+1. Execute `eval "$(ssh-agent -s)` to start the ssh-agent in the background.
+1. To add the created ssh key. `ssh-add ~/.ssh/id_rsa.pub`. It should say the identity is added.
 1. Execute `ssh -T git@ssh.github.com -p 443`.
 1. Enter "yes" and press enter if you see the following prompt (the IP address might be different):
     ```
