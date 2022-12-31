@@ -80,6 +80,7 @@
    id
    ide/index
    lab
+   manual
    render
    sandbox
    time
