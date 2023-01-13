@@ -16,6 +16,7 @@ CS50 Render supports, via POST using `multipart/form-data`, these HTTP parameter
 
 * `file`, an `input` with `type="file"`, the value of which is a file to be rendered.
 * `size`, the value of which, if provided, per [developer.mozilla.org/en-US/docs/Web/CSS/@page/size](https://developer.mozilla.org/en-US/docs/Web/CSS/@page/size), specifies the size of the page to render.
+* `style`, the value of which, if provided, should be any of [these styles](https://pygments.org/styles/).
 * `y`, which, if provided (with any value), indicates that the files should be rendered side by side.
 
 An HTTP request to CS50 Render must contain one or more values for `file`. But if `y` is present, the request must contain no more than three such values, as only two or three files can be rendered side by side.
