@@ -4,20 +4,6 @@ Visual Studio Code for CS50 is a web app at [code.cs50.io](https://code.cs50.io/
 
 You can also [use VS Code locally](#vs-code-desktop), even offline without internet, particularly if feeling more comfortable.
 
-## Git
-
-Because a codespace is already associated with a Git repository in CS50's `code50` organization at <https://github.com/code50>, which is used for automated backups, CS50 effectively disables `git` anytime you're inside of `/workspaces/$RepositoryName` (which is a codespace's default directory), wherein `$RepositoryName` is your (numeric) GitHub ID.
-
-However, you can still use `git` outside of that directory, as by cloning other repositories into `/workspaces` itself. For instance, if you'd like to clone <https://github.com/octocat/Hello-World> into a codespace, you could execute
-
-```
-cd /workspaces
-git clone https://github.com/octocat/Hello-World
-cd Hello-World
-```
-
-at which point you could use `git` within that `/workspaces/Hello-World` directory as usual. Note that only `/workspaces/$RepositoryName` will be automatically backed up to CS50's `code50` organization; repositories that you clone into `/workspaces` will not.
-
 ## Settings
 
 VS Code supports quite a few [settings](https://code.visualstudio.com/docs/getstarted/settings) via which you can customize a codespace:
@@ -102,7 +88,23 @@ Alternatively, select **>Remote-Containers: Install devcontainer CLI**, and then
 
 Once the container finishes building and starting, you should find that `foo` is mounted within the container at `/workspaces/foo`.
 
-## Authorization
+## Git
+
+Because a codespace is already associated with a Git repository in CS50's `code50` organization at <https://github.com/code50>, which is used for automated backups, CS50 effectively disables `git` anytime you're inside of `/workspaces/$RepositoryName` (which is a codespace's default directory), wherein `$RepositoryName` is your (numeric) GitHub ID.
+
+However, you can still use `git` outside of that directory, as by cloning other repositories into `/workspaces` itself. For instance, if you'd like to clone <https://github.com/octocat/Hello-World> into a codespace, you could execute
+
+```
+cd /workspaces
+git clone https://github.com/octocat/Hello-World
+cd Hello-World
+```
+
+at which point you could use `git` within that `/workspaces/Hello-World` directory as usual. Note that only `/workspaces/$RepositoryName` will be automatically backed up to CS50's `code50` organization; repositories that you clone into `/workspaces` will not.
+
+## GitHub
+
+### Authorization
 
 Visual Studio Code for CS50 is implemented as an [OAuth App](https://docs.github.com/en/developers/apps/getting-started-with-apps/about-apps#about-oauth-apps) that "lets external applications request authorization to private details in a user's GitHub account without accessing their password." When you log into Visual Studio Code for CS50 using your GitHub account, CS50 receives, via a [web application flow](https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps#web-application-flow), an "access token" from GitHub (but not your password) via which CS50 can execute certain operations (i.e., API calls) on your behalf.
 
@@ -114,6 +116,13 @@ But you'll first be prompted to "authorize" CS50. Only then will that access tok
 * `user:email`, via which CS50 can access the email address with which you've registered for GitHub, but not your actual emails
 
 Note that scopes are not as granular as would be ideal. The `codespace` scope technically allows CS50 to manage any of your codespaces, not just the one(s) you use for C550. And the `repo` scope technically allows CS50 to access any of your repositories, not just the one(s) you use for CS50. In practice, CS50 only uses those scopes to manage CS50-specific resources. But if you have any concerns, you are welcome to create a (separate) GitHub account that you only use for CS50!
+
+### Organization Access 
+
+When you log into Visual Studio Code for CS50, your codespace is configured with a "token" that has `repo` [scope](https://docs.github.com/en/developers/apps/building-oauth-apps/scopes-for-oauth-apps#available-scopes), which lets `git` (via a [credential helper](https://git-scm.com/docs/gitcredentials#_avoiding_repetition)) access repositories to which your GitHub account has access.
+
+If you try to access a repository that's owned by an [organization](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/about-organizations) that has not granted access to Visual Studio Code for CS50, though, `git` might err with "Repository not found." (And `gh` might err with "Could not resolve to a Repository.") To grant (or request) access for that organization, visit [github.com/settings/connections/applications/d1a90a524497a69391fa](https://github.com/settings/connections/applications/d1a90a524497a69391fa). Alternatively, you can configure your codespace to use [SSH](/github/#ssh) or a [personal access token](/github/#personal-access-token) instead, both of which would have access to any repositories to which your GitHub account has access, whether or not owned by an organization.
+
 
 ## Acknowledgements
 
