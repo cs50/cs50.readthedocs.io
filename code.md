@@ -12,7 +12,7 @@ VS Code supports quite a few [settings](https://code.visualstudio.com/docs/getst
 1. Remote settings, which are set by CS50 via `.devcontainer.json` file in a codespace. [Remote settings override User settings](https://code.visualstudio.com/docs/getstarted/settings#_settings-precedence).
 1. Workspace settings, which can be set by you via VS Code's GUI (or by editing `.vscode/settings.json` manually). [Workspace settings override Remote settings](https://docs.github.com/en/codespaces/customizing-your-codespace/configuring-codespaces-for-your-project#creating-a-custom-codespace-configuration).
 
-In terms of predecence, then, Workspace settings override Remote settings, and Remote settings override User settings.
+In other words, Workspace settings override Remote settings, and Remote settings override User settings.
 
 If you use VS Code outside of CS50, you might thus want to store most of your settings in User settings (and enable Settings Sync). And if you would like to override any of [CS50's Remote settings](https://code.cs50.io/settings.json), you can do so via Workspace settings.
 
