@@ -5,7 +5,7 @@
 Note
 </p>
 <p class="last">
-It is no longer necessary to configure [SSH](#ssh) or create a [personal access token](#personal-access-token) when using [Visual Studio Code for CS50](/code/) at [code.cs50.io](https://code.cs50.io/). Both `check50` and `submit50` should "just work," so long as you have logged into [submit.cs50.io](https://submit.cs50.io/) at least once.
+It is no longer necessary to configure <a href="#ssh">SSH</a> or create a <a href="#personal-access-token">personal access token</a> when using <a href="/code/">Visual Studio Code for CS50</a> at <a href="https://code.cs50.io/">code.cs50.io</a>. Both <code class="docutils literal notranslate"><span class="pre">check50</span></code> and <code class="docutils literal notranslate"><span class="pre">submit50</span></code> should "just work," so long as you have logged into <a href="https://submit.cs50.io/">submit.cs50.io</a> at least once.
 </p>
 </div>
 
