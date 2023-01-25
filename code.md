@@ -38,11 +38,12 @@ If using Firefox, [disable Enhanced Tracking Protection](https://support.mozilla
 
 ### Shortcuts
 
-* Visit [code.cs50.io/.devcontainer.json](https://code.cs50.io/.devcontainer.json) for the latest version of `.devcontainer.json` (without your time zone).
+* Visit [code.cs50.io/.devcontainer.json](https://code.cs50.io/.devcontainer.json) for the latest version of CS50's `.devcontainer.json`.
 * Visit [code.cs50.io/codespaces](https://code.cs50.io/codespaces) to access your codespaces in CS50's GitHub organization.
 * Visit [code.cs50.io/commits](https://code.cs50.io/commits) to access all of the commits that have been pushed to your repository in CS50's GitHub organization.
 * Visit [code.cs50.io/repo](https://code.cs50.io/repo) to access your repository in CS50's GitHub organization.
 * Visit [code.cs50.io/restart](https://code.cs50.io/restart) to restart your codespace.
+* Visit [code.cs50.io/settings.json](https://code.cs50.io/settings.json) for CS50's default settings for VS Code.
 * Visit [code.cs50.io/stop](https://code.cs50.io/stop) to stop your codespace.
 * Visit [code.cs50.io/update50.sh](https://code.cs50.io/update50.sh) for the latest version of `update50`.
 
