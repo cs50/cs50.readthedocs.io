@@ -126,6 +126,15 @@ If you try to access a repository that's owned by an [organization](https://docs
 
 ## FAQ
 
+### I can't type anything in the terminal
+
+If you can't type anything in the terminal, please do the followings:
+
+1. Click the Settings icon (the gear icon on the bottom-left icon)
+2. Search for "terminal.integrated.gpuAcceleration"
+3. Click "Workspace"
+4. Set it to "off"
+
 ### Getting "command not found" error in terminal
 
 First, double-check that you are typing in the command correctly. Not only must the command be typed exactly as instructed, but spaces and capitalization must be exact as well.
