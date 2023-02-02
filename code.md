@@ -124,16 +124,16 @@ When you log into Visual Studio Code for CS50, your codespace is configured with
 
 If you try to access a repository that's owned by an [organization](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/about-organizations) that has not granted access to Visual Studio Code for CS50, though, `git` might err with "Repository not found." (And `gh` might err with "Could not resolve to a Repository.") To grant (or request) access for that organization, visit [github.com/settings/connections/applications/d1a90a524497a69391fa](https://github.com/settings/connections/applications/d1a90a524497a69391fa). Alternatively, you can configure your codespace to use [SSH](/github/#ssh) or a [personal access token](/github/#personal-access-token) instead, both of which would have access to any repositories to which your GitHub account has access, whether or not owned by an organization.
 
-## FAQ
+## FAQs
 
 ### I can't type anything in the terminal
 
-If you can't type anything in the terminal, please do the followings:
+If you can't type anything in the terminal, please do the following:
 
-1. Click the Settings icon (the gear icon on the bottom-left icon)
-2. Search for "terminal.integrated.gpuAcceleration"
-3. Click "Workspace"
-4. Set it to "off"
+1. Click the Settings icon (the gear icon on the bottom-left icon).
+1. Search for **terminal.integrated.gpuAcceleration**.
+1. Click **Workspace**.
+1. Set it to **off**.
 
 ### Getting "command not found" error in terminal
 
@@ -141,13 +141,13 @@ First, double-check that you are typing in the command correctly. Not only must 
 
 Second, if you are absolutely sure that you are typing the command exactly as it should be and you are still receiving a `command not found` notification, please make sure:
 
-1. Your input method does not introduce special characters
-2. Your Codespace is not currently in Recovery mode
-3. You are using a Codespace provided by CS50
+* Your input method does not introduce special characters.
+* Your codespace is not currently in recovery mode.
+* You are using a codespace provided by CS50.
 
-### Codespaces run into Recovery mode
+### Codespaces run into recovery mode
 
-Occasionally, your codespace might run into a "Recovery mode" due to service outage, a container creation error, or the `.devcontainer.json` had been modified incorrectly. Most CS50 commands, such as `check50` and `submit50`, will not work and you can't compile your code using CS50 libraries.
+Occasionally, your codespace might run into a "recovery mode" due to service outage, a container creation error, or the `.devcontainer.json` had been modified incorrectly. Most CS50 commands, such as `check50` and `submit50`, will not work and you can't compile your code using CS50 libraries.
 
 In recovery mode, your terminal prompt would look like:
 
@@ -164,13 +164,13 @@ $
 To get out of the recovery mode, please do the following:
 
 1. Click the "Extensions" icon on the left, search for the "GitHub Codespaces" extension and install it (if not installed)
-2. After installing "GitHub Codespaces" extension, press "Command + Shift + P" (if on macOS) or "Ctrl + Shift + P" (if on Windows), and search for "full rebuild", select "Full Rebuild Container" to perform a codespace rebuild.
-3. Your codespace will be launched once the rebuild process completes.
+1. After installing "GitHub Codespaces" extension, press "Command + Shift + P" (if on macOS) or "Ctrl + Shift + P" (if on Windows), and search for "full rebuild", select "Full Rebuild Container" to perform a codespace rebuild.
+1. Your codespace will be launched once the rebuild process completes.
 
 If performing the above steps does not resolve the issue, please make sure:
 
 1. There is no ongoing GitHub outage: [githubstatus.com](https://githubstatus.com)
-2. You did not modify `.devcontainer.json` or your `.devcontainer.json` file is valid.
+1. You did not modify `.devcontainer.json` or your `.devcontainer.json` file is valid.
 
 If you are unsure if you have accidentally modified the `.devcontainer.json`, please do the following:
 
@@ -186,30 +186,22 @@ Repeat the previous instructions on triggering a full container rebuild.
 
 ### Creating a new Codespace
 
-If your Codespace repeatedly runs into recovery mode and the above steps do not resolve the issue, you might want to try creating a new Codespace
+If your codespace repeatedly runs into recovery mode and the above steps do not resolve the issue, you might want to try creating a new codespace:
 
-First, find your GitHub user id by visiting this URL (replace GITHUB_USERNAME with your GitHub username):
+1. Visit [code.cs50.io/codespaces](https://code.cs50.io/codespaces).
+1. Click **Create codespace on main** (the green button).
+1. Wait for your codespace to launch.
 
-```
-https://api.github.com/users/GITHUB_USERNAME
-```
-
-Take note of your GitHub id found in the `id` field. Then do the followings:
-
-1. Visit https://github.com/code50/GITHUB_USER_ID/codespaces (replace GITHUB_USER_ID with your GitHub id)
-2. Click "Create codespace on main" (the green button)
-3. Wait for your Codespace to launch
-
-Please DO NOT delete your old Codespaces unless you are sure all your files have been synced properly with your backing repository: https://github.com/code50/GITHUB_USER_ID
+Please do NOT delete your old codespace unless you are sure all your files have been synced properly with repository at [code.cs50.io/repo](https://code.cs50.io/repo).
 
 ### GitDoc failed to sync with backing repository
 
 If GitDoc is showing a GitHub Authentication error, please do the following:
 
-1. Visit code.cs50.io
-2. Click "Login via GitHub"
-3. When prompted to authorize permissions, read through the requested permission and click "Authorize"
-4. Once your Codespace is launched, visit code.cs50.io/restart to restart your Codespace
+1. Visit [code.cs50.io](https://code.cs50.io/).
+1. Click **Login via GitHub**.
+1. Click to **Authorize cs50**.
+1. Once your codespace is launched, visit [code.cs50.io/restart](https://code.cs50.io/restart).
 
 ## Acknowledgements
 
