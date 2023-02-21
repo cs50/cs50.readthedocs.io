@@ -116,7 +116,7 @@ But you'll first be prompted to "authorize" CS50. Only then will that access tok
 * `repo`, via which CS50 can manage a [repository](https://docs.github.com/en/repositories) for you and accept your invitation thereto, and so that you can use the [GitHub CLI](https://cli.github.com/)
 * `user:email`, via which CS50 can access the email address with which you've registered for GitHub, but not your actual emails
 
-Note that scopes are not as granular as would be ideal. The `codespace` scope technically allows CS50 to manage any of your codespaces, not just the one(s) you use for C550. And the `repo` scope technically allows CS50 to access any of your repositories, not just the one(s) you use for CS50. In practice, CS50 only uses those scopes to manage CS50-specific resources. But if you have any concerns, you are welcome to create a (separate) GitHub account that you only use for CS50!
+Note that scopes are not as granular as would be ideal. The `codespace` scope technically allows CS50 to manage any of your codespaces, not just the one(s) you use for CS50. And the `repo` scope technically allows CS50 to access any of your repositories, not just the one(s) you use for CS50. In practice, CS50 only uses those scopes to manage CS50-specific resources. But if you have any concerns, you are welcome to create a (separate) GitHub account that you only use for CS50!
 
 ### Organization Access
 
