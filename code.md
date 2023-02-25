@@ -203,6 +203,20 @@ If GitDoc is showing a GitHub Authentication error, please do the following:
 1. Click to **Authorize cs50**.
 1. Once your codespace is launched, visit [code.cs50.io/restart](https://code.cs50.io/restart).
 
+### Missing files in Codespace
+
+If you believe some of your files might be missing on Codespace, please first check your backing repository:
+
+[github.com/code50](https://github.com/code50)
+
+If you have submitted any assignments via submit50, you can access them at:
+
+[github.com/me50](https://github.com/me50)
+
+You can also download your submitted assignments from Gradescope (if applicable):
+
+[gradescope.com](https://www.gradescope.com/)
+
 ## Acknowledgements
 
 Special thanks to CS50's friends at [GitHub](https://github.com/) and [Microsoft](https://www.microsoft.com/) for their support of this app!
