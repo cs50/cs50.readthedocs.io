@@ -205,7 +205,16 @@ If GitDoc is showing a GitHub Authentication error, please do the following:
 
 ### Missing files in Codespace
 
-If you believe some of your files might be missing on Codespace, please first check your backing repository:
+If you believe some of your files might be missing on your current Codespace, please first check to see if you have more than one Codespace by visiting: [https://github.com/codespaces](https://github.com/codespaces) and you should see a list of Codespaces under "Owned by code50".
+
+Some of your files could exist on previous Codespaces, in which it is indicated as "`Last used XXX hours/days ago`". To access these Codespaces and retrieve the files, please do the followings:
+
+1. Click on the Codespace name to launch it
+2. Once your Codespace is launched, go to File Explorer
+3. Right-click a file or folder
+4. Click "Download..." to download files to your local computer
+
+If you can't find your missing files in all Codespaces, please check your backing repository:
 
 [github.com/code50](https://github.com/code50)
 
