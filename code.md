@@ -233,7 +233,7 @@ You can also download your submitted assignments from Gradescope (if applicable)
 3. How do I allow VS Code to always open new tabs and windows?
 4. How do I allow VS Code in a browser to access local files and folders?
 
-Please see: [https://code.visualstudio.com/docs/remote/codespaces](https://code.visualstudio.com/docs/remote/codespaces)
+Please see: [https://code.visualstudio.com/docs/remote/codespaces#_common-questions](https://code.visualstudio.com/docs/remote/codespaces#_common-questions)
 
 ## Acknowledgements
 
