@@ -226,6 +226,15 @@ You can also download your submitted assignments from Gradescope (if applicable)
 
 [gradescope.com](https://www.gradescope.com/)
 
+### Other common questions
+
+1. Why is an extension not installable in the browser?
+2. How do I allow VS Code to access my clipboard for reading?
+3. How do I allow VS Code to always open new tabs and windows?
+4. How do I allow VS Code in a browser to access local files and folders?
+
+Please see: [https://code.visualstudio.com/docs/remote/codespaces](https://code.visualstudio.com/docs/remote/codespaces)
+
 ## Acknowledgements
 
 Special thanks to CS50's friends at [GitHub](https://github.com/) and [Microsoft](https://www.microsoft.com/) for their support of this app!
