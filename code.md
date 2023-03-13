@@ -63,7 +63,7 @@ If feeling more comfortable, you can also use VS Code locally:
 * [without Docker](#without-docker), but with internet access, so that you can connect to a codespace remotely
 * [with Docker](#with-docker), via which you'd run a codespace-like container on your own computer, even without internet access
 
-### Without Docker
+### Online, without Docker
 
 To use VS Code locally without Docker, but with internet access, connecting to a codespace remotely:
 
@@ -75,7 +75,7 @@ Alternatively, if already logged into a codespace, click the codespace's "hambur
 
 Alternatively still, if already logged into a codespace, open the codespace's [command palette](https://code.visualstudio.com/docs/getstarted/userinterface#_command-palette), as via **Ctrl+Shift+P** on Linux, **⇧⌘P** on macOS, and **Ctrl+Shift+P** on Windows, select **>Codespaces: Open in VS Code**.
 
-### With Docker
+### Offline, with Docker
 
 To use VS Code locally with Docker, running a [codespace-like container](https://code.visualstudio.com/docs/remote/containers) on your own computer, even without internet access, and opening a folder like `foo` therein:
 
