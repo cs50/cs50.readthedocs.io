@@ -113,14 +113,14 @@ But you'll first be prompted to "authorize" CS50. Only then will that access tok
 
 * `codespace`, via which CS50 can create and manage [codespaces](https://github.com/features/codespaces) on your behalf
 * `read:org`, so that you can use the [GitHub CLI](https://cli.github.com/)
-* `repo`, via which CS50 can manage a [repository](https://docs.github.com/en/repositories) for you and accept your invitation thereto, and so that you can use the [GitHub CLI](https://cli.github.com/)
+* `repo`, via which CS50 can manage a [repository](https://docs.github.com/en/repositories) for you and accept your invitation thereto, and via which `git` can access repositories to which your GitHub account has access
 * `user:email`, via which CS50 can access the email address with which you've registered for GitHub, but not your actual emails
 
 Note that scopes are not as granular as would be ideal. The `codespace` scope technically allows CS50 to manage any of your codespaces, not just the one(s) you use for CS50. And the `repo` scope technically allows CS50 to access any of your repositories, not just the one(s) you use for CS50. In practice, CS50 only uses those scopes to manage CS50-specific resources. But if you have any concerns, you are welcome to create a (separate) GitHub account that you only use for CS50!
 
 ### Organization Access
 
-When you log into Visual Studio Code for CS50, your codespace is configured with a "token" that has `repo` [scope](https://docs.github.com/en/developers/apps/building-oauth-apps/scopes-for-oauth-apps#available-scopes), which lets `git` (via a [credential helper](https://git-scm.com/docs/gitcredentials#_avoiding_repetition)) access repositories to which your GitHub account has access.
+When you log into Visual Studio Code for CS50, your codespace is configured with a "token" that has `repo` [scope](https://docs.github.com/en/developers/apps/building-oauth-apps/scopes-for-oauth-apps#available-scopes), which lets `git` access repositories to which your GitHub account has access.
 
 If you try to access a repository that's owned by an [organization](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/about-organizations) that has not granted access to Visual Studio Code for CS50, though, `git` might err with "Repository not found." (And `gh` might err with "Could not resolve to a Repository.") To grant (or request) access for that organization, visit [github.com/settings/connections/applications/d1a90a524497a69391fa](https://github.com/settings/connections/applications/d1a90a524497a69391fa). Alternatively, you can configure your codespace to use [SSH](/github/#ssh) or a [personal access token](/github/#personal-access-token) instead, both of which would have access to any repositories to which your GitHub account has access, whether or not owned by an organization.
 
