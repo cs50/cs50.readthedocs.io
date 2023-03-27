@@ -47,7 +47,7 @@ For parity with `Visual Studio Code for CS50 </code/>`_ and `cli50 <cli50/>`_, y
 Makefile
 --------
 
-Alternatively, if using a ``Makefile`` to compile a program (e.g., ``foo``) from multiple files (e.g., ``foo.c`` and ``bar.c``), you can use could structure it as follows:
+Alternatively, if using a ``Makefile`` to compile a program (e.g., ``foo``) from multiple files (e.g., ``foo.c`` and ``bar.c``), you could structure it as follows. But be sure the last line begins with an actual tab character (``\t``), not spaces.
 
 .. code-block:: bash
 
