@@ -33,32 +33,37 @@ From Source (Linux and Mac)
   4. ``sudo make install``
 
 
-
 Environment Variables
----------------------
+=====================
 
-For parity with CS50 CLI, CS50 Sandbox, CS50 Lab, and CS50 IDE, you may want to set these environment variables:
+For parity with `Visual Studio Code for CS50 </code/>`_ and `cli50 <cli50/>`_, you may want to set these environment variables:
 
 .. code-block:: bash 
 
     CC="clang"
-    CFLAGS="-fsanitize=signed-integer-overflow -fsanitize=undefined -ggdb3 -O0 -std=c11 -Wall -Werror -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wshadow"
+    CFLAGS="-ferror-limit=1 -gdwarf-4 -ggdb3 -O0 -std=c11 -Wall -Werror -Wextra -Wno-gnu-folding-constant -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wno-unused-but-set-variable -Wshadow"
     LDLIBS="-lcrypt -lcs50 -lm"
 
-Troubleshooting
----------------
+Makefile
+--------
 
-If when compiling your program, you see:
+Alternatively, if using a ``Makefile`` to compile a program (e.g., ``foo``) from multiple files (e.g., ``foo.c`` and ``bar.c``), you can use could structure it as follows:
 
+.. code-block:: bash
 
-    ``/usr/bin/ld: cannot find -lcs50``:
-        Add ``export LIBRARY_PATH=/usr/local/lib`` to your ``.bashrc``.
-    
-    ``fatal error: 'cs50.h' file not found``:
-        Add ``export C_INCLUDE_PATH=/usr/local/include`` to your ``.bashrc``.
-    
-    ``cannot open shared object file: No such file or directory``:
-        Add ``export LD_LIBRARY_PATH=/usr/local/lib`` to your ``.bashrc``.
+    CC= clang
+    CFLAGS = -ferror-limit=1 -gdwarf-4 -ggdb3 -O0 -std=c11 -Wall -Werror -Wextra -Wno-gnu-folding-constant -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wno-unused-but-set-variable -Wshadow
+    LDLIBS = -lcrypt -lcs50 -lm
+
+    EXE = foo
+
+    SRCS = foo.c bar.c
+    OBJS = $(SRCS:.c=.o)
+ 
+ 
+    $(EXE): $(OBJS)
+	 $(CC) $(CFLAGS) -o $@ $(OBJS)
+ 
 
 
 Usage
@@ -300,4 +305,16 @@ Usage
            printf("Your last string was %s\n", next);
        }
 
- 
+Troubleshooting
+===============
+
+If when compiling your program, you see:
+
+    ``/usr/bin/ld: cannot find -lcs50``:
+        Add ``export LIBRARY_PATH=/usr/local/lib`` to your ``.bashrc``.
+    
+    ``fatal error: 'cs50.h' file not found``:
+        Add ``export C_INCLUDE_PATH=/usr/local/include`` to your ``.bashrc``.
+    
+    ``cannot open shared object file: No such file or directory``:
+        Add ``export LD_LIBRARY_PATH=/usr/local/lib`` to your ``.bashrc``.
