@@ -62,7 +62,7 @@ Alternatively, if using a ``Makefile`` to compile a program (e.g., ``foo``) from
  
  
     $(EXE): $(OBJS)
-	 $(CC) $(CFLAGS) -o $@ $(OBJS)
+	 $(CC) $(CFLAGS) -o $@ $(OBJS) $(LDLIBS)
  
 
 
