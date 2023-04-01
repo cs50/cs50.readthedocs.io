@@ -214,19 +214,11 @@ Some of your files could exist on previous Codespaces, in which it is indicated 
 3. Right-click a file or folder
 4. Click "Download..." to download files to your local computer
 
-If you can't find your missing files in all Codespaces, please check your backing repository:
+If you can't find your missing files in any of your codespaces, look for them in your repository at [https://code.cs50.io/repo](https://code.cs50.io/repo) instead.
 
-[github.com/code50](https://github.com/code50)
+Alternatively, if you have submitted any assignments via `submit50`, you can access those at [https://github.com/me50](https://github.com/me50). Or, if you have submitted any assignments via Gradescope, you can access those at [https://www.gradescope.com/](https://www.gradescope.com/).
 
-If you have submitted any assignments via submit50, you can access them at:
-
-[github.com/me50](https://github.com/me50)
-
-You can also download your submitted assignments from Gradescope (if applicable):
-
-[gradescope.com](https://www.gradescope.com/)
-
-### Other common questions
+### Other Common Questions
 
 1. Why is an extension not installable in the browser?
 2. How do I allow VS Code to access my clipboard for reading?
