@@ -255,7 +255,7 @@ cs50:
   tz: UTC
 ```
 
-in the page's own YAML front matter.
+in the page's own YAML front matter. Note, though, that pages with YAML front matter [cannot](https://github.com/jekyll/jekyll/issues/3050#issuecomment-61540466) be [included](https://jekyllrb.com/docs/includes/) in other pages.
 
 ## Plugins
 
