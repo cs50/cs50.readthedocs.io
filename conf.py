@@ -10,6 +10,7 @@ extensions = [
     "sphinxext.opengraph"
 ]
 
+html_baseurl = "https://cs50.readthedocs.io"
 html_css_files = [
     "/_static/custom.css?" + str(round(time.time())),
     "https://use.fontawesome.com/releases/v5.13.0/css/all.css"
