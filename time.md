@@ -10,27 +10,25 @@ CS50 Time Converter's landing page supports inputs [in over 200 language locales
 * Wed, 31 Dec 1969 19:00:00 EST
 * Wed, 31 Dec 1969 19:00:00 -0500
 
-- Dec 31, 1969 7:00 PM Eastern Time (US and Canada)
+- 1969-12-31 19:00
+- 19691231T190000-0500
+- 1969-12-31T19:00:00-05:00
 
-* 1969-12-31 19:00
-* 19691231T190000-0500
-* 1969-12-31T19:00:00-05:00
+* tomorrow at 1:37 PM
+* tomorrow at 1:37pm
+* tomorrow at 13:37
 
-- tomorrow at 1:37 PM
-- tomorrow at 1:37pm
-- tomorrow at 13:37
+- tuesday at noon
+- tue at noon
 
-* tuesday at noon
-* tue at noon
+* 19700101T000000Z
+* 19700101T000000+0000
+* 1970-01-01T00:00:00Z
+* 1970-01-01T00:00:00+00:00
+* Thu, 01 Jan 1970 00:00:00 +0000
+* Thu, 01 Jan 1970 00:00:00 GMT
 
-- 19700101T000000Z
-- 19700101T000000+0000
-- 1970-01-01T00:00:00Z
-- 1970-01-01T00:00:00+00:00
-- Thu, 01 Jan 1970 00:00:00 +0000
-- Thu, 01 Jan 1970 00:00:00 GMT
-
-* Dec 31, 1969 12:00 AM Eastern Time (US and Canada) 
+- Dec 31, 1969 12:00 AM Eastern Time (US and Canada) 
 
 ## API
 
