@@ -1,6 +1,6 @@
 # Visual Studio Code for CS50
 
-Visual Studio Code for CS50 is a web app at [code.cs50.io](https://code.cs50.io/) that adapts [GitHub Codespaces](https://github.com/features/codespaces) for students and teachers. It automates the process of creating a [repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories) inside of CS50's [GitHub organization](https://github.com/code50), pushing to it an initial [`.devcontainer.json`](https://docs.github.com/en/codespaces/customizing-your-codespace/configuring-codespaces-for-your-project), and creating a "codespace," which is a [Docker](https://en.wikipedia.org/wiki/Docker_(software)) "container" in the cloud (akin to your very own virtual server). Ultimately, it allows students to start programming with just a browser, without needing to install or configure anything locally on their own computer. Within their browser is a full-fledged version of [Visual Studio Code](https://code.visualstudio.com/), aka VS Code, including a tabbed text editor, terminal window (connected to a Docker container running [`cs50/codespace`](https://cs50.readthedocs.io/cs50/codespace/)), and graphical file explorer.
+Visual Studio Code for CS50 is a web app at [cs50.dev](https://cs50.dev/) that adapts [GitHub Codespaces](https://github.com/features/codespaces) for students and teachers. It automates the process of creating a [repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories) inside of CS50's [GitHub organization](https://github.com/code50), pushing to it an initial [`.devcontainer.json`](https://docs.github.com/en/codespaces/customizing-your-codespace/configuring-codespaces-for-your-project), and creating a "codespace," which is a [Docker](https://en.wikipedia.org/wiki/Docker_(software)) "container" in the cloud (akin to your very own virtual server). Ultimately, it allows students to start programming with just a browser, without needing to install or configure anything locally on their own computer. Within their browser is a full-fledged version of [Visual Studio Code](https://code.visualstudio.com/), aka VS Code, including a tabbed text editor, terminal window (connected to a Docker container running [`cs50/codespace`](https://cs50.readthedocs.io/cs50/codespace/)), and graphical file explorer.
 
 You can also [use VS Code locally](#vs-code-desktop), even offline without internet, particularly if feeling more comfortable.
 
@@ -14,7 +14,7 @@ VS Code supports quite a few [settings](https://code.visualstudio.com/docs/getst
 
 In other words, Workspace settings override Remote settings, and Remote settings override User settings.
 
-If you use VS Code outside of CS50, you might thus want to store most of your settings in User settings (and enable Settings Sync). And if you would like to override any of [CS50's Remote settings](https://code.cs50.io/settings.json), you can do so via Workspace settings.
+If you use VS Code outside of CS50, you might thus want to store most of your settings in User settings (and enable Settings Sync). And if you would like to override any of [CS50's Remote settings](https://cs50.dev/settings.json), you can do so via Workspace settings.
 
 ### Themes
 
@@ -38,23 +38,23 @@ If using Firefox, [disable Enhanced Tracking Protection](https://support.mozilla
 
 ### Shortcuts
 
-* Visit [code.cs50.io/.devcontainer.json](https://code.cs50.io/.devcontainer.json) for the latest version of CS50's `.devcontainer.json`.
-* Visit [code.cs50.io/codespaces](https://code.cs50.io/codespaces) to access your codespaces in CS50's GitHub organization.
-* Visit [code.cs50.io/commits](https://code.cs50.io/commits) to access all of the commits that have been pushed to your repository in CS50's GitHub organization.
-* Visit [code.cs50.io/repo](https://code.cs50.io/repo) to access your repository in CS50's GitHub organization.
-* Visit [code.cs50.io/restart](https://code.cs50.io/restart) to restart your codespace.
-* Visit [code.cs50.io/settings.json](https://code.cs50.io/settings.json) for CS50's default settings for VS Code.
-* Visit [code.cs50.io/stop](https://code.cs50.io/stop) to stop your codespace.
-* Visit [code.cs50.io/update50.sh](https://code.cs50.io/update50.sh) for the latest version of `update50`.
+* Visit [cs50.dev/.devcontainer.json](https://cs50.dev/.devcontainer.json) for the latest version of CS50's `.devcontainer.json`.
+* Visit [cs50.dev/codespaces](https://cs50.dev/codespaces) to access your codespaces in CS50's GitHub organization.
+* Visit [cs50.dev/commits](https://cs50.dev/commits) to access all of the commits that have been pushed to your repository in CS50's GitHub organization.
+* Visit [cs50.dev/repo](https://cs50.dev/repo) to access your repository in CS50's GitHub organization.
+* Visit [cs50.dev/restart](https://cs50.dev/restart) to restart your codespace.
+* Visit [cs50.dev/settings.json](https://cs50.dev/settings.json) for CS50's default settings for VS Code.
+* Visit [cs50.dev/stop](https://cs50.dev/stop) to stop your codespace.
+* Visit [cs50.dev/update50.sh](https://cs50.dev/update50.sh) for the latest version of `update50`.
 
 ### Deleting a Codespace
 
 **Deleting a codespace will delete all files and folders therein.** If you are sure you want to delete a codespace:
 
-1. Visit [code.cs50.io/codespaces](https://code.cs50.io/codespaces).
+1. Visit [cs50.dev/codespaces](https://cs50.dev/codespaces).
 2. Under **Your codespaces**, to the right of `main`, click ***...***, select **Delete**, and click **OK**.
 
-You can then create a new codespace by logging back into [code.cs50.io](https://code.cs50.io/).
+You can then create a new codespace by logging back into [cs50.dev](https://cs50.dev/).
 
 ## VS Code Desktop
 
@@ -69,7 +69,7 @@ To use VS Code locally without Docker, but with internet access, connecting to a
 
 1. Download and install [VS Code](https://code.visualstudio.com/download) itself on your computer.
 1. Install VS Code's [GitHub Codespaces](https://marketplace.visualstudio.com/items?itemName=GitHub.codespaces) extension.
-1. Visit [code.cs50.io](https://code.cs50.io/), check **Open in VS Code desktop**, and log in as usual; you should be prompted to open the codespace in VS Code itself.
+1. Visit [cs50.dev](https://cs50.dev/), check **Open in VS Code desktop**, and log in as usual; you should be prompted to open the codespace in VS Code itself.
 
 Alternatively, if already logged into a codespace, click the codespace's "hamburger" menu (**☰**) and select **Open in VS Code**.
 
@@ -180,7 +180,7 @@ Run this command:
 code /workspaces/$RepositoryName/.devcontainer.json
 ```
 
-This will open an editor window. Delete all the content in the editor window, and keep the editor open. Open this webpage in a new browser tab or window: [https://code.cs50.io/.devcontainer.json](https://code.cs50.io/.devcontainer.json). Copy-paste all the content from the webpage to your active Codespace editor window, and save all the changes.
+This will open an editor window. Delete all the content in the editor window, and keep the editor open. Open this webpage in a new browser tab or window: [https://cs50.dev/.devcontainer.json](https://cs50.dev/.devcontainer.json). Copy-paste all the content from the webpage to your active Codespace editor window, and save all the changes.
 
 Repeat the previous instructions on triggering a full container rebuild.
 
@@ -188,20 +188,20 @@ Repeat the previous instructions on triggering a full container rebuild.
 
 If your codespace repeatedly runs into recovery mode and the above steps do not resolve the issue, you might want to try creating a new codespace:
 
-1. Visit [code.cs50.io/codespaces](https://code.cs50.io/codespaces).
+1. Visit [cs50.dev/codespaces](https://cs50.dev/codespaces).
 1. Click **Create codespace on main** (the green button).
 1. Wait for your codespace to launch.
 
-Please do NOT delete your old codespace unless you are sure all your files have been synced properly with repository at [code.cs50.io/repo](https://code.cs50.io/repo).
+Please do NOT delete your old codespace unless you are sure all your files have been synced properly with repository at [cs50.dev/repo](https://cs50.dev/repo).
 
 ### GitDoc failed to sync with backing repository
 
 If GitDoc is showing a GitHub Authentication error, please do the following:
 
-1. Visit [code.cs50.io](https://code.cs50.io/).
+1. Visit [cs50.dev](https://cs50.dev/).
 1. Click **Login via GitHub**.
 1. Click to **Authorize cs50**.
-1. Once your codespace is launched, visit [code.cs50.io/restart](https://code.cs50.io/restart).
+1. Once your codespace is launched, visit [cs50.dev/restart](https://cs50.dev/restart).
 
 ### Missing files in Codespace
 
@@ -214,7 +214,7 @@ Some of your files could exist on previous Codespaces, in which it is indicated 
 3. Right-click a file or folder
 4. Click "Download..." to download files to your local computer
 
-If you can't find your missing files in any of your codespaces, look for them in your repository at [https://code.cs50.io/repo](https://code.cs50.io/repo) instead.
+If you can't find your missing files in any of your codespaces, look for them in your repository at [https://cs50.dev/repo](https://cs50.dev/repo) instead.
 
 Alternatively, if you have submitted any assignments via `submit50`, you can access those at [https://github.com/me50](https://github.com/me50). Or, if you have submitted any assignments via Gradescope, you can access those at [https://www.gradescope.com/](https://www.gradescope.com/).
 
