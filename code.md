@@ -80,7 +80,7 @@ Alternatively still, if already logged into a codespace, open the codespace's [c
 
 To use VS Code locally with Docker, running a [codespace-like container](https://code.visualstudio.com/docs/remote/containers) on your own computer, even without internet access, and opening a folder like `foo` therein:
 
-1. Download CS50's latest `.devcontainer.json` file from [raw.githubusercontent.com/cs50/codespace/main/.devcontainer.json](https://raw.githubusercontent.com/cs50/codespace/main/.devcontainer.json), saving it in `foo`. Because the file's name starts with a dot (i.e., period), it might seem to "disappear" when you download it. But, in a terminal window on Linux or macOS, you should see it with `ls -a`, and at a command prompt in Windows, you should see it with `dir /a`.
+1. Download CS50's latest `.devcontainer.json` file from [https://raw.githubusercontent.com/cs50/codespace/main/dist/.devcontainer.json](https://raw.githubusercontent.com/cs50/codespace/main/dist/.devcontainer.json), saving it in `foo`. Because the file's name starts with a dot (i.e., period), it might seem to "disappear" when you download it. But, in a terminal window on Linux or macOS, you should see it with `ls -a`, and at a command prompt in Windows, you should see it with `dir /a`.
 1. Download, install, and start [Docker](/docker/) on your computer.
 1. Download and install [VS Code](https://code.visualstudio.com/download) itself on your computer.
 1. Install VS Code's [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension.
