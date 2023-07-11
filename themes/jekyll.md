@@ -213,6 +213,23 @@ cs50:
 
 The value of `description` will then be used as the site's `og:description` value.
 
+### fontawesome
+
+By default, CS50's theme includes Font Awesome's [free icons](https://fontawesome.com/search?o=r&m=free). If you have a license for Font Awesome's [pro icons](https://fontawesome.com/search), though, use a `fontawesome` key like:
+
+```text
+cs50:
+  fontawesome: VALUE
+```
+
+wherein `VALUE` is the unique identifier for your [kit](https://fontawesome.com/kits/). For instance, if your **CSS Kit Embed Code** is
+
+```html
+<link rel="stylesheet" href="https://kit.fontawesome.com/1234567890.css" crossorigin="anonymous">
+```
+
+use `1234567890` for `VALUE`. (Don't use the whole URL, and don't use the HTML itself.)
+
 ### locale
 
 To define the site's locale (e.g., French), use a `locale` key like:
