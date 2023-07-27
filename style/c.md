@@ -65,6 +65,17 @@ int square(int n)
 }
 ```
 
+## Library Headers
+
+Any library headers that you include should be listed in alphabetical order, as in:
+
+```c
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+```
+This makes it easier to see at a glance, particularly in a long list, whether you have included a header.
+
 ## Conditions
 
 Conditions should be styled as follows:
