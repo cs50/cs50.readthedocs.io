@@ -1,5 +1,10 @@
 # Offline
 
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>CS50 IDE is no longer supported.</p>
+</div>
+
 Normally, CS50 IDE requires a constant connection to the internet. This may not fit users with slow or unstable internet connections, or those who want to continue using the IDE offline for any number of reasons. The following instructions walk you through how to download and install the offline version of CS50 IDE. Please note that the new offline IDE may be quite a large download (several GB).
 
 

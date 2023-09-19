@@ -1,5 +1,10 @@
 # FAQs
 
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>CS50 IDE is no longer supported.</p>
+</div>
+
 ## How can I open a file in the editor from a terminal tab?
 
 If you want to open a file named `foo`, run `open path/to/foo`.

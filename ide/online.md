@@ -1,4 +1,9 @@
-# Online 
+# Online
+
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>CS50 IDE is no longer supported.</p>
+</div>
 
 * [FAQs](/ide/faqs.md)
 * [Offline](/ide/offline.md)
