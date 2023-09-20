@@ -1,0 +1,6 @@
+version: 2
+
+redirects:
+  - from: /code/
+    to: /cs50.dev/
+    type: page

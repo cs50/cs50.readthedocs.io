@@ -83,7 +83,7 @@
    time
    vault
    video
-   code
+   cs50.dev
 
 .. image:: 2ep2od.jpg
   :alt: All the Docs
