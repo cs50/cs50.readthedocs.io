@@ -38,8 +38,7 @@ If using Firefox, [disable Enhanced Tracking Protection](https://support.mozilla
 
 ### Shortcuts
 
-* Visit [cs50.dev/dist/.devcontainer.json](https://cs50.dev/dist/.devcontainer.json) for the latest version of CS50's `.devcontainer.json` template.
-* Visit [cs50.dev/build/.devcontainer.json](https://cs50.dev/build/.devcontainer.json) for the latest version of CS50's `.devcontainer.json` used in building the Codespace image.
+* Visit [cs50.dev/devcontainer.json](https://cs50.dev/devcontainer.json) for the latest version of CS50's `.devcontainer.json`.
 * Visit [cs50.dev/codespaces](https://cs50.dev/codespaces) to access your codespaces in CS50's GitHub organization.
 * Visit [cs50.dev/commits](https://cs50.dev/commits) to access all of the commits that have been pushed to your repository in CS50's GitHub organization.
 * Visit [cs50.dev/repo](https://cs50.dev/repo) to access your repository in CS50's GitHub organization.
