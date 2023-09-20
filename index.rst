@@ -75,14 +75,14 @@
    :hidden:
    :maxdepth: 1
 
-   certificates
-   forms
-   id
-   manual
-   render
-   time
-   vault
-   video
+   certificates.cs50.io
+   forms.cs50.io
+   id.cs50.io
+   manual.cs50.io
+   render.cs50.io
+   time.cs50.io
+   vault.cs50.io
+   video.cs50.io
    cs50.dev
 
 .. image:: 2ep2od.jpg
