@@ -28,8 +28,6 @@
    cs50/check
    cs50/cli
    cs50/codespace
-   cs50/ide
-   cs50/sandbox
    cs50/server
 
 .. toctree::
