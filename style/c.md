@@ -363,8 +363,7 @@ typedef struct
 {
     string name;
     string dorm;
-}
-student;
+} student;
 ```
 
 If the `struct` contains as a member a pointer to another such `struct`, declare the `struct` as having a name identical to the type, without using underscores:
@@ -374,6 +373,5 @@ typedef struct node
 {
     int n;
     struct node *next;
-}
-node;
+} node;
 ```
