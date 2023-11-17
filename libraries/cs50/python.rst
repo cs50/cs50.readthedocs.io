@@ -83,6 +83,8 @@ Usage
 
     Any argument whose value is a :py:class:`list` or :py:class:`tuple` of other values is converted to a comma-separated list of those values, formatted for SQL's ``IN`` operator. Any argument whose value is `None` is converted to `NULL` for SQL.
 
+    Supported placeholders include question marks (qmark style) and named placeholders (named style).
+
     :returns: 
         - for ``CREATE``, ``True`` on success or ``False`` on failure
         - for ``DELETE``, the number of rows deleted
