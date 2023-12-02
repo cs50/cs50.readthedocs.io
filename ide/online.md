@@ -2,7 +2,7 @@
 
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p>CS50 IDE is no longer supported.</p>
+<p>CS50 IDE is no longer supported. Here's [how to copy files from CS50 IDE to CS50.dev](#).</p>
 </div>
 
 * [FAQs](/ide/faqs.md)
@@ -142,6 +142,48 @@ CS50 IDE also provides **Presentation Mode** in which the user interface is even
 1. Click the **x** button to the right of that username. They should no longer have access to your IDE.
 
     ![](remove-member-1.png)
+
+## How to Copy Files from CS50 IDE to CS50.dev
+
+### Download Files from CS50 IDE
+
+In your [CS50 IDE](https://ide.cs50.io/) terminal, run the following command to change terminal location to your home directory:
+
+```
+cd
+```
+
+Then run the following command to create a folder named `migration`:
+
+```
+mkdir migration
+```
+
+Move the files and folders that you want to copy over to CS50.dev to the `migration` folder that you just created. You move files and folders via the GUI in the file tree on the left-hand side of CS50 IDE, or use the `mv` command if comfortable with a command line.
+
+Then, right-click (or control-click) the `migration` folder and click **Download** to download the folder as a Zip file to your computer. Depending on the file's size and your internet speed, the downloading process might take a few minutes or more.
+
+### Upload Files to CS50.dev
+
+In your [CS50.dev](https://cs50.dev/) terminal, run the following command:
+
+```
+cd
+```
+
+Then, right-click (or control-click) anywhere in the left-hand **Explorer** sidebar and click **Upload…***; a file dialog will prompt you to choose files to upload. Choose `migration.zip` that you just downloaded from CS50 IDE in order to upload it. Depending on the file's size and your internet speed, the uploading process might take a few minutes or more.
+
+Once the upload process is complete, run the following command to unzip the Zip file:
+
+```
+unzip migration.zip
+```
+
+Your files downloaded from CS50 IDE should now be in the `migration` folder, and you can execute the below to view the files that you just migrated:
+
+```
+ls migration
+```
 
 ## Reporting Problems
 
