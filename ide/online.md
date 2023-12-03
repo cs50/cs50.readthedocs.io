@@ -2,7 +2,7 @@
 
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p>CS50 IDE is no longer supported. Here's [how to copy files from CS50 IDE to CS50.dev](#).</p>
+<p>CS50 IDE is no longer supported. Here's <a href="#how-to-copy-files-from-cs50-ide-to-cs50-dev">how to copy files from CS50 IDE to CS50.dev</a>.</p>
 </div>
 
 * [FAQs](/ide/faqs.md)
