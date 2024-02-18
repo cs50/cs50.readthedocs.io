@@ -59,8 +59,7 @@ Atop each of your functions (except, perhaps, `main`), meanwhile, should be a co
 
 ```c
 // Returns the square of n
-int square(int n)
-{
+int square(int n) {
     return n * n;
 }
 ```
@@ -81,34 +80,32 @@ This makes it easier to see at a glance, particularly in a long list, whether yo
 Conditions should be styled as follows:
 
 ```c
-if (x > 0)
-{
+if (x > 0) {
     printf("x is positive\n");
-}
-else if (x < 0)
-{
+} else if (x < 0) {
     printf("x is negative\n");
-}
-else
-{
+} else {
     printf("x is zero\n");
 }
 ```
 
 Notice how:
 
-- the curly braces line up nicely, each on its own line, making perfectly clear what's inside the branch;
+- the curly braces line up nicely, each after the condition or expression, making perfectly clear what's inside the branch;
 - there's a single space after each `if`;
 - each call to `printf` is indented with 4 spaces;
 - there are single spaces around the `>` and around the `<`; and
 - there isn't any space immediately after each `(` or immediately before each `)`.
 
-To save space, some programmers like to keep the first curly brace on the same line as the condition itself, but we don't recommend, as it's harder to read, so don't do this:
+To add space, some programmers like to place the opening curly brace on the next line from the condition itself and we don't recommend this, as it's not easier to read, so don't do this:
 
 ```c
-if (x < 0) {
+if (x < 0)
+{
     printf("x is negative\n");
-} else if (x < 0) {
+}
+else if (x < 0)
+{
     printf("x is negative\n");
 }
 ```
@@ -131,8 +128,7 @@ else
 Declare a `switch` as follows:
 
 ```c
-switch (n)
-{
+switch (n) {
     case -1:
         printf("n is -1\n");
         break;
@@ -161,8 +157,7 @@ Notice how:
 In accordance with [C99](http://en.wikipedia.org/wiki/C99), be sure to declare `main` with:
 
 ```c
-int main(void)
-{
+int main(void) {
 
 }
 ```
@@ -172,8 +167,7 @@ or, if using the CS50 Library, with:
 ```c
 #include <cs50.h>
 
-int main(int argc, string argv[])
-{
+int main(int argc, string argv[]) {
 
 }
 ```
@@ -181,8 +175,7 @@ int main(int argc, string argv[])
 or with:
 
 ```c
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
 
 }
 ```
@@ -190,8 +183,7 @@ int main(int argc, char *argv[])
 or even with:
 
 ```c
-int main(int argc, char **argv)
-{
+int main(int argc, char **argv {
 
 }
 ```
@@ -199,8 +191,7 @@ int main(int argc, char **argv)
 Do not declare `main` with:
 
 ```c
-int main()
-{
+int main() {
 
 }
 ```
@@ -208,8 +199,7 @@ int main()
 or with:
 
 ```c
-void main()
-{
+void main() {
 
 }
 ```
@@ -217,8 +207,7 @@ void main()
 or with:
 
 ```c
-main()
-{
+main() {
 
 }
 ```
@@ -234,10 +223,8 @@ Here's some nicely indented code:
 ```c
 // Print command-line arguments one per line
 printf("\n");
-for (int i = 0; i < argc; i++)
-{
-    for (int j = 0, n = strlen(argv[i]); j < n; j++)
-    {
+for (int i = 0; i < argc; i++) {
+    for (int j = 0, n = strlen(argv[i]); j < n; j++) {
         printf("%c\n", argv[i][j]);
     }
     printf("\n");
@@ -251,12 +238,9 @@ for (int i = 0; i < argc; i++)
 Whenever you need temporary variables for iteration, use `i`, then `j`, then `k`, unless more specific names would make your code more readable:
 
 ```c
-for (int i = 0; i < LIMIT; i++)
-{
-    for (int j = 0; j < LIMIT; j++)
-    {
-        for (int k = 0; k < LIMIT; k++)
-        {
+for (int i = 0; i < LIMIT; i++) {
+    for (int j = 0; j < LIMIT; j++) {
+        for (int k = 0; k < LIMIT; k++) {
             // Do something
         }
     }
@@ -270,8 +254,7 @@ If you need more than three variables for iteration, it might be time to rethink
 Declare `while` loops as follows:
 
 ```c
-while (condition)
-{
+while (condition) {
     // Do something
 }
 ```
@@ -288,8 +271,7 @@ Notice how:
 Declare `do ... while` loops as follows:
 
 ```c
-do
-{
+do {
     // Do something
 }
 while (condition);
@@ -321,8 +303,7 @@ int* p;
 Because CS50 uses [C99](http://en.wikipedia.org/wiki/C99), do not define all of your variables at the very top of your functions but, rather, when and where you actually need them. Moreover, scope your variables as tightly as possible. For instance, if `i` is only needed for the sake of a loop, declare `i` within the loop itself:
 
 ```c
-for (int i = 0; i < LIMIT; i++)
-{
+for (int i = 0; i < LIMIT; i++) {
     printf("%i\n", i);
 }
 ```
@@ -359,8 +340,7 @@ int *p, n;
 Declare a `struct` as a type as follows, with each curly brace on its own line and members indented therein, with the type's name also on its own line:
 
 ```c
-typedef struct
-{
+typedef struct {
     string name;
     string dorm;
 } student;
@@ -369,8 +349,7 @@ typedef struct
 If the `struct` contains as a member a pointer to another such `struct`, declare the `struct` as having a name identical to the type, without using underscores:
 
 ```c
-typedef struct node
-{
+typedef struct node {
     int n;
     struct node *next;
 } node;
