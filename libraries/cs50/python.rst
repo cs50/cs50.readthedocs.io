@@ -91,7 +91,7 @@ Usage
         - for ``INSERT``, the primary key of a newly inserted row (or ``None`` if none)
         - for ``SELECT``, a :py:class:`list` of :py:class:`dict` objects, each of which represents a row in the result set
         - for ``UPDATE``, the number of rows updated
-        - on integrity errors, a :py:class:`ValueError` is raised
+        - on integrity errors (as when a constraint is violated), a :py:class:`ValueError` is raised
         - on other errors, a :py:class:`RuntimeError` is raised
 
     Example usage::
