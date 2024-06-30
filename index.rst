@@ -47,6 +47,7 @@
    :maxdepth: 1
 
    C <style/c>
+   Python <https://peps.python.org/pep-0008/>
 
 .. toctree::
    :caption: Themes
