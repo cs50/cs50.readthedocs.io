@@ -1,0 +1,82 @@
+body {
+    --bs-info-text: #087990;
+    --bs-warning-text: #997404;
+    --bs-danger-text: #b02a37;
+    --bs-info-bg-subtle: #cff4fc;
+    --bs-warning-bg-subtle: #fff3cd;
+    --bs-danger-bg-subtle: #f8d7da;
+    --bs-info-border-subtle: #9eeaf9;
+    --bs-warning-border-subtle: #ffe69c;
+    --bs-danger-border-subtle: #f1aeb5;
+}
+
+@media not print {
+    body[data-theme="dark"]  {
+        --bs-info-text: #6edff6;
+        --bs-warning-text: #ffda6a;
+        --bs-danger-text: #ea868f;
+        --bs-info-bg-subtle: #032830;
+        --bs-warning-bg-subtle: #332701;
+        --bs-danger-bg-subtle: #2c0b0e;
+        --bs-info-border-subtle: #055160;
+        --bs-warning-border-subtle: #664d03;
+        --bs-danger-border-subtle: #842029;  
+    }
+}
+@media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+        --bs-info-text: #6edff6;
+        --bs-warning-text: #ffda6a;
+        --bs-danger-text: #ea868f;
+        --bs-info-bg-subtle: #032830;
+        --bs-warning-bg-subtle: #332701;
+        --bs-danger-bg-subtle: #2c0b0e;
+        --bs-info-border-subtle: #055160;
+        --bs-warning-border-subtle: #664d03;
+        --bs-danger-border-subtle: #842029;
+    }
+}
+
+
+.alert-link {
+    font-weight: 700;
+    color: var(--bs-alert-link-color) !important;
+    text-decoration: underline var(--bs-alert-link-color) !important;
+    :hover, :visited, :focus {
+        color: var(--bs-alert-link-color) !important;
+        /* text-decoration: underline; */
+    }
+}
+
+.alert-info {
+    --bs-alert-color: var(--bs-info-text);
+    --bs-alert-bg: var(--bs-info-bg-subtle);
+    --bs-alert-border-color: var(--bs-info-border-subtle);
+    --bs-alert-link-color: var(--bs-info-text);
+}
+
+.alert-warning {
+    --bs-alert-color: var(--bs-warning-text);
+    --bs-alert-bg: var(--bs-warning-bg-subtle);
+    --bs-alert-border-color: var(--bs-warning-border-subtle);
+    --bs-alert-link-color: var(--bs-warning-text);
+}
+
+.alert-danger {
+    --bs-alert-color: var(--bs-danger-text);
+    --bs-alert-bg: var(--bs-danger-bg-subtle);
+    --bs-alert-border-color: var(--bs-danger-border-subtle);
+    --bs-alert-link-color: var(--bs-danger-text);
+}
+
+.announcement {
+    --bs-alert-border: 1px solid var(--bs-alert-border-color);
+    color: var(--bs-alert-color);
+    background-color: var(--bs-alert-bg);
+    border: var(--bs-alert-border);
+    align-items: center;
+    display: flex;
+    height: auto;
+    overflow-x: auto;
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0,0,0,0.2);
+}
