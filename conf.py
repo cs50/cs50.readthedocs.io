@@ -22,11 +22,6 @@ html_js_files = [
 ]
 html_static_path = ["_static"]
 html_theme = "furo"
-html_theme_options = {
-    "display_version": False,
-    "prev_next_buttons_location": False,
-    "sticky_navigation": False,
-}
 html_title = "CS50 Docs"
 html_permalinks_icon = "#"
 html_theme_options = {
@@ -35,6 +30,7 @@ html_theme_options = {
         "<a href='https://cs50.readthedocs.io/'>the main documentation</a> instead."
     )
 }
+html_show_copyright = False
 
 myst_heading_anchors = 6
 
