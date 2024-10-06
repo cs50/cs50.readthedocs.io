@@ -184,9 +184,25 @@ in another configuration file (e.g., `_extension.yml`) and then using conditiona
 
 ```text
 {% if college %}
-    This is CS50
+    This is COMPSCI 50
 {% elsif extension %}
     This is CSCI E-50
+{% endif %}
+```
+
+Note that Jekyll's templating language, [Liquid](https://shopify.github.io/liquid/), does not support `not` or `!` for negation, but you can approximate such logic with:
+
+```text
+{% unless college %}
+    This is not COMPSCI 50
+{% endif %}
+```
+
+Or with:
+
+```text
+{% if college == nil %}
+    This is not COMPSCI 50
 {% endif %}
 ```
 
