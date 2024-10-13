@@ -112,6 +112,7 @@ CS50's theme can be configured via a `cs50` key in `_config.yml` (or another YAM
 * [alert](#alert)
 * [assign](#assign)
 * [description](#description)
+* [fontawesome](#fontawesome)
 * [locale](#locale)
 * [title](#title)
 * [tz](#tz)
