@@ -26,6 +26,16 @@ But you can still use `check50` and `submit50`! You just need to log in a bit di
 1. Paste your public key into the text box under **Key**. Optionally input a title under **Title** (e.g., `CS50`).
 1. Click **Add SSH Key**.
 1. Execute `ssh -T git@ssh.github.com -p 443`.
+1. If it says `git@ssh.github.com: Permission denied (publickey).` make sure that your `~/.ssh/config` file has this:
+    ```
+    Host ssh.github.com
+        User git
+        Hostname ssh.github.com
+        PreferredAuthentications publickey
+        IdentityFile ~/.ssh/id_rsa
+        Port 443
+        IdentitiesOnly yes
+    ```
 1. Enter "yes" and press enter if you see the following prompt (the IP address might be different):
     ```
     The authenticity of host '[ssh.github.com]:443 ([140.82.113.35]:443)' can't be established.
