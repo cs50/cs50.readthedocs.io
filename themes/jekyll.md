@@ -516,11 +516,10 @@ would be appear initially has having three top-level bullets (foo, bar, and baz)
 
 ### Subtitle
 
-So that pages can have not only titles but subtitles, CS50's interprets a `##` that immediately follows a `#` heading, with no content in between, as representing a subtitle. For instance, Markdown like
+So that pages can have not only titles but subtitles, CS50's interprets text between two `*`, on the same line as a `#`, as representing a subtitle. For instance, Markdown like
 
 ```text
-# Title
-## Subtitle
+# Title *Subtitle*
 ```
 
 would be rendered in such a way that "Subtitle" is clearly a subtitle.
