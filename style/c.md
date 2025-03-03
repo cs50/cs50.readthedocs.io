@@ -223,7 +223,7 @@ main()
 }
 ```
 
-As for your own functions, be sure to define them similiarly, with each curly brace on its own line and with the return type on the same line as the function's name, just as we've done with `main`.
+As for your own functions, be sure to define them similarly, with each curly brace on its own line and with the return type on the same line as the function's name, just as we've done with `main`.
 
 ## Indentation
 

@@ -112,6 +112,7 @@ CS50's theme can be configured via a `cs50` key in `_config.yml` (or another YAM
 * [alert](#alert)
 * [assign](#assign)
 * [description](#description)
+* [fontawesome](#fontawesome)
 * [locale](#locale)
 * [title](#title)
 * [tz](#tz)
@@ -184,9 +185,25 @@ in another configuration file (e.g., `_extension.yml`) and then using conditiona
 
 ```text
 {% if college %}
-    This is CS50
+    This is COMPSCI 50
 {% elsif extension %}
     This is CSCI E-50
+{% endif %}
+```
+
+Note that Jekyll's templating language, [Liquid](https://shopify.github.io/liquid/), does not support `not` or `!` for negation, but you can approximate such logic with:
+
+```text
+{% unless college %}
+    This is not COMPSCI 50
+{% endif %}
+```
+
+Or with:
+
+```text
+{% if college == nil %}
+    This is not COMPSCI 50
 {% endif %}
 ```
 
@@ -499,11 +516,10 @@ would be appear initially has having three top-level bullets (foo, bar, and baz)
 
 ### Subtitle
 
-So that pages can have not only titles but subtitles, CS50's interprets a `##` that immediately follows a `#` heading, with no content in between, as representing a subtitle. For instance, Markdown like
+So that pages can have not only titles but subtitles, CS50's interprets text between two `*`, on the same line as a `#`, as representing a subtitle. For instance, Markdown like
 
 ```text
-# Title
-## Subtitle
+# Title *Subtitle*
 ```
 
 would be rendered in such a way that "Subtitle" is clearly a subtitle.
