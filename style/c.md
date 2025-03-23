@@ -158,7 +158,7 @@ Notice how:
 
 ## Functions
 
-In accordance with [C99](http://en.wikipedia.org/wiki/C99), be sure to declare `main` with:
+In accordance with [C11](https://en.wikipedia.org/wiki/C11_(C_standard_revision)), be sure to declare `main` with:
 
 ```c
 int main(void)
@@ -227,7 +227,7 @@ As for your own functions, be sure to define them similarly, with each curly bra
 
 ## Indentation
 
-Indent your code four spaces at a time to make clear which blocks of code are inside of others. If you use your keyboard's Tab key to do so, be sure that your text editor's configured to convert tabs (`\t`) to four spaces, else your code may not print or display properly on someone else's computer, since `\t` renders differently in different editors. (If using [CS50 IDE](https://ide.cs50.io/), it's fine to use Tab for indentation, rather than hitting your keyboard's space bar repeatedly, since we've preconfigured it to convert `\t` to four spaces.)
+Indent your code four spaces at a time to make clear which blocks of code are inside of others. If you use your keyboard's Tab key to do so, be sure that your text editor's configured to convert tabs (`\t`) to four spaces, else your code may not print or display properly on someone else's computer, since `\t` renders differently in different editors. (If using the [CS50 Codespace](https://cs50.dev/), it's fine to use Tab for indentation, rather than hitting your keyboard's space bar repeatedly, since we've preconfigured it to convert `\t` to four spaces.)
 
 Here's some nicely indented code:
 
@@ -318,7 +318,7 @@ int* p;
 
 ## Variables
 
-Because CS50 uses [C99](http://en.wikipedia.org/wiki/C99), do not define all of your variables at the very top of your functions but, rather, when and where you actually need them. Moreover, scope your variables as tightly as possible. For instance, if `i` is only needed for the sake of a loop, declare `i` within the loop itself:
+Because CS50 uses [C11](https://en.wikipedia.org/wiki/C11_(C_standard_revision)), do not define all of your variables at the very top of your functions but, rather, when and where you actually need them. Moreover, scope your variables as tightly as possible. For instance, if `i` is only needed for the sake of a loop, declare `i` within the loop itself:
 
 ```c
 for (int i = 0; i < LIMIT; i++)
