@@ -1,6 +1,6 @@
 # CS50 Vault
 
-CS50 Vault is a web app at [vault.cs50.io](https://vault.cs50.io/) that allows you to add authentication to any link, requiring that users authenticate via **edX**, **GitHub**, **HarvardKey**, **Princeton CAS**, or **Yale CAS** in order to access it, thereby allowing you to post a link online while still restricting access.
+CS50 Vault is a web app at [vault.cs50.io](https://vault.cs50.io/) that allows you to add authentication to any link, requiring that users authenticate via **edX**, **GitHub**, or **HarvardKey**, in order to access it, thereby allowing you to post a link online while still restricting access.
 
 Upon authenticating, a user will be redirected to the link, unless the link can be rendered in an `iframe`, in which case its URL will be masked. Alternatively, if the link is to a:
 
