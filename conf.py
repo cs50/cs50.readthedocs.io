@@ -13,22 +13,14 @@ extensions = [
 
 html_css_files = [
     "custom.css",
-    "announcement.css",
     "https://use.fontawesome.com/releases/v5.13.0/css/all.css",
 ]
-html_js_files = [
-    "custom.js",
-    "announcement.js",
-]
+html_js_files = ["custom.js"]
 html_static_path = ["_static"]
 html_theme = "furo"
 html_title = "CS50 Docs"
 html_permalinks_icon = "#"
 html_theme_options = {
-    "announcement": (
-        "This documentation is hosted here only for testing. Please use "
-        "<a href='https://cs50.readthedocs.io/'>the main documentation</a> instead."
-    )
 }
 html_show_copyright = False
 
@@ -39,3 +31,4 @@ ogp_image_alt = "ALL THE DOCS"
 ogp_site_url = "https://cs50.readthedocs.io/"
 
 project = "CS50 Docs"
+

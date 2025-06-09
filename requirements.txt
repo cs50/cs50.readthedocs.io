@@ -5,4 +5,4 @@ sphinx-tabs>=3.3.1
 sphinx_rtd_theme>=1.0.0
 sphinxcontrib-httpdomain>=1.8.0
 sphinxext-opengraph>=0.6.3
-furo50==1.0.0b1
+furo50>=1.0.0b1
