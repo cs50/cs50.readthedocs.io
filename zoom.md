@@ -35,145 +35,43 @@ Also helpful for teachers might be [this blog post](https://medium.com/@cs50/tea
 
 ### Linux
 
-To access these settings after launching and signing in Zoom, click the gear (<i class="fas fa-cog"></i>) icon in Zoom's top-right corner.
+To access these settings after launching and signing in Zoom Workplace, click the gear (<i class="fas fa-cog"></i>) icon in Zoom's top-right corner.
 
-#### General
-
-<ul class="fa-ul">
-
-<li>
-<span class="fa-li"><i class="far fa-square"></i></span>
-<strong>
-Enter full screen automatically when starting or joining a meeting
-</strong>
-<p>
-Uncheck this box in Zoom, else it's harder to access other windows during class.
-</p>
-</li>
-
-<li>
-<span class="fa-li"><i class="far fa-square"></i></span>
-<strong>
-Always show meeting controls
-</strong>
-<p>
-Check this box in Zoom so that buttons don't disappear on you.
-</p>
-</li>
-
-<li>
-<span class="fa-li"><i class="fas fa-check-square"></i></span>
-<strong>
-Ask me to confirm when I leave a meeting
-</strong>
-<p>
-Check this box in Zoom, lest you accidentally leave class!
-</p>
-</li>
-
-<li>
-<span class="fa-li"><i class="fas fa-check-square"></i></span>
-<strong>
-Stop my video and audio when my display is off or screen saver begins
-</strong>
-<p>
-Check this box in Zoom for privacy's sake, lest you continue live-streaming during a break.
-</p>
-</li>
-
-</ul>
-
-#### Video
+#### Video & effects
 
 <ul class="fa-ul">
 
 <li>
-<span class="fa-li"><i class="far fa-square"></i></span>
-<strong>
-Original ratio
-</strong>
+<strong>HD video</strong>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
 <p>
-Uncheck this box in Zoom to ensure your video is widescreen.
+Enable this setting to ensure your video is of high quality.
 </p>
 </li>
 
 <li>
-<span class="fa-li"><i class="fas fa-check-square"></i></span>
-<strong>
-HD
-</strong>
+<strong>Maintain original ratio</strong>
+<span class="fa-li"><i class="fas fa-toggle-off"></i></span>
 <p>
-Check this box in Zoom to ensure your video is of high quality.
+Disable this settingto ensure your video is widescreen.
 </p>
 </li>
 
 <li>
-<span class="fa-li"><i class="fas fa-check-square"></i></span>
-<strong>
-Mirror my video
-</strong>
+<strong>Mirror my video</strong>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
 <p>
-Check this box in Zoom so that you appear mirrored (to yourself only) so that you can gesture right and left without confusing yourself.
+Enable this setting in Zoom so that you appear mirrored (to yourself only) so that you can gesture right and left without confusing yourself.
 </p>
 </li>
 
 <li>
-<span class="fa-li"><i class="fas fa-check-square"></i></span>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
 <strong>
-Adjust for low light <select disabled><option>Auto</option></select>
+Adjust for low light <select><option>Auto</option></select>
 </strong>
 <p>
-Check this box in Zoom to improve your lighting.
-</p>
-</li>
-
-<li>
-<span class="fa-li"><i class="fas fa-check-square"></i></span>
-<strong>
-Always display participant names on their video
-</strong>
-<p>
-Check this box in Zoom so that you always see names.
-</p>
-</li>
-
-<li>
-<span class="fa-li"><i class="fas fa-check-square"></i></span>
-<strong>
-Turn off my video when joining meeting
-</strong>
-<p>
-Check this box in Zoom for privacy's sake, so that your camera stays off until you're ready to turn it on.
-</p>
-</li>
-
-<li>
-<span class="fa-li"><i class="fas fa-check-square"></i></span>
-<strong>
-Always show video preview dialog when joining a video meeting
-</strong>
-<p>
-Check this box in Zoom so that you can test your video before joining a class.
-</p>
-</li>
-
-<li>
-<span class="fa-li"><i class="far fa-square"></i></span>
-<strong>
-Hide Non-Video participants
-</strong>
-<p>
-Uncheck this box in Zoom so that you know who's in the class.
-</p>
-</li>
-
-<li>
-<span class="fa-li"><i class="far fa-square"></i></span>
-<strong>
-See myself as the active speaker while speaking
-</strong>
-<p>
-Uncheck this box in Zoom so that you still see others when speaking.
+Enable this setting in Zoom to improve your lighting.
 </p>
 </li>
 
@@ -184,34 +82,156 @@ Uncheck this box in Zoom so that you still see others when speaking.
 <ul class="fa-ul">
 
 <li>
-<span class="fa-li"><i class="fas fa-check-square"></i></span>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
 <strong>
 Automatically adjust microphone volume
+</strong>
+</li>
+
+<li>
+<span class="fa-li"><i class="fas fa-dot-circle"></i></span>
+<strong>
+Zoom background noise removal
+</strong>
 <br>
-Suppress background noise <select disabled><option>Auto</option></select>
+<strong>
+Background noise suppression
+<p>
+<select><option>Auto (automatically adjusts noise suppression)</option></select>
+</p>
 </strong>
 <p>
-Check this box in Zoom to improve your audio.
+Check this radio button in Zoom to improve your audio.
+</p>
+</li>
+
+</ul>
+
+#### Meeting & webinars
+
+<ul class="fa-ul">
+
+<li>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
+<strong>
+Show video preview first
+</strong>
+<p>
+Enable this setting in Zoom so that you can test your video before joining a class.
 </p>
 </li>
 
 <li>
-<span class="fa-li"><i class="fas fa-check-square"></i></span>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
 <strong>
-Automatically join audio by computer when joining a meeting
+Keep my camera off
 </strong>
 <p>
-Check this box in Zoom to avoid having to click a button before every class.
+Enable this setting in Zoom for privacy's sake, so that your camera stays off until you're ready to turn it on.
 </p>
 </li>
 
 <li>
-<span class="fa-li"><i class="fas fa-check-square"></i></span>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
 <strong>
-Mute my microphone when joining a meeting
+Keep my microphone muted
 </strong>
 <p>
-Check this box in Zoom for privacy's sake, so that your microphone stays muted until you're ready to unmute it.
+Enable this setting in Zoom for privacy's sake, so that your microphone stays muted until you're ready to unmute it.
+</p>
+</li>
+
+<li>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
+<strong>
+Automatically connect to computer audio
+</strong>
+<p>
+Enable this setting in Zoom to avoid having to click a button before every class.
+</p>
+</li>
+
+<li>
+<span class="fa-li"><i class="fas fa-toggle-off"></i></span>
+<strong>
+Enter full screen automatically
+</strong>
+<p>
+Disable this setting in Zoom, else it's harder to access other windows during class.
+</p>
+</li>
+
+<li>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
+<strong>
+Keep participant names visible
+</strong>
+<p>
+Enable this setting in Zoom so that you always see names.
+</p>
+</li>
+
+<li>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
+<strong>
+Keep meeting controls visible
+</strong>
+<p>
+Enable this setting in Zoom so that buttons don't disappear on you.
+</p>
+</li>
+
+<li>
+<span class="fa-li"><i class="fas fa-toggle-off"></i></span>
+<strong>
+Show me as an active speaker when I talk
+</strong>
+<p>
+Disable this setting in Zoom so that you still see others when speaking.
+</p>
+</li>
+
+<li>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
+<strong>
+Stop audio and video when computer locks
+</strong>
+<p>
+Enable this setting in Zoom for privacy's sake, lest you continue live-streaming during a break.
+</p>
+</li>
+
+<li>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
+<strong>
+Show non-video participants
+</strong>
+<p>
+Enable this setting in Zoom so that you know who's in the class.
+</p>
+</li>
+
+<li>
+<span class="fa-li"></span>
+<strong>
+Maximum participants per screen
+<p>
+<i class="fas fa-dot-circle"></i>
+49 participants
+</p>
+</strong>
+<p>
+Check this radio button in Zoom so that you can see more participants at once.
+</p>
+</li>
+
+<li>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
+<strong>
+Ask me to confirm when leaving
+</strong>
+<p>
+Enable this setting in Zoom, lest you accidentally leave class!
 </p>
 </li>
 
@@ -222,32 +242,31 @@ Check this box in Zoom for privacy's sake, so that your microphone stays muted u
 <ul class="fa-ul">
 
 <li>
-<span class="fa-li"><i class="far fa-square"></i></span>
 <strong>
-Enter full screen when a participant shares screen
+Window size when viewing a shared screen: <i class="fas fa-dot-circle"></i> Maintain current size
 </strong>
 <p>
-Uncheck this box in Zoom so that your screen isn't reconfigured when someone else shares their screen.
+Check this radio button in Zoom so that your screen isn't reconfigured when someone else shares their screen.
 </p>
 </li>
 
 <li>
-<span class="fa-li"><i class="fas fa-check-square"></i></span>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
 <strong>
-Scale to fit shared content to Zoom window
+Scale-to-fit content
 </strong>
 <p>
-Check this box in Zoom so that you can see everything at once.
+Enable this setting in Zoom so that you can see everything at once.
 </p>
 </li>
 
 <li>
-<span class="fa-li"><i class="fas fa-check-square"></i></span>
+<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
 <strong>
-Side-by-side mode
+See shared content in side-by-side mode
 </strong>
 <p>
-Check this box in Zoom so that you still see participants when someone's screen is shared.
+Enable this setting in Zoom so that you still see participants when someone's screen is shared.
 </p>
 </li>
 
