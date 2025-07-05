@@ -901,14 +901,6 @@ Enable this setting so that you can poll the class.
 </li>
 
 <li>
-<strong>Always show meeting control toolbar</strong>
-<span class="fa-li"><i class="fas fa-toggle-on"></i></span>
-<p>
-Enable this setting so that buttons don't disappear on you.
-</p>
-</li>
-
-<li>
 <strong>Show Zoom windows during screen share</strong>
 <span class="fa-li"><i class="fas fa-toggle-off"></i></span>
 <p>
@@ -1036,10 +1028,10 @@ Enable this setting so that you can record locally as needed.
 <li>
 <p>
 <i class="far fa-square"></i>
-<strong>Hosts can give participants the permission to record locally</strong>
+<strong>Who can request host permission to record?</strong>
 </p>
 <p>
-Uncheck this box for privacy's sake, so that students can't record locally.
+Uncheck all boxes for privacy's sake, so that students can't record locally.
 </p>
 </li>
 
