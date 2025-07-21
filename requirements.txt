@@ -1,7 +1,8 @@
-myst-parser==0.17.2
-sphinx==4.5.0
-sphinx-markdown-tables==0.0.17
-sphinx-tabs==3.3.1
-sphinx_rtd_theme==1.0.0
-sphinxcontrib-httpdomain==1.8.0
-sphinxext-opengraph==0.6.3
+myst-parser>=0.17.2
+sphinx>=4.5.0
+sphinx-markdown-tables>=0.0.17
+sphinx-tabs>=3.3.1
+sphinx_rtd_theme>=1.0.0
+sphinxcontrib-httpdomain>=1.8.0
+sphinxext-opengraph>=0.6.3
+furo50>=1.0.0b1

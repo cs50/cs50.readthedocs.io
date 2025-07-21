@@ -1,4 +1,4 @@
-# `submit50`
+# submit50
 
 `submit50` is a command-line tool with which you can submit work (e.g., problem sets) to a course (e.g., CS50). It's based on `git`, a "distributed version control system" that allows you to save different versions of files without having to give each version a unique filename (as you might be wont to do on your own Mac or PC!). Via `submit50` and, in turn, `git` can you thus submit work multiple times (i.e., multiple versions thereof).
 
