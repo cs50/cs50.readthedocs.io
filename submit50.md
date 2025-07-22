@@ -2,7 +2,7 @@
 
 `submit50` is a command-line tool with which you can submit work (e.g., problem sets) to a course (e.g., CS50). It's based on `git`, a "distributed version control system" that allows you to save different versions of files without having to give each version a unique filename (as you might be wont to do on your own Mac or PC!). Via `submit50` and, in turn, `git` can you thus submit work multiple times (i.e., multiple versions thereof).
 
-When you run `submit50`, your files are "pushed" (i.e., uploaded) to CS50's "organization" (also named "submit50") on [GitHub](https://github.com/), a popular service via which developers (like you!) can share code. Your files are stored in a "repository" (a folder, essentially) to which only you and some of CS50's staff have access (and anyone else to whom you grant access). Your work can thus be reviewed and scored in one central place, whether you wrote it in [CS50 IDE](https://ide.cs50.io/) or elsewhere!
+When you run `submit50`, your files are "pushed" (i.e., uploaded) to CS50's "organization" (also named "submit50") on [GitHub](https://github.com/), a popular service via which developers (like you!) can share code. Your files are stored in a "repository" (a folder, essentially) to which only you and some of CS50's staff have access (and anyone else to whom you grant access). Your work can thus be reviewed and scored in one central place, whether you wrote it in [CS50 Codespace](https://cs50.dev/) or elsewhere!
 
 ## Installation
 
@@ -71,7 +71,7 @@ where `slug` is the unique identifier for the work you're submitting, as prescri
 
 #### Via SSH
 
-By default, `submit50` pushes your work to GitHub via HTTPS, which requires your GitHub username and password, which is why `submit50` prompts you for both at least once per week. If you'd prefer not to provide `submit50` with your GitHub username and password at all, you can instead push your work to GitHub via SSH. Configure your workspace on [CS50 IDE](https://ide.cs50.io/) (or your own computer) as follows.
+By default, `submit50` pushes your work to GitHub via HTTPS, which requires your GitHub username and password, which is why `submit50` prompts you for both at least once per week. If you'd prefer not to provide `submit50` with your GitHub username and password at all, you can instead push your work to GitHub via SSH. Configure your workspace on [CS50 Codespace](https://cs50.dev/) (or your own computer) as follows.
 
 1. [Generate an SSH key and add it to `ssh-agent`](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/).
 1. [Add the SSH key to your GitHub account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/).

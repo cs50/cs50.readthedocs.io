@@ -147,9 +147,9 @@ you would see the below.
 
 ## Installation
 
-`style50` is already installed for you in [CS50 IDE](https://ide.cs50.io/), so no need to install it yourself; simply use it as directed!
+`style50` is already installed for you in [CS50 Codespace](https://cs50.dev/), so no need to install it yourself; simply use it as directed!
 
-If you'd like to install `style50` on your own Mac or PC, so that you can check your code's style without using CS50 IDE, you'll need a command-line environment:
+If you'd like to install `style50` on your own Mac or PC, so that you can check your code's style without using CS50 Codespace, you'll need a command-line environment:
 
 - If running Linux or the like, you already have one! Open a terminal window in your usual way.
 - If running Mac OS, you already have one! Open **Applications > Utilities > Terminal**.
