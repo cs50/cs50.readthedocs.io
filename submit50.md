@@ -6,18 +6,34 @@ When you run `submit50`, your files are "pushed" (i.e., uploaded) to CS50's "org
 
 ## Installation
 
-1. Install [Python 3.6](/python) or later, if you haven't already.
+Install [Python 3.6](/python) or later, if you haven't already.
+
+### Using `pip`
 1. Install [`pip`](/pip), if you haven't already.
-1. Install `submit50` itself:
+2. Install `submit50` itself:
     ```text
     pip3 install submit50
     ```
-  Note: If on Windows, please first install [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/install-win10). We recommend choosing the `Ubuntu` distribution. Then within WSL, follow the above steps to install `submit50`.
+    
+### Using `pipx`
+1. Install [`pipx`](/pipx), if you haven't already.
+2. Install `submit50` itself:
+    ```text
+    pipx install submit50
+    ```
+
+Note: If on Windows, please first install [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/install-win10). We recommend choosing the `Ubuntu` distribution. Then within WSL, follow the above steps to install [Python](/python) and `submit50`.
 
 ### Upgrading
 
+If using `pip`, you can upgrade `submit50` with
 ```text
 pip3 install --upgrade submit50
+```
+
+If using `pipx`, you can upgrade `submit50` with
+```text
+pipx upgrade submit50
 ```
 
 ## Usage
