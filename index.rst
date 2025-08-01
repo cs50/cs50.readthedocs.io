@@ -74,6 +74,7 @@
    :hidden:
    :maxdepth: 1
 
+   cs50.ai
    certificates.cs50.io
    forms.cs50.io
    id.cs50.io
