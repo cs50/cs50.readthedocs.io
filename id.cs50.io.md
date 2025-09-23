@@ -14,8 +14,6 @@ If storing users in a SQLite database, you may assume that `sub` will be a `UNIQ
 
 To integrate CS50 ID into an app, you'll first want to create a client (i.e., register your app) at [id.cs50.io](https://id.cs50.io/). You'll need to provide a **Description** for your app as well as a **Redirection URI**, a URL to which CS50 ID should redirect users after authenticating them. Upon creating a client, you'll be provided with a **Client Identifier** and **Client Secret**. CS50 ID will also provide you with some **OpenID Provider Metadata**, which includes a list of endpoints (i.e., URLs). Those values should be all you need to add authentication to your app, particularly if using a library that supports OpenID Connect.
 
-Note that, for local development, you cannot use `localhost` for your Redirection URI, but you can use `127.0.0.1` or `0.0.0.0`.
-
 ### Python
 
 For instance, here are some sample apps for Python, both of which use [Authlib](https://docs.authlib.org/): 
