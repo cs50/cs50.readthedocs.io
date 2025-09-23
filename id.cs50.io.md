@@ -46,6 +46,10 @@ Odds are a library, though, will automate all of these steps for you!
 
 Within those articles, think of "Auth0 Authorization Server," "Auth0 Tenant," and "Your API" as, collectively, "CS50 ID". 
 
+## Demo
+
+To see the claims that CS50 ID will return to your app if you yourself log into it, visit [id.cs50.io/demo](https://id.cs50.io/demo) for a live demo.
+
 ## Acknowledgements
 
 Special thanks to CS50's friends at [Auth0](https://auth0.com/) for their support of this app!
