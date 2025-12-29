@@ -232,7 +232,7 @@ The value of `description` will then be used as the site's `og:description` valu
 
 ### fontawesome
 
-By default, CS50's theme includes Font Awesome's [free icons](https://fontawesome.com/search?o=r&m=free). If you have a license for Font Awesome's [pro icons](https://fontawesome.com/search), though, use a `fontawesome` key like:
+By default, CS50's theme includes Font Awesome's [free icons](https://fontawesome.com/search?o=r&m=free). If you have a license for Font Awesome's [pro icons](https://fontawesome.com/search), though, use a `fontawesome` key like
 
 ```text
 cs50:
@@ -327,6 +327,15 @@ An `album` tag can be used to [embed a SmugMug album](https://www.smugmughelp.co
 ```
 
 would embed [https://cs50.smugmug.com/CS50-Fair-2025-Photo-Booth](https://cs50.smugmug.com/CS50-Fair-2025-Photo-Booth).
+
+To use this tag, create an API key at [https://www.smugmug.com/app/developer](https://www.smugmug.com/app/developer) and define a `smugmug` key like
+
+```text
+cs50:
+  smugmug: VALUE
+```
+
+wherein `VALUE` is your API key.
 
 ### alert
 
