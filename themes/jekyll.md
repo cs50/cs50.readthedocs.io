@@ -294,6 +294,7 @@ in the page's own YAML front matter. Note, though, that pages with YAML front ma
 ## Plugins
 
 * [after](#after)
+* [album](#album)
 * [alert](#alert-1)
 * [before](#before)
 * [calendar](#calendar)
@@ -317,7 +318,17 @@ would not display "It is the 21st century" until it is the 21st century (in the 
 
 Note that the content of the block is always present in the browser's DOM and is only hidden via CSS, so this block should not be used to hide sensitive content (e.g., a link to an otherwise accessible exam).
 
-### <plugins/>alert
+### album
+
+An `album` tag can be used to [embed a SmugMug album](https://www.smugmughelp.com/hc/en-us/articles/18212716776340-Share-my-photos#Gallery). The tag expects one argument, the URL of the album to embed. For instance,
+
+```text
+{% video https://cs50.smugmug.com/CS50-Fair-2025-Photo-Booth %}
+```
+
+would embed [https://cs50.smugmug.com/CS50-Fair-2025-Photo-Booth](https://cs50.smugmug.com/CS50-Fair-2025-Photo-Booth).
+
+### alert
 
 An `alert` block can be used to render an [alert](https://getbootstrap.com/docs/5.1/components/alerts/). The block expects one argument, the type of alert to render, which can be any of:
 
@@ -436,7 +447,7 @@ would be rendered in such a way that a user has to click "Hint" in order to see 
 
 ### video
 
-A `video` tag can be used to embed a YouTube video. The tag expects one argument, the URL of the video to embed. For instance,
+A `video` tag can be used to [embed a YouTube video](https://support.google.com/youtube/answer/171780). The tag expects one argument, the URL of the video to embed. For instance,
 
 ```text
 {% video https://www.youtube.com/watch?v=xvFZjo5PgG0 %}
