@@ -335,7 +335,7 @@ cs50:
   smugmug: VALUE
 ```
 
-wherein `VALUE` is your API key.
+wherein `VALUE` is your API key. You do not need your API key secret to use this tag.
 
 ### alert
 
