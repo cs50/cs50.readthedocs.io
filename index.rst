@@ -83,6 +83,7 @@
    time.cs50.io
    vault.cs50.io
    video.cs50.io
+   cs50.codes
    cs50.dev
 
 .. image:: 2ep2od.jpg
