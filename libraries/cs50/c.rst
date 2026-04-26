@@ -32,6 +32,8 @@ From Source (Linux and Mac)
   3. ``cd libcs50-*``
   4. ``sudo make install``
 
+By default, we install to ``/usr/local``. If you'd like to change the installation location, run ``sudo DESTDIR=/path/to/install make install`` instead.
+
 
 Environment Variables
 =====================
@@ -318,3 +320,16 @@ If when compiling your program, you see:
     
     ``cannot open shared object file: No such file or directory``:
         Add ``export LD_LIBRARY_PATH=/usr/local/lib`` to your ``.bashrc``.
+
+
+If when executing your program, you see something similar to the following (especially common on newer Macs):
+
+.. code-block:: bash
+
+    dyld[.....]: Library not loaded: libcs50-X.Y.Z.dylib
+      Referenced from: <.....> .....
+      Reason: tried: 'libcs50-X.Y.Z.dylib' (no such file), .....
+
+Add ``export DYLD_LIBRARY_PATH=/usr/local/lib`` to your ``.bashrc``.
+
+If you're not using Bash, use whatever command sets the value of environment variables in your preferred shell. If you set ``DESTDIR`` to something other than ``/usr/local``, substitute it in for ``/usr/local`` in the suggestions above.
