@@ -12,14 +12,14 @@ Ubuntu
 -------
 
 .. code-block:: bash
-
+    
     $ curl -s https://packagecloud.io/install/repositories/cs50/repo/script.deb.sh | sudo bash
     $ sudo apt install libcs50
 
 
 Fedora
 -------
-.. code-block:: bash
+.. code-block:: bash 
 
         $ curl -s https://packagecloud.io/install/repositories/cs50/repo/script.rpm.sh | sudo bash
         $ dnf install libcs50
@@ -40,7 +40,7 @@ Environment Variables
 
 For parity with `Visual Studio Code for CS50 </code/>`_ and `cli50 <cli50/>`_, you may want to set these environment variables:
 
-.. code-block:: bash
+.. code-block:: bash 
 
     CC="clang"
     CFLAGS="-ferror-limit=1 -gdwarf-4 -ggdb3 -O0 -std=c11 -Wall -Werror -Wextra -Wno-gnu-folding-constant -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wno-unused-but-set-variable -Wshadow"
@@ -61,11 +61,11 @@ Alternatively, if using a ``Makefile`` to compile a program (e.g., ``foo``) from
 
     SRCS = foo.c bar.c
     OBJS = $(SRCS:.c=.o)
-
-
+ 
+ 
     $(EXE): $(OBJS)
 	 $(CC) $(CFLAGS) -o $@ $(OBJS) $(LDLIBS)
-
+ 
 
 
 Usage
@@ -85,7 +85,7 @@ Usage
 
 
 .. function:: char get_char(const char *format, ...)
-
+    
     :param format: the :func:`printf`-like format string used to display the prompt
     :param ...: values to be substituted into the format string a la :func:`printf`
     :returns: the :code:`char` equivalent to the line read from stdin, or :macro:`CHAR_MAX` on error
@@ -94,7 +94,7 @@ Usage
     if text does not represent a single char, user is reprompted.
 
     Example usage::
-
+        
         #include <stdio.h>
         #include <cs50.h>
 
@@ -122,7 +122,7 @@ Usage
 
 
 .. function:: double get_double(const char *format, ...)
-
+    
     :param format: the :func:`printf`-like format string used to display the prompt
     :param ...: values to be substituted into the format string a la :func:`printf`
 
@@ -159,7 +159,7 @@ Usage
 
 
 .. function:: int get_int(const char *format, ...)
-
+    
     :param format: the :func:`printf`-like format string used to display the prompt
     :param ...: values to be substituted into the format string a la :func:`printf`
 
@@ -172,8 +172,8 @@ Usage
 
 
         #include <cs50.h>
-
-        ...
+        
+        ... 
 
         // Returns the sum of two ints read from stdin, or INT_MAX if there was an error.
         int add_ints(void)
@@ -199,7 +199,7 @@ Usage
 
 
 .. function:: float get_float(const char *format, ...)
-
+    
     :param format: the :func:`printf`-like format string used to display the prompt
     :param ...: values to be substituted into the format string a la :func:`printf`
 
@@ -235,7 +235,7 @@ Usage
 
 
 .. function:: long get_long(const char *format, ...)
-
+    
     :param format: the :func:`printf`-like format string used to display the prompt
     :param ...: values to be substituted into the format string a la :func:`printf`
 
@@ -247,8 +247,8 @@ Usage
 
 
         #include <cs50.h>
-
-        ...
+        
+        ... 
 
         // Returns the difference of two longs read from stdin, or LONG_MAX if there was an error.
         long subtract_longs(void)
@@ -314,10 +314,10 @@ If when compiling your program, you see:
 
     ``/usr/bin/ld: cannot find -lcs50``:
         Add ``export LIBRARY_PATH=/usr/local/lib`` to your ``.bashrc``.
-
+    
     ``fatal error: 'cs50.h' file not found``:
         Add ``export C_INCLUDE_PATH=/usr/local/include`` to your ``.bashrc``.
-
+    
     ``cannot open shared object file: No such file or directory``:
         Add ``export LD_LIBRARY_PATH=/usr/local/lib`` to your ``.bashrc``.
 
