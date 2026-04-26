@@ -322,14 +322,14 @@ If when compiling your program, you see:
         Add ``export LD_LIBRARY_PATH=/usr/local/lib`` to your ``.bashrc``.
 
 
-If when executing your program, you see something similar to (the following error is especially prevalent on newer Macs):
+If when executing your program, you see something similar to the following (especially common on newer Macs):
 
 .. code-block:: bash
 
-    dyld[.....]: Library not loaded: libcs50-11.0.3.dylib
+    dyld[.....]: Library not loaded: libcs50-X.Y.Z.dylib
       Referenced from: <.....> .....
-      Reason: tried: 'libcs50-11.0.3.dylib' (no such file), .....
+      Reason: tried: 'libcs50-X.Y.Z.dylib' (no such file), .....
 
 Add ``export DYLD_LIBRARY_PATH=/usr/local/lib`` to your ``.bashrc``.
 
-If you're not using Bash, use whatever command sets the value of environmental variables in your preferred shell. If you set ``DESTDIR`` to something other than ``/usr/local``, substitute it in for ``/usr/local`` in the suggestions above.
+If you're not using Bash, use whatever command sets the value of environment variables in your preferred shell. If you set ``DESTDIR`` to something other than ``/usr/local``, substitute it in for ``/usr/local`` in the suggestions above.
