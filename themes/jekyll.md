@@ -323,7 +323,7 @@ Note that the content of the block is always present in the browser's DOM and is
 An `album` tag can be used to [embed a SmugMug album](https://www.smugmughelp.com/hc/en-us/articles/18212716776340-Share-my-photos#Gallery). The tag expects one argument, the URL of the album to embed. For instance,
 
 ```text
-{% video https://cs50.smugmug.com/CS50-Fair-2025-Photo-Booth %}
+{% album https://cs50.smugmug.com/CS50-Fair-2025-Photo-Booth %}
 ```
 
 would embed [https://cs50.smugmug.com/CS50-Fair-2025-Photo-Booth](https://cs50.smugmug.com/CS50-Fair-2025-Photo-Booth).
