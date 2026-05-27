@@ -135,10 +135,10 @@ render50 -o foo.pdf -S "" foo.c
 
 ### Rendering URLs
 
-To generate a PDF (e.g., `foo.pdf`) with a source file at a URL (e.g., https://github.com/cs50/render50/blob/master/render50), execute:
+To generate a PDF (e.g., `foo.pdf`) with a source file at a URL (e.g., https://github.com/cs50/render50/blob/main/render50), execute:
 
 ```text
-render50 -o foo.pdf https://github.com/cs50/render50/blob/master/render50
+render50 -o foo.pdf https://github.com/cs50/render50/blob/main/render50
 ```
 
 Note that URLs on `github.com` are handled specially: URLs of the form `https://github.com/*/*/blob/*` are resolved to `https://github.com/*/*/raw/*` so that the file is downloaded from `raw.githubusercontent.com`. And URLs of the form `https://gist.github.com/*/*` (and `https://gist.github.com/*/*#file-*`) are resolved to `https://gist.github.com/*/*/raw` (and `https://gist.github.com/*/*/raw/*`) so that the file is downloaded from `gist.githubusercontent.com`.

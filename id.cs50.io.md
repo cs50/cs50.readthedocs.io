@@ -1,6 +1,6 @@
 # CS50 ID
 
-CS50 ID is CS50's authentication service at [id.cs50.io](https://id.cs50.io/) that lets you authenticate users via [HarvardKey](https://key.harvard.edu/), [Princeton CAS](https://csguide.cs.princeton.edu/publishing/cas), or [Yale CAS](https://developers.yale.edu/cas-central-authentication-service) in your own web app or mobile app. Built atop [Auth0](https://auth0.com/), CS50 ID is an implementation of [OpenID Connect](https://openid.net/specs/openid-connect-core-1_0.html), a "simple identity layer on top of the [OAuth 2.0](https://tools.ietf.org/html/rfc6749) protocol," which standardizes how you can authenticate users against another service (otherwise known as an identity provider) without asking for their usernames or passwords yourself.
+CS50 ID is CS50's authentication service at [id.cs50.io](https://id.cs50.io/) that lets you authenticate users via [HarvardKey](https://key.harvard.edu/) or [Touchstone@MIT](https://ist.mit.edu/touchstone) in your own web app or mobile app. Built atop [Auth0](https://auth0.com/), CS50 ID is an implementation of [OpenID Connect](https://openid.net/specs/openid-connect-core-1_0.html), a "simple identity layer on top of the [OAuth 2.0](https://tools.ietf.org/html/rfc6749) protocol," which standardizes how you can authenticate users against another service (otherwise known as an identity provider) without asking for their usernames or passwords yourself.
 
 After authenticating a user, CS50 ID will ultimately return an [ID token](https://openid.net/specs/openid-connect-core-1_0.html#IDToken), which is a "digitally signed" JSON object (otherwise known as a [JSON Web Token](https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32) or JWT), inside of which will be these keys (otherwise known as [claims](https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims)):
 
@@ -45,6 +45,10 @@ If curious, here's how OpenID Connect and, in turn, OAuth2, work:
 Odds are a library, though, will automate all of these steps for you!
 
 Within those articles, think of "Auth0 Authorization Server," "Auth0 Tenant," and "Your API" as, collectively, "CS50 ID". 
+
+## Demo
+
+To see the claims that CS50 ID will return to your app if you yourself log into it, visit [id.cs50.io/demo](https://id.cs50.io/demo) for a live demo.
 
 ## Acknowledgements
 

@@ -2,7 +2,7 @@
 
 CS50 Forms is a web app at [forms.cs50.io](https://forms.cs50.io/) that allows you to:
 
-* add authentication to Google Forms, requiring that respondents authenticate via **edX**, **GitHub**, or **HarvardKey**, thereby allowing you to post a form's URL online while still restricting access
+* add authentication to Google Forms, requiring that respondents authenticate via [edX](https://www.edx.org/), [GitHub](https://github.com/), [HarvardKey](https://key.harvard.edu/), or [Touchstone@MIT](https://ist.mit.edu/touchstone), thereby allowing you to post a form's URL online while still restricting access
 * pre-fill Google Forms with a respondent's name and email address as well as a respondent's edX username, GitHub username, HUID, or NetID, thereby decreasing the probability of typographical errors
 
 Upon authenticating, a respondent will be redirected to a "[pre-filled link](https://support.google.com/docs/answer/2839588?hl=en)" like

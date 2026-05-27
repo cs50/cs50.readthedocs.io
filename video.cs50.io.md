@@ -82,4 +82,4 @@ Per [YouTube](https://support.google.com/youtube/answer/9884579),
 
 ## Acknowledgements
 
-Special thanks to CS50's friends at [Google](https://www.google.com/) for their support of this app and to Twitter for its [emoji](https://twemoji.twitter.com/)!
+Special thanks to CS50's friends at [Google](https://www.google.com/) for their support of this app and to [@twemoji/api](https://www.npmjs.com/package/@twemoji/api) for its emoji!
