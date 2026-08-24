@@ -18,7 +18,7 @@ It is no longer necessary to configure <a href="#ssh">SSH</a> or create a <a hre
 1. Open a terminal window, if not open already, within [Visual Studio Code](/cs50.dev/).
 2. Execute `ssh-keygen`. When prompted to "save the key," just hit Enter, without typing anything.
 3. You'll then be prompted for a "passphrase" (i.e., password). If you only use your GitHub account for CS50, no need to input a passphrase; just hit Enter. Otherwise, input a passphrase (that you won't forget!), then hit Enter, then input it again, then hit Enter again. For security's sake, you won't see what you type. You'll then see a "randomart image" that you can ignore.
-4. Execute `cat ~/.ssh/id_rsa.pub`. You'll then see your "public key," multiple lines of seemingly random text. Highlight and copy all of those lines, starting with `ssh-rsa` to the end. **But don't highlight your terminal window's prompts (which contain `$`) before or after those lines.**
+4. Execute `cat ~/.ssh/id_ed25519.pub`. You'll then see your "public key," multiple lines of seemingly random text. Highlight and copy all of those lines, starting with `ssh-ed25519` to the end. **But don't highlight your terminal window's prompts (which contain `$`) before or after those lines.**
 5. Visit [https://github.com/settings/keys](https://github.com/settings/keys), logging in with your GitHub username and password as usual. Don't use the passphrase you just created, if any.
 6. Click **New SSH Key**.
 7. Paste your public key into the text box under **Key**. Optionally input a title under **Title** (e.g., `CS50`).
@@ -31,7 +31,7 @@ It is no longer necessary to configure <a href="#ssh">SSH</a> or create a <a hre
     This key is not known by any other names
     Are you sure you want to continue connecting (yes/no/[fingerprint])?
     ```
-11. If you input a "passphrase" (i.e., password) earlier, enter the passphrase and press Enter when you see the following prompt  `"Enter passphrase for key 'home/ubuntu/.ssh/id_rsa':"`
+11. If you input a "passphrase" (i.e., password) earlier, enter the passphrase and press Enter when you see the following prompt  `"Enter passphrase for key 'home/ubuntu/.ssh/id_ed25519':"`
 12. You should be greeted with `"Hi USERNAME! You've successfully authenticated, but GitHub does not provide shell access."`  If you don't see that, review the above steps to verify you didn't skip something.
 
 You should now be able to use `check50` and `submit50` (and `git`) without GitHub username and password. But if you created a passphrase, you might still be prompted for that.
