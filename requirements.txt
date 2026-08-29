@@ -6,3 +6,4 @@ sphinx_rtd_theme==1.0.0
 sphinxcontrib-httpdomain==1.8.0
 sphinxext-opengraph==0.6.3
 standard-imghdr==3.13.0
+furo50>=1.0.0b1

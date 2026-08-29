@@ -1,4 +1,4 @@
-# `cli50`
+# cli50
 
 `cli50` is a command-line tool via which you can (easily!) mount a directory within a container running [`cs50/cli`](cs50/cli), a Docker image based on Ubuntu 22.04, a popular distribution of Linux. We use `cli50` to work on CS50's own apps in a standard, contained environment, without having to install apps' dependencies on our own Macs and PCs. It provides a command-line environment similar, but not quite identical to, a terminal window in [Visual Studio Code for CS50](cs50.dev). It also supports Docker outside of Docker (DooD).
 
