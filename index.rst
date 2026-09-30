@@ -16,6 +16,7 @@
    check50 <https://cs50.readthedocs.io/projects/check50/>
    cli50
    compare50 <https://cs50.readthedocs.io/projects/compare50/>
+   help50
    render50
    style50
    submit50
