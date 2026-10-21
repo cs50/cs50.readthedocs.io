@@ -1,3 +1,3 @@
 # `cs50/ide`
 
-`cs50/ide` is the [Docker](../../docker) image on [Docker Hub](https://hub.docker.com/r/cs50/ide), implemented with this [`Dockerfile`](https://github.com/cs50/ide/blob/main/Dockerfile), used by [CS50 IDE](../ide/index).
+`cs50/ide` was the [Docker](../../docker) image behind [CS50 IDE](../ide/index), which was retired in 2023. The image is no longer maintained and its source repository is archived. The image that powers CS50's current environment, [cs50.dev](https://cs50.dev/), is [`cs50/codespace`](codespace).

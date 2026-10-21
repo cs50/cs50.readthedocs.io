@@ -10,7 +10,7 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://cs50.ha
 
 1. Take note of the **HTTPS** URL of the repository (e.g., `https://github.com/username/finance.git`, where `username` is your own GitHub username).
 
-1. Change to your `finance` directory in [Visual Studio Code](https://cs50.readthedocs.io/code/) or [CS50 IDE](https://cs50.readthedocs.io/ide/), as via `cd`.
+1. Change to your `finance` directory in [Visual Studio Code for CS50](https://cs50.readthedocs.io/cs50.dev/), as via `cd`.
 
 1. (Codespace users only) Copy your finance project files to `workspaces/finance`.
 
