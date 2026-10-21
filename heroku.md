@@ -10,7 +10,7 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://cs50.ha
 
 1. Take note of the **HTTPS** URL of the repository (e.g., `https://github.com/username/finance.git`, where `username` is your own GitHub username).
 
-1. Change to your `finance` directory in [Visual Studio Code](https://cs50.readthedocs.io/code/) or [CS50 IDE](https://cs50.readthedocs.io/ide/), as via `cd`.
+1. Change to your `finance` directory in [Visual Studio Code for CS50](https://cs50.readthedocs.io/cs50.dev/), as via `cd`.
 
 1. (Codespace users only) Copy your finance project files to `workspaces/finance`.
 
@@ -91,7 +91,7 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://cs50.ha
 
 1. At `https://dashboard.heroku.com/apps/app-name/resources`, where `app-name` is your Heroku app's name, click **Heroku Postgres**. In the tab that opens, click **Settings**, then click **View Credentials...**. Highlight and copy the **URI** that appears.
 
-1. In Visual Studio Code or CS50 IDE, open `app.py` in `finance/` and replace
+1. In Visual Studio Code, open `app.py` in `finance/` and replace
 
     ```py
     db = SQL("sqlite:///finance.db")
@@ -116,7 +116,7 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://cs50.ha
 
 1. Ensure that any column that's a primary key has the `AUTOINCREMENT` keyword, [re-creating it if need be](https://stackoverflow.com/a/10464323/5156190).
 
-1. In Visual Studio Code or CS50 IDE, execute the below to import `finance.db` into your PostgreSQL database, where `URI` is that same URI. Be sure to append `?sslmode=allow` to the URI. Note that disabling SSL's certification verification with `--no-ssl-cert-verification` is not recommended in general but seems to be a [temporary workaround](https://github.com/dimitri/pgloader/commit/16dda01f371f033e0df75d80127643605df7830f).
+1. In Visual Studio Code, execute the below to import `finance.db` into your PostgreSQL database, where `URI` is that same URI. Be sure to append `?sslmode=allow` to the URI. Note that disabling SSL's certification verification with `--no-ssl-cert-verification` is not recommended in general but seems to be a [temporary workaround](https://github.com/dimitri/pgloader/commit/16dda01f371f033e0df75d80127643605df7830f).
 
     ```
     pgloader --no-ssl-cert-verification finance.db URI?sslmode=allow
@@ -124,7 +124,7 @@ Here's how to deploy your implementation of, say, [C$50 Finance](https://cs50.ha
 
     Thereafter, if you'd like to browse or edit your PostgreSQL database, you can use Adminer (a tool like phpLiteAdmin for PostgreSQL databases), at [adminer.cs50.net](https://adminer.cs50.net/). Log in using your database's credentials: at `https://dashboard.heroku.com/apps/app-name/resources`, where `app-name` is your Heroku app's name, click **Heroku Postgres**. In the tab that opens, click **Settings**, then click **View Credentials...**.
 
-1. Create a new file in Visual Studio Code or CS50 IDE called `Procfile` in `finance/` whose contents are:
+1. Create a new file in Visual Studio Code called `Procfile` in `finance/` whose contents are:
 
     ```
     web: gunicorn app:app
