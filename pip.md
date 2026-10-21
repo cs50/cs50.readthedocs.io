@@ -1,4 +1,4 @@
-# `pip`
+# pip
 
 Most of CS50's command-line tools are implemented in Python and can be installed on your own Mac or PC via `pip`, a command-line tool via which you can install Python packages from [PyPI](https://pypi.org/), "the default [package index](https://packaging.python.org/glossary/#term-package-index) for the Python community."
 

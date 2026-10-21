@@ -1,4 +1,4 @@
-# `render50`
+# render50
 
 `render50` is a command-line tool with which you can generate syntax-highlighted PDFs of source code. In years past, CS50 generated PDFs of students' submissions so that teaching fellows (TFs) could annotate the PDFs with typed feedback. These days, CS50 generates PDFs of lectures' source code so that students can annotate them during lectures and so that David has a printout of each lecture's source code in front of him during lectures!
 
