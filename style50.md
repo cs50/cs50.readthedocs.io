@@ -1,6 +1,6 @@
 # `style50`
 
-`style50` is a command-line tool with which you can check your code for consistency with CS50's style guides, including [CS50's style guide for C](../style/c/) and [PEP 8](https://peps.python.org/pep-0008/) for Python. It supports C, C++, Java, Python, JavaScript, HTML, CSS, and SQL. If your code isn't styled consistently, `style50` will summarize the changes you should make to your code, as by highlighting in <span class="bg-green p-1 text-white">green</span> characters you should add and highlighting in <span class="bg-red p-1 text-white">red</span> characters you should delete. If fewer than 10% of your code's lines are comments, `style50` will also remind you to add more.
+`style50` is a command-line tool with which you can check your code for consistency with CS50's style guides, including [CS50's style guide for C](../style/c/) and [PEP 8](https://peps.python.org/pep-0008/) for Python. It supports C, C++, Java, Python, JavaScript, HTML, CSS, and SQL. If your code isn't styled consistently, `style50` will summarize the changes you should make to your code, as by highlighting in <span class="bg-green p-1 text-white">green</span> characters you should add and highlighting in <span class="bg-red p-1 text-white">red</span> characters you should delete. If fewer than 10% of your code's lines are comments, `style50` will also remind you to add more (for C, C++, Java, JavaScript, and Python).
 
 For instance, consider the code below, wherein the call to `printf` isn't properly indented.
 
@@ -46,7 +46,7 @@ wherein highlighted are four spaces that should be deleted for style's sake.
 
 ## Installation
 
-`style50` is already installed for you in [Visual Studio Code for CS50](https://cs50.dev/), so no need to install it yourself; simply use it as directed!
+`style50` is already installed for you in [Visual Studio Code for CS50](https://cs50.dev/), so no need to install it yourself; simply use it as directed! Note, though, that in a codespace, `style50` opens a graphical view of a single file, as described under [Visual Studio Code for CS50](#visual-studio-code-for-cs50); to run the command-line examples below, use `style50-cli` instead.
 
 If you'd like to install `style50` on your own Mac or PC, install [Python 3.8](/python) or later, if you haven't already. `style50` also requires `libmagic`, via which it detects file types. If running Linux, install it via your package manager (e.g., `sudo apt install libmagic-dev` on Ubuntu). If running macOS, install it via [Homebrew](https://brew.sh/) with `brew install libmagic`.
 
@@ -61,8 +61,9 @@ If you'd like to install `style50` on your own Mac or PC, install [Python 3.8](/
 1. Install [`pipx`](/pipx), if you haven't already.
 2. Install `style50` itself:
     ```text
-    pipx install style50
+    pipx install --include-deps style50
     ```
+    The `--include-deps` flag is needed because `style50` runs `clang-format` and `djhtml` as separate programs, which `pipx` would otherwise not add to your `PATH`.
 
 Note: If on Windows, please first install [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/install-win10). We recommend choosing the `Ubuntu` distribution. Then within WSL, follow the above steps to install [Python](/python) and `style50`.
 
@@ -134,10 +135,10 @@ or even an entire directory, as with
 style50 .
 ```
 
-in which case `style50` will check every supported file therein, recursively. To skip some files, use `--ignore`, as with
+in which case `style50` will check every supported file therein, recursively, noting any unsupported files that it's skipping. To skip some files (or directories) altogether, use `--ignore`, once per pattern, as with
 
 ```text
-style50 --ignore "*.html" .
+style50 --ignore "*.html" --ignore "*/.git/*" .
 ```
 
 ### Modes
@@ -345,16 +346,16 @@ SpaceAfterCStyleCast: true
 TabWidth: 4
 ```
 
-If you're using `style50` outside of CS50, you can override that configuration with `--clang-format-style`, passing it either a style string, as with
-
-```text
-style50 --clang-format-style "{IndentWidth: 2}" hello.c
-```
-
-or the path to a [`.clang-format`](https://clang.llvm.org/docs/ClangFormatStyleOptions.html) file, as with
+If you're using `style50` outside of CS50, you can replace that configuration with your own via `--clang-format-style`. Note that whatever you pass replaces CS50's configuration entirely; any options you don't specify fall back to `clang-format`'s own defaults, not CS50's. It's thus easiest to save the configuration above as a [`.clang-format`](https://clang.llvm.org/docs/ClangFormatStyleOptions.html) file, edit it, and pass its path, as with
 
 ```text
 style50 --clang-format-style file://$PWD/.clang-format hello.c
+```
+
+Alternatively, you can pass a style string directly, as with
+
+```text
+style50 --clang-format-style "{BasedOnStyle: LLVM, BreakBeforeBraces: Allman, AllowShortFunctionsOnASingleLine: Empty, IndentWidth: 2}" hello.c
 ```
 
 Some [options](https://clang.llvm.org/docs/ClangFormatStyleOptions.html) you might want to change:
@@ -364,7 +365,7 @@ Some [options](https://clang.llvm.org/docs/ClangFormatStyleOptions.html) you mig
 * `BreakBeforeBraces`, which CS50 sets to `Custom` (with the `BraceWrapping` options above) so that curly braces are on their own lines. Set it to `Attach` instead if you'd prefer curly braces on the same line as, e.g., `int main(void)`.
 * `AllowShortFunctionsOnASingleLine`, which CS50 sets to `Empty` so that only empty functions can be on a single line.
 
-In [Visual Studio Code for CS50](https://cs50.dev/), `style50` will automatically use a `.clang-format` file if one exists in your code's directory (or any directory above it), so no need to pass `--clang-format-style` yourself.
+In [Visual Studio Code for CS50](https://cs50.dev/), the **style50** button (and the `style50` command) will automatically use a `.clang-format` file if one exists in your code's directory (or any directory above it). `style50-cli` will not, so pass `--clang-format-style` yourself when using it.
 
 ## Visual Studio Code for CS50
 
@@ -373,9 +374,9 @@ In [Visual Studio Code for CS50](https://cs50.dev/), `style50` is also built int
 * **Apply Changes**, which restyles your code for you.
 * **Explain Changes**, which asks the [CS50 Duck](/cs50.ai) to explain the changes.
 
-Alternatively, you can fix your code's style yourself, in which case the side-by-side view will close once your code matches.
+Alternatively, you can fix your code's style yourself, in which case the side-by-side view will close once your code matches. And if your code is already styled correctly, you'll instead just see "Looks good!"
 
-Running `style50 hello.c` in a codespace's terminal opens that same side-by-side view, for a single file at a time. If you'd prefer the command-line behavior described above, as for checking multiple files or using other modes, run `style50-cli` instead, as with
+Running `style50 hello.c` in a codespace's terminal, where `hello.c` is a path relative to your current directory, opens that same side-by-side view, for a single file at a time. Note that C, C++, and Java code must compile before its style can be checked this way. If you'd prefer the command-line behavior described above, as for checking multiple files or using other modes, run `style50-cli` instead, as with
 
 ```text
 style50-cli -o unified hello.c
